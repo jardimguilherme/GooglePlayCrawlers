@@ -24,9 +24,11 @@ const fs = require('fs');
         var name = topCategoriesNames[i];
         var link = topCategoriesLinks[i];
 
+        console.log(name + " added");
+
         categoriesObj.data.push({
-            "category"  : name,
-            "link"      : link
+            "category"          : name,
+            "link to category"  : link
         });
     }
     const data = JSON.stringify(categoriesObj);
