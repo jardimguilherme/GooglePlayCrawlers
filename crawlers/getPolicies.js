@@ -1,24 +1,33 @@
-const { Cluster } = require("puppeteer-cluster");
+const puppeteer = require("puppeteer");
 const fs = require("fs");
 
-const importedLinks = fs
+var importedLinks = fs
   .readFileSync("crawled data/appLinks.txt")
   .toString("utf-8")
   .split(",");
 
-async function getPolicies({page, data: {url, position}}) {
-  // console.log(position);
-  // const browser = await puppeteer.launch();
-  // const page = await browser.newPage();
+var importedLinks = fs
+  .readFileSync("crawled data/allLinks.txt")
+  .toString("utf-8")
+  .split(",");
 
-  console.log("entrou");
+async function getPolicies() {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
-  await page.goto(url);
 
-  var data = await page.content();
+  for (i in importedLinks) {
+    var url = importedLinks[i]
+    await page.goto(url).catch(function (err) {
+      console.log("erro: " + err);
+    });
 
-  fs.writeFileSync(`crawled data/policies/page${position}.html`, data);
-  if (error != true) console.log("page #" + position + " downloaded!");
-};
+    var data = await page.content();
+
+    fs.writeFileSync(`crawled data/policies/page${i}.html`, data);
+    console.log("page #" + i + " downloaded!");
+  }
+}
 
 exports.getPolicies = getPolicies;
+getPolicies();
