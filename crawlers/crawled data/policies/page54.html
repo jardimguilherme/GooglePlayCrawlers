@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="pt-br" class=" js no-flexbox canvas canvastext no-touch geolocation postmessage hashchange history rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage no-applicationcache svg"><head>
+    <meta charset="utf-8"><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-9NCJ"></script><script id="google" src="//apis.google.com/js/platform.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script src="https://js-agent.newrelic.com/nr-1194.min.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"72f259f1c7",applicationID:"200595876"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1194.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"licenseKey":"72f259f1c7","queueTime":2,"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","applicationID":"200595876","transactionName":"YAcEMUtVC0ZYUkdbDllNIBBXVxFcVl8cUQxETBAMXEMWD39dUkYxVgUDM1BREhteVEc=","applicationTime":15,"agent":""}</script>
+
+    
+    
+    
+    
+    
+
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="google-site-verification" content="VwAQZa6SergqA1gDPv8xJe9eQlFic64zgGm4cFlsBso">
+    <meta name="theme-color" content="#0083ca">
+    <meta name="msapplication-navbutton-color" content="#0083ca">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0083ca">
+
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://mms-amp-static.magazineluiza.com.br/manifest/icons/96x96.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://mms-amp-static.magazineluiza.com.br/manifest/icons/72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="https://mms-amp-static.magazineluiza.com.br/img/icon/fav-icon-57.png">
+    <link rel="shortcut icon" type="image/ico" href="https://mms-amp-static.magazineluiza.com.br/img/icon/fav-icon-16.png">
+    <link rel="manifest" href="https://mms-amp-static.magazineluiza.com.br/manifest/manifest.json">
+
+    <script type="text/javascript">
+        window.__fb_app_id__ = '1425628467693547';
+        window.__static_url__ = 'https://mms-amp-static.magazineluiza.com.br/';
+        window.__is_active__ = true;
+        
+    </script>
+
+    
+        <link rel="stylesheet" href="https://mms-amp-static.magazineluiza.com.br/css/cpld-08575fec4c0f4001a218ae50c35fede4.css">
+    
+
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cpld-08575fec4c0f4001a218ae50c35fede4" src="https://mms-amp-static.magazineluiza.com.br/js/cpld-08575fec4c0f4001a218ae50c35fede4.js"></script></head>
+
+<body class="">
+
+    <div class="loading">
+        <div class="overflay"></div>
+        <div id="spinner">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+            <span class="bar4"></span>
+            <span class="bar5"></span>
+            <span class="bar6"></span>
+            <span class="bar7"></span>
+            <span class="bar8"></span>
+        </div>
+    </div>
+
+    <div class="navigation "><div class="login-info">
+        <div class="content">
+
+            
+            <a href="#" id="login-redirect">
+                <span class="icon icon-profile my-space__profile-icon"></span>
+                <span class="greeting">
+                    <small>Olá.</small>
+                    <small>Entre ou cadastre-se</small>
+                </span>
+            </a>
+            
+        </div>
+        <div class="quick-access">
+            <div class="near-store">
+                <a href="/lojas-proximas">
+                    <span class="icon icon-stores"></span>
+                    <span class="text">Nossas lojas</span>
+                </a>
+            </div>
+            <div class="orders">
+                <a href="#" class="redirect" id="login-redirect-orders">
+                    <span class="icon icon-orders"></span>
+                    <span class="text">Meus pedidos</span>
+                </a>
+            </div>
+        </div>
+        <span class="menu-bar"></span>
+    </div>
+    <nav>
+        <ul class="menu-list subcategory-list">
+        </ul>
+        <ul class="menu-list category-list">
+            <ul class="special-list"></ul>
+            
+            <li class="cat-item active-submenu">
+                <a href="/celulares-e-smartphones/l/te/" class="redirect">
+                    <div class="menu-category te">
+                        <span class="icon icon-categ icon-TE">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Celulares e Smartphones</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/eletrodomesticos/l/ed/" class="redirect">
+                    <div class="menu-category ed">
+                        <span class="icon icon-categ icon-ED">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Eletrodomésticos</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/eletroportateis/l/ep/" class="redirect">
+                    <div class="menu-category ep">
+                        <span class="icon icon-categ icon-EP">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Eletroportáteis</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/informatica/l/in/" class="redirect">
+                    <div class="menu-category in">
+                        <span class="icon icon-categ icon-IN">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Informática</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/moveis-e-decoracao/l/mo/" class="redirect">
+                    <div class="menu-category mo">
+                        <span class="icon icon-categ icon-MO">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Móveis e Decoração</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/tv-e-video/l/et/" class="redirect">
+                    <div class="menu-category et">
+                        <span class="icon icon-categ icon-ET">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">TV e Vídeo</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            
+                <li class="cat-item active-all-categories">
+                    <div class="menu-category">
+                        <span class="name">
+                            <small class="menu-font">Ver todos os departamentos</small>
+                        </span>
+                    </div>
+                </li>
+            
+        </ul>
+        <ul class="quick-access-list">
+            <li class="cat-item card-luiza">
+                <a href="https://especiais.magazineluiza.com.br/cartao-luiza/">
+                    <span class="icon icon-card icon-categ">
+                        <svg fill="none" height="24" viewBox="0 0 20 13" width="27" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z" fill="#FFF"></path>
+                                <path d="M19 0.945455C19 0.709091 18.8813 0.472727 18.7625 0.236364C18.525 0.118182 18.2875 0 18.05 0H0.95C0.7125 0 0.475 0.118182 0.2375 0.236364C0 0.354545 0 0.709091 0 0.945455V2.71818H19V0.945455ZM0.95 13H18.05C18.2875 13 18.525 12.8818 18.7625 12.7636C19 12.6455 19 12.2909 19 12.0545V4.96364H0V12.0545C0 12.2909 0.11875 12.5273 0.2375 12.7636C0.475 12.8818 0.7125 13 0.95 13ZM16.3875 9.1C16.8625 9.1 17.2188 9.33636 17.3375 9.80909C17.4563 10.2818 17.4562 10.7545 17.1 10.9909C16.7437 11.3455 16.2687 11.4636 15.9125 11.2273C15.5562 11.1091 15.2 10.6364 15.2 10.1636C15.2 9.92727 15.3188 9.57273 15.5563 9.33636C15.7938 9.21818 16.15 9.1 16.3875 9.1ZM1.54375 10.0455C1.54375 9.80909 1.6625 9.57273 1.78125 9.45455C1.9 9.33636 2.1375 9.21818 2.375 9.21818H6.76875C7.00625 9.21818 7.24375 9.33636 7.3625 9.45455C7.48125 9.57273 7.6 9.80909 7.6 10.0455V10.4C7.6 10.8727 7.24375 11.3455 6.76875 11.3455H2.375C1.9 11.3455 1.425 10.8727 1.54375 10.4V10.0455Z" fill="#8C8C8C"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="name">
+                        <small class="menu-font">Cartão Luiza</small>
+                        <small class="subtitle">Peça já o seu ou acesse<br>a sua fatura</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item one-click-buy">
+                <a href="/configurar-conta">
+                    <span class="icon icon-cart icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Configuração de compra com 1-clique</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item sac">
+                <a href="/outros-ddds">
+                    <span class="icon icon-sac icon-categ"></span>
+                    <span class="name menu-font">
+                        <small class="menu-font">Compre pelo televendas</small>
+                        <small class="subtitle">São Paulo e Grande São Paulo<br>(11) 3508-9900</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item">
+                <a href="/amp/sac" class="redirect">
+                    <span class="icon icon-question icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Central de atendimento</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item">
+                <a href="/s/regulamentos">
+                    <span class="icon icon-rules icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Regulamentos</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item logout hide">
+                <div>
+                    <span class="name">
+                        <small class="menu-font">Não é ? Sair</small>
+                    </span>
+                
+            </div></li>
+            <span class="bottom"></span>
+        </ul>
+    </nav>
+</div>
+
+    <div class="container ">
+        <div class="cover hide">
+            <div class="overlay"></div>
+        </div>
+        <span class="scroll-top">
+            <small class="icon icon-up-arrow"></small>
+        </span>
+        <!-- Header -->
+        <div id="header" class="row clearfix with-search">
+            <div id="header-content" class="row">
+                <div class="top row">
+                    <a href="/">
+                        
+                            <h1>
+                                <span class="icon-magalu redirect">
+                                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="87" height="19" viewBox="0 0 23.018749 5.0270836">
+  <defs id="defs2"></defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="3.9773503" inkscape:cx="81.427208" inkscape:cy="23.486846" inkscape:document-units="mm" inkscape:current-layer="layer1" showgrid="false" inkscape:window-width="1299" inkscape:window-height="713" inkscape:window-x="67" inkscape:window-y="27" inkscape:window-maximized="1" units="px"></sodipodi:namedview>
+  <metadata id="metadata5">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g inkscape:label="Camada 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-291.9729)">
+    <path style="fill:#FFFFFF;stroke-width:0.27197146" d="" id="path3817" inkscape:connector-curvature="0"></path>
+    <path style="fill:#FFFFFF;stroke-width:0.27197146" d="" id="path3815" inkscape:connector-curvature="0"></path>
+    <path style="fill:#FFFFFF;stroke-width:0.02248656" d="m 9.982509,296.98799 c -0.3775337,-0.0341 -0.6622187,-0.10757 -0.9399196,-0.24246 -0.1813911,-0.0881 -0.2293829,-0.13878 -0.2293829,-0.24216 0,-0.0763 0.1513748,-0.40697 0.239036,-0.52224 0.07088,-0.0932 0.1670791,-0.0969 0.369846,-0.0142 0.2991225,0.12203 0.7456635,0.1754 1.0247015,0.12249 0.502018,-0.0952 0.77248,-0.43598 0.77248,-0.9733 v -0.13365 l -0.1293,0.11565 c -0.28133,0.25163 -0.674997,0.37722 -1.1070546,0.3532 -0.260859,-0.0145 -0.4153273,-0.0535 -0.6187868,-0.15609 -0.6015734,-0.30343 -0.9293768,-1.00371 -0.8427649,-1.80039 0.099897,-0.9189 0.7412271,-1.52196 1.6185513,-1.52196 0.377805,0 0.724222,0.1184 0.987515,0.33751 l 0.131508,0.10944 0.02611,-0.13265 c 0.04127,-0.20977 0.07161,-0.22436 0.466723,-0.22436 0.315312,0 0.325554,0.002 0.380034,0.056 l 0.05599,0.056 -0.0065,1.72607 -0.0065,1.72607 -0.05269,0.15741 c -0.15886,0.47454 -0.424701,0.78131 -0.869016,1.00279 -0.344115,0.17153 -0.799061,0.24345 -1.2704924,0.20083 z m 0.737156,-2.46204 c 0.180562,-0.0816 0.36244,-0.27219 0.434568,-0.4554 0.06719,-0.17069 0.07239,-0.52086 0.01026,-0.69224 -0.130067,-0.35879 -0.437478,-0.5475 -0.852075,-0.52306 -0.3441422,0.0203 -0.5809763,0.16319 -0.7121843,0.42971 -0.1737071,0.35285 -0.1310658,0.78898 0.1024004,1.0474 0.1741067,0.19272 0.3867319,0.27477 0.6846339,0.2642 0.152137,-0.005 0.219958,-0.0198 0.332397,-0.0706 z m -5.0169073,1.03224 c -0.5590365,-0.12558 -0.9847389,-0.55712 -1.1632856,-1.17923 -0.061911,-0.21572 -0.084962,-0.73117 -0.044054,-0.98511 0.079849,-0.49566 0.3589761,-0.93773 0.7465708,-1.18236 0.5625076,-0.35504 1.3834578,-0.30657 1.8554626,0.10955 l 0.1168958,0.10305 0.014097,-0.085 c 0.042816,-0.25828 0.073415,-0.27619 0.4716722,-0.27619 0.3585401,0 0.399074,0.0141 0.4374883,0.15244 0.031795,0.11447 0.031795,3.02107 0,3.13555 -0.038085,0.13713 -0.08043,0.15245 -0.4214821,0.15245 -0.165023,0 -0.3195119,-0.0104 -0.3433053,-0.0231 -0.05842,-0.0313 -0.103532,-0.12405 -0.1228087,-0.25261 -0.0088,-0.0586 -0.02077,-0.10651 -0.026657,-0.10651 -0.00587,0 -0.062911,0.046 -0.1267445,0.10232 -0.1308872,0.1154 -0.4142348,0.26444 -0.5995207,0.31535 -0.1855702,0.051 -0.6080193,0.0614 -0.7943339,0.0195 z m 0.8875327,-0.88708 c 0.3426057,-0.10822 0.5486958,-0.4021 0.5754698,-0.82058 0.027798,-0.43448 -0.1485194,-0.77188 -0.4860767,-0.93016 -0.1114427,-0.0523 -0.1543293,-0.0593 -0.3629575,-0.0593 -0.2219219,0 -0.2458662,0.005 -0.3864271,0.0738 -0.2660002,0.13095 -0.4081849,0.34017 -0.46917,0.69037 -0.044696,0.25666 0.022908,0.56247 0.1721106,0.77859 0.1807655,0.26184 0.6019231,0.37945 0.9570509,0.26726 z m 7.1924476,0.88861 c -0.25858,-0.0581 -0.504401,-0.19783 -0.710316,-0.40375 -0.153588,-0.15359 -0.200739,-0.21967 -0.298167,-0.41789 -0.133773,-0.27216 -0.174638,-0.41538 -0.210324,-0.7372 -0.04404,-0.39715 0.02721,-0.81618 0.195723,-1.15102 0.270183,-0.53686 0.733143,-0.83798 1.338302,-0.87046 0.420596,-0.0226 0.772988,0.0856 1.071303,0.329 l 0.138514,0.11299 0.01598,-0.11627 c 0.01152,-0.0838 0.0336,-0.13387 0.079,-0.17927 l 0.06301,-0.063 h 0.32472 c 0.320862,0 0.325422,7.9e-4 0.384,0.0593 l 0.05928,0.0593 v 1.58371 c 0,1.16092 -0.007,1.59683 -0.02616,1.63284 -0.05073,0.0952 -0.08442,0.10387 -0.408438,0.10461 l -0.31092,8e-4 -0.0638,-0.0638 c -0.04473,-0.0447 -0.0686,-0.0968 -0.07984,-0.17427 -0.0088,-0.0608 -0.0204,-0.11804 -0.02571,-0.1273 -0.0053,-0.009 -0.07234,0.0342 -0.14892,0.0966 -0.161403,0.13145 -0.396334,0.25275 -0.588967,0.30409 -0.191201,0.051 -0.615579,0.0622 -0.798272,0.0211 z m 0.983435,-0.92085 c 0.169338,-0.0765 0.32399,-0.2332 0.400127,-0.40536 0.149654,-0.33839 0.117887,-0.77092 -0.07748,-1.05487 -0.192488,-0.27978 -0.602562,-0.39875 -0.976415,-0.28327 -0.426297,0.13167 -0.665531,0.64439 -0.543056,1.16387 0.07795,0.33061 0.271251,0.54284 0.571582,0.62755 0.172541,0.0487 0.460309,0.0266 0.62524,-0.0479 z m 5.858112,0.92026 c -0.359398,-0.0781 -0.667266,-0.32337 -0.834489,-0.6649 -0.186172,-0.38023 -0.209875,-0.59302 -0.201004,-1.80459 l 0.0067,-0.91829 0.06309,-0.0543 c 0.061,-0.0525 0.07499,-0.0542 0.423099,-0.0542 0.202382,0 0.378829,0.01 0.40299,0.023 0.09693,0.0519 0.0997,0.0794 0.112173,1.11257 0.0137,1.13416 0.0118,1.12233 0.212919,1.33003 0.08573,0.0885 0.141437,0.12463 0.234568,0.15196 0.155218,0.0456 0.320327,0.0456 0.473475,1.1e-4 0.16378,-0.0486 0.353783,-0.23699 0.429125,-0.42541 0.05322,-0.13309 0.05403,-0.14678 0.0655,-1.10927 l 0.01161,-0.97452 0.0631,-0.0542 c 0.061,-0.0524 0.07502,-0.0542 0.423099,-0.0542 0.214883,0 0.37831,0.01 0.405408,0.0243 0.107984,0.0578 0.109052,0.0744 0.109052,1.69592 0,1.62154 -10e-4,1.63814 -0.109052,1.69593 -0.02576,0.0138 -0.170323,0.0243 -0.334198,0.0243 -0.314009,0 -0.360498,-0.0145 -0.419954,-0.13067 -0.01703,-0.0333 -0.03809,-0.10348 -0.04682,-0.15604 -0.0087,-0.0526 -0.01944,-0.0956 -0.02383,-0.0956 -0.0044,0 -0.06135,0.0512 -0.126614,0.11378 -0.303334,0.29084 -0.866589,0.42717 -1.339969,0.32434 z m -20.56428389,-0.0839 c -0.02035747,-0.0155 -0.04646326,-0.0536 -0.05801087,-0.0848 -0.0267847,-0.0724 0.22496508,-3.16029 0.26352239,-3.23234 0.0144751,-0.027 0.0456586,-0.0595 0.0692973,-0.0722 0.0681103,-0.0365 0.66543267,-0.0294 0.73916287,0.009 0.062725,0.0324 0.1180819,0.12637 0.7345986,1.24646 0.2149752,0.39056 0.2693658,0.47429 0.2921483,0.44973 0.015396,-0.0166 0.2328201,-0.37929 0.4831629,-0.80597 0.2503423,-0.42668 0.4893356,-0.80868 0.5310959,-0.84887 l 0.075928,-0.0731 h 0.3274594 c 0.3219768,0 0.3283474,0.001 0.3805134,0.0572 0.037376,0.0403 0.057129,0.0952 0.066842,0.18552 0.022651,0.21073 0.2377416,2.93983 0.2377416,3.01651 0,0.0452 -0.019973,0.0908 -0.055195,0.12598 -0.054165,0.0542 -0.062147,0.0552 -0.4282665,0.0552 -0.3601796,0 -0.3748746,-0.002 -0.4252103,-0.0521 -0.065587,-0.0656 -0.071784,-0.12744 -0.1051697,-1.0497 -0.014102,-0.38958 -0.032083,-0.73559 -0.039956,-0.7689 -0.012589,-0.0533 -0.054673,0.009 -0.3492992,0.51391 -0.2480035,0.42531 -0.3531024,0.58554 -0.4047586,0.61703 -0.1014711,0.0619 -0.5766979,0.0625 -0.6777127,8e-4 -0.051377,-0.0313 -0.1424994,-0.17612 -0.3683853,-0.58534 -0.1650675,-0.29904 -0.3029579,-0.54083 -0.3064233,-0.53731 -0.00347,0.004 -0.027852,0.36561 -0.0541925,0.80466 -0.0263411,0.43905 -0.0531928,0.83229 -0.0596713,0.87387 -0.006477,0.0416 -0.0359456,0.0998 -0.065483,0.12929 -0.0520977,0.0521 -0.0643663,0.0537 -0.4102133,0.0537 -0.25047496,0 -0.36751857,-0.008 -0.39352455,-0.0281 z m 17.51498189,-0.008 c -0.313763,-0.076 -0.616307,-0.31212 -0.743046,-0.58003 -0.13183,-0.27867 -0.133234,-0.29313 -0.142933,-1.47413 -0.0049,-0.59902 -0.0024,-1.12381 0.0055,-1.16619 0.0079,-0.0424 0.03862,-0.10124 0.06816,-0.13078 0.05239,-0.0524 0.06305,-0.0537 0.434508,-0.0537 0.341326,0 0.386306,0.004 0.433888,0.043 l 0.05309,0.043 0.01192,1.05327 c 0.01291,1.13961 0.01163,1.12815 0.140625,1.26188 0.118971,0.12333 0.220196,0.13992 0.853912,0.13992 h 0.559811 l 0.06573,0.0657 0.06573,0.0657 v 0.31827 0.31827 l -0.06573,0.0657 -0.06573,0.0657 -0.771892,-0.002 c -0.583864,-10e-4 -0.803968,-0.01 -0.903557,-0.0337 z" id="path3848" inkscape:connector-curvature="0"></path>
+  </g>
+</svg>
+
+                                </span>
+                                <span class="hidden-text-indent">Magazine Luiza</span>
+                            </h1>
+                        
+                    </a>
+                    
+                        <div id="support-toggle" style="display: none;">
+                            <a class="icon-back redirect"></a>
+                            <span class="seller-name"></span>
+                        </div>
+                        <div id="menu-toggle">
+                            <span class="icon icon-drawer"></span>
+                            <span class="hidden-text-indent">Menu</span>
+                        </div>
+                        <div id="search-toggle" class="hide">
+                            <p>
+                                <span class="icon icon-search"></span>
+                                <span class="hidden-text-indent">Busca</span>
+                            </p>
+                        </div>
+                        <div id="cart">
+                            <a class="redirect" href="https://sacolamobile.magazineluiza.com.br/#/">
+                                <span class="icon icon-cart"></span>
+                                <span class="hidden-text-indent">Carrinho</span>
+
+                                <sup>
+                                    0
+                                </sup>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div id="search" class="row clearfix with-search">
+                    <form accept-charset="utf-8">
+                        <span class="cancel">cancelar</span>
+                        <div class="content-search-input">
+                            <input type="search" id="id_search" name="search" value="" placeholder="Encontre seu produto" autocomplete="off" autocorrect="off" autocapitalize="none">
+                            <span for="id_search" class="icon icon-search"></span>
+                        </div>
+                    </form>
+                </div>
+                <span class="color-bar row"></span>
+            </div>
+        </div>
+
+        <div id="main" role="main">
+
+            
+                <div id="banner" class="row">
+                </div>
+            
+
+
+            <div id="category-name" class="category-name row">
+                
+                
+            </div>
+
+            
+                <div id="carousel-holder" class="row">
+                </div>
+            
+
+            <div class="row info">
+                <p>
+                    <span></span>
+                </p>
+            </div>
+
+
+            <!-- Category list -->
+            
+                <nav class="row list">
+                    <ul class="clearself">
+                    </ul>
+                </nav>
+            
+
+
+            <!-- Content holder -->
+            <div id="content" class="row">
+                
+    
+        <style>
+.privacy-div{
+  padding: 10px
+}
+.privacy-div h2,
+.privacy-div h6,
+.privacy-div p {
+  padding: 10px;
+}
+</style>
+<div class="privacy-div">
+<h2>Política de Privacidade</h2>
+<p>
+Este documento, denominado Política de Privacidade, possui finalidade de estabelecer as regras sobre o uso, armazenamento e tratamento dos dados e informações coletadas dos usuários no site magazineluiza.com.
+</p><br><p>
+1. Definições: para fins desta Política de Privacidade, aplicam-se as seguintes definições: designa o site magazineluiza.com. Magazine Luiza: Magazine Luiza S/A, pessoa jurídica de direito privado, com sede à Rua Voluntários da Franca, 1465 – Centro – Franca – SP, CEP 14400-490 e inscrita no CNPJ sob o nº 47.960.950/0001-21. Cookies: arquivos enviados pelo servidor do site para o computador do Usuário, com a finalidade de identificar o computador e obter dados de acesso, como páginas navegadas ou links clicados, permitindo, desta forma, personalizar a utilização do site, de acordo com o seu perfil; IP: abreviatura de Internet Protocol. É um conjunto de números que identifica o computador do Usuário na Internet; Logs: registros de atividades do Usuário efetuadas no site; Session ID: identificação da sessão do Usuário no processo de inscrição ou quando utilizado de alguma forma o site. Usuário: todo aquele que passar a usar o site. 
+</p><p>
+2. Obtenção dos dados e informações: os dados e informações serão obtidos quando o Usuário: 1. Passar a utilizar o site; 2. Interagir com as diversas ferramentas existentes no site, fornecendo as informações voluntariamente; ou 3. Entrar em contato através dos canais de comunicação disponíveis no site. 
+</p><p>
+3. Armazenamento dos Dados e Informações: todos os dados e informações coletados dos Usuários serão incorporados ao banco de dados do site, sendo seu responsável e proprietário o Magazine Luiza. Os dados e informações coletados estarão armazenados em ambiente seguro, observado o estado da técnica disponível, e somente poderão ser acessados por pessoas qualificadas e autorizadas pelo Magazine Luiza. Além disso, o Magazine Luiza afirma que não compartilhará, venderá ou apresentará os dados dos Usuários para terceiros. Considerando que nenhum sistema de segurança é absolutamente seguro, o Magazine Luiza se exime de quaisquer responsabilidades por eventuais danos e/ou prejuízos decorrentes de falhas, vírus ou invasões do banco de dados do site, salvo nos casos de dolo ou culpa pela mesma. O Usuário é o proprietário dos dados e está apto a adicionar, excluir ou modificar quaisquer informações que estiverem ligadas ao seu perfil de usuário no Magazine Luiza. 
+</p><p>
+4. Uso dos Dados e Informações: os dados e informações coletados dos Usuários poderão ser utilizados para as seguintes finalidades: 1. Efetuar qualquer comunicação resultante de atividade do próprio site ou a identificação do respectivo destinatário; 2. Responder a eventuais dúvidas e solicitações do Usuário; 3. Fornecer acesso à área restrita do site ou suas funcionalidades exclusivas; 4. Cumprimento de ordem legal ou judicial; 5. Constituir, defender ou exercer regularmente direitos em âmbito judicial ou administrativo; 6. Elaborar estatísticas gerais, para identificação do perfil dos Usuários e desenvolvimento de campanhas do Magazine Luiza; 7. Garantir a segurança dos Usuários; 8. Manter atualizados os cadastros dos Usuários para fins de contato autorizado a ser feito por telefone, correio eletrônico, SMS, mala-direta ou por outros meios de comunicação; 9. Informar a respeito de novidades, promoções e eventos do Magazine Luiza e seus parceiros comerciais. 
+</p><p>
+4.1. Sobre os e-mails: serão enviados e-mails diariamente com ofertas para os clientes cadastrados. Os e-mails enviados pelo Magazine Luiza não contêm anexos para serem baixados e tampouco solicitam dados dos usuários. 
+</p><p>
+4.2. Caso o Cliente não queira mais receber e-mails do Magazine Luiza, ele deve clicar no link de descadastramento presente em todos os e-mails enviados. 
+</p><p>
+5. Do Registro de Atividades: o Magazine Luiza poderá registrar as atividades efetuadas pelo Usuário no site, por meio de logs, incluindo: 1. Endereço IP do Usuário; 2. Ações efetuadas pelo Usuário no site; 3. Páginas acessadas pelo Usuário; 4. Datas e horários de cada ação e de acesso a cada funcionalidade do site; 5. Session ID do Usuário, quando aplicável. Os registros mencionados poderão ser utilizados pelo Magazine Luiza em casos de investigação de fraudes ou de alterações indevidas em seus sistemas e cadastros. 
+</p><p>
+6. Cookies: o site poderá fazer o uso de cookies, cabendo ao Usuário configurar o seu navegador de Internet, caso deseje bloqueá-los. Nesta hipótese, algumas funcionalidades do site poderão ser limitadas. 
+</p><p>
+7. Recomendações: a partir do uso de um cookie que identifica a navegação do Usuário, o site faz a recomendação de produtos. Essa recomendação varia conforme o Usuário e seu comportamento dentro do site, sendo avaliado, por exemplo, se houve apenas navegação ou também compra, quais itens foram vistos, pesquisados ou comprados por ele e outros Usuários em situações de navegação semelhantes. Considerando que essa recomendação é gerada a partir de algoritmos, sua precisão pode não ser exata, porém visa sugerir produtos que sejam do interesse do Usuário, sem que este tenha qualquer obrigatoriedade de adquiri-los. 
+</p><p>
+8. Disposições Gerais: as disposições constantes desta Política de Privacidade poderão ser atualizadas ou modificadas a qualquer momento, cabendo ao Usuário verificá-la sempre que efetuar o acesso ao site. O Usuário deverá entrar em contato em caso de qualquer dúvida com relação às disposições constantes desta Política de Privacidade e Uso, elegendo um destes meios de contato: telefone 0800-34-4000 ou formulário de contato. 
+</p><p>
+9. Lei Aplicável e Jurisdição: a presente Política de Privacidade será interpretada segundo a legislação brasileira, no idioma português, sendo eleito o Foro da Comarca de São Paulo para dirimir qualquer litígio, questão ou dúvida superveniente, com expressa renúncia de qualquer outro, por mais privilegiado que seja. 
+</p><p>
+10. Cadastro: para participar e usufruir do site, além de ter a idade mínima de 18 (dezoito) anos, o Cliente deverá fornecer na ocasião do cadastro as seguintes informações: nome completo, apelido, CPF, RG, endereço completo, telefone fixo, data de nascimento, e-mail, além de escolher uma senha. 
+</p><p>
+11. A regra de desconto varia de acordo com a categoria.
+Categorias com 5% de desconto: Móveis, Colchões, Utensílios Domésticos, Relógios, Esporte e Lazer, Ferramentas e Segurança, Perfumaria
+Categorias com 10% de desconto: Informática e Acessórios, Ar Condicionado, Eletrodomésticos, Eletroportáteis, Beleza e Saúde, Bebês, Brinquedos, Casa e Jardim, Tablets, Telefonia Fixa, Celulares e Telefonia, TV e Video, Games, Áudio e Auto
+</p>
+<h6>Atualização: 23 de Julho de 2015. </h6>
+<p>
+MAGAZINE LUIZA S/A
+</p>
+</div>
+    
+
+            </div>
+
+            
+                <!-- Footer -->
+                <footer class="row">
+                    <div class="last-viewed">
+                        <a href="/ultimos-vistos">
+                            <span class="title">Últimos produtos vistos</span>
+                            <span class="icon icon-right-arrow"></span>
+                        </a>
+                    </div>
+                    <span class="color-bar row"></span>
+                    <div class="ml-info-box">
+                        <div class="desktop">
+                            <span>
+                                Preços e condições de pagamento exclusivos para compras via internet e podem variar nas lojas físicas.<br>
+                                Ofertas válidas até o término de nossos estoques para internet. Vendas sujeitas à análise e confirmação de dados.
+                            </span>
+                        </div>
+                        <div class="general">
+                            <span>
+                                Rodovia dos Bandeirantes KM 68,760 - Rio Abaixo - CEP:13213-902 - Louveira/SP<br>
+                                CNPJ: 47960950/0449-27 <br>
+                                Endereço para correspondência: Rua do Comércio, 1924 - Rio Abaixo - CEP:14400-660 - Franca/SP
+                                <p class="clearfix">
+                                    <a href="https://www.magazineluiza.com.br/central-de-atendimento/fale-conosco/" target="_blank" class="redirect">www.magazineluiza.com.br/formulariocontato</a>
+                                </p>
+                                ® 2017 Magazine Luiza
+                                <p class="clearfix">
+                                    <a href="mailto:atendimento.site@magazineluiza.com.br" class="redirect">atendimento.site@magazineluiza.com.br</a>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            
+        </div>
+
+    </div>
+
+    <div id="theme-list-styles"></div>
+    
+        <script async="" data-main="https://mms-amp-static.magazineluiza.com.br/js/cpld-08575fec4c0f4001a218ae50c35fede4" src="https://mms-amp-static.magazineluiza.com.br/js/libs/require/require.js"></script>
+    
+
+    <script async="" src="https://mms-amp-static.magazineluiza.com.br/js/libs/modernizr.js"></script>
+
+
+
+
+­<style>@font-face {font-family:"font";src:url("https://")}@media (touch-enabled),(-webkit-touch-enabled),(-moz-touch-enabled),(-o-touch-enabled),(-ms-touch-enabled),(modernizr){#touch{top:9px;position:absolute}}@media (transform-3d),(-webkit-transform-3d),(-moz-transform-3d),(-o-transform-3d),(-ms-transform-3d),(modernizr){#csstransforms3d{left:9px;position:absolute;height:3px;}}#generatedcontent:after{content:":)";visibility:hidden}</style><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
