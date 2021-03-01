@@ -11,11 +11,14 @@ var importedLinks = fs
 (async () => {
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
-        maxConcurrency: 6,
+        maxConcurrency: 8,
         monitor: true
     });
 
     const download = async ({ page, data: url }) => {
+        await page.setExtraHTTPHeaders({
+            'Accept-Language': 'pt'
+        });
         await page.goto(url);
         const pageTitle = await page.evaluate(() => document.title);
         var data = await page.content();
