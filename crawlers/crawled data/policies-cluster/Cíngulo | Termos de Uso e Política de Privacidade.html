@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,viewport-fit=cover">
+        <title>Cíngulo | Termos de Uso e Política de Privacidade</title>
+
+        <style>
+            body {
+                color: #555;
+                font-family: Arial, sans-serif;
+                font-size: 18px;
+            }
+
+            h1 {
+                margin-bottom: 40px;
+                text-align: center;
+                font-size: 28px;
+            }
+
+            a {
+                display: block;
+                margin-bottom: 80px;
+                text-align: center;
+                color: #246bb3;
+            }
+
+            #content {
+                display: block;
+                margin: 0 auto;
+                max-width: 700px;
+            }
+
+            #content h2 { font-size: 24px; }
+
+            #content h3 { font-size: 20px; }
+
+            #content p, #content li {
+                font-size: 14px;
+                line-height: 23px;
+                text-align: justify;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Termos de Uso e Política de Privacidade</h1>
+        <div id="content"></div>
+        <a href="https://www.cingulo.com">Voltar</a>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $.get('https://api.cingulo.com/core/terms/').done(function (res) {
+                $('#content').html(res.content);
+            });
+        </script>
+
+    
+
+</body></html>

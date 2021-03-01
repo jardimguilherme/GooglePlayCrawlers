@@ -1,0 +1,159 @@
+<html><head>
+    <title>loading...</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+</head>
+<body>
+<script type="text/javascript" src="../../../../common/js/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var ts = parseInt(new Date().getTime() / (1000*60*10));
+        var searchParams = {};
+        var init = function () {
+            getSearchParams();
+            if (!searchParams.service || !searchParams.type) errorPage();
+            else checkServiceJson();
+        };
+        var getSearchParams = function () {
+            try {
+                var decoded = decodeURIComponent(window.location.search);
+                var tokens = decoded.slice(1).split('&');
+                for (var i = 0; i < tokens.length; i++) {
+                    var key = tokens[i].split('=')[0];
+                    var value = tokens[i].split('=')[1];
+                    if (key && value) searchParams[key] = value;
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        var checkServiceJson = function () {
+            $.ajax({
+                type: 'GET',
+                url: 'data/' + searchParams.service + '/serviceInfo.json?ts='+ ts,
+                dataType: 'json',
+                timeout: 10000,
+                success: function (json) {
+                    if (Object.keys(json).length === 0 || json['activate'] == false) {
+                        errorPage();
+                    } else {
+                        checkHistoryJson(json);
+                    }
+                },
+                error: function (data) {
+                    errorPage();
+                }
+            });
+        };
+        var checkHistoryJson = function (serviceJson) {
+            var clData = getCountryAndLanguage(searchParams.country, searchParams.lang, serviceJson);
+            if (!clData.country || !clData.language) errorPage();
+            else {
+                var dirPath = "data/" + searchParams.service + "/" + searchParams.type + "/" + clData.country + "/" + clData.language;
+                $.ajax({
+                    type: 'GET',
+                    url: dirPath + "/history.json?ts="+ts,
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (json) {
+                        var htmlPath;
+                        var curr = parseInt(new Date().getTime()/1000);
+                        for (var i = 0; i < json.length; i++) {
+                            if (json[i] <= curr) {
+                                htmlPath = dirPath + "/" + json[i] + ".html";
+                                break;
+                            }
+                        }
+                        if (!htmlPath) errorPage();
+                        else termPage(htmlPath);
+                    },
+                    error: function (data) {
+                        errorPage();
+                    }
+                });
+            }
+        };
+        var getCountryAndLanguage = function (country, language, serviceJson) {
+            var defaultCountry = serviceJson['defaultCountryCode'];
+            var termList = serviceJson['terms'];
+            var checkResults = checkCountryAndLang(defaultCountry, country, language, termList);
+            if (checkResults.countryLangExists) {
+                return {country: country, language: language};
+            }
+            else if (checkResults.countryDefaultLang) {
+                return {country: country, language: checkResults.countryDefaultLang};
+            }
+            else if (checkResults.defaultCountryLangExists) {
+                return {country: defaultCountry, language: language};
+            }
+            else if (checkResults.defaultCountryDefaultLang) {
+                return {country: defaultCountry, language: checkResults.defaultCountryDefaultLang};
+            }
+            else {
+                return {country: undefined, language: undefined};
+            }
+        };
+        var checkCountryAndLang = function (defaultCountry, country, language, termList) {
+            var countryLangExists = false;
+            var defaultCountryLangExists = false;
+            var countryDefaultLang;
+            var defaultCountryDefaultLang;
+            for (var i = 0; i < termList.length; i++) {
+                if (checkTypeCode(termList[i]['types'])) {
+                    if (termList[i]['countryCode'] == country && termList[i]['languageCode'] == language) {
+                        countryLangExists = true;
+                    }
+                    if (termList[i]['countryCode'] == defaultCountry && termList[i]['languageCode'] == language) {
+                        defaultCountryLangExists = true;
+                    }
+                    if (termList[i]['countryCode'] == country && termList[i]['isDefaultLang'] == true) {
+                        countryDefaultLang = termList[i]['languageCode'];
+                    }
+                    if (termList[i]['countryCode'] == defaultCountry && termList[i]['isDefaultLang'] == true) {
+                        defaultCountryDefaultLang = termList[i]['languageCode'];
+                    }
+                }
+            }
+            return {
+                countryLangExists: countryLangExists,
+                countryDefaultLang: countryDefaultLang,
+                defaultCountryLangExists: defaultCountryLangExists,
+                defaultCountryDefaultLang: defaultCountryDefaultLang
+            };
+        };
+
+        var checkTypeCode = function (types) {
+            var exists = false;
+            for (var i = 0; i < types.length; i++) {
+                if (types[i]['typeCode'] == searchParams.type) {
+                    exists = true;
+                    break;
+                }
+            }
+            return exists;
+        };
+        var errorPage = function () {
+            window.location.replace('./error.html?lang='+searchParams.lang);
+        };
+        var termPage = function (termPath) {
+            $.ajax({
+                type: 'GET',
+                url: termPath,
+                timeout: 10000,
+                success: function (res) {
+                    termPath += '?ts=' + ts;
+                    if (searchParams.menu == 'y') termPath += '&menu=y';
+                    if (searchParams.appId) termPath += '&appId='+searchParams.appId;
+                    window.location.replace(termPath);
+                }, error: function (res) {
+                    errorPage()
+                }
+            });
+        }
+        init();
+    });
+</script>
+
+</body></html>

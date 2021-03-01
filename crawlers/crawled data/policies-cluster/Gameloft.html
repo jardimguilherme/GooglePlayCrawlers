@@ -1,0 +1,853 @@
+<!DOCTYPE html><html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths chrome v88" lang="pt-br"><head>
+        <meta charset="utf-8">
+        <title>Gameloft</title>
+                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, maximum-scale=1, viewport-fit=auto">
+<meta name="description" content="Gameloft Showcase">
+<meta name="msapplication-TileColor" content="#00bff3">
+<meta name="msapplication-TileImage" content="https://media01.gameloft.com/web_mkt/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#00bff3">        
+
+        
+        <link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x572">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="https://media01.gameloft.com/web_mkt/favicon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="https://media01.gameloft.com/web_mkt/favicon/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="https://media01.gameloft.com/web_mkt/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="https://media01.gameloft.com/web_mkt/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="https://media01.gameloft.com/web_mkt/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="https://media01.gameloft.com/web_mkt/favicon/manifest.json" rel="manifest">
+<link href="//www.gameloft.com/assets/css/style.css?v=showcase_v1.1.103" media="all" rel="stylesheet" type="text/css">
+<link href="//www.gameloft.com/assets/css/showcase.css?v=showcase_v1.1.103" media="all" rel="stylesheet" type="text/css">                
+        <script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/4fe52f49/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script id="spcloader" type="text/javascript" async="" src="https://sdk.privacy-center.org/4ddf68ae-5211-4fb3-9350-c14ce85ace44/loader.js?target=www.gameloft.com" charset="utf-8"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.youtube.com/iframe_api"></script><script id="spcloader" type="text/javascript" async="" src="https://sdk.privacy-center.org/4ddf68ae-5211-4fb3-9350-c14ce85ace44/loader.js?target=www.gameloft.com" charset="utf-8"></script><script>
+//            var basePath = '//';
+            var basePath = '//www.gameloft.com/';
+            var language = 'pt-br';
+            var country = 'br';
+            var webviewPlatform = '';
+            var mobile_detect = 0;
+            var tablet_detect = 0;
+        </script>
+
+        <style>
+            .gl-legal-content {
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+            }
+
+            @supports(padding: max(0px)) {
+                .gl-legal-content {
+                    padding-left: max(40px, env(safe-area-inset-left));
+                    padding-right: max(40px, env(safe-area-inset-right));
+                }
+            }
+        </style>
+
+    <script type="text/javascript" async="" src="https://sdk.privacy-center.org/sdk.a7a365b5844fc6ffe40d6edfe1c78a2e38ed3b0f.js" charset="utf-8"></script><script charset="utf-8" src="https://sdk.privacy-center.org/ui-gdpr-en.a7a365b5844fc6ffe40d6edfe1c78a2e38ed3b0f.js"></script><style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+    <body class=" pace-running"><style type="text/css" scoped="true">#didomi-host .didomi-components-button{cursor:pointer;display:block;height:38px;padding:0 20px;font-size:16px;line-height:18px;font-weight:700;text-align:center;color:#555;background-color:#eee;border:1px solid rgba(34,34,34,.2)}#didomi-host .didomi-components-button:disabled{opacity:.4;cursor:auto}#didomi-host .didomi-components-button span{background:transparent}#didomi-host .didomi-mobile .didomi-components-button{font-size:14px}#didomi-host .didomi-screen-xsmall .didomi-components-button{padding:0 10px}#didomi-host .didomi-components-radio{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center}#didomi-host .didomi-components-radio__option{margin-right:5px;cursor:pointer;height:25px;box-shadow:1px 1px 0 0 rgba(0,0,0,.1);background-color:#fff;border:1px solid #eee;padding:0 20px;line-height:12px;font-size:12px;color:#b3b3b3;font-weight:700;transition:background-color .5s,border-color .5s;transition-timing-function:ease}#didomi-host .didomi-components-radio__option:hover{color:gray;border-color:#bbb}#didomi-host .didomi-components-radio__option:last-child{margin-right:0}#didomi-host .didomi-components-radio__option>svg{margin-right:5px}#didomi-host .didomi-components-radio__option span{background:transparent}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--agree{background-color:#69ba73;color:#fff;border:1px solid rgba(0,0,0,.3);padding:0 11.5px}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--agree>svg{vertical-align:middle}#didomi-host .didomi-components-radio__option.didomi-components-radio__option--disagree{background-color:#f55;color:#fff;border:1px solid rgba(0,0,0,.3);padding:0 13.5px}#didomi-host .didomi-components-accordion{flex:5}#didomi-host .didomi-components-accordion .label-click{cursor:pointer}#didomi-host .didomi-components-accordion .trigger-icon{width:15px;font-size:16px;display:inline-block;text-align:center}#didomi-host .didomi-components-accordion .didomi-content{overflow:hidden;max-height:0;opacity:0;visibility:hidden;font-weight:300;text-align:justify;-webkit-transition:all .5s ease-in-out;-moz-transition:all .5s ease-in-out;-o-transition:all .5s ease-in-out;transition:all .5s ease-in-out;transition-property:opacity,max-height,transform,visibility,padding-bottom}#didomi-host .didomi-components-accordion .didomi-content.active{max-height:3000px;opacity:1;visibility:visible;padding-bottom:10px;transition-property:opacity,max-height,transform,visibility}#didomi-host .didomi-components-accordion .didomi-components-accordion-label-container{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center}#didomi-host .didomi-mobile .didomi-components-accordion{width:100%;flex:1 auto}#didomi-host .didomi-mobile .didomi-components-accordion .didomi-components-accordion-label-container{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-moz-box-pack:start;-webkit-flex-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;-moz-align-items:flex-start;align-items:flex-start}#didomi-host .lds-ellipsis-container{display:flex;align-items:center;justify-content:center;height:100%}#didomi-host .lds-ellipsis-container .lds-ellipsis{display:inline-block;position:relative;width:64px;height:64px}#didomi-host .lds-ellipsis-container .lds-ellipsis div{position:absolute;top:27px;width:11px;height:11px;border-radius:50%;background:#dcdcdc;animation-timing-function:cubic-bezier(0,1,1,0)}#didomi-host .lds-ellipsis-container .lds-ellipsis div:first-child{left:6px;animation:lds-ellipsis1 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(2){left:6px;animation:lds-ellipsis2 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(3){left:26px;animation:lds-ellipsis2 .6s infinite}#didomi-host .lds-ellipsis-container .lds-ellipsis div:nth-child(4){left:45px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}to{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0)}to{transform:translate(19px)}}#didomi-host .didomi-components-skip-link{position:absolute;top:-100px;left:-100px;margin-bottom:16px;display:block}#didomi-host .didomi-components-skip-link:focus{position:relative;top:0;left:0}#didomi-host .didomi-popup-backdrop{position:fixed;top:0;left:0;width:100%;height:100%;background-color:hsla(0,0%,100%,.8);z-index:2147483642;overflow:auto;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;align-items:flex-start}#didomi-host .didomi-exterior-border{border-style:solid;border-radius:5px;border-width:1px;padding:1px;margin:auto}#didomi-host .didomi-popup-container{background-color:#fff;opacity:1;max-width:650px;width:100%;border-style:solid;border-radius:3px;border-width:1px;-webkit-overflow-scrolling:touch}#didomi-host .didomi-popup-header{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center;padding:30px 20px 0;font-weight:700;font-family:Arial}#didomi-host .didomi-popup-body{padding:30px 20px}#didomi-host .didomi-popup-body .didomi-popup-body-section{margin-bottom:22px}#didomi-host .didomi-popup-body .didomi-popup-body-section:last-child{margin-bottom:0}#didomi-host .didomi-popup-footer{-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;background-color:hsla(0,0%,93%,.4);height:58px}#didomi-host .didomi-popup-footer,#didomi-host .didomi-popup-footer .didomi-popup-actions{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center}#didomi-host .didomi-popup-footer .didomi-popup-actions{-webkit-box-pack:end;-moz-box-pack:end;-webkit-flex-pack:end;-ms-flex-pack:end;-moz-justify-content:flex-end;-webkit-justify-content:flex-end;justify-content:flex-end}#didomi-host .didomi-popup-footer .didomi-popup-actions button,#didomi-host .didomi-popup-footer .didomi-popup-actions div{margin-right:10px}#didomi-host .didomi-popup-close{font-family:Arial;opacity:.5;font-size:30px;font-weight:500;line-height:30px;color:#000;text-shadow:0 1px 0 #fff;transition:.5s}#didomi-host .didomi-popup-close:hover{opacity:.7}#didomi-host .didomi-mobile .didomi-popup{width:100%;height:100%;max-width:none}body.didomi-popup-open{overflow:hidden!important}body.didomi-popup-open-ios{position:fixed;width:100%}#didomi-host .didomi-notice-data-processing-container{padding-top:15px;text-align:justify;font-size:12px;line-height:160%}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-title{color:#333;font-weight:700}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list{font-weight:700;color:#999}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list .didomi-notice-data-processing-item{padding-top:5px}#didomi-host .didomi-notice-data-processing-container .didomi-notice-data-processing-list .didomi-notice-data-processing-item div{display:inline-block}#didomi-host .didomi-mobile .didomi-notice-data-processing-container .didomi-notice-data-processing-list,#didomi-host .didomi-mobile .didomi-notice-data-processing-container .didomi-notice-data-processing-title{font-size:11px;line-height:160%}@namespace svg "http://www.w3.org/2000/svg";#didomi-host{all:initial;-ms-overflow-style:auto;-moz-appearance:none;-moz-binding:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;-moz-context-properties:none;-moz-float-edge:content-box;-moz-force-broken-image-icon:0;-moz-image-region:auto;-moz-orient:inline;-moz-outline-radius-bottomleft:0;-moz-outline-radius-bottomright:0;-moz-outline-radius-topleft:0;-moz-outline-radius-topright:0;-moz-stack-sizing:stretch-to-fit;-moz-text-blink:none;-moz-user-focus:none;-moz-user-input:auto;-moz-user-modify:read-only;-moz-window-shadow:default;-webkit-border-before-color:currentcolor;-webkit-border-before-style:none;-webkit-border-before-width:medium;-webkit-box-reflect:none;-webkit-mask-attachment:scroll;-webkit-mask-clip:border;-webkit-mask-composite:source-over;-webkit-mask-image:none;-webkit-mask-origin:padding;-webkit-mask-position:0 0;-webkit-mask-position-x:0;-webkit-mask-position-y:0;-webkit-mask-repeat:repeat;-webkit-mask-repeat-x:repeat;-webkit-mask-repeat-y:repeat;-webkit-tap-highlight-color:black;-webkit-text-stroke-color:currentcolor;-webkit-text-stroke-width:0;-webkit-touch-callout:default;align-content:stretch;align-items:stretch;align-self:auto;animation-delay:0s;animation-direction:normal;animation-duration:0s;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;azimuth:center;backface-visibility:visible;background-attachment:scroll;background-blend-mode:normal;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;background-position:0 0;background-repeat:repeat;background-size:auto auto;block-size:auto;border-block-end-color:currentcolor;border-block-end-style:none;border-block-end-width:medium;border-block-start-color:currentcolor;border-block-start-style:none;border-block-start-width:medium;border-bottom-color:currentcolor;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-style:none;border-collapse:separate;border-image-outset:0s;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-inline-end-color:currentcolor;border-inline-end-style:none;border-inline-end-width:medium;border-inline-start-color:currentcolor;border-inline-start-style:none;border-inline-start-width:medium;border-left-color:currentcolor;border-left-style:none;border:medium;border-right-color:currentcolor;border-right-style:none;border-spacing:0;border-top-color:currentcolor;border-top-left-radius:0;border-top-right-radius:0;border-top-style:none;bottom:auto;box-align:stretch;box-decoration-break:slice;box-direction:normal;box-flex:0;box-flex-group:1;box-lines:single;box-ordinal-group:1;box-orient:initial;box-pack:start;box-shadow:none;box-sizing:content-box;break-after:auto;break-before:auto;break-inside:auto;caption-side:top;caret-color:auto;clear:none;clip:auto;clip-path:none;color:initial;column-count:auto;column-fill:balance;column-gap:normal;column-rule-color:currentcolor;column-rule-style:none;column-rule-width:medium;column-span:none;column-width:auto;content:normal;counter-increment:none;counter-reset:none;cursor:auto;empty-cells:show;filter:none;flex-basis:auto;flex-direction:row;flex-grow:0;flex-shrink:1;flex-wrap:nowrap;float:none;font-family:initial;font-feature-settings:normal;font-kerning:auto;font-language-override:normal;font-size:medium;font-size-adjust:none;font-stretch:normal;font-style:normal;font-synthesis:weight style;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-weight:400;grid-auto-columns:auto;grid-auto-flow:row;grid-auto-rows:auto;grid-column-end:auto;grid-column-gap:0;grid-column-start:auto;grid-row-end:auto;grid-row-gap:0;grid-row-start:auto;grid-template-areas:none;grid-template-columns:none;grid-template-rows:none;height:auto;hyphens:manual;image-orientation:0deg;image-rendering:auto;image-resolution:1dppx;ime-mode:auto;inline-size:auto;isolation:auto;justify-content:flex-start;left:auto;letter-spacing:normal;line-break:auto;line-height:normal;list-style-image:none;list-style-position:outside;list-style-type:disc;margin-block-end:0;margin-block-start:0;margin-inline-end:0;margin-inline-start:0;margin:0;marker-offset:auto;mask-clip:border-box;mask-composite:add;mask-image:none;mask-mode:match-source;mask-origin:border-box;mask-position:0 0;mask-repeat:repeat;mask-size:auto;mask-type:luminance;max-height:none;max-width:none;min-block-size:0;min-height:0;min-inline-size:0;min-width:0;mix-blend-mode:normal;object-fit:fill;object-position:50% 50%;offset-block-end:auto;offset-block-start:auto;offset-inline-end:auto;offset-inline-start:auto;opacity:1;order:0;orphans:2;outline-color:initial;outline-offset:0;outline-style:none;outline-width:medium;overflow:visible;overflow-clip-box:padding-box;overflow-wrap:normal;overflow-x:visible;overflow-y:visible;padding-block-end:0;padding-block-start:0;padding-inline-end:0;padding-inline-start:0;padding:0;page-break-after:auto;page-break-before:auto;page-break-inside:auto;perspective:none;perspective-origin:50% 50%;pointer-events:auto;position:static;quotes:initial;resize:none;right:auto;ruby-align:space-around;ruby-merge:separate;ruby-position:over;scroll-behavior:auto;scroll-snap-coordinate:none;scroll-snap-destination:0 0;scroll-snap-points-x:none;scroll-snap-points-y:none;scroll-snap-type:none;scroll-snap-type-x:none;scroll-snap-type-y:none;shape-image-threshold:0;shape-margin:0;shape-outside:none;tab-size:8;table-layout:auto;text-align:initial;text-align-last:auto;text-combine-upright:none;text-decoration-color:currentcolor;text-decoration-line:none;text-decoration-style:solid;text-emphasis-color:currentcolor;text-emphasis-position:over right;text-emphasis-style:none;text-indent:0;text-justify:auto;text-orientation:mixed;text-overflow:clip;text-rendering:auto;text-shadow:none;text-transform:none;text-underline-position:auto;top:auto;touch-action:auto;transform:none;transform-box:border-box;transform-origin:50% 50% 0;transform-style:flat;transition-delay:0s;transition-duration:0s;transition-property:all;transition-timing-function:ease;user-select:auto;vertical-align:baseline;visibility:visible;white-space:normal;widows:2;width:auto;will-change:auto;word-break:normal;word-spacing:normal;word-wrap:normal;writing-mode:horizontal-tb;z-index:auto;-webkit-appearance:none;-ms-appearance:none;appearance:none}#didomi-host :not(svg|*){all:unset;-webkit-text-fill-color:initial}button{line-height:normal}button span{padding:0;background:initial;height:auto}#didomi-host{display:block;width:0;height:0;font-size:15px;line-height:160%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}#didomi-host .pad{padding:16px}#didomi-host .pad-xxl{padding:56px}#didomi-host .pad-xl{padding:48px}#didomi-host .pad-lg{padding:32px}#didomi-host .pad-md{padding:24px}#didomi-host .pad-sm{padding:8px}#didomi-host .pad-xs{padding:4px}#didomi-host .pad-none{padding:0}#didomi-host .pad-bottom{padding-bottom:16px}#didomi-host .pad-bottom-xxl{padding-bottom:56px}#didomi-host .pad-bottom-xl{padding-bottom:48px}#didomi-host .pad-bottom-lg{padding-bottom:32px}#didomi-host .pad-bottom-md{padding-bottom:24px}#didomi-host .pad-bottom-sm{padding-bottom:8px}#didomi-host .pad-bottom-xs{padding-bottom:4px}#didomi-host .pad-bottom-none{padding-bottom:0}#didomi-host .pad-top{padding-top:16px}#didomi-host .pad-top-xxl{padding-top:56px}#didomi-host .pad-top-xl{padding-top:48px}#didomi-host .pad-top-lg{padding-top:32px}#didomi-host .pad-top-md{padding-top:24px}#didomi-host .pad-top-sm{padding-top:8px}#didomi-host .pad-top-xs{padding-top:4px}#didomi-host .pad-top-none{padding-top:0}#didomi-host .pad-left{padding-left:16px}#didomi-host .pad-left-xxl{padding-left:56px}#didomi-host .pad-left-xl{padding-left:48px}#didomi-host .pad-left-lg{padding-left:32px}#didomi-host .pad-left-md{padding-left:24px}#didomi-host .pad-left-sm{padding-left:8px}#didomi-host .pad-left-xs{padding-left:4px}#didomi-host .pad-left-none{padding-left:0}#didomi-host .pad-right{padding-right:16px}#didomi-host .pad-right-xxl{padding-right:56px}#didomi-host .pad-right-xl{padding-right:48px}#didomi-host .pad-right-lg{padding-right:32px}#didomi-host .pad-right-md{padding-right:24px}#didomi-host .pad-right-sm{padding-right:8px}#didomi-host .pad-right-xs{padding-right:4px}#didomi-host .pad-right-none{padding-right:0}#didomi-host .pull-xxl{margin:-56px}#didomi-host .pull-xl{margin:-48px}#didomi-host .pull-lg{margin:-32px}#didomi-host .pull-md{margin:-24px}#didomi-host .pull{margin:-16px}#didomi-host .pull-sm{margin:-8px}#didomi-host .pull-xs{margin:-4px}#didomi-host .pull-none{margin:0}#didomi-host .pull-bottom-xxl{margin-bottom:-56px}#didomi-host .pull-bottom-xl{margin-bottom:-48px}#didomi-host .pull-bottom-lg{margin-bottom:-32px}#didomi-host .pull-bottom-md{margin-bottom:-24px}#didomi-host .pull-bottom{margin-bottom:-16px}#didomi-host .pull-bottom-sm{margin-bottom:-8px}#didomi-host .pull-bottom-xs{margin-bottom:-4px}#didomi-host .pull-bottom-none{margin-bottom:0}#didomi-host .pull-top-xxl{margin-top:-56px}#didomi-host .pull-top-xl{margin-top:-48px}#didomi-host .pull-top-lg{margin-top:-32px}#didomi-host .pull-top-md{margin-top:-24px}#didomi-host .pull-top{margin-top:-16px}#didomi-host .pull-top-sm{margin-top:-8px}#didomi-host .pull-top-xs{margin-top:-4px}#didomi-host .pull-top-none{margin-top:0}#didomi-host .pull-left-xxl{margin-left:-56px}#didomi-host .pull-left-xl{margin-left:-48px}#didomi-host .pull-left-lg{margin-left:-32px}#didomi-host .pull-left-md{margin-left:-24px}#didomi-host .pull-left{margin-left:-16px}#didomi-host .pull-left-sm{margin-left:-8px}#didomi-host .pull-left-xs{margin-left:-4px}#didomi-host .pull-left-none{margin-left:0}#didomi-host .pull-right-xxl{margin-right:-56px}#didomi-host .pull-right-xl{margin-right:-48px}#didomi-host .pull-right-lg{margin-right:-32px}#didomi-host .pull-right-md{margin-right:-24px}#didomi-host .pull-right{margin-right:-16px}#didomi-host .pull-right-sm{margin-right:-8px}#didomi-host .pull-right-xs{margin-right:-4px}#didomi-host .pull-right-none{margin-right:0}#didomi-host .push{margin:16px}#didomi-host .push-xxl{margin:56px}#didomi-host .push-xl{margin:48px}#didomi-host .push-lg{margin:32px}#didomi-host .push-md{margin:24px}#didomi-host .push-sm{margin:8px}#didomi-host .push-xs{margin:4px}#didomi-host .push-none{margin:0}#didomi-host .push-bottom{margin-bottom:16px}#didomi-host .push-bottom-xxl{margin-bottom:56px}#didomi-host .push-bottom-xl{margin-bottom:48px}#didomi-host .push-bottom-lg{margin-bottom:32px}#didomi-host .push-bottom-md{margin-bottom:24px}#didomi-host .push-bottom-sm{margin-bottom:8px}#didomi-host .push-bottom-xs{margin-bottom:4px}#didomi-host .push-bottom-none{margin-bottom:0}#didomi-host .push-top{margin-top:16px}#didomi-host .push-top-xxl{margin-top:56px}#didomi-host .push-top-xl{margin-top:48px}#didomi-host .push-top-lg{margin-top:32px}#didomi-host .push-top-md{margin-top:24px}#didomi-host .push-top-sm{margin-top:8px}#didomi-host .push-top-xs{margin-top:4px}#didomi-host .push-top-none{margin-top:0}#didomi-host .push-left{margin-left:16px}#didomi-host .push-left-xxl{margin-left:56px}#didomi-host .push-left-xl{margin-left:48px}#didomi-host .push-left-lg{margin-left:32px}#didomi-host .push-left-md{margin-left:24px}#didomi-host .push-left-sm{margin-left:8px}#didomi-host .push-left-xs{margin-left:4px}#didomi-host .push-left-none{margin-left:0}#didomi-host .push-right{margin-right:16px}#didomi-host .push-right-xxl{margin-right:56px}#didomi-host .push-right-xl{margin-right:48px}#didomi-host .push-right-lg{margin-right:32px}#didomi-host .push-right-md{margin-right:24px}#didomi-host .push-right-sm{margin-right:8px}#didomi-host .push-right-xs{margin-right:4px}#didomi-host .push-right-none{margin-right:0}#didomi-host a,#didomi-host p,#didomi-host span{font-size:inherit;color:inherit;font-weight:inherit;line-height:inherit;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}#didomi-host .didomi-icon{vertical-align:middle}#didomi-host .didomi-logo-icon{margin-left:10px}#didomi-host div{display:block}#didomi-host p{display:block;margin-bottom:16px}#didomi-host .p-title{font-weight:700;font-size:1.1em;display:block;letter-spacing:.005em}#didomi-host ul{display:block;margin-bottom:16px}#didomi-host li{display:list-item;margin-left:20px}#didomi-host ol{display:block;list-style-type:decimal;margin-bottom:16px}#didomi-host table{box-sizing:border-box;display:table;width:100%;max-width:100%;border-collapse:separate;border-spacing:2px}#didomi-host table tbody,#didomi-host table thead{display:table-header-group}#didomi-host table tr{display:table-row}#didomi-host table td,#didomi-host table th{display:table-cell}#didomi-host a{cursor:pointer}#didomi-host a.didomi-no-link-style{text-decoration:none;color:#000}#didomi-host style{display:none}#didomi-host .text-bold{font-weight:700}#didomi-host h1{font-size:2em}#didomi-host h1,#didomi-host h2{display:block;font-weight:700;margin-bottom:16px}#didomi-host h2{font-size:1.5em}#didomi-host h3{font-size:1.17em}#didomi-host h3,#didomi-host h4,#didomi-host h5{display:block;font-weight:700;margin-bottom:16px}#didomi-host h5{font-size:.83em}#didomi-host h6{display:block;font-size:.67em;font-weight:700;margin-bottom:16px}#didomi-host b,#didomi-host strong{font-weight:700}#didomi-host cite,#didomi-host dfn,#didomi-host em,#didomi-host i,#didomi-host var{font-style:italic}#didomi-host ins,#didomi-host u{text-decoration:underline}#didomi-host del,#didomi-host s,#didomi-host strike{text-decoration:line-through}#didomi-host sub{vertical-align:sub}#didomi-host sub,#didomi-host sup{font-size:smaller;line-height:normal}#didomi-host sup{vertical-align:super}#didomi-host nobr{white-space:nowrap}#didomi-host hr{display:block;border:1px inset;margin:16px 0;color:gray;box-sizing:content-box}#didomi-host :focus{outline:1px auto #4d90fe}#didomi-host [dataTooltip],#didomi-host li[title] span,#didomi-host span[title]{cursor:help;border-bottom:1px dashed #000}#didomi-host [dataTooltip]{position:relative;width:fit-content}#didomi-host [dataTooltip]:focus{outline:none!important}#didomi-host [dataTooltip]:focus:after{content:attr(dataTooltip);padding:5px;font-size:10px;line-height:12px;display:block;position:absolute;white-space:pre-line;text-align:left;background-color:#f1f0f1;border:1px solid #ddd;overflow-y:auto!important;max-height:80px;z-index:1}#didomi-host .didomi-consent-popup-categories [dataTooltip],#didomi-host .didomi-consent-popup-categories [dataTooltip]:focus:after,#didomi-host .didomi-consent-popup-vendor__description [dataTooltip],#didomi-host .didomi-consent-popup-vendor__description [dataTooltip]:focus:after,#didomi-host .didomi-vendor-storage-disclosures [dataTooltip],#didomi-host .didomi-vendor-storage-disclosures [dataTooltip]:focus:after{position:static}#didomi-host #didomi-notice{background-color:#fff}#didomi-host #didomi-notice.didomi-regular-notice{position:fixed;font-size:13px;line-height:1.5em;z-index:2147483640}#didomi-host #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{margin-right:40px}#didomi-host #didomi-notice.didomi-regular-notice a{color:inherit;text-decoration:underline}#didomi-host #didomi-notice.didomi-regular-notice .didomi-notice-view-partners-link{text-decoration:underline}#didomi-host #didomi-notice.didomi-regular-notice.shape-box{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;padding:32px;max-width:310px}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons{margin-top:20px}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.multiple,#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.single,#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.single button{width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box #buttons.multiple button{padding-right:.8em;width:100%}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.top.left{margin:1em 0 0 1em}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.top.right{margin:1em 1em 0 0}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.bottom.left{margin:0 0 1em 1em}#didomi-host #didomi-notice.didomi-regular-notice.shape-box.bottom.right{margin:0 1em 1em 0}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner{padding:1em 1.8em;left:0;right:0}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner .didomi-notice__interior-border{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner #buttons.multiple{-ms-flex:0 0 auto}#didomi-host #didomi-notice.didomi-regular-notice.shape-banner #buttons.multiple button{margin-right:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel{max-width:600px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.right{right:100px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.left{left:100px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.bottom{padding:1px;border-top-width:1px;border-top-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-top-left-radius:5px;border-top-right-radius:5px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.bottom .didomi-notice__interior-border{border-top-width:1px;border-top-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-top-left-radius:3px;border-top-right-radius:3px;padding:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.top{padding:1px;border-bottom-width:1px;border-bottom-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-bottom-left-radius:5px;border-bottom-right-radius:5px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel.top .didomi-notice__interior-border{border-bottom-width:1px;border-bottom-style:solid;border-right-width:1px;border-right-style:solid;border-left-width:1px;border-left-style:solid;border-bottom-left-radius:3px;border-bottom-right-radius:3px;padding:10px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel #buttons.multiple{margin-top:20px}#didomi-host #didomi-notice.didomi-regular-notice.shape-panel #buttons.multiple button{margin-right:10px}#didomi-host #didomi-notice.didomi-regular-notice.top{top:0}#didomi-host #didomi-notice.didomi-regular-notice.bottom{bottom:0}#didomi-host #didomi-notice.didomi-regular-notice.left{left:0}#didomi-host #didomi-notice.didomi-regular-notice.right{right:0}#didomi-host #didomi-notice.didomi-regular-notice #buttons{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-moz-box-pack:center;-webkit-flex-pack:center;-ms-flex-pack:center;-moz-justify-content:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center}#didomi-host #didomi-notice.didomi-regular-notice #buttons button{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:1px;border-style:solid;text-align:center;white-space:nowrap;min-width:140px;cursor:pointer;text-decoration:none}#didomi-host #didomi-notice.didomi-regular-notice #buttons button.didomi-button-standard{background-color:#eee;border:1px solid rgba(34,34,34,.2);color:#555}#didomi-host .didomi-banner-notice-optin-type .didomi-continue-without-agreeing{position:absolute;top:10px!important;right:35px!important}#didomi-host .didomi-screen-large #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{max-width:1200px}#didomi-host .didomi-screen-xlarge #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{max-width:1500px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height{box-sizing:border-box;height:auto;max-height:100%;display:flex}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height.didomi-max-height-reached #buttons{box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border{padding:0;width:100%;flex:1 0 auto;display:flex;max-height:100vh;max-height:-webkit-fill-available}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border .didomi-notice-text{padding:1em 1.8em;margin:0;height:100%;overflow-y:auto;box-sizing:border-box}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border .didomi-notice-text>:last-child{margin-bottom:20px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-support-full-height .didomi-notice__interior-border #buttons{flex:1 0 auto;box-sizing:border-box;padding:1em 1.8em;margin-top:0}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice{left:0;right:0;font-size:11px;padding:1px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing{font-size:12px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.didomi-regular-notice-with-data-processing .didomi-notice-text{margin-right:0}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice .didomi-notice__interior-border{padding:1em 1.8em;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.bottom,#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.bottom .didomi-notice__interior-border{border-top-width:1px;border-top-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.top,#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice.top .didomi-notice__interior-border{border-bottom-width:1px;border-bottom-style:solid}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #text{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons{margin-top:20px}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple,#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.single,#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.single button{width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple button{margin-right:0;padding-right:.8em;width:100%}#didomi-host .didomi-mobile #didomi-notice.didomi-regular-notice #buttons.multiple button:last-child{margin-right:0}#didomi-host .didomi-mobile .didomi-banner-notice-optin-type .didomi-banner-notice-continue-without-agreeing-buttons{width:100%}#didomi-host .didomi-mobile .didomi-banner-notice-optin-type .didomi-continue-without-agreeing{align-self:flex-end;position:static;margin-top:5px;margin-bottom:15px}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple{-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple button{margin-bottom:10px;margin-right:0;padding-right:0;width:100%}#didomi-host .didomi-screen-xsmall #didomi-notice.didomi-regular-notice #buttons.multiple button:last-child{margin-bottom:0}#didomi-host .didomi-popup__backdrop{z-index:2147483641}#didomi-host .didomi-popup__backdrop.didomi-notice-popup .didomi-popup-view{width:100%}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height{box-sizing:border-box;display:flex;align-items:center;justify-content:center;-ms-flex-direction:column;height:100%;max-height:100vh}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-exterior-border,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-popup-container{border-radius:0}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached .didomi-popup-notice-logo-container{box-shadow:0 3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height.didomi-max-height-reached #buttons{box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border{display:inherit;box-sizing:border-box;margin:0 auto;z-index:2147483641;padding:0!important;max-height:100%;display:flex}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container{flex:1 0 auto;max-width:700px;display:flex;box-sizing:border-box;margin:0 auto;padding:0!important}@media (-ms-high-contrast:none){#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container ::-ms-backdrop{height:auto!important;overflow-y:auto}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-exterior-border,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container ::-ms-backdrop{display:block!important}}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view{max-height:100vh;height:100%;height:fit-content;height:-webkit-fit-content;width:100%;padding:0;flex:1 0 auto;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-moz-box-pack:start;-webkit-flex-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>:first-child{padding-top:50px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container{box-sizing:border-box;flex:1 0 auto;z-index:2147483640}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:30px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{height:100%;overflow-y:auto;padding:0 50px;box-sizing:border-box}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>:last-child{margin-bottom:20px}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{box-sizing:border-box;padding:20px 25px 50px;margin-top:0;flex:1 0 auto}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0!important}@media (-ms-high-contrast:none){#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view ::-ms-backdrop{flex:1 0 0}#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons,#didomi-host .didomi-popup__backdrop.didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view ::-ms-backdrop{flex:1 0 0}}#didomi-host .didomi-popup-notice{position:relative;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;align-items:center;box-sizing:border-box;flex:1;max-width:600px;padding:50px}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing{padding:45px 25px!important;color:#333}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing h1{text-align:left;margin-top:0;margin-bottom:25px}#didomi-host .didomi-popup-notice.didomi-popup-notice-with-data-processing p{font-size:14px;margin-top:0;margin-bottom:10px}#didomi-host .didomi-popup-notice h1{text-align:center;margin-bottom:50px}#didomi-host .didomi-popup-notice .didomi-popup-notice-logo{width:200px;margin-bottom:30px}#didomi-host .didomi-popup-notice .didomi-popup-notice-subtext,#didomi-host .didomi-popup-notice .didomi-popup-notice-text{max-width:600px;width:100%;flex:0 auto}#didomi-host .didomi-popup-notice .didomi-notice-view-partners-link{display:block;text-align:center;margin-top:20px}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons{margin-top:30px;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;justify-content:center;align-items:center}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-components-button{padding:2px 25px}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons a{text-decoration:underline}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button{min-width:200px;margin-right:10px}#didomi-host .didomi-popup-notice .didomi-popup-notice-buttons .didomi-button:last-child{margin-right:0}#didomi-host .didomi-popup-notice .didomi-popup-notice-subtext{margin-top:30px}#didomi-host .didomi-popup-notice .didomi-popup-close{position:absolute;right:30px;top:30px}#didomi-host .didomi-popup-notice-optin-type{max-width:730px}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-buttons{align-items:initial}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-buttons .didomi-components-button{padding:8px 16px!important;line-height:140%;height:auto}#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-logo-container,#didomi-host .didomi-popup-notice-optin-type .didomi-popup-notice-text-container{clear:both}#didomi-host .didomi-popup-notice-optin-type .didomi-continue-without-agreeing{float:right;margin-top:-10px;margin-bottom:40px}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice{padding:30px;font-size:12px;line-height:160%}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice h1{margin-bottom:35px}#didomi-host .didomi-mobile #didomi-popup .didomi-popup-notice p{text-align:justify}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height,#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view{max-height:-webkit-fill-available}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>:first-child{padding-top:30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{padding:0 30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>:first-child{margin-top:20px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>:last-child{margin-bottom:15px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container~.didomi-popup-notice-logo-container{padding:0 30px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{padding:30px 15px}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0!important}#didomi-host .didomi-mobile .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-subtext{margin-bottom:30px}#didomi-host .didomi-mobile .didomi-popup-notice-optin-type .didomi-continue-without-agreeing{margin-top:0;margin-bottom:30px}#didomi-host .didomi-screen-xsmall .didomi-popup-notice-buttons{-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin-top:15px}#didomi-host .didomi-screen-xsmall .didomi-popup-notice-buttons .didomi-components-button{margin:10px 0 0!important}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view>:first-child{padding-top:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-logo-container .didomi-popup-notice-logo{margin-bottom:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container{padding:0 15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>:first-child{margin-top:20px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container>:last-child{margin-bottom:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-text-container~.didomi-popup-notice-logo-container{padding:0 15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons{padding:15px}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view #buttons button:first-child{margin-top:0!important}#didomi-host .didomi-screen-xsmall .didomi-notice-popup.didomi-support-full-height .didomi-exterior-border .didomi-popup-container .didomi-popup-view .didomi-popup-notice-subtext{margin-bottom:15px}#didomi-host #didomi-notice.didomi-custom-notice-html{position:fixed;z-index:2147483640}#didomi-host #didomi-notice.didomi-custom-notice-html.shape-box{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between}#didomi-host #didomi-notice.didomi-custom-notice-html.shape-banner{left:0;right:0}#didomi-host #didomi-notice.didomi-custom-notice-html.top{top:0}#didomi-host #didomi-notice.didomi-custom-notice-html.bottom{bottom:0}#didomi-host #didomi-notice.didomi-custom-notice-html.left{left:0}#didomi-host #didomi-notice.didomi-custom-notice-html.right{right:0}#didomi-host .didomi-mobile #didomi-notice.didomi-custom-notice-html{left:0;right:0}#didomi-host .didomi-consent-popup-body{padding:30px 20px}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__title{font-size:12px;color:#999;text-transform:uppercase;margin-bottom:8px;display:block;font-weight:700;font-family:Arial}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__subtext{margin-bottom:22px}#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__explanation a{font-weight:700;text-decoration:underline}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height{box-sizing:border-box;display:flex;align-items:center;justify-content:center;-ms-flex-direction:column}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height.didomi-max-height-reached .didomi-exterior-border,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height.didomi-max-height-reached .didomi-popup-container{border-radius:0}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border{box-sizing:border-box;margin:0 auto;z-index:2147483641;padding:0!important;max-height:100%;display:flex}@media (-ms-high-contrast:none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-popup-container,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border ::-ms-backdrop{display:block!important}}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-popup-container{flex:1 0 auto;box-sizing:border-box;margin:0 auto;padding:0!important;display:flex}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences{padding:0;display:flex}@media (-ms-high-contrast:none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences ::-ms-backdrop{height:auto!important;overflow-y:auto}}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view{max-height:100vh;height:100%;height:fit-content;height:-webkit-fit-content;width:100%;padding:0;flex:1;display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-moz-box-pack:start;-webkit-flex-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body{overflow-y:auto;padding:10px 20px 0}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body>:last-child{margin-bottom:20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header{box-sizing:border-box;flex:1 0 auto;z-index:2147483640;padding:15px 20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer{box-sizing:border-box;flex:1 0 auto;z-index:2147483640;padding:10px 20px}#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer .didomi-logo-icon{margin-left:0}@media (-ms-high-contrast:none){#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header,#didomi-host .didomi-consent-popup__backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view ::-ms-backdrop{flex:1 0 0}}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view{max-height:-webkit-fill-available}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body{padding:15px 15px 0}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-body>:last-child{margin-bottom:15px}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-header{padding:10px 15px;box-shadow:0 3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer{padding:10px 15px;box-shadow:0 -3px 10px -2px rgba(0,0,0,.1)}#didomi-host .didomi-mobile .didomi-popup-backdrop.didomi-support-full-height .didomi-exterior-border .didomi-consent-popup-preferences .didomi-popup-view .didomi-popup-footer .didomi-consent-popup-actions{padding:0}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;-moz-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;margin-left:15px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing__buttons_tcf_v2{align-self:flex-start}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-data-processing,#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-moz-box-pack:justify;-webkit-flex-pack:justify;-ms-flex-pack:justify;-moz-justify-content:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;-moz-align-items:center;align-items:center;margin-bottom:8px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor{flex-wrap:wrap}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;-moz-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;margin-left:15px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__right_aligned_buttons{float:right;margin-top:-2px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-partner{display:inline-block;margin-right:15px;margin-bottom:5px}#didomi-host .didomi-consent-popup-preferences .didomi-consent-popup-partner a{border-bottom:1px dashed #000}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-vendor{-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;-moz-align-items:flex-start;align-items:flex-start;margin-bottom:8px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons{-webkit-flex-shrink:0;-webkit-box-flex:0;-moz-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;margin-left:0;margin-top:10px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing{display:-webkit-box;display:-moz-box;display:-webkit-flexbox;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-moz-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-moz-box-pack:start;-webkit-flex-pack:start;-ms-flex-pack:start;-moz-justify-content:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;-webkit-align-items:flex-start;-moz-align-items:flex-start;align-items:flex-start}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-category__name,#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__purpose{margin-bottom:6px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-category__description,#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-preferences .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__description{font-size:12px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-category__description{margin-bottom:20px;font-size:12px}#didomi-host .didomi-mobile #didomi-consent-popup .didomi-consent-popup-data-processing__buttons{margin-left:0}#didomi-host .didomi-mobile .didomi-consent-popup-vendor__right_aligned_buttons{display:flex;float:none!important;margin-top:0!important}#didomi-host .didomi-consent-popup-information .didomi-consent-popup-body{max-height:300px;overflow:auto}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body_vendors-list{height:280px;overflow:auto;border:2px solid rgba(0,0,0,.05);padding:12px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-body{padding:20px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-details-title{font-weight:700}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-container-click-all{font-weight:700;background:rgba(0,0,0,.05);padding:8px 12px;margin:0!important}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-popup-title{cursor:pointer}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-container{word-break:break-all;border:2px solid rgba(0,0,0,.05);padding:12px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-trigger{font-size:12px;color:#666;font-weight:700}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-user-information-trigger>.trigger-icon{font-size:12px!important}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-label{display:inline-block;margin-left:5px;padding:1px 4px;border-radius:2px;background:hsla(0,0%,60%,.1);font-weight:800;font-size:12px;color:#999;line-height:100%}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer{font-size:14px;color:#999;font-weight:700;margin-bottom:10px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer p,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer p{margin:0}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer a,#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer a{color:#999}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-consent-popup-vendor__description{padding-top:3px}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendor-storage-duration .didomi-vendor-storage-duration__title{margin-top:35px;margin-bottom:0;font-weight:700}#didomi-host .didomi-consent-popup-preferences-vendors .didomi-vendor-storage-duration .didomi-vendor-storage-duration__content{margin-top:0;font-size:14px;font-weight:700;color:#999}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-vendors .didomi-vendors-disclaimer,#didomi-host .didomi-mobile .didomi-consent-popup-preferences-vendors .didomi-vendors-iab-disclaimer{margin-top:15px!important}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category{padding:0;margin:12px 0 0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .label-click{font-weight:700}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children{border-left:1px solid #e7e2d6;padding:0 0 5px 15px;margin-left:15px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__name{font-weight:700;font-size:15px;margin-bottom:8px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__description{font-size:14px;font-weight:300}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children{margin-top:12px;padding-bottom:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-category{padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-category__name{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing{border:none;padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__purpose{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-data-processing__description{padding:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-category .didomi-consent-popup-category__children .didomi-consent-popup-preferences-purposes-features{font-size:14px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing{font-weight:700}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description{font-size:14px;color:#333}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose{display:flex;flex:2;justify-content:center;margin:5px 0 5px 15px;text-transform:uppercase;font-size:14px;line-height:17px;color:#999}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose_explanation{margin:0;padding:0;font-size:14px;font-weight:700;color:#999}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description_legal_icon{border-bottom:none}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__description_legal_icon svg{margin-top:-5px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions{background-color:#fafafa;border-radius:1px;padding:15px;margin-bottom:15px;margin-top:8px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions .didomi-consent-popup-data-processing__purpose_actions_title{font-weight:700;color:#333}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__purpose_actions .didomi-consent-popup-data-processing__purpose_action_buttons{float:right}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-categories-nested .didomi-consent-popup-data-processing{padding:0;margin:12px 0 0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-categories-nested .didomi-consent-popup-data-processing__purpose{font-size:15px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list{display:flex;justify-content:space-between;align-items:center;text-align:center;margin-bottom:16px}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-body__title{margin-bottom:0}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link{cursor:pointer;box-shadow:1px 1px 0 0 rgba(0,0,0,.1);background-color:#fff;border:1px solid #eee;font-size:12px;color:#b3b3b3;font-weight:700;padding:5px 15px;text-transform:none}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link span{background:transparent}#didomi-host .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions .didomi-consent-popup-information-save{margin-right:15px;font-style:italic;color:#9b9b9b;font-size:14px}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-data-processing__essential_purpose{display:inline-block;margin-left:0!important}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer{height:auto!important}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions{padding:8px 0}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions:not(.didomi-buttons-all){flex-direction:row}#didomi-host .didomi-mobile .didomi-consent-popup-preferences-purposes .didomi-consent-popup-footer .didomi-consent-popup-actions .didomi-consent-popup-information-save{text-align:center;margin-top:5px}#didomi-host .didomi-consent-popup__3e6e3e05-9201-4614-a13e-b9649d1fa0e4 .didomi-components-accordion-label-container .didomi-consent-popup-data-processing__purpose{font-size:15px!important}#didomi-host .didomi-consent-popup-category__children .didomi-consent-popup-preferences-purposes-features,#didomi-host .didomi-consent-popup__3e6e3e05-9201-4614-a13e-b9649d1fa0e4 .didomi-consent-popup-category__children .didomi-consent-popup-categories .didomi-consent-popup-data-processing .didomi-components-accordion .didomi-components-accordion-label-container .didomi-consent-popup-data-processing__purpose{font-size:14px!important}#didomi-host .didomi-consent-popup-preferences-purposes-features{margin-top:22px}#didomi-host .didomi-consent-popup-preferences-purposes-features div{display:inline}.didomi-continue-without-agreeing{text-decoration:underline;cursor:pointer;color:#444} 
+    #didomi-host {
+      font-family: Roboto, sans-serif;
+    }
+    #didomi-host a:not(.didomi-no-link-style) {
+      text-decoration: underline;
+      color: #05687B
+    }
+    #didomi-host .didomi-notice-banner {
+  margin: 10px;
+  background-color: rgba(35, 122, 252, 0.9) !important;
+  border-radius: 3px;
+  color: white !important;
+  /* font-size: 1rem !important; */
+}
+#didomi-host .didomi-buttons .didomi-button.didomi-button-standard {
+  border: 2px solid #fff !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  /* font-size: 1rem !important; */
+  /* font-weight: 400; */
+}
+#didomi-host .didomi-buttons .didomi-button.didomi-button-highlight {
+  /* font-size: 1rem !important; */
+  /* font-weight: 400; */
+  background-color: #fff !important;
+  color: #7b7b7b !important;
+}
+
+#didomi-host .didomi-popup-header {
+  background-color: #00bff3;
+  color: #fff;
+  justify-content: center;
+  padding: 24px 0;
+  position: relative;
+}
+#didomi-host .didomi-popup-header .didomi-consent-popup-title {
+  text-transform: uppercase;
+  /* font-size: 1.5rem; */
+}
+#didomi-host .didomi-popup-header .didomi-popup-close {
+  position: absolute;
+  position: absolute;
+  color: #00bff3 !important;
+  right: 8px;
+  top: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+#didomi-host .didomi-consent-popup-body a {
+  color: #00bff3 !important;
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-body__title {
+  color: #333 !important;
+  /* font-size: 1.2rem !important; */
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-categories .trigger-icon {
+  color: #00bff3 !important;
+  /* font-size: 20px !important; */
+  /* font-weight: 500 !important; */
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-categories .didomi-components-accordion-label-container {
+  /* padding: 8px 0; */
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-data-processing,
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-vendor {
+  position: relative;
+  /* margin-bottom: 16px; */
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__buttons,
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
+@media (max-width: 1023px) {
+  #didomi-host .didomi-consent-popup-body .didomi-consent-popup-data-processing .didomi-consent-popup-data-processing__buttons,
+  #didomi-host .didomi-consent-popup-body .didomi-consent-popup-vendor .didomi-consent-popup-vendor__buttons {
+    position: static;
+  }
+}
+#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option {
+  box-shadow: none !important;
+  border: 2px solid #00bff3 !important;
+  text-transform: uppercase !important;
+  /* font-size: 1rem !important; */
+  line-height: 1rem !important;
+  height: 2rem !important;
+  margin-left: 12px;
+  padding: 0 20px;
+}
+#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option--unselected:nth-child(1),
+#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option--unselected:nth-child(2) {
+  background-color: transparent !important;
+  color: #00bff3 !important;
+}
+/*#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option--unselected:nth-child(2) {
+  background-color: #00bff3 !important;
+  color: #fff !important;
+}*/
+#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option--disagree {
+  border: none !important;
+  color: #fff !important;
+  padding: 0 15.5px !important;
+}
+#didomi-host .didomi-consent-popup-body .didomi-components-radio .didomi-components-radio__option--agree {
+  border: none !important;
+  color: #fff !important;
+  padding: 0 13.5px !important;
+}
+#didomi-host .didomi-consent-popup-body .didomi-consent-popup-view-vendors-list .didomi-consent-popup-view-vendors-list-link {
+  /* font-size: 1rem !important; */
+  text-transform: uppercase !important;
+  background-color: #00bff3 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  border-color: #00bff3 !important;
+  padding: 10px 50px !important;
+}
+#didomi-host .didomi-popup-backdrop {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+#didomi-host .didomi-popup-container {
+  border: 0 !important;
+}
+#didomi-host .didomi-components-accordion .content {
+  /* font-weight: 400 !important; */
+}
+#didomi-host .didomi-consent-popup-footer {
+  background-color: #00bff3;
+}
+#didomi-host .didomi-consent-popup-footer .didomi-button-standard {
+  text-transform: uppercase;
+  /* font-weight: 700 !important; */
+}
+#didomi-host .didomi-consent-popup-footer .didomi-button-highlight {
+  text-transform: uppercase;
+  /* font-weight: 700 !important; */
+  color: #7b7b7b !important;
+}
+
+#didomi-host .didomi-consent-popup-header .didomi-no-link-style:not(.didomi-popup-close) {
+  color: inherit !important;
+}
+#didomi-host .didomi-user-information-trigger {
+  /* font-size: 1rem !important; */
+  color: #333 !important;
+}
+#didomi-notice .didomi-notice-text .didomi-notice-view-partners-link {
+  display: none;
+}
+
+  </style><div id="didomi-host" data-nosnippet="true"><div class="notranslate didomi-screen-small didomi-mobile didomi-consent-popup__4ddf68ae-5211-4fb3-9350-c14ce85ace44"><div><div id="didomi-notice" class="didomi-regular-notice didomi-banner-notice-optin-type didomi-notice-banner shape-banner bottom didomi-regular-notice-with-data-processing" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border-color: rgb(35, 122, 252);"><div class="didomi-notice__interior-border didomi-border" style="border-color: rgb(35, 122, 252);"><div id="text" class="push-right didomi-notice-text" style="text-align: left;"><span>With your agreement, we and <a href="javascript:Didomi.preferences.show('vendors')">our partners</a> use cookies or similar technologies to store, access, and process personal data like your visit on this website. You can withdraw your consent or object to data processing based on legitimate interest at any time by clicking on "Learn More" or in our Privacy Policy on this website.</span>&nbsp;<div class="didomi-notice-data-processing-container"><div class="didomi-notice-data-processing-title">We and our partners do the following data processing based on your consent and/or our legitimate interest:</div><div class="didomi-notice-data-processing-list"><span>Personalised ads and content, ad and content measurement, audience insights and product development</span><span>, Store and/or access information on a device</span><span>, Vivendi Group entities data optimization </span></div></div></div><div id="buttons" class="multiple didomi-buttons"><button id="didomi-notice-learn-more-button" class="didomi-components-button didomi-button didomi-learn-more-button didomi-button-standard standard-button" aria-label="Configure your consents" style="display: block !important; color: rgb(68, 68, 68); background-color: rgb(238, 238, 238); border-radius: 0px; border-color: rgba(34, 34, 34, 0.2); border-width: 1px;"><span>Learn More →</span></button><button id="didomi-notice-disagree-button" class="didomi-components-button didomi-button didomi-disagree-button didomi-components-button--color didomi-button-highlight highlight-button" aria-label="Disagree to our data processing and close" style="display: block !important; color: rgb(255, 255, 255); background-color: rgb(35, 122, 252); border-radius: 0px; border-color: rgba(35, 122, 252, 0.3); border-width: 1px;"><span>Disagree and close</span></button><button id="didomi-notice-agree-button" class="didomi-components-button didomi-button didomi-dismiss-button didomi-components-button--color didomi-button-highlight highlight-button" aria-label="Agree to our data processing and close" style="display: block !important; color: rgb(255, 255, 255); background-color: rgb(35, 122, 252); border-radius: 0px; border-color: rgba(35, 122, 252, 0.3); border-width: 1px;"><span>Agree and close</span></button></div></div></div></div></div></div><div class="pace pace-active"><div class="pace-progress" data-progress-text="74%" data-progress="74" style="transform: translate3d(74.3157%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"><div class="preloader"><div class="spinner"><span class="s-dot s-dot1"></span><span class="s-dot s-dot2"></span></div></div></div></div><iframe name="__tcfapiLocator" title="__tcfapiLocator" style="display: none;"></iframe>
+        <section id="main-container">
+            <!-- Didomi consent -->
+<script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
+else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
+var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
+if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
+  var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("4ddf68ae-5211-4fb3-9350-c14ce85ace44")})();</script>
+ 
+
+
+    <header class="inner">
+        <div class="header-content pad-edge">
+            <div class="auto">
+                <div class="logo fl">
+                    <a id="header-btn-legal" href="https://www.gameloft.com/pt-br" target="_blank">
+                        <img class="white" src="https://mkt-web.gameloft.com/assets/images/page_template/logo_gameloft_white.png" width="160" height="30" alt="" title="">
+                        <img class="black" src="https://mkt-web.gameloft.com/assets/images/page_template/logo_gameloft_black.png" width="160" height="30" alt="" title="">
+                    </a>
+                </div>
+                                <div class="fr privacy-policy">
+
+                  <div class="ga-lang">
+    <div class="ga-la-main"><span class="capt">Português Brasileiro</span></div>
+    <div class="ga-la-select">
+        <ul>
+                            <li class="" data-language="ar">
+                    <a href="/ar/privacy-notice/"><span class="capt">العربية</span></a>
+                </li>
+                            <li class="" data-language="id">
+                    <a href="/id/privacy-notice/"><span class="capt">Bahasa Indonesia</span></a>
+                </li>
+                            <li class="" data-language="bg">
+                    <a href="/bg/privacy-notice/"><span class="capt">Bulgarian</span></a>
+                </li>
+                            <li class="" data-language="de">
+                    <a href="/de/privacy-notice/"><span class="capt">Deutsch</span></a>
+                </li>
+                            <li class="" data-language="en-gb">
+                    <a href="/en-gb/privacy-notice/"><span class="capt">English UK</span></a>
+                </li>
+                            <li class="" data-language="en">
+                    <a href="/en/privacy-notice/"><span class="capt">English US</span></a>
+                </li>
+                            <li class="" data-language="es">
+                    <a href="/es/privacy-notice/"><span class="capt">Español</span></a>
+                </li>
+                            <li class="" data-language="fr">
+                    <a href="/fr/privacy-notice/"><span class="capt">Français</span></a>
+                </li>
+                            <li class="" data-language="it">
+                    <a href="/it/privacy-notice/"><span class="capt">Italiano</span></a>
+                </li>
+                            <li class="" data-language="ja">
+                    <a href="/ja/privacy-notice/"><span class="capt">日本語</span></a>
+                </li>
+                            <li class="" data-language="ko">
+                    <a href="/ko/privacy-notice/"><span class="capt">한국어</span></a>
+                </li>
+                            <li class="" data-language="fa">
+                    <a href="/fa/privacy-notice/"><span class="capt">فارسی</span></a>
+                </li>
+                            <li class="" data-language="hi">
+                    <a href="/hi/privacy-notice/"><span class="capt">Hindi</span></a>
+                </li>
+                            <li class="" data-language="pl">
+                    <a href="/pl/privacy-notice/"><span class="capt">Polski</span></a>
+                </li>
+                            <li class="active" data-language="pt-br">
+                    <a href="/pt-br/privacy-notice/"><span class="capt">Português Brasileiro</span></a>
+                </li>
+                            <li class="" data-language="pt-pt">
+                    <a href="/pt-pt/privacy-notice/"><span class="capt">Português Portugal</span></a>
+                </li>
+                            <li class="" data-language="ru">
+                    <a href="/ru/privacy-notice/"><span class="capt">Русский</span></a>
+                </li>
+                            <li class="" data-language="th">
+                    <a href="/th/privacy-notice/"><span class="capt">ไทย</span></a>
+                </li>
+                            <li class="" data-language="vi">
+                    <a href="/vi/privacy-notice/"><span class="capt">Tiếng Việt</span></a>
+                </li>
+                            <li class="" data-language="tr">
+                    <a href="/tr/privacy-notice/"><span class="capt">Türkçe</span></a>
+                </li>
+                            <li class="" data-language="zh-hans">
+                    <a href="/zh-hans/privacy-notice/"><span class="capt">简体中文</span></a>
+                </li>
+                            <li class="" data-language="zh-hant">
+                    <a href="/zh-hant/privacy-notice/"><span class="capt">繁體中文</span></a>
+                </li>
+                    </ul>
+    </div>
+</div>
+                </div>
+                                <div class="clr"></div>
+            </div>
+        </div>
+    </header>
+
+<section id="main-wrapper">
+    <div class="inner-content" style="padding-top: 71px;">
+        <div class="gl-legal-content pad-edge par">
+            <div class="auto gl-legal-m-center">
+                <h1><strong>POLÍTICA DE PRIVACIDADE DA GAMELOFT</strong></h1>
+
+                <script type="text/javascript">
+originalOnload = window.onload;
+window.onload = function() {
+  if (originalOnload) {
+    originalOnload();
+  }
+  $.urlParam = function(param){
+    var results = new RegExp('[\?&]' + param + '=([^&#]*)').exec(window.location.href.toLowerCase());
+    if (results==null) {
+       return null;
+    }
+    return decodeURI(results[1]) || 0;
+	}
+  var gdprFlag = $.urlParam('gdpr') == 1 || $.urlParam('hyperlink') == 0 ? true : false;
+      if (gdprFlag) {
+      (function($) {
+        $.fn.changeElementType = function(newType) {
+         	var attrs = {};
+          if(this[0].tagName === "A"){
+            var linkElement = this[0];
+              if (linkElement) {
+              $.each(linkElement.attributes, function(idx, attr) {
+                  attrs[attr.nodeName] = attr.nodeValue;          
+              });
+              var flag = isEqualFlag(linkElement.innerText, attrs.href);
+
+              this.replaceWith(function() {
+                if(flag) {
+                  return $("<" + newType + "/>").append(linkElement.innerText);
+                } else {
+                  return $("<" + newType + "/>").append(linkElement.innerText + ' (' + attrs.href + ')');
+                }
+              });
+             } else {
+              return null
+             }
+          } else {
+              var linkElement = this[0].children[0];
+              if (linkElement && linkElement.tagName === "A") {
+              $.each(linkElement.attributes, function(idx, attr) {
+                  attrs[attr.nodeName] = attr.nodeValue;          
+              });
+              var flag = isEqualFlag(linkElement.innerText, attrs.href);
+
+              this.replaceWith(function() {
+                if(flag) {
+                  return $("<" + newType + "/>").append(linkElement.innerText);
+                } else if (!flag && attrs.href.includes("?lang")) {
+                	return $("<" + newType + "/>").append(attrs.href);
+                } else {
+                	return $("<" + newType + "/>").append(linkElement.innerText + ' (' + attrs.href + ')');
+                }
+              });
+             } else {
+              return null
+             }
+          }
+          
+      }
+
+        function removeLink() {
+        $(".gl-legal-content u").each(function(){
+            $(this).changeElementType("span");   
+        });
+              $(".gl-legal-content a").each(function(){
+            $(this).changeElementType("span");   
+        });
+        
+      }
+
+        function isEqualFlag(title, url) {
+          if (title.toLowerCase() === url.toLowerCase()) {
+            return true;
+          } else if (url.includes("https://")) {
+            if (url.slice(url.length - 1) == "/") {
+              reformatUrl = url.slice(0, -1).toLowerCase();
+              if (reformatUrl ===  title.toLowerCase()) {
+                return true;
+              }
+            } else {
+              reformatUrl = url.slice(8).toLowerCase();
+              if (reformatUrl ===  title) {
+                return true;
+              }
+            }
+          } else if (url.includes('mailto')) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        removeLink();
+    })(jQuery);
+    }
+};
+</script>
+<p style="text-align: justify;">Sua privacidade é importante para nós e levamos a sério nossa responsabilidade de cuidar dela. Nós respeitamos seu direto à privacidade e temos um compromisso com a proteção das informações pessoais que coletamos de você. Esta Política de Privacidade descreve quais informações a Gameloft coleta e como elas são usadas, divulgadas, transferidas e armazenadas. Se não quiser que a Gameloft colete, armazene, use ou compartilhe suas informações nos modos descritos nesta Política de Privacidade, você talvez não possa jogar nossos jogos ou usar nossos serviços.</p>
+
+<p style="text-align: justify;">A Gameloft SE, incluindo suas subsidiárias (“Gameloft”), coleta, armazena e usa suas informações para tratamento de dados, fornecimento e desenvolvimento de jogos, aplicativos para mobile, serviços e sites da Gameloft (referidos conjuntamente como “Serviços”), de acordo com esta política de privacidade (“Política de Privacidade”).</p>
+
+<p style="text-align: justify;">Todos os nossos Serviços, sejam eles usados em aparelhos mobile, PCs ou outras plataformas são regidos por esta Política de Privacidade.</p>
+
+<p style="text-align: justify;">Aos usar os Serviços você consente com esta Política de Privacidade.</p>
+
+<p style="text-align: justify;">Esta Política de Privacidade é válida a partir de 22 de maio de 2018 e teve sua mais recente modificação em 20 de junho de 2018.</p>
+
+<p style="text-align: justify;">Se tiver alguma pergunta, comentário ou dúvida com relação à nossa Política de Privacidade ou práticas, consulte a seção “<u>Como entrar em contato conosco</u>” abaixo.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>1 – Como recolhemos suas informações</h2>
+
+<p style="text-align: justify;">A Gameloft recolhe algumas informações suas quando você: (a) cria uma conta, (b) joga nossos jogos ou usa serviços relacionados ao jogo, (c) realiza uma compra em nossos Serviços, (d) cria conteúdo, (e) assiste a anúncios em nossos Serviços, (f) assina uma newsletter, (g) entra em contato com o atendimento ao cliente da Gameloft e participa de sessões de suporte técnico, (h) participa de um concurso ou desafio promovido pela Gameloft, (i) usa o chat com outros usuários dos Serviços, (j) indica interesse em participar de um playtest, (k) compartilha ou contribui em nossos canais de redes sociais e outros sites da comunidade ou (l) se candidata a um emprego.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>2 – Informações recolhidas</h2>
+
+<p style="text-align: justify;">A Gameloft recolhe apenas informações adequadas e relevantes, limitando-se aos fins previstos abaixo.</p>
+
+<p style="text-align: justify;"><b>a – Informações que você nos fornece</b></p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações de contato (tais como seu nome e endereço de e-mail)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Sua idade</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Seu nome de usuário e senha</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações de perfil (como foto de perfil)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações que você fornece quando pede ajuda ao nosso atendimento ao cliente (como relatórios de chat e tickets de atendimento ao cliente)</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">Outras informações que você fornece (como informações usadas para identificar uma conta perdida)</li>
+</ul>
+
+<p style="text-align: justify;"><b>b – Informações que recolhemos automaticamente quando você usa nossos Serviços</b></p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações sobre seu progresso no jogo e atividade</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações sobre suas interações com outros jogadores</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Endereço IP e identificadores de aparelhos (como ID do seu aparelho, ID de publicidade, endereço MAC, IMEI)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações sobre seu aparelho (como nome do aparelho e sistema operacional, informações sobre o navegador, incluindo tipo de navegador e idioma de preferência)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações recolhidas usando cookies e tecnologias similares (Nota: consulte nossa Política de Cookies para saber mais sobre como não usar estas tecnologias)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações gerais sobre geolocalização</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações precisas sobre geolocalização (GPS)</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">ID de Jogador Gameloft</li>
+</ul>
+
+<p style="text-align: justify;"><b>c – Informações obtidas de nossos parceiros</b></p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações que recebemos se você decidir se conectar a uma rede social externa (como Facebook ou Game Center)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Informações de parceiros de cobrança (se você fizer assinaturas de jogos ou compras no jogo)</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">Informações para fins de publicidade ou análise para que possamos melhorar nossos Serviços</li>
+</ul>
+
+<h2>&nbsp;</h2>
+
+<h2>3 – Como usamos suas informações</h2>
+
+<p style="text-align: justify;">O uso principal de suas informações tem como fim proporcionar uma melhor experiência de jogo, mas também usamos suas informações, individual e conjuntamente, da seguinte maneira:</p>
+
+<p style="text-align: justify;"><b>Para conduzir nossos negócios e melhorar sua experiência de jogo, incluindo para:</b></p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">proporcionar Serviços adequados à sua idade e em conformidade com a legislação vigente em seu país de residência</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">proporcionar experiências de jogo que você possa gostar e funcionalidades que você assinou</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">monitorar seu uso dos Serviços para entendermos suas preferências e tendências, o que nos ajudará a personalizar a sua experiência, ofertas e notificações no jogo feitas sob medida para melhorar sua experiência no jogo</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">facilitar o compartilhamento nas redes sociais</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">registrar sua participação em um concurso e entrar em contato com você se houver prêmios</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">oferecer a você a oportunidade de participar de playtests (testes de jogos)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">proteger contra trapaça, crime, fraude ou outras razões relacionadas à segurança;</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">identificar e resolver bugs e erros de serviço</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">administração, análise, pesquisa e otimização</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">compilar estatísticas</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">se conformar a todas as regulamentações e requisitos legais, atender solicitações de Autoridades de Proteção de Dados ou qualquer agência de aplicação da lei</li>
+</ul>
+
+<p style="text-align: justify;"><b>Para fornecer suporte, entrar em contato e responder a quaisquer solicitações ou dúvidas que você tenha enviado ao nosso atendimento ao cliente.</b></p>
+
+<p style="text-align: justify;"><b>Para personalizar nossa comunicação com você, incluindo: </b></p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">o gerenciamento de sua assinatura, ou interrupção de envio, de nossas newsletters</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">contatá-lo(a) para promover nossos Serviços e concursos</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">enviar, com seu consentimento, material promocional ou de marketing (nós ofereceremos a opção de não receber tais materiais no futuro)</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">fornecer a propaganda apropriada a seu perfil, idade/gênero, específica para sua localidade e que melhor se adapta aos seus interesses</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">atender e mensurar a eficácia da publicidade</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">recolher informações pessoais que você divulgue em mensagens que você decida enviar para outro usuário ou grupo de usuários por meio de nossas mensagens, chat, publicação ou outra função no jogo, assim como coletar quaisquer informações pessoais necessárias do(s) usuário(s) que você estiver contatando para facilitar a comunicação (nota: nunca coletaremos nenhuma informação enviada fora da funcionalidade de nossos Serviços, incluindo e-mail ou mensagens de texto).</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">personalizar seu conteúdo e ofertas</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">enviar notificações Push (se decidir permitir esta função) — apenas para usuários com pelo menos 13 anos nos Estados Unidos (16 anos ou mais na Europa)</li>
+</ul>
+
+<p style="text-align: justify;">Para alguns dos propósitos descritos acima, a Gameloft pode usar e executar análises. As informações analíticas apoiam análises e operações de negócios, permitem o desenvolvimento de produtos, aprimoram produtos e serviços, personalizam conteúdo, fornecem publicidade e fazem recomendações.</p>
+
+<p style="text-align: justify;">Nosso fundamento jurídico para a coleta e tratamento de suas informações pessoais (para usuários europeus) está descrita acima.</p>
+
+<p style="text-align: justify;">A princípio, coletaremos suas informações pessoais apenas:</p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">quando tivermos seu consentimento para tal</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">quando precisarmos de informações pessoais para cumprir um contrato de fornecimento dos Serviços com você, como atendimento ao cliente, detecção de bugs e erros de serviço, além de prevenção de fraudes</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">quando o tratamento atende aos nossos legítimos interesses (quando atendemos e medimos a eficácia de nossas campanhas de publicidade ou marketing, analisamos sua atividades de jogo, protegemos e melhoramos nossos produtos e serviços) e não revogam seus direitos ou</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">quando temos a obrigação legal de recolher suas informações pessoais</li>
+</ul>
+
+<h2>&nbsp;</h2>
+
+<h2>4 – Como retemos suas informações</h2>
+
+<p style="text-align: justify;">A Gameloft retém, usa e armazena suas informações enquanto você jogar nossos jogos ou usar nossos Serviços, além do período necessário para cumprir com todos os propósitos descritos nesta Política de Privacidade, em conformidade com a legislação vigente de seu país de residência. Queremos informá-lo(a) que uma período de retenção mais longo pode ser exigido para resolver disputas ou atender a regulamentos ou solicitações da polícia. Nesses casos, as informações recolhidas serão usadas e armazenadas até que a solicitação seja encerrada.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>5 – Como compartilhamos suas informações</h2>
+
+<p><u>Com entidades da Gameloft</u></p>
+
+<p style="text-align: justify;">Para execução dos Serviços, suas informações pessoais podem ser transferidas para outros estúdios ou entidades da Gameloft, subsidiárias, processadores ou terceiros localizados ao redor do mundo, conforme descrito abaixo (consulte "Operações internacionais e transferência de suas informações").</p>
+
+<p><u>Com terceiros</u></p>
+
+<p>Usamos serviços externos que possuem acesso limitado às suas informações para propósitos específicos, como administração, análise, otimização, publicidade, entrega de prêmios, atendimento de assessoria de marketing, atendimento ao cliente e análise de dados. Eles prestam auxílio às nossas operações. Estes terceiros estão autorizados a usar suas informações apenas para estes propósitos.</p>
+
+<p style="text-align: justify;">Se, enquanto usa nossos Serviços, você decidir usar funções de compartilhamento social como "Compartilhar" ou "Curtir" no Facebook ou outros sites de redes sociais, isso poderá permitir o compartilhamento e coleta de informações pessoais e não pessoais por estas redes sociais externas. Você deve ler as políticas de privacidade destes terceiros para mais informações sobre suas práticas de coleta de informações.</p>
+
+<p style="text-align: justify;">Considerando que a Gameloft faz parte do Grupo Vivendi, suas informações podem ser transferidas a entidades da Vivendi para projetos globais. Nesse caso, você será informado(a) da natureza dos projetos pertinentes e pediremos seu consentimento antes de transferir suas informações.</p>
+
+<p><u>Com autoridades</u></p>
+
+<p style="text-align: justify;">Nós nos reservamos o direito de informar às autoridades atividades que possamos, de boa fé, considerar ilegais. Investigaremos ou tomaremos ações para combater atividades ilegais, suspeitas de abuso ou uso não autorizado dos Serviços ou para proteger a propriedade ou segurança de outrem. Também poderemos divulgar suas informações caso exigido por lei ou mandado judicial no mundo inteiro, caso as informações tenham relação com comportamentos nocivos ou a ameaça de tal comportamento.</p>
+
+<p style="text-align: justify;">Nesse caso, consideraremos a legislação local vigente, a natureza do mandado, assim como a legitimidade e proporcionalidade de suas informações.</p>
+
+<p><u>Em caso de venda da nossa empresa</u></p>
+
+<p style="text-align: justify;">Em caso de venda da companhia ou de qualquer linha de negócios (incluindo os recursos relacionados aqui), as informações dos clientes são geralmente um dos recursos transferidos. No evento da compra de parte ou de todo o negócio, suas informações poderão ser transferidas ao comprador.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>6 – Operações internacionais e transferência de suas informações</h2>
+
+<p style="text-align: justify;">Como parte de nossas operações internacionais, poderemos transferir suas informações pessoais a nossas afiliadas (isto é, subsidiárias, sociedades controladoras, empreendimentos conjuntos e outras entidades corporativas de propriedade da Gameloft SE) periodicamente para fins de negócios legítimos.</p>
+
+<p style="text-align: justify;">A Gameloft está sediada na França e possuímos operações, órgãos e serviços fornecidos no Canadá, nos Estados Unidos e em todo o mundo. Tomamos providências para garantir que suas informações pessoais recebam um nível adequado de proteção nas jurisdições em que as processarmos. Se você estiver localizado no Espaço Econômico Europeu (EEE) ou na Suíça, forneceremos proteção adequada para a transferência de informações pessoais para países fora do EEE ou da Suíça com base nas cláusulas contratuais padrões autorizadas pela Comissão Europeia ou outras salvaguardas apropriadas definidas no artigo 46º do Regulamento Geral sobre a Proteção de Dados da UE 2016/679 (GDPR, na sigla em inglês).<b> </b></p>
+
+<h2>&nbsp;</h2>
+
+<h2>7 – Segurança e confidencialidade de suas informações pessoais</h2>
+
+<p style="text-align: justify;">Implementamos medidas de segurança para resguardar e impedir acesso não autorizado, manter a segurança de dados e uso correto das informações pessoais recolhidas pelos Serviços.</p>
+
+<p style="text-align: justify;">Nós tomamos e obrigamos terceiros a tomar precauções razoáveis para proteger suas informações pessoais contra perda, mau uso, divulgação não autorizada, alteração e destruição. Entretanto, lembre-se que nenhuma transmissão de dados pela internet ou rede sem fio pode ser considerada 100% segura. Como tal, apesar de nossos esforços para proteger suas informações, não podemos garantir a segurança de suas informações e não assumimos nenhuma responsabilidade pelo uso não autorizado ou acesso a suas informações sob nosso controle.</p>
+
+<p style="text-align: justify;">Quando usamos a assistência de terceiros no processamento de suas informações pessoais ou dados de cartão de crédito, tomamos as medidas necessárias para que se cumpram as regras desta Política de Privacidade de forma a proteger suas informações pessoais (incluindo dados de cartão de crédito).</p>
+
+<p style="text-align: justify;">Caso haja uma violação de segurança que afete suas informações pessoais, incluindo informações de cartão de crédito, em nossos Serviços, o informaremos imediatamente, conforme a regulamentação local referente à notificação de violações de informações, e tomaremos medidas comercialmente razoáveis para reparar a violação.</p>
+
+<p style="text-align: justify;">Caso você acredite que suas informações pessoais estejam sendo usadas indevidamente por nós ou por terceiros, favor enviar uma notificação imediata a <a href="mailto:DataProtectionSupport@gameloft.com">DataProtectionSupport@gameloft.com.</a></p>
+
+<h2>&nbsp;</h2>
+
+<h2>8 – Crianças</h2>
+
+<p style="text-align: justify;">Incentivamos os pais a instruir seus filhos com relação à privacidade e o modo como usam suas informações na internet. As crianças nunca devem divulgar o próprio nome, endereço ou número de telefone, nem quaisquer outras informações pessoais sem antes pedir permissão aos pais.</p>
+
+<p style="text-align: justify;">Consideramos crianças os usuários com idade abaixo de 13 anos, exceto se outra regulamentação mais rigorosa se aplicar<sup><a href="#citation-1">[1]</a></sup> no país de residência em questão. Em países da União Europeia, pessoas com menos de 16 anos são consideradas crianças, a não ser que o regulamento de proteção de dados do país em questão defina outra idade.</p>
+
+<p style="text-align: justify;">Se considerarmos que nossos Serviços estiverem sendo direcionados a usuários abaixo da idade mínima exigida por lei em seu país de residência, poderemos bloquear o uso dos Serviços ou o fornecimento de informações e/ou limitar a coleta de informações de tais usuários conforme descrito abaixo.</p>
+
+<p style="text-align: justify;">Nenhuma informação pessoal deve ser enviada à Gameloft por usuários abaixo da idade mínima exigida em seu país de residência.</p>
+
+<p style="text-align: justify;">Aplicamos as seguintes limitações à coleta de informações pessoais para usuários abaixo da idade mínima exigida em seu país de residência.</p>
+
+<p style="text-align: justify;">Estes usuários não podem:</p>
+
+<ul>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">mostrar o próprio nome real ou qualquer outra informação nos jogos</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">acessar o chat, placar, fóruns, redes sociais (Facebook, Game Center etc.)</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">assinar newsletters</li>
+	<li style="margin: 0in 0in 8pt 0.5in; text-align: justify;">usar qualquer outro recurso em que um usuário possa mostrar seu nome verdadeiro</li>
+</ul>
+
+<p style="text-align: justify;">Para estes usuários, evitaremos a coleta e uso de seus dados precisos de geolocalização e mostraremos apenas publicidade contextual (excluindo publicidade comportamental).</p>
+
+<p style="text-align: justify;">Crianças podem ser convidadas a participar de testes dos nossos jogos (playtests) podendo ser exigida a autorização e/ou a presença física dos pais, dependendo do país onde o playtest esteja sendo realizado.</p>
+
+<p style="text-align: justify;">Cabe aos pais exercer o direito de privacidade por seus filhos. Consulte a seção "Seus direitos" desta Política de Privacidade.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>9 – Candidatos a emprego</h2>
+
+<p style="text-align: justify;">Se desejar se candidatar a um emprego, você pode ser direcionado(a) ao site SmartRecruiters. Se decidir enviar sua candidatura, você também terá que enviar algumas informações ao site SmartRecruiters, incluindo seu nome, número de telefone, endereço de e-mail e sua formação acadêmica. A coleta destas informações será regida pela Política de Privacidade de SmartRecruiters, que pode ser encontrada aqui: <a href="https://www.smartrecruiters.com/privacy-policy/" target="_blank">https://www.smartrecruiters.com/privacy-policy/</a><u>.</u></p>
+
+<p style="text-align: justify;">A Política de Privacidade da Gameloft para candidatos também pode ser encontrada acessando este <a href="https://www.gameloft.com/en/jobs-faq/personal-data/" target="_blank">link</a>.</p>
+
+<h2>&nbsp;</h2>
+
+<h2>10 – Seus direitos</h2>
+
+<p style="text-align: justify;">Solicitamos que você mantenha atualizadas suas informações fornecidas. Você pode corrigir qualquer informação usando este <a href="https://www.gameloft.com/zz/privacy-notice/contact-form" target="_blank">formulário</a>.</p>
+
+<p style="text-align: justify;">Você representa e garante que todas as informações fornecidas são verdadeiras, corretas e se referem apenas a você e a mais ninguém.</p>
+
+<p style="text-align: justify;">Você pode exercer seus direitos a qualquer momento e solicitar à Gameloft acesso, retificação ou apagamento de suas informações. De acordo com a regulamentação local, se você for um usuário europeu, você também pode solicitar limitações no tratamento de suas informações pessoais, objeção ao tratamento de suas informações ou seu direito à portabilidade de dados.</p>
+
+<p style="text-align: justify;">Observe que terceiros (nossos parceiros de dados) podem tratar suas informações. Você pode obter mais detalhes e optar por não compartilhar suas informações pessoais com terceiros entrando em contato conosco usando <a href="https://www.gameloft.com/zz/privacy-notice/contact-form" target="_blank">este formulário.</a></p>
+
+<p style="text-align: justify;">Caso tenha consentido anteriormente com qualquer comunicação de marketing nossa ou se tiver assinado nossas newsletters, você pode cancelar sua assinatura clicando no link disponível em cada mensagem e newsletter que enviarmos.</p>
+
+<p style="text-align: justify;">Se não quiser permitir o uso de cookies ou outras tecnologias de rastreamento, consulte nossa Política de Cookies para nossos sites.</p>
+
+<p style="text-align: justify;">Observe que as funcionalidades de jogo, Serviços e recursos podem ser afetados por suas ações. Algumas de suas informações, e o tratamento de delas, são obrigatórias para o fornecimento dos Serviços.</p>
+
+<p style="text-align: justify;">Suas ações podem obrigar a Gameloft a parar de fornecer os Serviços. Quando as condições abaixo se aplicarem, seu jogo será redefinido:</p>
+
+<ul>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Se você solicitar a modificação destas informações obrigatórias, talvez não possamos continuar a vincular o jogo ou os Serviços do jogo a você.</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Se solicitar limitações quanto ao tratamento de dados obrigatórios à Gameloft ou se tiver alguma objeção quanto a este tratamento (neste caso, não poderemos fornecer o jogo ou Serviços do jogo a você).</li>
+	<li style="margin: 0in 0in 0.0001pt 0.5in; text-align: justify;">Se você anular seu consentimento ou pedir que suas informações sejam apagadas.</li>
+</ul>
+
+<p style="text-align: justify;">Se você anular seu consentimento ou pedir que suas informações sejam apagadas, não usaremos ou trataremos mais suas informações, mas elas serão armazenadas para atender à regulamentação ou solicitações da polícia. Também nos reservamos o direito de reter um arquivo com estas informações por um tempo comercialmente razoável para nos assegurarmos de que sua remoção não venha afetar a integridade de nossos dados. Além disso, nos reservamos o direito de manter uma versão anônima destas informações.&nbsp;</p>
+
+<p style="text-align: justify;">Faça sua solicitação usando este <a href="https://www.gameloft.com/zz/privacy-notice/contact-form" target="_blank">formulário</a>.</p>
+
+<p style="text-align: justify;">Caso seja pai ou mãe de uma criança com menos de 13 anos de idade (ou outra idade, conforme definido pela regulamentação vigente) e acredita que ele(a) possa ter fornecido estas informações a nós, preencha este <a href="https://www.gameloft.com/zz/privacy-notice/contact-form" target="_blank">formulário</a> e nós apagaremos as informações de nosso sistema.</p>
+
+<p style="text-align: justify;">Para preservar a confidencialidade de suas informações, precisamos conseguir identificá-lo(a) corretamente. Por esta razão, pedimos que nos envie uma cópia de um documento oficial que prove sua identidade. Esta cópia será destruída com segurança dois meses após o recebimento e fechamento de sua solicitação.</p>
+
+<p style="text-align: justify;">Nossa equipe analisará sua solicitação e responderá em até um mês, a menos que sua solicitação exija mais investigação. Você será informado(a) se este for o caso.</p>
+
+<p style="text-align: justify;">Gostaríamos de lembrar que usuários europeus têm o direito de apresentar uma denúncia junto à Autoridade Europeia para a Proteção de Dados.</p>
+
+<h2 style="text-align: justify;">&nbsp;</h2>
+
+<h2 style="text-align: justify;">11 – Serviços de terceiros</h2>
+
+<p style="text-align: justify;">Os Serviços podem apresentar links para sites externos que fogem ao nosso controle. Esta Política de Privacidade se aplica apenas à forma como tratamos a informações pessoais e não pessoais coletadas em nossos Serviços. Ao acessar sites externos, você concorda com a política de privacidade destes sites. Entenda que sites externos podem ter políticas diferentes no que diz respeito à coleta, uso e publicação de suas informações pessoais. Não temos controle ou responsabilidade sobre as práticas de privacidade de terceiros.&nbsp;</p>
+
+<p style="text-align: justify;">Portanto, o encorajamos a ler as políticas de privacidade de todos os serviços de terceiros. Sem limitar o apresentado na seção a seguir, não somos responsáveis, de forma alguma, pelas ações, inações ou políticas de qualquer serviço externo.&nbsp;</p>
+
+<h2 style="text-align: justify;">&nbsp;</h2>
+
+<h2 style="text-align: justify;">12 – Mudanças em nossa Política de Privacidade</h2>
+
+<p style="text-align: justify;">Nós nos reservamos o direito de alterar esta Política de Privacidade a qualquer momento. Caso façamos alterações materiais a esta Política de Privacidade, tal política será republicada na seção “Privacidade” de nossos websites e aplicativos e a data da alteração será informada no topo da página. Portanto, favor revisar esta Política de Privacidade de tempos em tempos para tomar conhecimento de todas as alterações. O uso continuado de nossos Serviços após tais alterações representa que você as aceita. Caso você não aceite as alterações realizadas, você tem o direito de escolher não utilizar mais os Serviços ou de enviar uma notificação para nos informar de sua decisão de desligamento. Para obter mais informações sobre as mudanças recentes, envie sua solicitação para <a href="mailto:DataProtectionSupport@gameloft.com">DataProtectionSupport@gameloft.com</a> e escreva “Information about Changes” no assunto do e-mail.</p>
+
+<h2 style="text-align: justify;">&nbsp;</h2>
+
+<h2 style="text-align: justify;">13 – Aviso legal</h2>
+
+<p style="text-align: justify;">Nossos Serviços operam da forma em que são apresentados, e nós não representamos ou garantimos que nossos Serviços estarão sempre disponíveis, ou que o seu uso dos Serviços será ininterrupto ou livre de falhas. Não nos responsabilizamos por sua capacidade de acessar os Serviços ou por outros aspectos que fogem ao nosso controle. Esta Política de Privacidade é governada pela lei de seu país de residência. Qualquer litígio emergente do uso dos Serviços deverá ser apresentado ao tribunal competente de seu país de residência.</p>
+
+<h2 style="text-align: justify;">&nbsp;</h2>
+
+<h2 style="text-align: justify;">14 – Como entrar em contato conosco</h2>
+
+<p style="text-align: justify;">Se tiver alguma pergunta, comentário ou dúvida com relação à nossa Política de Privacidade ou práticas, entre em contato conosco:</p>
+
+<p style="text-align: justify;">1-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enviando um e-mail para <a href="mailto:DataProtectionSupport@gameloft.com">DataProtectionSupport@gameloft.com</a></p>
+
+<p style="text-align: justify;">2-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; escrevendo para Gameloft Data Protection Officer, 14 rue Auber, 75009 Paris, France</p>
+
+<hr align="left" size="1" width="33%">
+<p class="par-small" id="citation-1"><sup>[1]</sup> Por exemplo: Regulamento Geral sobre a Proteção de Dados da UE 2016/679 (GDPR, na sigla em inglês).</p>
+            </div>
+        </div>
+    </div>
+</section>
+        </section>
+                                            <!--[if lt IE 9]><script type="text/javascript" src="//www.gameloft.com/assets/js/css3-mediaqueries.js"></script><![endif]-->
+<script type="text/javascript" src="//www.gameloft.com/assets/js/html5.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/lib/modernizr-2.8.3.min.js"></script>
+<script type="text/javascript" data-pace-options="{&quot;ajax&quot;: false}" src="//www.gameloft.com/assets/js/pace.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/plugins.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/jquery.hoverdir.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/packery-mode.pkgd.min.js"></script>
+<script type="text/javascript" src="//www.gameloft.com/assets/js/showcase.js?=vshowcase_v1.1.103"></script>
+<script type="text/javascript">
+    //<!--
+    function redirectLocale(url) {
+    console.log('redirecting ...');
+    window.location.href = url;
+}
+    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    $(document).ready(init)
+
+function init(){
+    var params = window.location.search;
+    $('a[href*="https://www.gameloft.com/zz/privacy-notice/contact-form"]').attr('href', 'https://www.gameloft.com/zz/privacy-notice/contact-form'+params);
+    // $('a').attr('href', 'link:'+$('a').attr('href'));
+    // $('a').on('click', onRedirect);
+
+    // $.each($('a'), function (i, e) {
+    //     var link = $(e).attr('href');
+    //     $(e).attr('href','link:'+link);
+    // });
+
+    // $.each($('a[href*="link:"]'), function (i, e) {
+    //    var newLink = $(e).attr('href').split('link:')[1];
+    //     $(e).attr('href', newLink);
+    //     $(e).attr('target', '_top');
+    // });
+}
+
+// function onRedirect(e){
+//     e.preventDefault();
+//
+//     var currentTarget
+//
+//     var rawLink = $(this).attr('href');
+//
+//     var link = rawLink;
+//
+//     if(window.location.search != '') {
+//         if($('a[href*="link:"]'))
+//             link = rawLink.split(':')[1];
+//     }
+//
+//     window.location.href = link;
+// }
+    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-546676-130','auto',{'cookieExpires':60*60*24*365});ga('send','pageview');
+    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+                (function($) {
+                function validateEmail(email) {
+                    var re = /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(email);
+                }
+
+                function webViewWindowOpenLinkHack() {
+
+                   var supportLink = 'https://support.gameloft.com/?lang='+language;
+
+                    switch (webviewPlatform) {
+                        case 'android':
+                            $('a').each(function(key, value) {
+                                var href = $(value).attr('href');
+                                if(isURL(href)) {
+                                    $(value).attr('href', 'link:'+href);
+                                }
+                            });
+                            break;
+                        case 'ios':
+                            $('a').each(function(key, value) {
+                                var href = $(value).attr('href');
+                                if(isURL(href)) {
+                                    $(value).attr('href', 'link:'+href);
+                                }
+                            });
+                            break;
+                        case 'windows':
+                            for(var i = 0; i < document.links.length; i++) {
+                                document.links[i].onclick = function() {
+                                    if(isURL(this.href)) {
+                                        window.external.notify('link:' + this.href);
+                                        return false;
+                                    }
+                                }
+                            }
+                            /*
+                            $('a').each(function(key, value) {
+                                var href = $(value).attr('href');
+                                if(isURL(href)) {
+                                    $(value).attr('href', 'javascript:window.external.notify(\'link:'+href+'\')');
+                                }
+                            });
+                            */
+                            break;
+                    }
+                }
+
+                function disAbleLink() {
+                    $('a').each(function(key, value) {
+                        var span = $('<span>');
+                        var link = $(value).html();
+                        var splitEmail = '';
+
+                        if(validateEmail(link)) {
+                            splitEmail = link.split('@');
+                            link = splitEmail[0]+'<span>@</span>'+splitEmail[1];
+                        }
+                        span.html(link);
+                        $(value).replaceWith(span);
+                    });
+                }
+
+                function removeUnderline() {
+                    $('span').css('text-decoration', 'none');
+                    $('u').each(function(key, value) {
+                        var elem = $('<b>');
+                        elem.text($(value).text());
+                        $(value).replaceWith(elem);
+                    });
+                }
+
+                function init() {
+                    webViewWindowOpenLinkHack();
+                    if(country == 'cn') {
+                        // disAbleLink();
+                        removeUnderline();
+                    }
+
+                    $('.phone-number').each(function(e){
+                        var number = $(this).attr('data-phone');
+                        $(this).text(number);
+                    });
+                }
+
+                init();
+            })(jQuery);
+    //-->
+</script>            <!-- Didomi consent -->
+            <script type="text/javascript">
+            window.gdprAppliesGlobally=!0,function(){function t(t,e,n,a){var o;"function"==typeof n&&(window[i]||(window[i]=[]),o=!1,d&&(o=d(t,e,n)),o||window[i].push({command:t,parameter:e,callback:n,version:a}))}function e(a){if(window[n]&&!0===window[n].stub&&a.data){var t,o,i="string"==typeof a.data;try{t=i?JSON.parse(a.data):a.data}catch(t){return}t[r]&&(o=t[r],window[n](o.command,o.parameter,function(t,e){var n={};n[c]={returnValue:t,success:e,callId:o.callId},a.source.postMessage(i?JSON.stringify(n):n,"*")},o.version))}}var n,i,r,c,d;n="__tcfapi",i="__tcfapiBuffer",r="__tcfapiCall",c="__tcfapiReturn",t.stub=!0,"function"!=typeof window[n]&&(window[n]=t,window.addEventListener?window.addEventListener("message",e,!1):window.attachEvent("onmessage",e)),function t(e){var n,a;window.frames[e]||(document.body&&document.body.firstChild?(n=document.body,(a=document.createElement("iframe")).style.display="none",a.name=e,a.title=e,n.insertBefore(a,n.firstChild)):setTimeout(function(){t(e)},5))}("__tcfapiLocator"),function(){var t=document.createElement("script");t.id="spcloader",t.type="text/javascript",t.async=!0,t.src="https://sdk.privacy-center.org/4ddf68ae-5211-4fb3-9350-c14ce85ace44/loader.js?target="+document.location.hostname,t.charset="utf-8";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()}();
+            </script>
+    
+
+</body></html>

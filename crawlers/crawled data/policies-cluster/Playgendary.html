@@ -1,0 +1,928 @@
+<!DOCTYPE html><html class="no-js" lang=""><head>
+	<meta charset="utf-8">
+	<title>Playgendary</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="tr">
+	<div class="td"></div>
+	<div class="td"></div>
+	<div class="td"></div>
+	<div class="td"></div>
+	<div class="td full-screen"></div>
+	<div class="td full-screen"></div>
+	<div class="td full-screen"></div>
+	<div class="td full-screen"></div>
+</div>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">×</span>
+		<p class="invalid-token"></p>
+		<div class="modal-wrapper">
+			<p>WARNING! If you confirm deletion of ALL YOUR DATA, including GAME PROGRESS and PURCHASES will be deleted. Once
+				completed, this cannot be undone.
+			</p>
+			<div class="modal-btn">
+				<button class="btn summary">
+                  <span>
+                  Request a summary of personal data
+                  </span>
+				</button>
+				<button class="btn erased">
+                  <span>
+                  Request personal data to be erased
+                  </span>
+				</button>
+				<button class="btn withdrawal">
+                  <span>
+                  Do Not Show Personalized Ads/Opt-out of sell
+                  </span>
+				</button>
+				<button class="btn renouncement">
+                  <span class="renouncement">
+                  Cancel
+                  </span>
+				</button>
+			</div>
+			<div class="personal-settings">
+				<p class="app-name"></p>
+				<p class="erase-status"></p>
+				<p class="data-status"></p>
+			</div>
+			<div class="withdrawal-settings">
+				<input type="radio" id="targeting" name="targeting" value="targeting">
+				<label for="targeting">Targeting</label><br>
+				<input type="radio" id="not-targeting" name="targeting" value="not-targeting">
+				<label for="not-targeting">Not Targeting</label><br>
+			</div>
+			<div class="erased-settings">
+				<p class="erased-status"></p>
+			</div>
+		</div>
+	</div>
+</div>
+<header>
+	<a href="https://www.playgendary.com">
+		<svg viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="_3rkSf">
+			<rect width="240" height="40" fill="white"></rect>
+			<path d="M43.4961 10.0496V25.6242H49.7461V30.0295H38.4961V10.0496H43.4961Z" fill="#F23D3D"></path>
+			<path d="M63.2296 22.5537L60.9961 15.8522L58.7626 22.5537H63.2296ZM64.5494 26.5319H57.4428L56.3007 30.0295H50.9961L58.2804 10.0496H63.7118L70.9961 30.0295H65.6915L64.5494 26.5319Z" fill="#F23D3D"></path>
+			<path d="M176.98 22.5537L174.746 15.8522L172.513 22.5537H176.98ZM178.299 26.5319H171.193L170.051 30.0295H164.746L172.03 10.0496H177.462L184.746 30.0295H179.442L178.299 26.5319Z" fill="#F23D3D"></path>
+			<path d="M120.996 14.3303H114.746V17.6944H120.655V22.1265H114.746V25.5974H120.996V30.0295H109.746V10.0496H120.996V14.3303Z" fill="#F23D3D"></path>
+			<path d="M76.0237 20.3874L69.1211 10.0496H74.9946L78.5086 15.4102L81.9976 10.0496H87.8711L80.9434 20.3874V30.0741H76.0237V20.3874Z" fill="#F23D3D"></path>
+			<path d="M208.524 20.3644L201.621 10.0496H207.495L211.009 15.3983L214.498 10.0496H220.371L213.443 20.3644V30.0295H208.524V20.3644Z" fill="#F23D3D"></path>
+			<path d="M124.746 30.0295V10.0496H129.746L138.496 22.2066V10.0496H143.496V30.0295H138.496L129.746 17.7211V30.0295H124.746Z" fill="#F23D3D"></path>
+			<path d="M152.246 25.5974H153.271C154.121 25.5974 154.88 25.455 155.546 25.1702C156.214 24.8855 156.771 24.4938 157.221 23.9955C157.689 23.4971 158.039 22.9097 158.271 22.2333C158.521 21.5391 158.646 20.7827 158.646 19.9639C158.646 19.1629 158.521 18.4153 158.271 17.7211C158.021 17.027 157.664 16.4307 157.196 15.9323C156.746 15.4339 156.189 15.0423 155.521 14.7575C154.855 14.4727 154.105 14.3303 153.271 14.3303H152.246V25.5974ZM147.246 10.0496H154.496C155.78 10.0496 156.98 10.1742 158.096 10.7259C159.23 11.2777 160.214 12.0164 161.046 12.942C161.896 13.8498 162.564 14.9177 163.046 16.1459C163.53 17.3563 163.771 18.6289 163.771 19.9639C163.771 21.2811 163.53 22.5537 163.046 23.7819C162.58 24.9923 161.921 26.0603 161.071 26.9858C160.239 27.9113 159.255 28.6501 158.121 29.2018C157.005 29.7536 155.796 30.0295 154.496 30.0295H147.246V10.0496Z" fill="#F23D3D"></path>
+			<path d="M192.249 18.8959H193.067C194.033 18.8959 194.775 18.6823 195.292 18.2551C195.808 17.8279 196.067 17.2139 196.067 16.4129C196.067 15.6119 195.808 14.9978 195.292 14.5706C194.775 14.1434 194.033 13.9299 193.067 13.9299H192.249V18.8959ZM202.917 30.0295H196.817L192.249 22.2867V30.0295H187.242V10.0496H194.867C195.917 10.0496 196.833 10.0674 197.617 10.4056C198.4 10.7259 199.042 11.1709 199.542 11.7405C200.058 12.3101 200.442 12.9687 200.692 13.7163C200.958 14.4638 201.092 15.2648 201.092 16.1192C201.092 17.65 200.742 18.8959 200.042 19.8571C199.358 20.8005 198.342 21.4412 196.992 21.7794L202.917 30.0295Z" fill="#F23D3D"></path>
+			<path d="M97.2711 18.7457H106.996C106.996 19.816 106.954 20.7882 106.871 21.6624C106.788 22.5364 106.621 23.3482 106.371 24.0974C106.021 25.15 105.546 26.0865 104.946 26.9071C104.346 27.7099 103.638 28.3878 102.821 28.9408C102.021 29.4759 101.138 29.8863 100.171 30.1717C99.2043 30.457 98.1877 30.5998 97.1211 30.5998C95.6543 30.5998 94.3127 30.3412 93.0961 29.8238C91.8961 29.3064 90.8627 28.5839 89.9961 27.6563C89.1293 26.7108 88.4543 25.5869 87.9711 24.2847C87.4877 22.9646 87.2461 21.5107 87.2461 19.923C87.2461 18.3532 87.4793 16.9171 87.9461 15.6149C88.4293 14.2948 89.1043 13.1709 89.9711 12.2433C90.8543 11.3156 91.9127 10.5932 93.1461 10.0758C94.3793 9.55847 95.7543 9.2998 97.2711 9.2998C99.2377 9.2998 100.963 9.7547 102.446 10.6645C103.929 11.5743 105.104 12.9836 105.971 14.8924L101.321 16.9528C100.888 15.8468 100.321 15.0529 99.6211 14.5713C98.9377 14.0896 98.1543 13.8488 97.2711 13.8488C96.5377 13.8488 95.8711 14.0004 95.2711 14.3037C94.6711 14.5891 94.1543 15.0084 93.7211 15.5614C93.3043 16.0965 92.9711 16.7477 92.7211 17.5148C92.4877 18.2818 92.3711 19.1381 92.3711 20.0836C92.3711 20.9399 92.4711 21.7337 92.6711 22.4651C92.8877 23.1966 93.2043 23.8298 93.6211 24.365C94.0377 24.9002 94.5543 25.3194 95.1711 25.6227C95.7877 25.908 96.5043 26.0508 97.3211 26.0508C97.8043 26.0508 98.2711 25.9973 98.7211 25.8903C99.1711 25.7654 99.5711 25.5781 99.9211 25.3283C100.288 25.0607 100.588 24.7218 100.821 24.3115C101.054 23.9011 101.213 23.4017 101.296 22.813H97.2711V18.7457Z" fill="#F23D3D"></path>
+			<path d="M25.9968 19.1362H27.525C29.325 19.1362 30.225 18.2996 30.225 16.6265C30.225 14.9533 29.325 14.1168 27.525 14.1168H25.9968V19.1362ZM25.9968 30.0295H21V10.0496H28.8C30.9167 10.0496 32.5333 10.4857 33.65 11.6604C34.7834 12.8352 35.35 14.4905 35.35 16.6265C35.35 18.7624 34.7834 20.4178 33.65 21.5925C32.5333 22.7673 30.9167 23.3547 28.8 23.3547H25.9968V30.0295Z" fill="#F23D3D"></path>
+		</svg>
+	</a>
+</header>
+<section>
+	<div class="section-container settings">
+		<h1>
+			Manage my personal settings
+		</h1>
+		<button type="submit" id="myBtn">
+            <span>
+            Personal Settings
+            </span>
+		</button>
+	</div>
+</section>
+<section>
+	<div class="section-container content">
+		<h2>
+			Playgendary Services
+		</h2>
+		<span class="label">Last modified: April 15 2020</span>
+		<p>As of the date of last update specified above, Your use of games, websites and related services listed below (the
+			“Services”) shall be governed by the Terms of Service and Privacy Policy provided at this page for the relevant
+			Services titles.
+		</p>
+		<p>
+			The company in charge for provision of the Services is specified below for each Service title. Please check the
+			list and find the Service you use to know which company is in charge for provision of that Service and which Terms
+			of Service and Privacy Policy govern usage of that Service and processing data with regard to such usage.
+		</p>
+		<p class="main-text">
+			Playgendary Limited, 94, Amathoundos Avenue, Alexander Diamant, Agios Tychonas, 4532 Limassol, Cyprus provide the
+			following Services under these <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">Terms Of
+			Service</a> and process the user data in accordance with this <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">Privacy Policy</a>
+		</p>
+		<ul>
+			<li>
+				<div class="list">
+					Bridge Legends (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Secret Seeker (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Rocket Rick (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Drawmaster (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Log Thrower (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Perfect Snipe (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Pinatamasters (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Polysphere (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Bowmasters (Amazon)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Word Travel: Pics 4 Word (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Racemasters – Сlash of Сars (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Rocket Buddy (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					My Poly Artbook (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Light the Stars! (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Art Chaos (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Knife Rush (Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Hit the Light (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Tomb of the Mask (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					TotM: Color (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Flip the Gun – Simulator Game (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Tank Stars (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Dictator – Rule the World (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Kick the Buddy: Forever (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Poly Artbook – puzzle game (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Golfmasters – Fun Golf Game (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Bouncemasters! (Android, iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Perfect Ironing (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Hitmasters (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Design Masters (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Perfect Cream (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					CoffeeShop3D (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Sword Maker (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Perfect Makeup 3D (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Premium Barista (iOS)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Escape Masters (iOS, Android)
+					<span>
+                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+		</ul>
+		<p><a href="https://www.playgendary.com" target="_blank">playgendary.com</a></p>
+		<p class="main-text">
+			Playgendary GmbH, Landshuter Allee 8-10, 80637 Munich provide the following Services under these <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">Terms Of Service</a> and
+			process the user data in accordance with this <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">Privacy Policy</a>.
+		</p>
+		<ul>
+			<li>
+				<div class="list">
+					Dictator – Rule the World (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Knife Rush (iOS)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Flip the Gun – Simulator Game (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Golfmasters – Fun Golf Game (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Happy Racing (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Partymasters – Fun Idle Game (Android, iOS)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Poly Artbook – puzzle game (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Tank Stars (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Kick the Buddy: Forever (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Kick the Buddy (Android)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Bowmasters – Multiplayer Game (iOS)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+			<li>
+				<div class="list">
+					Despicable Bear (iOS)
+					<span>
+                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
+                     Privacy Policy
+                     </a>,
+                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
+                     Terms Of Service
+                     </a>
+                     </span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<footer>
+	<div class="footer-icons">
+		<a href="https://www.facebook.com/Playgendary/"><i class="fa fa-facebook fa-lg"></i></a>
+		<a href="https://www.instagram.com/playgendary/"><i class="fa fa-instagram fa-lg"></i></a>
+		<a href="https://twitter.com/playgendary"><i class="fa fa-twitter fa-lg"></i></a>
+		<a href="https://www.youtube.com/channel/UCulNCRxKbGlLbTwU7pr0z_Q"><i class="fa fa-youtube-play fa-lg"></i></a>
+	</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+<script>
+  "use strict";
+
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var targeting = document.getElementById("targeting");
+  var notTargeting = document.getElementById("not-targeting");
+  var span = document.getElementsByClassName("close")[0];
+  var renouncement = document.getElementsByClassName("renouncement");
+  var eraseStatus = document.getElementsByClassName("erase-status")[0];
+  var appName = document.getElementsByClassName("app-name")[0];
+  var dataStatus = document.getElementsByClassName("data-status")[0];
+  var personalSettings = document.getElementsByClassName("personal-settings")[0];
+  var summary = document.getElementsByClassName("summary")[0];
+  var erased = document.getElementsByClassName("erased")[0];
+  var settings = document.getElementsByClassName("settings")[0];
+  var withdrawal = document.getElementsByClassName("withdrawal")[0];
+  var invalidToken = document.getElementsByClassName("invalid-token")[0];
+  var modalWrapper = document.getElementsByClassName("modal-wrapper")[0];
+  var withdrawalSettings = document.getElementsByClassName("withdrawal-settings")[0];
+  var erasedSettings = document.getElementsByClassName("erased-settings")[0];
+  var erasedStatus = document.getElementsByClassName("erased-status")[0];
+
+  function responseStatusText(status) {
+    var node = document.createTextNode(status);
+    invalidToken.appendChild(node);
+  }
+
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+    modal.style.position = "fixed";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal || event.target == renouncement[0] || event.target == renouncement[1]) {
+      modal.style.display = "none";
+    }
+  };
+
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName = void 0,
+      i = void 0;
+    for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] === sParam) {
+        return sParameterName[1] === undefined ? true : sParameterName[1];
+      }
+    }
+  };
+
+  var prodUrl = "https://game-users-storage.playgendary.com/api";
+  var devUrl = "https://game-users-storage-dev.playgendary.com/api";
+  var backUrl = getUrlParameter("dev") ? devUrl : prodUrl;
+
+  if (getUrlParameter("token")) {
+    (function () {
+      console.log(backUrl);
+      var token = getUrlParameter("token");
+      var url = backUrl + "/info?token=" + token;
+
+      fetch(url).then(function (response) {
+        if (response.status !== 200) {
+          modalWrapper.style.display = "none";
+          invalidToken.style.display = "block";
+          responseStatusText(response.status || '')
+        } else {
+          return response.json();
+        }
+      }).then(function (data) {
+        settings.style.display = 'flex';
+        appName.innerText = "App Name: " + data.appName;
+        eraseStatus.innerText = "Erase Status: " + data.eraseStatus;
+        dataStatus.innerText = "Data Status: " + data.summarizeDataStatus.status;
+
+        withdrawal.onclick = function () {
+          if (withdrawalSettings.classList.contains('toggle')) {
+            withdrawalSettings.classList.remove('toggle');
+          } else {
+            erasedSettings.classList.remove('toggle');
+            personalSettings.classList.remove('toggle');
+            withdrawalSettings.classList.add('toggle');
+          }
+        };
+
+        summary.onclick = function (e) {
+          if (personalSettings.classList.contains('toggle')) {
+            personalSettings.classList.remove('toggle');
+          } else {
+            erasedSettings.classList.remove('toggle');
+            withdrawalSettings.classList.remove('toggle');
+            personalSettings.classList.add('toggle');
+          }
+        };
+
+        if (data.targeting) {
+          targeting.setAttribute('checked', true);
+        } else {
+          notTargeting.setAttribute('checked', true);
+        }
+
+        notTargeting.onclick = function (e) {
+          fetch(backUrl + "/data/targeting", {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              token: token,
+              targeting: false
+            })
+          }).then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            console.log('Success:', data);
+          }).catch(function (error) {
+            console.error('Error:', error);
+          });
+        };
+
+        targeting.onclick = function (e) {
+          fetch(backUrl + "/data/targeting", {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              token: token,
+              targeting: true
+            })
+          }).then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            console.log('Success:', data);
+          }).catch(function (error) {
+            console.error('Error:', error);
+          });
+        };
+
+        erased.onclick = function (e) {
+          fetch(backUrl + "/data/clear", {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              token: token
+            })
+          }).then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            erasedStatus.innerText = 'Request to delete data confirmed';
+            personalSettings.classList.remove('toggle');
+            withdrawalSettings.classList.remove('toggle');
+            erasedSettings.classList.add('toggle');
+          }).catch(function (error) {
+            console.error('Error:', error);
+          });
+        };
+      }).catch(function (e) {
+        modalWrapper.style.display = "none";
+        invalidToken.style.display = "block";
+        responseStatusText(e.status || '')
+        console.error(e);
+      });
+    })();
+  }
+</script>
+
+
+</body></html>

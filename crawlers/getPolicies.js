@@ -2,11 +2,6 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 
 var importedLinks = fs
-  .readFileSync("crawled data/appLinks.txt")
-  .toString("utf-8")
-  .split(",");
-
-var importedLinks = fs
   .readFileSync("crawled data/allLinks.txt")
   .toString("utf-8")
   .split(",");
