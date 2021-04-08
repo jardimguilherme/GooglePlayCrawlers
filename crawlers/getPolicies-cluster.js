@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer");
 const { Cluster } = require("puppeteer-cluster");
 
 var importedLinks = fs
-    .readFileSync("crawled data/allLinks.txt")
+    .readFileSync("crawled data/appLinks.txt")
     .toString("utf-8")
     .split(",");
 

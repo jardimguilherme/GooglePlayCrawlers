@@ -3,114 +3,47 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="facebook-domain-verification" content="fvbuvvtyz09l6oi9di2zdcp0d1ygii">
-            
-                            <script type="text/javascript" charset="UTF-8" src="https://consentcdn.cookiebot.com/consentconfig/4b0b38e1-07d5-4f1c-be33-a5287ec8170b/flo.health/configuration.js"></script><script type="text/javascript">
-                    function enableGoogleAnalytics() {
-                        (function(w, d, s, l, i) {
-                            w[l] = w[l] || [];
-                            w[l].push({
-                                'gtm.start': new Date().getTime(),
-                                event: 'gtm.js'
-                            });
-                            var f = d.getElementsByTagName(s)[0],
-                                j = d.createElement(s),
-                                dl = l != 'dataLayer' ? '&l=' + l : '';
-                            j.async = true;
-                            j.src =
-                                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                            f.parentNode.insertBefore(j, f);
-                        })(window, document, 'script', 'dataLayer', 'GTM-MSGX72Z');
+
+            <script type="text/javascript" charset="UTF-8" src="https://consentcdn.cookiebot.com/consentconfig/ab9287a8-85b5-4acb-9301-d55fff2a30c8/flo.health/configuration.js"></script><script type="text/javascript">
+    function enableGoogleAnalytics() {
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MSGX72Z');
+    }
+</script>
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ab9287a8-85b5-4acb-9301-d55fff2a30c8" data-blockingmode="auto" type="text/javascript" data-georegions="{'region':' BR, CA, CH, NO, IS, GB, AT, BE, BG, HU, DE, GR, DK, IE, ES, IT, CY, LV, LT, LU, MT, NL, PL, SK, SI, PT, RO, FI , FR, HR, CZ, SE, EE ','cbid':'6490715a-629e-4bcf-9cad-36ddcec1ba1f'}"></script>
+
+    <script type="text/javascript">
+        if (Cookiebot) {
+            if (Cookiebot.consent.statistics) {
+                enableGoogleAnalytics();
+                initTracking();
+            }
+
+            if (Cookiebot.consent.preferences) {
+                //here should be loaded scripts which collects preferences info
+            }
+
+            if (Cookiebot.consent.marketing) {
+                //here should be loaded scripts which collects marketing info
+            }
+        }
+
+        function initTracking() {
                     }
-                </script>
-
-                <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4b0b38e1-07d5-4f1c-be33-a5287ec8170b" data-blockingmode="auto" type="text/javascript" data-georegions="{'region':' BR, CA, CH, NO, IS, GB, AT, BE, BG, HU, DE, GR, DK, IE, ES, IT, CY, LV, LT, LU, MT, NL, PL, SK, SI, PT, RO, FI , FR, HR, CZ, SE, EE ','cbid':'721aaa30-5803-4601-8423-a69fabf18943'}"></script>
-
-                <script type="text/javascript">
-                    var allowAllButton = document.getElementById('CybotCookiebotDialogBodyButtonAccept');
-                    var saveButton = document.getElementById('saveButton');
-                    var gotItButton = document.getElementById('FloCookiebotDialogAllowAll');
-
-                    if(Cookiebot.consent.statistics || Cookiebot.consent.preferences || Cookiebot.consent.statistics){
-                        if(Cookiebot.consent.statistics){
-                            enableGoogleAnalytics();
-
-                                                    }
-
-                        if(Cookiebot.consent.preferences){
-                            //here should be loaded scripts which collects prefferences info
-                        }
-
-                        if(Cookiebot.consent.marketing){
-                            //here should be loaded scripts which collects marketing info
-                        }
-                    }else if(allowAllButton && saveButton){
-
-                        // if(allowAllButton){
-                            allowAllButton.addEventListener('click', function(){
-                                setTimeout(function(){
-                                    if(Cookiebot.consent.statistics){
-                                        enableGoogleAnalytics();
-
-                                                                            }
-
-                                    if(Cookiebot.consent.preferences){
-                                        //here should be loaded scripts which collects prefferences info
-                                    }
-
-                                    if(Cookiebot.consent.marketing){
-                                        //here should be loaded scripts which collects marketing info
-                                    }
-                                },300)
-                            });
-                        // }
-
-                        // if(saveButton) {
-                            saveButton.addEventListener('click', function(){
-                                setTimeout(function(){
-                                    if(Cookiebot.consent.statistics){
-                                        //here should be loaded scripts which collects statistics info
-                                        enableGoogleAnalytics();
-
-                                                                            }
-
-                                    if(Cookiebot.consent.preferences){
-                                        //here should be loaded scripts which collects prefferences info
-                                    }
-
-                                    if(Cookiebot.consent.marketing){;
-                                        //here should be loaded scripts which collects marketing info
-                                    }
-                                },300)
-                            });
-                        // }
-                    }else if(gotItButton){
-                        enableGoogleAnalytics();
-                    }else{
-                        setTimeout(function(){
-                            var a = Cookiebot.consent.statistics;
-                            var b = Cookiebot.consent.preferences;
-                            var c = Cookiebot.consent.marketing;
-
-                            if(a != null && b != null && c != null){
-                                if(Cookiebot.consent.statistics){
-                                    enableGoogleAnalytics();
-
-                                                                    }
-
-                                if(Cookiebot.consent.preferences){
-                                    //here should be loaded scripts which collects prefferences info
-                                }
-
-                                if(Cookiebot.consent.marketing){
-                                    //here should be loaded scripts which collects marketing info
-                                }
-                            }else{
-                                enableGoogleAnalytics();
-                            }
-                        },300);
-                    }
-                </script>
-            
+    </script>
 
                                 
                                     <title>Flo Privacy Policy</title>
@@ -2720,7 +2653,7 @@ Email: <a href="mailto:info@dpoeu.eu">info@dpoeu.eu</a></p>
                             
                                                                                         
                         </div>
-                                                </div>
+                                                </div><iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe>
 
                                     
 
@@ -2967,7 +2900,7 @@ Email: <a href="mailto:info@dpoeu.eu">info@dpoeu.eu</a></p>
   
             </div>
         </div>
-    </footer>
+    </footer><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v3.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe>
 
                             
 
@@ -2979,4 +2912,4 @@ Email: <a href="mailto:info@dpoeu.eu">info@dpoeu.eu</a></p>
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                         
-<iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v2.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe></body></html>
+</body></html>

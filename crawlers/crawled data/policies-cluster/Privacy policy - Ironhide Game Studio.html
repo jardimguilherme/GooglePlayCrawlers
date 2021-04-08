@@ -21,6 +21,14 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ff6600">
     
+<meta name="robots" content="noindex">
+<style>
+.privacy.static-page ol p {margin-bottom: 20px;}
+.privacy select {background:#000;color:#fff;min-width:200px;padding:5px;text-transform:uppercase;}
+.privacy option {background:#000;color:#ccc;}
+.privacy option:hover{color:#fff;}
+</style>
+
 </head>
 <body class="site">
     <nav class="navbar navbar-ironhide navbar-full bg-faded">
@@ -47,6 +55,7 @@
                             <a class="nav-link" href="/Games">GAMES</a>
                             <a class="dropdown-toggle hidden-sm-down" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/Games"></a>
                             <div class="dropdown-menu hidden-sm-down" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/Games/legends-of-kingdom-rush">Legends of Kingdom Rush</a>
                                     <a class="dropdown-item" href="/Games/kingdom-rush-vengeance">Kingdom Rush Vengeance</a>
                                     <a class="dropdown-item" href="/Games/iron-marines">Iron Marines</a>
                                     <a class="dropdown-item" href="/Games/kingdom-rush-origins">Kingdom Rush Origins</a>
@@ -94,7 +103,7 @@
                     </p>
                 </div>
                 <div class="text-xs-center ih-w-auto ih-mr-auto">
-                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string=".AspNet.Consent=yes; expires=Tue, 01 Mar 2022 18:51:58 GMT; path=/; secure; samesite=none">Got it!</button>
+                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string=".AspNet.Consent=yes; expires=Fri, 08 Apr 2022 00:29:48 GMT; path=/; secure; samesite=none">Got it!</button>
                     <a target="_blank" class="btn" href="/PrivacyPolicy">Read more</a>
                 </div>
             </div>
@@ -111,19 +120,25 @@
 
     <div class="site-content">
 
-        <style>
-    .privacy.static-page ol p {
-        margin-bottom: 20px;
-    }
-</style>
+        
 
-    <section class="privacy static-page">
-        <div class="section-heading">
+
+<section class="privacy static-page">
+    <div class="section-heading">
+    </div>
+    <div class="container section-default">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <select onchange="document.location=&quot;?culture=&quot;+this.value">
+                        <option value="en">English</option>
+                        <option value="es">español</option>
+                        <option value="ja">日本語</option>
+                </select>
+            </div>
         </div>
-        <div class="container section-default">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 m-t-2">
+                
 <h1 id="privacy-policy">Privacy Policy</h1>
 <p>Your privacy is very important to us. Accordingly, we developed this Policy in order for you to understand how we collect, use, communicate, disclose and make use of personal information.</p>
 <p>We may change this Policy from time to time so please check this page occasionally to ensure that you’re happy with any changes. <strong>By using our website and videogames, you’re agreeing to be bound by this Policy.</strong> Any questions regarding this Policy and our privacy practices should be sent by email to <a rel="nofollow" href="mailto:contact@ironhidegames.com">contact@ironhidegames.com</a></p>
@@ -243,7 +258,7 @@
 </ol>
 
 
-                </div>
+            </div>
         </div>
     </div>
 </section>
