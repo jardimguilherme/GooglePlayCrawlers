@@ -1,0 +1,1297 @@
+<!DOCTYPE html><html lang="pt-pt" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="js js-focus-visible" data-js-focus-visible=""><head>
+    <meta charset="utf-8"><script src="https://js-agent.newrelic.com/nr-1208.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"7ea89c5a2f",applicationID:"31524682"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-12967896-33", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<link rel="alternate" hreflang="x-default" href="https://policy.pinterest.com/en/privacy-policy">
+<meta property="og:site_name" content="Pinterest Policy">
+<meta property="og:type" content="article">
+<meta property="fb:app_id" content="274266067164">
+<meta property="og:url" content="https://policy.pinterest.com/pt-pt/privacy-policy">
+<meta property="og:title" content="Política de Privacidade">
+<link rel="image_src" href="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg">
+<meta property="pin:media" content="https://policy.pinterest.com/sub/meta/artboard_vertical.jpg">
+<meta property="pin:url" content="https://policy.pinterest.com/pt-pt/privacy-policy">
+<meta property="og:image" content="https://policy.pinterest.com/sub/meta/artboard_horizontal.jpg">
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/profiles/contrib/pin/favicon.png">
+<link rel="alternate" hreflang="en" href="https://policy.pinterest.com/en/privacy-policy">
+<link rel="alternate" hreflang="id" href="https://policy.pinterest.com/id/privacy-policy">
+<link rel="alternate" hreflang="ms" href="https://policy.pinterest.com/ms/privacy-policy">
+<link rel="alternate" hreflang="cs" href="https://policy.pinterest.com/cs/privacy-policy">
+<link rel="alternate" hreflang="da" href="https://policy.pinterest.com/da/privacy-policy">
+<link rel="alternate" hreflang="de" href="https://policy.pinterest.com/de/privacy-policy">
+<link rel="alternate" hreflang="en-gb" href="https://policy.pinterest.com/en-gb/privacy-policy">
+<link rel="alternate" hreflang="es" href="https://policy.pinterest.com/es/privacy-policy">
+<link rel="alternate" hreflang="fr" href="https://policy.pinterest.com/fr/privacy-policy">
+<link rel="alternate" hreflang="it" href="https://policy.pinterest.com/it/privacy-policy">
+<link rel="alternate" hreflang="hu" href="https://policy.pinterest.com/hu/privacy-policy">
+<link rel="alternate" hreflang="nl" href="https://policy.pinterest.com/nl/privacy-policy">
+<link rel="alternate" hreflang="nb" href="https://policy.pinterest.com/nb/privacy-policy">
+<link rel="alternate" hreflang="pl" href="https://policy.pinterest.com/pl/privacy-policy">
+<link rel="alternate" hreflang="pt-br" href="https://policy.pinterest.com/pt-br/privacy-policy">
+<link rel="alternate" hreflang="pt-pt" href="https://policy.pinterest.com/pt-pt/privacy-policy">
+<link rel="alternate" hreflang="ro" href="https://policy.pinterest.com/ro/privacy-policy">
+<link rel="alternate" hreflang="sk" href="https://policy.pinterest.com/sk/privacy-policy">
+<link rel="alternate" hreflang="fi" href="https://policy.pinterest.com/fi/privacy-policy">
+<link rel="alternate" hreflang="sv" href="https://policy.pinterest.com/sv/privacy-policy">
+<link rel="alternate" hreflang="tl" href="https://policy.pinterest.com/tl/privacy-policy">
+<link rel="alternate" hreflang="vi" href="https://policy.pinterest.com/vi/privacy-policy">
+<link rel="alternate" hreflang="tr" href="https://policy.pinterest.com/tr/privacy-policy">
+<link rel="alternate" hreflang="el" href="https://policy.pinterest.com/el/privacy-policy">
+<link rel="alternate" hreflang="ru" href="https://policy.pinterest.com/ru/privacy-policy">
+<link rel="alternate" hreflang="uk" href="https://policy.pinterest.com/uk/privacy-policy">
+<link rel="alternate" hreflang="hi" href="https://policy.pinterest.com/hi/privacy-policy">
+<link rel="alternate" hreflang="th" href="https://policy.pinterest.com/th/privacy-policy">
+<link rel="alternate" hreflang="ko" href="https://policy.pinterest.com/ko/privacy-policy">
+<link rel="alternate" hreflang="ja" href="https://policy.pinterest.com/ja/privacy-policy">
+<link rel="alternate" hreflang="zh-hans" href="https://policy.pinterest.com/zh-hans/privacy-policy">
+<link rel="alternate" hreflang="zh-hant" href="https://policy.pinterest.com/zh-hant/privacy-policy">
+<link rel="alternate" hreflang="ar" href="https://policy.pinterest.com/ar/privacy-policy">
+<link rel="alternate" hreflang="bn" href="https://policy.pinterest.com/bn/privacy-policy">
+<link rel="alternate" hreflang="te" href="https://policy.pinterest.com/te/privacy-policy">
+<link rel="canonical" href="https://policy.pinterest.com/pt-pt/privacy-policy">
+<link rel="shortlink" href="https://policy.pinterest.com/pt-pt/node/481">
+<link rel="revision" href="https://policy.pinterest.com/pt-pt/privacy-policy">
+
+    <title>Política de Privacidade | Pinterest Policy</title>
+    <link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_bPTb2JOovX7_1ir38dxWbZvwVfQ1cxDYeywKd9jcNoU.css">
+<link rel="stylesheet" media="all" href="/sites/pinpolicy/files/css/css_KoJjFgC8f-EcF7fF-ni3o_RyD_mx5KeJJCQcEnRGxQk.css">
+
+    <script>document.documentElement.classList.add('js');</script>
+    
+<!--[if lte IE 8]>
+<script src="/sites/pinpolicy/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="policy-section policy-section--privacy u-section--policy--yellow pinterest-policy">
+        <a id="skip-link" href="#main-content" class="visually-hidden focusable button">
+      Passar para o conteúdo principal
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div class="site">
+
+    <header class="site__header site__header--fixed-nav" role="banner" style="padding-top: 52px;">
+    <div class="navigation navigation--white-bg" data-nav-overlay="false" data-nav-off-class="navigation--white-bg">
+  <div class="navigation__inner">
+
+      <div id="block-sitebranding">
+  
+    
+    <aside class="branding">
+            <div class="branding__logo">
+        <a href="/pt-pt" title="Início" rel="home">
+          <img src="/profiles/contrib/pin/logo.svg?dpid=f662c190e1a67996b9d873a9e07fcd86" alt="Início" width="24" height="24">
+        </a>
+      </div>
+      
+            <div class="branding__name">
+        <a href="/pt-pt" title="Início" rel="home">Política</a>
+      </div>
+      
+        </aside>
+</div>
+<nav role="navigation" aria-labelledby="block-headernavigationactions-menu" id="block-headernavigationactions" class="menu--tools-nav">
+            
+  <h2 class="visually-hidden" id="block-headernavigationactions-menu">Header navigation - actions</h2>
+  
+
+        
+
+  
+      
+            <ul class="menu--tools menu">
+              <li class="menu__item">
+        <a href="https://www.pinterest.com">Registo</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    <button class="menu__toggle menu__toggle--collapsed " data-menu-target="nav-circles--mobile">
+  <div class="menu__toggle-text">Open menu</div>
+</button>
+
+
+
+  
+
+
+<div class="nav-circles nav-circles--mobile">
+  <div class="nav-circles__inner">
+      
+    
+            <ul class="menu--circles menu--circles-mobile menu menu--has-active-links">
+            <li class="menu__item" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/terms-of-service" class="js-nav-circle__target" data-drupal-link-system-path="node/426">Termos</a>
+        </span>
+      </li>
+          <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/privacy-policy" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/481">Privacidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/community-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/16">Comunidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Comerciante</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Publicidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Programadores</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Direitos de autor</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Marca comercial</a>
+        </span>
+      </li>
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+  
+  </div>
+</div>
+
+      
+
+  
+
+
+<div class="nav-circles nav-circles--policy">
+  <div class="nav-circles__inner">
+      
+    
+                  <ul class="menu--circles menu menu--has-active-links">
+              <li class="menu__item" data-hover-bg="u-bg--policy--teal">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/terms-of-service" class="js-nav-circle__target" data-drupal-link-system-path="node/426">Termos</a>
+        </span>
+      </li>
+          <li class="menu__item menu__item--active" data-hover-bg="u-bg--policy--yellow">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/privacy-policy" class="js-nav-circle__target is-active" data-drupal-link-system-path="node/481">Privacidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--pink">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/community-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/16">Comunidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--blue">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/merchant-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/476">Comerciante</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--orange">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/advertising-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/471">Publicidade</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--gray">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/developer-guidelines" class="js-nav-circle__target" data-drupal-link-system-path="node/31">Programadores</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lilac">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/copyright" class="js-nav-circle__target" data-drupal-link-system-path="node/36">Direitos de autor</a>
+        </span>
+      </li>
+          <li class="menu__item" data-hover-bg="u-bg--policy--lime">
+        <span class="nav-circle js-nav-circle--click-zone js-nav-circle">
+          <a href="/pt-pt/trademark" class="js-nav-circle__target" data-drupal-link-system-path="node/41">Marca comercial</a>
+        </span>
+      </li>
+        </ul>
+  
+  </div>
+</div>
+
+
+
+
+
+  </header>  
+    <div class="site__utility">
+      <div>
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  </div>
+
+  </div>  
+  <main class="site__content" role="main">
+        <a id="main-content" tabindex="-1" aria-hidden="true"></a>
+
+      <div>
+    <article role="article" about="/pt-pt/privacy-policy">
+      
+
+
+<header class="header   header--large-text     u-full-width header--full-width u-anim-staggered-start" data-anim-trigger="view" data-anim-triggered="yes">
+
+        
+        
+  <div class="header__inner">
+              <h1 class="header__text u-anim-fade-in-and-slide-up u-anim-staggered-start__item" data-anim-triggered="yes"><span>Política de Privacidade</span>
+</h1>
+        
+            
+            
+            
+                </div>
+
+</header>
+          <section class="u-anim-fade-in" data-anim-trigger="view" data-anim-triggered="yes">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--838134921">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+          
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <h3>Tabela de conteúdos</h3>
+<p>Podes usar esta tabela de conteúdos para encontrar tudo o que precisas na nossa política de privacidade. Clica num endereço para uma secção em específico para aceder.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+          <li class="subhead-list__item"><h1>  </h1>
+
+
+  <ul class="u-unstyled-list">
+        <li><a href="#section-summary-of-changes" class="toc-link">Resumo de alterações</a>
+            </li>
+        <li><a href="#section-thank-you-for-using-pinterest" class="toc-link">Obrigado por usares o Pinterest!</a>
+            </li>
+        <li><a href="#section-we-collect-information-in-a-few-different-ways" class="toc-link">Recolhemos informações de várias formas</a>
+            </li>
+        <li><a href="#section-what-we-do-with-the-info-we-collect" class="toc-link">O que fazemos com as informações recolhidas</a>
+            </li>
+        <li><a href="#section-transferring-your-information" class="toc-link">Transferir as tuas informações</a>
+            </li>
+        <li><a href="#section-choices-you-have-about-your-info" class="toc-link"> Escolhas que podes fazer quanto às tuas informações</a>
+            </li>
+        <li><a href="#section-how-and-when-we-share-information" class="toc-link">Como e quando partilhamos as informações</a>
+            </li>
+        <li><a href="#section-how-long-we-keep-your-information" class="toc-link">Durante quanto tempo guardamos as tuas informações</a>
+            </li>
+        <li><a href="#section-our-policy-on-childrens-information" class="toc-link">A nossa política quanto a informações de crianças</a>
+            </li>
+        <li><a href="#section-your-options" class="toc-link">As tuas opções</a>
+            </li>
+        <li><a href="#section-residents-of-the-eea" class="toc-link">Residentes do EEE</a>
+            </li>
+        <li><a href="#section-california-residents" class="toc-link">Residentes da Califórnia</a>
+            </li>
+        <li><a href="#section-how-we-make-changes-to-this-policy" class="toc-link">Que alterações vamos fazer a esta política</a>
+            </li>
+        <li><a href="#section-contact-us" class="toc-link">Contacta-nos</a>
+            </li>
+    </ul>
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-summary-of-changes" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--443831448">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Resumo de alterações
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Acrescentámos mais detalhes sobre os dados que recolhemos e como são usados, assim como uma nova forma de controlar se são usados para criar relatórios sobre o desempenho dos anúncios.</p>
+<p>Adicionámos novas informações para os utilizadores residentes na Califórnia.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-thank-you-for-using-pinterest" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--487952373">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Obrigado por usares o Pinterest!
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>A nossa missão é oferecer inspirações para criares o que mais desejas para&nbsp;a tua vida. Para fazer isso, indicamos-te conteúdo e anúncios personalizados que julgamos ser do teu interesse com base em informações que recolhemos através de ti e de terceiros. Usamos estas informações apenas quando temos uma base legal para o fazer.&nbsp;</p>
+<p>
+Escrevemos esta política para ajudar-te a compreender que tipo de informações recolhemos, como são usadas e que escolhas tens. Como somos uma empresa online, alguns dos seguintes conceitos podem ser um pouco técnicos, mas demos o nosso melhor para explicar tudo de forma simples e clara. Agradecemos que envies quaisquer <a href="https://help.pinterest.com/contact">perguntas e comentários</a> sobre esta política.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-we-collect-information-in-a-few-different-ways" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--946221690">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Recolhemos informações de várias formas
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <h4>1. Quando forem dadas por ti ou se nos deres permissão para obtê-las</h4>
+<p>Quando te registares no Pinterest ou utilizares o Pinterest de forma voluntária, estás a partilhar determinadas informações, incluindo o teu nome, endereço de e-mail, número de telefone, fotos, Pins, comentários ou outros dados que tiveres partilhado connosco. Também podes optar por partilhar a tua localização através das definições do teu dispositivo ou nas fotos. Usamos o teu endereço de IP para detetar aproximadamente a tua localização, mesmo se optares por não partilhar a tua localização exata. Também terás a opção&nbsp;para partilhar outros dados sobre ti, como género, idade e idioma preferido.<br>
+&nbsp;&nbsp; &nbsp;<br>
+Se <a href="https://help.pinterest.com/article/link-your-social-media" target="_blank" class="a-link--external">associares a tua conta ao Facebook, Google<span class="visually-hidden">(opens in a new window)</span></a> ou outra conta externa ao Pinterest, usamos os dados destas contas (como os teus amigos ou contactos) para melhorar a tua experiência no Pinterest. Isto depende das políticas de privacidade ou definições dessas contas.</p>
+<h4>2. Também recebemos informações técnicas quando usas o Pinterest</h4>
+<p>Quando usares um website, aplicação móvel ou outro serviço online, algumas informações de atividade na Internet e redes eletrónicas serão criadas e registadas automaticamente. O mesmo acontece quando usares o Pinterest. Consulta alguns tipos de informações que recolhemos:</p>
+<ul><li><strong>Dados de registo.</strong> Sempre que usares o Pinterest, os nossos servidores registam informações ("dados de registo"), incluindo informações que o teu browser envia automaticamente sempre que visitar um website ou que uma aplicação móvel envia automaticamente sempre que a utilizares. Estes dados de registo incluem o teu endereço IP (que usamos para detetar a tua localização aproximada), o endereço e a atividade em websites que visitares e que incorporem funcionalidades Pinterest (como o botão Guardar—podes consultar abaixo mais informações), pesquisas, tipo de browser e definições, data e hora da solicitação, de que forma usaste o Pinterest, dados de cookies e dados de dispositivos. Podes <a href="https://policy.pinterest.com/technical-information-we-collect-when-you-use-our-service">obter mais pormenores sobre os dados de registo que recolhemos aqui</a>.</li>
+<li><strong>Dados de cookies.</strong> Também usamos "cookies" (pequenos ficheiros de texto enviados pelo teu computador sempre que visitares o nosso website, únicos para a tua conta Pinterest ou do teu browser) ou tecnologias semelhantes para capturar dados de registo. Sempre que usarmos cookies ou outras tecnologias semelhantes, usamos cookies de sessão (a última até que fechas o teu browser) ou cookies persistentes (a última até que tu ou o teu browser as eliminem). Por exemplo, usamos cookies para armazenar as tuas preferências de idioma ou outras definições para que não tenhas de configurá-las sempre que visitares o Pinterest. Alguns cookies que usamos estão associados à tua conta Pinterest (incluindo informações sobre ti, como o endereço de e-mail que indicaste) e outros cookies não. Para informações mais detalhadas sobre como usamos cookies, consulta a nossa <a href="https://policy.pinterest.com/cookies" target="_blank" class="a-link--external">Política de&nbsp;Cookies<span class="visually-hidden">(opens in a new window)</span></a>.</li>
+<li><strong>Informações do dispositivo.</strong> Para além dos dados de registo, também recolhemos informações sobre o dispositivo em que estás a usar o Pinterest, incluindo o tipo de dispositivo, o sistema operativo, as definições, os identificadores únicos do dispositivo e dados de falha do sistema que nos ajudem a compreender alguns erros.</li>
+<li><strong>Sequências de cliques e inferências.</strong> Quando usares o Pinterest, utilizaremos a tua atividade (como os Pins em que clicares, álbuns que criares ou texto que adicionares a um comentário ou descrição), assim como os dados que forneceres no registo&nbsp;e informações dos nossos parceiros e anunciantes para fazer inferências sobre ti e as tuas preferências. Por exemplo, se criares um álbum sobre viagens, podemos inferir que és um entusiasta das viagens. Também podemos inferir dados sobre a tua educação e experiência profissional com base na tua atividade se associares a tua conta a contas externas, como <a href="https://help.pinterest.com/article/link-your-social-media">Facebook ou Google</a>.</li>
+</ul><h4>3. Os nossos parceiros e anunciantes partilham informações connosco</h4>
+<p>Também obtemos informações sobre ti e sobre a tua atividade fora do Pinterest a partir dos nossos afiliados, anunciantes, parceiros e terceiros com quem colaboramos. Por exemplo:</p>
+<ul><li>Alguns <em>websites</em> ou aplicações usam funcionalidades do Pinterest, como o nosso botão “Guardar”, ou podes instalar o botão “Guardar” no teu <em>browser</em>. Se o fizeres, recolheremos dados de registo desses <em>sites</em> ou aplicações. <a href="https://help.pinterest.com/article/save-pins-with-the-pinterest-browser-button">Sabe mais sobre estas funcionalidades no nosso Centro de Ajuda</a>.</li>
+<li>Os anunciantes online ou terceiros partilham informações com o Pinterest para medir, analisar ou melhorar o desempenho de anúncios no Pinterest ou para descobrir que tipo de anúncios devem-te ser apresentados no Pinterest ou fora do Pinterest. Isto inclui informações sobre as tuas visitas a websites de anunciantes, compras que tenhas feito nesses websites ou informações sobre os teus interesses através de serviços de terceiros e que nos possam ter ajudado a mostrar-te os anúncios mais adequados. <a href="https://help.pinterest.com/article/personalized-ads-on-pinterest">Sabe mais</a> sobre que tipo de informações os anunciantes ou outros serviços de terceiros partilham connosco.</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-what-we-do-with-the-info-we-collect" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--521028514">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                O que fazemos com as informações recolhidas
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <h4>Comprometemo-nos a apresentar-te conteúdo relevante, interessante e pessoal. Para fazê-lo, usamos os teus dados para fornecer e melhorar a tua experiência, incluindo:</h4>
+<ul><li>Identificar-te quando usares o Pinterest.</li>
+<li>Recomendar Pins, álbuns, tópicos ou categorias que possas gostar com base na tua atividade no Pinterest. Por exemplo, se concluirmos que gostas de culinária, podemos sugerir Pins, álbuns ou pessoas relacionadas com comida que julguemos que possas gostar ou apresentar-te anúncios sobre culinária.</li>
+<li>Responder às tuas perguntas ou comentários.</li>
+</ul><p>Temos um interesse legítimo em usar os teus dados destas formas. É essencial para fornecermos o serviço do Pinterest e para tornar o Pinterest e as suas funcionalidades relevantes e personalizadas para ti.</p>
+<p>Também temos um interesse legítimo em tornar o Pinterest num local seguro e melhorar&nbsp;as características do nosso produto para poderes continuar a encontrar a inspiração que procuras. Ambas as partes tiram partido quando usam os teus dados para:</p>
+<ul><li>Sugerir outras pessoas que tenham interesses semelhantes. Por exemplo, se seguires álbuns de design de interiores, podemos sugerir designers de interiores que possas gostar.</li>
+<li>Ajudar os teus amigos e contactos a encontrarem-te no Pinterest, se concordares com isso nas tuas definições. Por exemplo, se te inscreveres com uma conta do Facebook, podemos ajudar os teus amigos no Facebook a encontrarem-te no Pinterest quando eles também se inscreverem no Pinterest. Ou poderão procurar a tua conta no Pinterest através do teu e-mail.</li>
+<li>Colaborar com as autoridades para manter o Pinterest seguro. Podemos obter pedidos de autoridades para revelar informações de contas, como, por exemplo, a polícia ou tribunais. Para saber mais sobre como podemos responder a pedidos de autoridades, consulta as nossas <a href="https://help.pinterest.com/article/law-enforcement-guidelines">Diretrizes de Aplicação da Lei</a>.</li>
+<li>Analisar as tuas mensagens no Pinterest para detetar atividade que represente um risco para a tua segurança, para a segurança da tua comunidade e/ou para o público em geral.</li>
+<li>Fazer análises e fazer investigações sobre quem usa o Pinterest e sobre as suas ações. Por exemplo, ao registar a frequência com que se usa duas versões diferentes de uma funcionalidade do Pinterest, podemos descobrir qual das versões é superior.</li>
+<li>Melhorar o Pinterest e oferecer novas funcionalidades.</li>
+<li>Anunciar produtos e serviços do Pinterest a ti noutros websites. Podes optar por não partilhar os teus dados com outros websites para personalizar esses anúncios, conforme descrito na secção “<a href="https://policy.pinterest.com/privacy-policy#section-choices-you-have-about-your-info">Escolhas que podes fazer quanto às tuas informações</a>” abaixo.</li>
+<li>Enviamos-te atualizações (sobre em que momentos determinadas atividades, como Pins guardados ou comentários, acontecem no Pinterest) e notícias por e-mail ou notificações, dependendo das opções nas tuas definições. Por exemplo, enviamos atualizações semanais que incluem Pins que achamos que podes gostar. Podes optar por <a href="https://help.pinterest.com/article/edit-notification-settings">deixar de receber estas notificações</a> ao atualizares as tuas <a href="https://www.pinterest.com/settings/">definições</a>.</li>
+</ul><p>Temos um interesse legítimo em mostrar-te anúncios relevantes, interessantes e pessoais para gerar receita. Para prosseguir estes interesses, usamos as informações que recolhemos para:</p>
+<ul><li>Decidir que anúncios te devemos divulgar. Por exemplo, se demonstrares um interesse em tendas de campismo no Pinterest, podemos mostrar-te anúncios sobre produtos de campismo. Personalizamos o conteúdo de anúncios que mostramos para identificar os teus interesses com base nas tuas atividades dentro e fora do Pinterest e também usamos informações obtidas de parceiros de anúncios ou terceiros. Quando usamos cookies para identificar os teus interesses offline, obtemos autorização quando for necessário. Quando parceiros de anúncios ou terceiros partilham connosco as tuas informações, iremos reagir conforme o consentimento que já tenham obtido.</li>
+<li>Comunicar aos nossos parceiros de anúncios qual o desempenho dos seus anúncios no Pinterest e como melhorá-los. Algumas destas informações são agregadas. Por exemplo, informamos a um anunciante que uma determinada percentagem de pessoas que visualizaram um Pin promocional visitaram o website desse anunciante. Noutros casos, estas informações não são agregadas. Por exemplo, informamos um anunciante de que um determinado Pin promocional foi guardado por determinadas pessoas. Para saberes mais sobre relatórios de anúncios,&nbsp;<a href="https://help.pinterest.com/articles/ads-performance-reporting-pinterest">visita o Centro de Ajuda</a>.</li>
+</ul><p>Temos um interesse legítimo em usar as informações recolhidas para personalizar a tua experiência no Pinterest com base na tua utilização fora do Pinterest. Por exemplo, se visitares websites que vendam guitarras elétricas, poderemos sugerir Pins de guitarras. Quando identificamos os teus interesses com base na tua utilização fora do Pinterest com o uso de cookies, obtemos qualquer consentimento que possamos precisar. Para saber mais sobre como usamos cookies, consulta a nossa <a href="https://policy.pinterest.com/cookies">Política de&nbsp;Cookies</a>.</p>
+<p>Além das circunstâncias específicas acima indicadas, apenas daremos uso às tuas informações com o teu consentimento para:</p>
+<ul><li>Permitir pesquisa com fotos. Por exemplo, se tirares uma fotografia de um par de sapatos ou de uma peça de mobiliário que gostares, podes pedir-nos para que te mostremos artigos semelhantes. Podes ativar esta opção nas definições do sistema operativo do teu dispositivo.</li>
+<li>Enviar materiais de marketing por e-mail, mensagens de texto, notificações ou chamadas telefónicas, dependendo das configurações da tua conta ou do sistema operativo. Sempre que enviarmos materiais de marketing, damos-te a opção de cancelar o registo no Pinterest.</li>
+<li>Identificar a tua localização exata e personalizar o conteúdo que mostramos. Por exemplo, se soubermos que estás perto de um vendedor, podemos apresentar-te Pins desse vendedor e que possam ser do teu interesse. Podes ativar esta opção nas definições do sistema operativo do teu dispositivo.</li>
+<li>Comunicar aos nossos parceiros de anúncios qual o desempenho dos seus anúncios com a Tag do Pinterest. A tag do Pinterest (um pedaço de código que um anunciante coloca no seu website) dá-nos a nós e aos nossos parceiros de publicidade perspetivas sobre as ações que uma pessoa realiza no respetivo website depois de ver um anúncio no Pinterest. <a href="https://help.pinterest.com/article/personalization-and-data">Para saber mais sobre a Tag do Pinterest, visita o Centro de Ajuda</a>.</li>
+</ul><p>Também dependemos do teu consentimento de quando usamos cookies para:</p>
+<ul><li>Identificar-te em sessões diferentes do browser. Isto significa que se iniciares sessão no Pinterest a partir do teu telemóvel (ou de qualquer dispositivo), iremos recordar-te que não precisas de inserir os teus dados de início de sessão sempre que visitares o Pinterest.</li>
+<li>Mostrar-te anúncios nos quais podes estar interessado. Usamos cookies para identificar os teus interesses com base na tua atividade fora do Pinterest. Agimos desta forma para utilizadores existentes e para novos utilizadores de forma a personalizar uma nova experiência de utilizador no Pinterest.</li>
+</ul><p>Para saber mais sobre como usamos cookies e sobre as tuas escolhas sobre como os devemos usar, consulta a nossa <a href="https://policy.pinterest.com/cookie-policy-preview">Política de&nbsp;Cookies</a>.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-transferring-your-information" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--375941269">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Transferir as tuas informações
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>O Pinterest é um serviço global. Ao usares os nossos produtos e serviços, estás a autorizar a transferência e armazenamento das tuas informações fora do teu país de origem, inclusive nos Estados Unidos, para os fins descritos nesta política. As proteções de privacidade e os direitos das autoridades em aceder às tuas informações pessoais nesses países podem não ser equivalentes aos do teu país de origem.</p>
+<p>Consulta a <a href="/privacy-policy#section-residents-of-the-eea">secção relativa a residentes do EEE</a> para saber mais sobre as transferências de dados a partir desta região e para a mesma.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-choices-you-have-about-your-info" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--610737897">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                 Escolhas que podes fazer quanto às tuas informações
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>O nosso objetivo é dar-te escolhas simples e significativas referentes às tuas informações. Se tiveres uma conta no Pinterest, muitas das opções que tens no Pinterest são criadas diretamente no Pinterest ou nas tuas definições. Por exemplo, poderás:</p>
+<ul><li><a href="https://help.pinterest.com/article/edit-your-profile">Editar informações no teu perfil</a> a qualquer momento, decidir se o teu perfil fica disponível em motores de pesquisa ou escolher se as outras pessoas podem encontrar a tua conta do Pinterest através do teu endereço de e-mail.</li>
+<li><a href="https://help.pinterest.com/article/link-your-social-media">Associar ou não a tua conta do Pinterest</a> a partir de outros serviços (como Facebook, Google ou Twitter). Em alguns serviços (como o Facebook), também podes decidir se preferes ou não publicar a tua atividade no Pinterest nesse serviço.</li>
+<li><a href="https://help.pinterest.com/article/secret-boards">Editar as definições de álbuns secretos</a>. Os álbuns secretos são visíveis para ti e outros colaboradores do álbum e qualquer colaborador pode optar por disponibilizar o álbum a qualquer outra pessoa. Por exemplo, outro colaborador pode convidar outra pessoa para o álbum, disponibilizar o álbum numa aplicação utilizada para seguir o Pinterest ou tirar uma fotografia do álbum e enviá-la por e-mail para os seus amigos.</li>
+<li><a href="https://help.pinterest.com/article/edit-personalization-settings">Escolher se o Pinterest será personalizado para ti através das informações de outros websites ou aplicações</a>. Se tiveres uma conta no Pinterest e pretenderes controlar a forma como os teus dados externos são usados para individualizar a tua experiência, podes aceder<a href="https://help.pinterest.com/article/edit-personalization-settings">às tuas definições</a> e atualizar as tuas preferências de "Personalização".</li>
+<li>Escolher se queres ver anúncios do Pinterest personalizados através de dados relacionados com a tua atividade na conta noutras plataformas, sites ou apps. Podes&nbsp;controlar esta opção ao aceder às&nbsp;<a href="https://www.pinterest.com/settings/">tuas definições</a>e atualizar&nbsp;as preferências de "Personalização".</li>
+<li>Escolher se aceitas que o Pinterest partilhe dados sobre a tua atividade no Pinterest para criar relatórios de desempenho de anúncios. Podes controlar esta opção ao aceder às <a href="https://www.pinterest.com/settings/privacy">tuas definições</a>e atualizar as tuas preferências de "Personalização".</li>
+<li><a href="https://help.pinterest.com/article/deactivate-or-close-your-account">Encerrar a conta em qualquer momento</a>. Quando encerrares a tua conta, iremos desativá-la, remover os teus Pins e álbuns do Pinterest e eliminar os dados da tua conta.&nbsp;Tem em atenção que talvez sejamos obrigados a manter os teus dados devido a obrigações jurídicas, por exemplo, se recebermos uma solicitação legal a pedir que os guardemos. Também poderemos reter determinadas informações nos nossos sistemas de arquivo por um período de tempo limitado ou conforme indicado pela lei.</li>
+</ul><p>Também fornecemos outras definições, como a Limitação da Deteção de Anúncios, no iOS, a Personalização de Anúncios, em dispositivos Android, e a função <a href="https://help.pinterest.com/article/do-not-track">Do Not Track</a> em browsers.&nbsp;<a href="https://help.pinterest.com/article/do-not-track">Podes saber mais acerca da forma como a função Do Not Track afeta a recolha e utilização dos dados externos ao Pinterest</a>.</p>
+<p>Também tens opções disponíveis no dispositivo ou software que usas para aceder ao Pinterest. Por exemplo:</p>
+<ul><li>O teu browser permite controlar cookies ou outro tipo de armazenamento de dados locais.</li>
+<li>O teu dispositivo móvel permite escolher como e se a tua localização, fotos, contactos e outros dados são partilhados connosco.</li>
+</ul><p>Para saber mais sobre estas opções, consulta as informações fornecidas pelo teu dispositivo ou fornecedor de software.</p>
+<p>&nbsp;</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-how-and-when-we-share-information" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--843172437">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Como e quando partilhamos as informações
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Qualquer pessoa pode ver os álbuns públicos e os Pins criados por ti e as informações de perfil que nos possas fornecer. Também disponibilizamos estas informações públicas através de APIs (uma forma técnica de partilhar informações de forma rápida). Por exemplo, um parceiro pode estudar quais os Pins com mais sucesso ou de que forma os Pins são partilhados no Pinterest através de uma API do Pinterest. Também partilhamos as tuas informações com:</p>
+<ul><li>Outros serviços fornecidos, para poderes inscrever-te ou iniciar sessão no Pinterest, ou se decidires <a href="https://help.pinterest.com/article/link-your-social-media">associar a tua conta do Pinterest</a> a esses serviços, como o Facebook ou o Google, ou publicar os teus conteúdos do Pinterest nesses serviços. Por exemplo, se optares por publicar os teus Pins no Facebook ou no Twitter, os dados sobre esses conteúdos serão partilhados&nbsp;com o Facebook ou o Twitter.</li>
+<li>Serviços que utilizamos recorrentemente para publicitar o Pinterest noutros sites e apps, como Facebook Ads, Google Marketing Platform, Microsoft Advertising, LinkedIn Advertising, The Trade Desk e outros. Podes desativar a partilha com estes serviços de publicidade nas definições.</li>
+<li>Os anunciantes online e terceiros aos quais recorremos para auditar ou melhorar a apresentação e o desempenho de anúncios ou conteúdo em websites e aplicações (por exemplo, através do Google Analytics). Inclui quais os Pins ou anúncios que foram apresentados no Pinterest e se interagiste com estes Pins ou anúncios, ou outras informações sobre a tua atividade no Pinterest. <a href="https://help.pinterest.com/article/personalized-ads-on-pinterest">Sabe mais</a> sobre como partilhamos informações com anunciantes online. Para saber mais sobre terceiros que analisam desempenhos de anúncios, <a href="https://help.pinterest.com/article/personalized-ads-on-pinterest">visita o Centro de Ajuda</a>.</li>
+<li>As empresas externas, fornecedores de serviços ou indivíduos aos quais recorremos para processar informações para nós com base em instruções nossas e em conformidade com esta Política de Privacidade. Por exemplo, partilhamos dados com consultores de segurança para nos ajudarem a melhorar a identificação de spam. Algumas informações que adquirimos podem ser recolhidas por terceiros para nosso proveito.</li>
+<li>Autoridades ou agências governamentais. Apenas partilhamos informações se acreditarmos que a divulgação é necessária para cumprir uma lei, um regulamento ou uma solicitação legal; para proteger a segurança, os direitos ou propriedade pública, de qualquer pessoa ou do Pinterest; ou para detetar, prevenir ou resolver questões técnicas, de fraude ou segurança.</li>
+<li>As nossas subsidiárias e afiliadas totalmente detidas. Se o Pinterest estiver envolvido numa fusão, aquisição, falência, dissolução, reorganização, transação ou processo semelhante que envolva a transferência de informações descritas nesta Política, partilharemos as tuas informações com uma parte envolvida nesse processo (por exemplo, com um potencial comprador).</li>
+</ul>
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-how-long-we-keep-your-information" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--652464453">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Durante quanto tempo guardamos as tuas informações
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Manteremos as tuas informações apenas enquanto precisarmos delas para te fornecer os serviços do Pinterest e cumprir as finalidades indicadas nesta política. Este também será o caso de qualquer pessoa com quem partilhemos as tuas informações e que realizem serviços para nosso proveito. Quando deixarmos de precisar de usar as tuas informações e não for necessário mantê-las em conformidade com as nossas obrigações legais ou regulamentares, serão removidas dos nossos sistemas ou serão despersonalizadas de forma a que não sejam identificadas.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-our-policy-on-childrens-information" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1098199237">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                A nossa política quanto a informações de crianças
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>As crianças menores de 13 anos não estão autorizadas a usar o Pinterest. Se residires no EEE, talvez apenas possas utilizar o Pinterest se tiveres idade para fornecer uma autorização para processarmos os teus dados de acordo com as leis do teu país.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-your-options" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--427331439">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                As tuas opções
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Tens opções em relação às informações que detemos sobre ti. Para exercer estas opções, acede às <a href="https://www.pinterest.com/settings/privacy">definições da tua conta</a> e, se continuares a precisar de ajuda, visita o nosso <a href="https://help.pinterest.com/">Centro de Ajuda</a>.</p>
+<ul><li>Pedir acesso às informações que recolhemos e temos sobre ti. Normalmente, iremos partilhá-las contigo dentro de 30 dias <a href="https://help.pinterest.com/contact?current_page=about_you_page&amp;personal_data=personal_data_view">após o teu pedido, efetuado através do Centro de Ajuda</a>.</li>
+<li>Corrigir ou eliminar as tuas informações. Podes atualizar as tuas informações no teu perfil e eliminar os teus dados ao <a href="https://help.pinterest.com/article/deactivate-or-close-your-account">fechar a tua conta</a>.</li>
+<li>Recusar que processemos as tuas informações. Podes pedir-nos para parar de usar as tuas informações, inclusive quando as utilizamos para enviar e-mails de marketing ou notificações. Se optares por não receber as nossas mensagens de marketing, poderemos continuar a enviar atualizações sobre a tua conta, como quando alguém comentar num dos teus Pins.</li>
+<li>Enviar as tuas informações para outra organização, onde guardamos informações tuas com o teu consentimento ou para o desempenho de um contrato contigo, onde seja possível tecnicamente.</li>
+<li>Pedir mais detalhes sobre os dados que recolhemos e sobre a forma e de que forma são utilizados e partilhados.</li>
+</ul><p>Não descriminamos contra ti se optares por exercer estas opções relacionadas com os teus dados pessoais. Esforçamo-nos por sermos transparentes em relação às tuas opções e às consequências por exerceres determinadas opções. Se tiveres alguma dúvida, <a href="https://help.pinterest.com/contact">entra em contacto connosco</a>.<br>
+&nbsp;</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-residents-of-the-eea" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--202610801">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Residentes do EEE
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Se tiveres alguma dúvida sobre as nossas atividades de processamento de dados, o controlador de dados que deves contactar é a Pinterest Europe Ltd., uma empresa irlandesa com sede em Palmerston House, 2nd Floor, Fenian Street, Dublin 2, Irlanda. Também podes entrar em contacto com o nosso <a href="https://help.pinterest.com/data-protection-officer-contact-form">Agente de Proteção de Dados</a>.</p>
+<p>Se julgares que não cumprimos alguma lei de proteção de dados, tens o direito de apresentar uma reclamação ao Gabinete do Comissário de Proteção de Dados na Irlanda ou a uma autoridade local de supervisão.</p>
+<p>Como o Pinterest é um serviço utilizado a nível mundial, podemos transferir dados pessoais de residentes no EEE para um país fora do EEE.&nbsp;Nos casos em que transferimos informações do EEE para um país que não ofereça um nível adequado de proteção, apenas o faremos em conformidade com as salvaguardas apropriadas para proteger as tuas informações, como cláusulas contratuais padrão.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-california-residents" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--765059678">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Residentes da Califórnia
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>A California Consumer Privacy Act (Lei de Privacidade dos Consumidores da Califórnia) (CCPA) requer que divulguemos as categorias de Dados Pessoais que recolhemos e de que forma são usadas, as categorias de fontes de onde recolhemos Dados Pessoais e os terceiros com quem os partilhamos, conforme explicámos acima.</p>
+<p>Nos últimos doze meses, recolhemos dados pessoais de ti, dos teus dispositivos, dos nossos parceiros, de terceiros e das categorias de fontes descritas de outra forma na secção&nbsp;<a href="https://policy.pinterest.com/privacy-policy#section-we-collect-information-in-a-few-different-ways">"Recolhemos informações de várias formas"</a>&nbsp;nesta Política de Privacidade.</p>
+<p>A mesma lei exige que comuniquemos informações sobre os direitos dos residentes da Califórnia, de acordo com as leis da Califórnia. Podes exercer os seguintes direitos:</p>
+<ul><li>Direito a Saber e a Aceder. Podes enviar um pedido verificável para receber informações sobre: (1) as categorias de Dados Pessoas que recolhemos, utilizamos ou partilhamos; (2) os motivos pelos quais as categorias de Dados Pessoais são recolhidas ou utilizadas por nós; (3) as categorias de fontes usadas para a recolha de Dados Pessoais; e (4) elementos específicos dos Dados Pessoais que tenhamos recolhido sobre ti.</li>
+<li>Direito à Igualdade de Serviço. Não te discriminamos se optares por exercer os teus direitos de privacidade.</li>
+<li>Direito a Eliminar. Podes enviar um pedido verificável para encerrar a tua conta e eliminaremos os Dados Pessoais que tenhamos recolhido sobre ti.</li>
+</ul><p>Para verificarmos a tua identidade quando fizeres um pedido, terás de iniciar sessão na tua conta protegida por palavra-passe ou responder a uma verificação por e-mail.</p>
+<p>Não vendemos os Dados Pessoais dos nossos utilizadores.</p>
+<p>Para mais informações sobre estes direitos, consulta a secção "Escolhas que podes fazer quanto às tuas informações" acima. Para exerceres os teus direitos, <a href="https://help.pinterest.com/contact?current_page=about_you_page&amp;personal_data=personal_data_view">visita o nosso Centro de Ajuda</a>&nbsp;ou entra em contacto connosco através do <em>e-mail</em> <a href="mailto:privacy-support@pinterest.com" class="spamspan">privacy-support@pinterest.com</a>.&nbsp;</p>
+<p>Para além de poderes exercer estes direitos, também podes designar um agente autorizado a fazer estes pedidos em teu nome. Para fazê-lo, terás de verificar o pedido diretamente por e-mail ou através da tua conta protegida por palavra-passe.</p>
+<p>Recolhemos as seguintes categorias de Dados Pessoais e, nos últimos 12 meses, partilhámos estas categorias de Dados Pessoais, para fins comerciais, com afiliados, prestadores de serviços e terceiros, conforme descrito na secção <a href="https://policy.pinterest.com/privacy-policy#section-how-and-when-we-share-information">Recolhemos informações de várias formas</a> desta Política de Privacidade:</p>
+<ul><li>Identificadores, como o teu nome, nome de utilizador, endereço de e-mail, número de telefone, identificadores únicos de dispositivos e o teu endereço IP</li>
+<li>Características pessoais protegidas pela lei, como o teu género e a tua idade</li>
+<li>Dados comerciais, como as compras efetuadas e os dados de pagamento</li>
+<li>Dados de atividades na Internet ou em redes eletrónicas, como dados sobre o teu dispositivo e a tua utilização dos nossos Serviços</li>
+<li>Dados de geolocalização, quando partilhados através das definições ou fotos do teu dispositivo</li>
+<li>Dados eletrónicos, visuais ou semelhantes, como fotos ou a tua imagem de perfil</li>
+<li>Dados profissionais ou de emprego, se associares a tua conta a outras contas</li>
+<li>Inferências que fazemos acerca dos utilizadores, como os teus interesses ou preferências</li>
+<li>Outros dados que forneceres, como a tua biografia, Pins e comentários</li>
+</ul><p>Usamos e divulgamos estes dados para os fins comerciais descritos na secção <a href="https://policy.pinterest.com/privacy-policy#section-what-we-do-with-the-info-we-collect">Recolhemos informações de várias formas</a> nesta Política de Privacidade, incluindo: fornecer o nosso Serviço, comunicar contigo para partilhar atualizações ou responder aos teus comentários e perguntas, auditar o nosso Serviço, detetar incidentes de segurança e impedir fraudes, corrigir e reparar erros, fazer a manutenção da tua conta, oferecer apoio a clientes, processar ou cumprir ordens, realizar atividades de investigação e desenvolvimento e outras destinadas a melhorar o nosso Serviço, apresentar anúncios, comercializar os nossos Serviços e compreender a forma como os utilizadores interagem com os nossos Serviços.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-how-we-make-changes-to-this-policy" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1728549653">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Que alterações vamos fazer a esta política
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>Podemos alterar esta política frequentemente. Se o fizermos, publicaremos as alterações nesta página. Se continuares a usar o Pinterest após essas alterações entrarem em vigor, aceitas e concordas com a nova política. Se as alterações forem significativas, poderemos fornecer um aviso mais proeminente ou pedir o teu consentimento, conforme exigido por lei.</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+        <a id="section-contact-us" class="pin-policy-section-anchor-link u-anim-anchor-scroll" tabindex="-1" aria-hidden="true"></a>
+<section class="u-anim-fade-in" data-anim-trigger="view">
+
+          
+<div class="headline u-full-width" data-mobile-layout="false" id="headline--1714302185">
+      
+  <div class="headline__inner l-smart-grid" data-row-items-large="2">
+    <header class="headline__header">
+                  <h2 class="headline__title">
+                Contacta-nos
+  
+        </h2>
+          
+              
+            
+                  </header>
+
+    <div class="headline__content">
+
+                    
+                <ul class="subhead-list">
+          <li class="subhead-list__item">
+
+
+  <div class="text-tile">
+  
+              
+              
+                  <div class="text-tile__summary">
+                <p>A melhor forma de entrares em contacto connosco ou exerceres as tuas opções acima descritas é através do <a href="https://help.pinterest.com/contact">Centro de Ajuda</a>. Se residires nos Estados Unidos, a Pinterest, Inc. é responsável pelas tuas informações. Podes entrar em contacto com a Pinterest Inc. através da morada: 651 Brannan Street, San Francisco, CA 94107, EUA.</p>
+<p>Data de entrada em vigor: 2 de setembro de 2020<br>
+Última atualização: 2 de setembro de 2020</p>
+
+  
+        </div>
+          
+              
+  </div>
+
+</li>
+      </ul>
+
+      
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  
+</article>
+
+  </div>
+
+
+    
+
+          <aside class="site__alerts" role="alert">
+          <div>
+    
+  <aside class="alerts u-bg--cork--light alerts--disabled alerts--eu-cookie-bar" data-alert-display-height="0" tabindex="-1" aria-hidden="true" style="bottom: -120.344px; display: block; visibility: hidden;">
+  <div class="alerts__inner">
+        <ul class="alerts__items">
+      <li class="alerts__item">
+              <div class="l-grid--3-1 eu-cookie-bar" data-row-items-large="2" data-alert-tracker-id="eu-cookie-bar">
+        <div class="eu-cookie-bar__text"><strong>O Pinterest está a <a href="https://policy.pinterest.com/cookies" class="link--inline eu-cookie-bar__link">utilizar cookies</a> para te proporcionar a melhor experiência possível.</strong></div>
+        <div class="eu-cookie-bar__confirmation"><a class="button js-alerts__close-button eu-cookie-bar__button">Entendido!</a></div>
+      </div>
+          </li>
+    </ul>
+  </div>
+</aside>
+
+  </div>
+
+      </aside>
+      </main>
+  
+      <footer class="site__footer" role="contentinfo">
+      
+<div class="footer u-bg--cork--medium">
+  <div class="footer__inner">
+    <a href="#footer-end" class="visually-hidden focusable button" id="skip-footer">Skip Footer Menu</a>
+    <div class="footer__info">
+                    
+      <div class="footer__logo">
+        <a href="https://www.pinterest.com" aria-label="Go to Pinterest.com">
+          <img src="/profiles/contrib/pin/badge-scriptmark.svg?dpid=f662c190e1a67996b9d873a9e07fcd86" alt="Pinterest" width="300" height="72">
+        </a>
+      </div>
+
+      <div class="footer__language">
+            <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      
+<div class="form-item">
+  <span class="select-toggle">
+    <label for="select-js-language-block" class="visually-hidden">Selecionar o idioma</label>
+    <select class="form-select js-language-block" id="select-js-language-block">
+                      <option hreflang="en" data-drupal-link-system-path="node/481" class="en" value="/en/privacy-policy">English (US)</option>
+                              <option hreflang="id" data-drupal-link-system-path="node/481" class="id" value="/id/privacy-policy">Bahasa Indonesia</option>
+                              <option hreflang="ms" data-drupal-link-system-path="node/481" class="ms" value="/ms/privacy-policy">Bahasa Malaysia</option>
+                              <option hreflang="cs" data-drupal-link-system-path="node/481" class="cs" value="/cs/privacy-policy">Čeština</option>
+                              <option hreflang="da" data-drupal-link-system-path="node/481" class="da" value="/da/privacy-policy">Dansk</option>
+                              <option hreflang="de" data-drupal-link-system-path="node/481" class="de" value="/de/privacy-policy">Deutsch</option>
+                              <option hreflang="en-gb" data-drupal-link-system-path="node/481" class="en-gb" value="/en-gb/privacy-policy">English (UK)</option>
+                              <option hreflang="es" data-drupal-link-system-path="node/481" class="es" value="/es/privacy-policy">Español</option>
+                              <option hreflang="fr" data-drupal-link-system-path="node/481" class="fr" value="/fr/privacy-policy">Français</option>
+                              <option hreflang="it" data-drupal-link-system-path="node/481" class="it" value="/it/privacy-policy">Italiano</option>
+                              <option hreflang="hu" data-drupal-link-system-path="node/481" class="hu" value="/hu/privacy-policy">Magyar</option>
+                              <option hreflang="nl" data-drupal-link-system-path="node/481" class="nl" value="/nl/privacy-policy">Nederlands</option>
+                              <option hreflang="nb" data-drupal-link-system-path="node/481" class="nb" value="/nb/privacy-policy">Norsk bokmål</option>
+                              <option hreflang="pl" data-drupal-link-system-path="node/481" class="pl" value="/pl/privacy-policy">Polski</option>
+                              <option hreflang="pt-br" data-drupal-link-system-path="node/481" class="pt-br" value="/pt-br/privacy-policy">Português (Brasil)</option>
+                              <option hreflang="pt-pt" data-drupal-link-system-path="node/481" class="pt-pt is-active" value="/pt-pt/privacy-policy" selected="selected">Português (Europeu)</option>
+                              <option hreflang="ro" data-drupal-link-system-path="node/481" class="ro" value="/ro/privacy-policy">română</option>
+                              <option hreflang="sk" data-drupal-link-system-path="node/481" class="sk" value="/sk/privacy-policy">slovenčina</option>
+                              <option hreflang="fi" data-drupal-link-system-path="node/481" class="fi" value="/fi/privacy-policy">Suomi</option>
+                              <option hreflang="sv" data-drupal-link-system-path="node/481" class="sv" value="/sv/privacy-policy">Svenska</option>
+                              <option hreflang="tl" data-drupal-link-system-path="node/481" class="tl" value="/tl/privacy-policy">Filipino</option>
+                              <option hreflang="vi" data-drupal-link-system-path="node/481" class="vi" value="/vi/privacy-policy">Tiếng Việt</option>
+                              <option hreflang="tr" data-drupal-link-system-path="node/481" class="tr" value="/tr/privacy-policy">Türkçe</option>
+                              <option hreflang="el" data-drupal-link-system-path="node/481" class="el" value="/el/privacy-policy">Ελληνικά</option>
+                              <option hreflang="ru" data-drupal-link-system-path="node/481" class="ru" value="/ru/privacy-policy">Русский</option>
+                              <option hreflang="uk" data-drupal-link-system-path="node/481" class="uk" value="/uk/privacy-policy">Українська</option>
+                              <option hreflang="hi" data-drupal-link-system-path="node/481" class="hi" value="/hi/privacy-policy">हिन्दी</option>
+                              <option hreflang="th" data-drupal-link-system-path="node/481" class="th" value="/th/privacy-policy">ภาษาไทย</option>
+                              <option hreflang="ko" data-drupal-link-system-path="node/481" class="ko" value="/ko/privacy-policy">한국어</option>
+                              <option hreflang="ja" data-drupal-link-system-path="node/481" class="ja" value="/ja/privacy-policy">日本語</option>
+                              <option hreflang="zh-hans" data-drupal-link-system-path="node/481" class="zh-hans" value="/zh-hans/privacy-policy">简体中文</option>
+                              <option hreflang="zh-hant" data-drupal-link-system-path="node/481" class="zh-hant" value="/zh-hant/privacy-policy">繁體中文</option>
+                              <option hreflang="ar" data-drupal-link-system-path="node/481" class="ar" value="/ar/privacy-policy">العربية</option>
+                              <option hreflang="bn" data-drupal-link-system-path="node/481" class="bn" value="/bn/privacy-policy">বাংলা</option>
+                              <option hreflang="te" data-drupal-link-system-path="node/481" class="te" value="/te/privacy-policy">తెలుగు</option>
+                  </select>
+  </span>
+</div>
+
+  </div>
+
+        </div>
+    </div>
+
+    <div class="footer__menus">
+                        <nav class="footer__menu footer__menu--menu-1">
+            <div class="footer__menu__title">Sobre nós</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item" data-country-code="DE">
+                    <a href="https://policy.pinterest.com/de/impressum" class="footer__menu__link">Impresso</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://about.pinterest.com" class="footer__menu__link">O que é o Pinterest</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://pinterest.com/pinterest" class="footer__menu__link">A nossa página do Pinterest</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://medium.com/@Pinterest_Engineering" class="footer__menu__link">Blog de engenharia</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com/brand-guidelines" class="footer__menu__link">Diretrizes para a marca</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://careers.pinterest.com" class="footer__menu__link">Carreiras</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com" class="footer__menu__link">Centro de ajuda</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://labs.pinterest.com" class="footer__menu__link">Pinterest Labs</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-2">
+            <div class="footer__menu__title">As nossas políticas</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/copyright" class="footer__menu__link">Direitos de autor</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/trademark" class="footer__submenu__link">marca comercial</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://help.pinterest.com/articles/personalized-ads-pinterest" class="footer__menu__link">Anúncios personalizados</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/terms-of-service" class="footer__menu__link">Termos de utilização</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://policy.pinterest.com/privacy-policy" class="footer__menu__link">Privacidade</a>
+                                          <span class="footer__menu__combinator">&amp;</span>
+                      <ul class="footer__submenu">
+                                                  <li class="footer__submenu__item">
+                            <a href="https://policy.pinterest.com/cookies" class="footer__submenu__link">cookies</a>
+                                                      </li>
+                                              </ul>
+                                      </li>
+                                          </ul>
+          </nav>
+                  <nav class="footer__menu footer__menu--menu-3">
+            <div class="footer__menu__title">Mais informação</div>
+            <ul class="footer__menu__list">
+                                                <li class="footer__menu__item">
+                    <a href="https://business.pinterest.com" class="footer__menu__link">Para empresas</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://developers.pinterest.com" class="footer__menu__link">Para programadores</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://newsroom.pinterest.com" class="footer__menu__link">Imprensa</a>
+                                      </li>
+                                                                <li class="footer__menu__item">
+                    <a href="https://investor.pinterestinc.com" class="footer__menu__link">Para investidores</a>
+                                      </li>
+                                          </ul>
+          </nav>
+                    <div id="footer-end" class="visually-hidden">End of Footer</div>
+    </div>
+
+    <p class="footer__copyright">© Pinterest 2021</p>
+  </div>
+</div>
+
+
+    </footer>
+  
+  
+</div>
+  </div>
+
+    
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"pt-pt\/","currentPath":"node\/481","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"pt-pt"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"codesnippet\/codesnippet.highlightjs,codesnippet\/codesnippet.style.googlecode,core\/html5shiv,footnotes\/footnotes,google_analytics\/google_analytics,js_sha\/js_sha.sha,paragraphs\/drupal.paragraphs.unpublished,pin_base\/core,pin_blocks_eu_cookie_bar\/cookiebar,pin_captcha\/pin_captcha.recaptcha_invisible,pin_ckeditor_inline_icons\/datatables.js,pin_pinterest_client\/client_identification,spamspan\/obfuscate,system\/base","theme":"pin_base","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"pin_blocks_eu_cookie_bar":{"active":true,"eu_countries":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"]},"user":{"uid":0,"permissionsHash":"e512908f425ca142fe0d01d170c1fe9028eba68a94bda796500b3ec780e307bf"}}</script>
+<script src="/sites/pinpolicy/files/js/js_x9e3Wwfd94Ma94uVJn2YTKV6CNn_2DsDRt2MINhVycE.js"></script>
+<script src="https://assets.pinterest.com/js/pinit.js" async="" defer=""></script>
+<script src="/sites/pinpolicy/files/js/js_0Qs-n7v2Usu35lqqBERlhIfMG92iSqRpyLTPVDHWpSw.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"7ea89c5a2f","applicationID":"31524682,31524683","transactionName":"MQRSZEMFX0VTVUYIDQhOc0VCEF5bHVNcFQsSGB5eXgBUGFFXXA4MDwJRXAsUXlpbVUs=","queueTime":0,"applicationTime":526,"atts":"HUNREgsfTEs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+</body></html>
