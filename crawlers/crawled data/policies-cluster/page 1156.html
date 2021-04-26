@@ -1,111 +1,255 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Privacy Policy</title>
-<link rel="stylesheet" href="/css/common.css?dt=20210411030000">
-<script src="/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript">
-//<!--
-//$(document).ready( function() {
-//    $("p").css('word-break', 'break-all');
-//});
-//-->
-var agent = navigator.userAgent;
-if (agent.search(/iPad/) != -1 || agent.search(/Macintosh/) != -1 && 'ontouchend' in document) {
-    var doc = document;
-    var head = doc.getElementsByTagName("head")[0];
-    var meta = doc.createElement("meta");
-    meta.setAttribute("name","viewport");
-    meta.setAttribute("id","viewport");
-    meta.setAttribute("content","width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0");
-    head.appendChild(meta);
-}
 
-window.onload = function(){
-    var span = document.getElementById("insert_button");
-    var lang = location.search.substring(1);
-    if(!lang){
-    }else{
-        const button = document.createElement("button");
-        const text = document.createTextNode("TOP");
-        button.setAttribute("type","submit");
-        button.setAttribute("class","top_button");
-        button.appendChild(text);
-        span.appendChild(button);
-    }
-};
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Zing ID - Zing Passport - Tài khoản Zing của VNG</title>
+        <link rel="shortcut icon" href="https://stc-id.zing.vn/favicon.ico">
+        <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/dpzVjBAupwRfx3UzvXRnnAKb/recaptcha__pt.js" crossorigin="anonymous" integrity="sha384-Lc1AMSND/RltMr7jPIh1liNXDdAnt/yaNuy82pXDQpAahNKWVG06AN3i4Pcdw/gs"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://stc-id.zing.vn/xlogin/js/zmCore-1.46.min.js"></script>
+        <script type="text/javascript" src="https://stc-id.zing.vn/xlogin/js/swfobject.js"></script>
+        <script type="text/javascript" src="https://stc-id.zing.vn/xlogin/js/zmxcall.js"></script>
+        <!--<script type="text/javascript" src="https://stc-id.zing.vn/login/js/.js"></script>-->
+        <script type="text/javascript" src="https://stc-id.zing.vn/login/js/tracking_hotgame_hotevent.js"></script>
 
-</script>
+        <link href="https://stc-id.zing.vn/login/css/zingid_02_18.css" rel="stylesheet" type="text/css">
+        <!--<script src="https://stc-id.zing.vn/login/js/tracking.js" type="text/javascript"></script>-->
+        <script type="text/javascript">
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-48855423-1', 'zing.vn');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+        </script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+    <script id="zmzt" type="text/javascript" src="https://stc-id.zing.vn/login/js/zt-1.04-1.min.js"></script></head>
+    <body>
+        <script type="text/javascript">
+            //LOGIN
+            var zid = {
+                baseUrl: "https://id.zing.vn/v2",
+                apikey: "92140c0e46c54994812403f564787c14",
+                pid: "38",
+                loginUrl: "https://id.zing.vn/v2/login?apikey=92140c0e46c54994812403f564787c14&pid=38",
+                goLogin: function () {
+                    location.href = "https://id.zing.vn/v2/login?apikey=92140c0e46c54994812403f564787c14&pid=38&next=";
+                },
+                chgEmailUrl: function (email) {
+                    location.href = "https://id.zing.vn/v2/emailactive/change?apikey=92140c0e46c54994812403f564787c14&pid=38&email=" + email;
+                }
+            };
+        </script>
+        <script type="text/javascript" src="https://stc-id.zing.vn/xlogin/js/zm.ui-2.15.min.js"></script>            
+        <script type="text/javascript" src="https://stc-id.zing.vn/login/js/zid_27.js"></script><div class="zme-boxy-wrapper zme-boxy-modal" style="display: none;"><div class="zme-boxy"><div class="zme-boxy-container"><div class="zme-boxy-title">Liên kết tài khoản</div><div class="zme-boxy-body"><div class="zme-boxy-content"></div><div class="zme-boxy-footer"><a class="btn_L3" tabindex="0" href="#"><em>Đồng ý</em></a><a class="btn_L5" tabindex="0" href="#"><em>Bỏ qua</em></a></div></div><a class="zme-boxy-close" href="#"></a></div></div></div>
+        <link href="https://stc-id.zing.vn/login/css/jcarousel.basic-1.01.css" rel="stylesheet" type="text/css">
+
+            <script src="https://stc-id.zing.vn/login/js/jquery-1.9.1.js" type="text/javascript"></script>
+            <script type="text/javascript" src="https://stc-id.zing.vn/login/js/jquery.jcarousel.min.js"></script>
+
+            <div class="zid_header">
+                <div class="zid_header_inner">
+                    <input id="serverdomain" type="hidden" value="https://id.zing.vn/v2">
+                    <input id="acn" type="hidden" value="">
+                    <h1 class="zidlogo"><a class="zidsprt" href="https://id.zing.vn/v2?apikey=92140c0e46c54994812403f564787c14&amp;pid=38" title="Trang chủ Zing ID">Zing ID</a></h1>
+                    
+
+                    
+
+                </div>
+            </div>
+            
+            <div class="zidbody">
+                
+                
+                
+                
+                            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="zingid_policy">
+    <h2 style="text-align:center" class="pageheading">Điều khoản sử dụng Zing ID</h2>
+    <!--p1 . Quy dinh chung-->
+    <div class=" paragraphtext" id="c_p1" style="">
+        <h3>Điều 1. Giới Thiệu</h3>
+        <ol>
+            <li>Điều Khoản Sử Dụng Zing ID này là thỏa thuận giữa Bạn và VNG liên quan đến việc sử dụng Tài khoản Zing ID và/hoặc các sản phẩm và dịch vụ của VNG ("Dịch Vụ").</li>
+            <li>Bằng việc sử dụng Dịch Vụ của VNG, Bạn được xem là đã đồng ý với các Điều khoản này; vì vậy, Bạn vui lòng đọc kỹ các Điều khoản này, đặc biệt là những điều khoản miễn trừ hoặc hạn chế trách nhiệm của VNG. Trường hợp Bạn không đồng ý với bất kỳ điều khoản nào thì Bạn vui lòng ngừng truy cập, tải xuống hay cố gắng sử dụng bất kỳ Dịch Vụ nào của VNG.</li>
+            <li>Các Dịch Vụ của VNG rất đa dạng và đối với dịch vụ cụ thể (mà Bạn lựa chọn sử dụng) có thể áp dụng các điều khoản dịch vụ bổ sung và/hoặc yêu cầu áp dụng điều khoản sử dụng riêng biệt (bao gồm cả yêu cầu về độ tuổi để sử dụng Dịch Vụ); trong trường hợp này, các điều khoản bổ sung và hoặc điều khoản sử dụng riêng biệt của các Dịch Vụ đó sẽ trở thành một phần thuộc thỏa thuận của Bạn với VNG nếu Bạn sử dụng các Dịch Vụ đó.</li>
+            <li>Các Dịch Vụ được cung cấp cho Bạn có thể được cung cấp bởi chính VNG và/hoặc Công ty con, Công ty liên kết với VNG ("Công Ty Liên Kết"), tùy từng trường hợp cụ thể; trong trường hợp Dịch Vụ được cung cấp bởi Công Ty Liên Kết với VNG thì Điều Khoản Sử Dụng này cũng sẽ được áp dụng giữa Bạn và Công Ty Liên Kết cung ứng Dịch Vụ đó.</li>
+        </ol>
+        <h3>Điều 2. Các Khái Niệm Và Định Nghĩa</h3>
+        <ol>
+            <li>"Điều Khoản Sử Dụng": là Điều Khoản Sử Dụng Zing ID này và các bản sửa đổi, bổ sung tùy từng thời điểm.</li>
+            <li>"ZingID": là tài khoản Zing ID được Bạn đăng ký, quản lý để dụng (các) Dịch Vụ của VNG và/hoặc Công Ty Liên Kết với VNG.</li>
+            <li>"Thông Tin Cá Nhân": là các thông tin nhằm định danh một cá nhân cụ thể như được quy định tại khoản 4.4, Điều 4 của Điều Khoản Sử Dụng này.</li>
+            <li>"Dữ Liệu": là các nội dung/thông tin được tạo/sinh ra trong quá trình Bạn tham gia, sử dụng Dịch Vụ của VNG và/hoặc Công Ty Liên Kết với VNG thông qua việc đăng nhập bằng ZingID và được hệ thống máy chủ (server) của VNG ghi nhận lại.</li>
+        </ol>
+        <h3>Điều 3. Yêu Cầu Về Độ Tuổi</h3>
+        <ol>
+            <li>Để tự mình khởi tạo tài khoản ZingID và sử dụng các Dịch Vụ của VNG, Bạn phải đảm bảo rằng, Bạn đã đủ mười lăm (15) tuổi. Trường hợp Bạn chưa đủ tuổi theo quy định, Bạn cần phải được người đại diện theo pháp luật của Bạn (có thể là cha mẹ hoặc người giám hộ hợp pháp) cho phép đăng ký và sử dụng tài khoản ZingID; Bạn cần yêu cầu người đại diện theo pháp luật của Bạn cùng đọc và đồng ý với các điều khoản này.</li>
+            <li>Trường hợp Bạn là người đại diện theo pháp luật và Bạn cho phép con / người được giám hộ của mình khởi tạo, sử dụng tài khoản ZingID và/hoặc các Dịch Vụ của VNG thì Bạn phải tuân theo các điều khoản này và chịu trách nhiệm đối với các hành động, hoạt động của con / người được giám hộ của Bạn trong các Dịch Vụ đó.</li>
+            <li>Các Dịch Vụ của VNG có thể có các yêu cầu khác nhau về độ tuổi để sử dụng để tuân thủ quy định pháp luật Việt Nam, ví dụ như: dịch vụ dành cho mọi lứa tuổi, dịch vụ dành cho người từ đủ mười hai (12) tuổi trở lên và dịch vụ dành cho người từ đủ mười tám (18) tuổi trở lên và/hoặc yêu cầu về thời gian sử dụng dịch vụ cho lứa tuổi (ví dụ: người chơi dưới mười tám (18) tuổi không được chơi các trò chơi điện tử G1 quá 180 phút trong 24 giờ mỗi ngày); vì vậy, để sử dụng các dịch vụ này, Bạn cần xem xét các khuyến cáo về độ tuổi sử dụng của dịch vụ, thời gian được phép sử dụng dịch vụ và đảm bảo Bạn hoặc con/người được giám hộ của Bạn đủ tuổi theo khuyến cáo từ dịch vụ được cung cấp. VNG có quyền từ chối cung ứng dịch vụ cho Bạn tại bất kỳ thời điểm nào nếu Bạn hoặc con/người được giám hộ của Bạn chưa đáp ứng yêu cầu về độ tuổi hoặc sử dụng dịch vụ quá thời gian theo quy định.</li>
+        </ol>
+        <h3>Điều 4. Đăng Ký ZingID</h3>
+        <ol>
+            <li>Để đăng ký, khởi tạo ZingID, Bạn cần tạo "Tên Đăng Nhập" và "Mật Khẩu" trên hệ thống của VNG.</li>
+            <li>Việc lựa chọn Tên Đăng Nhập là quyền của Bạn; tuy nhiên, Tên Đăng Nhập của mà Bạn lựa chọn phải đảm bảo:
+                <ul>
+                    <li class="li-alpha"> Không trùng lặp với các Tên Đăng Nhập đã được đăng ký trước đó; VNG sẽ có thông báo khi Tên Đăng Nhập mà Bạn lựa chọn bị trùng;</li>
+                    <li class="li-alpha"> Không trùng hoặc gây liên tưởng đến (i) tên quốc gia; (ii) tên của các vĩ nhân, anh hùng dân tộc; (iii) tên của lãnh đạo Đảng, Nhà nước các thời kỳ;</li>
+                    <li class="li-alpha"> Không chứa các ký tự, nội dung liên quan đến tôn giáo, chính trị, khiêu dâm, các nội dung vi phạm pháp luật và/hoặc thuần phong mỹ tục của người Việt Nam;</li>
+                    <li class="li-alpha"> Không chứa các ký tự, nội dung xúc phạm, khích bác, gây rối đối với bất kỳ tổ chức, cá nhân nào;</li>
+                    <li class="li-alpha"> Không chứa các ký tự, nội dung gây hiểu nhầm rằng, tài khoản ZingID đó là tài khoản quản trị, hoặc do VNG và/hoặc Công Ty Liên Kết khởi tạo để quản trị và/hoặc hỗ trợ người sử dụng.</li>
+                </ul>
+            </li>
+            <li>Mật khẩu là "chìa khóa" để đăng nhập vào tài khoản của Bạn; vì vậy, Bạn có trách nhiệm lưu trữ, bảo mật thông tin mật khẩu của Bạn và không chia sẻ thông tin mật khẩu cho bất kỳ ai. Trong bất kỳ trường hợp nào, nếu Bạn nhận thấy hay nghi ngờ tài khoản của mình bị đăng nhập trái với ý muốn của Bạn, Bạn có thể (i) ngay lập tức thay đổi mật khẩu và/hoặc (ii) thông báo cho VNG và thực hiện các thủ tục cần thiết tạm khóa tài khoản nhằm giảm thiểu các thiệt hại cho Bạn theo đúng quy trình hỗ trợ giải quyết khiếu nại khách hàng của VNG. VNG theo đây được bảo lưu và miễn trừ khỏi bất kỳ trách nhiệm nào đối với bất kỳ thiệt hại nào (nếu có) của Bạn nếu mật khẩu của Bạn bị lộ dưới bất kỳ hình thức nào.</li>
+            <li>Theo quy định của pháp luật Việt Nam, Bạn cần cung cấp các thông tin sau để có thể sử dụng các Dịch Vụ của VNG và/hoặc Công Ty Liên Kết với VNG:
+                <ul>
+                    <li class="li-alpha">Họ và tên;</li>
+                    <li class="li-alpha">Ngày tháng năm sinh;</li>
+                    <li class="li-alpha">Số CMND/Thẻ Căn cước công dân/Hộ chiếu, ngày cấp, nơi cấp;</li>
+                    <li class="li-alpha">Địa chỉ liên hệ;</li>
+                    <li class="li-alpha">Thư điện tử (email);</li>
+                    <li class="li-alpha">Số điện thoại liên hệ (nếu có).</li>
+                </ul>
+            </li>
+            <li>Trường hợp Bạn chưa đủ mười bốn (14) tuổi và chưa có CMND/Thẻ Căn cước công dân/Hộ chiếu thì người đại diện theo pháp luật của Bạn phải quyết định việc thực hiện đăng ký thông tin cá nhân của chính người đại diện theo pháp luật của Bạn để thể hiện sự đồng ý và chịu trách nhiệm trước pháp luật về việc đăng ký này.</li>
+            <li>Trường hợp Bạn không cung cấp, cung cấp không đầy đủ hoặc không chính xác các thông tin nêu trên có thể hạn chế việc tiếp cận, sử dụng Dịch Vụ hay đảm bảo các quyền và lợi ích hợp pháp của Bạn. Trong một số trường hợp cụ thể, VNG có thể tạm ngưng cung ứng Dịch Vụ cho Bạn mà không cần báo trước cho đến khi nhận được đầy đủ, chính xác các thông tin nêu trên theo đúng quy định.</li>
+            <li>Nhằm đảm bảo Thông Tin Cá Nhân được Bạn cung cấp luôn được cập nhật chính xác, đầy đủ, hệ thống của VNG cho phép Bạn cập nhật Thông Tin Cá Nhân tại bất kỳ thời điểm nào, tùy theo quyết định của Bạn. Tùy từng thời điểm, loại thông tin được cập nhật và phụ thuộc vào mức độ sẵn sàng của dịch vụ, hệ thống kỹ thuật và chính sách của VNG; việc cập nhật Thông Tin Cá Nhân này có thể có hiệu lực ngay lập tức hoặc được áp dụng thời gian chờ (nếu thời gian chờ được áp dụng), VNG sẽ có thông báo cụ thể đến Bạn khi Bạn thực hiện cập nhật thông tin. Bạn cần lưu ý rằng, khi tiếp nhận, giải quyết bất kỳ khiếu nại, khiếu kiện hay yêu cầu hỗ trợ nào từ Bạn, VNG sẽ căn cứ vào Thông Tin Cá Nhân của Bạn được cập nhật tại lần gần nhất và đã được ghi nhận trên hệ thống của VNG (trường hợp áp dụng thời gian chờ thì thông tin được Bạn cập nhật có thể sẽ chưa được ghi nhận khi chưa kết thúc thời gian chờ) để xác định chủ tài khoản ZingID, các Thông Tin Cá Nhân được Bạn cung cấp trước đó sẽ không còn giá trị sử dụng.</li>
+            <li>Việc đăng ký, khởi tạo tài khoản ZingID, tùy từng thời điểm, có thể thực hiện bằng cách sử dụng các tài khoản mạng xã hội, OTT khác như tài khoản Facebook, Google, Yahoo, Zalo … Tuy nhiên, Bạn cần lưu ý rằng, trường hợp Bạn bị mất, bị thu hồi hay gặp bất kỳ vấn đề đăng nhập nào đối với tài khoản mạng xã hội, OTT sử dụng để tạo tài khoản ZingID thì Bạn cũng sẽ không thể đăng nhập vào tài khoản ZingID được; trong trường hợp này, Bạn cần liên hệ với chính các đơn vị, doanh nghiệp quản lý mạng xã hội, OTT để được hỗ trợ xử lý.</li>
+            <li>Việc Bạn sử dụng các tài khoản mạng xã hội, OTT để đăng ký, khởi tạo ZingID như quy định tại khoản 4.8 nêu trên không miễn trừ nghĩa vụ cung cấp thông tin của Bạn theo quy định tại Điều này.</li>
+        </ol>
+        <h3>Điều 5. Sử Dụng ZingID</h3>
+        <ol>
+            <li>Việc sử dụng ZingID phải tuân thủ đầy đủ các quy định tại Điều Khoản Sử Dụng này, các quy định cụ thể của các Dịch Vụ cụ thể mà Bạn lựa chọn sử dụng.</li>
+            <li>Bạn chịu trách nhiệm về mọi hoạt động, hành động được thực hiện từ/bởi tài khoản ZingID của Bạn, bao gồm cả việc thực hiện các biện pháp hợp lý để bảo mật tài khoản ZingID của Bạn.</li>
+            <li>Việc sử dụng tài khoản ZingID của Bạn phải đảm bảo (i) tuân thủ các quy định của pháp luật Việt Nam; (ii) không vi phạm Các Hành Vi Bị Cấm (như được quy định tại Điều 7 dưới đây); (iii) tôn trọng các quyền của người khác, bao gồm cả quyền riêng tư, quyền sở hữu trí tuệ; (iv) không lạm dụng hoặc làm hại người khác (hoặc đe dọa hay khuyến khích thực hiện hành vi lạm dụng hoặc gây hại đó) – ví dụ như: đưa ra các thông tin sai lệch, lừa đảo, phỉ báng, bắt nạt, quấy rối; (v) không gây hại, can thiệp hay làm gián đoạn các Dịch Vụ.</li>
+            <li>Nhằm đảm bảo tuân thủ các quy định tại khoản 5.3 nêu trên, VNG có thể áp dụng các biện pháp kỹ thuật cần thiết để hạn chế, cảnh báo các nội dung vi phạm (ví dụ như bộ lọc từ) và có thể ngay lập tức xóa bỏ các nội dung vi phạm của Bạn mà không cần báo trước.</li>
+            <li>Trường hợp Bạn vi phạm bất kỳ quy định nào của Điều Khoản Sử Dụng này, đặc biệt là vi phạm Các Hành Vi Bị Cấm và/hoặc các quy định tại khoản 5.3 nêu trên thì VNG có quyền ngay lập tức khóa tài khoản ZingID của Bạn và ngừng cung cấp bất kỳ và toàn bộ Dịch Vụ cho Bạn mà không phải bồi thường hay chịu bất kỳ trách nhiệm nào với Bạn.</li>
+            <li>Trường hợp Bạn không đăng nhập, sử dụng tài khoản ZingID trong vòng sáu (6) tháng liên tục (kể từ lần đăng nhập cuối cùng) thì VNG có quyền (nhưng không có nghĩa vụ) khóa tài khoản ZingID, Dữ Liệu của Bạn; điều này đồng nghĩa với việc (i) Bạn sẽ không thể sử dụng bất kỳ Dịch Vụ nào mà Bạn đăng nhập bằng tài khoản ZingID; và (ii) toàn bộ các đơn vị ảo, vật phẩm ảo, điểm thưởng … trong các Dịch Vụ đó sẽ bị xóa bỏ. Trong trường hợp này Bạn đồng ý rằng, VNG sẽ không phải bồi thường hay chịu bất kỳ trách nhiệm nào với Bạn.</li>
+        </ol>
+        <h3>Điều 6. Thu Thập, Sử Dụng Và Bảo Vệ Thông Tin Khách Hàng</h3>
+        <ol>
+            <li>Theo quy định của pháp luật Việt Nam và nhằm tối ưu hóa Dịch Vụ được cung cấp cho Bạn, VNG sẽ thực hiện thu thập và lưu trữ (i) toàn bộ Thông Tin Cá Nhân của Bạn; (ii) các thông tin, hành động của Bạn trong quá trình sử dụng ZingID và/hoặc các Dich Vụ (ví dụ như: thời gian đăng nhập, đăng xuất, địa chỉ IP, vị trí đăng nhập); (iii) các thông tin liên quan đến thanh toán; (iv) các thông tin, nội dung mà Bạn gửi, nhận, chia sẻ trong quá trình sử dụng ZingID và/hoặc Dịch Vụ (ví dụ: log chat, thông tin nhật ký được Bạn đăng tải); (v) thông tin về thiết bị mà Bạn dùng để sử dụng dịch vụ của VNG; và (vi) các thông tin khác, tùy từng thời điểm và tuân thủ theo quy định của pháp luật Việt Nam và/hoặc Cơ quan Nhà nước có thẩm quyền.</li>
+            <li>Theo quy định của pháp luật Việt Nam, toàn bộ Thông Tin Cá Nhân và Dữ Liệu của Bạn sẽ được lưu trữ tối thiểu hai (2) năm kể từ thời điểm Bạn cung cấp thông tin và/hoặc tạo ra dữ liệu. Thời gian lưu trữ thực tế Thông Tin Cá Nhân và Dữ Liệu của Bạn có thể sẽ lâu hơn, tùy thuộc vào khả năng và mức độ đáp ứng về cơ sở hạ tầng của VNG.</li>
+            <li>Bạn theo đây đồng ý và chấp thuận không hủy ngang rằng, VNG có quyền sử dụng các thông tin nêu trên để gửi đến Bạn các tin nhắn, thư điện tử (email), gọi điện thoại và/hoặc liên hệ với Bạn theo bất kỳ cách thức nào mà VNG lựa chọn sử dụng nhằm (i) hỗ trợ, cung ứng các Dịch Vụ tốt nhất cho Bạn (ví dụ: tin nhắn xác thực tài khoản, hỗ trợ lấy lại mật khẩu …); (ii) duy trì và cải thiện Dịch Vụ; (iii) phát triển các dịch vụ mới, (iv) gửi đến Bạn các thông tin, nội dung nhằm mục đích quảng cáo, quảng bá các dịch vụ của VNG và/hoặc Công Ty Liên Kết với VNG; (v) phân tích, đo lường hiệu quả các Dịch Vụ mà Bạn sử dụng; (vi) liên hệ trực tiếp với Bạn để nhằm mục đích chăm sóc khách hàng, xác thực thông tin và các mục đích khác.</li>
+            <li>Các thông tin, Dữ Liệu của Bạn được VNG thu thập và lưu trữ sẽ chỉ được sử dụng trong phạm vi của VNG Group (bao gồm VNG và các Công Ty Liên Kết với VNG). VNG sẽ không chia sẻ bất kỳ Thông Tin Cá Nhân nào của Bạn cho bất kỳ bên thứ ba nào, ngoại trừ các trường hợp như được quy định tại khoản 6.5 dưới đây.</li>
+            <li>VNG sẽ cung cấp, chia sẻ các Thông Tin Cá Nhân, Dữ Liệu và/hoặc các thông tin khác của Bạn mà VNG lưu trữ trong các trường hợp sau đây:
+                <ul>
+                    <li class="li-alpha">Được sự đồng ý của Bạn (ví dụ: Bạn sử dụng ZingID để đăng nhập, sử dụng các dịch vụ ngoài VNG Group và Bạn đồng ý cung cấp Thông Tin Cá Nhân của Bạn cho các đơn vị, tổ chức cung ứng dịch vụ đó);</li>
+                    <li class="li-alpha">Theo yêu cầu của Tòa án và/hoặc Cơ quan Nhà nước có thẩm quyền; hoặc VNG chủ động cung cấp cho Cơ quan Nhà nước có thẩm quyền trong trường hợp việc sử dụng tài khoản ZingID và/hoặc Dịch Vụ của Bạn có dấu hiệu vi phạm pháp luật.</li>
+                </ul>
+            </li>
+            <li>VNG sẽ thực hiện các biện pháp kỹ thuật cần thiết để bảo mật thông tin của Bạn, bao gồm nhưng không giới hạn ở việc (i) mã hóa thông tin theo tiêu chuẩn phù hợp; (ii) thiết lập các hệ thống tường lửa để ngăn chặn việc xâm nhập trái phép; (iii) sử dụng dịch vụ máy chủ, chỗ đặt máy chủ tại các đơn vị, doanh nghiệp có tiêu chuẩn bảo mật cao.</li>
+        </ol>
+        <h3>Điều 7. Các Hành Vi Bị Cấm</h3>
+        <ol>
+            <li>Lợi dụng việc sử dụng tài khoản ZingID và/hoặc Dịch Vụ nhằm mục đích:
+                <ul>
+                    <li class="li-alpha">Chống lại Nhà nước Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam; gây phương hại đến an ninh quốc gia, trật tự an toàn xã hội; phá hoại khối đại đoàn kết dân tộc; tuyên truyền chiến tranh, khủng bố; gây hận thù, mâu thuẫn giữa các dân tộc, sắc tộc, tôn giáo;</li>
+                    <li class="li-alpha">Tuyên truyền, kích động bạo lực, dâm ô, đồi trụy, tội ác, tệ nạn xã hội, mê tín dị đoan, phá hoại thuần phong, mỹ tục của dân tộc;</li>
+                    <li class="li-alpha">Tiết lộ bí mật nhà nước, bí mật quân sự, an ninh, kinh tế, đối ngoại và những bí mật khác do pháp luật quy định;</li>
+                    <li class="li-alpha">Đưa thông tin xuyên tạc, vu khống, xúc phạm uy tín của tổ chức, danh dự và nhân phẩm của cá nhân;</li>
+                    <li class="li-alpha">Quảng cáo, tuyên truyền, mua bán hàng hóa, dịch vụ bị cấm; truyền bá tác phẩm báo chí, văn học, nghệ thuật, xuất bản phẩm bị cấm và/hoặc quảng cáo các sản phẩm, dịch vụ khác mà chưa được VNG chấp thuận;</li>
+                    <li class="li-alpha">Giả mạo tổ chức, cá nhân và phát tán thông tin giả mạo, thông tin sai sự thật xâm hại đến quyền và lợi ích hợp pháp của tổ chức, cá nhân;</li>
+                    <li class="li-alpha">Đăng tải, chia sẻ các nội dung vi phạm quyền sở hữu trí tuệ của bất kỳ tổ chức, cá nhân nào;</li>
+                    <li class="li-alpha">Thực hiện hoặc nhằm thực hiện các hành vi vi phạm pháp luật khác.</li>
+                </ul>
+            </li>
+            <li>Cản trở việc cung cấp và truy cập thông tin hợp pháp, việc cung cấp và sử dụng các Dịch Vụ của người khác.</li>
+            <li>Cản trở hoạt động, xâm nhập hoặc cố gắng xâm nhập trái phép vào hệ thống máy chủ của VNG.</li>
+            <li>Sử dụng trái phép mật khẩu, khóa mật mã của người khác; chia sẻ trái phép thông tin riêng, thông tin cá nhân của người khác.</li>
+            <li>Tạo đường dẫn đến các website, ứng dụng trái phép, vi phạm pháp luật; tạo, cài đặt, phát tán phần mềm độc hại, vi-rút máy tính; xâm nhập trái phép, chiếm quyền điều khiển hệ thống thông tin, tạo lập công cụ tấn công trên Internet.</li>
+            <li>Mua, bán đơn vị ảo, vật phẩm ảo, điểm thưởng giữa những người sử dụng Dịch Vụ với nhau;</li>
+            <li>Mua, bán, trao đổi (kể cả tặng, cho) tài khoản ZingID;</li>
+            <li>Thực hiện các hành vi (nhằm) lừa đảo chiếm đoạt tài sản của người khác;</li>
+            <li>Mạo danh hoặc làm cho người khác hiểu nhầm rằng Bạn là nhân viên, cộng tác viên của VNG.</li>
+        </ol>
+        <h3>Điều 8. Quyền Sở Hữu Trí Tuệ</h3>
+        <ol>
+            <li>Một số Dịch Vụ của VNG cho phép bạn chia sẻ các nội dung thông qua hệ thống của VNG; đối với các nội dung này, Bạn cam đoan và đảm bảo rằng, Bạn là chủ sở hữu hợp pháp, duy nhất của nội dung này, trường hợp (các) nội dung mà Bạn chia sẻ có đồng sở hữu thì Bạn đảm bảo rằng, Bạn đã được (các) đồng sở hữu này đồng ý và cấp quyền đầy đủ cho Bạn.</li>
+            <li>Đối với các nội dung được Bạn chia sẻ thông qua hệ thống của VNG, Bạn theo đây đồng ý không hủy ngang, cấp cho VNG và Công Ty Liên Kết với VNG quyền không độc quyền, vĩnh viễn, hoàn toàn miễn phí, và trên phạm vi toàn cầu để (i) lưu trữ, tái sản xuất, phân phối, truyền đạt và sử dụng nội dung của Bạn; (ii) xuất bản, trình diễn công khai hoặc hiển thị công khai nội dung của Bạn nếu Bạn đã cho phép nội dung đó hiển thị cho người khác; (iii) chỉnh sửa và tạo tác phẩm phái sinh dựa trên nội dung của Bạn (ví dụ: định dạng lại hoặc dịch nội dung sang ngôn ngữ khác).</li>
+            <li>Đối với các Dịch Vụ được VNG và/hoặc Công Ty Liên Kết với VNG cung cấp cho Bạn, VNG theo đây cấp cho Bạn quyền không độc quyền, không thể chuyển giao, không thể chuyển nhượng và không được thương mại hóa để sử dụng các Dịch Vụ của VNG và/hoặc Công Ty Liên Kết với VNG.</li>
+            <li>Ngoài quyền sử dụng Dịch Vụ như đã được cấp cho Bạn theo quy định tại khoản 8.3 nêu trên, VNG bảo lưu toàn bộ quyền sở hữu trí tuệ đối với nhãn hiệu, mã nguồn sản phẩm, hình ảnh, âm thanh, âm nhạc … trong các Dịch Vụ cùng với các quyền khác liên quan đến Dịch Vụ được cung cấp cho Bạn.</li>
+        </ol>
+        <h3>Điều 9. Giới Hạn Trách Nhiệm Và Từ Chối Đảm Bảo</h3>
+        <ol>
+            <li>VNG cam kết sẽ cung cấp các Dịch Vụ đến Bạn trong giới hạn trình độ chuyên môn và mức độ cẩn trọng hợp lý theo đúng quy định của pháp luật.</li>
+            <li>Để tăng cường mức độ bảo mật, an toàn của Dịch Vụ, VNG sẽ áp dụng một hoặc một vài biện pháp kỹ thuật và/hoặc phần mềm, ứng dụng vào trong hoặc bên cạnh Dịch Vụ; mặc dù vậy, việc áp dụng các biện pháp nêu trên không được là sự đảm bảo rằng tài khoản của Bạn không bị mất, bị hack và VNG được miễn trừ hoàn toàn trách nhiệm bởi các trường hợp này.</li>
+            <li>VNG sẽ áp dụng các biện pháp kỹ thuật cần thiết nhằm hỗ trợ Bạn có được trải nghiệm tốt nhất khi sử dụng Dịch Vụ; mặc dù vậy, trong một số trường hợp ngoài ý muốn, Dịch Vụ có thể (i) bị gián đoạn cung cấp, (ii) bị lỗi (bug), (iii) bị mất hoặc trùng lặp một số thông tin, tính năng của Dịch Vụ và/hoặc tài khoản ZingID của Bạn; trong trường hợp này, VNG sẽ áp dụng mọi biện pháp cần thiết (trong khả năng cho phép) và trong thời gian hợp lý để khắc phục và Bạn đồng ý miễn trừ cho VNG mọi trách nhiệm liên quan.</li>
+            <li>VNG sẽ áp dụng các biện pháp cần thiết, theo đúng quy định pháp luật để bảo vệ, bảo mật Thông Tin Cá Nhân và Dữ Liệu của Bạn như đã nêu tại khoản 6.6, Điều 6; tuy nhiên, Bạn hiểu rõ và đồng ý rằng, không có bất kỳ hệ thống nào là an toàn tuyệt đối và chống lại được mọi cuộc tấn công, hack, cheat; vì vậy, trường hợp hệ thống của VNG bị tấn công, hack, cheat và Thông Tin Cá Nhân, Dữ Liệu của Bạn (có nguy cơ) bị lộ thì VNG sẽ ngay lập tức thực hiện các biện pháp cần thiết theo quy định của pháp luật để hạn chế tối đa ảnh hưởng đến Bạn và Bạn đồng ý miễn cho VNG khỏi bất kỳ trách nhiệm nào liên quan.</li>
+        </ol>
+        <h3>Điều 10. Các Hỗ Trợ Liên Quan Đến Tài Khoản</h3>
+        <ol>
+            <li>Mọi vấn đề hỗ trợ liên quan đến tài khoản ZingID sẽ được hỗ trợ thông qua (i) website <a href="http://hotro.zing.vn/">http://hotro.zing.vn/</a> hoặc (ii) số điện thoại hotline 1900561558 và tuân thủ theo đúng Quy trình Chăm sóc và phản hồi khách hàng của VNG tại thời điểm tiếp nhận khiếu nại.</li>
+            <li>Mọi khiếu nại liên quan đến tài khoản ZingID và/hoặc Dịch Vụ phải được gửi đến VNG bằng một trong các phương thức nêu trên và trong thời hạn ba (3) tháng kể từ thời điểm phát sinh vấn đề cần khiếu nại; quá thời hạn nêu trên, VNG có quyền từ chối tiếp nhận, giải quyết các khiếu nại nay.</li>
+            <li>Để thực hiện khiếu nại, tố cáo hay phản ánh liên quan đến tài khoản ZingID của Bạn và/hoặc Dịch Vụ thì tài khoản của Bạn phải được định danh đầy đủ để VNG có cơ sở tiếp nhận và liên hệ với Bạn. Trường hợp tài khoản của Bạn chưa được định danh đầy đủ hoặc VNG có cơ sở hợp lý để cho rằng thông tin Bạn cung cấp là không chính xác thì VNG có quyền từ chối giải quyết khiếu nại, tố cáo của Bạn đến khi tài khoản ZingID của Bạn đáp ứng được đầy đủ các yêu cầu nêu trên.</li>
+        </ol>
+        <h3>Điều 11. Tuân Thủ Pháp Luật Và Quy Định</h3>
+        <ol>
+            <li>Bạn hiểu rõ và đồng ý rằng, bên cạnh việc tuân thủ các điều khoản và điều kiện về việc sử dụng tài khoản ZingID, Bạn sẽ (i) tuân thủ đầy đủ các quy định khác của pháp luật Việt Nam; (ii) tuân thủ đầy đủ các quy định pháp luật nơi Bạn khởi tạo tài khoản ZingID và/hoặc truy cập, sử dụng Dịch Vụ và/hoặc quốc gia mà Bạn mang quốc tịch; và (iii) Bạn sẽ tự chịu trách nhiệm về bất kỳ hậu quả nào của việc không tuân thủ bất kỳ quy định nào tại nơi mà Bạn khởi tạo, truy cập, sử dụng tài khoản ZingID và/hoặc Dịch Vụ và đảm bảo VNG sẽ không phải chịu bất kỳ trách nhiệm nào liên quan.</li>
+            <li>Trường hợp VNG nhận được bất kỳ khiếu nại, thông báo hay yêu cầu nào liên quan đến việc Bạn không đáp ứng được các yêu cầu nêu trên và/hoặc VNG có cơ sở để suy đoán hợp lý dựa trên các thông tin mà VNG có được thì VNG có quyền (i) ngưng cung cấp Dịch Vụ cho Bạn (kể cả việc truy cập vào tài khoản ZingID của Bạn) mà không phải báo trước hay chịu bất kỳ trách nhiệm nào với Bạn và/hoặc (ii) chặn toàn bộ truy cập đến từ quốc gia nghiêm cấm việc sử dụng ZingID và/hoặc Dịch Vụ.</li>
+        </ol>
+        <h3>Điều 12. Luật Áp Dụng Và Giải Quyết Tranh Chấp</h3>
+        <ol>
+            <li>Điều Khoản Sử Dụng này được áp dụng và giải thích theo các quy định của pháp luật nước Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam về mọi vấn đề, khía cạnh liên quan.</li>
+            <li>Trường hợp có bất kỳ tranh chấp, mẫu thuẫn nào giữa Bạn và VNG mà không thể giải quyết được trên tinh thần thương lượng và hòa giải thì Bạn đồng ý rằng, các tranh chấp đó sẽ được đưa ra giải quyết tại Tòa án nhân dân có thẩm quyền tại Thành phố Hồ Chí Minh – nơi VNG đặt trụ sở chính.</li>
+        </ol>
+        <h3>Điều 13. Điều Khoản Còn Lại</h3>
+        <ol>
+            <li>Việc một hoặc một vài điều khoản trong Điều Khoản Sử Dụng này bị Tòa án tuyên bố là vô hiệu sẽ không ảnh hưởng đến hiệu lực của các điều khoản còn lại và các điều khoản còn lại đó vẫn có giá trị ràng buộc Bạn với VNG.</li>
+            <li>Việc VNG không thực hiện hoặc chậm thực hiện bất kỳ quyền, hay biện pháp xử lý nào theo quy định tại Điều Khoản Sử Dụng này không được xem là sự từ bỏ bất kỳ quyền, biện pháp xử lý nào trong Điều Khoản Sử Dụng này và việc thực hiện một phần hoặc toàn bộ quyền đơn lẻ cũng không loại trừ việc thực hiện bất kỳ quyền, quyền hạn hoặc biện pháp xử lý khác quy định trong Điều Khoản Sử Dụng này.</li>
+        </ol>
+        <h3>Điều 14. Hiệu Lực Áp Dụng Và Sửa Đổi</h3>
+        <ol>
+            <li>Bạn đồng ý rằng, VNG có quyền sửa đổi, bổ sung một phần hoặc toàn bộ các quy định tại Điều Khoản Sử Dụng này mà không cần có sự đồng ý trước của Bạn. Trường hợp Bạn không đồng ý với bất kỳ điểm sửa đổi, bổ sung nào, Bạn có quyền chấm dứt sử dụng tài khoản ZingID và/hoặc Dịch Vụ trước khi các điểm sửa đổi, bổ sung đó có hiệu lực; trường hợp Bạn tiếp tục sử dụng tài khoản ZingID và/hoặc Dịch Vụ thì sẽ được hiểu là Bạn đã đồng ý với toàn bộ các điểm sửa đổi, bổ sung đó.</li>
+            <li>Điều Khoản Sử Dụng này có hiệu lực kể từ ngày 07 tháng 05 năm 2020 và thay thế cho tất cả các điều khoản sử dụng, Quy chế sử dụng ZingID trước đây.</li>
+        </ol>
+    </div>
+</div>
 <style>
-.top_button {
-    width: 100px;
-    height: 50px;
-    background: #ed6d00;
-    color: #ffffff;
-    float:right;
-    margin-top:50px;
+.li-alpha {
+    list-style-type: lower-alpha;
 }
 </style>
-<style type="text/css" media="screen">
-<!--
-.submit_button {
-	width: 100px;
-	height: 25px;
-	background: #ed6d00;
-	color: #ffffff;
-}
+            </div>
 
--->
-</style></head>
-
-<body style="/*word-break: break-all;*/">
-<div class="container" style="width: calc(100% - 10px); max-width: 1260px; word-break: break-all; background-color: #FFF; margin: 0 auto;">
-  <div class="header" style="background-color: #FFF">
-    <img src="/images/bnlogo.png" class="corplogo" style="float: left">
-    <form method="get" name="top">
-      <span id="insert_button"></span>
-    </form>
-    <hr style="clear: both">
-  <!-- end .header -->
-  </div>
-  <div>
+            <div class="zidfooter">
+                <div class="zidfooter_inner">
+                    <div class="zidfooter_left">
+                        Copyright © 2013 Zing<br>
+                        Đơn vị chủ quản: VNG Corporation. Giấy phép ICP số: 41/GP-TTĐT.
+                    </div>
+                    <ul class="zidfooter_right">
+                        <li><a target="_blank" href="https://id.zing.vn/v2/guide-faq">Hỏi đáp</a></li>
+                        <li class="dot"></li>
+                        <li><a target="_blank" href="https://id.zing.vn/v2/guide-faq#g1_1">Hướng dẫn</a></li>
+                        <li class="dot"></li>
+                        <li><a target="_blank" href="https://hotro.zing.vn/" title="Hỗ trợ">Hỗ trợ</a></li>
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+            </div>
     
-<div style="/*margin: 0px auto; width: 300px;*/ text-align: center;">
-	<form method="get">
-
-	<div style="margin: 0px auto; text-align: center;">
-		<span style="font-weight: bold;">Language:</span> 
-		<select name="lang" style="min-width: 150px; height: 25px; border: 2px solid #ED6D00; font-weight: bold;">
-					<option value="ar">Arabic</option>
-					<option value="de">Deutsch</option>
-					<option value="en" selected="">English</option>
-					<option value="es">Español</option>
-					<option value="fr">Français</option>
-					<option value="it">Italiano</option>
-					<option value="po">Polish</option>
-					<option value="pt-br">Português do Brasil</option>
-					<option value="ru">Russian</option>
-					<option value="th">Thai</option>
-					<option value="zh-sg">中文 (简体)</option>
-					<option value="zh-tw">中文 (繁體)</option>
-					<option value="jp">日文</option>
-					<option value="ko">한국어</option>
-				</select>
-	</div>
-
-	<button type="submit" class="submit_button" style="margin: 10px auto;">View</button>
-
-	</form>
-
-</div>
-  </div>
-  <hr>
-  <div class="footer">
-    <p><img src="/images/gfoot_cpyrgt.jpg" class="footer_image"></p>
-    <!-- end .footer -->
-  </div><!-- end .container -->
-</div>
-
-
 
 
 </body></html>

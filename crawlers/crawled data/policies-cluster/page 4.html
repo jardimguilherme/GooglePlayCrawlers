@@ -1,351 +1,122 @@
-<!DOCTYPE html><html><head>
-    <title>
-      Central de Ajuda | Enjoei
-    </title>
-
-    <meta charset="UTF-8">
-<script src="https://js-agent.newrelic.com/nr-1208.min.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.datadoghq-browser-agent.com/datadog-logs.js"></script><script async="" src="https://www.datadoghq-browser-agent.com/datadog-rum.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"0b55af6467","applicationID":"429782365","transactionName":"cApYTEpfVFpRE0pKEloLVxdIUV9TR04WUQ1E","queueTime":0,"applicationTime":493,"agent":""}</script>
-<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"0b55af6467",applicationID:"429782365"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="turbolinks-cache-control" content="no-cache">
-
-    <script type="text/javascript">
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/datadog-rum.js','DD_RUM');
-
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/datadog-logs.js','DD_LOGS');
-
-  DD_RUM.onReady(() => {
-    DD_RUM.init({
-      clientToken: 'pub0466076c0a45bf626bb72d1c29279b02',
-      applicationId: '525dbe3f-ea79-42a2-874a-16cc0b44e7a9',
-      site: 'datadoghq.com',
-      service: 'website',
-      env: 'production',
-      sampleRate: 1,
-      trackInteractions: true
-    });
-  });
-
-  DD_LOGS.onReady(() => {
-    DD_LOGS.init({
-      clientToken: 'pub0466076c0a45bf626bb72d1c29279b02',
-      site: 'datadoghq.com',
-      forwardErrorsToLogs: true,
-      sampleRate: 100,
-      service: 'website',
-      env: 'production'
-    });
-  });
-</script>
-
-
-    <link rel="stylesheet" media="all" href="https://assets-cms.enjoei.com.br/enju-cms-assets/default/application-a25cfb6f7e5acebfe25bc0b240a11f3bf589097fe29f8c323d8ed87177d188fa.css" data-turbolinks-track="true">
-    <script src="https://assets-cms.enjoei.com.br/enju-cms-assets/application-7f241c4c6d948f9c3a282aa7edd6ea49308fe4d4bf9d86065fbead4d004a1e6a.js" data-turbolinks-track="true"></script>
-  </head>
-
-  <body>
-    <div class="c-header">
-    <div class="container">
-      <a class="c-header__logo-wrapper" href="/" data-turbolinks="false">
-        <svg class="c-header__logo">
-  <use xlink:href="#icon-logo-color"></use>
-</svg>
-
-      </a>
-    </div>
-</div>
-
-
-    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <symbol id="icon-arrow-back" height="15" viewBox="0 0 22 15" width="22">
-      <path d="m183.853752 35.1461309-6.999921-6.9998833c-.194998-.1949968-.511994-.1949968-.706992 0-.194998.1949967-.194998.5119914 0 .7069882l6.14593 6.1468975h-19.792775c-.275997 0-.499994.2229963-.499994.4999917 0 .2759954.223997.4999917.499994.4999917h19.792775l-6.14593 6.1458975c-.194998.1949968-.194998.5119915 0 .7069882.097999.0979984.225998.1469976.352996.1469976.127999 0 .255997-.0489992.353996-.1469976l6.999921-6.9998833c.194997-.1949967.194997-.5119915 0-.7069882" fill="currentColor" fill-rule="evenodd" transform="matrix(-1 0 0 1 184 -28)"></path>
-    </symbol>
-
-    <symbol id="icon-arrow-right" height="16" viewBox="0 0 9 16" width="9">
-      <path d="m11.4997667 11.99975c-.1279958 0-.2559915-.0489969-.3539882-.1459909l-6.6457785-6.64658455-6.64577847 6.64658455c-.19599347.1949879-.51198294.1949879-.7079764 0-.19499351-.1959877-.19499351-.511968 0-.7079557l6.99976667-6.99956254c.19599347-.19498781.51198293-.19498781.7079764 0l6.9997667 6.99956254c.1949935.1959877.1949935.511968 0 .7079557-.0979968.096994-.2259925.1459909-.3539882.1459909" fill="currentColor" fill-rule="evenodd" transform="matrix(0 -1 -1 0 12.5 12.5)"></path>
-    </symbol>
-
-    <symbol id="icon-logo" height="30" viewBox="0 0 30 30" width="30">
-      <g fill="#fff" fill-rule="evenodd">
-        <path d="m27.583125 22.945283c-.0196431-.0788784-.0695307-.146718-.13875-.1886792l-5.1825-3.1528302c-.1243578-.0807728-.2899109-.0482869-.375.0735849-1.518599 2.3051532-4.0841077 3.6911159-6.8325 3.6911159s-5.31390097-1.3859627-6.8325-3.6911159c-.08031981-.1271422-.24681172-.1665138-.375-.0886793-.16125.1037736-5.180625 3.1207548-5.180625 3.1207548-.07032586.0424734-.12044973.1119143-.13884098.1923482-.01839126.080434-.00346649.1649359.04134098.2340669 2.73933241 4.2532375 7.43022281 6.8240517 12.4669364 6.8324497 5.0367136.008357 9.7360238-2.5468386 12.4893136-6.7909403.0451642-.0689502.0600863-.1535857.04125-.2339623"></path>
-        <path d="m15.076875 7.11698113c2.9328583.00213823 5.6184941 1.6538036 6.958125 4.27924527h-13.914375c1.33932247-2.62483863 4.0240663-4.27640049 6.95625-4.27924527m14.799375 9.53584907c.0606138-.554522.0912839-1.1119451.091875-1.6698113-.0012767-6.05984145-3.6293982-11.52242167-9.1930423-13.84124876s-11.96752036-1.03740358-16.2263327 3.24690911c-3.20150855 3.22259716-4.77256927 7.73560575-4.269375 12.26415095.01383257.1582344.14783877.2781921.305625.2737132h28.995c.1532319.000568.2817041-.1164387.29625-.2699396" fill-rule="nonzero"></path>
-      </g>
-    </symbol>
-
-    <symbol id="icon-phone" viewBox="0 0 16 24">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-180.000000, -986.000000)" fill="currentColor">
-          <g transform="translate(180.000000, 986.000000)">
-            <path d="M14,23 L2,23 C1.449,23 1,22.552 1,22 L1,19 L15,19 L15,22 C15,22.552 14.551,23 14,23 Z M2,1 L14,1 C14.551,1 15,1.448 15,2 L15,4 L1,4 L1,2 C1,1.448 1.449,1 2,1 Z M1,18 L15,18 L15,5 L1,5 L1,18 Z M14,0 L2,0 C0.897,0 0,0.897 0,2 L0,22 C0,23.103 0.897,24 2,24 L14,24 C15.103,24 16,23.103 16,22 L16,2 C16,0.897 15.103,0 14,0 Z"></path>
-            <path d="M8.5,20 L7.5,20 C7.224,20 7,20.224 7,20.5 L7,21.5 C7,21.776 7.224,22 7.5,22 L8.5,22 C8.776,22 9,21.776 9,21.5 L9,20.5 C9,20.224 8.776,20 8.5,20"></path>
-            <path d="M6.5,3 L9.5,3 C9.776,3 10,2.776 10,2.5 C10,2.224 9.776,2 9.5,2 L6.5,2 C6.224,2 6,2.224 6,2.5 C6,2.776 6.224,3 6.5,3"></path>
-          </g>
-        </g>
-      </g>
-    </symbol>
-
-    <symbol id="icon-logo-color" viewBox="0 0 158.83 158.83">
-      <g>
-        <path fill="#F05B78" d="M146.11,121.61a1.63,1.63,0,0,0-.74-1L117.73,103.9a1.47,1.47,0,0,0-2,.39,43.72,43.72,0,0,1-72.88,0,1.47,1.47,0,0,0-2-.47c-.86.55-27.63,16.54-27.63,16.54a1.61,1.61,0,0,0-.52,2.26,79.39,79.39,0,0,0,133.1.22,1.59,1.59,0,0,0,.22-1.24"></path>
-        <path fill="#4F2D32" d="M79.41,37.72A41.75,41.75,0,0,1,116.52,60.4H42.31a41.75,41.75,0,0,1,37.1-22.68m78.93,50.54a81.74,81.74,0,0,0,.49-8.85A79.42,79.42,0,0,0,23.26,23.26a79.45,79.45,0,0,0-22.77,65,1.59,1.59,0,0,0,1.63,1.45H156.76a1.58,1.58,0,0,0,1.58-1.43"></path>
-      </g>
-    </symbol>
-  </defs>
-</svg>
-
-    <div class="p-home">
-  <div class="container">
-    <div class="p-home__headline">
-      <div class="p-home__headline-title">
-        Central de Ajuda
-      </div>
-
-      <div class="p-home__headline-img-wrapper">
-        <img src="https://assets-cms.enjoei.com.br/enju-cms-assets/homepage/meditation-girl-7ba56654547b3277d83dd1832801c9a23f98b23b5025b0dbf214c20a76a70f51.png">
-      </div>
-    </div>
-
-    <div class="p-home__block-wrapper">
-        <div class="c-block__wrap">
-  <a href="/ajuda/sobre-o-enjoei" class="c-block">
-    <div class="c-block__title">
-      Sobre o Enjoei
-    </div>
-
-    <div class="c-block__description">
-      <div>Política de Privacidade, Termos de Uso e Horário de atendimento.&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/sobre-o-enjoei-pro" class="c-block">
-    <div class="c-block__title">
-      Sobre o Enjoei Pro
-    </div>
-
-    <div class="c-block__description">
-      <div>Espaço destinado para atuais e futuras vendedoras Enjoei Pro.</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/compras" class="c-block">
-    <div class="c-block__title">
-      Compras
-    </div>
-
-    <div class="c-block__description">
-      <div>Está com dúvidas sobre uma compra?&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais 
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/comecando-no-enjoei" class="c-block">
-    <div class="c-block__title">
-      Começando no Enjoei
-    </div>
-
-    <div class="c-block__description">
-      <div>Você é novo por aqui? Seja bem-vindo!&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais 
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/vendas-por-pessoa-fisica" class="c-block">
-    <div class="c-block__title">
-      Vendas - por pessoa física
-    </div>
-
-    <div class="c-block__description">
-      <div>Tem um cadastro com CPF e precisa de ajuda com alguma venda?&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/configuracao-de-conta" class="c-block">
-    <div class="c-block__title">
-      Configuração de conta
-    </div>
-
-    <div class="c-block__description">
-      <div>Deseja alterar os dados do seu cadastro? Sua conta foi bloqueada?&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/covid-19" class="c-block">
-    <div class="c-block__title">
-      Covid-19
-    </div>
-
-    <div class="c-block__description">
-      <div>Pensando na segurança, tivemos algumas mudanças.&nbsp;</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-        <div class="c-block__wrap">
-  <a href="/ajuda/vendas-por-pejota" class="c-block">
-    <div class="c-block__title">
-      Vendas - por pêjota
-    </div>
-
-    <div class="c-block__description">
-      <div>Você tem cadastro com CNPJ e está com dúvida sobre alguma venda?</div>
-    </div>
-
-    <span class="c-block__link">
-      Saiba mais
-    </span>
-  </a>
-</div>
-
-
-        <a href="/ajuda/sobre-o-enjoei" class="c-link">
-  <span class="c-link__link">
-    Sobre o Enjoei
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/sobre-o-enjoei-pro" class="c-link">
-  <span class="c-link__link">
-    Sobre o Enjoei Pro
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/compras" class="c-link">
-  <span class="c-link__link">
-    Compras
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/comecando-no-enjoei" class="c-link">
-  <span class="c-link__link">
-    Começando no Enjoei
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/vendas-por-pessoa-fisica" class="c-link">
-  <span class="c-link__link">
-    Vendas - por pessoa física
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/configuracao-de-conta" class="c-link">
-  <span class="c-link__link">
-    Configuração de conta
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/covid-19" class="c-link">
-  <span class="c-link__link">
-    Covid-19
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-        <a href="/ajuda/vendas-por-pejota" class="c-link">
-  <span class="c-link__link">
-    Vendas - por pêjota
-  </span>
-
-  <svg class="c-link__arrow-icon">
-  <use xlink:href="#icon-arrow-right"></use>
-</svg>
-
-</a>
-
-    </div>
-  </div>
-</div>
-
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-8560680-1', 'auto');
-      ga('send', 'pageview', location.pathname);
-    </script>
-  
-
-</body></html>
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>Política de Privacidade</title><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"><meta name="keywords" content="undefined"><meta name="description" content="undefined"><meta name="format-detection" content="telephone=no"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//m.kwai.com"><link rel="dns-prefetch" href="//aws-static.kwai.net"><link rel="dns-prefetch" href="//gifshow-static.download.ks-cdn.com"><link rel="shortcut icon" type="image/ico" href="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/i/favicon-b9333bc996.ico"><link rel="apple-touch-icon-precomposed" href="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/i/logo_kwai-ca0735fe01.png"><style>progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+</style><link rel="stylesheet" type="text/css" href="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/css/pages/public/protocol-detail-5c5de709b6.css"></head><body class="body_ "><div class="protocol-detail pt privacy"><h1 id="Lhd7856397-b444-e12c-e921-179a4d0f8ab2" dir="ltr">Política de Privacidade</h1>
+<p dir="ltr">Última modificação: dezembro de 2020</p>
+<p dir="ltr">&nbsp;</p>
+<p dir="ltr">A Joyo Technology Pte. Ltd e suas afiliadas (coletivamente, "nós", "nosso" ou "Empresa"), possuindo e operando o aplicativo Kwai e sites relacionados, valorizam sua privacidade e proteção de dados. Esta Política de Privacidade (doravante, "Política”) descreve como coletamos dados pessoais (doravante, "Dados”) quando você usa nossos aplicativos e/ou serviços (doravante coletivamente "Serviços"), e também explica como usamos, armazenamos e divulgamos os dados que coletamos de você e seus direitos em relação a esses dados.</p>
+<p dir="ltr">Nesta Política, “você” ou “seu” referem-se ao usuário autorizado de nossos Serviços.</p>
+<p dir="ltr">Esta Política é parte integrante e incorporada por essa referência aos <a href="/public/protocol/service">Termos de Serviço</a> e todos os outros termos não definidos nesta Política terão os significados estabelecidos nos Termos de Serviço.</p>
+<p dir="ltr">Ao usar o Serviço, considera-se que você aceita todas as disposições da Política, e reconhece expressamente e, quando for necessário, consente que nós processemos as informações que você nos fornece (incluindo seus Dados) para os fins descritos e que de outras formas estejam de acordo com esta Política. Se você não concordar com as disposições desta Política, podemos não ser capazes de disponibilizar os Serviços para você.</p>
+<p dir="ltr">Caso tenha fornecido seu consentimento, você pode revogá-lo a qualquer momento, enviando a respectiva solicitação conforme descrito abaixo. Se você revogar o seu consentimento, podemos continuar processando seus Dados na medida em que tal processamento seja permitido pela lei aplicável e/ou conforme estabelecido nesta Política.</p>
+<p dir="ltr">Se você nos fornecer Dados sobre outra pessoa, você deve informar a essa pessoa como iremos coletar, usar e compartilhar seus Dados conforme explicado nesta Política.</p>
+<p dir="ltr">Se você residir ou usar nossos Serviços no país ou região especificamente mencionados na Seção "Termos específicos de país / região" abaixo, tais termos e condições se aplicarão especificamente a você.</p>
+<p dir="ltr">1. Dados que coletamos</p>
+<p dir="ltr">Podemos coletar as seguintes categorias de Dados de e sobre você:</p>
+<p dir="ltr">(1) Identificadores pessoais, como seu nome, pseudônimo, apelido(s), idade, data de nascimento, sexo, endereço de e-mail, código de país ou região, endereço de IP, número de telefone, IDs de publicidade, IDs de dispositivo ou outros identificadores semelhantes, incluindo informações usadas para verificar sua Conta ou informações que você nos fornece;</p>
+<p dir="ltr">(2) Informações da Conta, como sua o conteúdo que você navega, baixa, cria ou carrega usando nossos Serviços, incluindo música, vídeos, transmissões, transmissões/streamings ao vivo, Itens Virtuais, suas preferências de conta, histórico de seguidores/seguidas ou histórico de participação em desafios, pesquisas, sorteios, competições ou concursos fornecidos por meio de nossos Serviços, e sua lista de contatos/amigos, lista telefônica e seguidores da sua Conta da rede social (onde temos seu consentimento);</p>
+<p dir="ltr">(3) Informações financeiras, como o número da sua conta para receber recompensas de incentivo, detalhes de pagamento de terceiros (inclusive por meio de provedores de serviços terceirizados) e / ou outras informações de identificação necessárias para identificá-lo para realizar tais pagamentos;</p>
+<p dir="ltr">(4) Informações de internet ou outras informações de atividade de rede eletrônica, como informações de rede móvel, mensagens que você envia usando os Serviços, informações sobre sua interação com os Serviços e outros usuários dos Serviços, incluindo suas preferências e comentários, chats, mensagens e quaisquer metadados que acompanhem esse conteúdo e informações sobre sua interação com anúncios;</p>
+<p dir="ltr">(5) Dados de geolocalização, como informações que você fornece sobre sua localização e informações que recebemos sobre a localização do seu dispositivo com base no cartão SIM (Subscriber Identity Module - Módulo de Identidade do Assinante), endereço de Protocolo de Internet (IP), Sistema de Posicionamento Global (GPS) (onde temos seu consentimento) e / ou Fidelidade Sem Fio / Rede Local Sem Fio (WiFi / WLAN) de forma contínua;</p>
+<p dir="ltr">(6) Informações de áudio, eletrônicas, de vídeo/visuais ou similares, como características do dispositivo, fotografias (por exemplo, imagem de perfil), gravações de vídeo e gravações de áudio;</p>
+<p dir="ltr">(7) Informações de Serviço de atendimento ao cliente que você nos forneceu em relação a uma pergunta, comentário ou solicitação, como o conteúdo da sua pergunta, comentário ou solicitação, endereços, nomes de titulares de propriedade intelectual, anexos carregados, descrições de itens infratores e outras informações relacionadas ao Serviço de atendimento ao cliente; e</p>
+<p dir="ltr">(8) Inferências extraídas das categorias acima.</p>
+<p dir="ltr">O tipo específico e o escopo dos Dados que coletamos sobre você dependem de sua atividade nos Serviços e interação com os mesmos, bem como do país ou região em que você usa os Serviços. Se você não nos fornecer os Dados, podemos não ser capazes de fornecer os Serviços a você.</p>
+<p dir="ltr">Coletamos Dados sobre você de várias fontes, incluindo:</p>
+<p dir="ltr">(1) De você: Coletamos informações que você envia para nós, incluindo, sem limitação, quando você baixa nossos aplicativos, cria uma conta, interage com os Serviços ou entra em contato conosco com uma pergunta, comentário ou solicitação.</p>
+<p dir="ltr">(2) De seus dispositivos: Nós e nossos provedores de serviços podemos coletar automaticamente certas informações técnicas de seu computador ou dispositivo móvel, uma vez que você tenha baixado o aplicativo ou usado os Serviços, como seu endereço IP, sua localização geográfica, nível de bateria, seu tipo de navegador , idioma e versão, seu sistema operacional e interface, nomes e tipos de aplicativos e arquivos, logs de erros, rastreamento de logs de serviço de acesso, número de série do hardware, endereço MAC, modelo de seu dispositivo, configuração de fuso horário, identificadores exclusivos de dispositivo, outras informações do dispositivo, e os termos de pesquisa inseridos nos Serviços, tipo de rede, identificadores de publicidade, o nome de seu provedor de acesso, data e hora de seu acesso aos Serviços e suas ações realizadas em nossos aplicativos ou sites. Essas informações nos permitem reconhecê-lo e personalizar sua experiência se você retornar aos Serviços, assim como melhorar os Serviços. Nós e nossos provedores de serviços podemos coletar essas informações usando “cookies”, que são pequenos arquivos de texto que os Serviços salvam em seu computador usando seu navegador da web e acessam quando você retornar ou por meio de tecnologias semelhantes. Podemos coletar essas informações ao longo do tempo e em diferentes sites ou serviços.</p>
+<p dir="ltr">(3) De terceiros: Podemos obter informações sobre você ou o uso dos Serviços por meio de terceiros e fontes, como outros usuários dos Serviços e fornecedores, como provedores de webhosting, provedores de análise, provedores de atribuição ou anunciantes. Na medida em que permitamos haver integrações de mídia social de terceiros nos Serviços, as informações que podemos obter de serviços de terceiros dependem das configurações de sua conta/privacidade com esses terceiros e das políticas de privacidade de terceiros. Se você acessar os Serviços através de plataformas de terceiros, você está nos autorizando a coletar, armazenar e usar tais informações e conteúdo de acordo com esta Política de Privacidade. Por favor, tenha em mente que qualquer informação fornecida por terceiros também pode estar sujeita à política de privacidade desse terceiro.</p>
+<p dir="ltr">2. Como usamos seus Dados</p>
+<p dir="ltr">Podemos usar os Dados que coletamos para uma série de propósitos associados à operação de nossos negócios e à prestação dos Serviços, incluindo:</p>
+<p dir="ltr">(1) Identificação e autenticação: Usamos suas informações para verificar sua identidade quando você acessa e usa nossos Serviços, ou de outra forma engaja conosco, e para proteger a segurança de seus Dados.</p>
+<p dir="ltr">(2) Operações de serviço: Processamos seus Dados para fornecer os Serviços solicitados por você. Isso também pode incluir gerenciar o ecossistema de conteúdo dos Serviços, facilitar parcerias ou integrações de terceiros com os Serviços, monitorar ou testar os Serviços, ou para fins de solução de problemas, ou para permitir que você e outros usuários se conectem entre si.</p>
+<p dir="ltr">(3) Processamento de pagamentos: Podemos usar seus Dados para fins de faturamento e processamento de pagamentos ou para distribuir recompensas para você. Isso também pode incluir habilitar o pagamento por meio de sistemas de pagamento de terceiros.</p>
+<p dir="ltr">(4) Personalização de sua experiência: Podemos usar seus Dados para melhorar sua experiência nos Serviços, como fornecer elementos interativos ou personalizados nos Serviços, simplificar o processo de operações quando você lança/utiliza uma certa função, recomendar contas nas quais você possa estar interessado, e fornecer-lhe conteúdo com base em seus interesses, permitir que você encontre outros amigos e contatos sociais, ou tornar nosso serviço mais personalizado sob suas permissões para fornecer os serviços baseados em localização.</p>
+<p dir="ltr">(5) Melhorias nos serviços, desenvolvimento e pesquisa: Inspecionamos e analisamos as informações de uso para manter e melhorar os Serviços. Também podemos usar seus Dados para apoiar atendimento ao cliente e feedback do usuário, realizar enquetes e pesquisas e desenvolver novos produtos e serviços.</p>
+<p dir="ltr">(6) Comunicações: As comunicações podem incluir, por exemplo, o fornecimento de informações sobre nossos produtos e serviços, alterações nos termos de serviço, atualizações sobre nossos serviços, reportes sobre informações de usuários sobre menores, ou respostas a perguntas, comentários ou solicitações feitas por você.</p>
+<p dir="ltr">(7) Marketing e publicidade: Podemos usar seus Dados para construir um perfil sobre você, analisar e entender suas preferências, para ajudar a determinar quais materiais de marketing seriam de seu interesse, exibir publicidade, enviar comunicações de marketing, para atividades passíveis de recompensas e medir a eficácia da publicidade. Também podemos processar seus Dados no curso da concessão de recompensas ou para operar sorteios, concursos ou outras promoções. Se você tiver consentido, podemos utilizar seus Dados para propósitos de marketing direto.</p>
+<p dir="ltr">(8) Exercendo nossos direitos: Podemos usar seus Dados para exercer nossos direitos onde for necessário, por exemplo, para detectar, prevenir, investigar e responder a incidentes ou violações de segurança, raspagem de dados (data scraping), fraudes, reclamações de violação de propriedade intelectual, crimes financeiros, outras violações da lei ou violações de nossos termos de serviço e diretrizes comunitárias.</p>
+<p dir="ltr">(9) Cumprindo com nossas obrigações: Podemos processar seus Dados para cumprir com os requisitos legais ou regulatórios, incluindo, sem limitação, de responder a ações judiciais, indenizações ou investigações, dentro ou fora de seu país ou região, assim como em qualquer instância de fusões, aquisições, vendas ou transferências de bens, insolvência, restruturação societária, dissolução ou liquidação. Também podemos agregar e/ou anonimizar seus Dados e podemos usar essas informações agregadas ou anonimizadas para qualquer outro propósito.</p>
+<p dir="ltr">(10) Outros: também podemos usar seus Dados para outros usos relacionados ao acima disposto ou para os quais você já consentiu.</p>
+<p dir="ltr">3. Nossa base legal para processamento de Dados</p>
+<p dir="ltr">Para processar seus dados pessoais, nos amparamos nas bases legais fornecidas pelas leis e regulamentos aplicáveis. Além do seu consentimento, que sempre será limitado a atividades de processamento específicas e incluirá informações relevantes e detalhadas necessárias para que você entenda totalmente sobre o que está consentindo, essas bases legais também podem incluir nosso cumprimento de obrigações legais, a execução de um contrato com você, os nossos legítimos interesses, a prevenção de fraudes e a sua segurança, entre outros.</p>
+<p dir="ltr">4. Armazenamento e Transferência dos Dados</p>
+<p dir="ltr">(1) Podemos armazenar seus dados no território de seu país ou região de residência ou no exterior, inclusive na nuvem. Aplicamos nossos padrões e políticas globais de dados onde quer que seus dados sejam armazenados.</p>
+<p dir="ltr">(2) Apenas para os fins estabelecidos nesta Política, podemos transferir seus Dados para fora do território de seu país ou região de residência, para outros países ou regiões, de acordo com esta Política, leis e regulações aplicáveis.</p>
+<p dir="ltr">(3) Usaremos seus Dados enquanto necessário (i) para alcançar os propósitos estabelecidos nesta Política; (ii) conforme exigido pelas leis e regulações aplicáveis, incluindo quaisquer requisitos para reter dados por um determinado período de tempo, levando em consideração os prazos prescricionais sob as leis e regulamentos aplicáveis; (iii) para nossos propósitos comerciais e legítimos, inclusive para nossos negócios e prestação dos Serviços; e/ou (iv) conduzir uma defesa em relação a quaisquer reclamações ou disputas, sejam elas atuais, ameaçadas ou potenciais.</p>
+<p dir="ltr">(4) Após 6 meses do término do seu uso dos Serviços ou o fim dos propósitos para os quais você nos forneceu seus Dados, iremos, a nosso critério razoável, excluí-los ou anonimizá-los conforme exigido pelas leis e regulações aplicáveis.</p>
+<p dir="ltr">5. Proteção e Segurança de seus Dados</p>
+<p dir="ltr">(1) Tomaremos as medidas técnicas e organizacionais apropriadas para ajudar a proteger e assegurar seus Dados. Protegeremos seus Dados contra processamento não autorizado ou ilegal, perda acidental, destruição ou dano por meio dessas medidas, incluindo:</p>
+<p dir="ltr">i. uso de técnicas de criptografia;</p>
+<p dir="ltr">ii. estabelecendo sistemas e procedimentos especializados, como limitar estritamente o escopo do pessoal que pode ter acesso a seus Dados, e exigindo que aqueles que tenham esse acesso cumpram com as obrigações confidenciais relacionadas; e</p>
+<p dir="ltr">iii. estabelecendo um departamento especializado responsável pela segurança da informação; em caso de eventos como vazamento de informações ou violação de dados ou segurança, tomaremos medidas oportunas para lidar com tais eventos, e vamos notificá-lo prontamente de uma maneira apropriada, por meio de mensagens ou avisos.</p>
+<p dir="ltr">(2) Faremos o possível para garantir que, por padrão, apenas coletemos e processemos dados pessoais necessários para o nosso propósito comercial. Também usamos esse princípio para incorporar controles de privacidade e proteção de dados em nossas atividades de processamento, o que significa que não publicaremos nem compartilharemos seus dados pessoais por padrão.</p>
+<p dir="ltr">(3) No entanto, nenhuma transmissão eletrônica de dados ou armazenamento de informações pode ser completamente segura. Portanto, embora tomemos as medidas técnicas e organizacionais adequadas para proteger suas informações, não prometemos, e você não deve esperar, que suas informações permanecerão sempre seguras. Se você não concorda com esses riscos e condições, você deve interromper o seu uso dos Serviços.</p>
+<p dir="ltr">6. &nbsp;Terceiros para os quais podemos divulgar ou transferir Dados</p>
+<p dir="ltr">(1) Não compartilharemos ou transferiremos nenhum de seus Dados para terceiros, exceto conforme explicitamente estabelecido nesta Política, ou lhe informaremos e lhe daremos a oportunidade de optar por não ter seus Dados compartilhados. Só compartilharemos seus Dados com terceiros nas seguintes circunstâncias:</p>
+<p dir="ltr">(i) quando aprovado ou autorizado por você ou seu responsável legal;</p>
+<p dir="ltr">(ii) conforme exigidos para propósitos administrativos ou judiciais, incluindo quaisquer requisitos das autoridades competentes, tribunais e órgãos regulatórios;</p>
+<p dir="ltr">(iii) nos procedimentos legais (incluindo arbitragens) contra você, em que temos como objetivo proteger nossos direitos legais;</p>
+<p dir="ltr">(iv) quando expressamente permitido pelos Termos de Serviço;</p>
+<p dir="ltr">(v) a fim de proteger os interesses da Empresa, os seus ou os do público contra danos; ou</p>
+<p dir="ltr">(vi) em consistência com os acordos feitos por você com quaisquer outros terceiros.</p>
+<p dir="ltr">(2) Salvo disposição em contrário nesta Política, não divulgaremos nenhum dos Dados coletados ao público. Se a divulgação pública for exigida pelas leis e regulamentos aplicáveis, iremos informá-lo sobre a finalidade da divulgação e o tipo de informação divulgada.</p>
+<p dir="ltr">(3) Podemos transferir seus Dados para outra entidade legal para fins de colaboração, joint venture, reorganização societária, mudança de forma jurídica ou outro evento semelhante. Para desenvolver nossos negócios, podemos participar de transações como fusões, aquisições, vendas e transferência de ativos. Nestas circunstâncias, lhe informaremos sobre as circunstâncias relacionadas e continuaremos a proteger ou exigir que o sucessor proteja seus Dados de acordo com as leis e regulações e esta Política.</p>
+<p dir="ltr">(4) Podemos contratar terceiros para desempenhar funções em nosso nome ou prestar serviços para nós, como consultores profissionais, auditores, advogados e contadores. Compartilhamos seus Dados com esses provedores de serviços e também com terceiros para fins como hospedagem ou operação do nosso Serviço, envio de comunicações por e-mail e análise de dados. Podemos compartilhar seus Dados com terceiros para que eles forneçam conteúdo ou de outra forma realizem serviços em nosso nome, e exigiremos que essas partes mantenham a segurança adequada para proteger esses Dados do acesso ou processamento não autorizados.</p>
+<p dir="ltr">(5) Podemos, em casos limitados, transferir seus Dados para órgãos ou autoridades locais ou internacionais, como legais, regulatórias, policiais, governamentais e fiscais, tudo de acordo com as leis e regulamentos aplicáveis. Também é possível que tenhamos que transferir seus Dados a terceiros quando receberem uma solicitação de uma autoridade com poderes legais para fazê-lo, de acordo com as leis e regulamentos aplicáveis.</p>
+<p dir="ltr">(6) Você pode submeter certas informações nos Serviços (por exemplo, fazer upload/carregamento de vídeos curtos). Qualquer tipo de informação como essa que tenha a intenção de ser mostrada ao público em nosso aplicativo será divulgada publicamente. Esta Política não se aplica aos usos por terceiros de tais informações após serem carregadas e exibidas nos Serviços. Também compartilhamos certas informações sobre você (como ID da conta, token de acesso e URL de referência) com sua rede social selecionada para garantir o uso autorizado e acesso à sua conta de mídia social.</p>
+<p dir="ltr">(7) Se você decidir se inscrever para uma promoção (como uma competição, sorteio, concurso) ou programa de incentivo ao usuário, seus Dados podem ser divulgados a terceiros para fins de administração de tal promoção ou programa.</p>
+<p dir="ltr">(8) Compartilhamos informações agregadas com anunciantes e empresas de medição terceirizadas para mostrar quantos e quais usuários de nossas plataformas viram ou clicaram em um anúncio. Compartilhamos a identidade do seu dispositivo com empresas de medição para que possamos conectar sua atividade em nossas plataformas com sua atividade em outros sites; em seguida, usamos essas informações para mostrar anúncios que podem ser do seu interesse. Nunca compartilharemos dados pessoais sobre você com anunciantes sem o seu consentimento.</p>
+<p dir="ltr">(9) Podemos compartilhar seus dados anonimizados com outras partes não listadas acima. Se fizermos isso, você não será identificável a partir desses dados.</p>
+<p dir="ltr">7. Transferências Internacionais de Dados</p>
+<p dir="ltr">A divulgação de dados conforme estipulado nesta Política pode envolver a transferência de seus Dados para países e regiões que não oferecem o mesmo nível de proteção de dados. Os requisitos legais e regulatórios aplicáveis são levados em consideração antes de qualquer transferência internacional de seus Dados e nossas políticas são as seguintes:</p>
+<p dir="ltr">(1) Podemos compartilhar seus Dados com entidades em outras jurisdições, em todo o mundo, afiliadas a nós para fins internos, comerciais e operacionais. Ao aceitar esta Política, você reconhece expressamente e consente com a transferência de seus Dados para afiliados em outras jurisdições pelo mundo que podem ser consideradas jurisdições que não fornecem proteção adequada de dados pessoais. No entanto, iremos nos assegurar, por meio de garantias contratuais adequadas, que também estarão em conformidade com as leis e regulamentos aplicáveis, que todas as entidades afiliadas a nós mantenham a segurança adequada para proteger seus Dados de acesso ou processamento não autorizado, e não compartilharão esses Dados com nenhum terceiro, a menos que você tenha expressamente acordado de outra forma.</p>
+<p dir="ltr">(2) Para fornecer os Serviços a você, podemos precisar transferir seus dados pessoais internacionalmente para entidades não afiliadas, o que só ocorrerá de acordo com os mecanismos de transferência internacional disponíveis no âmbito de leis e regulamentos aplicáveis. Se o país ou região para onde seus dados pessoais estão sendo transferidos não fornecer um nível adequado de proteção aos seus dados pessoais, conforme exigido pelas autoridades competentes, seus dados pessoais ainda podem ser transferidos internacionalmente com base em seu consentimento prévio, nosso exercício de um direito legal, nosso cumprimento de uma obrigação legal, ou a execução de um contrato com você, entre os outros mecanismos.</p>
+<p dir="ltr">8. Gestão e Acesso aos Dados</p>
+<p dir="ltr">(1) Depois de completar o Registro de sua Conta e ter implementado medidas de autenticação razoáveis e necessárias, você pode revisar, modificar e deletar os Dados que você nos envia. Em geral, você pode navegar, modificar e excluir suas próprias informações a qualquer momento, mas você pode não ser capaz de modificar certas informações iniciais de registro e informações de verificação fornecidas no momento do registro para segurança e identificação.</p>
+<p dir="ltr">(2) Você pode ter os seguintes direitos, na medida aplicável sob as leis e regulamentos locais, que você pode exercer utilizando os detalhes de contato fornecidos nesta Política:</p>
+<p dir="ltr">(i) O direito de acesso e informação: você tem o direito de ser informado de forma concisa, transparente, inteligível e facilmente acessível sobre a forma como os seus Dados são processados. Você também tem o direito de obter confirmação sobre se os Dados relativos a você estão ou não sendo processados e, quando for o caso, de acessar esses Dados e obter uma cópia dos mesmos.</p>
+<p dir="ltr">(ii) O direito de retificação: você tem o direito de obter a retificação de seus Dados. Você também tem o direito de preencher os Dados incompletos.</p>
+<p dir="ltr">(iii) O direito de eliminação: em alguns casos, você tem o direito de obter a eliminação de seus Dados. No entanto, este não é um direito absoluto e podemos ter fundamentos legais ou legítimos para manter tais Dados.</p>
+<p dir="ltr">Verificaremos sua identidade primeiro, antes que você possa exercer qualquer um de seus direitos em relação aos seus Dados.</p>
+<p dir="ltr">(3) Você tem o direito de apresentar uma reclamação a uma autoridade de supervisão competente.</p>
+<p dir="ltr">(4) Você pode nos impedir de obter seus Dados suspendendo certas funções fornecidas por nossos Serviços.</p>
+<p dir="ltr">(5) Você pode nos pedir para encerrar sua conta para garantir que não iremos mais coletar seus dados. Verificaremos seu status pessoal, status de segurança, equipamentos comuns e outras informações antes de encerrar sua conta. Por favor, note que o encerramento de sua Conta é irreversível; uma vez encerrada, qualquer informação relacionada à sua Conta será imediatamente excluída ou anonimizada por nós. Garantiremos que suas informações não sejam vazadas, mas você não poderá acessar nossos Serviços uma vez que a Conta tenha sido encerrada.</p>
+<p dir="ltr">(6) Se nossos Serviços ou operações terminarem, notificaremos você com pelo menos 30 dias de antecedência e excluiremos ou anonimizaremos seus Dados após o término.</p>
+<p dir="ltr">9. Cookies</p>
+<p dir="ltr">Cookies são pedaços de informações que qualquer site ou aplicativo pode transferir para seu navegador e que são armazenadas em seu computador ou sistema móvel. Por exemplo, o depósito de cookies melhora sua experiência online, permitindo-nos salvar suas preferências.</p>
+<p dir="ltr">Usamos cookies e coletamos informações automaticamente para:</p>
+<p dir="ltr">(1) personalizar nossos Serviços, como lembrar seus Dados para que você não tenha que inseri-los novamente durante o uso de nossos Serviços ou na próxima vez que usá-los;</p>
+<p dir="ltr">(2) fornecer anúncios, conteúdos e informações personalizadas adaptadas ao seu perfil;</p>
+<p dir="ltr">(3) monitorar e analisar a eficácia de nossos Serviços e atividades de marketing de terceiros adaptadas ao seu perfil;</p>
+<p dir="ltr">(4) monitorar métricas agregadas de uso do site, como número total de visitantes e páginas visualizadas; e</p>
+<p dir="ltr">(5) rastrear suas entradas, envios e status em quaisquer promoções ou outras atividades oferecidas por meio de nossos Serviços (serviços adaptados ao seu perfil). A tecnologia de rastreamento também nos ajuda a gerenciar e melhorar a usabilidade dos Serviços.</p>
+<p dir="ltr">Também podemos coletar seu endereço IP encurtado de forma ilegível, o que não nos permite identificá-lo diretamente.</p>
+<p dir="ltr">Se você não desejar que coletemos seus dados pessoais por meio do uso de cookies, você pode configurar seu navegador para rejeitar cookies dos Serviços. Cada navegador é diferente, então você deve verificar o menu "Ajuda" do seu navegador para saber como alterar suas preferências de cookies. Por favor note que se você rejeitar ou bloquear cookies dos Serviços, os Serviços podem não funcionar conforme o esperado.</p>
+<p dir="ltr">10. Termos específicos de país / região</p>
+<p dir="ltr">Brasil</p>
+<p dir="ltr">Se você residir ou usar nossos Serviços no Brasil, os seguintes termos e condições adicionais serão aplicados e prevalecerão sobre quaisquer disposições conflitantes nesta Política de Privacidade.</p>
+<p dir="ltr">Informamos que, ao não concordar com as atividades de processamento de dados pessoais que realizamos de acordo com esta Política de Privacidade, você não estará em condições de usar ou se beneficiar de nossos Serviços.</p>
+<p dir="ltr">(1) Seus direitos. Para fornecer os Serviços a você, podemos processar seus dados pessoais, mas sempre o faremos de acordo com as leis e regulamentos de privacidade brasileiros. A legislação brasileira concede aos titulares de dados pessoais certos direitos em relação à coleta e uso de suas informações pessoais, incluindo (sem limitação) o direito de acesso e informação e direito de retificação, conforme estipulados na Seção “Gestão e Acesso aos Dados”, além de (i) o direito de solicitar a anonimização, bloqueio ou exclusão de dados pessoais que sejam considerados desnecessários ou excessivos ou dados que sejam tratados em violação das leis e regulamentos de privacidade brasileiros; e (ii) o direito de se opor ao tratamento de seus dados pessoais, caso não seja mais necessário para os fins informados nesta Política.</p>
+<p dir="ltr">Se desejar exercer algum dos direitos acima, por favor submeta sua solicitação enviando um e-mail para <a href="mailto:privacy@kwai.com">privacy@kwai.com</a> ou por meio de outras funções no aplicativo, se for aplicável. Quando recebermos sua solicitação, tentaremos verificar a autenticidade de sua solicitação por meio de práticas normais de autenticação de conta, a menos que estejamos preocupados com fraudes ou você esteja buscando informações pessoais sensíveis; nesse caso, podemos exigir etapas de verificação adicionais.</p>
+<p dir="ltr">(2) Transferência de dados pessoais para fora do Brasil. Informamos que, para que você se beneficie do sistema de recompensas oferecido como parte de nossos Serviços, os países ou regiões para os quais podemos transferir seus dados pessoais e / ou nos quais nossos servidores estão localizados podem ser países ou regiões que não são considerados pelas autoridades brasileiras competentes como tendo nível adequado de proteção. Ao aceitar esta Política e usar os Serviços, você consente expressamente e nos autoriza a transferir seus dados pessoais para fora do Brasil com o objetivo de incluí-lo no sistema de recompensas necessário para que você use e se beneficie de nossos Serviços.</p>
+<p dir="ltr">(3) Logs de acesso. Mantemos os registros de acesso do seu aplicativo confidenciais em um ambiente controlado e seguro por pelo menos 6 meses para cumprir as obrigações legais.</p>
+<p dir="ltr">11. Mudanças à Política</p>
+<p dir="ltr">Podemos revisar os termos aqui a qualquer momento, e tais revisões constituirão uma parte desta Política. Informaremos você por um meio que pode vir a ser, entre outros, um lembrete em um local proeminente da página inicial ou envio de uma notificação para você quando você fizer login ou aplicando atualizações das alterações na Política.</p>
+<p dir="ltr">As revisões entrarão em vigor no dia seguinte após a notificação e se aplicarão a todos os seus Dados.</p>
+<p dir="ltr">12. Consentimento dos pais e responsáveis legais</p>
+<p dir="ltr">Qualquer pessoa com menos de 13 anos (ou idade de consentimento legalmente exigida para jovens (conforme definido pelas leis aplicáveis) não poderá utilizar nosso Serviço. Se você tiver mais de 13 anos, mas tiver menos de 16 anos, você só pode usar e registrar-se para uma conta por meio da representação de um de seus pais ou responsável legal, e seus pais ou responsável legal por meio desta representam você e aceitam esta Política de Privacidade. Se você tiver mais de 16 anos, mas tiver menos de 18 anos, só pode usar e registrar uma conta com a assistência de um de seus pais ou responsável legal, e você declara e garante que teve essa assistência para usar os Serviços e para concordar com esta Política de Privacidade. Se você for menor de idade e coletarmos qualquer um de seus Dados, seu representante legal poderá exercer seus direitos em seu nome a qualquer momento.</p>
+<p dir="ltr">Se você for menor de idade em seu país ou região, o uso dos Serviços pode estar sujeito a restrições de idade impostas por fornecedores terceirizados. Você pode não conseguir usar os serviços de fornecedores terceirizados, incluindo a coleta de certas recompensas em dinheiro ganhas com o uso dos Serviços, sem a ajuda de seus pais ou responsável legal.</p>
+<p dir="ltr">Se você souber que uma criança menor de 13 anos se registrou em uma conta Kwai ou que a conta de uma criança menor de 18 anos foi registrada sem representação ou assistência adequada, você pode nos alertar em <a href="mailto:privacy@kwai.com">privacy@kwai.com.</a> Nós verificaremos imediatamente, tomaremos medidas para remover as informações da conta da criança do Kwai e encerraremos a conta da mesma.</p>
+<p dir="ltr">13. Idioma</p>
+<p dir="ltr">Esta Política foi redigida no idioma inglês. Se esta Política for traduzida para qualquer idioma diferente do inglês, a versão em inglês prevalecerá no caso de qualquer inconsistência, a menos que seja exigido de outra forma pelas leis e regulamentos aplicáveis. A tradução correspondente será considerada automaticamente alterada para estar em conformidade e para tornar a contraparte de seu texto traduzido consistente com a versão em inglês relevante.</p>
+<p dir="ltr">14. Informações de contato</p>
+<p dir="ltr">Se você tiver alguma reclamação, sugestões ou perguntas sobre esta Política ou em relação à coleta, uso, armazenamento, proteção e outras funções de seus Dados, entre em contato conosco através do acesso no aplicativo para comentários ou reclamações ou envie um e-mail para o Encarregado pelo Tratamento de Dados Pessoais (Data Protection Officer), no endereço <a href="mailto:dpo@kwai.com">dpo@kwai.com.</a> Revisaremos as questões envolvidas o mais rápido possível e responderemos oportunamente após verificar sua identidade. Se você tiver alguma preocupação com a forma como estamos lidando com seus Dados, entre em contato conosco. Vamos nos esforçar para lidar com suas preocupações prontamente.</p></div><script type="text/javascript" src="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/js/arttemplate-bcafb5e58b.js"></script><script type="text/javascript" src="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/archive/lib/zep_fast_req_underscore.js"></script><script>window.arriveTime = Date.now();
+// require 配置
+require.config({
+  baseUrl: '//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/js',
+  paths: {
+    wx: '//res.wx.qq.com/open/js/jweixin-1.2.0',
+    'ks-mui': 'dep/ks-mui',
+    'ua-parser-js': 'lib/ua-parser-js'      
+  }
+});</script><script type="text/javascript" src="//aws-static.kwai.net/udata/pkg/proweb/js/ks-log-8bf44b.js"></script><script type="text/javascript" src="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/archive/lib/KsWebBridge-0.0.6.js"></script><script type="text/javascript" src="//aws-static.kwai.net/udata/pkg/oversea-frontend-mobile/s1/js/pages/public/protocol-detail-3975a10e25.js"></script><script type="text/javascript">window.isSnack = 'false';
+window.region = '3';</script></body></html>

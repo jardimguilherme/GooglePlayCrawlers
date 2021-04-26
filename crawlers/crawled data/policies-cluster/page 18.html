@@ -1,564 +1,428 @@
-<!DOCTYPE html><html lang="en-US"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"><script src="https://js-agent.newrelic.com/nr-1208.min.js"></script><script src="//cdn.media.disneyatoz.com/analytics/corp-batch-1/utag.js" type="text/javascript" async=""></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"129fe16bc0",applicationID:"191794594"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/favicons/favicon-16x16.png">
-    <link rel="mask-icon" href="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <script async="" id="" src="https://cdn.registerdisney.go.com/v2/outer/DisneyID.js?clientID=DTSS-PRIVACYCENTER.WEB"></script>
-	<!-- This site is optimized with the Yoast SEO plugin v15.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
-	<title>Privacy Policy - The Walt Disney Privacy Center</title>
-	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-	<link rel="canonical" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Privacy Policy - The Walt Disney Privacy Center">
-	<meta property="og:url" content="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/">
-	<meta property="og:site_name" content="The Walt Disney Privacy Center">
-	<meta property="article:modified_time" content="2021-01-19T22:02:50+00:00">
-	<meta name="twitter:card" content="summary">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://privacy.thewaltdisneycompany.com/en/#website","url":"https://privacy.thewaltdisneycompany.com/en/","name":"The Walt Disney Privacy Center","description":"","potentialAction":[{"@type":"SearchAction","target":"https://privacy.thewaltdisneycompany.com/en/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/#webpage","url":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/","name":"Privacy Policy - The Walt Disney Privacy Center","isPartOf":{"@id":"https://privacy.thewaltdisneycompany.com/en/#website"},"datePublished":"2016-12-15T14:36:59+00:00","dateModified":"2021-01-19T22:02:50+00:00","breadcrumb":{"@id":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/"]}]},{"@type":"BreadcrumbList","@id":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://privacy.thewaltdisneycompany.com/en/","url":"https://privacy.thewaltdisneycompany.com/en/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/","url":"https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/","name":"Privacy Policy"}}]}]}</script>
-	<!-- / Yoast SEO plugin. -->
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR"><head profile="http://gmpg.org/xfn/11"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	<title>Política de Privacidade CTPS Digital – Portal Emprega Brasil</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'unsafe-eval' 'self' localhost ajax.googleapis.com estatisticasweb.dataprev.gov.br www.google.com www.gstatic.com www.qstatic.com barra.brasil.gov.br embedr.flickr.com platform.twitter.com widgets.flickr.com cdn.syndication.twimg.com static.xx;
+	frame-src 'self' http: https:;
+	style-src 'self' 'unsafe-inline' http: https:;">
 
 
-<link rel="dns-prefetch" href="//fast.fonts.net">
-<link rel="dns-prefetch" href="//s.w.org">
-<link rel="dns-prefetch" href="//ddm-privacycenter-prod.s3.amazonaws.com">
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/privacy.thewaltdisneycompany.com\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=541dd541"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script><script src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/wp-emoji-release.min.js?ver=541dd541" type="text/javascript" defer=""></script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="https://privacy.thewaltdisneycompany.com/wp/wp-includes/css/dist/block-library/style.min.css?ver=541dd541" type="text/css" media="all">
-<link rel="stylesheet" id="wpa-style-css" href="https://privacy.thewaltdisneycompany.com/app/plugins/wp-accessibility/css/wpa-style.css?ver=541dd541" type="text/css" media="all">
-<link rel="stylesheet" id="fonts/css-css" href="//fast.fonts.net/cssapi/99fe446d-752c-4209-b428-05aced348f31.css?ver=541dd541" type="text/css" media="all">
-<link rel="stylesheet" id="app-css" href="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/css/app-9286d59bac.min.css" type="text/css" media="all">
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" id="jquery-core-js"></script>
-<script type="text/javascript" id="DisneyOneID-js-extra">
-/* <![CDATA[ */
-var didOptions = {"didInstanceConfig":{"clientId":"DTSS-PRIVACYCENTER.WEB","responderPage":"https:\/\/privacy.thewaltdisneycompany.com\/oneid-responder-page\/","langPref":"en-US","cssOverride":"https:\/\/cdn.media.disneyatoz.com\/sites\/privacy\/privacy-oneid-v5.css","debug":"1"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/dtss-ddm-oneid/assets/js/oneid-init.js?ver=1.1.5" id="DisneyOneID-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/dtss-ddm-oneid/assets/js/oneid-user-interaction.js?ver=541dd541" id="DisneyOneIDBehaviors-js"></script>
-<script type="text/javascript" id="bodhi_svg_inline-js-extra">
-/* <![CDATA[ */
-var cssTarget = "img.style-svg";
-var ForceInlineSVGActive = "false";
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/svg-support/js/min/svgs-inline-min.js?ver=1.0.0" id="bodhi_svg_inline-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/js/vendor-2119be48.min.js" id="vendor-js"></script>
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://privacy.thewaltdisneycompany.com/wp/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://privacy.thewaltdisneycompany.com/wp/wp-includes/wlwmanifest.xml"> 
-<link rel="shortlink" href="https://privacy.thewaltdisneycompany.com/?p=395">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ar/current-privacy-policy-ar/" hreflang="ar">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/id/kebijakan-privasi-kami/" hreflang="id">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ms/dasar-privasi-kami/" hreflang="ms">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/pt-br/nossa-politica-de-privacidade/" hreflang="pt-BR">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/bg/current-privacy-policy-bg-bg/" hreflang="bg">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/fr-ca/notre-politique-de-protection-de-la-vie-privee/" hreflang="fr-CA">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/zh/current-privacy-policy-zh-cn/" hreflang="zh-CN">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/cs/zasady-ochrany-osobnich-udaju/" hreflang="cs">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/zh-hk/current-privacy-policy-zh-hk/" hreflang="zh-HK">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/zh-tw/current-privacy-policy-zh-tw/" hreflang="zh-TW">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/da/vores-fortrolighedspolitik/" hreflang="da">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/nl/privacybeleid/" hreflang="nl">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/" hreflang="en">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/fi/yksityisyyssuoja/" hreflang="fi">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/fr/regles-de-respect-de-la-vie-privee/" hreflang="fr-FR">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/de/datenschutzerklarung/" hreflang="de">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/el/current-privacy-policy-el/" hreflang="el">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/he/current-privacy-policy-he-il/" hreflang="he">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/hi/current-privacy-policy-hi-in/" hreflang="hi">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/hu/adatvedelmi-szabalyzat/" hreflang="hu">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/it/informativa-sulla-privacy/" hreflang="it">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ja/current-privacy-policy-ja/" hreflang="ja">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ko/current-privacy-policy-ko-kr/" hreflang="ko">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/nn/retningslinjer-for-personvern/" hreflang="nn">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/pl/polityka-prywatnosci/" hreflang="pl">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/pt/politica-de-privacidade/" hreflang="pt-PT">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ro/politica-de-confidentialitate/" hreflang="ro">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/ru/current-privacy-policy-ru-ru/" hreflang="ru">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/sr/disney-politika-privatnosti/" hreflang="sr">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/es-es/politica-de-privacidad/" hreflang="es-ES">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/es/politica-de-privacidad/" hreflang="es-MX">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/sv/policy-avseende-sekretess-och-personuppgiftsbehandling/" hreflang="sv">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/tl/patakaran-sa-privacy/" hreflang="tl">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/th/current-privacy-policy-th/" hreflang="th">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/tr/gizlilik-politikasi/" hreflang="tr">
-<link rel="alternate" href="https://privacy.thewaltdisneycompany.com/vi/chinh-sach-bao-mat-cua-chung-toi/" hreflang="vi">
 
-    <noscript>
-        <style>
-            .fade-content-in {
-                opacity: 1 !important;
-            }
 
-            .collapse {
-                display: block !important;
-            }
 
-            .openall, .closeall {
-                display: none !important;
-            }
 
-            .accordion-toggle {
-                display: none !important;
-            }
 
-            #logo-quilt {
-                display: none !important;
-            }
 
-            .tooltip-link {
-                text-decoration: none;
-            }
-        </style>
-    </noscript>
-<script type="text/javascript" src="//cdn.media.disneyatoz.com/analytics/corp-batch-1/utag.12.js?utv=ut4.008.201906121538" id="utag_disney.corp-batch-1_12"></script><style id="disneyid-style" type="text/css">div#disneyid-wrapper{position:fixed;display:none;opacity:0;top:0;left:0;width:100%;height:100%;}div#disneyid-wrapper.state-active {z-index:9999999;opacity:1;transition:opacity 300ms;-webkit-transition:opacity 300ms;}iframe#disneyid-iframe{width:100%;height:100%;}</style></head>
-<body class="page-template page-template-template-landing-detail page-template-template-landing-detail-php page page-id-395 page-parent current-privacy-policy desktop">
-<!--[if lt IE 10]>
-<style>
-    /*for IE browsers older than V 10*/
-    .navbar-fixed-bottom, .navbar-fixed-top {
-        position: relative !important;
-    }
+	<link rel="shortcut icon" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/favicon.ico" type="image/x-icon">
 
-    @media (min-width: 768px) {
-        .navbar-fixed-bottom, .navbar-fixed-top {
-            position: relative !important;
-        }
-    }
 
-    .fade-in {
-        opacity: 1;
-    }
-</style>
-<div class="alert alert-warning">
-    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</div>
-<![endif]-->
-<div class="sr-only" role="navigation" aria-label="Skip links">
-    <a href="#main-content">Skip to content</a>
-    <a href="#menu-menu-1">Skip to navigation</a></div>
-<div id="language-selector-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close hidden-xs hidden-sm" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">×</span></button>
-				<button type="button" class="close hidden-md hidden-lg cancel" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">cancel</span></button>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/style.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/lightgallery.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/govbr-core.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/govbr-main.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/govbr-custom-mte.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/lightbox/css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/vagas/consulta-vagas.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/datatables-1.10.13/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/captcha/captcha.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jssocials-1.2.1/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jssocials-1.2.1/jssocials.css">
+	<link rel="stylesheet" type="text/css" href="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jssocials-1.2.1/jssocials-theme-minima.css">
+	<link rel="alternate" type="application/rss+xml" href="https://empregabrasil.mte.gov.br/feed/" title="Portal Emprega Brasil últimas postagens">
+	<link rel="pingback" href="https://empregabrasil.mte.gov.br/xmlrpc.php">
+	<!-- Angular Material CSS -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
 
-				<h1 class="modal-title" id="myModalLabel">Country/Region &amp; Language Selector</h1>
+
+
+
+	<!-- Scripts -->
+	<script type="text/javascript" async="" defer="" src="//estatisticasweb.dataprev.gov.br/piwik.js"></script><script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/jquery.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jquery-blockUI-1.33/jquery.blockUI.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/main.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/lightbox/js/lightbox.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lightgallery.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-fullscreen.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-thumbnail.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-video.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-autoplay.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-zoom.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/lg-pager.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/owl.carousel.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/datatables-1.10.13/datatables.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/js/libs/jssocials-1.2.1/jssocials.min.js"></script>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+   <script type="text/javascript" language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <script type="text/javascript" language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+   <script type="text/javascript" language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+   <script type="text/javascript" language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+   <!-- Angular Material Library -->
+   <script type="text/javascript" language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+
+	 <script type="text/javascript" language="JavaScript" src="https://empregabrasil.mte.gov.br/wp-content/themes/mte-wordpress/app/consulta-vagas/index.js?04:21:39"></script>
+
+
+
+
+	<!-- Piwik -->
+	<script type="text/javascript">
+		var _paq = _paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="//estatisticasweb.dataprev.gov.br/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', '60']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+	<!-- End Piwik Code -->
+
+<style type="text/css" media="all">#barra-brasil div,#barra-brasil a,#barra-brasil ul,#barra-brasil li{margin:0;padding:0;font-size:100%;font-family:inherit;vertical-align:baseline;border:none}#barra-brasil ul{list-style:none}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;font-display:swap;src:local("Open Sans Bold"),local("OpenSans-Bold"),url("//barra.brasil.gov.br/static/opensans-bold.woff") format("woff")}#barra-brasil{height:32px;background:#f1f1f1;font-weight:bold;font-size:12px;line-height:32px;font-family:"Open Sans",Arial,Helvetica,sans-serif;border-bottom:1px solid #dfdfdf;box-sizing:content-box}#barra-brasil a{text-decoration:none}body.contraste #barra-brasil,body.contraste .link-vlibras{background:#000 !important}body.contraste #barra-brasil .link-barra,body.contraste #barra-brasil .link-vlibras{color:#FF0 !important;text-decoration:underline}div#wrapper-barra-brasil{position:relative;margin:0 auto;width:100%;max-width:960px;height:100%}#barra-brasil .brasil-flag{float:left;padding:7px 0 6px;width:115px;border-right:2px solid #dfdfdf}#barra-brasil .brasil-flag .link-barra{display:block;padding-left:42px;width:43px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%2219%22%20viewBox%3D%220%200%201000%20700%22%3E%3Cpath%20fill%3D%22%2300923F%22%20d%3D%22M0%200h1000v700H0z%22%2F%3E%3Cpath%20fill%3D%22%23F8C300%22%20d%3D%22M500%2085L85%20350l415%20265%20415-265L500%2085z%22%2F%3E%3Ccircle%20fill%3D%22%2328166F%22%20cx%3D%22499%22%20cy%3D%22350%22%20r%3D%22174%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M395%20296c103%200%20199%2038%20272%20101%202-8%204-17%205-26-75-61-172-98-277-98-18%200-36%201-53%203-3%208-6%2016-9%2025%2020-3%2041-4%2063-4z%22%2F%3E%3C%2Fsvg%3E") 8px center no-repeat;text-transform:uppercase;line-height:19px}#barra-brasil #brasil-vlibras{position:absolute;top:0;right:0}#barra-brasil #brasil-vlibras .logo-vlibras{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSIyOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2Ni4yNTAzOCwtMjMxLjY4NTk0KSI+PHBhdGggZD0ibTI5Mi40IDIzNy44Yy0wLjEgMC0wLjItMC4xLTAuMi0wLjIgMC0xLTEuOC0yLjYtNC4xLTIuNmwtMi41IDAtNC44IDMuNi00LjgtMy42LTIuNSAwYy0yLjQgMC00LjEgMS42LTQuMSAyLjYgMCAwLjEtMC4xIDAuMi0wLjIgMC4yLTAuMSAwLTAuMi0wLjEtMC4yLTAuMiAwLTEuNCAyLjEtMy4xIDQuNi0zLjFsMi40IDAgMC42LTAuNmMwLjEtMC4xIDAuMi0wLjEgMC4zIDBsMy45IDQuNiAzLjktNC42YzAuMS0wLjEgMC4yLTAuMSAwLjMgMGwwLjYgMC42IDIuNCAwYzIuNSAwIDQuNiAxLjcgNC42IDMuMSAwIDAuMS0wLjEgMC4yLTAuMiAwLjJ6bS0zIDEwLjRjLTAuMSAwLjctMC4yIDEtMC4zIDEgMCAwLjEtMC4xIDAuMS0wLjIgMC4xLTAuMSAwLTAuMS0wLjEtMC4xLTAuMiAwIDAgMC4xLTAuMyAwLjItMC45IDAuMS0wLjYtMC4yLTEuMS0wLjItMS4xIDAtMC4xIDAtMC4yIDAuMS0wLjIgMC4xIDAgMC4xIDAgMC4yIDAgMCAwIDAgMCAwIDAuMSAwIDAgMC4zIDAuNiAwLjIgMS4zem0tMSAwLjhjMCAwLjEtMC4xIDAuMS0wLjIgMC4xLTAuMSAwLTAuMS0wLjEtMC4xLTAuMiAwIDAgMC4xLTAuMyAwLjEtMC45IDAtMC42LTAuMy0xLjEtMC4zLTEuMSAwLTAuMSAwLTAuMiAwLjEtMC4yIDAuMSAwIDAuMSAwIDAuMiAwIDAgMCAwIDAgMCAwIDAgMCAwLjMgMC42IDAuMyAxLjMgMCAwLjctMC4xIDEtMC4yIDF6bS0wLjctMC40Yy0wLjMgMS4yLTAuOCAyLjItMC45IDIuNi0wLjIgMC40LTAuMyAwLjktMC4yIDIuMiAwIDEuMyAwIDIuMi0wLjEgMi41IDAgMC4yLTAuMiAwLjMtMC40IDAuMy0wLjIgMC0wLjMtMC4xLTAuNC0wLjQtMC4xLTAuNS0wLjMtMi42LTAuMy0yLjkgMC0wLjItMC4yLTAuNC0wLjMtMC40LTAuMSAwLTAuMiAwLjEtMC4zIDAuNS0wLjIgMC45LTAuNSAzLjEtMC42IDMuNi0wLjEgMC41LTAuMyAwLjYtMC40IDAuNi0wLjEgMC0wLjEgMC0wLjEgMCAwIDAgMCAwIDAgMC0wLjEgMC0wLjQgMC0wLjQtMC40IDAtMC41IDAuNC0zLjUgMC40LTMuOCAwLTAuMiAwLTAuMy0wLjEtMC4zLTAuMSAwLTAuMSAwLjEtMC4yIDAuMi0wLjMgMC40LTEuNyAyLjktMi4xIDMuNy0wLjEgMC4yLTAuMiAwLjItMC40IDAuMi0wLjEgMC0wLjIgMC0wLjMtMC4xLTAuMS0wLjEtMC4zLTAuNC0wLjItMC42IDAuMS0wLjIgMS41LTMuNCAxLjctMy44IDAuMS0wLjMgMC4xLTAuNS0wLjEtMC41LTAuMSAwLTAuMiAwLjEtMC40IDAuMi0wLjUgMC41LTIuNCAyLjUtMi43IDIuNy0wLjEgMC4xLTAuMiAwLjItMC4zIDAuMi0wLjEgMC0wLjItMC4xLTAuMy0wLjItMC4yLTAuMi0wLjItMC40LTAuMS0wLjYgMC4yLTAuMiAyLjYtMy4zIDMtNC4xIDAuNC0wLjcgMS0xLjktMC4yLTEuOS0wLjEgMC0wLjEgMC0wLjIgMC0wLjUgMC0wLjggMC4xLTEuMSAwLjEtMC41IDAtMC43LTAuMS0wLjgtMC4xLTAuMi0wLjEtMC42LTAuMy0wLjUtMC42IDAuMS0wLjIgMC43LTAuMSAxLTAuMiAwLjItMC4xIDAuMi0wLjEgMC4yLTAuMSAwIDAgMS4xLTAuMyAxLjgtMC43IDAuNy0wLjQgMi4zLTEuMSAyLjctMS4xIDAuMiAwIDAuNC0wLjEgMC42LTAuMSAwLjMgMCAwLjYgMCAwLjcgMC4xIDAuMyAwLjEgMC42IDAuOSAyIDEuNSAwIDAgMC42IDAuNiAwLjMgMS44em0tMTEuNyAyLjJjLTAuNC0xLjItMC42LTIuMy0wLjYtMi43LTAuMS0wLjQtMC4zLTAuOS0xLTEuOS0wLjctMS0xLjItMS44LTEuMy0yLjEtMC4xLTAuMiAwLjEtMC41IDAuNC0wLjUgMC4xIDAgMC4yIDAgMC4zIDAuMiAwLjQgMC40IDEuNyAyIDEuOSAyLjIgMC4xIDAuMSAwLjMgMC4yIDAuNCAwLjIgMC4yIDAgMC4yLTAuMSAwLjEtMC42LTAuMy0wLjktMS4zLTIuOS0xLjUtMy4zLTAuMy0wLjcgMC4xLTAuNyAwLjEtMC43IDAgMCAwLjEtMC4xIDAuMi0wLjEgMC4xIDAgMC4yIDAgMC4zIDAuMiAwLjIgMC40IDEuNiAzLjIgMS44IDMuNCAwLjEgMC4xIDAuMiAwLjIgMC4zIDAuMiAwLjEgMCAwLjEtMC4xIDAuMS0wLjMgMC0wLjUtMC4yLTMuMy0wLjMtNC4yIDAtMC4zIDAuMy0wLjUgMC41LTAuNSAwIDAgMCAwIDAgMCAwLjIgMCAwLjQgMC4yIDAuNSAwLjQgMC4xIDAuMiAwLjYgMy43IDAuNyA0LjIgMCAwLjIgMC4yIDAuNCAwLjMgMC40IDAuMSAwIDAuMi0wLjEgMC4zLTAuNCAwLjEtMC43IDAuNy0zLjQgMC43LTMuNyAwLTAuMyAwLjItMC40IDAuNC0wLjQgMCAwIDAuMSAwIDAuMSAwIDAuMiAwIDAuNCAwLjIgMC40IDAuNSAwIDAuMy0wLjMgMy43LTAuMiA0LjgtMC41IDAuMi0xIDAuNC0xLjMgMC40bDAgMCAwIDAtMC4yIDAuMWMwIDAtMC4xIDAtMC4yIDAtMC40IDAtMSAwLTEuMyAwLjYtMC4xIDAuMy0wLjIgMC42LTAuMSAwLjggMC4yIDAuNSAwLjggMC44IDAuOSAwLjkgMCAwIDAgMCAwIDAgMC4yIDAuMSAwLjUgMC4yIDEuMSAwLjIgMC4zIDAgMC42IDAgMS4xLTAuMS0wLjEgMC4yLTAuMiAwLjQtMC4zIDAuNmwtMC4xIDAuMWMtMC4yIDAuMy0wLjggMS4yLTEuOCAyLjUtMC4yIDAtMC4zIDAtMC41IDAtMC4zIDAtMC42IDAtMC45IDAuMSAwIDAtMC44LTAuMS0xLjMtMS4zem0wLjggMi4yYzAgMC4xLTAuMSAwLjEtMC4yIDAuMSAwIDAgMCAwLTAuMSAwIDAgMC0wLjYtMC4yLTEtMC44LTAuNC0wLjYtMC41LTAuOS0wLjUtMC45IDAtMC4xIDAtMC4yIDAuMS0wLjIgMC4xIDAgMC4yIDAgMC4yIDAuMSAwIDAgMC4xIDAuMyAwLjQgMC44IDAuNCAwLjUgMC45IDAuNyAwLjkgMC43IDAuMSAwIDAuMSAwLjEgMC4xIDAuMnptLTAuOSAwLjRjMCAwLjEtMC4xIDAuMS0wLjEgMC4xIDAgMC0wLjEgMC0wLjEgMCAwIDAtMC42LTAuMy0wLjktMC45LTAuNC0wLjYtMC40LTAuOS0wLjQtMSAwLTAuMSAwLjEtMC4yIDAuMS0wLjIgMC4xIDAgMC4yIDAuMSAwLjIgMC4xIDAgMCAwIDAuMyAwLjQgMC44IDAuMyAwLjUgMC44IDAuOCAwLjggMC44IDAuMSAwIDAuMSAwLjEgMC4xIDAuMnptMTQuOS0yMS44LTIwLjIgMGMtMi40IDAtNC40IDItNC40IDQuNGwwIDIwLjJjMCAyLjQgMiA0LjQgNC40IDQuNGwyMC4yIDBjMi40IDAgNC40LTIgNC40LTQuNGwwLTIwLjJjMC0yLjQtMi00LjQtNC40LTQuNCIgZmlsbD0iIzFjNGY5YyIvPjwvZz48L3N2Zz4K") 8px center no-repeat;position:absolute;top:0;right:0;width:43px;height:32px;display:block}#barra-brasil #brasil-vlibras .link-vlibras{height:0;top:32px;transition:0.1s;width:166px !important;display:block;border:2px solid #dfdfdf;color:#606060;visibility:hidden;position:relative}#barra-brasil #brasil-vlibras .link-vlibras a:hover,#barra-brasil #brasil-vlibras .link-vlibras a:focus,#barra-brasil #brasil-vlibras .link-vlibras a:active{visibility:visible;background:#f1f1f1;z-index:8}#barra-brasil #brasil-vlibras .logo-vlibras:hover+.link-vlibras,#barra-brasil #brasil-vlibras .logo-vlibras:active+.link-vlibras,#barra-brasil #brasil-vlibras .logo-vlibras:focus+.link-vlibras,#barra-brasil #brasil-vlibras .link-vlibras:hover,#barra-brasil #brasil-vlibras .link-vlibras:active,#barra-brasil #brasil-vlibras .link-vlibras:focus{width:132px !important;height:50px !important;display:inline-table;border:2px solid #dfdfdf;padding:10px 24px 10px 24px;visibility:visible;background:#f1f1f1;z-index:8;line-height:1.75em}#barra-brasil .eselo{position:absolute;top:0;right:44px;display:block;font-size:1.25em;color:blue}#barra-brasil .acesso-info{position:absolute;left:130px}#barra-brasil .list{position:absolute;top:0;right:40px;width:auto}#barra-brasil .list-eselo{right:90px !important}#barra-brasil .list .first{border-left:2px solid #dfdfdf}#barra-brasil .list-item{display:inline-block;height:32px;line-height:32px;border-right:2px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 15px 8px 13px}#barra-brasil .link-barra{color:#606060}#barra-brasil #menu-icon{position:absolute;top:3px;border-top:15px double #606060;border-bottom:5px solid #606060;display:none;width:20px;right:5px}@media only screen and (max-width: 959px){#barra-brasil #menu-icon{display:inline-block;padding:5px 3px 0px 3px}#barra-brasil .list .first{border-left:1px solid #dfdfdf}#barra-brasil nav:hover #menu-icon,#barra-brasil nav:active #menu-icon,#barra-brasil nav:focus #menu-icon{background-color:#DDD}body.contraste #barra-brasil nav:hover #menu-icon,body.contraste #barra-brasil nav:active #menu-icon,body.contraste #barra-brasil nav:focus #menu-icon{background-color:#606060 !important}#barra-brasil ul.list,#barra-brasil ul.list:active,#barra-brasil ul.list:focus{overflow:hidden;height:0px;transition:0.3s;padding-top:32px;width:auto;position:absolute;z-index:9}#barra-brasil .list-item{display:block;text-align:center;height:30px;background:#EEE;border:1px solid #dfdfdf}#barra-brasil .list-item a{padding:8px 30px 8px 28px}body.contraste #barra-brasil .list-item{background:#000 !important}body.contraste #menu-icon{border-top:15px double #fff !important;border-bottom:5px solid #fff !important}#barra-brasil .list a:active li,#barra-brasil .list a:focus li,#barra-brasil .list a:hover li{background:#DDD}body.contraste #barra-brasil .list a:active li,body.contraste #barra-brasil .list a:focus li,body.contraste #barra-brasil .list a:hover li{background:#606060 !important}#barra-brasil nav:active ul.list,#barra-brasil nav:focus ul.list,#barra-brasil nav:hover ul.list{height:165px;transition:0.5s}div#wrapper-barra-brasil{overflow:visible}}@media screen and (min-width: 960px){#wrapper-barra-brasil{width:960px}}@media print{#barra-brasil .list{display:none}#barra-brasil .acesso-info .link-barra:after{content:" Barra GovBr"}}</style><style type="text/css" media="all">div#wrapper-footer-brasil{position:relative;overflow:hidden;margin:0 auto;width:auto;padding:0 20px;max-width:960px}#wrapper-footer-brasil .logo-acesso-footer{float:left;width:117px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20117%2049%22%20height%3D%2249%22%20width%3D%22117%22%20shape-rendering%3D%22geometricPrecision%22%20text-rendering%3D%22geometricPrecision%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B.a%20%7Bfont%3A%20normal%20bold%2011px%20Open%20Sans%2C%20sans-serif%3B%7D%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%2223%22%20r%3D%2222%22%20fill%3D%22%23f6a800%22%2F%3E%3Cpath%20style%3D%22stroke%3A%23f6a800%3Bstroke-width%3A4%3Bstroke-linejoin%3Around%3B%22%20d%3D%22m%204%2C43%203%2C-6%204%2C3%20z%22%2F%3E%3Ccircle%20r%3D%224.5%22%20cy%3D%2211%22%20cx%3D%2222%22%20fill%3D%22%2300692c%22%2F%3E%3Cg%20fill%3D%22%23fff%22%3E%3Ctext%20x%3D%2248%22%20y%3D%2222%22%3E%3Ctspan%20class%3D%22a%22%20y%3D%2218%22%3EAcesso%20%C3%A0%3C%2Ftspan%3E%3Ctspan%20class%3D%22a%22%20x%3D%2248%22%20y%3D%2231%22%3EInforma%C3%A7%C3%A3o%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fg%3E%3Cpath%20style%3D%22stroke%3A%2300692c%3Bstroke-width%3A9%3Bstroke-linecap%3Around%3B%22%20d%3D%22m%2022%2C23%20v%2013%22%2F%3E%3C%2Fsvg%3E") center no-repeat;height:49px}#wrapper-footer-brasil .logo-governo-federal{float:left;width:149px;height:42px;background-repeat:no-repeat;background-position:bottom right;background-image:url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20enable-background%3D%22new%200%200%20115.5%2033.9%22%20version%3D%221.1%22%20viewBox%3D%220%200%20115.5%2033.9%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.m%7Bfill%3A%23FFF%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22m%22%20d%3D%22M4.1%2C32.3h40.3V22C33.5%2C20.3%2C13.2%2C25.4%2C4.1%2C32.3z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m53.2%206.2c0-0.7-0.2-1.3-0.6-1.7s-1-0.6-1.7-0.6h-2.1l-0.1%200.1v6.6h1.2v-2.2h0.9c0.4%200%200.7%200%201-0.1s0.5-0.2%200.7-0.4%200.4-0.4%200.5-0.7%200.2-0.7%200.2-1zm-1.4%200.4c0%200.1-0.1%200.3-0.2%200.4s-0.1%200.2-0.2%200.3-0.2%200.1-0.3%200.1h-1.1v-2.5h0.9c0.2%200%200.4%200%200.5%200.1l0.3%200.3c0.1%200.1%200.1%200.2%200.2%200.4v0.4c-0.1%200.2-0.1%200.3-0.1%200.5z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22M55.9%2C3.9h-0.8l-2.2%2C6.6v0.1c0.2%2C0.1%2C0.4%2C0.1%2C0.6%2C0.1h0.6l0.5-1.5H57l0.2%2C0.9c0.1%2C0.3%2C0.2%2C0.5%2C0.3%2C0.6%20%20s0.3%2C0.2%2C0.6%2C0.2s0.5%2C0%2C0.7-0.2L56.6%2C4C56.4%2C4%2C56.2%2C3.9%2C55.9%2C3.9z%20M55%2C8.1l0.4-1.2l0.4-1.6h0.1l0.5%2C1.9l0.3%2C1H55V8.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m59%203.9v1.2h1.7v5.6h1.4v-5.6h0.9c0.2%200%200.4%200%200.5-0.1s0.2-0.2%200.2-0.4%200-0.4-0.1-0.5h-4.6v-0.2z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m69.1%2010l-0.2-0.4-0.4-1-0.3-0.6c-0.1-0.2-0.2-0.2-0.4-0.3%200.2-0.1%200.3-0.2%200.5-0.3%200.1-0.1%200.3-0.2%200.4-0.4%200.1%200%200.2-0.2%200.3-0.4s0.1-0.4%200.1-0.6c0-0.7-0.2-1.2-0.6-1.5-0.4-0.4-1-0.5-1.7-0.5h-2.3v6.6h1.3v-2.5h0.6c0.2%200%200.4%200.1%200.6%200.2%200.1%200.1%200.2%200.3%200.3%200.5l0.4%201.2c0.1%200.3%200.2%200.5%200.3%200.6s0.3%200.2%200.5%200.2%200.4%200%200.5-0.1c0.2-0.1%200.3-0.2%200.4-0.3-0.1-0.1-0.2-0.3-0.3-0.4zm-2.4-3h-0.9v-2.1h0.9c0.7%200%201%200.4%201%201.1s-0.3%201-1%201z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m75.6%203.9h-0.8l-2.2%206.6v0.1c0.2%200.1%200.4%200.1%200.6%200.1h0.6l0.5-1.5h2.3l0.2%200.9c0.1%200.3%200.2%200.4%200.3%200.6%200.1%200.1%200.3%200.2%200.6%200.2s0.5%200%200.7-0.2l-2.1-6.7c-0.2%200-0.5-0.1-0.7-0.1zm-0.9%204.2l0.3-1.3%200.4-1.6h0.1l0.5%201.9%200.3%201h-1.6z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m83.7%203.9h-0.8l-2.2%206.6v0.1c0.2%200.1%200.4%200.1%200.6%200.1h0.6l0.5-1.5h2.3l0.3%200.8c0.1%200.3%200.2%200.4%200.3%200.6%200.1%200.1%200.3%200.2%200.6%200.2s0.5%200%200.7-0.2l-2.2-6.6c-0.2%200-0.4-0.1-0.7-0.1zm-0.9%204.2l0.4-1.2%200.4-1.6h0.1l0.5%201.9%200.3%201h-1.7v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m97.7%203.9h-0.8l-2.2%206.6v0.1c0.2%200.1%200.4%200.1%200.6%200.1h0.6l0.5-1.5h2.3l0.3%200.8c0.1%200.3%200.2%200.4%200.3%200.6%200.1%200.1%200.3%200.2%200.6%200.2s0.5%200%200.7-0.2l-2.2-6.6c-0.2%200-0.4-0.1-0.7-0.1zm-0.9%204.2l0.4-1.2%200.4-1.6h0.1l0.5%201.9%200.3%201h-1.7v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m106.1%204.9c-0.2-0.3-0.5-0.6-0.9-0.7-0.4-0.2-0.8-0.3-1.3-0.3h-2.3l-0.1%200.1v6.6l0.1%200.1h2.2c0.3%200%200.7%200%201-0.1s0.6-0.2%200.8-0.4c0.4-0.3%200.7-0.7%200.8-1.2%200.2-0.5%200.2-1%200.2-1.7%200-0.4%200-0.9-0.1-1.3s-0.2-0.7-0.4-1.1zm-0.8%203.1c0%200.2-0.1%200.4-0.1%200.6s-0.1%200.4-0.2%200.5c-0.1%200.2-0.2%200.3-0.4%200.4-0.1%200-0.2%200.1-0.4%200.1h-1.3v-4.6h1.1c0.6%200%201%200.3%201.2%200.8%200.1%200.2%200.2%200.5%200.2%200.8v0.8l-0.1%200.6z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m110.8%204c-0.2%200-0.4-0.1-0.7-0.1h-0.8l-2.2%206.6v0.1c0.2%200.1%200.4%200.1%200.6%200.1h0.6l0.5-1.5h2.3l0.2%200.9c0.1%200.3%200.2%200.4%200.3%200.6%200.1%200.1%200.3%200.2%200.6%200.2s0.5%200%200.7-0.2c0%200-2.1-6.7-2.1-6.7zm-1.6%204.1l0.4-1.2%200.4-1.6h0.1l0.5%201.9%200.3%201h-1.7v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m70.4%204v6.7h1.3v-6.7h-0.7c-0.2-0.1-0.4-0.1-0.6%200z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m92.7%203.9c-0.3%200-0.6%200-0.9%200.1l-0.7%202.7c-0.2%200.8-0.3%201.3-0.4%201.7h-0.1l-0.4-1.7-0.7-2.7c-0.2%200-0.5-0.1-0.8-0.1s-0.6%200-0.9%200.1l-0.5%206.6c0.2%200%200.4%200.1%200.6%200.1s0.5%200%200.6%200l0.2-3.1%200.1-2.1h0.1l1.1%204.1h1.4l1.1-4.2h0.1l0.1%202.1%200.2%203.1h0.6c0.2%200%200.4%200%200.6-0.1l-0.5-6.5c-0.3-0.1-0.6-0.1-0.9-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m55.1%203.5l2.2-0.9c0-0.2-0.1-0.4-0.2-0.6s-0.2-0.3-0.3-0.4l-2.1%201.3c0%200.1%200.1%200.2%200.1%200.3l0.3%200.3z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m63.1%2029.1v2.7c0%200.1%200%200.2%200.1%200.3%200%200.1%200.1%200.1%200.2%200.1h1.2c0.2%200%200.4-0.1%200.4-0.3v-0.2h-1.4v-0.8h1v-0.4h-1v-0.8h1.4v-0.5h-1.9v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m84.8%2029.1v3h0.6v-1.3h1v-0.4h-1v-0.8h1c0.1%200%200.2%200%200.2-0.1%200.1%200%200.1-0.1%200.1-0.2v-0.2h-1.9z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m89%2029.1v2.7c0%200.1%200%200.2%200.1%200.3%200%200.1%200.1%200.1%200.2%200.1h1.2c0.2%200%200.4-0.1%200.4-0.3v-0.2h-1.4v-0.8h1v-0.4h-1v-0.8h1.3v-0.5h-1.8v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m98.3%2029.1v2.7c0%200.1%200%200.2%200.1%200.3%200%200.1%200.1%200.1%200.2%200.1h1.2c0.2%200%200.4-0.1%200.4-0.3v-0.2h-1.4v-0.8h1v-0.4h-1v-0.8h1.3v-0.5h-1.8v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m60.2%2029.1l-0.6%202.5v-0.1c0-0.3-0.1-0.6-0.2-0.8l-0.4-1.4c0-0.1-0.1-0.2-0.1-0.2s-0.1-0.1-0.2-0.1-0.2%200-0.4%200.1l0.8%202.7c0%200.1%200.1%200.2%200.1%200.2h0.7l0.9-3h-0.3c-0.2%200-0.2%200-0.3%200.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m112%2029v2.7c0%200.1%200%200.2%200.1%200.3%200%200.1%200.1%200.1%200.2%200.1h1.1c0.2%200%200.4-0.1%200.4-0.3v-0.2h-1.2v-2.2c0-0.1%200-0.2-0.1-0.3s-0.2-0.1-0.3-0.1h-0.2z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m49.7%2029.1c-0.2%200.1-0.3%200.2-0.4%200.3s-0.2%200.3-0.3%200.5-0.1%200.4-0.1%200.7c0%200.2%200%200.4%200.1%200.6s0.1%200.4%200.2%200.5%200.2%200.2%200.4%200.3%200.3%200.1%200.6%200.1c0.4%200%200.8%200%201.2-0.2v-1.2c0-0.2-0.1-0.4-0.4-0.4h-0.7l-0.1%200.2c0%200.1%200%200.2%200.1%200.2%200%200%200.1%200.1%200.2%200.1h0.3v0.7h-0.5c-0.5%200-0.8-0.4-0.8-1.1s0.3-1.1%200.8-1.1c0.3%200%200.5%200.1%200.8%200.2%200.1%200%200.1-0.1%200.2-0.2%200-0.1%200.1-0.2%200.1-0.2-0.3-0.2-0.7-0.3-1-0.3-0.4%200.2-0.5%200.2-0.7%200.3z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m74.2%2029c-0.1%200-0.2%200-0.2%200.1s-0.1%200.2-0.1%200.3v2l-0.3-0.7-0.8-1.7h-0.7v3h0.6v-2.3l0.3%200.6%200.8%201.7h0.8v-3h-0.4z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m55.8%2029.4c-0.1-0.1-0.2-0.2-0.4-0.3-0.1-0.1-0.3-0.1-0.5-0.1s-0.4%200-0.5%200.1c-0.2%200.1-0.3%200.2-0.4%200.3s-0.2%200.3-0.2%200.5c-0.1%200.2-0.1%200.4-0.1%200.7%200%200.6%200.2%201%200.5%201.3%200.2%200.2%200.5%200.3%200.8%200.3%200.2%200%200.4%200%200.5-0.1%200.2-0.1%200.3-0.2%200.4-0.3s0.2-0.3%200.2-0.5c0.1-0.2%200.1-0.4%200.1-0.7%200-0.2%200-0.5-0.1-0.7s-0.2-0.3-0.3-0.5zm-0.9%202.3c-0.4%200-0.7-0.4-0.7-1.1s0.2-1.1%200.7-1.1c0.4%200%200.7%200.4%200.7%201.1-0.1%200.7-0.3%201.1-0.7%201.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m79.3%2029.9c0-0.2-0.1-0.4-0.2-0.5s-0.2-0.2-0.4-0.3-0.3-0.1-0.5-0.1-0.4%200-0.5%200.1c-0.2%200.1-0.3%200.2-0.4%200.3s-0.2%200.3-0.2%200.5c-0.1%200.2-0.1%200.4-0.1%200.7%200%200.6%200.2%201%200.5%201.3%200.2%200.2%200.5%200.3%200.8%200.3%200.2%200%200.4%200%200.5-0.1%200.2-0.1%200.3-0.2%200.4-0.3s0.2-0.3%200.2-0.5c0.1-0.2%200.1-0.4%200.1-0.7-0.1-0.3-0.1-0.5-0.2-0.7zm-1.1%201.8c-0.4%200-0.7-0.4-0.7-1.1s0.2-1.1%200.7-1.1c0.4%200%200.7%200.4%200.7%201.1-0.1%200.7-0.3%201.1-0.7%201.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m69.6%2031.8c0-0.1-0.1-0.1-0.1-0.2l-0.2-0.4c0-0.1-0.1-0.2-0.1-0.2-0.1-0.1-0.1-0.1-0.2-0.1%200.1%200%200.2-0.1%200.2-0.1%200.1%200%200.1-0.1%200.2-0.2%200-0.1%200.1-0.2%200.1-0.2v-0.3c0-0.3-0.1-0.5-0.3-0.8-0.2-0.2-0.4-0.2-0.8-0.2h-1v3h0.6v-1.2h0.3c0.1%200%200.2%200%200.3%200.1l0.2%200.2%200.2%200.5c0%200.1%200.1%200.2%200.2%200.3s0.1%200.1%200.2%200.1h0.2c0.1%200%200.1-0.1%200.2-0.1-0.1-0.1-0.2-0.1-0.2-0.2zm-1.1-1.3h-0.4v-1h0.4c0.3%200%200.5%200.2%200.5%200.5s-0.2%200.5-0.5%200.5z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m108.7%2029.1h-0.3-0.4l-1%203h0.6l0.2-0.7h1.1l0.1%200.4c0%200.1%200.1%200.2%200.1%200.2%200.1%200%200.2%200.1%200.3%200.1s0.2%200%200.3-0.1l-1-2.9zm-0.8%201.8l0.2-0.6c0.1-0.4%200.2-0.6%200.2-0.8l0.2%200.9%200.1%200.4h-0.7v0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m95.5%2029.5c-0.1-0.1-0.2-0.2-0.4-0.3s-0.4-0.1-0.6-0.1h-1.1v3h1.5c0.1%200%200.2-0.1%200.4-0.2%200.2-0.2%200.3-0.3%200.4-0.6%200.1-0.2%200.1-0.5%200.1-0.8%200-0.2%200-0.4-0.1-0.6%200-0.1-0.1-0.3-0.2-0.4zm-0.3%201.4v0.3c0%200.1%200%200.2-0.1%200.2l-0.2%200.2h-0.9v-2.1h0.5c0.3%200%200.5%200.1%200.6%200.4%200%200.1%200.1%200.2%200.1%200.3v0.4%200.3z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m104.8%2031.8c0-0.1-0.1-0.1-0.1-0.2l-0.2-0.4c0-0.1-0.1-0.2-0.1-0.2-0.1-0.1-0.1-0.1-0.2-0.1%200.1%200%200.2-0.1%200.2-0.1%200.1%200%200.1-0.1%200.2-0.2%200-0.1%200.1-0.2%200.1-0.2v-0.3c0-0.3-0.1-0.5-0.3-0.8-0.2-0.2-0.4-0.2-0.8-0.2h-1v3h0.6v-1.2h0.2c0.1%200%200.2%200%200.3%200.1l0.2%200.2%200.2%200.5c0%200.1%200.1%200.2%200.2%200.3s0.1%200.1%200.2%200.1h0.2c0.1%200%200.1-0.1%200.2-0.1-0.1-0.1-0.1-0.1-0.1-0.2zm-1.1-1.3h-0.4v-1h0.4c0.3%200%200.5%200.2%200.5%200.5-0.1%200.3-0.2%200.5-0.5%200.5z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m78.2%2012.8c-0.5%200-0.9%200-1.2%200.1l-4.3%2013.1%200.1%200.1c0.3%200.1%201.6%200.1%201.9%200l1-3.3h5l0.7%202.3c0.1%200.4%200.3%200.7%200.5%200.9s1.7%200.2%202%200l-4.4-13.2h-1.3zm1%208.4h-2.9l1.2-3.5c0.4-1.2%200.6-2.1%200.8-2.8h0.1c0.3%201.2%200.7%202.4%201%203.5l0.9%202.8h-1.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m109.2%2024.3c-0.6%200-1.2%200-1.8%200.1v-10.3c0-0.5-0.1-0.8-0.3-1s-0.5-0.3-0.9-0.3h-0.8l-0.1%200.1v12c0%200.4%200.1%200.7%200.3%201%200.2%200.2%200.5%200.3%200.9%200.3h5.1c0.8%200%201.2-0.3%201.3-1%200-0.3%200.1-0.5%200.1-0.8h-3.8v-0.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m69.9%2024.2l-0.9-2.3c-0.3-0.9-0.8-1.4-1.4-1.7%200.7-0.2%201.3-0.7%201.8-1.3s0.7-1.4%200.7-2.3c0-1.3-0.4-2.3-1.2-2.9-0.8-0.7-1.9-1-3.3-1l-4.2%200.1-0.1%200.1v13.2c0.3%200.1%201.7%200.1%202.1%200v-5.4h1.6c0.6%200%201%200.1%201.3%200.4s0.5%200.7%200.7%201.2l1%202.6c0.2%200.5%200.3%200.8%200.5%201s1.9%200.1%202.2-0.4c-0.3-0.1-0.6-0.6-0.8-1.3zm-4.3-5.1h-2.2v-4.8h2.2c1.6%200%202.4%200.8%202.4%202.3%200%200.7-0.2%201.2-0.5%201.7-0.4%200.5-1%200.8-1.9%200.8z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m98.8%2012.8v13.3c0.3%200.1%200.7%200.1%201%200.1s0.7%200%201-0.1v-13.3c-0.3-0.1-0.6-0.1-1-0.1-0.3%200-0.7%200.1-1%200.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m92.3%2018.9l-2.3-1c-0.6-0.2-1-0.5-1.2-0.7-0.3-0.3-0.4-0.6-0.4-1.1s0.2-0.9%200.6-1.2%201-0.5%201.7-0.5c1%200%202.1%200.3%203.3%200.9%200.5-0.4%200.7-1%200.8-1.6-1.3-0.7-2.7-1-4-1-0.7%200-1.3%200.1-1.8%200.3-0.6%200.2-1%200.4-1.4%200.8s-0.7%200.8-0.9%201.2c-0.2%200.5-0.3%201-0.3%201.5%200%201.5%200.9%202.6%202.7%203.4l2.3%201c1.2%200.5%201.8%201.2%201.8%202.1%200%200.6-0.2%201-0.7%201.3-0.4%200.3-1%200.5-1.8%200.5-1.3%200-2.6-0.4-3.9-1.3-0.5%200.4-0.8%201-0.9%201.6%201.4%201%202.9%201.5%204.5%201.5%201.7%200%202.9-0.4%203.7-1.1s1.2-1.7%201.2-2.8c0-0.8-0.2-1.5-0.7-2.1-0.6-0.8-1.4-1.3-2.3-1.7z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22M44.4%2C17.1l0.1-13.3H4.1V19L20.3%2C6.2C35.9%2C13.1%2C43.9%2C16.8%2C44.4%2C17.1z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m57%2020.2c-0.2-0.3-0.5-0.6-0.8-0.8s-0.6-0.4-1-0.5c0.6-0.2%201-0.6%201.3-1.1s0.5-1%200.5-1.7c0-1.1-0.4-2-1.1-2.6s-1.8-0.9-3.2-0.9l-4%200.1-0.1%200.1v13.2l0.1%200.2h4.3c1.5%200%202.7-0.3%203.5-1s1.2-1.6%201.2-2.8c0-0.4-0.1-0.8-0.2-1.2s-0.3-0.7-0.5-1zm-6.3-5.9h2.1c1.5%200%202.2%200.7%202.2%202%200%200.3%200%200.5-0.1%200.8-0.1%200.2-0.2%200.5-0.4%200.6-0.2%200.2-0.4%200.3-0.7%200.4s-0.6%200.2-1.1%200.2h-2v-4zm4.8%208.9c-0.1%200.3-0.2%200.5-0.4%200.7s-0.5%200.4-0.8%200.5-0.7%200.2-1.2%200.2h-2.3v-4.7h2.2c0.5%200%200.9%200.1%201.2%200.2s0.6%200.3%200.8%200.5%200.4%200.5%200.5%200.8%200.2%200.6%200.2%200.8c-0.1%200.4-0.2%200.7-0.2%201z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m8.1%2027.1c0.9-5.5%203.9-9.2%209-11.2%201.8-0.7%203.6-1%205.3-1%205.2%200%209.2%202.8%209.2%203.2-0.4%200.1%205-0.6%209.7-0.9-3.8-1.7-10.6-4.7-20.7-9.1l-16.5%2013.2v8.8c1.6-1.3%204.3-3.2%204-3z%22%2F%3E%3Cpath%20class%3D%22m%22%20d%3D%22m22.5%2016.4c-1.5%200-3.1%200.3-4.8%201-4%201.7-6.7%204.7-7.8%208.9%204.4-2.8%209.2-5.4%2020-7.7-1.4-0.9-4.2-2.2-7.4-2.2z%22%2F%3E%3C%2Fsvg%3E")}body.contraste #footer-brasil{background:#000 !important}@media screen and (min-width: 960px){#wrapper-footer-brasil{width:960px}}@media print{#wrapper-footer-brasil{border-top:2px solid #dfdfdf}#wrapper-footer-brasil:before{content:"Barra GovBr";color:#606060;font-size:12px;font-family:"Open Sans",Arial,Helvetica,sans-serif}}</style></head>
+
+<body class="wordpress y2021 m04 d24 h01 page pageid-449 page-author-admin" style="">
+
+<!-- Barra Brasil -->
+<div id="barra-brasil"><div id="wrapper-barra-brasil"><div class="brasil-flag"><a href="https://gov.br" class="link-barra">Brasil</a></div><nav><ul id="lista-barra-brasil" class="list"><li><a href="#" id="menu-icon"></a></li><li class="list-item first"><a href="http://www.saude.gov.br/coronavirus" style="color:red;">CORONAVÍRUS (COVID-19)</a></li><li class="list-item"><a href="http://www.simplifique.gov.br" class="link-barra">Simplifique!</a></li><li class="list-item"><a href="https://www.gov.br/pt-br/participacao-social/" class="link-barra">Participe</a></li><li class="list-item"><a href="http://www.acessoainformacao.gov.br" class="link-barra">Acesso à informação</a></li><li class="list-item"><a href="http://www.planalto.gov.br/legislacao" class="link-barra">Legislação</a></li><li class="list-item last last-item"><a href="https://gov.br/pt-br/canais-do-executivo-federal" class="link-barra">Canais</a></li></ul></nav><span id="brasil-vlibras"><a class="logo-vlibras" id="logovlibras" href="#"></a><span class="link-vlibras"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" class="barralazy" data-src="//barra.brasil.gov.br/imagens/vlibras.gif" width="132" height="116">&nbsp;<br>O conteúdo desse portal pode ser acessível em Libras usando o <a href="http://www.vlibras.gov.br">VLibras</a></span></span></div></div>
+
+<div id="wrapper" class="hfeed">
+
+	<div id="header">
+		<div>
+			<ul id="accessibility">
+				<li>
+					<a accesskey="1" href="javascript:void(0)" id="link-conteudo">
+						Ir para o conteúdo <span>1</span>
+					</a>
+				</li>
+				<li>
+					<a accesskey="2" href="javascript:void(0)" id="link-navegacao">
+						Ir para o menu <span>2</span>
+					</a>
+				</li>
+				<li>
+					<a accesskey="3" href="javascript:void(0)" id="link-busca">
+						Ir para a busca <span>3</span>
+					</a>
+				</li>
+				<li class="last-item">
+					<a accesskey="4" href="javascript:void(0)" id="link-rodape">
+						Ir para o rodapé <span>4</span>
+					</a>
+				</li>
+			</ul>
+			<ul id="portal-siteactions">
+				<li id="siteaction-accessibility"><a href="https://empregabrasil.mte.gov.br/acessibilidade/" accesskey="5">Acessibilidade</a></li>
+				<!-- Link Hard de Acessibilidade.
+				<li id="siteaction-accessibility">
+					<a href="acessibilidade/" title="Acessibilidade" accesskey="5">
+						Acessibilidade
+					</a>
+				</li>
+				-->
+				<li id="siteaction-contraste" class="last-item">
+					<a href="#" title="Alto Contraste" accesskey="6">
+						Alto Contraste
+					</a>
+				</li>
+							</ul>
+			<div id="logo">
+				<a id="portal-logo" href="https://empregabrasil.mte.gov.br/" title="Portal Emprega Brasil" rel="home">
+          <span id="portal-title-1">
+              Portal           </span>
+          <h1 id="portal-title" class="corto">
+               Emprega Brasil          </h1>
+          <span id="portal-description">
+              MINISTÉRIO DO TRABALHO          </span>
+				</a>
 			</div>
-			<div class="modal-body">
-				<form>
-					<div id="select-country-controller" class="modal-col left country">
-						<label class="sr-only" for="country-selector-drop">Search Countries</label>
-						<select name="%s" id="country-selector-drop-js"></select>
-					</div>
-					<div id="select-language-controller" class="modal-col right language">
-						<label class="sr-only" for="language-selector-drop">Search Languages</label>
-						<select name="%s" id="language-selector-drop-js"></select>
-					</div>
-					<div id="selection-footer">
-						<div id="selection-image" class="globe country-image"></div>
-						<button id="save-clang-pref" class="btn-gradient-horizontal savejs">Save							<span class="check"></span></button>
-					</div>
-				</form>
+      <div id="portal-searchbox">
+        <form id="searchform" class="blog-search" method="get" action="https://empregabrasil.mte.gov.br">
+            <fieldset class="LSBox">
+                <legend class="hiddenStructure">Buscar no portal</legend>
+                <label class="hiddenStructure" for="nolivesearchGadget">Buscar no portal</label>
+                <input id="s" name="s" type="text" value="" size="18" title="Buscar no portal" placeholder="Buscar no portal" class="searchField text" tabindex="1">
+                <input class="searchButton" type="submit" value="Buscar no portal" tabindex="2">
+            </fieldset>
+        </form>
+      </div>
+			<div id="social-icons">
+				<ul>
+					<li id="portalredes-facebook" class="portalredes-item">
+						<a href="https://www.facebook.com/ministeriodotrabalho" target="_blank">Facebook</a>
+					</li>
+					<li id="portalredes-instagram" class="portalredes-item">
+						<a href="https://www.instagram.com/ministeriodotrabalho" target="_blank">Instagram</a>
+					</li>
+					<li id="portalredes-twitter" class="portalredes-item">
+						<a href="https://twitter.com/trabalho" target="_blank">Twitter</a>
+					</li>
+					<li id="portalredes-youtube" class="portalredes-item">
+						<a href="https://www.youtube.com/c/canaltrabalho" target="_blank">YouTube</a>
+					</li>
+					<li id="portalredes-flickr" class="portalredes-item">
+						<a href="https://www.flickr.com/photos/ministeriodotrabalho" target="_blank">Flickr</a>
+					</li>
+					<li id="portalredes-soundcloud" class="portalredes-item last-item">
+						<a href="https://soundcloud.com/trabalho" target="_blank">Soundcloud</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<!-- /.modal-content -->
-	</div>
-	<!-- /.modal-dialog -->
+	</div><!--  #header -->
+
+	<div id="sobre">
+        <div class="menu-menu-de-cabecalho-container"><ul id="menu-menu-de-cabecalho" class="menu"><li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="https://servicos.mte.gov.br">Entrar</a></li>
+<li id="menu-item-427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-427"><a href="https://empregabrasil.mte.gov.br/passo-a-passo/">Passo a Passo</a></li>
+<li id="menu-item-209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-209 last-item"><a href="https://acesso.gov.br/acesso/#/primeiro-acesso">Cadastrar</a></li>
+</ul></div>	</div><!-- #access -->
+
+	<div id="main" role="main">
+		<div id="plone-content">
+            <div id="portal-columns" class="row">
+                <div id="viewlet-above-content">
+    <div id="portal-breadcrumbs">
+       <ul id="breadcrumbs" class="breadcrumbs"><li class="item-home"><a class="bread-link bread-home" href="https://empregabrasil.mte.gov.br" title="Página Inicial">Página Inicial</a></li><li class="separator separator-home"> &gt; </li><li class="item-current item-449 last-item"><span class="bread-current bread-449"> Política de Privacidade CTPS Digital</span></li></ul>    </div>
 </div>
-<!-- /.modal -->
-<header class="banner navbar navbar-default navbar-fixed-top navbar-opaque">
-        <div class="container-fluid">
-        <div id="util-nav"><a class="navbar-brand" href="https://privacy.thewaltdisneycompany.com/en/" title="The Walt Disney Privacy Center"><img src="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/logos/disney-logo.svg" alt="The Walt Disney Privacy Center" title="The Walt Disney Privacy Center"></a>
-            <div id="language-selector">
-                <a href="" data-toggle="modal" data-target="#language-selector-modal">
-                    <span class="icon-world"></span>
-                    <span class="country country-mobile">br</span>
-                    <span class="country country-full">Brazil (Brasil)</span>
-                    <span class="language">English</span>
-                </a>
-            </div>
+<div id="navigation">
+    <a name="anavigation" id="anavigation"></a>
+    <span class="menuTrigger">Menu</span>
+    <div id="portal-column-one" class="cell width-1:4 position-0">
+                <div class="portletWrapper first-item">
+            <dl class="portlet portletNavigationTree first-item-nav">
+                <dt class="portletHeader">Menu de Relevância</dt>
+                <dd class="portletItem">
+                    <ul id="menu-menu-de-relevancia" class="menu navTree navTreeLevel0"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a target="_blank" href="http://trabalho.gov.br/"><span>MTb</span></a></li>
+<li id="menu-item-528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-528"><a href="http://trabalho.gov.br/contato"><span>Ouvidoria – MTb</span></a></li>
+<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://empregabrasil.mte.gov.br/sobre-emprega-brasil/"><span>Sobre o Emprega Brasil</span></a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-530 last-item"><a href="http://trabalho.gov.br/rede-de-atendimento"><span>Postos de Atendimento</span></a></li>
+</ul>                </dd>
+            </dl>
         </div>
-                <div id="gradient-border" class="gradient-horizontal"></div>
-    </div>
-    <div id="nav-wrapper">
-        <div class="container-fluid search-desktop">
-            <div id="search"><form role="search" method="get" id="search-form" action="https://privacy.thewaltdisneycompany.com/en/">
-    <div class="search-wrap">
-        <label class="screen-reader-text" for="search-submit">Search for</label>
-        <input type="hidden" value="1" name="sentence">
-        <input type="search" placeholder="Search" maxlength="64" name="s" id="search-input" value="">
-        <input class="" type="submit" id="search-submit" value="">
-        <div class="clear-search"></div>
-    </div>
-</form>
-</div>
+                <div class="portletWrapper">
+            <dl class="portlet portletNavigationTree">
+                <dt class="portletHeader">EMPREGA BRASIL</dt>
+                <dd class="portletItem">
+                    <ul id="menu-emprega-brasil" class="menu navTree navTreeLevel0"><li id="menu-item-383" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-383"><a href="https://empregabrasil.mte.gov.br/passo-a-passo/"><span>Passo a Passo</span></a></li>
+<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="https://empregabrasil.mte.gov.br/duvidas-frequentes/"><span>Dúvidas Frequentes</span></a></li>
+<li id="menu-item-438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-438"><a href="https://play.google.com/store/apps/details?id=br.gov.dataprev.sinefacil&amp;hl=pt_BR"><span>Instalação do SINE Fácil</span></a></li>
+<li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-388"><a href="https://servicos.mte.gov.br/#/loginfailed/redirect="><span>Entrar</span></a></li>
+<li id="menu-item-389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-389 last-item"><a href="https://acesso.gov.br/acesso/#/primeiro-acesso"><span>Cadastrar</span></a></li>
+</ul>                </dd>
+            </dl>
         </div>
-
-        <div class="container nav-wrap">
-            <div class="navbar-header">
-                <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".navbar-collapse" type="button" class="navbar-toggle open-btn pull-left">
-                    <span class="sr-only">
-                        Toggle navigation                    </span>
-                    <span class="icon-bar gradient-horizontal"></span>
-                    <span class="icon-bar gradient-horizontal"></span>
-                    <span class="icon-bar gradient-horizontal"></span>
-                </button>
-                <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".navbar-collapse" type="button" class="navbar-toggle close-btn pull-right">
-                    <span class="sr-only">
-                        Toggle navigation                    </span>
-                    <span class="icon-bar bar-top gradient-horizontal"></span>
-                    <span class="icon-bar bar-bottom gradient-horizontal"></span>
-                </button>
-                <button data-toggle="dropdown" type="button" class="navbar-toggle back-btn pull-left">
-                    <span class="sr-only">
-                        Toggle navigation                    </span>
-                    <span class="icon-bar bar-top gradient-horizontal"></span>
-                    <span class="icon-bar bar-bottom gradient-horizontal"></span>
-                </button>
-            </div>
-            <div class="side-collapse in">
-                <div class="side-collapse-inner">
-                    <nav id="navbar" class="collapse navbar-collapse">
-
-                        <div id="search" class="search-mobile"><form role="search" method="get" id="search-form" action="https://privacy.thewaltdisneycompany.com/en/">
-    <div class="search-wrap">
-        <label class="screen-reader-text" for="search-submit">Search for</label>
-        <input type="hidden" value="1" name="sentence">
-        <input type="search" placeholder="Search" maxlength="64" name="s" id="search-input" value="">
-        <input class="" type="submit" id="search-submit" value="">
-        <div class="clear-search"></div>
-    </div>
-</form>
-</div>
-                        <div id="nav-items">
-                            <div class="menu-main-menu-english-container"><ul id="menu-main-menu-english" class="nav navbar-nav mobile-nav"><li id="menu-item-12228" class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-395 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-12228 depth-0 privacy-policy has-children dropdown active"><a title="Privacy Policy" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/" aria-current="page">Privacy Policy <span class="menu-btn"><span class="icon-bar bar-top gradient-horizontal"></span> <span class="icon-bar bar-bottom gradient-horizontal"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-<li id="menu-item-12222" class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-395 current_page_item menu-item-12222 depth-1 privacy-policy no-children active"><a title="Privacy Policy" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/" aria-current="page">Privacy Policy</a></li>
-<li id="menu-item-25919" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-25919 depth-1 data-protection-in-brazil no-children"><a title="Data Protection in Brazil" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/data-protection-in-brazil/" aria-current="page">Data Protection in Brazil</a></li>
-</ul>
-
-<ul role="menu" class="dropdown-menu">
-</ul>
-
-</li><li id="menu-item-12468" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12468 depth-0 internet-safety has-children dropdown"><a title="Internet Safety" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://privacy.thewaltdisneycompany.com/en/internet-safety/">Internet Safety <span class="menu-btn"><span class="icon-bar bar-top gradient-horizontal"></span> <span class="icon-bar bar-bottom gradient-horizontal"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-<li id="menu-item-12564" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-12564 depth-1 internet-safety no-children"><a title="Internet Safety" href="https://privacy.thewaltdisneycompany.com/en/internet-safety/">Internet Safety</a></li>
-</ul>
-
-</li>
-<li id="menu-item-2138" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2138 depth-0 privacy-controls has-children dropdown"><a title="Privacy Controls" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/">Privacy Controls <span class="menu-btn"><span class="icon-bar bar-top gradient-horizontal"></span> <span class="icon-bar bar-bottom gradient-horizontal"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-<li id="menu-item-12558" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-12558 depth-1 privacy-controls no-children"><a title="Privacy Controls" href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/">Privacy Controls</a></li>
-<li id="menu-item-2144" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2144 depth-1 online-tracking-technologies-and-advertising no-children"><a title="ONLINE TRACKING TECHNOLOGIES AND ADVERTISING" href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/online-tracking-and-advertising/">ONLINE TRACKING TECHNOLOGIES AND ADVERTISING</a></li>
-<li id="menu-item-2147" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2147 depth-1 communication-choices no-children"><a title="Communication Choices" href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/communication-choices/">Communication Choices</a></li>
-</ul>
-
-</li>
-<li id="menu-item-2141" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2141 depth-0 support has-children dropdown"><a title="Contact Us" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://privacy.thewaltdisneycompany.com/en/support/">Contact Us <span class="menu-btn"><span class="icon-bar bar-top gradient-horizontal"></span> <span class="icon-bar bar-bottom gradient-horizontal"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-<li id="menu-item-12561" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-12561 depth-1 contact-us no-children"><a title="Contact Us" href="https://privacy.thewaltdisneycompany.com/en/support/">Contact Us</a></li>
-</ul>
-
-</li>
-<li id="menu-item-22973" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22973 depth-0 news has-children dropdown"><a title="News" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://privacy.thewaltdisneycompany.com/en/news/">News <span class="menu-btn"><span class="icon-bar bar-top gradient-horizontal"></span> <span class="icon-bar bar-bottom gradient-horizontal"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-<li id="menu-item-22974" class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-22974 depth-1 news no-children"><a title="News" href="https://privacy.thewaltdisneycompany.com/en/news/">News</a></li>
-</ul>
-
-</li>
-</ul></div>                            <div class="menu-brand-quilt visible-xs-block">
-                                <img src="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/images/logos/drop-down-logos.png" alt="Disney Brands">
-                            </div>
-                            <div id="search-icon"><span class="sr-only">Search</span></div>
-
-                        </div>
-                    </nav>
-                </div>
-            </div>
+                <div class="portletWrapper">
+            <dl class="portlet portletNavigationTree">
+                <dt class="portletHeader">Trabalhador</dt>
+                <dd class="portletItem">
+                    <ul id="menu-trabalhador" class="menu navTree navTreeLevel0"><li id="menu-item-647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-647"><a href="https://servicos.mte.gov.br"><span>Vagas de Emprego</span></a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a href="https://empregabrasil.mte.gov.br/82/seguro-desemprego/"><span>Seguro-Desemprego Web</span></a></li>
+<li id="menu-item-238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238"><a href="https://empregabrasil.mte.gov.br/92/abono-salarial/"><span>Abono Salarial</span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a target="_blank" href="http://cbo.maisemprego.mte.gov.br/cbosite/pages/home.jsf"><span>Ocupações (CBO)</span></a></li>
+<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-585"><a href="https://empregabrasil.mte.gov.br/carteira-de-trabalho-digital/"><span>Carteira de Trabalho Digital</span></a></li>
+<li id="menu-item-600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-600"><a href="http://escola.trabalho.gov.br"><span>Escola do Trabalhador</span></a></li>
+<li id="menu-item-607" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607 last-item"><a href="https://empregabrasil.mte.gov.br/passo-a-passo/obter-qr-code.html"><span>Sine Fácil</span></a></li>
+</ul>                </dd>
+            </dl>
         </div>
-    </div>
-</header>
-<div class="wrap container-fluid" role="document">
-    <div class="content row">
-        <main class="main" id="main-content">
-            <div class="container-fluid">
-    <div class="row">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 animated bounceInUp icon-left">
-                                        
-                        <object type="image/svg+xml" data="https://privacy.thewaltdisneycompany.com/app/uploads/2019/05/Privacy-Policy.svg" title="Privacy Policy" class="illustration">
-                        </object>
-
-                    
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <header class="animated bounceInUp">
-                        <h1>Privacy Policy</h1>
-                        <div class="last-modified">Last Modified: 01/13/2021</div>
-                    </header>
-                    <div class="article animated bounceInUp">
-                        <p><strong>SCOPE OF THIS POLICY</strong></p>
-<p>This privacy policy describes the processing of information provided or collected on the sites and applications where this privacy policy is posted, whether on our digital properties or on applications we make available on third-party sites or platforms. It also describes the processing of guest information provided to us or collected by us offline in our physical properties, such as in our stores, theme parks, resorts, and cruise ships, or through our guest call centers. We follow this privacy policy in accordance with applicable law in the places where we operate. In some cases, we may provide additional data privacy notices specific to certain products, practices, or regions. Those terms are to be read in conjunction with this policy.</p>
-<p>Please keep in mind that when you provide information to us on a third-party site or platform (for example, via our applications), the information you provide may be separately collected by the third-party site or platform. The information we collect is covered by this privacy policy, and the information the third-party site or platform collects is subject to the third-party site or platform’s privacy practices. Privacy choices you have made on the third-party site or platform will not apply to our use of the information we have collected directly through our applications. Please also keep in mind that our sites and applications may contain links to other sites not owned or controlled by us and we are not responsible for the privacy practices of those sites. We encourage you to be aware when you leave our sites or applications and to read the privacy policies of other sites that may collect your <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span>.</p>
-                    </div>
-
-                </div>
-
-
-                <div class="col-lg-12">
-                    <article class="accordion-wrap">
-                        <div class="fade-content-in">
-                            <a href="#" class="openall pull-right"><span class="btn-text">Expand All</span><span class="openall-btn"></span></a> <a href="#" class="closeall pull-right" style="display: none;"><span class="btn-text">Collapse All</span><span class="closeall-btn"><span class="icon-bar bar-top"></span></span></a>
-                        </div>
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-1" role="tab" id="heading1"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">WHO WE ARE</span></a></h4></div><div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1"><div class="panel-body"><p>Our company includes many different brands. When you visit, shop, or create an account with us, or use sites and applications, your information is controlled by a <a data-original-title="<p>Member means a subsidiary or affiliated entity that is part of The Walt Disney Family of Companies.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Member'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define member" aria-describedby="adb_Member" role="tooltip" href="#" class="tooltip-link">member</a><span style="display:none" id="adb_Member">&lt;p&gt;Member means a subsidiary or affiliated entity that is part of The Walt Disney Family of Companies.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Member'&gt;Learn More&lt;/a&gt;</span> of <a data-original-title="<p>The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define The Walt Disney Family of Companies" aria-describedby="adb_The-Walt-Disney-Family-of-Companies" role="tooltip" href="#" class="tooltip-link">The Walt Disney Family of Companies</a><span style="display:none" id="adb_The-Walt-Disney-Family-of-Companies">&lt;p&gt;The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'&gt;Learn More&lt;/a&gt;</span>. <a href="https://privacy.thewaltdisneycompany.com/en/definitions/#Data-Controller">The list of relevant data controllers can be found here</a>.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-2" role="tab" id="heading2"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">TYPES OF INFORMATION WE COLLECT</span></a></h4></div><div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2"><div class="panel-body"><p>We collect two basic types of information – <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> (as defined in this policy) and <a data-original-title="<p>Anonymous information means information that does not directly or indirectly identify, and cannot reasonably be used to identify, an individual guest.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Anonymous-Information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define anonymous information" aria-describedby="adb_Anonymous-Information" role="tooltip" href="#" class="tooltip-link">anonymous information</a><span style="display:none" id="adb_Anonymous-Information">&lt;p&gt;Anonymous information means information that does not directly or indirectly identify, and cannot reasonably be used to identify, an individual guest.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Anonymous-Information'&gt;Learn More&lt;/a&gt;</span> (as defined in this policy) – and we may use personal and anonymous information to create a third type of information, <a data-original-title="<p>Aggregate information means information about groups or categories of guests, which does not identify and cannot reasonably be used to identify an individual guest.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Aggregate-Information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define aggregate information" aria-describedby="adb_Aggregate-Information" role="tooltip" href="#" class="tooltip-link">aggregate information</a><span style="display:none" id="adb_Aggregate-Information">&lt;p&gt;Aggregate information means information about groups or categories of guests, which does not identify and cannot reasonably be used to identify an individual guest.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Aggregate-Information'&gt;Learn More&lt;/a&gt;</span> (also defined in this policy). &nbsp;&nbsp;In particular, we collect:</p>
-<ul>
-<li>Registration information you provide when you create an account, enter a promotion, or link your profile on a third-party site or platform with your registration account, such as your first name and surname, country of residence, gender, date of birth, email address, username, and password;</li>
-<li>Transaction information you provide when you request information, contact Guest Services, or purchase, return, request, or exchange a product or service from us, such as your postal address, telephone number, and payment information;</li>
-<li>Information you provide in <a data-original-title="<p>Our sites and applications may offer message boards, conversation pages, blogs, chat rooms, social community environments, profile pages, and other forums that do not have a restricted audience. If you provide personal information when you use any of these features, that personal information may be publicly posted and otherwise disclosed without limitation as to its use by us or by a third party.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Public-Forums'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define public forums" aria-describedby="adb_Public-Forums" role="tooltip" href="#" class="tooltip-link">public forums</a><span style="display:none" id="adb_Public-Forums">&lt;p&gt;Our sites and applications may offer message boards, conversation pages, blogs, chat rooms, social community environments, profile pages, and other forums that do not have a restricted audience. If you provide personal information when you use any of these features, that personal information may be publicly posted and otherwise disclosed without limitation as to its use by us or by a third party.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Public-Forums'&gt;Learn More&lt;/a&gt;</span> on our sites and applications, such as your public posts;</li>
-<li>Information sent either one-to-one or within a limited group using our message, chat, post, or similar functionality, where we are permitted by applicable law to collect this information;</li>
-<li>Information we obtain from a third party, such as a site or platform provider, about use of our applications on third-party platforms or devices;</li>
-<li>Location information, including location information provided by a mobile or other device interacting with one of our sites, applications, or physical properties (including through beacon technologies), or associated with your IP address or other online or device identifier, where we are permitted by law to process this information;</li>
-<li>Activity information about your use, and the use by any person(s) you authorize through your account, of our sites and applications, such as the content you view or post, how often you use our services, and your preferences;</li>
-<li>Usage, viewing, technical, and device data when you visit our sites, use our applications on third-party sites or platforms, or open emails we send, or connect with our wireless Internet access services and other similar technologies, including your browser or device type, unique device identifier, and IP address;</li>
-<li>Still or video images captured by cameras or readers on or around our physical properties; and</li>
-<li>Call recordings when you call our reservation centers or other guest services phone numbers.</li>
-</ul>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-3" role="tab" id="heading3"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">HOW WE COLLECT YOUR INFORMATION</span></a></h4></div><div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3"><div class="panel-body"><ul>
-<li>We collect information you provide to us when you request or purchase products, services, or information from us, register with us (including when you link your profile on a third-party site or platform with your registration account), participate in <a data-original-title="<p>Our sites and applications may offer message boards, conversation pages, blogs, chat rooms, social community environments, profile pages, and other forums that do not have a restricted audience. If you provide personal information when you use any of these features, that personal information may be publicly posted and otherwise disclosed without limitation as to its use by us or by a third party.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Public-Forums'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define public forums" aria-describedby="adb_Public-Forums" role="tooltip" href="#" class="tooltip-link">public forums</a><span style="display:none" id="adb_Public-Forums">&lt;p&gt;Our sites and applications may offer message boards, conversation pages, blogs, chat rooms, social community environments, profile pages, and other forums that do not have a restricted audience. If you provide personal information when you use any of these features, that personal information may be publicly posted and otherwise disclosed without limitation as to its use by us or by a third party.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Public-Forums'&gt;Learn More&lt;/a&gt;</span> or other activities on our sites and applications, respond to guest surveys, visit our physical properties, call our reservation centers or other guest services phone numbers, or otherwise interact with us using one or more devices. You may provide information in a variety of ways, including by typing or using voice commands.</li>
-<li>We collect information through a variety of technologies, such as cookies, Flash cookies, pixels, tags, software development kits, <a data-original-title="<p>Application means a program or service operated by us (or on our behalf) that may be displayed on various online, mobile, or other platforms and environments, including those operated by third parties, which permits us to interact directly with our guests.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Application'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define application" aria-describedby="adb_Application" role="tooltip" href="#" class="tooltip-link">application</a><span style="display:none" id="adb_Application">&lt;p&gt;Application means a program or service operated by us (or on our behalf) that may be displayed on various online, mobile, or other platforms and environments, including those operated by third parties, which permits us to interact directly with our guests.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Application'&gt;Learn More&lt;/a&gt;</span> program interfaces, and Web beacons, including when you visit our sites and applications or use our applications on third-party sites or platforms using one or more devices, whether or not you are logged in or registered. Please visit <a href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/online-tracking-and-advertising/">Online Tracking Technologies and Advertising</a> for further information, including Do Not Track and how to disable cookies and otherwise make choices with respect to such data collection.</li>
-<li>We collect information using analytics tools, including when you visit our sites and applications or use our applications on third-party sites or platforms.</li>
-<li>We acquire information from other trusted sources to update or supplement the information you provided or we collected automatically, such as when we validate postal address information using third party services. &nbsp;Applicable law may require that you authorize the third party to share your information with us before we can acquire it.</li>
-</ul>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-4" role="tab" id="heading4"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">USE OF YOUR INFORMATION BY THE WALT DISNEY FAMILY OF COMPANIES</span></a></h4></div><div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4"><div class="panel-body"><p>The <a data-original-title="<p>Member means a subsidiary or affiliated entity that is part of The Walt Disney Family of Companies.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Member'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define member" aria-describedby="adb_Member" role="tooltip" href="#" class="tooltip-link">member</a><span style="display:none" id="adb_Member">&lt;p&gt;Member means a subsidiary or affiliated entity that is part of The Walt Disney Family of Companies.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Member'&gt;Learn More&lt;/a&gt;</span> of <a data-original-title="<p>The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define The Walt Disney Family of Companies" aria-describedby="adb_The-Walt-Disney-Family-of-Companies" role="tooltip" href="#" class="tooltip-link">The Walt Disney Family of Companies</a><span style="display:none" id="adb_The-Walt-Disney-Family-of-Companies">&lt;p&gt;The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'&gt;Learn More&lt;/a&gt;</span> that is the <a data-original-title="<p>The data controller is the subsidiary or affiliated entity of The Walt Disney Company that is responsible for the personal information collected and used within the scope of this policy from our sites and applications, as follows: If you live in Europe, Middle East or Africa: The Walt Disney Company Limited (Company Number 530051) 3 Queen Caroline Street Hammersmith London W6 9PE help@disney.co.uk If you are a Disney+ service EU subscriber residing outside the United Kingdom, your personal data is also jointly controlled by: The Walt Disney Company (Benelux) B.V. (Company Number 34076102) De Passage 144 1101 AX Amsterdam The Netherlands help@disneyplus.com US, Canada and Rest of World: Disney Interactive 500 South Buena Vista Street Mail Code 7667 Burbank, CA 91521-7667 United States of America Guest Services</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Data-Controller'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define data controller" aria-describedby="adb_Data-Controller" role="tooltip" href="#" class="tooltip-link">data controller</a><span style="display:none" id="adb_Data-Controller">&lt;p&gt;The data controller is the subsidiary or affiliated entity of The Walt Disney Company that is responsible for the personal information collected and used within the scope of this policy from our sites and applications, as follows: If you live in Europe, Middle East or Africa: The Walt Disney Company Limited (Company Number 530051) 3 Queen Caroline Street Hammersmith London W6 9PE help@disney.co.uk If you are a Disney+ service EU subscriber residing outside the United Kingdom, your personal data is also jointly controlled by: The Walt Disney Company (Benelux) B.V. (Company Number 34076102) De Passage 144 1101 AX Amsterdam The Netherlands help@disneyplus.com US, Canada and Rest of World: Disney Interactive 500 South Buena Vista Street Mail Code 7667 Burbank, CA 91521-7667 United States of America Guest Services&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Data-Controller'&gt;Learn More&lt;/a&gt;</span> for your information is responsible for and may use your information for the purposes described in this policy. Other members of The Walt Disney Family of Companies may access your information where they perform services on behalf of the data controllers (as data processors) and, unless prohibited under applicable law, for use on their own behalf (as data controllers) for the purposes described in this policy. Consistent with applicable law and choices and controls that may be available to you, we may use information collected from you, or from devices associated with you, to:</p>
-<ul>
-<li>Provide you with the experiences, products, and services you request, view, engage with, or purchase;</li>
-<li>Communicate with you about your account or transactions with us and send you information or request feedback about features on our sites and applications or changes to our policies;</li>
-<li>Send you offers and promotions for our products and services or third-party products and services;</li>
-<li>Personalize content and experiences;</li>
-<li>Provide you with targeted advertising based on your activity on our sites and applications and on third-party sites and applications;
-<ul>
-<li>to learn more about how we use your information for personalization and tracking, please visit <a href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/online-tracking-and-advertising/">Online Tracking Technologies and Advertising</a>.</li>
-</ul>
-</li>
-<li>Operate, understand, optimize, develop, or improve our sites, applications, products, services and operations, including by using guest survey research and analytics tools; and</li>
-<li>Detect, investigate and prevent activities that may violate our policies, pose safety issues, or be fraudulent or illegal; and</li>
-<li>Notify you of product recalls or safety issues.</li>
-</ul>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-5" role="tab" id="heading5"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">SHARING YOUR INFORMATION WITH OTHER ENTITIES</span></a></h4></div><div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5"><div class="panel-body"><p>We will not share your <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> with a third party outside <a data-original-title="<p>The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define The Walt Disney Family of Companies" aria-describedby="adb_The-Walt-Disney-Family-of-Companies" role="tooltip" href="#" class="tooltip-link">The Walt Disney Family of Companies</a><span style="display:none" id="adb_The-Walt-Disney-Family-of-Companies">&lt;p&gt;The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'&gt;Learn More&lt;/a&gt;</span> except in limited circumstances, including:</p>
-<ul>
-<li>When you allow us to share your personal information with another company, by electing to share your personal information with carefully selected companies so that they can send you offers and promotions about their products and services;</li>
-<li>When you direct us to share your personal information with another company to fulfill your request, such as:
-<ul>
-<li>When you book travel packages with us that include goods or services provided by third-party partners, such as airlines, ground transportation providers, third-party hotels, and travel insurance providers; and</li>
-<li>When you book dining reservations through us for restaurants operated by third parties.</li>
-</ul>
-</li>
-<li>When you direct us to share your personal information with third-party sites or platforms, such as social networking sites.</li>
-<li>Please note that once we share your personal information with another company in the above circumstances, the information received by the other company is controlled by that company and becomes subject to the other company’s privacy practices.</li>
-<li>When we cooperate with financial institutions to offer co-branded products or services to you, such as our co-branded Disney Rewards Visa Card; however, we will do so only if permitted by applicable law and, in these cases, the financial institutions are prohibited from using your personal information for purposes other than those related to the co-branded products or services;</li>
-<li>When you provide personal information to National Geographic Partners, a joint venture between The Walt Disney Company and the National Geographic Society, National Geographic Partners may share that information with the National Geographic Society, and once shared, the information will be controlled by and subject to the privacy policy of the National Geographic Society;</li>
-<li>When companies perform services on our behalf, like package delivery, marketing and advertising, and &nbsp;customer service; however, these companies are prohibited from using your personal information for purposes other than those requested by us or required by law; and</li>
-<li>When we share your personal information with third parties in connection with the sale of a business, to enforce our Terms of Use or rules, to ensure the safety and security of our guests and third parties, to protect our rights and property and the rights and property of our guests and third parties, to comply with legal process, or in other cases if we believe in good faith that disclosure is required by law.</li>
-</ul>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-6" role="tab" id="heading6"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">YOUR CONTROLS AND CHOICES</span></a></h4></div><div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6"><div class="panel-body"><p>We provide you the ability to exercise certain controls and choices regarding our collection, use and sharing of your information. In accordance with applicable law, your controls and choices may include:</p>
-<ul>
-<li>Correcting, updating, and deleting <a href="#" class="js-oneid-login-or-profile ">your registration account</a> (<a href="#" class="js-oneid-logout ">Logout</a>);</li>
-<li>Choosing or changing your choices for subscriptions, newsletters, and alerts;</li>
-<li>Choosing whether to receive from us offers and promotions for our products and services, or products and services that we think may be of interest to you;</li>
-<li>Choosing whether we share your <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> with other companies so they can send you offers and promotions about their products and services;</li>
-<li>Controlling targeted advertising from many ad networks and partners; data exchanges; and marketing analytics and digital advertising and marketing service providers (by visiting the <a href="http://www.aboutads.info/choices">Digital Advertising Alliance</a>);</li>
-<li>Choosing to control targeted advertising you receive within applications by using the settings and choices made available to you through your device(s), for example, by re-setting your device’s advertising identifier and/or opting out of interest based ads;</li>
-<li>Choosing to limit participation in <a href="https://priv-policy.imrworldwide.com/priv/browser/us/en/optout.html">Nielsen digital measurement research</a> (for non-Panelists);</li>
-<li>Requesting removal of your personal information from a public forum on one of our sites or <a data-original-title="<p>Application means a program or service operated by us (or on our behalf) that may be displayed on various online, mobile, or other platforms and environments, including those operated by third parties, which permits us to interact directly with our guests.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Application'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define application" aria-describedby="adb_Application" role="tooltip" href="#" class="tooltip-link">application</a><span style="display:none" id="adb_Application">&lt;p&gt;Application means a program or service operated by us (or on our behalf) that may be displayed on various online, mobile, or other platforms and environments, including those operated by third parties, which permits us to interact directly with our guests.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Application'&gt;Learn More&lt;/a&gt;</span>; and</li>
-<li>Requesting access to the personal information we hold about you and that we amend or delete it.</li>
-</ul>
-<p>You may exercise these controls and choices in various ways, including by visiting <a href="https://privacy.thewaltdisneycompany.com/en/privacy-controls/communication-choices/">Communication Choices</a> (under the Privacy Controls tab), contacting <a href="https://privacy.thewaltdisneycompany.com/en/support/">Guest Services</a>, following instructions provided in communications sent to you, or by using your device or other available settings (for example, by re-setting your device’s advertising identifier and/or opting out of interest based ads). You can opt out of interest based ads by visiting the <a href="http://www.aboutads.info/choices">Digital Advertising Alliance</a> or <a href="http://www.edaa.eu/">European Interactive Digital Advertising Alliance</a> or using the opt-out mechanism in the “Interest Based Ads” link in the footer of the site you are visiting.</p>
-<p>Please be aware that if you do not allow us to collect personal information from you, we may not be able to deliver certain experiences, products, and services to you, and some of our services may not be able to take account of your interests and preferences. If collection of personal information is mandatory, we will make that clear at the point of collection so that you can make an informed decision whether to participate. &nbsp;If you have questions about the specific personal information about you that we process or retain, and your rights regarding that personal information, please contact <a href="https://privacy.thewaltdisneycompany.com/en/support/">Guest Services</a>.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-7" role="tab" id="heading7"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">CHILDREN'S PRIVACY</span></a></h4></div><div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7"><div class="panel-body"><p>We recognize the need to provide further privacy protections with respect to <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> we may collect from <a data-original-title="<p>Children means individuals who we have identified are not of legal age to consent to the collection and processing of their personal information. In the United States and Latin America, the term “children” refers to individuals under 13 years of age.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Children'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define children" aria-describedby="adb_Children" role="tooltip" href="#" class="tooltip-link">children</a><span style="display:none" id="adb_Children">&lt;p&gt;Children means individuals who we have identified are not of legal age to consent to the collection and processing of their personal information. In the United States and Latin America, the term “children” refers to individuals under 13 years of age.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Children'&gt;Learn More&lt;/a&gt;</span> on our sites and applications. Some of the features on our sites and applications are age-gated so that they are not available for use by children, and we do not knowingly collect personal information from children in connection with those&nbsp;features. When we intend to collect personal information from children, we take additional steps to protect children’s privacy, including:</p>
-<ul>
-<li>Notifying <a data-original-title="<p>Parents means a parent or legal guardian.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Parents'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define parents" aria-describedby="adb_Parents" role="tooltip" href="#" class="tooltip-link">parents</a><span style="display:none" id="adb_Parents">&lt;p&gt;Parents means a parent or legal guardian.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Parents'&gt;Learn More&lt;/a&gt;</span>&nbsp;about our information practices with regard to children, including the types of personal information we may collect from children, the uses to which we may put that information, and whether and with whom we may share that information;</li>
-<li>In accordance with applicable law, and our practices, obtaining consent from parents for the collection of personal information from their children, or for sending information about our products and services directly to their children;</li>
-<li>Limiting our collection of personal information from children to no more than is reasonably necessary to participate in an online activity; and</li>
-<li>Giving parents access or the ability to request access to personal information we have collected from their children and the ability to request that the personal information be changed or deleted.</li>
-</ul>
-<p>For additional information about our practices in the United States regarding children’s personal information, please read our <a href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/">Children’s Privacy Policy</a>.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-8" role="tab" id="heading8"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">DATA SECURITY, INTEGRITY, AND RETENTION</span></a></h4></div><div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8"><div class="panel-body"><p>The security, integrity, and confidentiality of your information are extremely important to us. We have implemented technical, administrative, and physical security measures that are designed to protect guest information from unauthorized access, disclosure, use, and modification. We regularly review our security procedures to consider appropriate new technology and methods. Please be aware that, despite our best efforts, no security measures are perfect or impenetrable. We will retain your <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> for the length of time needed to fulfill the purposes outlined in this privacy policy unless a longer retention period is required or permitted by law.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-9" role="tab" id="heading9"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">DATA TRANSFERS, STORAGE, AND PROCESSING GLOBALLY</span></a></h4></div><div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9"><div class="panel-body"><p>We operate globally and may transfer your <a data-original-title="<p>Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define personal information" aria-describedby="adb_Personal-information" role="tooltip" href="#" class="tooltip-link">personal information</a><span style="display:none" id="adb_Personal-information">&lt;p&gt;Personal information means information that identifies (whether directly or indirectly) a particular individual, such as the individual’s name, postal address, email address, and telephone number. When anonymous information is directly or indirectly associated with personal information, the resulting information also is treated as personal information.&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#Personal-information'&gt;Learn More&lt;/a&gt;</span> to individual companies of <a data-original-title="<p>The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort</p><a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'>Learn More</a>" data-trigger="manual" data-placement="bottom" data-html="true" data-container="body" data-toggle="tooltip" aria-title="define The Walt Disney Family of Companies" aria-describedby="adb_The-Walt-Disney-Family-of-Companies" role="tooltip" href="#" class="tooltip-link">The Walt Disney Family of Companies</a><span style="display:none" id="adb_The-Walt-Disney-Family-of-Companies">&lt;p&gt;The Walt Disney Family of Companies refers to The Walt Disney Company and its subsidiary and affiliated entities, which offer their products and services under various brand names. These companies engage in a number of businesses, including theme parks and travel, motion pictures and television, publishing, consumer products and interactive services. The Walt Disney Company brands include, among others, the following: ABC Entertainment ABC News Adventures by Disney Aulani, a Disney Resort &amp; Spa Bamtech Media Bindass Buena Vista Catalog Company (including Disney Movie Club) D23 | The Official Disney Fan Club Disney Baby Disney Channels &amp; DisneyNOW Disney Cruise Line Disney Digital Network Disney Family Movies Disney Movie Insiders Disney on Broadway Disney on Ice and Disney Live! Disney PhotoPass Service Disney Rewards Visa Card Disney Vacation Club Disney+ Disneyland Paris Disneyland Resort DisneyLife El Capitan Theatre ESPN ESPN CricInfo ESPN Deportes ESPN+ FiveThirtyEight Freeform FX Networks Genx Entertainment Limited Hollywood Records Hungama TV Lucasfilm (Star Wars) Marvel Marvel Shop Marvel Digital Comics Muppets National Geographic Pixar Animation Studios Radio Disney Read Riordan shopDisney The Undefeated 30 for 30 Podcasts United Home Entertainment Private Limited UTV Software Communication Limited Walt Disney Pictures Walt Disney Studios Home Entertainment Walt Disney World Resort&lt;/p&gt;&lt;a href='https://privacy.thewaltdisneycompany.com/en/definitions/#The-Walt-Disney-Family-of-Companies'&gt;Learn More&lt;/a&gt;</span> or third parties in locations around the world for the purposes described in this privacy policy. Wherever your personal information is transferred, stored or processed by us, we will take reasonable steps to safeguard the privacy of your personal information. These steps may include implementing standard contractual clauses where recognized by law, obtaining your consent, or other lawful means of transferring personal information.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-10" role="tab" id="heading10"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">CHANGES TO THIS PRIVACY POLICY</span></a></h4></div><div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10"><div class="panel-body"><p>From time to time, we may change this privacy policy to accommodate new technologies, industry practices, regulatory requirements or for other purposes. We will provide notice to you if these changes are material and, where required by applicable law, we will obtain your consent. Notice may be by email to you at the last email address you provided us, by posting notice of such changes on our sites and applications, or by other means, consistent with applicable law.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-11" role="tab" id="heading11"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">COMMENTS AND QUESTIONS</span></a></h4></div><div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11"><div class="panel-body"><p>If you have a comment or question about this privacy policy, please contact <a href="https://privacy.thewaltdisneycompany.com/en/support/">Guest Services</a>.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-12" role="tab" id="heading12"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">CALIFORNIA RESIDENTS’ RIGHTS</span></a></h4></div><div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12"><div class="panel-body"><p>Notice to California Residents: If you are a California resident, you may have certain additional privacy rights. Visit our <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights/">Your California Privacy Rights</a> page for more information, including how Authorized Agents may make certain requests on behalf of California Residents.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-13" role="tab" id="heading13"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapse13"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">UK &amp; EU RESIDENTS' RIGHTS</span></a></h4></div><div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13"><div class="panel-body"><p>Notice to UK &amp; EU Residents: If you are an EU or UK resident, you may have certain additional privacy rights. Visit our <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/">UK &amp; EU Privacy Rights</a> page for more information.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-14" role="tab" id="heading14"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapse14"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">BRAZILIAN RESIDENTS' RIGHTS</span></a></h4></div><div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14"><div class="panel-body"><p>Notice to Brazilian Residents: If you are a Brazilian resident, you may have certain additional privacy rights. Visit our <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/data-protection-in-brazil/">Data Protection in Brazil</a> page for more information.</p>
-</div></div></div><div class="panel panel-default fade-content-in"><div class="panel-heading panel-heading-15" role="tab" id="heading15"><h4 class="panel-title"><a class="collapsed panel-access" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapse15"><span class="accordion-toggle pull-right"> <span class="sr-only">Accordion Toggle</span> <span class="icon-bar"></span> </span><span class="accordion-link pull-left">Definitions</span></a></h4></div><div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15"><div class="panel-body"><p><a href="https://privacy.thewaltdisneycompany.com/en/definitions/">Definitions</a></p>
-</div></div></div>                        </div>
-                    </article>
-                    <footer class="fade-content-in">
-                                                                    </footer>
-                </div>
-            </div>
+                <div class="portletWrapper">
+            <dl class="portlet portletNavigationTree">
+                <dt class="portletHeader">Empresa</dt>
+                <dd class="portletItem">
+                    <ul id="menu-empresa" class="menu navTree navTreeLevel0"><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a target="_blank" href="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/"><span>Enviar requerimento de Seguro-Desemprego</span></a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a target="_blank" href="https://imo.maisemprego.mte.gov.br/imoweb/loginEmpregador.xhtml"><span>Disponibilizar vagas de empregos</span></a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a target="_blank" href="https://imo.maisemprego.mte.gov.br/imoweb/index.xhtml"><span>Verificar currículo de trabalhador</span></a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a target="_blank" href="https://caged.maisemprego.mte.gov.br/portalcaged/paginas/recepcao/TL_022_TransmitirArquivoWeb.xhtml"><span>Enviar declaração CAGED</span></a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a target="_blank" href="http://cbo.maisemprego.mte.gov.br/cbosite"><span>Ocupações CBO</span></a></li>
+<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232 last-item"><a href="https://empregabrasil.mte.gov.br/88/ppe/"><span>Programa Seguro Emprego (PSE)</span></a></li>
+</ul>                </dd>
+            </dl>
         </div>
-    </div>
-</div>
+                
+                
+        <div class="portletWrapper">
+            <dl class="portlet portletStaticText portlet-static-centrais-de-conteudos">
+                <dt class="portletHeader">
+                    <span class="portletTopLeft"></span>
+                    <span>
+                       Centrais de Conteúdos
+                    </span>
+                    <span class="portletTopRight"></span>
+                </dt>
 
-<div class="container-fluid ">
-    <div class="row fifty-fifty"><div class="container"><div class="row"><div class="col-lg-6 col-md-6 col-sm-6"><header class="fade-content-in"><object type="image/svg+xml" data="https://privacy.thewaltdisneycompany.com/app/uploads/2016/09/communication-choices.svg" title="" class="illustration sm"></object><h2>Data Protection in Brazil</h2></header><div class="article fade-content-in">This privacy notice should be read in conjunction with our Privacy Policy.
-</div><footer class="fade-content-in"><p class="callout">Learn More</p><a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/data-protection-in-brazil/" class="link-copy">Data Protection in Brazil</a> </footer></div><!-- end col-->
-</div>
-        </div></div></div></main><!-- /.main -->
-            </div><!-- /.content -->
-</div><!-- /.wrap -->
-<footer id="footer">
-
-         <div class="logo-band">                 <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/disney.svg" alt="Disney" title="Disney">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/12/pixar-footer.svg" alt="Pixar" title="Pixar">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/lucasfilm.svg" alt="LucasFilm" title="LucasFilm">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/marvel.svg" alt="Marvel" title="Marvel">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2020/10/NG_logo_greyscale_version.svg" alt="natgeo" title="natgeo">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/abc.svg" alt="abc" title="abc">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/espn.svg" alt="ESPN" title="ESPN">
-                    </div>
-                </div>
-                            <div class="col">
-                    <div class="logo-wrap">
-                        <img src="https://privacy.thewaltdisneycompany.com/app/uploads/2019/10/inline-fx.svg" alt="FX" title="FX">
-                    </div>
-                </div>
-                        </div>
-    
-    <div class="site-info">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 blank"></div>
-                <div class="col-lg-6 col-md-6 logo-wrap"><a href="/" id="footer-logo" title="Disney"></a></div>
-                <div class="col-lg-3 col-md-3 copyright">
-                    <section class="widget text-2 widget_text">			<div class="textwidget">© Disney.  All rights reserved</div>
-		</section><section class="widget nav_menu-2 widget_nav_menu"><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-13977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13977"><a href="http://preferences-mgr.truste.com/?type=disneycolor&amp;affiliateId=115">Interest-Based Ads</a></li>
-<li id="menu-item-13983" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13983"><a href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/">Children’s Online Privacy Policy</a></li>
-<li id="menu-item-13986" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13986"><a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights/">Your California Privacy Rights</a></li>
-<li id="menu-item-13974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13974"><a href="https://disneytermsofuse.com/">Terms of Use</a></li>
-<li id="menu-item-13980" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13980"><a href="https://privacy.thewaltdisneycompany.com/">Privacy Policy</a></li>
-<li id="menu-item-24684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24684"><a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/">Do Not Sell My Info</a></li>
-</ul></div></section>                    <ul class="menu">
-                        <li>
-                            <button class="btn-link print-screen"><i class="fa fa-print"></i> Print Page</button>
+                <dd class="portletItem">
+                    <ul class="list-central">
+                                                <li class="item-central item-audios first">
+                            <a class="link-central link-audios" href="https://empregabrasil.mte.gov.br/category/audios/" title="Áudios">Áudios</a>
                         </li>
-                    </ul>
+                                                <li class="item-central item-videos  last-item">
+                            <a class="link-central link-videos" href="https://empregabrasil.mte.gov.br/category/videos/" title="Vídeos">Vídeos</a>
+                        </li>
+                                            </ul>
+                </dd>
+            </dl>
+        </div>
+        
+        
+    </div>
+</div>                
+                <div id="portal-column-content" class="cell width-3:4 position-1:4">
+                    <div>
+                        <div id="content">
+                            <div id="viewlet-above-content-title"></div>
+                            
+                                                        
+                            <div class="tile azul-claro">
+                                <div class="outstanding-header">
+                                    <h2 class="outstanding-title">Política de Privacidade CTPS Digital</h2>
+                                </div>
+                            </div>
+                            
+                            <div id="content-core">
+                                <div id="post-449" class="hentry p1 page publish author-admin untagged y2017 m10 d03 h13">
+                                    <div class="entry-content">
+                                        <p>Ministério da Economia disponibiliza a CTPS Digital, aplicativo móvel desenvolvido pela DATAPREV, que oferta ao cidadão, a possibilidade de obter sua Carteira de Trabalho para fins de acompanhamento da vida laboral do cidadão brasileiro e estrangeiro.</p>
+<p>Ao utilizar o aplicativo, o usuário confia a nós – Ministério da Economia e DATAPREV, informações referentes a sua privacidade. Esta Política de Privacidade, portanto, tem como objetivo demonstrar de forma clara, quais são os dados que coletamos do usuário, de que forma utilizamos esses dados e com quem os compartilhamos. São também apresentadas neste documento as opções que o usuário tem para acessar, controlar e atualizar seus dados no aplicativo.<br>
+Os aplicativos são considerados provedores de aplicação de internet e funcionam nos termos dos arts. 7º e 16 da Lei nº 12.965/2014, de forma a respeitar a confidencialidade das informações procedidas pelo usuário, em consonância com a legislação aplicável.<br>
+Como as informações são coletadas?<br>
+As informações do usuário são reunidas no aplicativo das seguintes formas:<br>
+As informações trabalhistas do cidadão serão obtidas por meio das bases de dados do Governo Federal. (CPF, CNIS, eSocial, RAIS, CAGED etc);<br>
+Informações gerais de como o serviço foi utilizado, o endereço IP, a plataforma computacional, tipo de navegador, idioma do navegador, dados georreferenciados e páginas de entrada e saída, por exemplo, poderão ser coletadas e armazenadas para fins de estatísticas de uso.</p>
+<p><strong>Segurança das informações<br>
+</strong>A segurança das informações coletadas é algo sério e por isso a cautela do Ministério da Economia e DATAPREV, para que o usuário tenha tranquilidade para utilizar os serviços ofertados pelo aplicativo.<br>
+Existe um trabalho contínuo para proteger o usuário de acessos não autorizados aos seus dados.<br>
+O acesso à CTPS Digital será realizado por meio do Acesso.gov.br, forma de acesso único a serviços, informações e sistemas do governo brasileiro. Após a autenticação o cidadão terá acessos às seguintes informações: CPF, Nome completo, Data de nascimento, Nome da Mãe e Nacionalidade. O aplicativo CTPS Digital utiliza a identificação do trabalhador por assinatura digital. Esta solução visa garantir a autenticidade e proteção dos dados do trabalhador.</p>
+<p><strong>Compartilhamento das informações com terceiros.<br>
+</strong>O Ministério da Economia e a DATAPREV não alugam e nem vendem as informações procedidas pelo usuário para terceiros. Contudo, as informações podem ser compartilhadas nas seguintes hipóteses:<br>
+O sigilo dos dados cadastrais e dos demais dados coletados que sejam confidenciais poderá ser flexibilizado por ordem judicial, bem como em casos de cooperação com autoridades reguladoras em medidas de compliance;<br>
+Poderá ocorrer, dentro das formas legais, compartilhamento de informações com empresas que utilizam cookies, web beacons e tecnologias de rastreamento para que nos forneçam informações analisadas sobre como o usuário utiliza nossos serviços.<br>
+O compartilhamento de informações tem por objetivo, entre outras coisas, oferecer publicidade online dirigida e assertiva, analisar e controlar dados, determinar a popularidade de determinados conteúdos e entender melhor o comportamento do usuário na rede.<br>
+Controle, acesso e atualização das informações pelo usuário<br>
+O Ministério da Economia e a DATAPREV seguem todas as normas legais e recomendações internacionais no trato com as informações do usuário e esclarecem que o usuário tem direitos relativos às informações pessoais que se coletam e mantêm no aplicativo.<br>
+Alguns pedidos de atualização e edição de informações poderão ser negados por razões judiciais, impossibilidade técnica ou a critério da Administração Pública.<br>
+O usuário também pode deixar de fornecer informações pessoais solicitadas por meio de cadastros, desabilitar a qualquer momento a coleta de informações por meio de cookies e remover o aplicativo de seu dispositivo móvel.<br>
+Ligações externas com outros aplicativos/sites dentro do ambiente do Ministério da Economia:<br>
+O aplicativo pode conter links externos para outros sites, aplicativos e redes sociais. Por isso é importante que o usuário saiba que esta política de privacidade se restringe aos serviços oferecidos pelo aplicativo CTPS Digital.</p>
+<p><strong>Conduta dos usuários<br>
+</strong>O Ministério da Econimia e a DATAPREV orientam os usuários, que evitem utilizar o aplicativo com o objetivo de disponibilizar comentários ou conteúdo ofensivo ou ilícito, evitem compartilhar senhas, logins, códigos ou dados pessoais com terceiros, além da importância de uma leitura atenta sobre os Termos da Política de Privacidade. Deve-se enfatizar que, tanto o Ministério da Economia, quanto a DATAPREV não se responsabilizam pelas ações realizadas pelos usuários e poderá a qualquer momento restringir o acesso dos usuários, que se comportarem em desacordo com os termos desta Política de Privacidade.</p>
+<p><strong>Responsabilidade<br>
+</strong>O Ministério da Economia e a DATAPREV não se responsabilizam pela indisponibilidade do software, decorrente de casos fortuitos ou força maior, bem como danos ou prejuízos causados no equipamento dos usuários por ações de terceiros, softwares maliciosos ou uso indevido do software.</p>
+<p>Indisponibilidade por atualização<br>
+Esta solução poderá sofrer manutenções preventivas ou emergenciais, acarretando em eventual indisponibilidade e, por isso, não servirão de motivo justo para possíveis indenizações ou ressarcimentos de qualquer natureza aos usuários.</p>
+<p><strong>Revisões na política de privacidade<br>
+</strong>Esta Política de Privacidade poderá ser atualizada a qualquer tempo, sempre que se julgar necessário e, por isso, recomendamos sua periódica verificação.</p>
+<p><strong>Glossário de termos<br>
+</strong>Acesso.gov.br: Solução tecnológica que possibilita o acesso único a serviços, informações e sistemas do governo brasileiro.</p>
+<p><strong>Fale conosco<br>
+</strong>Se você ainda tiver alguma dúvida sobre a Política de Privacidade da CTPS Digital, ou se quiser saber mais sobre como atualizar suas informações, entre em contato pela central 158.</p>
+<p>&nbsp;</p>
+<p>Última modificação: 28/06/2019</p>
+
+                                                                            </div>
+                                </div><!-- .post -->
+                                
+                                                            </div><!-- #content-core -->
+                            
+                            <div id="viewlet-below-content-body">
+                                <div class="visualClear"></div>
+                                <div class="documentActions"></div>
+                            </div>
+                        </div><!-- #content -->
+                    </div>
+                    <div id="viewlet-below-content"></div>
+                </div><!-- #portal-column-content -->
+            </div><!-- #portal-columns -->
+		</div><!-- #plone-content -->
+        
+        <br class="clear">
+		
+        <div id="voltar-topo">
+            <a href="javascript:void(0)">Voltar para o topo</a>
+        </div>
+        
+	</div><!-- #main -->
+
+
+	<div id="footer">
+		<a name="afooter" id="afooter"></a>
+
+            
+            <div id="doormat-container" class="columns-4">
+                <div class="doormatColumn column-0">
+                    <dl class="doormatSection">
+                        
+                        <dt class="doormatSectionHeader">Menu</dt>
+                        <ul id="menu-menu" class="menu"><li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65"><a href="https://empregabrasil.mte.gov.br/category/trabalhador/">Trabalhador</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66 last-item"><a href="https://empregabrasil.mte.gov.br/category/empregador/">Empresa</a></li>
+</ul>                                            </dl>
+                </div>
+
+                <div class="doormatColumn column-1">
+                    <dl class="doormatSection">
+                        
+                        <dt class="doormatSectionHeader">Serviços</dt>
+                        <ul id="menu-servicos" class="menu"><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a target="_blank" href="http://trabalho.gov.br/ouvidoria/">Ouvidoria – MTb</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a target="_blank" href="http://trabalho.gov.br/postos/">Postos de Atendimento</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68 last-item"><a href="https://empregabrasil.mte.gov.br/sobre-emprega-brasil/">Sobre o Emprega Brasil</a></li>
+</ul>                                            </dl>
+		    <dl class="doormatSection">
+                                            </dl>
+                </div>
+
+                <div class="doormatColumn column-2">
+                   <dl class="doormatSection">
+                        
+                        <dt class="doormatSectionHeader">Redes sociais</dt>
+                        <ul id="menu-redes-sociais" class="menu"><li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a target="_blank" href="https://www.facebook.com/ministeriodotrabalho/">Facebook</a></li>
+<li id="menu-item-166" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166"><a target="_blank" href="https://www.instagram.com/ministeriodotrabalho/">Instagram</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a target="_blank" href="https://twitter.com/trabalho">Twitter</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71"><a target="_blank" href="http://www.youtube.com/c/canaltrabalho">YouTube</a></li>
+<li id="menu-item-167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-167"><a target="_blank" href="https://www.flickr.com/photos/ministeriodotrabalho">Flickr</a></li>
+<li id="menu-item-168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-168 last-item"><a target="_blank" href="https://soundcloud.com/ministeriodotrabalho">SoundCloud</a></li>
+</ul>                                            </dl>
+                </div>
+
+                <div class="doormatColumn column-3">
+                    <dl class="doormatSection">
+                        <dt class="doormatSectionHeader">RSS</dt>
+                        <dd class="doormatSectionBody">
+                            <a href="https://empregabrasil.mte.gov.br/feed/">Assine</a>
+                        </dd>
+                    </dl>
+                    <dl class="doormatSection">
+                        <dt class="doormatSectionHeader">Navegação</dt>
+                        <ul>
+														<li><a href="https://empregabrasil.mte.gov.br/acessibilidade/" accesskey="5">Acessibilidade</a></li>
+                            <li id="siteaction-contraste" class="last-item">
+                                <a href="#" title="Alto Contraste" accesskey="6">
+                                    Alto Contraste
+                                </a>
+                            </li>
+                        </ul>
+                    </dl>
                 </div>
             </div>
-        </div>
-    </div>
+            <br class="clear">
+            <div class="footer-logos">
+	            <div id="footer-brasil"><div id="wrapper-footer-brasil"><a href="http://www.acessoainformacao.gov.br/"><span class="logo-acesso-footer"></span></a><a class="logo-governo-federal" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a></div></div>
+            </div>
+	</div><!-- #footer -->
 
-</footer>
-<a href="#" class="back-to-top"><span class="sr-only">Back to Top</span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.4 58.4"><title>back-to-top</title>
-        <circle cx="29.2" cy="29.2" r="29.2" style="fill:#3e495a"></circle>
-        <path d="M25.3,26.5l3.9-3.9V39.4a0.8,0.8,0,0,0,1.6,0V22.6l3.9,3.9a1.14,1.14,0,0,0,.6.3,0.71,0.71,0,0,0,.6-0.3,0.78,0.78,0,0,0,0-1.1L30.7,20a1.14,1.14,0,0,0-.6-0.3,0.71,0.71,0,0,0-.6.3l-5.3,5.3a0.78,0.78,0,0,0,0,1.1C24.3,26.8,24.9,26.8,25.3,26.5Z" transform="translate(-0.8 -0.8)" style="fill:#fff"></path>
-    </svg>
-</a>
+</div><!-- #wrapper .hfeed -->
 
-<!-- BEGIN DTSS DDM Tealium Web Analytics -->						
 
-<script language="JavaScript">
-	(function(a,b,c,d){
-		a="//cdn.media.disneyatoz.com/analytics/corp-batch-1/utag.js";
-		b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-		a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-	})();
-</script> 
-<!-- END DTSS DDM Tealium Web Analytics -->						
+<script defer="defer" id="scriptBarraBrasil" async="async" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
 
-			<script type="text/javascript" id="longdesc.button-js-extra">
-/* <![CDATA[ */
-var wparest = "https:\/\/privacy.thewaltdisneycompany.com\/wp-json\/wp\/v2\/media";
-var wpatext = "<span>Long Description<\/span>";
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/wp-accessibility/js/longdesc.button.js?ver=1.0" id="longdesc.button-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/wp-accessibility/js/current-menu-item.js?ver=1.0" id="current.menu-js"></script>
-<script type="text/javascript" id="app-js-extra">
-/* <![CDATA[ */
-var PCJSSTR = {"str1":"OneID language and Polylang language don't match. Would you like to select a country \/ language?","str2":"OneID country and country_slug cookie don't match.  Would you like to select a country \/ language?","str3":"Search Languages","str4":"Search Countries","str5":"Close Alert","yes":"Yes","no":"No","LangGetUri":"https:\/\/privacy.thewaltdisneycompany.com\/app\/themes\/privacycenter\/lib\/get-languages.php","langHandleUri":"https:\/\/privacy.thewaltdisneycompany.com\/app\/themes\/privacycenter\/lib\/language-handler.php"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/themes/privacycenter/assets/dist/js/app-19ac8b40.min.js" id="app-js"></script>
-<script type="text/javascript" src="https://cdn.media.disneyatoz.com/includes/js/dtssdma.js?ver=1.0" id="dtssdma-js"></script>
-<script type="text/javascript" id="mediaelement-core-js-before">
-var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.13-9993131" id="mediaelement-core-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=541dd541" id="mediaelement-migrate-js"></script>
-<script type="text/javascript" id="mediaelement-js-extra">
-/* <![CDATA[ */
-var _wpmejsSettings = {"pluginPath":"\/wp\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=541dd541" id="wp-mediaelement-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/wp/wp-includes/js/underscore.min.js?ver=1.8.3" id="underscore-js"></script>
-<script type="text/javascript" src="https://privacy.thewaltdisneycompany.com/app/plugins/ddm-tealium/js/dmatealium.js?ver=541dd541" id="dmatealium-js"></script>
 
-<script type="text/javascript">
-//<![CDATA[
-(function( $ ) { 'use strict';
-	
-	$('a').removeAttr('target');
-	
-	$('input,a,select,textarea,button').removeAttr('tabindex');
-	
-}(jQuery));
-//]]>
-</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"129fe16bc0","applicationID":"191794594,101161962","transactionName":"ZQZbZ0sDWEZWUU0MCVxMbEFQTUFFGFtXAQNKTUlbSQ==","queueTime":0,"applicationTime":921,"atts":"SUFYEQMZS0g=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
 
-<div id="disneyid-wrapper"><iframe id="disneyid-iframe" name="disneyid-iframe" frameborder="0" title="Account Dialog" aria-modal="true" role="dialog" src="https://cdn.registerdisney.go.com/v2/DTSS-PRIVACYCENTER.WEB-PROD/en-US?include=config,l10n,js,html&amp;?clientID=DTSS-PRIVACYCENTER.WEBscheme=https&amp;postMessageOrigin=https%3A%2F%2Fprivacy.thewaltdisneycompany.com%2Fen%2Fcurrent-privacy-policy%2F&amp;cookieDomain=privacy.thewaltdisneycompany.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=privacy.thewaltdisneycompany.com&amp;cssOverride=https%3A%2F%2Fcdn.media.disneyatoz.com%2Fsites%2Fprivacy%2Fprivacy-oneid-v5.css&amp;debug=1&amp;responderPage=https%3A%2F%2Fprivacy.thewaltdisneycompany.com%2Foneid-responder-page%2F&amp;buildId=1785bba1445"></iframe></div><iframe id="disneyid-secure-responder" name="disneyid-secure-responder" src="https://privacy.thewaltdisneycompany.com/oneid-responder-page/?clientId=DTSS-PRIVACYCENTER.WEB-PROD&amp;scheme=https&amp;postMessageOrigin=https%3A%2F%2Fprivacy.thewaltdisneycompany.com%2Fen%2Fcurrent-privacy-policy%2F&amp;cookieDomain=privacy.thewaltdisneycompany.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=privacy.thewaltdisneycompany.com&amp;langPref=en-US&amp;cssOverride=https%3A%2F%2Fcdn.media.disneyatoz.com%2Fsites%2Fprivacy%2Fprivacy-oneid-v5.css&amp;debug=1&amp;responderPage=https%3A%2F%2Fprivacy.thewaltdisneycompany.com%2Foneid-responder-page%2F&amp;buildId=1785bba1445" style="display: none;"></iframe></body></html>
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><div><div vw="" class="enabled"><div vw-access-button="" class="active"></div><div vw-plugin-wrapper=""><div class="vw-plugin-top-wrapper"></div><div class="vw-links"><ul></ul></div></div></div></div><script src="https://vlibras.gov.br/app2/vlibras-plugin.js" type="text/javascript"></script></body></html>

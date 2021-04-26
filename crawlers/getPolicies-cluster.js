@@ -11,11 +11,11 @@ var importedLinks = fs
 (async () => {
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_CONTEXT,
-        maxConcurrency: 12,
+        maxConcurrency: 8,
         monitor: true
     });
 
-    var counter = 0;
+    var nameCounter = 0;
 
     const download = async ({ page, data: url }) => {
         await page.setExtraHTTPHeaders({
@@ -24,8 +24,9 @@ var importedLinks = fs
         await page.goto(url);
         // const pageTitle = await page.evaluate(() => document.title);
         var data = await page.content();
-        fs.writeFileSync(`crawled data/policies-cluster/page ${counter}.html`, data);
-        counter++;
+        await page.waitForTimeout(2000);
+        fs.writeFileSync(`crawled data/policies-cluster/page ${nameCounter}.html`, data);
+        nameCounter++;
     };
 
     for (i in importedLinks) {

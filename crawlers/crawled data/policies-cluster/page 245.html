@@ -1,889 +1,130 @@
-<!DOCTYPE html><html prefix="og: http://ogp.me/ns#" lang="en-US" style="" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths nivo-lightbox-notouch"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>TOS and Privacy Policy | StickNodes.com</title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="http://sticknodes.com/xmlrpc.php">
-<style>#frm_buddypress-edit-activity textarea { width: 100%; }</style><meta name="robots" content="max-image-preview:large">
-<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-<link rel="dns-prefetch" href="//s.w.org">
-<link rel="alternate" type="application/rss+xml" title="Stick Nodes » Feed" href="http://sticknodes.com/feed/">
-<link rel="alternate" type="application/rss+xml" title="Stick Nodes » Comments Feed" href="http://sticknodes.com/comments/feed/">
-		<!-- This site uses the Google Analytics by ExactMetrics plugin v6.7.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
-							<script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=sticknodes.com&amp;callback=_gfp_s_&amp;client=ca-pub-7868509588811881"></script><script src="https://pagead2.googlesyndication.com/pagead/js/r20210406/r20190131/show_ads_impl.js" id="google_shimpl"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//www.googletagmanager.com/gtag/js?id=UA-17623368-4" type="text/javascript" data-cfasync="false"></script>
-			<script type="text/javascript" data-cfasync="false">
-				var em_version = '6.7.0';
-				var em_track_user = true;
-				var em_no_track_reason = '';
-				
-								var disableStr = 'ga-disable-UA-17623368-4';
+<!DOCTYPE html><html><head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<style>
+		@import url("https://static.threema.ch/fonts/labgrotesque.css");
+		
+		* {
+			font-family: 'Lab Grotesque', Helvetica, Arial, sans-serif;
+		}
 
-				/* Function to detect opted out users */
-				function __gtagTrackerIsOptedOut() {
-					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
-				}
+		body {
+			margin: 0;
+			padding: 10px;
+		}
 
-				/* Disable tracking if the opt-out cookie exists. */
-				if ( __gtagTrackerIsOptedOut() ) {
-					window[disableStr] = true;
-				}
+		body.dark {
+			background-color: #222222;
+			color: white;
+		}
 
-				/* Opt-out function */
-				function __gtagTrackerOptout() {
-					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-					window[disableStr] = true;
-				}
+		a {
+			color: #4fbc24;
+			text-decoration: none;
+			font-size: inherit;
+		}
 
-				if ( 'undefined' === typeof gaOptout ) {
-					function gaOptout() {
-						__gtagTrackerOptout();
-					}
-				}
-								window.dataLayer = window.dataLayer || [];
-				if ( em_track_user ) {
-					function __gtagTracker() {dataLayer.push( arguments );}
-					__gtagTracker( 'js', new Date() );
-					__gtagTracker( 'set', {
-						'developer_id.dNDMyYj' : true,
-						                    });
-					__gtagTracker( 'config', 'UA-17623368-4', {
-						forceSSL:true,					} );
-										window.gtag = __gtagTracker;										(
-						function () {
-							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-							/* ga and __gaTracker compatibility shim. */
-							var noopfn = function () {
-								return null;
-							};
-							var newtracker = function () {
-								return new Tracker();
-							};
-							var Tracker = function () {
-								return null;
-							};
-							var p = Tracker.prototype;
-							p.get = noopfn;
-							p.set = noopfn;
-							p.send = function (){
-								var args = Array.prototype.slice.call(arguments);
-								args.unshift( 'send' );
-								__gaTracker.apply(null, args);
-							};
-							var __gaTracker = function () {
-								var len = arguments.length;
-								if ( len === 0 ) {
-									return;
-								}
-								var f = arguments[len - 1];
-								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
-									if ( 'send' === arguments[0] ) {
-										var hitConverted, hitObject = false, action;
-										if ( 'event' === arguments[1] ) {
-											if ( 'undefined' !== typeof arguments[3] ) {
-												hitObject = {
-													'eventAction': arguments[3],
-													'eventCategory': arguments[2],
-													'eventLabel': arguments[4],
-													'value': arguments[5] ? arguments[5] : 1,
-												}
-											}
-										}
-										if ( typeof arguments[2] === 'object' ) {
-											hitObject = arguments[2];
-										}
-										if ( typeof arguments[5] === 'object' ) {
-											Object.assign( hitObject, arguments[5] );
-										}
-										if ( 'undefined' !== typeof (
-											arguments[1].hitType
-										) ) {
-											hitObject = arguments[1];
-										}
-										if ( hitObject ) {
-											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
-											hitConverted = mapArgs( hitObject );
-											__gtagTracker( 'event', action, hitConverted );
-										}
-									}
-									return;
-								}
+		body.dark a {
+			color: #7491e8;
+		}
 
-								function mapArgs( args ) {
-									var gaKey, hit = {};
-									var gaMap = {
-										'eventCategory': 'event_category',
-										'eventAction': 'event_action',
-										'eventLabel': 'event_label',
-										'eventValue': 'event_value',
-										'nonInteraction': 'non_interaction',
-										'timingCategory': 'event_category',
-										'timingVar': 'name',
-										'timingValue': 'value',
-										'timingLabel': 'event_label',
-									};
-									for ( gaKey in gaMap ) {
-										if ( 'undefined' !== typeof args[gaKey] ) {
-											hit[gaMap[gaKey]] = args[gaKey];
-										}
-									}
-									return hit;
-								}
+		h2 {
+			font-size: 18pt;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 
-								try {
-									f.hitCallback();
-								} catch ( ex ) {
-								}
-							};
-							__gaTracker.create = newtracker;
-							__gaTracker.getByName = newtracker;
-							__gaTracker.getAll = function () {
-								return [];
-							};
-							__gaTracker.remove = noopfn;
-							__gaTracker.loaded = true;
-							window['__gaTracker'] = __gaTracker;
-						}
-					)();
-									} else {
-										console.log( "" );
-					( function () {
-							function __gtagTracker() {
-								return null;
-							}
-							window['__gtagTracker'] = __gtagTracker;
-							window['gtag'] = __gtagTracker;
-					} )();
-									}
-			</script>
-				<!-- / Google Analytics by ExactMetrics -->
-				<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/sticknodes.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7"}};
-			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script><script src="http://sticknodes.com/wp-includes/js/wp-emoji-release.min.js?ver=5.7" type="text/javascript" defer=""></script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="http://sticknodes.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="bp-member-block-css" href="http://sticknodes.com/wp-content/plugins/buddypress/bp-members/css/blocks/member.min.css?ver=7.2.1" type="text/css" media="all">
-<link rel="stylesheet" id="bp-members-block-css" href="http://sticknodes.com/wp-content/plugins/buddypress/bp-members/css/blocks/members.min.css?ver=7.2.1" type="text/css" media="all">
-<link rel="stylesheet" id="bp-group-block-css" href="http://sticknodes.com/wp-content/plugins/buddypress/bp-groups/css/blocks/group.min.css?ver=7.2.1" type="text/css" media="all">
-<link rel="stylesheet" id="bp-groups-block-css" href="http://sticknodes.com/wp-content/plugins/buddypress/bp-groups/css/blocks/groups.min.css?ver=7.2.1" type="text/css" media="all">
-<link rel="stylesheet" id="w3dev-alertify-css-css" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css?ver=1.5.3" type="text/css" media="all">
-<link rel="stylesheet" id="w3dev-alertify-theme-css-css" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/default.min.css?ver=1.5.3" type="text/css" media="all">
-<link rel="stylesheet" id="bp-parent-css-css" href="http://sticknodes.com/wp-content/themes/dw-minion/buddypress/css/buddypress.css?ver=7.2.1" type="text/css" media="screen">
-<link rel="stylesheet" id="contact-form-7-css" href="http://sticknodes.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4" type="text/css" media="all">
-<link rel="stylesheet" id="responsive-lightbox-nivo_lightbox-css-css" href="http://sticknodes.com/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/nivo-lightbox.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="responsive-lightbox-nivo_lightbox-css-d-css" href="http://sticknodes.com/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/themes/default/default.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="wp-polls-css" href="http://sticknodes.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.75.6" type="text/css" media="all">
-<style id="wp-polls-inline-css" type="text/css">
-.wp-polls .pollbar {
-	margin: 1px;
-	font-size: 6px;
-	line-height: 8px;
-	height: 8px;
-	background-image: url('http://sticknodes.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
-	border: 1px solid #c8c8c8;
-}
+		p, ul, li {
+			font-size: 10pt;
+		}
 
-</style>
-<link rel="stylesheet" id="dw-minion-main-css" href="http://sticknodes.com/wp-content/themes/dw-minion/assets/css/main.css?ver=5.7" type="text/css" media="all">
-<link rel="stylesheet" id="wpsn-fontawesome-css" href="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/fontawesome-free-5.12.1-web/css/all.min.css?ver=1.0.9" type="text/css" media="all">
-<link rel="stylesheet" id="wpsn-custom-css" href="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_custom.css?ver=1.0.9" type="text/css" media="all">
-<link rel="stylesheet" id="wpsn-wpdiscuz-css" href="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_wpdiscuz.css?ver=1.0.9" type="text/css" media="all">
-<script type="text/javascript" id="exactmetrics-frontend-script-js-extra">
-/* <![CDATA[ */
-var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,nodes,stknds,nodemc","inbound_paths":"[]","home_url":"http:\/\/sticknodes.com","hash_tracking":"false","ua":"UA-17623368-4"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.min.js?ver=6.7.0" id="exactmetrics-frontend-script-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1" id="jquery-core-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js?ver=1.5.3" id="w3dev-alertify-js-js"></script>
-<script type="text/javascript" id="bp-confirm-js-extra">
-/* <![CDATA[ */
-var BP_Confirm = {"are_you_sure":"Are you sure?"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=7.2.1" id="bp-confirm-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=7.2.1" id="bp-widget-members-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=7.2.1" id="bp-jquery-query-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=7.2.1" id="bp-jquery-cookie-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=7.2.1" id="bp-jquery-scroll-to-js"></script>
-<script type="text/javascript" id="bp-parent-js-js-extra">
-/* <![CDATA[ */
-var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/themes/dw-minion/buddypress/js/buddypress.js?ver=7.2.1" id="bp-parent-js-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/nivo-lightbox.min.js?ver=5.7" id="responsive-lightbox-nivo_lightbox-js"></script>
-<script type="text/javascript" id="responsive-lightbox-lite-script-js-extra">
-/* <![CDATA[ */
-var rllArgs = {"script":"nivo_lightbox","selector":"lightbox","custom_events":""};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/responsive-lightbox-lite/assets/inc/script.js?ver=5.7" id="responsive-lightbox-lite-script-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/themes/dw-minion/assets/js/modernizr-2.6.2.min.js?ver=5.7" id="modernizr-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_expander.js?ver=1.0.9" id="wpsn-expander-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_spotlights_widget.js?ver=1.0.9" id="wpsn-spotlights-widget-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_greeting.js?ver=1.0.9" id="wpsn-greeting-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/wp-sticknodes/assets/front/wpsn_spotlights_click_counter.js?ver=1.0.9" id="wpsn-spotlights-click-counter-js"></script>
-<link rel="https://api.w.org/" href="http://sticknodes.com/wp-json/"><link rel="alternate" type="application/json" href="http://sticknodes.com/wp-json/wp/v2/pages/10386"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sticknodes.com/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sticknodes.com/wp-includes/wlwmanifest.xml"> 
-<meta name="generator" content="WordPress 5.7">
-<link rel="canonical" href="http://sticknodes.com/tos-privacy-policy/">
-<link rel="shortlink" href="http://sticknodes.com/?p=10386">
-
-	<script type="text/javascript">var ajaxurl = 'http://sticknodes.com/wp-admin/admin-ajax.php';</script>
-
-    <style type="text/css" id="remove_leftbar" media="screen">
-      @media ( min-width: 1200px ) {
-        .site-actions {display: none;}
-        #page {margin-left: 0;}
-      }
-    </style>
-        <style type="text/css" id="minion_leftbar_color" media="screen">
-      .show-nav .show-site-nav i,.action.search label,.site-actions i {
-        color: #dddddd;
-      }
-      .site-actions,.show-nav .show-site-nav i,.action.search label,.site-actions i {
-        background: #888888;
-      }
-      .no-touch .site-actions .social:hover i,.back-top:hover i,.no-touch .action.search:hover label,.action.search.active label,.action.search .search-query {
-        color: #888888;
-      }
-      .no-touch .site-actions .social:hover i,.back-top:hover i,.no-touch .action.search:hover label,.action.search.active label,.action.search .search-query {
-        background: #dddddd;
-      }
-      @media (min-width: 768px) {
-        .site-actions,.site-actions .actions>.back-top {
-          border-top: 1px solid #dddddd;
-        }
-        .social,.site-actions .actions > .action,.show-site-nav {
-          border-bottom: 1px solid #dddddd;
-        }
-        .pager .nav-next a:hover .btn, .pager .nav-previous a:hover .btn {
-          background: #dddddd;
-        }
-      }
-    </style>
-        <style type="text/css" id="minion_color" media="screen">
-      .btn:hover,#nav-below .btn:hover,.accordion-heading .accordion-toggle,.nav-tabs > li > a:hover, .nav-tabs > li > a:focus,.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus,.pager .pager-title .nav-next a:hover .btn, .pager .pager-title .nav-previous a:hover .btn, .entry-footer .entry-tags .tags-links a:hover,#cancel-comment-reply-link:hover,#commentform #submit,.post-password-required .entry-content input[type="submit"]:hover,blockquote p {
-        background-color: #38B7EA;
-      }
-      a:hover,.btn-link:hover,.btn-link:focus,.comment-list .comment-datetime:hover,.comment-list .comment-edit-link:hover,.entry-meta a, .entry-meta .posted-on a:hover, .entry-meta .comments-link a:hover,.format-link .entry-content a,.format-quote .bq-meta a,.widget_nav_menu .current_page_item > a, .widget_nav_menu .current-menu-item > a,[class*="widget_recent_comments"] .url,.dw_twitter .tweet-content a {
-        color: #38B7EA;
-      }
-      .nav-tabs > .active > a:before,blockquote cite:before {
-        border-top: 6px solid #38B7EA;
-      }
-    </style>
-    
- <style>
- #buddypress div.activity-comments form#frm_buddypress-edit-activity .ac-textarea {
- margin: 20px 10px 5px;
- }
- </style><link rel="icon" href="http://sticknodes.com/wp-content/uploads/2016/01/cropped-512-32x32.png" sizes="32x32">
-<link rel="icon" href="http://sticknodes.com/wp-content/uploads/2016/01/cropped-512-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="http://sticknodes.com/wp-content/uploads/2016/01/cropped-512-180x180.png">
-<meta name="msapplication-TileImage" content="http://sticknodes.com/wp-content/uploads/2016/01/cropped-512-270x270.png">
-<!--<link rel='stylesheet' id='sn-extra-css'  href='http://sticknodes.com/wp-content/themes/dw-minion/sn-april-fools-2021.css?ver=1.0.2' type='text/css' media='all' />-->
-<meta http-equiv="origin-trial" content="A+b/H0b8RPXNaJgaNFpO0YOFuGK6myDQXlwnJB3SwzvNMfcndat4DZYMrP4ClJIzYWo3/yP2S+8FTZ/lpqbPAAEAAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6oBxcpn5rQDPKSAs+d0oxNyJYq2/4esBUh3Yx5z8QfcLu+AU8iFCXYRcr/CEEfDnkxxLTsvXPJFQBxHfvkgMAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9KPtG5kl3oLTk21xqynDPGQ5t18bSOpwt0w6kGa6dEWbuwjpffmdUpR3W+faZDubGT+KIk2do0BX2ca16x8qAcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A0OysezhLoCRYomumeYlubLurZTCmsjTb087OvtCy95jNM65cfEsbajrJnhaGwiTxhz38ZZbm+UhUwQuXfVPTg0AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxoOxdZQmIoA1WeAPDixRAeWDdgs7ZtVFfH2y19ziTgD1iaHE5ZGz2UdSjubkWvob9C5PrjUfkWi4ZSLgWk3Xg8AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7+rMYR5onPnACrz+niKSeFdH3xw1IyHo2AZSHmxrofRk9w4HcQPMYcpBUKu6OQ6zsdxf4m/vqa6tG6Na4OLpAQAAAB4eyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+b/H0b8RPXNaJgaNFpO0YOFuGK6myDQXlwnJB3SwzvNMfcndat4DZYMrP4ClJIzYWo3/yP2S+8FTZ/lpqbPAAEAAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6oBxcpn5rQDPKSAs+d0oxNyJYq2/4esBUh3Yx5z8QfcLu+AU8iFCXYRcr/CEEfDnkxxLTsvXPJFQBxHfvkgMAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9KPtG5kl3oLTk21xqynDPGQ5t18bSOpwt0w6kGa6dEWbuwjpffmdUpR3W+faZDubGT+KIk2do0BX2ca16x8qAcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A0OysezhLoCRYomumeYlubLurZTCmsjTb087OvtCy95jNM65cfEsbajrJnhaGwiTxhz38ZZbm+UhUwQuXfVPTg0AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxoOxdZQmIoA1WeAPDixRAeWDdgs7ZtVFfH2y19ziTgD1iaHE5ZGz2UdSjubkWvob9C5PrjUfkWi4ZSLgWk3Xg8AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7+rMYR5onPnACrz+niKSeFdH3xw1IyHo2AZSHmxrofRk9w4HcQPMYcpBUKu6OQ6zsdxf4m/vqa6tG6Na4OLpAQAAAB4eyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="https://adservice.google.com.br/adsid/integrator.js?domain=sticknodes.com" as="script"><script type="text/javascript" src="https://adservice.google.com.br/adsid/integrator.js?domain=sticknodes.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=sticknodes.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=sticknodes.com"></script></head>
-<body class="bp-legacy page-template-default page page-id-10386 group-blog js">
-<div id="page" class="hfeed site">
-	<div class="container clearfix">
-				<div id="navigation" class="site-nav" style="display: block;">
-			<div class="site-nav-inner">
-				<div class="container">
-					<header id="masthead" class="site-header" role="banner">
-						<h1 class="site-title display-logo"><a href="http://sticknodes.com/" title="Stick Nodes" rel="home"><img alt="Stick Nodes" src="http://sticknodes.com/wp-content/uploads/2020/04/website_logo.png"></a></h1><p class="site-subtitle">Stick Nodes<span style="font-size:16px;"><sup>®</sup></span></p><h2 class="site-description"><p>A stickfigure animation app created for mobile devices!</p><p>Create your own stickman animations on your Android or iOS device!</p></h2>					</header>
-					<div id="main-sidebar" class="widget-area" role="complementary">
-		<aside id="wpsn_widget_profile_greeting-2" class="widget wpsn_widget_profile_greeting"><a href="http://sticknodes.com/register/"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/profile-create.gif" alt="Create a Profile"></a></aside><aside id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">Community / Profile</h3><div class="menu-buddypress-container"><ul id="menu-buddypress" class="menu"><li id="menu-item-7181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7181"><a href="http://sticknodes.com/activity/">Community Activity</a></li>
-<li id="menu-item-7179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7179"><a href="http://sticknodes.com/members/">Community Members</a></li>
-<li id="menu-item-7180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7180"><a href="http://sticknodes.com/groups/">Community Groups</a></li>
-<li id="menu-item-7175" class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-7175"><a href="http://sticknodes.com/hello/?redirect_to=http%3A%2F%2Fsticknodes.com%2Ftos-privacy-policy%2F">Log In</a></li>
-<li id="menu-item-7178" class="bp-menu bp-register-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-7178"><a href="http://sticknodes.com/register/">Register</a></li>
-</ul></div></aside><aside id="pages-2" class="widget widget_pages"><h3 class="widget-title">Pages</h3>
-			<ul>
-				<li class="page_item page-item-1650"><a href="http://sticknodes.com/about-us/">About Us</a></li>
-<li class="page_item page-item-13108"><a href="http://sticknodes.com/animation-spotlights/">Animation Spotlights</a></li>
-<li class="page_item page-item-11755 page_item_has_children"><a href="http://sticknodes.com/christmas-banners-2017/">Christmas Banners</a>
-<ul class="children">
-	<li class="page_item page-item-11856"><a href="http://sticknodes.com/christmas-banners-2017/december-1/">December 1</a></li>
-	<li class="page_item page-item-12137"><a href="http://sticknodes.com/christmas-banners-2017/december-10/">December 10</a></li>
-	<li class="page_item page-item-12183"><a href="http://sticknodes.com/christmas-banners-2017/december-11/">December 11</a></li>
-	<li class="page_item page-item-12205"><a href="http://sticknodes.com/christmas-banners-2017/december-12/">December 12</a></li>
-	<li class="page_item page-item-12247"><a href="http://sticknodes.com/christmas-banners-2017/december-13/">December 13</a></li>
-	<li class="page_item page-item-12289"><a href="http://sticknodes.com/christmas-banners-2017/december-14/">December 14</a></li>
-	<li class="page_item page-item-12314"><a href="http://sticknodes.com/christmas-banners-2017/december-15/">December 15</a></li>
-	<li class="page_item page-item-12357"><a href="http://sticknodes.com/christmas-banners-2017/december-16/">December 16</a></li>
-	<li class="page_item page-item-12381"><a href="http://sticknodes.com/christmas-banners-2017/december-17/">December 17</a></li>
-	<li class="page_item page-item-12405"><a href="http://sticknodes.com/christmas-banners-2017/december-18/">December 18</a></li>
-	<li class="page_item page-item-12429"><a href="http://sticknodes.com/christmas-banners-2017/december-19/">December 19</a></li>
-	<li class="page_item page-item-11865"><a href="http://sticknodes.com/christmas-banners-2017/december-2/">December 2</a></li>
-	<li class="page_item page-item-12493"><a href="http://sticknodes.com/christmas-banners-2017/december-20/">December 20</a></li>
-	<li class="page_item page-item-12499"><a href="http://sticknodes.com/christmas-banners-2017/december-21/">December 21</a></li>
-	<li class="page_item page-item-12547"><a href="http://sticknodes.com/christmas-banners-2017/december-22/">December 22</a></li>
-	<li class="page_item page-item-12572"><a href="http://sticknodes.com/christmas-banners-2017/december-23/">December 23</a></li>
-	<li class="page_item page-item-12617"><a href="http://sticknodes.com/christmas-banners-2017/december-24/">December 24</a></li>
-	<li class="page_item page-item-12645"><a href="http://sticknodes.com/christmas-banners-2017/december-25/">December 25</a></li>
-	<li class="page_item page-item-12648"><a href="http://sticknodes.com/christmas-banners-2017/december-26/">December 26</a></li>
-	<li class="page_item page-item-12673"><a href="http://sticknodes.com/christmas-banners-2017/december-27/">December 27</a></li>
-	<li class="page_item page-item-12718"><a href="http://sticknodes.com/christmas-banners-2017/december-28/">December 28</a></li>
-	<li class="page_item page-item-12760"><a href="http://sticknodes.com/christmas-banners-2017/december-29/">December 29</a></li>
-	<li class="page_item page-item-11910"><a href="http://sticknodes.com/christmas-banners-2017/december-3/">December 3</a></li>
-	<li class="page_item page-item-12804"><a href="http://sticknodes.com/christmas-banners-2017/december-30/">December 30</a></li>
-	<li class="page_item page-item-12828"><a href="http://sticknodes.com/christmas-banners-2017/december-31/">December 31</a></li>
-	<li class="page_item page-item-11955"><a href="http://sticknodes.com/christmas-banners-2017/december-4/">December 4</a></li>
-	<li class="page_item page-item-11977"><a href="http://sticknodes.com/christmas-banners-2017/december-5/">December 5</a></li>
-	<li class="page_item page-item-12022"><a href="http://sticknodes.com/christmas-banners-2017/december-6/">December 6</a></li>
-	<li class="page_item page-item-12025"><a href="http://sticknodes.com/christmas-banners-2017/december-7/">December 7</a></li>
-	<li class="page_item page-item-12069"><a href="http://sticknodes.com/christmas-banners-2017/december-8/">December 8</a></li>
-	<li class="page_item page-item-12112"><a href="http://sticknodes.com/christmas-banners-2017/december-9/">December 9</a></li>
-	<li class="page_item page-item-11847"><a href="http://sticknodes.com/christmas-banners-2017/november-27/">November 27</a></li>
-	<li class="page_item page-item-11853"><a href="http://sticknodes.com/christmas-banners-2017/november-28/">November 28</a></li>
-	<li class="page_item page-item-11854"><a href="http://sticknodes.com/christmas-banners-2017/november-29/">November 29</a></li>
-	<li class="page_item page-item-11855"><a href="http://sticknodes.com/christmas-banners-2017/november-30/">November 30</a></li>
-</ul>
-</li>
-<li class="page_item page-item-534"><a href="http://sticknodes.com/faqs/">FAQs</a></li>
-<li class="page_item page-item-28831"><a href="http://sticknodes.com/pollsarchive/">Polls Archive</a></li>
-<li class="page_item page-item-26854"><a href="http://sticknodes.com/roles-and-badges/">Roles and Badges</a></li>
-<li class="page_item page-item-108 page_item_has_children"><a href="http://sticknodes.com/stickfigures/">Stickfigures</a>
-<ul class="children">
-	<li class="page_item page-item-131"><a href="http://sticknodes.com/stickfigures/backgrounds/">Backgrounds</a></li>
-	<li class="page_item page-item-129"><a href="http://sticknodes.com/stickfigures/effects/">Effects</a></li>
-	<li class="page_item page-item-105"><a href="http://sticknodes.com/stickfigures/miscellaneous/">Miscellaneous</a></li>
-	<li class="page_item page-item-127"><a href="http://sticknodes.com/stickfigures/objects/">Objects</a></li>
-	<li class="page_item page-item-1032"><a href="http://sticknodes.com/stickfigures/packs/">Packs</a></li>
-	<li class="page_item page-item-121"><a href="http://sticknodes.com/stickfigures/people/">People</a></li>
-	<li class="page_item page-item-123"><a href="http://sticknodes.com/stickfigures/vehicles/">Vehicles</a></li>
-	<li class="page_item page-item-125"><a href="http://sticknodes.com/stickfigures/weapons/">Weapons</a></li>
-</ul>
-</li>
-<li class="page_item page-item-20261"><a href="http://sticknodes.com/submit-thumbnail/">Submit Thumbnail</a></li>
-<li class="page_item page-item-380"><a href="http://sticknodes.com/tutorials/">Tutorials</a></li>
-			</ul>
-
-			</aside><aside id="text-18" class="widget widget_text">			<div class="textwidget"><div class="sidebar-social-media-box">
+		time {
+			font-size: 10pt;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body class="light">
+<div id="main"><div>
+<h1>Privacy Policy</h1>
+<p>
+	<time datetime="2021-03-17">March 17, 2021</time>
+</p>
+<p>Threema GmbH (hereafter “Threema”) was founded on the premise of bulletproof data protection. It is our primary goal
+	to store only the absolute minimum of information for the shortest possible time (“Privacy by Design”). In addition
+	to using state-of-the-art encryption methods, we take all necessary technical and organizational measures to prevent
+	unauthorized data access and misuse. The processing and protection of data is carried out in accordance with
+	applicable legal regulations and EU Regulation 2016/679 (GDPR).</p>
+<h2>1. General Information</h2>
+<p>The Threema app (hereinafter referred to as “Threema”) was developed in order to leave as little metadata as possible on a central server. It is therefore not absolutely necessary to indicate personal data to use the app. The identification of a subscriber takes place exclusively via an 8-digit ID and a key pair created by the user himself. Groups are only managed on the participating devices.</p>
+<p>Threema <strong>can be used without providing any personal data</strong>. If you voluntarily provide your phone number or email address, you confirm in accordance with Art. 8 GDPR that you are at least 16 years old or that you have obtained the consent of your legal guardian. By using the app, you agree to the collection, processing and use of data as described below.</p>
+<h2>2. Purpose of Data Processing</h2>
+<p>Threema processes data to enable the transmission of short messages and media to other subscribers. The data is processed exclusively by Threema on its own server infrastructure in Switzerland and is not passed on to third parties.</p>
+<h2>3. Scope and Duration of Data Processing</h2>
+<h3>A. Inventory Data</h3>
+<p>In the context of the use of Threema, the following inventory data are collected and stored:</p>
 <ul>
-	<li><a href="http://twitter.com/FTLRalph"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/twitter.png" alt="Stick Nodes Twitter"></a></li><li><a href="http://facebook.com/sticknodes"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/facebook.png" alt="Stick Nodes Facebook"></a></li><li><a href="http://youtube.com/FTLRalph"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/youtube.png" alt="Stick Nodes Youtube"></a></li><li><a href="https://reddit.com/r/StickNodes/"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/reddit.png" alt="Stick Nodes Reddit"></a></li><li><a href="https://aminoapps.com/c/sticknodes-animations-and-more/home/"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/amino.png" alt="Stick Nodes Amino"></a></li><li><a href="https://sticknodesskins.weebly.com/"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/social-media-icons/skins.png" alt="Stick Nodes Skinning"></a></li>
+	<li>Threema ID</li>
+	<li>Public key</li>
+	<li>Operating system and version of the Threema app</li>
+	<li>Date (without time) of creation of the Threema ID</li>
+	<li>Date (without time) of the last login</li>
 </ul>
-</div>
-</div>
-		</aside><aside id="wpsn_widget_recent_comments-3" class="widget wpsn_widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul class="recent-comments-list"><li class="comment"><a class="author" href="http://sticknodes.com/sticks/the-ultimate-titan-pack-zip/comment-page-1/#comment-320761"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/default-avatars/01.png" class="avatar avatar-24 photo " alt="" width="24 " height="24"><span class="name">Yaos</span><span class="at-name">(Guest)</span></a><a class="comment" href="http://sticknodes.com/sticks/the-ultimate-titan-pack-zip/comment-page-1/#comment-320761"><span class="post-img-title"><span class="img-container"><img src="http://sticknodes.com/thumbs/theultimatetitanpack.jpg" alt="The Ultimate Titan Pack"></span><span class="post-title">The Ultimate Titan Pack</span></span><span class="content">How the heck do you assemble godzilla?<span class="read-more"> [More»]</span></span><span class="comment-time">1 minute ago</span></a></li><li class="comment"><a class="author" href="http://sticknodes.com/members/hyperdragondx9504/"><img loading="lazy" src="http://sticknodes.com/wp-content/uploads/avatars/27897/600b4196ec827-bpfull.png" class=" user-27897-avatar avatar-24 photo" width="24" height="24" alt="Profile Photo"><span class="name">Hyperdragondx9504</span><span class="at-name">@hyperdragondx9504</span></a><a class="comment" href="http://sticknodes.com/sticks/ultraman-pack-3-zip/comment-page-1/#comment-320760"><span class="post-img-title"><span class="img-container"><img src="http://sticknodes.com/thumbs/ultramanpack3.jpg" alt="Ultraman Pack 3"></span><span class="post-title">Ultraman Pack 3</span></span><span class="content">Shuwatch!<span class="read-more"> [More»]</span></span><span class="comment-time">7 minutes ago</span></a></li><li class="comment"><a class="author" href="http://sticknodes.com/members/k-zilla/"><img loading="lazy" src="http://sticknodes.com/wp-content/uploads/avatars/14330/607118739e12c-bpfull.jpg" class=" user-14330-avatar avatar-24 photo" width="24" height="24" alt="Profile Photo"><span class="name">🎃🦇K-ZILLA🦇🎃</span><span class="at-name">@k-zilla</span></a><a class="comment" href="http://sticknodes.com/sticks/scp-173-thicc-pack-zip/comment-page-1/#comment-320759"><span class="post-img-title"><span class="img-container"><img src="http://sticknodes.com/thumbs/scp173thiccpack.gif" alt="SCP 173 Thicc Pack"></span><span class="post-title">SCP 173 Thicc Pack</span></span><span class="content">He(or she) never gets that far, because the constant clapping always a...<span class="read-more"> [More»]</span></span><span class="comment-time">30 minutes ago</span></a></li><li class="comment"><a class="author" href="http://sticknodes.com/members/auto-angel/"><img loading="lazy" src="http://sticknodes.com/wp-content/uploads/avatars/4581/5f771045075fe-bpfull.png" class=" user-4581-avatar avatar-24 photo" width="24" height="24" alt="Profile Photo"><span class="name">not لටʂǶ</span><span class="at-name">@auto-angel</span></a><a class="comment" href="http://sticknodes.com/tutorials/comment-page-135/#comment-320757"><span class="post-img-title"><span class="img-container"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/generic-recent-post-thumb.gif" alt="Tutorials"></span><span class="post-title">Tutorials</span></span><span class="content">idk how to fix that problem but the address it should send to is submi...<span class="read-more"> [More»]</span></span><span class="comment-time">48 minutes ago</span></a></li><li class="comment"><a class="author" href="http://sticknodes.com/members/auto-angel/"><img loading="lazy" src="http://sticknodes.com/wp-content/uploads/avatars/4581/5f771045075fe-bpfull.png" class=" user-4581-avatar avatar-24 photo" width="24" height="24" alt="Profile Photo"><span class="name">not لටʂǶ</span><span class="at-name">@auto-angel</span></a><a class="comment" href="http://sticknodes.com/faqs/comment-page-281/#comment-320755"><span class="post-img-title"><span class="img-container"><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/generic-recent-post-thumb.gif" alt="FAQs"></span><span class="post-title">FAQs</span></span><span class="content">what kind of trouble exactly? if you mean that you’re not sure if th...<span class="read-more"> [More»]</span></span><span class="comment-time">51 minutes ago</span></a></li></ul></aside><aside id="wpsn_widget_users_online-2" class="widget wpsn_widget_users_online"><h3 class="widget-title">Who’s Online?</h3><div class="content"><p class="count">There are 750 users online now.</p><p class="members"><a href="http://sticknodes.com/members/giganshowaera/" class="is-crusader">El Gigan Showa</a><a href="http://sticknodes.com/members/z-animation/">Harrison</a><a href="http://sticknodes.com/members/hyperdragondx9504/">Hyperdragondx9504</a><a href="http://sticknodes.com/members/fluffboi/">Fluff Boi</a><a href="http://sticknodes.com/members/lorddracojiraanims/">Lord DracoJira Animations</a><a href="http://sticknodes.com/members/backfireguyiguess/">@Backfireguyiguess</a><a href="http://sticknodes.com/members/funtimesilver/">Funtime silver</a><a href="http://sticknodes.com/members/uz64/">ØŽ</a><a href="http://sticknodes.com/members/nthekiller/">The guy here has your local mechanic</a><a href="http://sticknodes.com/members/imafetus/">Alien anims</a><a href="http://sticknodes.com/members/luckyanims/">🍀Lucky🍀</a><a href="http://sticknodes.com/members/oofdoof/">Oof</a><a href="http://sticknodes.com/members/killerbeewee/">Killer bee</a><a href="http://sticknodes.com/members/mab/" class="is-crusader">Lord MAB (Harbinger of Chaos)</a><a href="http://sticknodes.com/members/mahboi/">MahBoi</a><a href="http://sticknodes.com/members/stk-sonic/">Soft Serve Ice Cream</a><a href="http://sticknodes.com/members/bloodhour/">REVOLVER</a><a href="http://sticknodes.com/members/yaboimd/">MD</a><a href="http://sticknodes.com/members/agent-botterjony/">Agent. Botterjony</a><a href="http://sticknodes.com/members/ralph/" class="is-admin">Ralph (Developer)</a><a href="http://sticknodes.com/members/robkotykokso/">➡️Robert-adam⬅️</a><a href="http://sticknodes.com/members/devynbarnes/">Light_Anims.exe (Developer)</a><a href="http://sticknodes.com/members/jaydensimpson/">Jayden Simpson</a><a href="http://sticknodes.com/members/fazbear/">FAZBEAR</a><a href="http://sticknodes.com/members/xxkinginternalxx/">SuperSentaiFan2 (SSF2)</a><a href="http://sticknodes.com/members/deminearchiver/">DeMineArchiver</a></p><p class="guests">(And 675 guests)</p><p class="record">Most users online was 943 on:<br>Thu Mar 4th, 2021 @ 9:17am</p></div></aside></div>				</div>
-			</div>
-		</div>
-          <div id="actions" class="site-actions clearfix">
-      <div class="action show-site-nav">
-          <i class="icon-reorder"></i>
-      </div>
-      <div class="clearfix actions">
-          <div class="action search">
-              <!-- <form action="http://sticknodes.com/" class="action searchform">
-                  <input type="text" placeholder="Search" id="s" name="s" class="search-query">
-                  <label for="s"></label>
-              </form> -->
-              <form role="search" method="get" class="action searchform" action="http://sticknodes.com/stickfigures/"> 
-                <input type="text" placeholder="Search" id="s" name="wpfb_s" class="search-query">
-                <label for="wpfb_s"></label>
-                <input type="hidden" name="search_field" value="all">
-                <input type="hidden" name="time" value="all">
-              </form>
-          </div>
-          <a class="back-top action" href="#page"><i class="icon-chevron-up"></i></a>
-                    <div class="action socials">
-              <i class="icon-link active-socials"></i>
-              <ul class="unstyled list-socials clearfix" style="width: 200px;">
-                  <li class="social"><a href="http://facebook.com/sticknodes"><i class="icon-facebook"></i></a></li>                  <li class="social"><a href="http://twitter.com/ftlralph"><i class="icon-twitter"></i></a></li>                                                                    </ul>          </div>
-      </div>
-  </div>
-  		<div id="main" class="site-main" style="min-height: 600px;">
-			<div class="site-main-inner">
-				<div class="container clearfix">
-					<div class="top-sidebar"><aside id="text-10" class="widget widget_text">			<div class="textwidget"><p style="line-height: 0px; height: 100%; min-height: 60px; max-height: 90px; padding: 0px; margin: 0px;"><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
-<!-- StickNodes.com (Actual Header) --><br>
-<ins class="adsbygoogle" style="display: block; height: 100px;" data-ad-client="ca-pub-7868509588811881" data-ad-slot="7832079258" data-ad-format="horizontal" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:100px;margin:0;padding:0;position:relative;visibility:visible;width:720px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:100px;margin:0;padding:0;position:relative;visibility:visible;width:720px;background-color:transparent;"></ins></ins></ins><br>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
-</div>
-		</aside><aside id="wpsn_widget_animation_spotlight-2" class="widget wpsn_widget_animation_spotlight"><div class="overflow-container"><ul id="wpsn-featured-spotlights-list"><li class="spotlight-item">
-	        	<div class="left">
-	        		<div class="item-pic">
-	        			<a href="http://sticknodes.com/spotlight/godzilla-vs-kong-part-1/"><img class="item-thumb" src="http://sticknodes.com/images/animationspotlight/animation-spotlight-thumb-331.gif" alt="Godzilla vs Kong | Part 1"></a>
-	        			<div class="item-rating">
-		                    		                    	<ul class="stars">
-		                            <li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-half.png" alt="Star Half"></span></li>		                        </ul>
-		                    		                </div>
-		                <div class="item-comments">
-		                	<a href="http://sticknodes.com/spotlight/godzilla-vs-kong-part-1/">4</a>
-		                </div>
-		                <div class="wpsn-spotlight-outgoing-link">
-		                	<a class="wpsn-spotlight-link-counter" href="https://www.youtube.com/watch?v=Rrl2F3zCzHw " data-id="45469" data-url="http://sticknodes.com/wp-admin/admin-ajax.php" data-widget="1" data-nonce="7a4e4b2114">Youtube</a>
-		                </div>
-	        		</div>
-	        	</div>
-	        	<div class="right">
-	        		<div class="inner">
-		        		<p class="item-title"><a href="http://sticknodes.com/spotlight/godzilla-vs-kong-part-1/">Godzilla vs Kong | Part 1</a></p>
-		        		<p class="item-author">By TØXIC Animations · Spotlighted on Apr 9th</p>
-		        		<p class="item-description"><span>Want a part 2?</span></p>
-			        </div>
-	        	</div>
-	        </li><li class="spotlight-item">
-	        	<div class="left">
-	        		<div class="item-pic">
-	        			<a href="http://sticknodes.com/spotlight/spider-man-the-series-season-3-episode-4/"><img class="item-thumb" src="http://sticknodes.com/images/animationspotlight/animation-spotlight-thumb-330.gif" alt="Spider-Man The Series – Season 3 Episode 4"></a>
-	        			<div class="item-rating">
-		                    		                    	<ul class="stars">
-		                            <li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-half.png" alt="Star Half"></span></li>		                        </ul>
-		                    		                </div>
-		                <div class="item-comments">
-		                	<a href="http://sticknodes.com/spotlight/spider-man-the-series-season-3-episode-4/">5</a>
-		                </div>
-		                <div class="wpsn-spotlight-outgoing-link">
-		                	<a class="wpsn-spotlight-link-counter" href="https://www.youtube.com/watch?v=9OnzOpvm9qA " data-id="45377" data-url="http://sticknodes.com/wp-admin/admin-ajax.php" data-widget="1" data-nonce="e37740274b">Youtube</a>
-		                </div>
-	        		</div>
-	        	</div>
-	        	<div class="right">
-	        		<div class="inner">
-		        		<p class="item-title"><a href="http://sticknodes.com/spotlight/spider-man-the-series-season-3-episode-4/">Spider-Man The Series – Season 3 Episode 4</a></p>
-		        		<p class="item-author">By J70 Animations · Spotlighted on Apr 5th</p>
-		        		<p class="item-description"><span>The continuation of the epic series. Warning: Contains epic fight scenes.</span></p>
-			        </div>
-	        	</div>
-	        </li><li class="spotlight-item">
-	        	<div class="left">
-	        		<div class="item-pic">
-	        			<a href="http://sticknodes.com/spotlight/sonic-vs-metal-sonic-m0-1/"><img class="item-thumb" src="http://sticknodes.com/images/animationspotlight/animation-spotlight-thumb-329.gif" alt="Sonic vs Metal Sonic M0.1"></a>
-	        			<div class="item-rating">
-		                    		                    	<ul class="stars">
-		                            <li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-empty.png" alt="Star Empty"></span></li>		                        </ul>
-		                    		                </div>
-		                <div class="item-comments">
-		                	<a href="http://sticknodes.com/spotlight/sonic-vs-metal-sonic-m0-1/">16</a>
-		                </div>
-		                <div class="wpsn-spotlight-outgoing-link">
-		                	<a class="wpsn-spotlight-link-counter" href="https://www.youtube.com/watch?v=qcxXVsuejDE " data-id="45338" data-url="http://sticknodes.com/wp-admin/admin-ajax.php" data-widget="1" data-nonce="5945c6c577">Youtube</a>
-		                </div>
-	        		</div>
-	        	</div>
-	        	<div class="right">
-	        		<div class="inner">
-		        		<p class="item-title"><a href="http://sticknodes.com/spotlight/sonic-vs-metal-sonic-m0-1/">Sonic vs Metal Sonic M0.1</a></p>
-		        		<p class="item-author">By MikeSparkC · Spotlighted on Apr 2nd</p>
-		        		<p class="item-description"><span>Sonic fights off a new robotic impostor and suddenly won the battle, even Metal Sonic M0.1 might be improved and faster than past Metal Sonic, but that never stopped the real sonic from running!</span></p>
-			        </div>
-	        	</div>
-	        </li><li class="spotlight-item">
-	        	<div class="left">
-	        		<div class="item-pic">
-	        			<a href="http://sticknodes.com/spotlight/redarkboy-episode-6-guardian-part-1/"><img class="item-thumb" src="http://sticknodes.com/images/animationspotlight/animation-spotlight-thumb-328.gif" alt="[RE:DARKBOY] Episode 6: Guardian Part 1"></a>
-	        			<div class="item-rating">
-		                    		                    	<ul class="stars">
-		                            <li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-filled.png" alt="Star Filled"></span></li><li><span><img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/star-half.png" alt="Star Half"></span></li>		                        </ul>
-		                    		                </div>
-		                <div class="item-comments">
-		                	<a href="http://sticknodes.com/spotlight/redarkboy-episode-6-guardian-part-1/">9</a>
-		                </div>
-		                <div class="wpsn-spotlight-outgoing-link">
-		                	<a class="wpsn-spotlight-link-counter" href="https://www.youtube.com/watch?v=QpYkCM5Ndlc " data-id="45257" data-url="http://sticknodes.com/wp-admin/admin-ajax.php" data-widget="1" data-nonce="2ad56989f2">Youtube</a>
-		                </div>
-	        		</div>
-	        	</div>
-	        	<div class="right">
-	        		<div class="inner">
-		        		<p class="item-title"><a href="http://sticknodes.com/spotlight/redarkboy-episode-6-guardian-part-1/">[RE:DARKBOY] Episode 6: Guardian Part 1</a></p>
-		        		<p class="item-author">By Darkboy Animation · Spotlighted on Mar 29th</p>
-		        		<p class="item-description"><span>Well that took a long goddamn time damn and still not a full episode. Inactive Studio is going really inactive. Well i guess you can enjoy this for now...</span></p>
-			        </div>
-	        	</div>
-	        </li></ul></div><a class="link-see-all-spotlights" href="http://sticknodes.com/animation-spotlights/"></a></aside></div><div id="primary" class="content-area">
-	<div class="primary-inner">
-		<div id="content" class="site-content" role="main">
-									<article id="post-10386" class="post-10386 page type-page status-publish hentry">
-	<header class="page-header">
-		<h1 class="page-title">TOS and Privacy Policy</h1>
-	</header>
-	<div class="page-content">
-		<h2 style="text-align: center;"><span style="color: #3366ff;">Apps</span></h2>
-<h2 id="atospp-toc2" class="auto-tos-pp tospptocheading">Contents:</h2>
-<ol class="auto-tos-pp tospptoc">
-<li><a href="#atospp-pp-sn">Privacy Policy (Stick Nodes)</a></li>
-<li><a href="#atospp-pp-snp">Privacy Policy (Stick Nodes Pro)</a></li>
-</ol>
-<h2 id="atospp-pp-sn">Privacy Policy (Stick Nodes):</h2>
-<p>Ralph Damiano (ForTheLoss Games) built the Stick Nodes app as an Ad Supported app. This SERVICE is provided by Ralph Damiano (ForTheLoss Games) at no cost and is intended for use as is.</p>
-<p>This page is used to inform visitors regarding my policies with the collection, use, and<br>
-disclosure of Personal Information if anyone decided to use my Service.</p>
-<p>If you choose to use my Service, then you agree to the collection and use of information in relation<br>
-to this policy. The Personal Information that I collect is used for providing and improving the<br>
-Service. I will not use or share your information with anyone except as described<br>
-in this Privacy Policy.</p>
-<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible<br>
-at Stick Nodes unless otherwise defined in this Privacy Policy.</p>
-<p><strong>Information Collection and Use</strong></p>
-<p>For a better experience, while using our Service, I may require you to provide us with certain<br>
-personally identifiable information, including but not limited to Advertising Identifier (IDFA) (IOS) and Android Advertising ID (Android). The information that I request will be retained on your device and is not collected by me in any way.</p>
-<p>The app does use third party services that may collect information used to identify you.</p>
-<div>
-<p>Link to privacy policy of third party service providers used by the app</p>
+<p>The following information is optional and can be provided by the user voluntarily in order to make it easier to be found by other Threema users:</p>
 <ul>
-<li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
-<li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob</a></li>
-<li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics</a></li>
-<li><a href="http://try.crashlytics.com/terms/privacy-policy.pdf" target="_blank" rel="noopener">Crashlytics</a></li>
+	<li>Nickname</li>
+	<li>Mobile phone number (one-way encrypted)</li>
+	<li>Email address (one-way encrypted)</li>
 </ul>
-</div>
-<p><strong>Log Data</strong></p>
-<p>I want to inform you that whenever you use my Service, in a case of an<br>
-error in the app I collect data and information (through third party products) on your phone<br>
-called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address,<br>
-device name, operating system version, the configuration of the app when utilizing my Service,<br>
-the time and date of your use of the Service, and other statistics.</p>
-<p><strong>Cookies</strong></p>
-<p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These<br>
-are sent to your browser from the websites that you visit and are stored on your device’s internal memory.</p>
-<p>This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries<br>
-that use “cookies” to collect information and improve their services. You have the option to either<br>
-accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to<br>
-refuse our cookies, you may not be able to use some portions of this Service.</p>
-<p><strong>Service Providers</strong></p>
-<p>I may employ third-party companies and individuals due to the following reasons:</p>
+<p>When exchanging messages, only the following information is passed on to other participants:</p>
 <ul>
-<li>To facilitate our Service;</li>
-<li>To provide the Service on our behalf;</li>
-<li>To perform Service-related services; or</li>
-<li>To assist us in analyzing how our Service is used.</li>
+	<li>Threema ID</li>
+	<li>Public key</li>
+	<li>Nickname</li>
 </ul>
-<p>I want to inform users of this Service that these third parties have access to your<br>
-Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they<br>
-are obligated not to disclose or use the information for any other purpose.</p>
-<p><strong>Security</strong></p>
-<p>I value your trust in providing us your Personal Information, thus we are striving<br>
-to use commercially acceptable means of protecting it. But remember that no method of transmission over<br>
-the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee<br>
-its absolute security.</p>
-<p><strong>Links to Other Sites</strong></p>
-<p>This Service may contain links to other sites. If you click on a third-party link, you will be directed<br>
-to that site. Note that these external sites are not operated by me. Therefore, I strongly<br>
-advise you to review the Privacy Policy of these websites. I have no control over<br>
-and assume no responsibility for the content, privacy policies, or practices of any third-party sites<br>
-or services.</p>
-<p><strong>Children’s Privacy</strong></p>
-<p>These Services do not address anyone under the age of 13. I do not knowingly collect<br>
-personally identifiable information from children under 13. In the case I discover that a child<br>
-under 13 has provided me with personal information, I immediately delete this from<br>
-our servers. If you are a parent or guardian and you are aware that your child has provided us with personal<br>
-information, please contact me so that I will be able to do necessary actions.</p>
-<p><strong>Changes to This Privacy Policy</strong></p>
-<p>I may update our Privacy Policy from time to time. Thus, you are advised to review<br>
-this page periodically for any changes. I will notify you of any changes by posting<br>
-the new Privacy Policy on this page. These changes are effective immediately after they are posted on<br>
-this page.</p>
-<p><strong>Contact Us</strong></p>
-<p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact<br>
-me.</p>
-<hr>
-<h2 id="atospp-pp-snp">Privacy Policy (Stick Nodes Pro):</h2>
-<p>Ralph Damiano (ForTheLoss Games) built the Stick Nodes Pro app as a Commercial app also supported by ads under detected piracy circumstances. This SERVICE is provided by Ralph Damiano (ForTheLoss Games) and is intended for use as is.</p>
-<p>This page is used to inform visitors regarding my policies with the collection, use, and<br>
-disclosure of Personal Information if anyone decided to use my Service.</p>
-<p>If you choose to use my Service, then you agree to the collection and use of information in relation<br>
-to this policy. The Personal Information that I collect is used for providing and improving the<br>
-Service. I will not use or share your information with anyone except as described<br>
-in this Privacy Policy.</p>
-<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible<br>
-at Stick Nodes Pro unless otherwise defined in this Privacy Policy.</p>
-<p><strong>Information Collection and Use</strong></p>
-<p>For a better experience, while using our Service, I may require you to provide us with certain<br>
-personally identifiable information, including but not limited to Advertising Identifier (IDFA) (IOS) and Android Advertising ID (Android). The information that I request will be retained on your device and is not collected by me in any way.</p>
-<p>The app does use third party services that may collect information used to identify you.</p>
-<div>
-<p>Link to privacy policy of third party service providers used by the app</p>
-<ul>
-<li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
-<li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob</a></li>
-<li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics</a></li>
-<li><a href="http://try.crashlytics.com/terms/privacy-policy.pdf" target="_blank" rel="noopener">Crashlytics</a></li>
-</ul>
-</div>
-<p><strong>Log Data</strong></p>
-<p>I want to inform you that whenever you use my Service, in a case of an<br>
-error in the app I collect data and information (through third party products) on your phone<br>
-called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address,<br>
-device name, operating system version, the configuration of the app when utilizing my Service,<br>
-the time and date of your use of the Service, and other statistics.</p>
-<p><strong>Cookies</strong></p>
-<p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These<br>
-are sent to your browser from the websites that you visit and are stored on your device’s internal memory.</p>
-<p>This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries<br>
-that use “cookies” to collect information and improve their services. You have the option to either<br>
-accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to<br>
-refuse our cookies, you may not be able to use some portions of this Service.</p>
-<p><strong>Service Providers</strong></p>
-<p>I may employ third-party companies and individuals due to the following reasons:</p>
-<ul>
-<li>To facilitate our Service;</li>
-<li>To provide the Service on our behalf;</li>
-<li>To perform Service-related services; or</li>
-<li>To assist us in analyzing how our Service is used.</li>
-</ul>
-<p>I want to inform users of this Service that these third parties have access to your<br>
-Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they<br>
-are obligated not to disclose or use the information for any other purpose.</p>
-<p><strong>Security</strong></p>
-<p>I value your trust in providing us your Personal Information, thus we are striving<br>
-to use commercially acceptable means of protecting it. But remember that no method of transmission over<br>
-the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee<br>
-its absolute security.</p>
-<p><strong>Links to Other Sites</strong></p>
-<p>This Service may contain links to other sites. If you click on a third-party link, you will be directed<br>
-to that site. Note that these external sites are not operated by me. Therefore, I strongly<br>
-advise you to review the Privacy Policy of these websites. I have no control over<br>
-and assume no responsibility for the content, privacy policies, or practices of any third-party sites<br>
-or services.</p>
-<p><strong>Children’s Privacy</strong></p>
-<p>These Services do not address anyone under the age of 13. I do not knowingly collect<br>
-personally identifiable information from children under 13. In the case I discover that a child<br>
-under 13 has provided me with personal information, I immediately delete this from<br>
-our servers. If you are a parent or guardian and you are aware that your child has provided us with personal<br>
-information, please contact me so that I will be able to do necessary actions.</p>
-<p><strong>Changes to This Privacy Policy</strong></p>
-<p>I may update our Privacy Policy from time to time. Thus, you are advised to review<br>
-this page periodically for any changes. I will notify you of any changes by posting<br>
-the new Privacy Policy on this page. These changes are effective immediately after they are posted on<br>
-this page.</p>
-<p><strong>Contact Us</strong></p>
-<p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact<br>
-me.</p>
-<hr>
-<h2 style="text-align: center;"><span style="color: #3366ff;">Website</span></h2>
-<!-- ATOSPP version: 1.8.2, my_terms_of_service_and_privacy_policy -->
-	<h2 id="atospp-toc" class="auto-tos-pp tospptocheading">Contents:</h2>
-	<ol class="auto-tos-pp tospptoc">
-		<li><a href="#atospp-terms">Terms of Service</a></li>
-		<li><a href="#atospp-privacy">Privacy Policy</a></li>
-	</ol>
-	<div class="auto-tos-pp-separator" style="width: 100%; border-bottom: 1px black solid; margin: 20px 0 20px 0;"></div><h2 id="atospp-terms" class="auto-tos-pp tosheading">Terms of Service:</h2><p>The following terms and conditions govern all use of the StickNodes.com website and all content, services and products available at or through the website (taken together, the Website). The Website is owned and operated by Ralph Damiano ("RD"). The Website is offered subject to your acceptance without modification of all of the terms and conditions contained herein and all other operating rules, policies (including, without limitation, RD's Privacy Policy) and procedures that may be published from time to time on this Site by RD (collectively, the "Agreement").</p>
-<p>Please read this Agreement carefully before accessing or using the Website. By accessing or using any part of the web site, you agree to become bound by the terms and conditions of this agreement. If you do not agree to all the terms and conditions of this agreement, then you may not access the Website or use any services. If these terms and conditions are considered an offer by RD, acceptance is expressly limited to these terms. The Website is available only to individuals who are at least 13 years old.</p>
-<ol>
-<li><strong>Your StickNodes.com Account and Site.</strong> If you create a blog/site on the Website, you are responsible for maintaining the security of your account and blog, and you are fully responsible for all activities that occur under the account and any other actions taken in connection with the blog. You must not describe or assign keywords to your blog in a misleading or unlawful manner, including in a manner intended to trade on the name or reputation of others, and RD may change or remove any description or keyword that it considers inappropriate or unlawful, or otherwise likely to cause RD liability. You must immediately notify RD of any unauthorized uses of your blog, your account or any other breaches of security. RD will not be liable for any acts or omissions by You, including any damages of any kind incurred as a result of such acts or omissions.</li>
-<li><strong>Responsibility of Contributors.</strong> If you operate a blog, comment on a blog, post material to the Website, post links on the Website, or otherwise make (or allow any third party to make) material available by means of the Website (any such material, "Content"), You are entirely responsible for the content of, and any harm resulting from, that Content. That is the case regardless of whether the Content in question constitutes text, graphics, an audio file, or computer software. By making Content available, you represent and warrant that:
-  <ul>
-<li>the downloading, copying and use of the Content will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark or trade secret rights, of any third party;</li>
-<li>if your employer has rights to intellectual property you create, you have either (i) received permission from your employer to post or make available the Content, including but not limited to any software, or (ii) secured from your employer a waiver as to all rights in or to the Content;</li>
-<li>you have fully complied with any third-party licenses relating to the Content, and have done all things necessary to successfully pass through to end users any required terms;</li>
-<li>the Content does not contain or install any viruses, worms, malware, Trojan horses or other harmful or destructive content;</li>
-<li class="important">the Content is not spam, is not machine- or randomly-generated, and does not contain unethical or unwanted commercial content designed to drive traffic to third party sites or boost the search engine rankings of third party sites, or to further unlawful acts (such as phishing) or mislead recipients as to the source of the material (such as spoofing);</li>
-<li>the Content is not pornographic, does not contain threats or incite violence towards individuals or entities, and does not violate the privacy or publicity rights of any third party;</li>
-<li>your blog is not getting advertised via unwanted electronic messages such as spam links on newsgroups, email lists, other blogs and web sites, and similar unsolicited promotional methods;</li>
-<li>your blog is not named in a manner that misleads your readers into thinking that you are another person or company. For example, your blog's URL or name is not the name of a person other than yourself or company other than your own; and</li>
-<li>you have, in the case of Content that includes computer code, accurately categorized and/or described the type, nature, uses and effects of the materials, whether requested to do so by RD or otherwise.</li>
-</ul>
-<p>By submitting Content to RD for inclusion on your Website, you grant RD a world-wide, royalty-free, and non-exclusive license to reproduce, modify, adapt and publish the Content solely for the purpose of displaying, distributing and promoting your blog. If you delete Content, RD will use reasonable efforts to remove it from the Website, but you acknowledge that caching or references to the Content may not be made immediately unavailable.</p>
-<p>Without limiting any of those representations or warranties, RD has the right (though not the obligation) to, in RD's sole discretion (i) refuse or remove any content that, in RD's reasonable opinion, violates any RD policy or is in any way harmful or objectionable, or (ii) terminate or deny access to and use of the Website to any individual or entity for any reason, in RD's sole discretion. RD will have no obligation to provide a refund of any amounts previously paid.</p></li>
-<li><strong>Payment and Renewal.</strong>
-<ul>
-<li><strong>General Terms.</strong><br>
-  By selecting a product or service, you agree to pay RD the one-time and/or monthly or annual subscription fees indicated  (additional payment terms may be included in other communications). Subscription payments will be charged on a pre-pay basis on the day you sign up for an Upgrade and will cover the use of that service for a monthly or annual subscription period as indicated. Payments are not refundable.</li>
-<li><strong>Automatic Renewal. </strong><br>
-Unless you notify RD before the end of the applicable subscription period that you want to cancel a subscription, your  subscription will automatically renew and you authorize us to collect the then-applicable annual or monthly subscription fee for such subscription (as well as any taxes) using any credit card or other payment mechanism we have on record for you. Upgrades can be canceled at any time by submitting your request to RD in writing.</li>
-</ul>
-</li>
-<li><strong>Services.</strong>
-<ul>
-<li><strong>Fees; Payment. </strong>By signing up for a Services account you agree to pay RD the applicable setup fees and recurring fees. Applicable fees will be invoiced starting from the day your services are established and in advance of using such services. RD reserves the right to change the payment terms and fees upon thirty (30) days prior written notice to you. Services can be canceled by you at anytime on thirty (30) days written notice to RD.</li>
-<li><strong>Support.</strong> If your service includes access to priority email support. "Email support" means the ability to make requests for technical support assistance by email at any time (with reasonable efforts by RD to respond within one business day) concerning the use of the VIP Services. "Priority" means that support takes priority over support for users of the standard or free StickNodes.com services. All support will be provided in accordance with RD standard services practices, procedures and policies.</li>
-</ul>
-</li><li><strong>Responsibility of Website Visitors.</strong> RD has not reviewed, and cannot review, all of the material, including computer software, posted to the Website, and cannot therefore be responsible for that material's content, use or effects. By operating the Website, RD does not represent or imply that it endorses the material there posted, or that it believes such material to be accurate, useful or non-harmful. You are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. The Website may contain content that is offensive, indecent, or otherwise objectionable, as well as content containing technical inaccuracies, typographical mistakes, and other errors. The Website may also contain material that violates the privacy or publicity rights, or infringes the intellectual property and other proprietary rights, of third parties, or the downloading, copying or use of which is subject to additional terms and conditions, stated or unstated. RD disclaims any responsibility for any harm resulting from the use by visitors of the Website, or from any downloading by those visitors of content there posted.</li>
-<li><strong>Content Posted on Other Websites.</strong> We have not reviewed, and cannot review, all of the material, including computer software, made available through the websites and webpages to which StickNodes.com links, and that link to StickNodes.com. RD does not have any control over those non-RD websites and webpages, and is not responsible for their contents or their use. By linking to a non-RD website or webpage, RD does not represent or imply that it endorses such website or webpage. You are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. RD disclaims any responsibility for any harm resulting from your use of non-RD websites and webpages.</li>
-<li><strong>Copyright Infringement and DMCA Policy.</strong> As RD asks others to respect its intellectual property rights, it respects the intellectual property rights of others. If you believe that material located on or linked to by StickNodes.com violates your copyright, you are encouraged to notify RD in accordance with RD's Digital Millennium Copyright Act ("DMCA") Policy. RD will respond to all such notices, including as required or appropriate by removing the infringing material or disabling all links to the infringing material. RD will terminate a visitor's access to and use of the Website if, under appropriate circumstances, the visitor is determined to be a repeat infringer of the copyrights or other intellectual property rights of RD or others. In the case of such termination, RD will have no obligation to provide a refund of any amounts previously paid to RD.</li>
-<li><strong>Intellectual Property.</strong> This Agreement does not transfer from RD to you any RD or third party intellectual property, and all right, title and interest in and to such property will remain (as between the parties) solely with RD. RD, StickNodes.com, the StickNodes.com logo, and all other trademarks, service marks, graphics and logos used in connection with StickNodes.com, or the Website are trademarks or registered trademarks of RD or RD's licensors. Other trademarks, service marks, graphics and logos used in connection with the Website may be the trademarks of other third parties. Your use of the Website grants you no right or license to reproduce or otherwise use any RD or third-party trademarks.</li>
-<li><strong>Advertisements.</strong> RD reserves the right to display advertisements on your blog unless you have purchased an ad-free account.</li>
-<li><strong>Attribution.</strong> RD reserves the right to display attribution links such as 'Blog at StickNodes.com,' theme author, and font attribution in your blog footer or toolbar.</li>
-<li><strong>Partner Products.</strong> By activating a partner product (e.g. theme) from one of our partners, you agree to that partner's terms of service. You can opt out of their terms of service at any time by de-activating the partner product.</li>
-<li><strong>Domain Names.</strong> If you are registering a domain name, using or transferring a previously registered domain name, you acknowledge and agree that use of the domain name is also subject to the policies of the Internet Corporation for Assigned Names and Numbers ("ICANN"), including their <a href="http://www.icann.org/en/registrars/registrant-rights-responsibilities-en.htm">Registration Rights and Responsibilities</a>.</li>
-<li><strong>Changes. </strong>RD reserves the right, at its sole discretion, to modify or replace any part of this Agreement. It is your responsibility to check this Agreement periodically for changes. Your continued use of or access to the Website following the posting of any changes to this Agreement constitutes acceptance of those changes. RD may also, in the future, offer new services and/or features through the Website (including, the release of new tools and resources). Such new features and/or services shall be subject to the terms and conditions of this Agreement. <strong><br>
-</strong></li>
-<li><strong>Termination. </strong>RD may terminate your access to all or any part of the Website at any time, with or without cause, with or without notice, effective immediately. If you wish to terminate this Agreement or your StickNodes.com account (if you have one), you may simply discontinue using the Website. Notwithstanding the foregoing, if you have a paid services account, such account can only be terminated by RD if you materially breach this Agreement and fail to cure such breach within thirty (30) days from RD's notice to you thereof; provided that, RD can terminate the Website immediately as part of a general shut down of our service. All provisions of this Agreement which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability. <strong><br>
-</strong></li>
-<li class="important"><strong>Disclaimer of Warranties.</strong> The Website is provided "as is". RD and its suppliers and licensors hereby disclaim all warranties of any kind, express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. Neither RD nor its suppliers and licensors, makes any warranty that the Website will be error free or that access thereto will be continuous or uninterrupted. You understand that you download from, or otherwise obtain content or services through, the Website at your own discretion and risk.</li>
-<li class="important"><strong>Limitation of Liability.</strong> In no event will RD, or its suppliers or licensors, be liable with respect to any subject matter of this agreement under any contract, negligence, strict liability or other legal or equitable theory for: (i) any special, incidental or consequential damages; (ii) the cost of procurement for substitute products or services; (iii) for interruption of use or loss or corruption of data; or (iv) for any amounts that exceed the fees paid by you to RD under this agreement during the twelve (12) month period prior to the cause of action. RD shall have no liability for any failure or delay due to matters beyond their reasonable control. The foregoing shall not apply to the extent prohibited by applicable law.</li>
-<li><strong>General Representation and Warranty.</strong> You represent and warrant that (i) your use of the Website will be in strict accordance with the RD Privacy Policy, with this Agreement and with all applicable laws and regulations (including without limitation any local laws or regulations in your country, state, city, or other governmental area, regarding online conduct and acceptable content, and including all applicable laws regarding the transmission of technical data exported from the United States or the country in which you reside) and (ii) your use of the Website will not infringe or misappropriate the intellectual property rights of any third party.</li>
-<li><strong>Indemnification.</strong> You agree to indemnify and hold harmless RD, its contractors, and its licensors, and their respective directors, officers, employees and agents from and against any and all claims and expenses, including attorneys' fees, arising out of your use of the Website, including but not limited to your violation of this Agreement.</li>
-<li><strong>Miscellaneous.</strong> This Agreement constitutes the entire agreement between RD and you concerning the subject matter hereof, and they may only be modified by a written amendment signed by an authorized executive of RD, or by the posting by RD of a revised version. Except to the extent applicable law, if any, provides otherwise, this Agreement, any access to or use of the Website will be governed by the laws of the Connecticut, USA, excluding its conflict of law provisions, and the proper venue for any disputes arising out of or relating to any of the same will be the state and federal courts located in Connecticut, USA. Except for claims for injunctive or equitable relief or claims regarding intellectual property rights (which may be brought in any competent court without the posting of a bond), any dispute arising under this Agreement shall be finally settled in accordance with the Comprehensive Arbitration Rules of the Judicial Arbitration and Mediation Service, Inc. ("JAMS") by three arbitrators appointed in accordance with such Rules. The arbitration shall take place in Connecticut, USA, in the English language and the arbitral decision may be enforced in any court. The prevailing party in any action or proceeding to enforce this Agreement shall be entitled to costs and attorneys' fees. If any part of this Agreement is held invalid or unenforceable, that part will be construed to reflect the parties' original intent, and the remaining portions will remain in full force and effect. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof. You may assign your rights under this Agreement to any party that consents to, and agrees to be bound by, its terms and conditions; RD may assign its rights under this Agreement without condition. This Agreement will be binding upon and will inure to the benefit of the parties, their successors and permitted assigns.</li>
-</ol><p><a class="auto-tos-pp-back-to-top" href="#atospp-toc">Back to top</a></p>
-	<div class="auto-tos-pp-separator" style="width: 100%; border-bottom: 1px black solid; margin: 20px 0 20px 0;"></div><h2 id="atospp-privacy" class="auto-tos-pp ppheading">Privacy Policy:</h2><p>Ralph Damiano ("<strong>RD</strong>") operates StickNodes.com and may operate other websites. It is RD's policy to respect your privacy regarding any information we may collect while operating our websites.</p>
-<h3>Website Visitors</h3>
-<p>Like most website operators, RD collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. RD's purpose in collecting non-personally identifying information is to better understand how RD's visitors use its website. From time to time, RD may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.</p>
-<p>RD also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on StickNodes.com blogs/sites. RD only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below, except that commenter IP addresses and email addresses are visible and disclosed to the administrators of the blog/site where the comment was left.</p>
-<h3>Gathering of Personally-Identifying Information</h3>
-<p>Certain visitors to RD's websites choose to interact with RD in ways that require RD to gather personally-identifying information. The amount and type of information that RD gathers depends on the nature of the interaction. For example, we ask visitors who sign up  at <a href="http://sticknodes.com">StickNodes.com</a> to provide a username and email address. Those who engage in transactions with RD are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, RD collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction with RD. RD does not disclose personally-identifying information other than as described below. And visitors can always refuse to supply personally-identifying information, with the caveat that it may prevent them from engaging in certain website-related activities.</p>
-<h3>Aggregated Statistics</h3>
-<p>RD may collect statistics about the behavior of visitors to its websites. RD may display this information publicly or provide it to others. However, RD does not disclose personally-identifying information other than as described below.</p>
-<h3>Protection of Certain Personally-Identifying Information</h3>
-<p>RD discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on RD's behalf or to provide services available at RD's websites, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using RD's websites, you consent to the transfer of such information to them. RD will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees, contractors and affiliated organizations, as described above, RD discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request, or when RD believes in good faith that disclosure is reasonably necessary to protect the property or rights of RD, third parties or the public at large. If you are a registered user of an RD website and have supplied your email address, RD may occasionally send you an email to tell you about new features, solicit your feedback, or just keep you up to date with what's going on with RD and our products.  If you send us a request (for example via email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify or respond to your request or to help us support other users. RD takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.</p>
-<h3>Cookies</h3>
-<p>A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. RD uses cookies to help RD identify and track visitors, their usage of RD website, and their website access preferences. RD visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using RD's websites, with the drawback that certain features of RD's websites may not function properly without the aid of cookies.</p>
-<h3>Business Transfers</h3>
-<p>If RD, or substantially all of its assets, were acquired, or in the unlikely event that RD goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of RD may continue to use your personal information as set forth in this policy.</p>
-<h3>Ads</h3>
-<p>Ads appearing on any of our websites may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by RD and does not cover the use of cookies by any advertisers.</p>
-<h3>Privacy Policy Changes</h3>
-<p>Although most changes are likely to be minor, RD may change its Privacy Policy from time to time, and in RD's sole discretion. RD encourages visitors to frequently check this page for any changes to its Privacy Policy. If you have a StickNodes.com account, you might also receive an alert informing you of these changes. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p><p><a class="auto-tos-pp-back-to-top" href="#atospp-toc">Back to top</a></p>
-	</div>
-</article>			<div class="page-outer-small-container"><!--taken from adsense-stickfigure-pages-->
-<p style="display: block; overflow: hidden; line-height: 0px; min-height: 60px; max-height: 90px; height: 100%; margin: 10px 0px;">
-	<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- StickNodes.com Stickfigure Pages -->
-	<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-7868509588811881" data-ad-slot="3949887291" data-ad-format="rectangle" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:700px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:700px;background-color:transparent;"></ins></ins></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-</p></div>				</div>
-	</div>
-</div>
-<div id="secondary" class="widget-area" role="complementary">
-		<aside id="wpsn_widget_wp_polls-3" class="widget wpsn_widget_wp_polls"><h3 class="widget-title">Random-Ass Poll</h3><div id="polls-109" class="wp-polls">
-	<form id="polls_form_109" class="wp-polls-form" action="/index.php" method="post">
-		<p style="display: none;"><input type="hidden" id="poll_109_nonce" name="wp-polls-nonce" value="1e334e7fba"></p>
-		<p style="display: none;"><input type="hidden" name="poll_id" value="109"></p>
-		<p style="text-align: center"><strong>When you write the letter "o" do you start the circle at the top or the bottom?</strong></p><div id="polls-109-ans" class="wp-polls-ans"><ul class="wp-polls-ul">
-		<li><input type="radio" id="poll-answer-408" name="poll_109" value="408"> <label for="poll-answer-408">Top</label></li>
-		<li><input type="radio" id="poll-answer-409" name="poll_109" value="409"> <label for="poll-answer-409">Bottom</label></li>
-		</ul><p style="text-align: center"><input type="button" name="vote" value="   Vote   " class="Buttons" onclick="poll_vote(109);"></p><p style="text-align: center"><a href="#ViewPollResults" onclick="poll_result(109); return false;" title="View Results Of This Poll">View Results</a></p></div>
-	</form>
-</div>
-<div id="polls-109-loading" class="wp-polls-loading"><img src="http://sticknodes.com/wp-content/plugins/wp-polls/images/loading.gif" width="16" height="16" alt="Loading ..." title="Loading ..." class="wp-polls-image">&nbsp;Loading ...</div>
-<div class="row"><a class="poll-archive-link" href="http://sticknodes.com/pollsarchive/">Poll Archive</a></div></aside><aside id="text-6" class="widget widget_text"><h3 class="widget-title">What is Stick Nodes?</h3>			<div class="textwidget"><div class="widget-white-bg">
-<span class="desc">
-	<p>Stick Nodes is a simple-but-powerful stickfigure animation program created for mobile devices. Easily create your own animations of moving stickfigures right on your tablet or phone!</p>
-	<p>Easy for new animators but incredibly robust for more skilled users - the simplicity of Pivot with the power of Flash!</p>
-</span>
+<p>The information is not passed on to third parties.</p>
+<p>All data is only stored until deleted by the user. Once the information is deleted, it cannot be restored.</p>
+<h3>B. Message Contents</h3>
+<p>Threema encrypts all messages, including control messages, using a highly secure end-to-end encryption method.</p>
+<p>Header information of messages (sender, recipient etc.) is protected by an additional encryption layer for transmission to the server, and from the server to the recipient, to prevent eavesdropping by third parties (e.g. in open wireless networks).</p>
+<p>Threema GmbH as the operator of the Threema servers has no possibility to decrypt messages of Threema users because it does not have knowledge of their private keys.</p>
+<p>Encrypted messages and media (images, videos, files, etc.) are completely deleted on the servers as soon as they have been successfully delivered. If the messages and media are not or not completely fetched, they will be automatically and irretrievably deleted from the server after two weeks.</p>
+<h3>C. Address Book Data</h3>
+<p>At the express request of the user, email addresses and phone numbers from the user's address book can be synchronized. This data is transmitted to the servers in one-way encrypted (“hashed”) form and additionally protected using TLS encryption. The servers only keep these hashes in volatile memory for a short time to determine the list of matching IDs, and then delete the hashes immediately. At no point are the hashes or the results of the synchronization written to non-volatile storage.</p>
+<h3>D. Location Data (Android)</h3>
+<p>The “send location” feature transmits the coordinates of the user’s current location to Threema if and only if the user has allowed location sharing on their mobile device and the permission to access the user’s location has been granted. The coordinates are used to display a map section including a list of POIs (Places of Interest). The coordinates are transmitted in encrypted and anonymized form, without any reference to a Threema ID or any other personally identifying information whatsoever.</p>
+<p>Generally, to use the “show map” feature, location sharing is not required. If location sharing is enabled, the permission to access the user’s location has been granted and the “your location” feature is used, the coordinates of the user’s current location are transmitted to Threema in order to center the map at the user’s current location. Both transmission and processing of the coordinates are performed in encrypted and anonymized form, without any reference to a Threema ID or any other personally identifying information whatsoever.</p>
+<p>If the features “send location” and “show map” are not used, or the permission to access the user’s location has not been granted, no coordinates will be transmitted.</p>
+<h3>E. Crash Reports</h3>
+<p>In order to improve the stability and reliability of the app, Threema relies on anonymous crash reports.</p>
+<p><strong>iOS:</strong> If the user voluntarily and explicitly agrees to the transmission of a crash report after a crash of the app, information about the crash (status of the app at the time of the crash) is transferred to a server of Threema and stored there for evaluation. If the user does not agree to the crash report transmission, nothing will be sent. Crash reports do not contain any personal data. On iOS, they consist of a stack trace, some information about the device (model, operating system version, but no serial number or similar), the app version, the time stamp of the start and crash, and the list of software libraries loaded in memory. Processor register contents or log messages are not being collected.</p>
+<h3>F. License Verification</h3>
+<p>To prevent abuse and piracy, the entitlement of a user is verified when creating a Threema ID. For this purpose, the
+	anonymized digital purchase receipt from the app store (Apple/Google/Huawei) is sent to the server and verified. A
+	one-way encrypted (hashed) version of this receipt is stored along with a counter, and the receipt is immediately
+	destroyed. Threema does not receive personal data from the buyer and cannot link the created Threema ID to the
+	buyer. In case of licensing using a license key, the license key will be sent instead of the digital purchase
+	receipt.</p>
+<h2>4. Data Processed by Third Parties</h2>
+<p>Threema GmbH does not pass on any data to third parties, is completely free of advertising and does not use analytics software to monitor user behavior. However, some functionalities can only be provided by using external data sources, frameworks or operating system services, which in turn process data and are subject to a separate privacy policy.</p>
+<h3>A. Crash Reports</h3>
+<p>In order to improve the stability and reliability of the app, Threema relies on anonymous crash reports.</p>
+<p><strong>Android</strong>: If the user voluntarily and explicitly consents to the general transmission of crash reports to Google when setting up his mobile phone, information (status of the app at the time of the crash, stack trace, manufacturer and operating system of the mobile phone, latest log messages) will be transmitted to Google and stored there for evaluation by Threema GmbH. This information does not contain any personal data.</p>
+<p><strong>Windows Phone</strong>: If the user voluntarily and explicitly agrees to the transmission of a crash report after a crash of the app, information about the crash (status of the app at the time of the crash) is transferred to the servers of HockeyApp (a Microsoft company) and stored there for evaluation by Threema GmbH. If the user does not agree to the crash report transmission, nothing will be sent. HockeyApp's Privacy Policy can be found at <a href="https://www.hockeyapp.net/imprint/">https://www.hockeyapp.net/imprint/</a>.</p>
+<h2>5. Right to Information, Correction, Blocking, Deletion and Objection</h2>
+<p>You have the right to receive information about your personal data stored by Threema GmbH at any time. Likewise, you have the right to correct, block or (apart from the legally required data storage for business purposes) delete your personal data.</p>
+<p>The stored inventory data can be viewed at any time within Threema in the “My ID” screen and can be corrected or deleted by the user with immediate effect. You can also obtain this data in machine-readable form: <a href="https://threema.ch/en/faq/get_my_data">https://threema.ch/en/faq/get_my_data</a></p>
+<p>In case of loss of the end-user device, mobile phone numbers and email addresses linked to a Threema ID can be deleted via the following link: <a href="https://myid.threema.ch/unlink">https://myid.threema.ch/unlink</a></p>
+<p>You can delete all personal data related to your Threema ID and revoke your key pair at any time using the following link: <a href="https://myid.threema.ch/revoke">https://myid.threema.ch/revoke</a></p>
+<h2>6. Responsible Body</h2>
+<p>If you have any questions about data protection at Threema GmbH, you can contact us directly. Send us an email to <a href="mailto:privacy@threema.ch">privacy@threema.ch</a>.</p>
+<p>Responsible body and direct contact for data protection topics at Threema GmbH:</p>
+<p>Threema GmbH<br>Data Protection officer<br>Churerstrasse 82<br>8808 Pfäffikon SZ<br>Switzerland<br><a href="mailto:privacy@threema.ch">privacy@threema.ch</a><br><br>CHE-221.440.104<br><br>Representative in the EU according to Art. 27 para. 1 GDPR: GeKaCe GmbH, Dept. T, Weilerweg 13, 72411 Bodelshausen, Germany</p>
+<h2>7. Amendment of the Privacy Policy</h2>
+<p>We reserve the right to change this Privacy Policy from time to time in order to comply with changed legal requirements or to reflect new functionalities of the app. The current Privacy Policy is always available for consultation from within Threema.</p>
+<h2>Disclaimer</h2>
+<p>This is a mere translation of the German version of this document.</p>
+<p>In case of any discrepancies between the English version and the German version of this document, <strong>the German version will prevail</strong>.</p>
+	</div></div>
 
-<div class="sidebar-free-pro">
-	<img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/sidebar-free-pro.png" alt=""><a href="https://play.google.com/store/apps/details?id=org.fortheloss.sticknodes" class="fr-gp"></a><a href="https://apps.apple.com/app/id932127902" class="fr-as"></a><a href="https://www.amazon.com/gp/product/B00MX19XIE" class="fr-am"></a><a href="https://play.google.com/store/apps/details?id=org.fortheloss.sticknodespro" class="pr-gp"></a><a href="https://apps.apple.com/app/id932128168" class="pr-as"></a><a href="https://www.amazon.com/gp/product/B00MX1FSG0" class="pr-am"></a>
-</div>
-	<p class="pro-features">The <span>Pro version</span> of Stick Nodes has extra functionality for sound effects, MP4 (video) exporting, no ads/watermark, and extra stickfigure filters (blur, glow, saturation, hue-shift, color-inversion, and tint)!</p>
 
-<span class="features">
-	<p>Features for both Free/Pro versions include:</p>
-	<ul>
-		<li>Automatic customizable frame-tweening, make your animations smoother</li>
-		<li>A simple camera to pan/zoom/rotate around the scene, similar to the "v-cam" in Flash. </li>
-		<li>Movieclips allow you to create and reuse/loop animation objects within your projects.</li>
-		<li>A variety of shapes, color/scale on a per-segment basis, gradients - create any "stickfigure" you can imagine!</li>
-		<li>Textfields allow for easy text and speech in your animations.</li>
-		<li>Add all kinds of sounds effects to make your animations epic.</li>
-		<li>Apply different filters to your stickfigures - transparency, blur, glow, and more.</li>
-		<li>Join stickfigures together to easily simulate holding/wearing objects.</li>
-		<li>A large community full of all kinds of...interesting characters, and other animators.</li>
-		<li>Over 30,000+ stickfigures (and counting) to download from the website.</li>
-		<li>Export to GIF (or MP4 for Pro) to share your animation online.</li>
-		<li>Compatibility with pre-3.0 Pivot stickfigure files.</li>
-		<li>Save/open/share your projects, stickfigures, and movieclips.</li>
-		<li>And all the other typical animation stuff - undo/redo, onion-skin, background images, and more!</li>
-	</ul>
-</span>
-	
-<a href="http://sticknodes.com/images/sidebar-device-2-big.png" rel="lightbox"><img src="http://sticknodes.com/images/sidebar-device-2-small.png" alt="Stick Nodes"></a>
-	
-<span class="language">
-<p>Stick Nodes comes in a few languages as well:</p>
-	<ul>
-		<li>English</li>
-		<li>Español</li>
-		<li>Français</li>
-		<li>Japanese</li>
-		<li>Filipino</li>
-		<li>Português</li>
-		<li>Russian</li>
-		<li>Türkçe</li>
-	</ul>
-</span>
-</div></div>
-		</aside></div>            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="website-footer">
-      <div class="footer-container">
-        <img src="http://sticknodes.com/wp-content/themes/dw-minion/assets/img/wpsn/footer.gif" alt="Stick Nodes">
-        <div class="footer-text">
-          <p>Stick Nodes<sup>®</sup> ©2014 - 2021 <a href="http://rdamiano.com">Ralph Damiano of ForTheLoss Games, Inc</a>.</p>
-          <p>All rights reserved | <a href="http://sticknodes.com/tos-privacy-policy/">TOS &amp; Privacy Policy</a></p>
-                    <p>Powered by <a href="http://wordpress.org/">WordPress</a>. Theme is DW Minion by <a href="http://www.designwall.com/" rel="nofollow">DesignWall</a></p>
-        </div>
-      </div>
-    </div>
-    
-    <script type="text/javascript" src="http://sticknodes.com/wp-includes/js/comment-reply.min.js?ver=5.7" id="comment-reply-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4" id="wp-polyfill-js"></script>
-<script type="text/javascript" id="wp-polyfill-js-after">
-( 'fetch' in window ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="http://sticknodes.com/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/hooks.min.js?ver=50e23bed88bcb9e6e14023e9961698c1" id="wp-hooks-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/i18n.min.js?ver=db9a9a37da262883343e941c3731bc67" id="wp-i18n-js"></script>
-<script type="text/javascript" id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19" id="lodash-js"></script>
-<script type="text/javascript" id="lodash-js-after">
-window.lodash = _.noConflict();
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/url.min.js?ver=0ac7e0472c46121366e7ce07244be1ac" id="wp-url-js"></script>
-<script type="text/javascript" id="wp-api-fetch-js-translations">
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", { "locale_data": { "messages": { "": {} } } } );
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-includes/js/dist/api-fetch.min.js?ver=a783d1f442d2abefc7d6dbd156a44561" id="wp-api-fetch-js"></script>
-<script type="text/javascript" id="wp-api-fetch-js-after">
-wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "http://sticknodes.com/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "2b95bf6fa1" );
-wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
-wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
-wp.apiFetch.nonceEndpoint = "http://sticknodes.com/wp-admin/admin-ajax.php?action=rest-nonce";
-</script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-/* <![CDATA[ */
-var wpcf7 = {"cached":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4" id="contact-form-7-js"></script>
-<script type="text/javascript" id="wp-polls-js-extra">
-/* <![CDATA[ */
-var pollsL10n = {"ajax_url":"http:\/\/sticknodes.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.75.6" id="wp-polls-js"></script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/themes/dw-minion/assets/js/main.js?ver=5.7" id="dw-minion-main-script-js"></script>
-<script type="text/javascript" id="buddyboss-edit-activity-js-extra">
-/* <![CDATA[ */
-var B_E_A_ = {"warn_activity_changes":"Are you sure you want to do this?\nThe activity changes you made will be lost.","loading_bar_url":"http:\/\/sticknodes.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","button_text":{"edit":"Edit","save":"Save","cancel":"Cancel"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://sticknodes.com/wp-content/plugins/buddypress-edit-activity/assets/js/buddypress-edit-activity.min.js?ver=1.1.1" id="buddyboss-edit-activity-js"></script>
-  
-
-<!-- Dynamic page generated in 0.194 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2021-04-10 13:51:57 -->
-
-<!-- super cache --><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_2_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7868509588811881&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1618077117&amp;plat=1%3A16777224%2C2%3A16777224%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32&amp;format=0x0&amp;url=http%3A%2F%2Fsticknodes.com%2Ftos-privacy-policy%2F%23atospp-pp-snp&amp;ea=0&amp;flash=0&amp;pra=7&amp;wgl=1&amp;dt=1618078295371&amp;bpp=2&amp;bdt=1256&amp;idt=820&amp;shv=r20210406&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=166234189690&amp;frm=20&amp;pv=2&amp;ga_vid=1700014497.1618078295&amp;ga_sid=1618078296&amp;ga_hid=2087883765&amp;ga_fc=0&amp;u_tz=-240&amp;u_his=2&amp;u_java=0&amp;u_h=1280&amp;u_w=2048&amp;u_ah=1280&amp;u_aw=2048&amp;u_cd=30&amp;u_nplug=0&amp;u_nmime=0&amp;adx=-12245933&amp;ady=-12245933&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=2863&amp;eid=44740079%2C44739387&amp;oid=3&amp;pvsid=3538605767222521&amp;pem=117&amp;eae=2&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C2048%2C0%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=0&amp;bc=23&amp;ifi=3&amp;uci=a!3&amp;fsb=1&amp;dtd=845" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_8720822242473" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20210406/r20190131/zrt_lookup.html#" data-ad-client="ca-pub-7868509588811881" style="display: none;"></iframe></html>
+</body></html>

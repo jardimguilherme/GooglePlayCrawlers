@@ -1,992 +1,469 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="pt" class="overflow-y-scroll"><head prefix="og: http://ogp.me/ns# contextlogic-wish: http://ogp.me/ns/apps/contextlogic-wish#">
-    
-    
-      <script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script async="" src="https://cdn.sift.com/s.js"></script><script src="//bat.bing.com/bat.js" async=""></script><script async="" src="https://cdn.sift.com/s.js"></script><script id="facebook-pixelsdk"></script><script src="https://connect.facebook.net/signals/config/1491478797738271?v=2.9.33&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
-        (function(){(function(a){"use strict";function b(c,d){if({}.hasOwnProperty.call(b.cache,c))return b.cache[c];var e=b.resolve(c);if(!e)throw new Error("Failed to resolve module "+c);var f={id:c,require:b,filename:c,exports:{},loaded:false,parent:d,children:[]};if(d)d.children.push(f);var g=c.slice(0,c.lastIndexOf("/")+1);b.cache[c]=f.exports;e.call(void 0,f,f.exports,g,c);f.loaded=true;return b.cache[c]=f.exports}b.modules={};b.cache={};b.resolve=function(h){return{}.hasOwnProperty.call(b.modules,h)?b.modules[h]:void 0};b.define=function(i,j){b.modules[i]=j};b.define("1",function(k,l,m,n){var o=b("2",k);var p=o["default"];var q=String.fromCharCode.bind(String);function r(s){return q(8238)+s+q(8237)}var t=r("FoRVWynBM");var u=r("fnIStDlBX");var v="";var w="";var x=void 0;var y=Object.defineProperty.bind(Object);(function(){var z=XMLHttpRequest.prototype;var A=z.open;var B=z.send;var C=z.setRequestHeader;function D(E,F,G){var H=Object.getOwnPropertyDescriptor(E,F);if(H&&(H.writable||H.configurable)){H.value=G;y(E,F,H)}}function I(J,K,L,M,N){var O=[].slice.call(arguments);var P=""+J;O[0]=P;var Q=A.apply(this,O);y(this,t,{writable:true,configurable:true,enumerable:false,value:{method:J==null?null:P.toLowerCase(),url:K}});return Q}function R(S){if(x!=null&&t in this&&x.shouldHook(this[t])){var T=x.getEncodedData();if(T){for(var U in T){if(!{}.hasOwnProperty.call(T,U))continue;var V=T[U];var W=x.config.headerNamePrefix+U;var X=x.chunk(W,V,x.config.headerChunkSize);for(var Y in X){if(!{}.hasOwnProperty.call(X,Y))continue;C.call(this,Y,X[Y])}}}}return B.apply(this,arguments)}if(!(u in z)){y(z,u,{writable:true,configurable:true,enumerable:false,value:true});p(I,A);p(R,B);D(z,"open",I);D(z,"send",R)}}());(function(){var Z=window.fetch;var ba=window.Request;var bb=function bc(bd,be){var bf=new ba(bd,be);var bg={url:bf.url,method:bf.method};if(x!=null&&x.shouldHook(bg)){var bh=x.getEncodedData();if(bh){for(var bi in bh){if(!{}.hasOwnProperty.call(bh,bi))continue;var bj=bh[bi];var bk=x.config.headerNamePrefix+bi;var bl=x.chunk(bk,bj,x.config.headerChunkSize);for(var bm in bl){if(!{}.hasOwnProperty.call(bl,bm))continue;bf.headers.set(bm,bl[bm])}}}}return Z(bf)};if(typeof Z==="function"&&!(u in Z)){y(bb,u,{writable:true,configurable:true,enumerable:false,value:true});p(bb,Z);window.fetch=bb}}());addEventListener(u,function bn(bo){x=bo.detail;if(bo.detail==null){removeEventListener(u,bn)}})});b.define("2",function(bp,bq,br,bs){var bt=Function.prototype.call.bind(Function.prototype.toString);var bu=void 0,bv=void 0;var bw=function bx(){var by=bu.lastIndexOf(this);if(by>=0){return bv[by]}return bt(this)};bw.prototype=void 0;bu=[bw];bv=[bt(Function.prototype.toString)];function bz(bA,bB){if(typeof bB!=="function"){return}try{bv.push(bt(bB));bu.push(bA);if(Function.prototype.toString!==bw){Function.prototype.toString=bw}}catch(bC){}}bq["default"]=bz});return b("1")}.call(this,this))}())
-      </script>
-    
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="96x96" href="https://main.cdn.wish.com/web/87ef66e90182/cozy/desktop/assets/icon/WishFavicon.png">
-    <link rel="manifest" href="/manifest.json">
-
-    
-
-    
-      <meta property="al:android:url" content="wish://privacy_policy">
-      <meta property="al:android:package" content="com.contextlogic.wish">
-      <meta property="al:android:app_name" content="Wish">
-      <meta name="apple-itunes-app" content="app-id=530621395">
-      <meta property="al:iphone:url" content="wish://privacy_policy">
-      <meta property="al:iphone:app_store_id" content="530621395">
-      <meta property="al:iphone:app_name" content="Wish">
-    
-
-    <!-- Used for claim Wish website for Pinterest. -->
-    <meta name="p:domain_verify" content="cf3f8377ec346074611d53e6050a0ca4">
-    <!-- Used for claim Wish website for Bing -->
-    <meta name="msvalidate.01" content="B1B4C3789B27F70D246A0C8190AAA805">
+<!DOCTYPE html><html lang="pt-br" class=" js no-flexbox canvas canvastext no-touch geolocation postmessage hashchange history rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage no-applicationcache svg"><head>
+    <meta charset="utf-8"><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-9NCJ"></script><script src="https://js-agent.newrelic.com/nr-1208.min.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=d68c3fb5aa1a714690429329aa1d508e&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><script id="google" src="//apis.google.com/js/platform.js" gapi_processed="true"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"72f259f1c7",applicationID:"200595876"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"transactionName":"YAcEMUtVC0ZYUkdbDllNIBBXVxFcVl8cUQxETBAMXEMWD39dUkYxVgUDM1BREhteVEc=","applicationID":"200595876","errorBeacon":"bam-cell.nr-data.net","beacon":"bam-cell.nr-data.net","queueTime":2,"licenseKey":"72f259f1c7","agent":"","applicationTime":11}</script>
 
     
     
     
     
     
-    
-    
-    
-    
-    
 
-    <title>Política de Privacidade | Wish</title>
-    <meta name="title" content="Wish - Comprar ficou mais divertido">
-    <meta property="og:title" content="Wish - Comprar ficou mais divertido">
 
-    <meta name="keywords" content="Wish, Wish.com, Comprar ficou mais divertido, Compras Online, Acessórios, Bebê &amp; Infantil, Moda, Eletrônicos, Hobbies, Decoração, Celulares, Maquiagem &amp; Beleza, Sapatos, Carteiras &amp; Bolsas, Relógios">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="google-site-verification" content="VwAQZa6SergqA1gDPv8xJe9eQlFic64zgGm4cFlsBso">
+    <meta name="theme-color" content="#0083ca">
+    <meta name="msapplication-navbutton-color" content="#0083ca">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0083ca">
 
-    <meta name="description" content="Comprar ficou mais Divertido Junte-se a mais de 500 milhões de pessoas que tornaram suas compras ainda mais divertidas, inteligentes e gratificantes.">
-    <meta property="og:description" content="Comprar ficou mais Divertido Junte-se a mais de 500 milhões de pessoas que tornaram suas compras ainda mais divertidas, inteligentes e gratificantes.">
-
-    
-
-    
-
-    
-
-    <meta property="og:site_name" content="Wish">
-
-    
-    
-
-    
-
-    
-      <meta name="referrer" content="no-referrer-when-downgrade">
-    
-
-    <!-- Critical css that should not be delayed-->
-    <style>
-      html.overflow-y-scroll {
-        overflow-y: scroll;
-      }
-      html.full-height {
-        height: 100%;
-        overflow: hidden;
-      }
-      body {
-        width: 100%;
-        font-family: "proximanova", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      body * {
-        font-family: "proximanova", sans-serif;
-      }
-      body.full-height {
-        height: 100%;
-        overflow: hidden;
-      }
-      body.dark {
-        background-color: #0d0f12;
-      }
-      body.no-overflow {
-        overflow: hidden;
-      }
-      body.fixed {
-        position: fixed;
-      }
-      #react-app {
-        width: 100%;
-      }
-      #react-app.full-height {
-        height: 100%;
-        overflow: hidden;
-      }
-      .app.full-height {
-        height: 100%;
-      }
-      .app.mobile {
-        display: flex;
-        flex-direction: column;
-      }
-      .app.mobile * {
-        -webkit-touch-callout: none;
-        -webkit-tap-highlight-color: transparent;
-      }
-      a {
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .grecaptcha-badge {
-        visibility: hidden;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        font-size: 1em;
-        font-weight: unset;
-        -webkit-margin-before: 0;
-        -webkit-margin-after: 0;
-        -webkit-margin-start: 0;
-        -webkit-margin-end: 0;
-        margin: 0;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-bold.woff2) format('woff2');
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-semibold.woff2) format('woff2');
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-medium.woff2) format('woff2');
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-regular.woff2) format('woff2');
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-bold-italic.woff2) format('woff2');
-        font-weight: 700;
-        font-style: italic;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-semibold-italic.woff2) format('woff2');
-        font-weight: 600;
-        font-style: italic;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-medium-italic.woff2) format('woff2');
-        font-weight: 500;
-        font-style: italic;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'proximanova';
-        src: url(https://main.cdn.wish.com/web/87ef66e90182/cozy/shared/assets/fonts/proximanova-regular-italic.woff2) format('woff2');
-        font-weight: 400;
-        font-style: italic;
-        font-display: swap;
-      }
-    </style>
-
-    
-    <!-- Non-critical css that can be delayed -->
-    <style>html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}</style>
-    <style>
-      /* Consent Manager Styles */
-      #teconsent {
-        position: relative !important;;
-        display: none !important;
-      }
-
-      .truste_box_overlay {
-        background: none !important;
-        top: 40px !important;
-        
-          position: fixed !important;
-          padding: 0 !important;
-          max-height: 500px !important;
-          overflow-y: auto !important;
-          overflow-x: hidden !important;
-        
-      }
-
-      #consent_blackbar {
-        box-shadow: 0px -2px 10px rgba(25, 42, 49, 0.1);
-        background-color: rgba(255, 255, 255, 0.95) !important;
-        position: fixed !important;
-        
-          bottom: 0 !important;
-        
-        left: 0 !important;
-        width: 100% !important;
-        z-index: 2060000 !important;
-      }
-
-      #consent_blackbar * {
-        font-family: "proximanova", sans-serif !important;
-        background-color: transparent !important;
-      }
-
-      [id^=closebtn-id] {
-        
-          top: 0 !important;
-          right: 0 !important;
-        
-      }
-
-      #truste-consent-track {
-        background-color: transparent !important;
-      }
-
-      #truste-consent-content {
-        margin: unset !important;
-        background-color: transparent !important;
-        max-width: none !important;
-        
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          padding: 10px 40px !important;
-        
-      }
-
-      #truste-consent-text {
-        color: #48636f !important;
-        font-size: 14px !important;
-        
-          margin: 14px !important;
-        
-      }
-
-      #truste-cookie-button {
-        color: #94a6b0 !important;
-        font-size: 14px !important;
-        text-decoration: none !important;
-        padding: 0;
-        
-      }
-
-      #truste-consent-buttons {
-        margin: unset !important;
-        
-      }
-
-      #truste-consent-button {
-        cursor: pointer !important;
-        
-          border: 1px solid #2fb7ec;
-          color: #2fb7ec;
-        
-        border-radius: 4px;
-        font-size: 14px !important;
-        font-weight: bold;
-        width: auto !important;
-        padding: 8px !important;
-        
-          margin-right: 8px !important;
-        
-      }
-
-      #truste-show-consent {
-        cursor: pointer !important;
-        border-radius: 4px;
-        font-size: 14px !important;
-        width: auto !important;
-        padding: 0px !important;
-        color: #94a6b0 !important;
-        
-          margin-right: 8px !important;
-        
-      }
-
-      .grecaptcha-badge {
-        box-shadow: none !important;
-      }
-
-      .Twilio-MainContainer {
-        z-index: 10 !important;
-      }
-
-      .Twilio-MessageInput {
-        background: white !important;
-      }
-
-      .Twilio-MessageList {
-          padding-bottom: 8px !important;
-      }
-
-      .Twilio-MessageBubble-Body {
-        font-size: 16px !important;
-      }
-
-      .Twilio-MessageInputArea-TextArea textarea {
-        font-size: 16px !important;
-      }
-
-      .Twilio-MessageCanvasTray-default {
-        width: 100% !important;
-      }
-
-      .Twilio-MessageCanvasTray {
-        min-height: unset !important;
-      }
-    </style>
-    
-
-    
-  <script id="049eec37eda93e7f182dffcccb3d14d8" src="https://main.cdn.wish.com/chgvzwnmlesjb/web.js?seed=AADJ8Lx4AQAAALBf27fSIKFPOZp516WOc-8egd-sC8yZLSMCZXf4P9V8uLXd" async=""></script><style data-styled="active" data-styled-version="5.1.0"></style><script charset="utf-8" src="https://main.cdn.wish.com/web/87ef66e90182/dist/cozy/defaultVendors-node_modules_firebase_app_dist_index_cjs_js.666f3517996781d2d14e.br.js"></script><script charset="utf-8" src="https://main.cdn.wish.com/web/87ef66e90182/dist/cozy/node_modules_firebase_app_dist_index_cjs_js.ee398ceed7331bb151cf.br.js"></script></head>
-  <body class="body overflow-y-scroll">
-
-    <div id="consent_blackbar"></div>
-    <div id="teconsent"></div>
-    
-
-    
-      
-        
-      
-
-      
-        
-          <script src="https://static.securedtouch.com/sdk/pong.js?body=eyJwaW5nVmVyc2lvbiI6IjEuMS4wcCIsImFwcElkIjoid2lzaCIsImFwcFNlc3Npb25JZCI6IjU0Y2UxNjFiNmFkNzRlM2ZlODhkOWM4MWYyNzQ3MGFkZmJiNDZlNWVhMGFlZDY2YzRlMjQ0YjQ2NTE4NWVhM2UifQ%3D%3D"></script><script id="cc091bb3a3e3bef61d49e360dcfdbc84" src="https://static.securedtouch.com/sdk/st-ping-1.1.0p.js?appId=wish&amp;sessionId=54ce161b6ad74e3fe88d9c81f27470adfbb46e5ea0aed66c4e244b465185ea3e" async=""></script>
-        
-        <script src="https://static.securedtouch.com/sdk/securedtouch-sdk-3.8.2w.js" async=""></script>
-      
-    
-
-    
-    
-
-    
-    
-
-    
-      <div id="react-app" class="overflow-y-scroll"><div class="app overflow-y-scroll"><div class="TabBarWrapper__Wrapper-sc-1gl60ef-0 hfWkAH"><div id="main_navigation_menu" class="Navbar__Wrapper-sc-1x990q-1 eCZbmJ"><div class="Navbar__WidthWrapper-sc-1x990q-2 fkGRIh"><div class="Navbar__Left-sc-1x990q-3 loZImE"><a data-testid="topmenu-logo" class="Navbar__LogoLink-sc-1x990q-4 ZpANB" href="/"><svg width="59.49999999999999" height="21" viewBox="0 0 143 48" xmlns="http://www.w3.org/2000/svg"><g fill="#2fb7ec" fill-rule="evenodd"><path d="M71.04 10.045c-.867-1.022-1.192-2.273-.974-3.757.217-1.48.91-2.734 2.076-3.755C73.309 1.51 74.629 1 76.105 1c1.475 0 2.647.511 3.513 1.533.868 1.02 1.192 2.274.975 3.755-.218 1.484-.91 2.735-2.076 3.757-1.168 1.02-2.49 1.532-3.964 1.532-1.476 0-2.647-.511-3.514-1.532M59.272 15.146c-1.732 0-3.343 1.411-3.582 3.134l-1.76 12.833c-.194 1.398-.864 2.61-2.008 3.638-1.145 1.028-2.435 1.542-3.865 1.542-1.392 0-2.52-.503-3.381-1.511-.864-1.007-1.195-2.23-.997-3.669l1.062-7.788c.032-1.554-1.134-2.77-2.742-2.77h-4.21c-1.608 0-3.112 1.216-3.508 2.77l-1.097 7.788c-.198 1.44-.87 2.662-2.012 3.669-1.142 1.008-2.409 1.511-3.799 1.511-1.392 0-2.528-.514-3.408-1.542-.881-1.027-1.224-2.24-1.031-3.638l2.358-17.028c.25-1.658-.732-3.39-2.23-4.093 0 0-17.758-7.402-18.915-7.878-1.172-.48-2.5.596-2.954 2.39L.108 8.787c-.455 1.794.57 3.834 2.275 4.533l11.901 4.926-1.783 12.867c-.598 4.315.413 8.007 3.038 11.069 2.624 3.064 6.084 4.594 10.382 4.594 3.967 0 7.59-1.335 10.865-4.008 2.616 2.673 5.89 4.008 9.818 4.008 4.297 0 8.181-1.53 11.654-4.594 3.472-3.062 5.508-6.754 6.106-11.069 0 0 1.865-13.579 1.899-13.816.162-1.184-1.12-2.15-2.851-2.15h-4.14zM76.717 15h-3.72c-1.557 0-3.005 1.267-3.22 2.815 0 0-3.747 26.755-3.764 26.886-.147 1.063 1.005 1.933 2.561 1.933h3.72c1.556 0 3.004-1.267 3.218-2.815l3.765-26.886C79.424 15.87 78.272 15 76.717 15M140.49 18.517c-2.133-2.517-5.02-3.776-8.663-3.776-3.644 0-7.046.798-10.4 3.693l2.375-16.463C123.952.887 122.776 0 121.19 0h-3.795c-1.589 0-3.067 1.292-3.284 2.873l-6.097 41.94c-.15 1.083 1.025 1.971 2.613 1.971h3.795c1.559 0 3.008-1.246 3.268-2.787h.005l1.91-13.08c.386-2.643 1.4-4.647 3.044-6.01 1.643-1.364 3.436-2.046 5.375-2.046 3.92 0 5.503 2.602 4.744 7.804l-2.035 14.108c-.15 1.084 1.026 1.971 2.614 1.971h3.793c1.59 0 3.066-1.292 3.286-2.873l2.345-15.283c.612-4.196-.148-7.554-2.28-10.071M105.235 23.153l1.775-2.266c.752-.96.77-2.437.045-3.447-.318-.547-1.242-1.078-2.086-1.534l-.095-.052c-2.67-1.448-5.294-1.994-8.772-1.824-3.778.185-7.002 1.3-9.581 3.315-2.6 2.03-4.07 4.601-4.366 7.64-.301 3.084.74 5.386 3.091 6.843 1.117.706 2.138 1.244 3.034 1.6.89.357 2.2.775 3.895 1.245 1.646.459 2.9.98 3.724 1.543.756.52 1.094 1.077 1.032 1.703-.063.654-.401 1.183-1.031 1.616-.655.45-1.53.706-2.598.758-2.888.141-5.605-.533-8.075-2.004l-1.833-1.015a1.853 1.853 0 0 0-.99-.224 1.938 1.938 0 0 0-1.444.742l-2.636 3.494c-.27.358-.376.787-.3 1.207.073.408.308.76.664.998.863.68 1.76 1.273 2.668 1.764a19.146 19.146 0 0 0 3.8 1.579c2.49.736 4.961 1.05 7.34.934 3.586-.176 6.684-1.306 9.21-3.36 2.543-2.067 3.99-4.755 4.307-7.989.321-3.282-.62-5.61-2.798-6.922-1.116-.662-2.102-1.152-2.932-1.456-.825-.3-2.22-.724-4.147-1.258-1.904-.526-3.27-1.008-4.063-1.43-.698-.372-.992-.87-.924-1.567.127-1.307 1.47-2.032 3.988-2.154 2.025-.1 4.057.368 6.029 1.383.405.223.852.49 1.26.752.507.283.897.396 1.269.377.548-.026 1.023-.331 1.54-.99z"></path></g></svg></a></div><div class="Navbar__Right-sc-1x990q-7 dIEbgj"><div class="NavbarSearchBar__SearchButtonAndInputWrapper-sc-19mfcgw-0 eOPDGP"><div class="NavbarSearchBar__SearchBar-sc-19mfcgw-1 cgYXQg"><div class="NavbarSearchBar__SearchInputWrapper-sc-19mfcgw-2 lkZgm"><div class="NavbarSearchBar__IconWrapper-sc-19mfcgw-4 fTQDsB"><div width="14px" height="14px" class="SvgUtils__SvgWrapper-sc-17kr4oq-0 lhEkzf"><svg viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path fill="#000" fill-rule="nonzero" stroke="#000" d="M22.78 21.7533333L15.8866667 14.86c1.2222222-1.4666667 1.98-3.3488889 1.98-5.42666667C17.8666667 4.78888889 14.0777778 1 9.43333333 1 4.78888889 1 1 4.78888889 1 9.43333333c0 4.64444447 3.78888889 8.43333337 8.43333333 8.43333337 2.05333337 0 3.95999997-.7333334 5.42666667-1.98L21.7533333 22.78c.2933334.2933333.7577778.2933333 1.0266667 0 .2933333-.2933333.2933333-.7333333 0-1.0266667zm-13.34666667-4.62c-4.24175438 0-7.7-3.4582456-7.7-7.69999997 0-4.24175438 3.45824562-7.7 7.7-7.7 4.24175437 0 7.69999997 3.45824562 7.69999997 7.7 0 4.24175437-3.4582456 7.69999997-7.69999997 7.69999997z"></path><path d="M0 0h24v24H0z"></path></g></svg></div></div><input maxlength="100" type="text" placeholder="O que você deseja encontrar?" data-testid="topmenu-searchbar" class="NavbarSearchBar__SearchInput-sc-19mfcgw-3 eiufaI" value=""></div></div><div data-testid="topmenu-searchbutton" tabindex="0" class="WishButtons__WishButton-sc-1vwkrf6-0 cQCxPr">Pesquisar</div></div><div class="Navbar__SignInButton-sc-1x990q-12 dLGEOW">Entrar</div></div></div></div><div id="main_content" class="TabBarWrapper__MainRowContainer-sc-1gl60ef-1 fikjGN"><div class="HelpPage__MainWrapper-i1t0hb-0 dGFcbf"><div class="HelpPage__MainContainer-i1t0hb-1 fhroBO"><div class="HelpPage__PanelWrapper-i1t0hb-2 cFNSRk"><div class="HelpSidePanel__SideNavDivider-sc-16cbr4q-3 dJBxjl"></div><a href="https://www.wish.com/careers" target="_blank" data-linkid="https://www.wish.com/careers" rel="noopener noreferrer" class="HelpSidePanel__SideNavAnchor-sc-16cbr4q-1 hEkSNC"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Carreiras</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/contact" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/contact"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Contato</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/help" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/help"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Ajuda FAQ - Perguntas Frequentes</div></a><div class="HelpSidePanel__SideNavDivider-sc-16cbr4q-3 jgwLld"></div><a ishighlighted="1" issecondtier="0" data-linkid="/privacy_policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 bNMeYj" href="/privacy_policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 gtzzfm">Política de Privacidade</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/community-guidelines" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/community-guidelines"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Diretrizes da Comunidade</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/return_policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/return_policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Reembolsos e Devoluções</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/wish_cash_policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/wish_cash_policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Política do Wish Cash &amp; Vale-Presente</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/tax_policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/tax_policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Política Fiscal do Cliente Wish</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/cookie_policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/cookie_policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Política de Cookies</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/law-enforcement-policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/law-enforcement-policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Política de Aplicação da Lei</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/accessibility-statement" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/accessibility-statement"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Declaração de Acessibilidade</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/pickup-policy" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/pickup-policy"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Política Pickup</div></a><a ishighlighted="0" issecondtier="0" data-linkid="/ios-terms" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/ios-terms"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Termos - iOS</div></a><div class="HelpSidePanel__SideNavDivider-sc-16cbr4q-3 jgwLld"></div><a ishighlighted="0" issecondtier="0" data-linkid="/terms" class="HelpSidePanel__SideNavLink-sc-16cbr4q-0 cVIJEi" href="/terms"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Termos de Uso</div></a><a href="https://merchant.wish.com/welcome" target="_blank" data-linkid="https://merchant.wish.com/welcome" rel="noopener noreferrer" class="HelpSidePanel__SideNavAnchor-sc-16cbr4q-1 hEkSNC"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Vender no Wish</div></a><a href="https://merchant.wish.com/intellectual-property" target="_blank" data-linkid="https://merchant.wish.com/intellectual-property" rel="noopener noreferrer" class="HelpSidePanel__SideNavAnchor-sc-16cbr4q-1 hEkSNC"><div class="HelpSidePanel__ItemText-sc-16cbr4q-2 fcQgso">Propriedade Intelectual</div></a></div><div class="HelpPage__TextWrapper-jk8pgv-1 fUpPWb"><h1 class="HelpPage__MainTitle-jk8pgv-2 byNlpY">Política de privacidade</h1><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Última atualização: 22 de outubro de 2020</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Esta Política de privacidade se aplica aos sites e apps de compras operados pela ContextLogic e por suas afiliadas corporativas (conforme definido abaixo) e a qualquer outro site ou serviço operado pela ContextLogic e links para o mesmo (“Serviços”). Esta Política de privacidade emprega os termos "nosso", "nos" e "nós" para referir-se à ContextLogic Inc. ou à ContextLogic B.V. e "você" ou "usuários" para referir-se às pessoas físicas descritas pelas informações que a ContextLogic coleta e utiliza, tais como clientes e comerciantes. Caso resida na Suíça ou no Espaço Econômico Europeu (EEE), seus dados pessoais são controlados pela ContextLogic B.V., empresa sediada na Holanda. Leia este documento com atenção para informar-se sobre como coletamos, usamos, compartilhamos e protegemos as informações, incluindo informações que possam descrevê-lo pessoalmente.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Esta Política de Privacidade não se aplica às práticas de empresas que não são de nossa propriedade ou sobre as quais não temos controle ou de pessoas sobre as quais não temos gerência. Por exemplo, ela não se aplica ao uso que o comerciante faz das informações de entrega do comprador. Todos os termos em letras maiúsculas, sem definição, usados nesta Política de Privacidade, empregam as definições fornecidas a eles na <a href="/terms" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Termos de Uso</a>, que rege o uso que Você faz dos Serviços.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Operamos vários marketplaces, incluindo Wish, Geek, Cute, Mama, Home e Joyful Shopping, que permitem que os comerciantes listem os itens e que os usuários os encontrem e comprem. Oferecemos também programas de referência de suporte, ofertas de afiliados e um programa de retirada. Nós coletamos e usamos informações dos usuários (compradores), comerciantes (vendedores) e participantes do programa de retirada para facilitar a listagem (de itens), o processo de compra e o processamento dos pedidos. Usamos essas informações também para encontrar itens que julgamos serem de interesse dos clientes e para encontrar o preço adequado para esses itens.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><b>Ao usar ou acessar os Serviços, você declara ter ciência de que iremos coletar, usar e compartilhar suas informações conforme descrito nesta Política de Privacidade.</b> Você tem opções sobre se deve nos fornecer informações e como usamos essas informações. Você pode optar por não nos fornecer informações, entretanto, suas escolhas podem impedir que você faça uso dos Serviços ou limitar seu uso de determinados recursos. Por exemplo, se você não nos fornecer um método de pagamento, talvez não consiga fazer compras ou se não nos permitir ver a localização do seu dispositivo, não poderemos recomendar itens para retirada em um local próximo a você. Consulte a Seção 7 para obter mais informações sobre as opções disponíveis para você.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Estamos constantemente tentando melhorar nossos Serviços, portanto, precisamos atualizar esta Política de privacidade. Podemos atualizar esta Política de Privacidade para refletir mudanças na lei, nos Serviços, em nossas empresas ou nos avanços tecnológicos. Alertaremos sobre alguma alteração colocando um aviso nos Serviços ou enviando um e-mail. Nosso uso das informações que coletamos está sujeito à Política de privacidade em vigor no momento em que essas informações são usadas.</div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-0" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">Índice</h2><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-1" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">1. INFORMAÇÕES QUE COLETAMOS E UTILIZAMOS</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-2" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">2. COMO UTILIZAMOS AS INFORMAÇÕES E SUAS BASES LEGAIS</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-3" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">3. LOCALIZAÇÃO DO PROCESSAMENTO DE DADOS - ESTADOS UNIDOS E EM QUALQUER OUTRA LOCALIZAÇÃO</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-4" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">4. RETENÇÃO DE DADOS/INFORMAÇÕES PESSOAIS</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-5" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">5. COMPARTILHAMENTO DE INFORMAÇÕES</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-6" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">6. SEGURANÇA</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-7" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">7. ESCOLHAS</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-8" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">8. DIREITOS</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-9" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">9. RECLAMAÇÕES DE PRIVACIDADE</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-10" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">10. PRIVACIDADE INFANTIL</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-11" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">11. NÃO RASTREAR</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-12" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">12. INFORMAÇÕES DE CONTATO</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><a href="#section-13" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">13. AVISO DE PRIVACIDADE SUPLEMENTAR PARA RESIDENTES NA CALIFÓRNIA</a></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-1" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">1. INFORMAÇÕES QUE COLETAMOS E UTILIZAMOS</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Algumas das informações que coletamos são fornecidas ativamente por você, como quando você preenche um campo ou formulário. Alguns são coletados automaticamente (normalmente de dispositivos). E alguns podem ser coletados de outras fontes.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">1.2 Informações fornecidas por você</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Quando usa os Serviços, você nos fornece informações, como quando cria uma conta ou uma loja, faz ou realiza uma compra, deixa uma avaliação ou solicita atendimento ao cliente. Exemplos das informações que podem ser fornecidas por você são:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Nome</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Endereço de e-mail</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Método de pagamento ou conta de pagamento</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Endereço de entrega ou endereço comercial, incluindo endereços residenciais (para o programa de retirada)</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Número de telefone</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Senha ou credenciais de conta de rede social</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Dados adicionais de verificação, incluindo identificação governamental</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">1.3 Informações que coletamos automaticamente</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Ao utilizar os Serviços, incluindo quando você visita nossos sites e instala ou usa nossos apps, coletamos automaticamente informações sobre como você usa os Serviços e os dispositivos utilizados para acessar os Serviços. Também podemos gerar informações sobre você, como um número de ID de conta. Exemplos das informações que coletamos automaticamente são:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Endereço IP</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Informações de localização - informações gerais de localização do seu computador ou dispositivo móvel ou informações precisas de localização GPS do seu dispositivo móvel.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Dados de conta e perfil da rede social (ao usar logon social)</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Identificadores exclusivos, incluindo endereço MAC, IDs de anúncio e atributos de dispositivo, como sistema operacional e tipo de navegador e padrões de uso.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Dados de uso, tais como: dados de log da web, páginas de referência e saída e URLs, tipo de plataforma, número de cliques, nomes de domínio, páginas de destino, páginas e conteúdo visualizados e a ordem dessas páginas, a quantidade de tempo gasto em páginas específicas, a data e hora em que você usou nossos Serviços, a frequência de uso de nossos Serviços, logs de erros e outras informações semelhantes.</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">1.4 Dados analíticos, de publicidade e técnicos</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nós ou nossos prestadores de serviços ou parceiros comerciais podemos coletar e usar várias informações de forma automatizada para dar suporte a operações de análise e publicidade.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><b>Analytics</b> - Usamos ferramentas analíticas e outros provedores para entender melhor como indivíduos e seus dispositivos interagem com os Serviços. O Google Analytics é importante para as nossas análises - <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Como o Google usa os dados quando você visita um site ou aplicativo parceiro.</a></div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><b>Cookies e tecnologias relacionadas</b> - Nós e terceiros podemos usar cookies, que são arquivos de texto contendo pequenas quantidades de informações que são baixados no seu dispositivo, ou tecnologias relacionadas, como web beacons, objetos compartilhados localmente e pixels de rastreamento para armazenar ou coletar informações ("Cookies"). Os cookies podem ajudar a nós e a terceiros a conhecer as suas atividades online incluindo aquelas realizadas em outros sites ou serviços. Por exemplo, web beacons permitem que as redes de anúncios forneçam auditoria agregada, pesquisa e relatórios para nós e para os anunciantes. Os web beacons permitem também que as redes de publicidade veiculem anúncios direcionados a você quando visitar outros sites. Como o seu navegador precisa solicitar esses anúncios e web beacons dos servidores da rede de anúncios, essas empresas podem ver, editar ou configurar cookies próprios, como se você tivesse solicitado uma página do site delas. Veja o nosso <a href="/cookie_policy" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Política de cookies</a> para obter informações adicionais.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Não temos acesso a Cookies inseridos ou lidos pelos Anunciantes e esta Política de Privacidade não rege o uso desses cookies e de tecnologias relacionadas. Consulte as informações de Escolha na Seção 7 para obter mais detalhes.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">1.5 Links e plugins de terceiros</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Os Serviços podem conter links para sites ou apps de terceiros, que podem contar com políticas de privacidade distintas das nossas. Não somos responsáveis pelas práticas desses sites/apps.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Os Serviços podem permitir também que você interaja com plug-ins dos sites das redes sociais, entre outros, permitindo-nos, ou ao site da rede social, receber dados de ou sobre você. Se você já forneceu informações pessoais a terceiros que operam um plug-in nos Serviços, esse terceiro poderá reconhecê-lo nos Serviços. O uso que você faz dos plug-ins das redes sociais é regido pela política de privacidade da empresa que opera o plug-in, política essa que pode diferir da nossa. Portanto, leia as referidas políticas com atenção para entendê-las e conhecer as opções de que dispõe.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">1.6 Outras fontes</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos reunir informações, incluindo informações demográficas e estatísticas de terceiros, tais como parceiros comerciais, profissionais de marketing, pesquisadores e analistas. Podemos atribuir essas informações a você com base na sua adequação a determinados grupos estatísticos. Podemos usar essas informações para complementar as outras informações que coletamos, de forma a calcular seus possíveis interesses e proporcionar experiências mais relevantes para você dentro dos Serviços, além de aprimorar nossos produtos, nossas análises e nossos anúncios.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-2" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">2. COMO UTILIZAMOS AS INFORMAÇÕES E SUAS BASES LEGAIS</h2><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">2.1 Uso</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">De maneira geral, coletamos, usamos e armazenamos ("processamos") suas informações para oferecer os Serviços, corrigi-los e aprimorá-los, desenvolver novos serviços e divulgar nossas empresas e seus produtos e serviços. Alguns exemplos específicos de como usamos as informações:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Configuração e gerenciamento de contas, incluindo identificação e autenticação</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Receber ou enviar um pagamento</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Processamento ou suporte de processamento de pedidos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Localizar ou recomendar um recurso/serviço local, como um local de retirada</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você, por e-mail, sms, notificações push ou plataformas de mensagens (como Whatsapp), sobre sua conta ou para comercializar ofertas de produtos, recursos ou eventos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Anunciar e comercializar os Serviços, incluindo por e-mail ou outros canais</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Testar alterações nos Serviços e desenvolver novos recursos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso dos Serviços e personalizar conteúdos, entre eles anúncios e preços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Oferecer suporte, incluindo a resolução de questões e problemas que os usuários, comerciantes ou locais de retirada possam ter com os Serviços, ou resolução de disputas</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Impedir, detectar, investigar e responder a fraude, acesso/uso não autorizado dos Serviços, violações dos termos e políticas ou outro comportamento ilícito qualquer</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Atender a todos os procedimentos, leis e regulamentos que se apliquem a nós, incluindo os que definem os períodos de retenção</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">2.2 Bases Legais (EEA)</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">A legalidade do tratamento de dados pessoais é um princípio importante sob abrigo da legislação da UE em matéria de proteção de dados. Para atender às leis de proteção de dados, normalmente processamos dados pessoais quando:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Precisamos executar o contrato que estamos prestes a celebrar ou que tenhamos celebrado com você, por exemplo, quando processamos um pagamento;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">É de nosso legítimo interesse (ou de terceiros), e os seus interesses referentes à proteção de dados e direitos fundamentais e liberdades não anulam esses interesses, como quando protegemos os Serviços, realizamos prevenções contra fraude e determinadas ações de marketing direto;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Precisamos atender a obrigações legais ou normativas;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Temos o seu consentimento para utilizar seus dados pessoais.</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">2.3 Outros usos - Dados sem identificação</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos tomar medidas para limitar ou impedir a identificação de qualquer usuário ou dispositivo específico em conjuntos de dados, como combinando informações relacionadas a muitos indivíduos (“agregação”) ou removendo ou alterando informações sobre cada indivíduo. Podemos usar dados sem identificação para auxiliar em nossos esforços de pesquisa e marketing. Esta Política de Privacidade não se aplica ao nosso uso de tais informações sem identificação.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-3" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">3. LOCALIZAÇÃO DO PROCESSAMENTO DE DADOS - ESTADOS UNIDOS E EM QUALQUER OUTRA LOCALIZAÇÃO</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">As informações que coletamos e usamos podem ser processadas fora do seu país ou da sua região. Quando compartilhamos informações pessoais com Afiliadas ou com terceiros em outros países, aplicamos as medidas de segurança apropriadas. Por exemplo, os dados abrangidos pelas leis europeias de proteção de dados são normalmente protegidos por Cláusulas Modelo da UE.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Ao usar os Serviços você:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Declara estar ciente de que suas informações serão processadas conforme descrito nesta Política de Privacidade; e</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Concorda que suas informações sejam transferidas para nossas afiliadas e instalações nos Estados Unidos ou em qualquer outro local ou para instalações de terceiros com os quais compartilhamos informações, conforme descrito nesta Política de Privacidade.</div></li></ul></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-4" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">4. RETENÇÃO DE DADOS/INFORMAÇÕES PESSOAIS</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Guardamos suas informações pelo período necessário para conclusão dos propósitos pelos quais elas são processadas ou para satisfazer os requisitos de retenção exigidos por lei. O período durante o qual guardamos as informações depende da finalidade para a qual elas foram coletadas e usadas ou das exigências das leis vigentes.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-5" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">5. COMPARTILHAMENTO DE INFORMAÇÕES</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos divulgar informações sobre você ou seu uso dos Serviços com os tipos de destinatários descritos abaixo.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.2 Prestadores de serviços/agentes</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Utilizamos outras empresas e pessoas para executar tarefas ou serviços em nosso nome e precisamos compartilhar informações com elas para que possam executar seu trabalho. Por exemplo: podemos usar uma empresa de processamento de pagamentos para receber ou fazer pagamentos; ou podemos usar um provedor de serviços de nuvem para armazenar dados.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.3 Afiliados</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos compartilhar suas informações com outras empresas sob propriedade ou controle comum com a ContextLogic Inc. (“Afiliadas”). Essas Afiliadas usam suas informações conforme descrito nesta Política de privacidade. Quando este compartilhamento envolve a transferência de dados pessoais para fora da Europa, empregamos medidas de segurança, entre elas as Cláusulas Modelo da UE, para proteger os dados e garantir a legalidade da transferência.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.4 Outros usuários</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Informações sobre comerciantes, locais de retirada e usuários (por exemplo, compradores) é compartilhada em determinados contextos. Por exemplo, as informações sobre a loja do comerciante são disponibilizadas aos usuários e as avaliações dos usuários são disponibilizadas aos comerciantes e a outros usuários. Além disso, quando os usuários concluem uma compra usando os Serviços, normalmente compartilhamos as informações necessárias para realizar a compra, como endereço de entrega e número de telefone, com o comerciante (por exemplo, vendedor) ou seus prestadores de serviços, como uma transportadora. As informações compartilhadas com os vendedores e com os prestadores de serviço que os atendem estão sujeitas às políticas de privacidade deles.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Determinadas informações de perfil de usuário, incluindo seu nome, foto, localização, itens em sua lista de desejos (a menos que você torne a lista de desejos privada), avaliações que você escreveu (incluindo qualquer foto/vídeo que você carregar com essas avaliações) e a lista de pessoas que você segue ou que o seguem, podem ser exibidas para outros usuários para facilitar a interação do usuário dentro dos Serviços. Seu nome de usuário pode ser exibido também para outros usuários se e quando você enviar mensagens, fizer comentários ou carregar imagens ou vídeos por meio dos Serviços e outros usuários podem entrar em contato com você por meio de mensagens e comentários. Tenha cuidado e bom senso antes de compartilhar informações pessoais em áreas públicas dos Serviços.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.5 Anunciantes</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos permitir que anunciantes, incluindo comerciantes (<b>"Anunciantes"</b>), escolham grupos de usuários para ver suas ofertas, anúncios ou ofertas promocionais com base em recursos comuns de um grupo de usuários, como padrões de uso semelhantes ou localizações semelhantes. Por exemplo, se você comprar produtos relacionados ao vinho, podemos lhe mostrar uma oferta para um serviço que vende vinho ou produtos similares. Se um anunciante nos solicitar a exibição de um anúncio para um determinado público ou segmento de público e você reagir a tal anúncio, o anunciante poderá concluir que você se adequa à descrição do público que ele está tentando atingir.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.6 Transferências de empresas</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos optar por comprar ou vender ativos e podemos compartilhar ou transferir informações do usuário (inclusive informações pessoais) em conexão com a avaliação e a entrada em tais transações. Além disso, caso nós (ou nossos ativos) sejamos adquiridos, ou se encerrarmos nossas atividades, entrarmos em falência ou passarmos por alguma outra mudança de controle, as informações do usuário poderão estar entre os ativos transferidos ou adquiridos por terceiros.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.7 Requisitos legais, proteção da Wish e de terceiros</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Reservamo-nos o direito de acessar, ler, preservar e divulgar qualquer informação que a Wish, de boa-fé, acreditar ser necessária para estar em conformidade com a legislação ou alguma ordem judicial; cumprir ou aplicar nossas <a href="/terms" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Termos de Uso</a> e outros contratos, ou proteger os direitos, a propriedade ou a segurança da ContextLogic, nossos funcionários, usuários ou terceiros</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">5.8 Consentimento</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Podemos compartilhar suas informações de outras formas caso nos tenha solicitado ou tiver dado o seu consentimento para isto.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-6" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">6. SEGURANÇA</h2><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><b>6.1 </b>As contas são protegidas por senha, para sua privacidade e segurança. Caso acesse a sua conta por meio de um site ou serviço de terceiros, como o Facebook, você poderá encontrar proteções de acesso adicionais ou diferentes por meio desse site ou serviço de terceiros. Recomendamos que você escolha uma senha apropriada, proteja sua senha e limite o acesso aos dispositivos nos quais acessa sua conta.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD"><b>6.2 </b>Utilizamos medidas organizacionais e técnicas razoáveis destinadas a proteger a privacidade da sua conta e as informações pessoais que utilizamos ou armazenamos, mas a internet e os nossos serviços não são 100% seguros. Não podemos garantir total privacidade ou segurança para as informações que você fornece ou que coletamos.</div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-7" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">7. ESCOLHAS</h2><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">7.1 Acessar, revisar, corrigir</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nas “Configurações” da sua conta, você pode acessar, editar ou excluir informações fornecidas, incluindo:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Nome e senha</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">ID do usuário</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Endereço de e-mail</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Endereço físico</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Localização</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Número de telefone</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Gênero</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Método de pagamento ou prestador de serviços de pagamento</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Informações do perfil do usuário, incluindo imagens e vídeos que você tenha carregado para os Serviços</div></li></ul></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">As informações disponíveis em Configurações e suas opções podem ser alteradas à medida que os Serviços mudem. Caso tenha alguma dúvida sobre visualizar ou atualizar informações que temos em arquivo sobre você, entre em contato conosco em support@wish.com.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">7.2 Opção por deixar de receber comunicação de marketing</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Para gerenciar suas preferências ou cancelar comunicações de marketing, você pode usar qualquer um dos métodos a seguir.</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Ofertas eletrônicas promocionais:</b> Se você não quiser receber nossos e-mails sobre promoções especiais ou ofertas, você pode (1) seguir as opções de cancelamento de assinatura na parte inferior de cada e-mail; ou (2) visitar as páginas de configurações da sua conta.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Ofertas promocionais via celular:</b> Ao nos informar o seu número de celular para fins de marketing, podemos lhe enviar determinados alertas de marketing por meio de mensagem de texto. O consentimento não é um requisito para usar os serviços e taxas padrão de dados e mensagens serão aplicadas. Caso queira cancelar o recebimento de alertas via celular, basta seguir as instruções indicadas nessas mensagens ou responder STOP a qualquer alerta enviado.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Notificações push:</b> Ao utilizar o App, você pode receber notificações push. Caso prefira não receber notificações push, basta ajustar as definições em seu dispositivo móvel para definir o recebimento destes alertas.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Configurações:</b> Você pode optar por não receber certas comunicações nossas alterando suas preferências na opção “Configurações” do serviço aplicável.</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">7.3 Informações de localização</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Caso não deseje que vejamos ou acessemos a localização do seu dispositivo, ´basta desativar o compartilhamento de localização em seu dispositivo, alterar as definições de privacidade do dispositivo ou recusar compartilhar a localização no seu navegador da internet.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">7.4 Cookies e Analytics</div><div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Visite nosso <a href="/cookie_policy" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Política de cookies</a> para obter informações adicionais e acesso ao nosso gerenciador de consentimento de cookies.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Você pode optar por não ter um determinado rastreador de web beacon e outras atividades de Cookie ajustando as configurações em seu navegador, incluindo as configurações Não rastrear (Do Not Track).</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Para desativar o Google Analytics, você pode instalar o <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Desativar Complemento de Navegador do Google Analytics</a>.</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">7.5 Anúncios</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Opções para publicidade personalizada:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Para exercer opções de publicidade personalizada, visite os sites a seguir. Caso opte por não fazer o cancelamento, você ainda pode receber conteúdo publicitário, mas ele não será adaptado para você.</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Network Advertising Initiative (NAI) - Você pode usar <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">aqui</a> de desativação da NAI, que permitirá desativar a exibição de anúncios personalizados de empresas membros da NAI.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Digital Advertising Alliance (DAA) - Você pode desativar o recebimento de anúncios personalizados de determinadas empresas que realizam serviços de segmentação de anúncios, usando o <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">aqui</a> da DAA.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">European Interactive Advertising Digital Alliance (EDAA) - Você pode saber mais sobre publicidade online e optar por não utilizar o site <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">As suas escolhas on-line</a>.</div></li></ul></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Para os dispositivos móveis, leia as instruções do seu sistema operacional para obter instruções completas.</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Para o iOS 7 ou superior: Acessar Configurações &gt; Selecionar Privacidade &gt; Selecionar Publicidade &gt; Ativar a configuração "Limitar o Rastreamento de Anúncios"</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Para dispositivos Android com o OS 2.2 ou superior e o Google Play Services versão 4.0 ou superior: Abra o aplicativo Configurações do Google &gt; Anúncios &gt; Ativar "Desativar a publicidade com base em interesses"</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Consultar as opções de <a href="https://www.networkadvertising.org/mobile-choice/" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Guia NAI</a> para dispositivos móveis para obter preferências de anúncios</div></li></ul></li></ul></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-8" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">8. DIREITOS</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Dependendo da sua residência ou localização, você poderá ter determinado direitos relacionados com a coleta e utilização das suas informações/dados pessoais.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">8.1 Residentes na EEE</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se o processamento dos seus dados pessoais estiver abrangido pela legislação europeia de proteção de dados, normalmente você tem certos direitos, incluindo:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Acesso e retificação</u> - Você pode acessar e rever os dados pessoais associados à sua conta a qualquer momento seguindo as instruções em 7(A) (acima). Você também pode emitir um pedido de direitos do titular dos dados para acessar os dados pessoais que mantemos sobre você. Você também pode solicitar a retificação ou correção de registros imprecisos e incompletos de seus dados pessoais.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Restrição e eliminação</u> - Em determinadas situações, você pode pedir que deixemos de utilizar seus dados, por exemplo, se a exatidão dos seus dados pessoais for contestada. Você também pode nos pedir para excluir seus dados pessoais, porém, podemos ser obrigados a manter determinados dados para cumprir obrigações legais, como normativas fiscais locais. A desativação deve ser concluída para excluir uma conta (e os dados pessoais associados a ela).</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Portabilidade</u> - Em determinadas situações, você poderá nos solicitar a transferência dos seus dados pessoais diretamente para você. Por meio do seu pedido, e sempre que possível, transferiremos suas informações pessoais para terceiros que você indicar.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Objeção</u> - Em determinadas situações, você pode ter o direito de se opor ao processamento de seus dados pessoais. Os motivos de uma objeção devem estar relacionados às suas circunstâncias particulares, como o processamento de seus dados pessoais para fins de marketing direto.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Retirada de consentimento</u> - Quando você forneceu seu consentimento para processar suas informações pessoais, você sempre tem o direito de retirar esse consentimento a qualquer momento. A retirada do consentimento não afetará a legalidade do processamento antes da retirada.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Reclamações</u> - Você tem o direito de apresentar questionamentos ou reclamações conosco conforme descrito abaixo ou junto à sua autoridade local de proteção de dados a qualquer momento. Consultar seção 9 (abaixo) para obter mais informações.</div></li></ul></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">8.2 Residentes na Califórnia</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se for residente na Califórnia, você pode ter certos direitos. Para obter mais informações, consulte nosso <a href="#section-13" target="" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">Aviso de Privacidade Suplementar para Residentes na Califórnia na seção 13</a> abaixo.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">8.3 Residentes em Nevada</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">De acordo com a lei de Nevada, determinados consumidores de Nevada podem optar por não vender “informações pessoalmente identificáveis” para consideração monetária a uma pessoa para que essa pessoa licencie ou venda tais informações a pessoas adicionais. “Informações de identificação pessoal” inclui nome e sobrenome, endereço, endereço de e-mail, número de telefone, número de seguro social ou um identificador que permita que uma pessoa específica seja contatada de forma física ou online.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nós não nos envolvemos em tal atividade; no entanto, se você for residente em Nevada que comprou ou alugou bens ou serviços de nós, você pode enviar um pedido para optar por não participar de quaisquer potenciais vendas futuras ao abrigo da lei Nevada enviando um e-mail para privacy@wish.com. Note que tomaremos medidas razoáveis para verificar sua identidade e a autenticidade do pedido. Uma vez verificada, manteremos sua solicitação caso nossas práticas mudem.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-9" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">9. RECLAMAÇÕES DE PRIVACIDADE</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nos comprometemos a resolver reclamações válidas sobre a sua privacidade ou sobre a nossa coleta ou utilização dos seus dados pessoais. Em caso de dúvidas ou reclamações sobre nossas práticas de uso de dados ou a Política de Privacidade, entre em contato com privacy@contextlogic.com.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se você estiver na Europa (UE/EEE), consideramos a Autoridade Holandesa de Proteção de Dados nossa principal autoridade de supervisão do processamento ou dados pessoais de indivíduos na Europa. Nomeamos um responsável pela proteção de dados (“DPO”) para a Europa. Para perguntas, reclamações ou solicitações relacionadas ao processamento de seus dados pessoais, você pode entrar em contato com nosso DPO: DPO@contextlogic.com. Você também pode enviar pelo correio uma reclamação à Autoridade Holandesa de Proteção de Dados, para o endereço Autoriteit Persoonsgegevens, PO Box 93374, 2509 AJ Den Haag, ou através do site: <a href="https://autoriteitpersoonsgegevens.nl/en" target="_blank" rel="noopener noreferrer" class="HelpPage__AnchorText-jk8pgv-8 deBEsU">https://autoriteitpersoonsgegevens.nl/en</a>.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-10" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">10. PRIVACIDADE INFANTIL</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nós não coletamos ou solicitamos intencionalmente “informações pessoais” (conforme definido pela Lei de Proteção de Privacidade Online para Crianças dos EUA) de qualquer pessoa menor de 13 anos. Caso tenha menos de 13 anos, não tente se registrar em nossos Serviços ou enviar qualquer informação pessoal sobre você para nós. Se soubermos que recolhemos informações pessoais de uma criança menor de 13 anos, essas informações serão eliminadas. Se você acredita que uma criança com menos de 13 anos possa ter nos fornecido informações pessoais, entre em contato conosco pelo e-mail privacy@contextlogic.com.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Para residentes na UE/EEE onde o processamento de dados pessoais se baseia no consentimento, não nos envolveremos conscientemente nesse processamento para usuários menores da idade estabelecida pela lei aplicável de proteção de dados ou membro. Se soubermos que estamos envolvidos nesse processamento com esses usuários, interromperemos tal processamento e tomaremos medidas razoáveis para remover imediatamente as informações aplicáveis de nossos registros.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Caso tenha 13 anos ou mais, mas não tiver atingido a maioridade do seu país (isto é, ser capaz de celebrar um contrato), você deve usar os Serviços com a autorização dos seus pais ou responsáveis.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-11" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">11. NÃO RASTREAR</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Seu navegador pode oferecer a você uma opção “Não rastrear”, que permite que você sinalize os operadores de sites e aplicativos da web e serviços online (incluindo serviços de publicidade personalizados) que você não deseja que suas atividades online sejam rastreadas ao longo do tempo e em diferentes sites. Nossos Serviços não suportam solicitações Do Not Track no momento, o que significa que coletamos informações sobre sua atividade online enquanto você estiver usando os Serviços e depois que você sair dos nossos Serviços.</div></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-12" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">12. INFORMAÇÕES DE CONTATO</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se você tiver dúvidas ou preocupações sobre esta Política de privacidade ou o uso de seus dados por parte da ContextLogic, envie uma mensagem detalhada para o e-mail privacy@contextlogic.com. Outras preocupações, como sobre um pedido feito, devem ser enviadas por meio de canais de suporte padrão. Você também pode nos escrever para:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">ContextLogic B.V. (Registro Comercial nº 62752863), Schiphol Boulevard 195, 1118 BJ Schiphol, Países Baixos ou dpo@contextlogic.com.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">ContextLogic Inc., 1 Sansome Street, 40th Floor, San Francisco, CA 94104-4418</div></li></ul></div></div></div><div class="HelpPage__SectionWrapper-jk8pgv-3 dAsLY"><h2 id="section-13" class="HelpPage__SectionTitle-jk8pgv-5 iDfDdv">13. AVISO DE PRIVACIDADE SUPLEMENTAR PARA RESIDENTES NA CALIFÓRNIA</h2><div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Este Aviso de Privacidade Suplementar é complementado com as informações contidas na nossa Política de privacidade acima e se aplica exclusivamente aos residentes na Califórnia.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">13.1 Lista das informações coletadas por nós</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">As leis da Califórnia exigem que divulguemos informações sobre as categorias de informações pessoais que coletamos sobre os consumidores da Califórnia, as categorias de fontes a partir das quais as informações foram coletadas, os fins comerciais ou lucrativos (conforme esses termos são definidos pela lei aplicável) para os quais as informações foram coletadas e as categorias de partes com as quais compartilhamos informações pessoais.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Nós ou nossos prestadores de serviços podemos coletar as seguintes categorias de informações para os seguintes fins comerciais ou lucrativos (conforme esses termos são definidos na lei aplicável):</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Os nossos propósitos operacionais ou do nosso prestador de serviços;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Auditoria de interações do consumidor em nosso site (por exemplo, medição de impressões de anúncios);</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Detectar, proteger e processar incidentes de segurança e atividades fraudulentas ou ilegais;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Detecção de erros e relatórios de erros;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalizar o conteúdo que nós ou nossos provedores de serviços exibem nos Serviços (por exemplo, anúncios contextuais);</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os Serviços (por exemplo, manutenção e manutenção de contas, processamento e atendimento de pedidos, atendimento ao cliente, publicidade e marketing, análise e comunicação sobre os Serviços);</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Melhorar os nossos Serviços existentes e desenvolver novos serviços (por exemplo, por meio da realização de pesquisas para desenvolver novos produtos ou funcionalidades);</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Outros usos que promovem nossos interesses comerciais ou econômicos, como publicidade de terceiros e comunicação com você sobre ofertas relevantes de parceiros terceirizados;</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Outros usos sobre os quais notificamos você.</div></li></ul></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Exemplos destes tipos de utilizações são identificados a seguir. Também podemos usar as seguintes categorias de informações pessoais para conformidade com as leis e normativas aplicáveis e podemos combinar as informações que coletamos (“agregamos”) ou remover partes de informações (“remover a identificação”) para limitar ou impedir a identificação de qualquer usuário ou dispositivo específico.</div></div><div><ol class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Identificadores, tais como: informações da conta, nome, endereço de e-mail, endereço de entrega, número de telefone ou dados de conta e perfil de rede social.</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A sua utilização dos nossos serviços/coleta automática</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comerciantes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Outros usuários (por exemplo, quando outro usuário envia um item como presente)</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Processar pedidos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Correção e melhoria dos serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Cobrar/fazer um pagamento</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalização de conteúdo</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Marketing e publicidade</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Serviços de suporte</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prevenção, detecção, investigação e resposta a fraudes, acesso/uso não autorizado dos serviços, violações de termos e políticas</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comerciantes (para processamento de pedidos)</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Outros usuários (onde você divulga publicamente as informações)</div></li></ol></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Informações comerciais (tais como dados de transações)</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A sua utilização dos nossos serviços/coleta automática</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comerciantes</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Processar pedidos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Correção e melhoria dos serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Receber pagamentos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalização de conteúdo</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Marketing e publicidade</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Serviços de suporte</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prevenção, detecção, investigação e resposta a fraudes, acesso/uso não autorizado dos serviços, violações de termos e políticas.</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comerciantes (para processamento de pedidos)</div></li></ol></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Dados financeiros (como método de pagamento ou informações de conta financeira)</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Cobrar/fazer um pagamento</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Serviços de suporte</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li></ol></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Internet ou outra atividade de rede ou dispositivo (como endereço IP, dispositivo exclusivo, publicidade e identificadores de apps, histórico de navegação ou outros dados de uso)</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A sua utilização dos nossos serviços/coleta automática</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Correção e melhoria dos serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Receber pagamentos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalização de conteúdo</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Marketing e publicidade</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prevenção, detecção, investigação e resposta a fraudes, acesso/uso não autorizado dos serviços, violações de termos e políticas</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li></ol></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Informações de localização (localização geral e, se você fornecer permissão, localização de GPS precisa)</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A sua utilização dos nossos serviços/coleta automática</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Correção e melhoria dos serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Receber pagamentos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalização de conteúdo</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Marketing e publicidade</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Encontrar recursos e serviços locais</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prevenção, detecção, investigação e resposta a fraudes, acesso/uso não autorizado dos serviços, violações de termos e políticas</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li></ol></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><b>Categoria:</b> Outras informações que identificam ou podem ser razoavelmente associadas a você (como conteúdo gerado pelo usuário)</div><ol type="a" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de fontes</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Indivíduos/Você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A sua utilização dos nossos serviços/coleta automática</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Agentes/fornecedores de serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Exemplos de usos</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Fornecer os serviços, incluindo a operação de um marketplace que permite que os comerciantes ofereçam e que os usuários encontrem e comprem itens</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Correção e melhoria dos serviços</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Receber pagamentos</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Personalização de conteúdo</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Marketing e publicidade</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comunicação com você</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Analisar o uso do serviço</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prevenção, detecção, investigação e resposta a fraudes, acesso/uso não autorizado dos serviços, violações de termos e políticas</div></li></ol></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO"><u>Categorias de terceiros com os quais podemos compartilhar essas informações</u></div><ol type="i" class="HelpPage__OrderedList-jk8pgv-11 kOBhrU"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Prestadores de serviços/agentes</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Afiliados</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Terceiros</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Comerciantes (onde você divulga publicamente as informações)</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Outros usuários (onde você divulga publicamente as informações)</div></li></ol></li></ol></li></ol></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">13.2 Direitos</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se for residente na Califórnia, você pode ter certos direitos. A lei da Califórnia pode permitir que você nos solicite:</div><ul class="HelpPage__List-jk8pgv-10 lmcYdG"><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">Disponibilizar para você as categorias de informações pessoais que coletamos ou divulgamos sobre você nos últimos doze meses; as categorias das fontes dessas informações; o fim empresarial ou comercial da coleta ou da venda de suas informações pessoais; e as categorias de terceiros com quem compartilhamos as informações pessoais.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">O fornecimento de acesso e/ou uma cópia de certas informações que mantemos sobre você.</div></li><li class="HelpPage__ListItem-jk8pgv-12 eeYkBh"><div class="HelpPage__ParagraphText-jk8pgv-7 cFKqLO">A exclusão de determinadas informações que temos sobre você.</div></li></ul></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Você pode ter o direito de receber informações sobre os incentivos financeiros que oferecemos a você. Você também tem o direito de não sofrer discriminação (conforme previsto na lei aplicável) pelo exercício de alguns dos seus direitos. Determinadas informações podem ser isentas de tais solicitações ao abrigo da lei aplicável. Precisamos de determinados tipos de informações para que possamos fornecer os Serviços a você. Se nos pedir para excluí-las, você pode não ser mais capaz de acessar ou usar os Serviços.</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Para obter mais informações sobre como acessar, revisar e corrigir as informações da sua conta; desativar determinados tipo de marketing, publicidade, coleta de localização e cookies; e desativar sua conta, consulte a Seção 7 desta Política de privacidade (acima).</div></div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Se você desejar exercer qualquer um dos seus direitos de consumidor da Califórnia, envie uma solicitação em privacy@wish.com ou visite o site ou app Wish, onde você poderá selecionar a equipe de atendimento ao cliente. A partir daí, siga as instruções para enviar uma mensagem diretamente à nossa equipe de atendimento ao cliente. Você será obrigado a verificar sua identificação antes de atendermos a sua solicitação. Para fazer isso, normalmente é preciso demonstrar o controle da conta em questão e demonstrar ser residente na Califórnia. Você pode também nomear um agente autorizado para fazer uma solicitação em seu nome. Para isso, é necessário que nos envie uma autorização por escrito ou uma procuração, assinada por você, para que o agente atue em seu nome. Ainda assim, será necessário confirmar a sua identidade diretamente conosco.</div></div></div><div><div class="HelpPage__SubSectionTitle-jk8pgv-6 dSQIOd">13.3 California Shine the Light</div><div><div class="HelpPage__ParagraphText-jk8pgv-7 eLviPD">Caso resida na Califórnia, você pode solicitar a lista de terceiros que receberam suas informações para fins de marketing direto durante o ano civil anterior. A lista contém também os tipos de informações que foram compartilhadas. Disponibilizamos a lista sem nenhum custo. Para solicitá-la, entre em contato conosco pelo e-mail privacy@contextlogic.com.</div></div></div></div></div></div></div></div></div><div id="footer" tabindex="0" class="Footer__FooterOpenButton-sc-1vz2kbf-3 jJPbVs">Contato, Termos, Políticas &amp; Muito Mais<svg width="6" height="40" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(-90deg); transition: all 0.25s ease 0s; margin: 2px 0px 0px 8px;"><path d="M1 1l4 4.01L1 9" stroke="#7e9aa6" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="Footer__Wrapper-sc-1vz2kbf-0 gHEjYT"><a href="/help" target="_blank" data-linkid="FAQ" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Ajuda FAQ - Perguntas Frequentes</a><a href="/companyinfo" target="_blank" data-linkid="COMPANY_INFO" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Empresa</a><a href="https://wishshopping.blog" target="_blank" data-linkid="BLOG" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Blog</a><a href="/contact" target="_blank" data-linkid="CONTACT" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Contato</a><a href="/careers" target="_blank" data-linkid="CAREERS" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Carreiras</a><a href="/privacy_policy" target="_blank" data-linkid="PRIVACY_POLICY" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Política de Privacidade</a><a href="/accessibility-statement" target="_blank" data-linkid="ACCESSIBILITY_STATEMENT" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Declaração de Acessibilidade</a><a href="/tax_policy" target="_blank" data-linkid="TAX_POLICY" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Política Fiscal</a><a href="/terms" target="_blank" data-linkid="TERMS_OF_SERVICE" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Termos de Uso</a><a href="/return_policy" target="_blank" data-linkid="RETURN_POLICY" rel="noopener noreferrer" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Política de Devolução</a><a href="https://merchant.wish.com/welcome" target="_blank" rel="noopener noreferrer" data-linkid="SELL_ON_WISH" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Vender no Wish</a><a href="https://merchant.wish.com/intellectual-property" target="_blank" rel="noopener noreferrer" data-linkid="TRADEMARK_PROTECTION" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Propriedade Intelectual</a><a href="/promo-code" target="_blank" rel="noopener noreferrer" data-linkid="BROWSE_CATEGORIES_HOMEPAGE" tabindex="-1" class="Footer__Link-sc-1vz2kbf-1 kujaEl">Categorias</a><a class="Footer__LinkSectionWrapper-sc-1vz2kbf-2 kNyDHX"></a></div><div class="BaseModal__ModalContainer-sc-1u9dpt5-4 gkCQXZ modal-root"></div></div></div>
-    
-
-    <script>
-      window.wishAppendChild = window.document.head.appendChild;
-      window.document.head.appendChild = function() {
-        if (arguments[0] && arguments[0].src && arguments[0].src.indexOf('dist/cozy/') !== -1 && arguments[0].src.slice(-3) === '.js') {
-          arguments[0].src = arguments[0].src.slice(0, -3) + '.br.js';
-        }
-        window.wishAppendChild.apply(window.document.head, arguments);
-      }
-    </script>
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://mms-amp-static.magazineluiza.com.br/manifest/icons/96x96.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://mms-amp-static.magazineluiza.com.br/manifest/icons/72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="https://mms-amp-static.magazineluiza.com.br/img/icon/fav-icon-57.png">
+    <link rel="shortcut icon" type="image/ico" href="https://mms-amp-static.magazineluiza.com.br/img/icon/fav-icon-16.png">
+    <link rel="manifest" href="https://mms-amp-static.magazineluiza.com.br/manifest/manifest.json">
 
     <script type="text/javascript">
-      
-        window.Globals = {"appType": 0, "unviewed_noti_count": 0, "wish_country_count": 50, "country_code": "BR", "shipping_countries": [["BW", " Rep\u00fablica do Botswana"], ["AL", "Alb\u00e2nia"], ["DE", "Alemanha"], ["AD", "Andorra"], ["AI", "Anguilla"], ["AG", "Ant\u00edgua e Barbuda"], ["AR", "Argentina"], ["DZ", "Arg\u00e9lia"], ["AM", "Arm\u00eania"], ["AW", "Aruba"], ["SA", "Ar\u00e1bia Saudita"], ["AU", "Austr\u00e1lia"], ["AZ", "Azerbaij\u00e3o"], ["BS", "Bahamas"], ["BB", "Barbados"], ["BH", "Bar\u00e9m"], ["BZ", "Belize"], ["BM", "Bermuda"], ["BO", "Bol\u00edvia"], ["BR", "Brasil"], ["BG", "Bulg\u00e1ria"], ["BE", "B\u00e9lgica"], ["BA", "B\u00f3snia e Herzegovina"], ["KH", "Camboja"], ["CA", "Canad\u00e1"], ["QA", "Catar"], ["KZ", "Cazaquist\u00e3o"], ["CL", "Chile"], ["CO", "Col\u00f4mbia"], ["KR", "Coreia do Sul"], ["CR", "Costa Rica"], ["HR", "Cro\u00e1cia"], ["DK", "Dinamarca"], ["DM", "Dom\u00ednica"], ["EG", "Egito"], ["SV", "El Salvador"], ["AE", "Emirados \u00c1rabes Unidos"], ["EC", "Equador"], ["SK", "Eslov\u00e1quia"], ["SI", "Eslov\u00eania"], ["ES", "Espanha"], ["US", "Estados Unidos"], ["EE", "Est\u00f4nia"], ["FJ", "Fiji"], ["PH", "Filipinas"], ["FI", "Finl\u00e2ndia"], ["FR", "Fran\u00e7a"], ["GE", "Georgia"], ["GI", "Gibraltar"], ["GD", "Granada"], ["GR", "Gr\u00e9cia"], ["GT", "Guatemala"], ["NL", "Holanda"], ["HN", "Honduras"], ["HU", "Hungria"], ["KY", "Ilhas Cayman"], ["ID", "Indon\u00e9sia"], ["IE", "Irlanda"], ["IS", "Isl\u00e2ndia"], ["IL", "Israel"], ["IT", "It\u00e1lia"], ["JM", "Jamaica"], ["JP", "Jap\u00e3o"], ["JE", "Jersey"], ["JO", "Jord\u00e2nia"], ["KW", "Kuwait"], ["LV", "Let\u00f4nia"], ["LI", "Liechtenstein"], ["LT", "Litu\u00e2nia"], ["LU", "Luxemburgo"], ["MK", "Maced\u00f3nia do Norte"], ["MV", "Maldivas"], ["MT", "Malta"], ["MY", "Mal\u00e1sia"], ["MA", "Marrocos"], ["MD", "Moldova"], ["MN", "Mong\u00f3lia"], ["ME", "Montenegro"], ["MS", "Montserrat"], ["MX", "M\u00e9xico"], ["MC", "M\u00f4naco"], ["NA", "Nam\u00edbia"], ["NP", "Nepal"], ["NI", "Nicar\u00e1gua"], ["NG", "Nig\u00e9ria"], ["NU", "Niue"], ["NO", "Noruega"], ["NZ", "Nova Zel\u00e2ndia"], ["PA", "Panam\u00e1"], ["PK", "Paquist\u00e3o"], ["PY", "Paraguai"], ["PE", "Peru"], ["PL", "Pol\u00f4nia"], ["PR", "Porto Rico"], ["PT", "Portugal"], ["KG", "Quirguist\u00e3o"], ["KE", "Qu\u00eania"], ["GB", "Reino Unido (Gr\u00e3-Bretanha)"], ["SZ", "Reino da Suazil\u00e2ndia "], ["BT", "Reino do But\u00e3o"], ["GY", "Rep\u00fablica Cooperativa da Guiana"], ["DO", "Rep\u00fablica Dominicana"], ["GA", "Rep\u00fablica Gabonesa"], ["BD", "Rep\u00fablica Popular do Bangladeche"], ["CZ", "Rep\u00fablica Tcheca"], ["MM", "Rep\u00fablica da Uni\u00e3o de Myanmar"], ["ZM", "Rep\u00fablica da Z\u00e2mbia"], ["CY", "Rep\u00fablica de Chipre"], ["MU", "Rep\u00fablica de Maur\u00edcio"], ["GH", "Rep\u00fablica do Gana"], ["RO", "Rom\u00eania"], ["RU", "R\u00fassia"], ["SM", "San Marino"], ["SH", "Santa Helena"], ["LC", "Santa L\u00facia"], ["SC", "Seycheles"], ["SG", "Singapura"], ["LK", "Sri Lanka"], ["OM", "Sultanato de Om\u00e3"], ["SR", "Suriname"], ["SE", "Su\u00e9cia"], ["CH", "Su\u00ed\u00e7a"], ["RS", "S\u00e9rvia"], ["TH", "Tail\u00e2ndia"], ["TW", "Taiwan, China"], ["TO", "Tonga"], ["TT", "Trinidade e Tobago"], ["TN", "Tun\u00edsia"], ["TR", "Turquia"], ["UA", "Ucr\u00e2nia"], ["UY", "Uruguai"], ["UZ", "Uzbequist\u00e3o"], ["VE", "Venezuela"], ["VN", "Vietn\u00e3"], ["VG", "Virgin Islands, British"], ["VI", "Virgin Islands, U.S."], ["RE", "lha R\u00e9union"], ["ZA", "\u00c1frica do Sul"], ["AT", "\u00c1ustria"], ["IN", "\u00cdndia"]], "browser_type": "Chrome", "instagramSocialLink": "https://www.instagram.com/wish/", "userObj": null, "is_eu_country": false, "androidPackageName": "com.contextlogic.wish", "appNativeDownloadLinks": {"amazonapp": "http://www.amazon.com/ContextLogic-Inc-Wish-Shopping-Made/dp/B00AEAVSKC", "iosapp": "itms-apps://itunes.apple.com/us/app/wish-discover-products-youll/id530621395?mt=8", "androidinstantapp": "market://details?id=com.contextlogic.wish", "androidapp": "market://details?id=com.contextlogic.wish", "windowsapp": "https://www.microsoft.com/en-us/store/apps/wish-shopping-made-fun/9wzdncrcwb76"}, "login_source": null, "appDownloadLinks": {"amazonapp": "http://www.amazon.com/ContextLogic-Inc-Wish-Shopping-Made/dp/B00AEAVSKC", "iosapp": "http://itunes.apple.com/us/app/wish-discover-products-youll/id530621395?mt=8", "androidinstantapp": "https://play.google.com/store/apps/details?id=com.contextlogic.wish", "androidapp": "https://play.google.com/store/apps/details?id=com.contextlogic.wish", "windowsapp": "https://www.microsoft.com/en-us/store/apps/wish-shopping-made-fun/9wzdncrcwb76"}, "referrer": "", "securedTouchURL": "https://wish.securedtouch.com", "appTypePaths": {"1": "lyke", "2": "geek", "3": "mama", "4": "cute", "5": "wb001", "6": "whome", "7": "wlocal", "8": "joyful"}, "debug": false, "ml_info_country_code": null, "currency_code": "BRL", "fbSdkSource": "https://connect.facebook.net/en_US/sdk.js", "initial_data": {"logged_out_decider_keys": {"cozy_logged_out_decider_keys": {"policy_center": false, "seo_category_breadcrumb_on_productlegal_conformity_guarantee": null, "google_shopping_aggressive_login_wall": true, "web_seo_browse_homepage": true, "localized_browse_home_page": false, "web_secured_touch": true, "seo_product_reviews_page": null, "web_seo_browse_page_desktop": true, "seo_visitor_mobile_fast_page": true, "web_seo_browse_page_mobile": true, "warm_up_low_quality_product_image_cache": true, "seo_product_reviews_page_logged_out": null, "wish_local_web_show_discovery_method": true, "help_center_url": false, "uk_lockdown_banners": false, "wish_local_web_show_discovery_method_us": true, "qa_web_msite_free_gift_flow": false, "blue_brand_guidelines": true, "seo_js_redirect_oos_product": true, "seo_category_breadcrumb_on_product": true, "wish_local_web_show_discovery_method_ca": true, "wish_local_web_show_discovery_method_gb": true}}, "user_info": {"has_express_shipping": true, "is_guest_checkout_enabled": false, "tou_update_date": "09/03/2021", "can_show_sms_opt_in_for_google_shopping": false, "is_aer_user": false, "show_tou_update_modal": false, "blue_location_provided": false, "is_eu_country": false, "is_admin": null, "google_shopping_max_discount_in_localized_price": null, "country_code": "BR", "user_permissions": [], "can_show_discount_for_google_shopping": false, "google_shopping_one_tap_enabled": false, "ml_info_country_code": null, "google_shopping_enable_explaining_wish": true}, "sift_web_sdk_config": {"sift_account_id": "5f17442a1d4fd84fc101150b", "sift_beacon_key": "b1f4a4999e"}, "apple_web_sdk_config": {"redirect_uri": "https://www.wish.com", "client_id": "com.contextlogic.Wish.login"}, "logged_out_experiments": {"email_providers": ["gmail.com", "hotmail.com", "yahoo.com.br", "live.com", "outlook.com", "bol.com.br", "ig.com.br", "hotmail.com.br", "yahoo.com", "uol.com.br"], "should_use_new_logging_host": true, "is_european_country": false, "already_has_app": false, "cozy_logged_out_experiments": {"msite_fbm_integration": "ignore", "msite_apps_flyer_tracking_admin": "ignore", "blue_landing_page_value_props_br": "income", "blue_landing_page_value_props_us": "control", "blue_gather_hours_early_mx": "after-form", "blue_signup_redirect_mx": "ignore", "seo_product_reviews_page": "control", "seo_pdp_desktop_delay_strip_img_inset": "control", "blue_sms_whatsapp_update_global": "show", "blue_gather_hours_early_gb": "after-form", "blue_gather_hours_early_ca": "after-form", "blue_signup_multi_page_global": "ignore", "msite_guest_checkout_google": "ignore", "blue_signup_multi_page_ca": "ignore", "blue_gather_hours_early_global": "after-form", "blue_gather_hours_early_us": "after-form", "blue_gather_hours_early_fr": "ignore", "blue_signup_redirect_ca": "ignore", "seo_product_reviews_page_logged_out": "control", "seo_pdp_desktop_delay_strip_img": "show", "msite_gs_post_sign_up_install_prompt": "ignore", "msite_guest_checkout_facebook_admin": "ignore", "blue_signup_redirect_us": "ignore", "blue_gather_hours_early_br": "after-form", "fast_page_for_visitor_from_seo": "ignore", "blue_signup_multi_page_us": "ignore", "web_fbm_integration": "show", "seo_msite_pdp_bread_crumb": "show-v2", "blue_landing_page_value_props_mx": "income", "web_auth_page_product_viewable": "control", "blue_sms_whatsapp_update_ca": "show", "web_apple_signin": "show", "blue_signup_multi_page_mx": "ignore", "blue_landing_page_value_props": "ignore", "blue_signup_redirect_global": "ignore"}, "age_gender_spec": {"men_spec": "Masculino", "submit_button_spec": {"text": "Concluir", "text_color": "#FFFFFF", "text_bold": true, "corner_radius": 4, "max_lines": 1, "text_size": 16, "background_color": "#2FB7EC"}, "header_select_age_spec": {"text_bold": false, "text": "Quantos anos voc\u00ea tem?", "text_size": 18}, "spinner_default": {"text": "Selecione...", "text_size": 16}, "picker_title_spec": {"text": "Selecione a faixa et\u00e1ria", "text_size": 16}, "header_select_gender_spec": {"text_bold": false, "text": "Para quem voc\u00ea compra?", "text_size": 18}, "header_title_spec": {"text_bold": true, "text": "Fale um pouco mais sobre voc\u00ea!", "text_size": 26}, "skip_button_spec": {"text": "Pular", "text_bold": false, "corner_radius": 4, "max_lines": 1, "alpha": 1, "text_size": 12}, "use_text_buttons": true, "women_spec": "Feminino", "age_range_items": [{"text": "13 - 17", "id": 1}, {"text": "18 - 24", "id": 2}, {"text": "25 - 29", "id": 3}, {"text": "30 - 34", "id": 4}, {"text": "35 - 39", "id": 5}, {"text": "40 - 44", "id": 6}, {"text": "45 - 49", "id": 7}, {"text": "50 - 54", "id": 8}, {"text": "55 - 64", "id": 9}, {"text": "65+", "id": 10}]}, "experiments": {"android_ask_referral_source": "control", "android_email_relogin": "show", "android_onboarding_sea": "control", "mobile_ios_icloud_autologin_2": "show-v2", "ios_guest_checkout_2": "control", "ios_onboarding": "control", "ios_temp_free_gift_flow_2": "control", "mention_free_gift_in_signup_3": "show-v2", "mobile_existing_account": "show", "mobile_signup_covid_logo": "control", "android_tou_account_creation": "control", "ios_signup_slideshow_cpg": "control", "ios_fb_ad_click_temp_user": "control", "android_prefill_signup_email": "show", "ios_skip_button_in_signup_flow": "ignore", "ios_embrace": "control", "android_temp_user_flow": "control", "ios_recaptcha_v3": "control", "android_recaptcha_v2": "control", "ios_onboarding_v2": "control", "android_authentication_v2": "control", "ios_shape_integration": "control", "domino_sign_up_banner_br": "control", "ios_email_providing_v2": "control", "android_combine_onboarding": "control", "ios_auth_refactor": "show", "ios_free_gift_to_temp_user": "show", "domino_sign_up_banner_de": "control", "mobile_facebook_other_error": "show", "mobile_ios_icloud_autologin_delay": "show-v4", "android_onboarding_rerun": "control", "android_sign_up_localization": "control", "android_login_footer_tou": "control", "android_onboarding_global_v2": "control", "android_onboarding_global_v3": "control", "ios_fbm_integration_admin": "control", "ios_threat_metrix": "control", "domino_sign_up_banner_us": "control", "mobile_facebook_password": "show", "ios_login_footer_tou": "control", "android_slideshow_prices": "control"}, "country_code": "BR", "show_free_gift": true, "should_show_condensed_login_buttons": false}}, "locale": "pt", "billing_countries": [["BW", " Rep\u00fablica do Botswana"], ["AF", "Afeganist\u00e3o"], ["AL", "Alb\u00e2nia"], ["DE", "Alemanha"], ["AD", "Andorra"], ["AO", "Angola"], ["AI", "Anguilla"], ["AN", "Antilhas Holandesas"], ["AQ", "Ant\u00e1rtica"], ["AG", "Ant\u00edgua e Barbuda"], ["AR", "Argentina"], ["DZ", "Arg\u00e9lia"], ["AM", "Arm\u00eania"], ["AW", "Aruba"], ["SA", "Ar\u00e1bia Saudita"], ["AU", "Austr\u00e1lia"], ["AZ", "Azerbaij\u00e3o"], ["BS", "Bahamas"], ["BB", "Barbados"], ["BH", "Bar\u00e9m"], ["BZ", "Belize"], ["BM", "Bermuda"], ["BO", "Bol\u00edvia"], ["BR", "Brasil"], ["BG", "Bulg\u00e1ria"], ["BF", "Burkina Faso"], ["BE", "B\u00e9lgica"], ["BA", "B\u00f3snia e Herzegovina"], ["CV", "Cabo Verde"], ["CM", "Camar\u00f5es"], ["KH", "Camboja"], ["CA", "Canad\u00e1"], ["QA", "Catar"], ["KZ", "Cazaquist\u00e3o"], ["CL", "Chile"], ["CN", "China Continental"], ["CO", "Col\u00f4mbia"], ["CG", "Congo"], ["KR", "Coreia do Sul"], ["CR", "Costa Rica"], ["CI", "Costa do Marfim"], ["HR", "Cro\u00e1cia"], ["CU", "Cuba"], ["DK", "Dinamarca"], ["DM", "Dom\u00ednica"], ["EG", "Egito"], ["SV", "El Salvador"], ["AE", "Emirados \u00c1rabes Unidos"], ["EC", "Equador"], ["SK", "Eslov\u00e1quia"], ["SI", "Eslov\u00eania"], ["ES", "Espanha"], ["ER", "Estado da Eritreia"], ["BN", "Estado do Brunei Darussalam"], ["US", "Estados Unidos"], ["EE", "Est\u00f4nia"], ["ET", "Eti\u00f3pia"], ["FJ", "Fiji"], ["PH", "Filipinas"], ["FI", "Finl\u00e2ndia"], ["FR", "Fran\u00e7a"], ["FX", "Fran\u00e7a: Regi\u00e3o Metropolitana"], ["GE", "Georgia"], ["GS", "Ge\u00f3rgia do Sul e Ilhas Sandwich do Sul"], ["GI", "Gibraltar"], ["GD", "Granada"], ["GL", "Groenl\u00e2ndia"], ["GR", "Gr\u00e9cia"], ["GP", "Guadalupe"], ["GU", "Guam"], ["GT", "Guatemala"], ["GF", "Guiana Francesa"], ["GQ", "Guin\u00e9 Equatorial"], ["GW", "Guin\u00e9-Bissau"], ["HT", "Haiti"], ["NL", "Holanda"], ["HN", "Honduras"], ["HK", "Hong Kong, China"], ["HU", "Hungria"], ["BV", "Ilha Bouvet"], ["NF", "Ilha Norfolk"], ["CX", "Ilha do Natal"], ["KY", "Ilhas Cayman"], ["CC", "Ilhas Cocos (Keeling)"], ["CK", "Ilhas Cook"], ["FK", "Ilhas Falkland (Malvinas)"], ["FO", "Ilhas Faro\u00e9"], ["HM", "Ilhas Heard e McDonalds"], ["MP", "Ilhas Marianas do Norte"], ["MH", "Ilhas Marshall"], ["SB", "Ilhas Salom\u00e3o"], ["SJ", "Ilhas Svalbard E Jan Mayen"], ["TC", "Ilhas Turks e Caicos"], ["WF", "Ilhas Wallis e Futuna"], ["ID", "Indon\u00e9sia"], ["IQ", "Iraque"], ["IE", "Irlanda"], ["IS", "Isl\u00e2ndia"], ["IL", "Israel"], ["IT", "It\u00e1lia"], ["YE", "I\u00e9men"], ["JM", "Jamaica"], ["JP", "Jap\u00e3o"], ["JE", "Jersey"], ["JO", "Jord\u00e2nia"], ["KW", "Kuwait"], ["LA", "Laos"], ["LS", "Lesoto"], ["LV", "Let\u00f4nia"], ["LR", "Lib\u00e9ria"], ["LI", "Liechtenstein"], ["LT", "Litu\u00e2nia"], ["LU", "Luxemburgo"], ["LB", "L\u00edbano"], ["LY", "L\u00edbia"], ["MO", "Macau, China"], ["MK", "Maced\u00f3nia do Norte"], ["MG", "Madagascar"], ["MW", "Malaui"], ["MV", "Maldivas"], ["ML", "Mali"], ["MT", "Malta"], ["MY", "Mal\u00e1sia"], ["MA", "Marrocos"], ["MQ", "Martinica"], ["MR", "Maurit\u00e2nia"], ["YT", "Mayotte"], ["FM", "Micron\u00e9sia"], ["MD", "Moldova"], ["MN", "Mong\u00f3lia"], ["ME", "Montenegro"], ["MS", "Montserrat"], ["MZ", "Mo\u00e7ambique"], ["MX", "M\u00e9xico"], ["MC", "M\u00f4naco"], ["NA", "Nam\u00edbia"], ["NR", "Nauru"], ["NP", "Nepal"], ["NI", "Nicar\u00e1gua"], ["NG", "Nig\u00e9ria"], ["NU", "Niue"], ["NO", "Noruega"], ["NC", "Nova Caled\u00f4nia"], ["NZ", "Nova Zel\u00e2ndia"], ["PW", "Palau"], ["PA", "Panam\u00e1"], ["PG", "Papua Nova Guin\u00e9"], ["PK", "Paquist\u00e3o"], ["PY", "Paraguai"], ["PE", "Peru"], ["PN", "Pitcairn"], ["PF", "Polin\u00e9sia Francesa"], ["PL", "Pol\u00f4nia"], ["PR", "Porto Rico"], ["PT", "Portugal"], ["KG", "Quirguist\u00e3o"], ["KE", "Qu\u00eania"], ["GB", "Reino Unido (Gr\u00e3-Bretanha)"], ["SZ", "Reino da Suazil\u00e2ndia "], ["BT", "Reino do But\u00e3o"], ["CF", "Rep\u00fablica Centro-Africana"], ["GY", "Rep\u00fablica Cooperativa da Guiana"], ["TP", "Rep\u00fablica Democr\u00e1tica de Timor-Leste"], ["DO", "Rep\u00fablica Dominicana"], ["GA", "Rep\u00fablica Gabonesa"], ["IR", "Rep\u00fablica Isl\u00e2mica do Ir\u00e3"], ["KP", "Rep\u00fablica Popular Democr\u00e1tica da Coreia:"], ["BD", "Rep\u00fablica Popular do Bangladeche"], ["CZ", "Rep\u00fablica Tcheca"], ["BY", "Rep\u00fablica da Bielorr\u00fassia"], ["GN", "Rep\u00fablica da Guin\u00e9"], ["GM", "Rep\u00fablica da G\u00e2mbia"], ["MM", "Rep\u00fablica da Uni\u00e3o de Myanmar"], ["ZM", "Rep\u00fablica da Z\u00e2mbia"], ["CY", "Rep\u00fablica de Chipre"], ["MU", "Rep\u00fablica de Maur\u00edcio"], ["VU", "Rep\u00fablica de Vanuatu"], ["BJ", "Rep\u00fablica do Benim"], ["BI", "Rep\u00fablica do Bur\u00fandi"], ["TD", "Rep\u00fablica do Chad"], ["DJ", "Rep\u00fablica do Djibuti"], ["GH", "Rep\u00fablica do Gana"], ["KI", "Rep\u00fablica do Kiribati"], ["NE", "Rep\u00fablica do Niger"], ["RO", "Rom\u00eania"], ["RW", "Ruanda"], ["RU", "R\u00fassia"], ["EH", "Saara Ocidental"], ["WS", "Samoa"], ["AS", "Samoa Americana"], ["SM", "San Marino"], ["SH", "Santa Helena"], ["LC", "Santa L\u00facia"], ["SN", "Senegal"], ["SL", "Serra Leoa"], ["SC", "Seycheles"], ["SG", "Singapura"], ["SO", "Som\u00e1lia"], ["LK", "Sri Lanka"], ["SD", "Sud\u00e3o"], ["OM", "Sultanato de Om\u00e3"], ["SR", "Suriname"], ["SE", "Su\u00e9cia"], ["CH", "Su\u00ed\u00e7a"], ["KN", "S\u00e3o Cristov\u00e3o e Nevis"], ["PM", "S\u00e3o Pedro e Miguel\u00e3o"], ["ST", "S\u00e3o Tom\u00e9 e Pr\u00edncipe"], ["VC", "S\u00e3o Vicente e Granadinas"], ["RS", "S\u00e9rvia"], ["SY", "S\u00edria"], ["TH", "Tail\u00e2ndia"], ["TW", "Taiwan, China"], ["TJ", "Tajiquist\u00e3o"], ["TZ", "Tanz\u00e2nia"], ["TF", "Terras Austrais e Ant\u00e1rticas Francesas"], ["IO", "Territ\u00f3rio Brit\u00e2nico do Oceano \u00cdndico"], ["UM", "Territ\u00f3rios Insulares dos Estados Unidos"], ["TG", "Togo"], ["TO", "Tonga"], ["TK", "Toquelau"], ["TT", "Trindade e Tobago"], ["TN", "Tun\u00edsia"], ["TM", "Turquemenist\u00e3o"], ["TR", "Turquia"], ["TV", "Tuvalu"], ["UA", "Ucr\u00e2nia"], ["UG", "Uganda"], ["KM", "Uni\u00e3o das Comores"], ["UY", "Uruguai"], ["UZ", "Uzbequist\u00e3o"], ["VA", "Vaticano"], ["VE", "Venezuela"], ["VN", "Vietn\u00e3"], ["VG", "Virgin Islands, British"], ["VI", "Virgin Islands, U.S."], ["ZR", "Zaire"], ["ZW", "Zimb\u00e1bue"], ["RE", "lha R\u00e9union"], ["ZA", "\u00c1frica do Sul"], ["AT", "\u00c1ustria"], ["IN", "\u00cdndia"]], "states": {"CL": ["Antofagasta (2)", "Arica y Parinacota (15)", "Atacama (3)", "Ays\u00e9n del General Carlos Ib\u00e1\u00f1ez del Campo (11)", "Biob\u00edo (8)", "Coquimbo (4)", "La Araucan\u00eda (9)", "Libertador General Bernardo O'Higgins (6)", "Los Lagos (10)", "Los R\u00edos (14)", "Magallanes y de la Ant\u00e1rtica Chilena (12)", "Maule (7)", "Metropolitana de Santiago (13)", "Tarapac\u00e1 (1)", "Valpara\u00edso (5)", "\u00d1uble (16)"], "CA": ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"], "US": ["AA", "AE", "AP", "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"], "AU": ["Australian Capital Territory", "Jervis Bay Territory", "New South Wales", "Northern Territory", "Queensland", "South Australia", "Tasmania", "Victoria", "Western Australia"], "BR": ["Acre", "Alagoas", "Amap\u00e1", "Amazonas", "Bahia", "Cear\u00e1", "Distrito Federal", "Esp\u00edrito Santo", "Goi\u00e1s", "Maranh\u00e3o", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Paran\u00e1", "Para\u00edba", "Par\u00e1", "Pernambuco", "Piau\u00ed", "Rio Grande do Norte", "Rio Grande do Sul", "Rio de Janeiro", "Rond\u00f4nia", "Roraima", "Santa Catarina", "Sergipe", "S\u00e3o Paulo", "Tocantins"], "MX": ["Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoac\u00e1n", "Morelos", "M\u00e9xico", "Nayarit", "Nuevo Le\u00f3n", "Oaxaca", "Puebla", "Quer\u00e9taro", "Quintana Roo", "San Luis Potos\u00ed", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucat\u00e1n", "Zacatecas"]}, "appTypeDeepLink": "wish", "lemmings_url": "https://canary.contestimg.wish.com/api/webimage", "securedTouchApiKey": "d2lzaHNzZWN1cmVkdG91Y2g", "CONTEST_NAME_MAX_LENGTH": 300, "appTypeString": "wish", "noAutoLogin": null, "appSubdomain": null, "fb_permissions": ["email"], "appTypeDisplayName": "Wish", "msite_tracking_link": "https://dlwish.page.link/?apn=com.contextlogic.wish&isi=530621395&ibi=com.contextlogic.Wish", "can_handle_webview_download": true, "cookie": "", "appTitle": "Wish - Comprar ficou mais divertido", "fb_appid": "227791440613076", "google_shopping_max_discount_in_localized_price": null, "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/88.0.4298.0 Safari/537.36", "google_clientid": "283732120485-p0ggl88n8pp08jdrrs7no24143h62f2t.apps.googleusercontent.com", "sessionCookieName": "sweeper_session", "facebookSocialLink": "https://www.facebook.com/wish/", "sweeper_uuid": "25b9babfb38741eeb8b9f3ba21a3490c", "wish_user_count": "500 milh\u00f5es"};
-      
-      window.criteo_q = window.criteo_q || [];
+        window.__fb_app_id__ = '1425628467693547';
+        window.__static_url__ = 'https://mms-amp-static.magazineluiza.com.br/';
+        window.__is_active__ = true;
+        
     </script>
 
-  
     
-      
-      
-
-      
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/runtime~main.270d9b24710ad410a8eb.br.js"></script>
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/defaultVendors-node_modules_loadable_component_dist_loadable_esm_js-node_modules_sentry_brows-8b67f4.014dd5af4d9d38d1aeb1.br.js"></script>
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/main.d482042df5aeb6857a4b.br.js"></script>
-        
-      
-
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/pt_BR-raw-json.locale.0044d76140a512cfda51.br.js"></script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/cozy_shared_components_helpPage_utils_FormattedBody_tsx.237474f9500cfe0c16d2.br.js"></script>
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/cozy_shared_components_helpPage_faq_ContactUsPage_tsx-cozy_shared_components_helpPage_faq_Gif-a54333.ea0df804fe8337dd5cec.br.js"></script>
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/DesktopHelpPage.loadable.ac1f32774bcdcba2f75b.br.js"></script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/cozy_shared_components_RecaptchaContainer_tsx-cozy_shared_components_authentication_SignupPan-c7bb37.3df89168bdaf1fb58902.br.js"></script>
-        
-        
-          <script src="//main.cdn.wish.com/web/87ef66e90182/dist/cozy/AuthenticationPage.loadable.e369cf0a1ae3607258ef.br.js"></script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      
-
-        <script>
-          if (typeof window.addEventListener === 'function') {
-            window.addEventListener('load', function() {
-              var ld = document.createElement("script");
-              ld.src = "//static.criteo.net/js/ld/ld.js";
-              document.body.appendChild(ld);
-
-              
-                var googleAd = document.createElement("script");
-                googleAd.src = "//www.googleadservices.com/pagead/conversion_async.js";
-                document.body.appendChild(googleAd);
-              
-
-              var stripe = document.createElement("script");
-              stripe.src = "https://js.stripe.com/v2/";
-              document.body.appendChild(stripe);
-
-              
-                var stripeV3 = document.createElement("script");
-                stripeV3.src = "https://js.stripe.com/v3/";
-                document.body.appendChild(stripeV3);
-              
-
-              var braintreeData = document.createElement("script");
-              braintreeData.src = "https://js.braintreegateway.com/v1/braintree-data.js";
-              document.body.appendChild(braintreeData);
-            });
-          }
-        </script>
-        
-          <script type="text/javascript">
-            _linkedin_partner_id = "2241532";
-            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-          </script>
-          <script type="text/javascript">
-            (function(){var s = document.getElementsByTagName("script")[0];
-            var b = document.createElement("script");
-            b.type = "text/javascript";b.async = true;
-            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-            s.parentNode.insertBefore(b, s);})();
-          </script>
-          <noscript>
-            <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2241532&fmt=gif" />
-          </noscript>
-        
-      
+        <link rel="stylesheet" href="https://mms-amp-static.magazineluiza.com.br/css/cpld-8bbfd9723a79425b939f09db3a56c364.css">
     
-  
 
-<iframe id="CrossStorageClient-ecb62183-17a3-4023-84d4-85647ba048c9" src="https://hub.securedtouch.com/hub.html" style="width: 0px; height: 0px; border: none; display: none; position: absolute; top: -999px; left: -999px;"></iframe><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon652725545702"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon161595858846" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=17507481&amp;Ver=2&amp;mid=a7ca31de-1b62-43ed-8dc5-046938f7402f&amp;sid=0b4386409a2811ebb8b3c7d6d4ff0d3d&amp;vid=0b498c109a2811ebaf0b479afc5e7556&amp;vids=1&amp;pi=0&amp;lg=en-US&amp;sw=2048&amp;sh=1280&amp;sc=30&amp;tl=Pol%C3%ADtica%20de%20Privacidade%20%7C%20Wish&amp;kw=Wish,%20Wish.com,%20Comprar%20ficou%20mais%20divertido,%20Compras%20Online,%20Acess%C3%B3rios,%20Beb%C3%AA%20%26%20Infantil,%20Moda,%20Eletr%C3%B4nicos,%20Hobbies,%20Decora%C3%A7%C3%A3o,%20Celulares,%20Maquiagem%20%26%20Beleza,%20Sapatos,%20Carteiras%20%26%20Bolsas,%20Rel%C3%B3gios&amp;p=https%3A%2F%2Fwww.wish.com%2Fprivacy_policy&amp;r=&amp;lt=2796&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=290062"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon605258819614" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=17507481&amp;Ver=2&amp;mid=c06726fa-e7a4-4d8f-9ef9-1ffdcd76e035&amp;sid=0b4386409a2811ebb8b3c7d6d4ff0d3d&amp;vid=0b498c109a2811ebaf0b479afc5e7556&amp;vids=0&amp;page_path=%2Fprivacy_policy&amp;spa=Y&amp;p=https%3A%2F%2Fwww.wish.com%2Fprivacy_policy&amp;pi=0&amp;lg=en-US&amp;sw=2048&amp;sh=1280&amp;sc=30&amp;tl=Pol%C3%ADtica%20de%20Privacidade%20%7C%20Wish&amp;kw=Wish,%20Wish.com,%20Comprar%20ficou%20mais%20divertido,%20Compras%20Online,%20Acess%C3%B3rios,%20Beb%C3%AA%20%26%20Infantil,%20Moda,%20Eletr%C3%B4nicos,%20Hobbies,%20Decora%C3%A7%C3%A3o,%20Celulares,%20Maquiagem%20%26%20Beleza,%20Sapatos,%20Carteiras%20%26%20Bolsas,%20Rel%C3%B3gios&amp;r=https%3A%2F%2Fwww.wish.com%2Fprivacy_policy&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=377278"></div><script src="//static.criteo.net/js/ld/ld.js"></script><script src="//www.googleadservices.com/pagead/conversion_async.js"></script><script src="https://js.stripe.com/v2/"></script><script src="https://js.stripe.com/v3/"></script><script src="https://js.braintreegateway.com/v1/braintree-data.js"></script></body></html>
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cpld-8bbfd9723a79425b939f09db3a56c364" src="https://mms-amp-static.magazineluiza.com.br/js/cpld-8bbfd9723a79425b939f09db3a56c364.js"></script><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body class="">
+
+    <div class="loading">
+        <div class="overflay"></div>
+        <div id="spinner">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+            <span class="bar4"></span>
+            <span class="bar5"></span>
+            <span class="bar6"></span>
+            <span class="bar7"></span>
+            <span class="bar8"></span>
+        </div>
+    </div>
+
+    <div class="navigation "><div class="login-info">
+        <div class="content">
+
+            
+            <a href="#" id="login-redirect">
+                <span class="icon icon-profile my-space__profile-icon"></span>
+                <span class="greeting">
+                    <small>Olá.</small>
+                    <small>Entre ou cadastre-se</small>
+                </span>
+            </a>
+            
+        </div>
+        <div class="quick-access">
+            <div class="near-store">
+                <a href="/lojas-proximas">
+                    <span class="icon icon-stores"></span>
+                    <span class="text">Nossas lojas</span>
+                </a>
+            </div>
+            <div class="orders">
+                <a href="#" class="redirect" id="login-redirect-orders">
+                    <span class="icon icon-orders"></span>
+                    <span class="text">Meus pedidos</span>
+                </a>
+            </div>
+        </div>
+        <span class="menu-bar"></span>
+    </div>
+    <nav>
+        <ul class="menu-list subcategory-list">
+        </ul>
+        <ul class="menu-list category-list">
+            <ul class="special-list"></ul>
+            
+            <li class="cat-item active-submenu">
+                <a href="/celulares-e-smartphones/l/te/" class="redirect">
+                    <div class="menu-category te">
+                        <span class="icon icon-categ icon-TE">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Celulares e Smartphones</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/eletrodomesticos/l/ed/" class="redirect">
+                    <div class="menu-category ed">
+                        <span class="icon icon-categ icon-ED">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Eletrodomésticos</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/eletroportateis/l/ep/" class="redirect">
+                    <div class="menu-category ep">
+                        <span class="icon icon-categ icon-EP">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Eletroportáteis</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/informatica/l/in/" class="redirect">
+                    <div class="menu-category in">
+                        <span class="icon icon-categ icon-IN">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Informática</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/moveis-e-decoracao/l/mo/" class="redirect">
+                    <div class="menu-category mo">
+                        <span class="icon icon-categ icon-MO">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">Móveis e Decoração</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="cat-item active-submenu">
+                <a href="/tv-e-video/l/et/" class="redirect">
+                    <div class="menu-category et">
+                        <span class="icon icon-categ icon-ET">
+                            
+                        </span>
+                        <span class="name">
+                            <small class="menu-font">TV e Vídeo</small>
+                        </span>
+                        <span class="icon icon-right-arrow icon-arrow"></span>
+                    </div>
+                </a>
+            </li>
+            
+            
+                <li class="cat-item active-all-categories">
+                    <div class="menu-category">
+                        <span class="name">
+                            <small class="menu-font">Ver todos os departamentos</small>
+                        </span>
+                    </div>
+                </li>
+            
+        </ul>
+        <ul class="quick-access-list">
+            <li class="cat-item card-luiza">
+                <a href="https://especiais.magazineluiza.com.br/cartao-luiza/">
+                    <span class="icon icon-card icon-categ">
+                        <svg fill="none" height="24" viewBox="0 0 20 13" width="27" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z" fill="#FFF"></path>
+                                <path d="M19 0.945455C19 0.709091 18.8813 0.472727 18.7625 0.236364C18.525 0.118182 18.2875 0 18.05 0H0.95C0.7125 0 0.475 0.118182 0.2375 0.236364C0 0.354545 0 0.709091 0 0.945455V2.71818H19V0.945455ZM0.95 13H18.05C18.2875 13 18.525 12.8818 18.7625 12.7636C19 12.6455 19 12.2909 19 12.0545V4.96364H0V12.0545C0 12.2909 0.11875 12.5273 0.2375 12.7636C0.475 12.8818 0.7125 13 0.95 13ZM16.3875 9.1C16.8625 9.1 17.2188 9.33636 17.3375 9.80909C17.4563 10.2818 17.4562 10.7545 17.1 10.9909C16.7437 11.3455 16.2687 11.4636 15.9125 11.2273C15.5562 11.1091 15.2 10.6364 15.2 10.1636C15.2 9.92727 15.3188 9.57273 15.5563 9.33636C15.7938 9.21818 16.15 9.1 16.3875 9.1ZM1.54375 10.0455C1.54375 9.80909 1.6625 9.57273 1.78125 9.45455C1.9 9.33636 2.1375 9.21818 2.375 9.21818H6.76875C7.00625 9.21818 7.24375 9.33636 7.3625 9.45455C7.48125 9.57273 7.6 9.80909 7.6 10.0455V10.4C7.6 10.8727 7.24375 11.3455 6.76875 11.3455H2.375C1.9 11.3455 1.425 10.8727 1.54375 10.4V10.0455Z" fill="#8C8C8C"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="name">
+                        <small class="menu-font">Cartão Luiza</small>
+                        <small class="subtitle">Peça já o seu ou acesse<br>a sua fatura</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item one-click-buy">
+                <a href="/configurar-conta">
+                    <span class="icon icon-cart icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Configuração de compra com 1-clique</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item sac">
+                <a href="/outros-ddds">
+                    <span class="icon icon-sac icon-categ"></span>
+                    <span class="name menu-font">
+                        <small class="menu-font">Compre pelo televendas</small>
+                        <small class="subtitle">São Paulo e Grande São Paulo<br>(11) 3508-9900</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item">
+                <a href="/amp/sac" class="redirect">
+                    <span class="icon icon-question icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Central de atendimento</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item">
+                <a href="/s/regulamentos">
+                    <span class="icon icon-rules icon-categ"></span>
+                    <span class="name">
+                        <small class="menu-font">Regulamentos</small>
+                    </span>
+                </a>
+            </li>
+            <li class="cat-item logout hide">
+                <div>
+                    <span class="name">
+                        <small class="menu-font">Não é ? Sair</small>
+                    </span>
+                
+            </div></li>
+            <span class="bottom"></span>
+        </ul>
+    </nav>
+</div>
+
+    <div class="container ">
+        <div class="cover hide">
+            <div class="overlay"></div>
+        </div>
+        <span class="scroll-top">
+            <small class="icon icon-up-arrow"></small>
+        </span>
+        <!-- Header -->
+        <div id="header" class="row clearfix with-search">
+            <div id="header-content" class="row">
+                <div class="top row">
+                    <a href="/">
+                        
+                            <h1>
+                                <span class="icon-magalu redirect">
+                                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="87" height="19" viewBox="0 0 23.018749 5.0270836">
+  <defs id="defs2"></defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="3.9773503" inkscape:cx="81.427208" inkscape:cy="23.486846" inkscape:document-units="mm" inkscape:current-layer="layer1" showgrid="false" inkscape:window-width="1299" inkscape:window-height="713" inkscape:window-x="67" inkscape:window-y="27" inkscape:window-maximized="1" units="px"></sodipodi:namedview>
+  <metadata id="metadata5">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g inkscape:label="Camada 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-291.9729)">
+    <path style="fill:#FFFFFF;stroke-width:0.27197146" d="" id="path3817" inkscape:connector-curvature="0"></path>
+    <path style="fill:#FFFFFF;stroke-width:0.27197146" d="" id="path3815" inkscape:connector-curvature="0"></path>
+    <path style="fill:#FFFFFF;stroke-width:0.02248656" d="m 9.982509,296.98799 c -0.3775337,-0.0341 -0.6622187,-0.10757 -0.9399196,-0.24246 -0.1813911,-0.0881 -0.2293829,-0.13878 -0.2293829,-0.24216 0,-0.0763 0.1513748,-0.40697 0.239036,-0.52224 0.07088,-0.0932 0.1670791,-0.0969 0.369846,-0.0142 0.2991225,0.12203 0.7456635,0.1754 1.0247015,0.12249 0.502018,-0.0952 0.77248,-0.43598 0.77248,-0.9733 v -0.13365 l -0.1293,0.11565 c -0.28133,0.25163 -0.674997,0.37722 -1.1070546,0.3532 -0.260859,-0.0145 -0.4153273,-0.0535 -0.6187868,-0.15609 -0.6015734,-0.30343 -0.9293768,-1.00371 -0.8427649,-1.80039 0.099897,-0.9189 0.7412271,-1.52196 1.6185513,-1.52196 0.377805,0 0.724222,0.1184 0.987515,0.33751 l 0.131508,0.10944 0.02611,-0.13265 c 0.04127,-0.20977 0.07161,-0.22436 0.466723,-0.22436 0.315312,0 0.325554,0.002 0.380034,0.056 l 0.05599,0.056 -0.0065,1.72607 -0.0065,1.72607 -0.05269,0.15741 c -0.15886,0.47454 -0.424701,0.78131 -0.869016,1.00279 -0.344115,0.17153 -0.799061,0.24345 -1.2704924,0.20083 z m 0.737156,-2.46204 c 0.180562,-0.0816 0.36244,-0.27219 0.434568,-0.4554 0.06719,-0.17069 0.07239,-0.52086 0.01026,-0.69224 -0.130067,-0.35879 -0.437478,-0.5475 -0.852075,-0.52306 -0.3441422,0.0203 -0.5809763,0.16319 -0.7121843,0.42971 -0.1737071,0.35285 -0.1310658,0.78898 0.1024004,1.0474 0.1741067,0.19272 0.3867319,0.27477 0.6846339,0.2642 0.152137,-0.005 0.219958,-0.0198 0.332397,-0.0706 z m -5.0169073,1.03224 c -0.5590365,-0.12558 -0.9847389,-0.55712 -1.1632856,-1.17923 -0.061911,-0.21572 -0.084962,-0.73117 -0.044054,-0.98511 0.079849,-0.49566 0.3589761,-0.93773 0.7465708,-1.18236 0.5625076,-0.35504 1.3834578,-0.30657 1.8554626,0.10955 l 0.1168958,0.10305 0.014097,-0.085 c 0.042816,-0.25828 0.073415,-0.27619 0.4716722,-0.27619 0.3585401,0 0.399074,0.0141 0.4374883,0.15244 0.031795,0.11447 0.031795,3.02107 0,3.13555 -0.038085,0.13713 -0.08043,0.15245 -0.4214821,0.15245 -0.165023,0 -0.3195119,-0.0104 -0.3433053,-0.0231 -0.05842,-0.0313 -0.103532,-0.12405 -0.1228087,-0.25261 -0.0088,-0.0586 -0.02077,-0.10651 -0.026657,-0.10651 -0.00587,0 -0.062911,0.046 -0.1267445,0.10232 -0.1308872,0.1154 -0.4142348,0.26444 -0.5995207,0.31535 -0.1855702,0.051 -0.6080193,0.0614 -0.7943339,0.0195 z m 0.8875327,-0.88708 c 0.3426057,-0.10822 0.5486958,-0.4021 0.5754698,-0.82058 0.027798,-0.43448 -0.1485194,-0.77188 -0.4860767,-0.93016 -0.1114427,-0.0523 -0.1543293,-0.0593 -0.3629575,-0.0593 -0.2219219,0 -0.2458662,0.005 -0.3864271,0.0738 -0.2660002,0.13095 -0.4081849,0.34017 -0.46917,0.69037 -0.044696,0.25666 0.022908,0.56247 0.1721106,0.77859 0.1807655,0.26184 0.6019231,0.37945 0.9570509,0.26726 z m 7.1924476,0.88861 c -0.25858,-0.0581 -0.504401,-0.19783 -0.710316,-0.40375 -0.153588,-0.15359 -0.200739,-0.21967 -0.298167,-0.41789 -0.133773,-0.27216 -0.174638,-0.41538 -0.210324,-0.7372 -0.04404,-0.39715 0.02721,-0.81618 0.195723,-1.15102 0.270183,-0.53686 0.733143,-0.83798 1.338302,-0.87046 0.420596,-0.0226 0.772988,0.0856 1.071303,0.329 l 0.138514,0.11299 0.01598,-0.11627 c 0.01152,-0.0838 0.0336,-0.13387 0.079,-0.17927 l 0.06301,-0.063 h 0.32472 c 0.320862,0 0.325422,7.9e-4 0.384,0.0593 l 0.05928,0.0593 v 1.58371 c 0,1.16092 -0.007,1.59683 -0.02616,1.63284 -0.05073,0.0952 -0.08442,0.10387 -0.408438,0.10461 l -0.31092,8e-4 -0.0638,-0.0638 c -0.04473,-0.0447 -0.0686,-0.0968 -0.07984,-0.17427 -0.0088,-0.0608 -0.0204,-0.11804 -0.02571,-0.1273 -0.0053,-0.009 -0.07234,0.0342 -0.14892,0.0966 -0.161403,0.13145 -0.396334,0.25275 -0.588967,0.30409 -0.191201,0.051 -0.615579,0.0622 -0.798272,0.0211 z m 0.983435,-0.92085 c 0.169338,-0.0765 0.32399,-0.2332 0.400127,-0.40536 0.149654,-0.33839 0.117887,-0.77092 -0.07748,-1.05487 -0.192488,-0.27978 -0.602562,-0.39875 -0.976415,-0.28327 -0.426297,0.13167 -0.665531,0.64439 -0.543056,1.16387 0.07795,0.33061 0.271251,0.54284 0.571582,0.62755 0.172541,0.0487 0.460309,0.0266 0.62524,-0.0479 z m 5.858112,0.92026 c -0.359398,-0.0781 -0.667266,-0.32337 -0.834489,-0.6649 -0.186172,-0.38023 -0.209875,-0.59302 -0.201004,-1.80459 l 0.0067,-0.91829 0.06309,-0.0543 c 0.061,-0.0525 0.07499,-0.0542 0.423099,-0.0542 0.202382,0 0.378829,0.01 0.40299,0.023 0.09693,0.0519 0.0997,0.0794 0.112173,1.11257 0.0137,1.13416 0.0118,1.12233 0.212919,1.33003 0.08573,0.0885 0.141437,0.12463 0.234568,0.15196 0.155218,0.0456 0.320327,0.0456 0.473475,1.1e-4 0.16378,-0.0486 0.353783,-0.23699 0.429125,-0.42541 0.05322,-0.13309 0.05403,-0.14678 0.0655,-1.10927 l 0.01161,-0.97452 0.0631,-0.0542 c 0.061,-0.0524 0.07502,-0.0542 0.423099,-0.0542 0.214883,0 0.37831,0.01 0.405408,0.0243 0.107984,0.0578 0.109052,0.0744 0.109052,1.69592 0,1.62154 -10e-4,1.63814 -0.109052,1.69593 -0.02576,0.0138 -0.170323,0.0243 -0.334198,0.0243 -0.314009,0 -0.360498,-0.0145 -0.419954,-0.13067 -0.01703,-0.0333 -0.03809,-0.10348 -0.04682,-0.15604 -0.0087,-0.0526 -0.01944,-0.0956 -0.02383,-0.0956 -0.0044,0 -0.06135,0.0512 -0.126614,0.11378 -0.303334,0.29084 -0.866589,0.42717 -1.339969,0.32434 z m -20.56428389,-0.0839 c -0.02035747,-0.0155 -0.04646326,-0.0536 -0.05801087,-0.0848 -0.0267847,-0.0724 0.22496508,-3.16029 0.26352239,-3.23234 0.0144751,-0.027 0.0456586,-0.0595 0.0692973,-0.0722 0.0681103,-0.0365 0.66543267,-0.0294 0.73916287,0.009 0.062725,0.0324 0.1180819,0.12637 0.7345986,1.24646 0.2149752,0.39056 0.2693658,0.47429 0.2921483,0.44973 0.015396,-0.0166 0.2328201,-0.37929 0.4831629,-0.80597 0.2503423,-0.42668 0.4893356,-0.80868 0.5310959,-0.84887 l 0.075928,-0.0731 h 0.3274594 c 0.3219768,0 0.3283474,0.001 0.3805134,0.0572 0.037376,0.0403 0.057129,0.0952 0.066842,0.18552 0.022651,0.21073 0.2377416,2.93983 0.2377416,3.01651 0,0.0452 -0.019973,0.0908 -0.055195,0.12598 -0.054165,0.0542 -0.062147,0.0552 -0.4282665,0.0552 -0.3601796,0 -0.3748746,-0.002 -0.4252103,-0.0521 -0.065587,-0.0656 -0.071784,-0.12744 -0.1051697,-1.0497 -0.014102,-0.38958 -0.032083,-0.73559 -0.039956,-0.7689 -0.012589,-0.0533 -0.054673,0.009 -0.3492992,0.51391 -0.2480035,0.42531 -0.3531024,0.58554 -0.4047586,0.61703 -0.1014711,0.0619 -0.5766979,0.0625 -0.6777127,8e-4 -0.051377,-0.0313 -0.1424994,-0.17612 -0.3683853,-0.58534 -0.1650675,-0.29904 -0.3029579,-0.54083 -0.3064233,-0.53731 -0.00347,0.004 -0.027852,0.36561 -0.0541925,0.80466 -0.0263411,0.43905 -0.0531928,0.83229 -0.0596713,0.87387 -0.006477,0.0416 -0.0359456,0.0998 -0.065483,0.12929 -0.0520977,0.0521 -0.0643663,0.0537 -0.4102133,0.0537 -0.25047496,0 -0.36751857,-0.008 -0.39352455,-0.0281 z m 17.51498189,-0.008 c -0.313763,-0.076 -0.616307,-0.31212 -0.743046,-0.58003 -0.13183,-0.27867 -0.133234,-0.29313 -0.142933,-1.47413 -0.0049,-0.59902 -0.0024,-1.12381 0.0055,-1.16619 0.0079,-0.0424 0.03862,-0.10124 0.06816,-0.13078 0.05239,-0.0524 0.06305,-0.0537 0.434508,-0.0537 0.341326,0 0.386306,0.004 0.433888,0.043 l 0.05309,0.043 0.01192,1.05327 c 0.01291,1.13961 0.01163,1.12815 0.140625,1.26188 0.118971,0.12333 0.220196,0.13992 0.853912,0.13992 h 0.559811 l 0.06573,0.0657 0.06573,0.0657 v 0.31827 0.31827 l -0.06573,0.0657 -0.06573,0.0657 -0.771892,-0.002 c -0.583864,-10e-4 -0.803968,-0.01 -0.903557,-0.0337 z" id="path3848" inkscape:connector-curvature="0"></path>
+  </g>
+</svg>
+
+                                </span>
+                                <span class="hidden-text-indent">Magazine Luiza</span>
+                            </h1>
+                        
+                    </a>
+                    
+                        <div id="support-toggle" style="display: none;">
+                            <a class="icon-back redirect"></a>
+                            <span class="seller-name"></span>
+                        </div>
+                        <div id="menu-toggle">
+                            <span class="icon icon-drawer"></span>
+                            <span class="hidden-text-indent">Menu</span>
+                        </div>
+                        <div id="search-toggle" class="hide">
+                            <p>
+                                <span class="icon icon-search"></span>
+                                <span class="hidden-text-indent">Busca</span>
+                            </p>
+                        </div>
+                        <div id="cart">
+                            <a class="redirect" href="https://sacolamobile.magazineluiza.com.br/#/">
+                                <span class="icon icon-cart"></span>
+                                <span class="hidden-text-indent">Carrinho</span>
+
+                                <sup>
+                                    0
+                                </sup>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div id="search" class="row clearfix with-search">
+                    <form accept-charset="utf-8">
+                        <span class="cancel">cancelar</span>
+                        <div class="content-search-input">
+                            <input type="search" id="id_search" name="search" value="" placeholder="Encontre seu produto" autocomplete="off" autocorrect="off" autocapitalize="none">
+                            <span for="id_search" class="icon icon-search"></span>
+                        </div>
+                    </form>
+                </div>
+                <span class="color-bar row"></span>
+            </div>
+        </div>
+
+        <div id="main" role="main">
+
+            
+                <div id="banner" class="row">
+                </div>
+            
+
+
+            <div id="category-name" class="category-name row">
+                
+                
+            </div>
+
+            
+                <div id="carousel-holder" class="row">
+                </div>
+            
+
+            <div class="row info">
+                <p>
+                    <span></span>
+                </p>
+            </div>
+
+
+            <!-- Category list -->
+            
+                <nav class="row list">
+                    <ul class="clearself">
+                    </ul>
+                </nav>
+            
+
+
+            <!-- Content holder -->
+            <div id="content" class="row">
+                
+    
+        <style>
+.privacy-div{
+  padding: 10px
+}
+.privacy-div h2,
+.privacy-div h6,
+.privacy-div p {
+  padding: 10px;
+}
+</style>
+<div class="privacy-div">
+<h2>Política de Privacidade</h2>
+<p>
+Este documento, denominado Política de Privacidade, possui finalidade de estabelecer as regras sobre o uso, armazenamento e tratamento dos dados e informações coletadas dos usuários no site magazineluiza.com.
+</p><br><p>
+1. Definições: para fins desta Política de Privacidade, aplicam-se as seguintes definições: designa o site magazineluiza.com. Magazine Luiza: Magazine Luiza S/A, pessoa jurídica de direito privado, com sede à Rua Voluntários da Franca, 1465 – Centro – Franca – SP, CEP 14400-490 e inscrita no CNPJ sob o nº 47.960.950/0001-21. Cookies: arquivos enviados pelo servidor do site para o computador do Usuário, com a finalidade de identificar o computador e obter dados de acesso, como páginas navegadas ou links clicados, permitindo, desta forma, personalizar a utilização do site, de acordo com o seu perfil; IP: abreviatura de Internet Protocol. É um conjunto de números que identifica o computador do Usuário na Internet; Logs: registros de atividades do Usuário efetuadas no site; Session ID: identificação da sessão do Usuário no processo de inscrição ou quando utilizado de alguma forma o site. Usuário: todo aquele que passar a usar o site. 
+</p><p>
+2. Obtenção dos dados e informações: os dados e informações serão obtidos quando o Usuário: 1. Passar a utilizar o site; 2. Interagir com as diversas ferramentas existentes no site, fornecendo as informações voluntariamente; ou 3. Entrar em contato através dos canais de comunicação disponíveis no site. 
+</p><p>
+3. Armazenamento dos Dados e Informações: todos os dados e informações coletados dos Usuários serão incorporados ao banco de dados do site, sendo seu responsável e proprietário o Magazine Luiza. Os dados e informações coletados estarão armazenados em ambiente seguro, observado o estado da técnica disponível, e somente poderão ser acessados por pessoas qualificadas e autorizadas pelo Magazine Luiza. Além disso, o Magazine Luiza afirma que não compartilhará, venderá ou apresentará os dados dos Usuários para terceiros. Considerando que nenhum sistema de segurança é absolutamente seguro, o Magazine Luiza se exime de quaisquer responsabilidades por eventuais danos e/ou prejuízos decorrentes de falhas, vírus ou invasões do banco de dados do site, salvo nos casos de dolo ou culpa pela mesma. O Usuário é o proprietário dos dados e está apto a adicionar, excluir ou modificar quaisquer informações que estiverem ligadas ao seu perfil de usuário no Magazine Luiza. 
+</p><p>
+4. Uso dos Dados e Informações: os dados e informações coletados dos Usuários poderão ser utilizados para as seguintes finalidades: 1. Efetuar qualquer comunicação resultante de atividade do próprio site ou a identificação do respectivo destinatário; 2. Responder a eventuais dúvidas e solicitações do Usuário; 3. Fornecer acesso à área restrita do site ou suas funcionalidades exclusivas; 4. Cumprimento de ordem legal ou judicial; 5. Constituir, defender ou exercer regularmente direitos em âmbito judicial ou administrativo; 6. Elaborar estatísticas gerais, para identificação do perfil dos Usuários e desenvolvimento de campanhas do Magazine Luiza; 7. Garantir a segurança dos Usuários; 8. Manter atualizados os cadastros dos Usuários para fins de contato autorizado a ser feito por telefone, correio eletrônico, SMS, mala-direta ou por outros meios de comunicação; 9. Informar a respeito de novidades, promoções e eventos do Magazine Luiza e seus parceiros comerciais. 
+</p><p>
+4.1. Sobre os e-mails: serão enviados e-mails diariamente com ofertas para os clientes cadastrados. Os e-mails enviados pelo Magazine Luiza não contêm anexos para serem baixados e tampouco solicitam dados dos usuários. 
+</p><p>
+4.2. Caso o Cliente não queira mais receber e-mails do Magazine Luiza, ele deve clicar no link de descadastramento presente em todos os e-mails enviados. 
+</p><p>
+5. Do Registro de Atividades: o Magazine Luiza poderá registrar as atividades efetuadas pelo Usuário no site, por meio de logs, incluindo: 1. Endereço IP do Usuário; 2. Ações efetuadas pelo Usuário no site; 3. Páginas acessadas pelo Usuário; 4. Datas e horários de cada ação e de acesso a cada funcionalidade do site; 5. Session ID do Usuário, quando aplicável. Os registros mencionados poderão ser utilizados pelo Magazine Luiza em casos de investigação de fraudes ou de alterações indevidas em seus sistemas e cadastros. 
+</p><p>
+6. Cookies: o site poderá fazer o uso de cookies, cabendo ao Usuário configurar o seu navegador de Internet, caso deseje bloqueá-los. Nesta hipótese, algumas funcionalidades do site poderão ser limitadas. 
+</p><p>
+7. Recomendações: a partir do uso de um cookie que identifica a navegação do Usuário, o site faz a recomendação de produtos. Essa recomendação varia conforme o Usuário e seu comportamento dentro do site, sendo avaliado, por exemplo, se houve apenas navegação ou também compra, quais itens foram vistos, pesquisados ou comprados por ele e outros Usuários em situações de navegação semelhantes. Considerando que essa recomendação é gerada a partir de algoritmos, sua precisão pode não ser exata, porém visa sugerir produtos que sejam do interesse do Usuário, sem que este tenha qualquer obrigatoriedade de adquiri-los. 
+</p><p>
+8. Disposições Gerais: as disposições constantes desta Política de Privacidade poderão ser atualizadas ou modificadas a qualquer momento, cabendo ao Usuário verificá-la sempre que efetuar o acesso ao site. O Usuário deverá entrar em contato em caso de qualquer dúvida com relação às disposições constantes desta Política de Privacidade e Uso, elegendo um destes meios de contato: telefone 0800-34-4000 ou formulário de contato. 
+</p><p>
+9. Lei Aplicável e Jurisdição: a presente Política de Privacidade será interpretada segundo a legislação brasileira, no idioma português, sendo eleito o Foro da Comarca de São Paulo para dirimir qualquer litígio, questão ou dúvida superveniente, com expressa renúncia de qualquer outro, por mais privilegiado que seja. 
+</p><p>
+10. Cadastro: para participar e usufruir do site, além de ter a idade mínima de 18 (dezoito) anos, o Cliente deverá fornecer na ocasião do cadastro as seguintes informações: nome completo, apelido, CPF, RG, endereço completo, telefone fixo, data de nascimento, e-mail, além de escolher uma senha. 
+</p><p>
+11. A regra de desconto varia de acordo com a categoria.
+Categorias com 5% de desconto: Móveis, Colchões, Utensílios Domésticos, Relógios, Esporte e Lazer, Ferramentas e Segurança, Perfumaria
+Categorias com 10% de desconto: Informática e Acessórios, Ar Condicionado, Eletrodomésticos, Eletroportáteis, Beleza e Saúde, Bebês, Brinquedos, Casa e Jardim, Tablets, Telefonia Fixa, Celulares e Telefonia, TV e Video, Games, Áudio e Auto
+</p>
+<h6>Atualização: 23 de Julho de 2015. </h6>
+<p>
+MAGAZINE LUIZA S/A
+</p>
+</div>
+    
+
+            </div>
+
+            
+                <!-- Footer -->
+                <footer class="row">
+                    <div class="last-viewed">
+                        <a href="/ultimos-vistos">
+                            <span class="title">Últimos produtos vistos</span>
+                            <span class="icon icon-right-arrow"></span>
+                        </a>
+                    </div>
+                    <span class="color-bar row"></span>
+                    <div class="ml-info-box">
+                        <div class="desktop">
+                            <span>
+                                Preços e condições de pagamento exclusivos para compras via internet e podem variar nas lojas físicas.<br>
+                                Ofertas válidas até o término de nossos estoques para internet. Vendas sujeitas à análise e confirmação de dados.
+                            </span>
+                        </div>
+                        <div class="general">
+                            <span>
+                                Rodovia dos Bandeirantes KM 68,760 - Rio Abaixo - CEP:13213-902 - Louveira/SP<br>
+                                CNPJ: 47960950/0449-27 <br>
+                                Endereço para correspondência: Rua do Comércio, 1924 - Rio Abaixo - CEP:14400-660 - Franca/SP
+                                <p class="clearfix">
+                                    <a href="https://www.magazineluiza.com.br/central-de-atendimento/fale-conosco/" target="_blank" class="redirect">www.magazineluiza.com.br/formulariocontato</a>
+                                </p>
+                                ® 2017 Magazine Luiza
+                                <p class="clearfix">
+                                    <a href="mailto:atendimento.site@magazineluiza.com.br" class="redirect">atendimento.site@magazineluiza.com.br</a>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            
+        </div>
+
+    </div>
+
+    <div id="theme-list-styles"></div>
+    
+        <script async="" data-main="https://mms-amp-static.magazineluiza.com.br/js/cpld-8bbfd9723a79425b939f09db3a56c364" src="https://mms-amp-static.magazineluiza.com.br/js/libs/require/require.js"></script>
+    
+
+    <script async="" src="https://mms-amp-static.magazineluiza.com.br/js/libs/modernizr.js"></script>
+
+
+
+
+­<style>@font-face {font-family:"font";src:url("https://")}@media (touch-enabled),(-webkit-touch-enabled),(-moz-touch-enabled),(-o-touch-enabled),(-ms-touch-enabled),(modernizr){#touch{top:9px;position:absolute}}@media (transform-3d),(-webkit-transform-3d),(-moz-transform-3d),(-o-transform-3d),(-ms-transform-3d),(modernizr){#csstransforms3d{left:9px;position:absolute;height:3px;}}#generatedcontent:after{content:":)";visibility:hidden}</style><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

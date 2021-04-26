@@ -1,928 +1,255 @@
-<!DOCTYPE html><html class="no-js" lang=""><head>
-	<meta charset="utf-8">
-	<title>Playgendary</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<div class="tr">
-	<div class="td"></div>
-	<div class="td"></div>
-	<div class="td"></div>
-	<div class="td"></div>
-	<div class="td full-screen"></div>
-	<div class="td full-screen"></div>
-	<div class="td full-screen"></div>
-	<div class="td full-screen"></div>
-</div>
-<div id="myModal" class="modal">
-	<div class="modal-content">
-		<span class="close">×</span>
-		<p class="invalid-token"></p>
-		<div class="modal-wrapper">
-			<p>WARNING! If you confirm deletion of ALL YOUR DATA, including GAME PROGRESS and PURCHASES will be deleted. Once
-				completed, this cannot be undone.
-			</p>
-			<div class="modal-btn">
-				<button class="btn summary">
-                  <span>
-                  Request a summary of personal data
-                  </span>
-				</button>
-				<button class="btn erased">
-                  <span>
-                  Request personal data to be erased
-                  </span>
-				</button>
-				<button class="btn withdrawal">
-                  <span>
-                  Do Not Show Personalized Ads/Opt-out of sell
-                  </span>
-				</button>
-				<button class="btn renouncement">
-                  <span class="renouncement">
-                  Cancel
-                  </span>
-				</button>
-			</div>
-			<div class="personal-settings">
-				<p class="app-name"></p>
-				<p class="erase-status"></p>
-				<p class="data-status"></p>
-			</div>
-			<div class="withdrawal-settings">
-				<input type="radio" id="targeting" name="targeting" value="targeting">
-				<label for="targeting">Targeting</label><br>
-				<input type="radio" id="not-targeting" name="targeting" value="not-targeting">
-				<label for="not-targeting">Not Targeting</label><br>
-			</div>
-			<div class="erased-settings">
-				<p class="erased-status"></p>
-			</div>
-		</div>
-	</div>
-</div>
-<header>
-	<a href="https://www.playgendary.com">
-		<svg viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="_3rkSf">
-			<rect width="240" height="40" fill="white"></rect>
-			<path d="M43.4961 10.0496V25.6242H49.7461V30.0295H38.4961V10.0496H43.4961Z" fill="#F23D3D"></path>
-			<path d="M63.2296 22.5537L60.9961 15.8522L58.7626 22.5537H63.2296ZM64.5494 26.5319H57.4428L56.3007 30.0295H50.9961L58.2804 10.0496H63.7118L70.9961 30.0295H65.6915L64.5494 26.5319Z" fill="#F23D3D"></path>
-			<path d="M176.98 22.5537L174.746 15.8522L172.513 22.5537H176.98ZM178.299 26.5319H171.193L170.051 30.0295H164.746L172.03 10.0496H177.462L184.746 30.0295H179.442L178.299 26.5319Z" fill="#F23D3D"></path>
-			<path d="M120.996 14.3303H114.746V17.6944H120.655V22.1265H114.746V25.5974H120.996V30.0295H109.746V10.0496H120.996V14.3303Z" fill="#F23D3D"></path>
-			<path d="M76.0237 20.3874L69.1211 10.0496H74.9946L78.5086 15.4102L81.9976 10.0496H87.8711L80.9434 20.3874V30.0741H76.0237V20.3874Z" fill="#F23D3D"></path>
-			<path d="M208.524 20.3644L201.621 10.0496H207.495L211.009 15.3983L214.498 10.0496H220.371L213.443 20.3644V30.0295H208.524V20.3644Z" fill="#F23D3D"></path>
-			<path d="M124.746 30.0295V10.0496H129.746L138.496 22.2066V10.0496H143.496V30.0295H138.496L129.746 17.7211V30.0295H124.746Z" fill="#F23D3D"></path>
-			<path d="M152.246 25.5974H153.271C154.121 25.5974 154.88 25.455 155.546 25.1702C156.214 24.8855 156.771 24.4938 157.221 23.9955C157.689 23.4971 158.039 22.9097 158.271 22.2333C158.521 21.5391 158.646 20.7827 158.646 19.9639C158.646 19.1629 158.521 18.4153 158.271 17.7211C158.021 17.027 157.664 16.4307 157.196 15.9323C156.746 15.4339 156.189 15.0423 155.521 14.7575C154.855 14.4727 154.105 14.3303 153.271 14.3303H152.246V25.5974ZM147.246 10.0496H154.496C155.78 10.0496 156.98 10.1742 158.096 10.7259C159.23 11.2777 160.214 12.0164 161.046 12.942C161.896 13.8498 162.564 14.9177 163.046 16.1459C163.53 17.3563 163.771 18.6289 163.771 19.9639C163.771 21.2811 163.53 22.5537 163.046 23.7819C162.58 24.9923 161.921 26.0603 161.071 26.9858C160.239 27.9113 159.255 28.6501 158.121 29.2018C157.005 29.7536 155.796 30.0295 154.496 30.0295H147.246V10.0496Z" fill="#F23D3D"></path>
-			<path d="M192.249 18.8959H193.067C194.033 18.8959 194.775 18.6823 195.292 18.2551C195.808 17.8279 196.067 17.2139 196.067 16.4129C196.067 15.6119 195.808 14.9978 195.292 14.5706C194.775 14.1434 194.033 13.9299 193.067 13.9299H192.249V18.8959ZM202.917 30.0295H196.817L192.249 22.2867V30.0295H187.242V10.0496H194.867C195.917 10.0496 196.833 10.0674 197.617 10.4056C198.4 10.7259 199.042 11.1709 199.542 11.7405C200.058 12.3101 200.442 12.9687 200.692 13.7163C200.958 14.4638 201.092 15.2648 201.092 16.1192C201.092 17.65 200.742 18.8959 200.042 19.8571C199.358 20.8005 198.342 21.4412 196.992 21.7794L202.917 30.0295Z" fill="#F23D3D"></path>
-			<path d="M97.2711 18.7457H106.996C106.996 19.816 106.954 20.7882 106.871 21.6624C106.788 22.5364 106.621 23.3482 106.371 24.0974C106.021 25.15 105.546 26.0865 104.946 26.9071C104.346 27.7099 103.638 28.3878 102.821 28.9408C102.021 29.4759 101.138 29.8863 100.171 30.1717C99.2043 30.457 98.1877 30.5998 97.1211 30.5998C95.6543 30.5998 94.3127 30.3412 93.0961 29.8238C91.8961 29.3064 90.8627 28.5839 89.9961 27.6563C89.1293 26.7108 88.4543 25.5869 87.9711 24.2847C87.4877 22.9646 87.2461 21.5107 87.2461 19.923C87.2461 18.3532 87.4793 16.9171 87.9461 15.6149C88.4293 14.2948 89.1043 13.1709 89.9711 12.2433C90.8543 11.3156 91.9127 10.5932 93.1461 10.0758C94.3793 9.55847 95.7543 9.2998 97.2711 9.2998C99.2377 9.2998 100.963 9.7547 102.446 10.6645C103.929 11.5743 105.104 12.9836 105.971 14.8924L101.321 16.9528C100.888 15.8468 100.321 15.0529 99.6211 14.5713C98.9377 14.0896 98.1543 13.8488 97.2711 13.8488C96.5377 13.8488 95.8711 14.0004 95.2711 14.3037C94.6711 14.5891 94.1543 15.0084 93.7211 15.5614C93.3043 16.0965 92.9711 16.7477 92.7211 17.5148C92.4877 18.2818 92.3711 19.1381 92.3711 20.0836C92.3711 20.9399 92.4711 21.7337 92.6711 22.4651C92.8877 23.1966 93.2043 23.8298 93.6211 24.365C94.0377 24.9002 94.5543 25.3194 95.1711 25.6227C95.7877 25.908 96.5043 26.0508 97.3211 26.0508C97.8043 26.0508 98.2711 25.9973 98.7211 25.8903C99.1711 25.7654 99.5711 25.5781 99.9211 25.3283C100.288 25.0607 100.588 24.7218 100.821 24.3115C101.054 23.9011 101.213 23.4017 101.296 22.813H97.2711V18.7457Z" fill="#F23D3D"></path>
-			<path d="M25.9968 19.1362H27.525C29.325 19.1362 30.225 18.2996 30.225 16.6265C30.225 14.9533 29.325 14.1168 27.525 14.1168H25.9968V19.1362ZM25.9968 30.0295H21V10.0496H28.8C30.9167 10.0496 32.5333 10.4857 33.65 11.6604C34.7834 12.8352 35.35 14.4905 35.35 16.6265C35.35 18.7624 34.7834 20.4178 33.65 21.5925C32.5333 22.7673 30.9167 23.3547 28.8 23.3547H25.9968V30.0295Z" fill="#F23D3D"></path>
-		</svg>
-	</a>
-</header>
-<section>
-	<div class="section-container settings">
-		<h1>
-			Manage my personal settings
-		</h1>
-		<button type="submit" id="myBtn">
-            <span>
-            Personal Settings
-            </span>
-		</button>
-	</div>
-</section>
-<section>
-	<div class="section-container content">
-		<h2>
-			Playgendary Services
-		</h2>
-		<span class="label">Last modified: April 15 2020</span>
-		<p>As of the date of last update specified above, Your use of games, websites and related services listed below (the
-			“Services”) shall be governed by the Terms of Service and Privacy Policy provided at this page for the relevant
-			Services titles.
-		</p>
-		<p>
-			The company in charge for provision of the Services is specified below for each Service title. Please check the
-			list and find the Service you use to know which company is in charge for provision of that Service and which Terms
-			of Service and Privacy Policy govern usage of that Service and processing data with regard to such usage.
-		</p>
-		<p class="main-text">
-			Playgendary Limited, 94, Amathoundos Avenue, Alexander Diamant, Agios Tychonas, 4532 Limassol, Cyprus provide the
-			following Services under these <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">Terms Of
-			Service</a> and process the user data in accordance with this <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">Privacy Policy</a>
-		</p>
-		<ul>
-			<li>
-				<div class="list">
-					Bridge Legends (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Secret Seeker (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Rocket Rick (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Drawmaster (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Log Thrower (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Perfect Snipe (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Pinatamasters (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Polysphere (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Bowmasters (Amazon)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Word Travel: Pics 4 Word (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Racemasters – Сlash of Сars (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Rocket Buddy (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					My Poly Artbook (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Light the Stars! (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Art Chaos (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Knife Rush (Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Hit the Light (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Tomb of the Mask (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					TotM: Color (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Flip the Gun – Simulator Game (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Tank Stars (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Dictator – Rule the World (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Kick the Buddy: Forever (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Poly Artbook – puzzle game (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Golfmasters – Fun Golf Game (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Bouncemasters! (Android, iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Perfect Ironing (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Hitmasters (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Design Masters (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Perfect Cream (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					CoffeeShop3D (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Sword Maker (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Perfect Makeup 3D (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Premium Barista (iOS)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Escape Masters (iOS, Android)
-					<span>
-                     <a href="https://www.playgendary.com/privacy-policy-cyprus" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://www.playgendary.com/terms-of-use-cyprus" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-		</ul>
-		<p><a href="https://www.playgendary.com" target="_blank">playgendary.com</a></p>
-		<p class="main-text">
-			Playgendary GmbH, Landshuter Allee 8-10, 80637 Munich provide the following Services under these <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">Terms Of Service</a> and
-			process the user data in accordance with this <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">Privacy Policy</a>.
-		</p>
-		<ul>
-			<li>
-				<div class="list">
-					Dictator – Rule the World (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Knife Rush (iOS)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Flip the Gun – Simulator Game (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Golfmasters – Fun Golf Game (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Happy Racing (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Partymasters – Fun Idle Game (Android, iOS)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Poly Artbook – puzzle game (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Tank Stars (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Kick the Buddy: Forever (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Kick the Buddy (Android)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Bowmasters – Multiplayer Game (iOS)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-			<li>
-				<div class="list">
-					Despicable Bear (iOS)
-					<span>
-                     <a href="https://playgendary.com/en/playgendary-gmbh-privacy-policy" target="_blank">
-                     Privacy Policy
-                     </a>,
-                     <a href="https://playgendary.com/en/playgendary-gmbh-terms-of-service" target="_blank">
-                     Terms Of Service
-                     </a>
-                     </span>
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
-<footer>
-	<div class="footer-icons">
-		<a href="https://www.facebook.com/Playgendary/"><i class="fa fa-facebook fa-lg"></i></a>
-		<a href="https://www.instagram.com/playgendary/"><i class="fa fa-instagram fa-lg"></i></a>
-		<a href="https://twitter.com/playgendary"><i class="fa fa-twitter fa-lg"></i></a>
-		<a href="https://www.youtube.com/channel/UCulNCRxKbGlLbTwU7pr0z_Q"><i class="fa fa-youtube-play fa-lg"></i></a>
-	</div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
-<script>
-  "use strict";
+<!DOCTYPE html><html lang="en-SG"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy | Bubblegum Games</title><meta name="author" content="Bubblegum Games"><meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000"><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" sizes="57x57" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:57,h:57,m"><link rel="apple-touch-icon" sizes="60x60" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:60,h:60,m"><link rel="apple-touch-icon" sizes="72x72" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:72,h:72,m"><link rel="apple-touch-icon" sizes="114x114" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:114,h:114,m"><link rel="apple-touch-icon" sizes="120x120" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:120,h:120,m"><link rel="apple-touch-icon" sizes="144x144" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:144,h:144,m"><link rel="apple-touch-icon" sizes="152x152" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:152,h:152,m"><link rel="apple-touch-icon" sizes="180x180" href="//img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:180,h:180,m"><meta property="og:url" content="https://bubblegumgames.com/privacy-policy">
+<meta property="og:site_name" content="Bubblegum Games">
+<meta property="og:title" content="Bubblegum Games">
+<meta property="og:description" content="Bring joy to the world">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://img1.wsimg.com/isteam/stock/6yVqp2k">
+<meta property="og:locale" content="en_SG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bubblegum Games">
+<meta name="twitter:description" content="Bubblegum Games">
+<meta name="twitter:image" content="http://img1.wsimg.com/isteam/stock/6yVqp2k">
+<meta name="twitter:image:alt" content="Bubblegum Games">
+<meta name="theme-color" content="005"><script type="text/javascript" src="https://img1.wsimg.com/poly/v2/polyfill.min.js?unknown=polyfill&amp;flags=gated&amp;features=default%2Cfetch%2CArray.prototype.%40%40iterator%2CArray.prototype.find%2CArray.prototype.findIndex%2CFunction.name%2CNumber.isFinite%2CPromise%2CString.prototype.repeat%2CMath.sign%2CMath.trunc%2CArray.prototype.includes%2CObject.entries%2CObject.values%2CObject.is%2CIntersectionObserver%2CIntl.~locale.en-SG" crossorigin=""></script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/gpub/79fb68164481d54f/script.js" crossorigin=""></script>
+<script type="text/javascript">"undefined"===typeof _trfq&&(window._trfq=[]);"undefined"==typeof _trfd&&(window._trfd=[]);</script>
+<script type="text/javascript">function trackingEnabledForType(t){return!("undefined"!=typeof document&&"click"===t&&!Boolean(window._allowCT))||(window._allowCT=-1!==document.cookie.indexOf("cookie_terms_accepted"),window._allowCT)}function logTcclEvent(){var e=this.getAttribute("data-tccl");if(window._trfq&&e)try{var t=e.split(","),n=t[0],o=t[1];if(!trackingEnabledForType(o))return;for(var d=t.splice(2),r=[],c=0;c<d.length;c+=2)r.push([d[c],d[c+1]]);window._trfq.push(["cmdLogEvent",o,n,r])}catch(t){window._trfq.push(["cmdLogEvent","gc_published_site_error","tccl.published.log",[["error",t.toString()],["data",e]]])}}"undefined"!=typeof window&&"undefined"!=typeof document&&window.addEventListener("DOMContentLoaded",function(){for(var t=document.querySelectorAll("[data-tccl]"),e=0;e<t.length;e++)try{var n=t[e].getAttribute("data-tccl").split(",");t[e].addEventListener(n[1],logTcclEvent)}catch(t){window._trfq.push(["cmdLogEvent","gc_published_site_error","tccl.published.add",[["error",t.toString()]]])}});</script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/gpub/8828666089615103/script.js" crossorigin=""></script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/f58916530262ee36/script.js" crossorigin=""></script>
+<script type="text/javascript">"use strict";
 
-  var modal = document.getElementById("myModal");
-  var btn = document.getElementById("myBtn");
-  var targeting = document.getElementById("targeting");
-  var notTargeting = document.getElementById("not-targeting");
-  var span = document.getElementsByClassName("close")[0];
-  var renouncement = document.getElementsByClassName("renouncement");
-  var eraseStatus = document.getElementsByClassName("erase-status")[0];
-  var appName = document.getElementsByClassName("app-name")[0];
-  var dataStatus = document.getElementsByClassName("data-status")[0];
-  var personalSettings = document.getElementsByClassName("personal-settings")[0];
-  var summary = document.getElementsByClassName("summary")[0];
-  var erased = document.getElementsByClassName("erased")[0];
-  var settings = document.getElementsByClassName("settings")[0];
-  var withdrawal = document.getElementsByClassName("withdrawal")[0];
-  var invalidToken = document.getElementsByClassName("invalid-token")[0];
-  var modalWrapper = document.getElementsByClassName("modal-wrapper")[0];
-  var withdrawalSettings = document.getElementsByClassName("withdrawal-settings")[0];
-  var erasedSettings = document.getElementsByClassName("erased-settings")[0];
-  var erasedStatus = document.getElementsByClassName("erased-status")[0];
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').then(function () {
+      console.log('sw: registration complete');
+    }).catch(function (err) {
+      console.log(err);
+    });
+  });
+}</script>
+<style type="text/css">Copyright 2011 Canonical Ltd. Licensed under the Ubuntu Font Licence 1.0
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKcg72nU6AF7xm.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKew72nU6AF7xm.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKcw72nU6AF7xm.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKfA72nU6AF7xm.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKcQ72nU6AF7xm.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-  function responseStatusText(status) {
-    var node = document.createTextNode(status);
-    invalidToken.appendChild(node);
-  }
+/*
+Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic (team@latofonts.com) with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1.
 
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
 
-  btn.onclick = function () {
-    modal.style.display = "block";
-    modal.style.position = "fixed";
-  };
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal || event.target == renouncement[0] || event.target == renouncement[1]) {
-      modal.style.display = "none";
-    }
-  };
-
-  var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-      sURLVariables = sPageURL.split('&'),
-      sParameterName = void 0,
-      i = void 0;
-    for (i = 0; i < sURLVariables.length; i++) {
-      sParameterName = sURLVariables[i].split('=');
-      if (sParameterName[0] === sParam) {
-        return sParameterName[1] === undefined ? true : sParameterName[1];
-      }
-    }
-  };
-
-  var prodUrl = "https://game-users-storage.playgendary.com/api";
-  var devUrl = "https://game-users-storage-dev.playgendary.com/api";
-  var backUrl = getUrlParameter("dev") ? devUrl : prodUrl;
-
-  if (getUrlParameter("token")) {
-    (function () {
-      console.log(backUrl);
-      var token = getUrlParameter("token");
-      var url = backUrl + "/info?token=" + token;
-
-      fetch(url).then(function (response) {
-        if (response.status !== 200) {
-          modalWrapper.style.display = "none";
-          invalidToken.style.display = "block";
-          responseStatusText(response.status || '')
-        } else {
-          return response.json();
-        }
-      }).then(function (data) {
-        settings.style.display = 'flex';
-        appName.innerText = "App Name: " + data.appName;
-        eraseStatus.innerText = "Erase Status: " + data.eraseStatus;
-        dataStatus.innerText = "Data Status: " + data.summarizeDataStatus.status;
-
-        withdrawal.onclick = function () {
-          if (withdrawalSettings.classList.contains('toggle')) {
-            withdrawalSettings.classList.remove('toggle');
-          } else {
-            erasedSettings.classList.remove('toggle');
-            personalSettings.classList.remove('toggle');
-            withdrawalSettings.classList.add('toggle');
-          }
-        };
-
-        summary.onclick = function (e) {
-          if (personalSettings.classList.contains('toggle')) {
-            personalSettings.classList.remove('toggle');
-          } else {
-            erasedSettings.classList.remove('toggle');
-            withdrawalSettings.classList.remove('toggle');
-            personalSettings.classList.add('toggle');
-          }
-        };
-
-        if (data.targeting) {
-          targeting.setAttribute('checked', true);
-        } else {
-          notTargeting.setAttribute('checked', true);
-        }
-
-        notTargeting.onclick = function (e) {
-          fetch(backUrl + "/data/targeting", {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              token: token,
-              targeting: false
-            })
-          }).then(function (response) {
-            return response.json();
-          }).then(function (data) {
-            console.log('Success:', data);
-          }).catch(function (error) {
-            console.error('Error:', error);
-          });
-        };
-
-        targeting.onclick = function (e) {
-          fetch(backUrl + "/data/targeting", {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              token: token,
-              targeting: true
-            })
-          }).then(function (response) {
-            return response.json();
-          }).then(function (data) {
-            console.log('Success:', data);
-          }).catch(function (error) {
-            console.error('Error:', error);
-          });
-        };
-
-        erased.onclick = function (e) {
-          fetch(backUrl + "/data/clear", {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              token: token
-            })
-          }).then(function (response) {
-            return response.json();
-          }).then(function (data) {
-            erasedStatus.innerText = 'Request to delete data confirmed';
-            personalSettings.classList.remove('toggle');
-            withdrawalSettings.classList.remove('toggle');
-            erasedSettings.classList.add('toggle');
-          }).catch(function (error) {
-            console.error('Error:', error);
-          });
-        };
-      }).catch(function (e) {
-        modalWrapper.style.display = "none";
-        invalidToken.style.display = "block";
-        responseStatusText(e.status || '')
-        console.error(e);
-      });
-    })();
-  }
-</script>
-
-
-</body></html>
+—————————————————————————————-
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+—————————————————————————————-
+*/
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/lato/v17/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<link rel="stylesheet" href="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/4524c1974583bbdd/styles.css">
+<link data-glamor="cxs-default-sheet" rel="stylesheet" href="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/a34a2ee5e3b00473/styles.css"><style type="text/css" data-glamor="cxs-default-sheet"></style>
+<style data-glamor="cxs-media-sheet" type="text/css"></style>
+<style data-glamor="cxs-xs-sheet" type="text/css">@media (max-width: 767px){.x .c1-m{padding-top:40px}}@media (max-width: 767px){.x .c1-n{padding-bottom:40px}}@media (max-width: 767px){.x .c1-66 > :nth-child(n){margin-bottom:24px}}@media (max-width: 767px){.x .c1-67  > :last-child{margin-bottom:0 !important}}</style>
+<style data-glamor="cxs-sm-sheet" type="text/css">@media (min-width: 768px){.x .c1-d{font-size:16px}}@media (min-width: 768px){.x .c1-1g{margin-top:0}}@media (min-width: 768px){.x .c1-1h{margin-right:-24px}}@media (min-width: 768px){.x .c1-1i{margin-bottom:0}}@media (min-width: 768px){.x .c1-1j{margin-left:-24px}}@media (min-width: 768px){.x .c1-1s{padding-top:0}}@media (min-width: 768px){.x .c1-1t{padding-right:24px}}@media (min-width: 768px){.x .c1-1u{padding-bottom:0}}@media (min-width: 768px){.x .c1-1v{padding-left:24px}}@media (min-width: 768px){.x .c1-3f{font-size:14px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-3z{right:0px}}@media (min-width: 768px){.x .c1-4n{font-size:30px}}@media (min-width: 768px){.x .c1-4s{width:100%}}@media (min-width: 768px){.x .c1-55{font-size:22px}}@media (min-width: 768px){.x .c1-5g{font-size:38px}}@media (min-width: 768px){.x .c1-5x{flex-basis:83.33333333333334%}}@media (min-width: 768px){.x .c1-5y{max-width:83.33333333333334%}}@media (min-width: 768px){.x .c1-79{font-size:20px}}</style>
+<link data-glamor="cxs-md-sheet" rel="stylesheet" href="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/7a8c174b6380a27/styles.css"><style type="text/css" data-glamor="cxs-md-sheet"></style>
+<style data-glamor="cxs-lg-sheet" type="text/css">@media (min-width: 1280px){.x .c1-f{font-size:16px}}@media (min-width: 1280px){.x .c1-3h{font-size:14px}}@media (min-width: 1280px){.x .c1-4p{font-size:32px}}@media (min-width: 1280px){.x .c1-4u{width:1160px}}@media (min-width: 1280px){.x .c1-58{font-size:22px}}@media (min-width: 1280px){.x .c1-5k{font-size:44px}}@media (min-width: 1280px){.x .c1-7b{font-size:20px}}</style>
+<style data-glamor="cxs-xl-sheet" type="text/css">@media (min-width: 1536px){.x .c1-g{font-size:18px}}@media (min-width: 1536px){.x .c1-3i{font-size:16px}}@media (min-width: 1536px){.x .c1-4q{font-size:36px}}@media (min-width: 1536px){.x .c1-4v{width:1280px}}@media (min-width: 1536px){.x .c1-59{font-size:24px}}@media (min-width: 1536px){.x .c1-5l{font-size:48px}}@media (min-width: 1536px){.x .c1-7c{font-size:23px}}</style>
+<style type="text/css">.page-inner { background-color: rgb(0, 0, 0); min-height: 100vh; }</style><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/bs-layout13-Theme-publish-Theme-4d245a92.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-_commonjsHelpers-fbff8644.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-_rollupPluginBabelHelpers-af9120e0.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-countVCTElement-7d9cc6db.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-defaultSocialIconPack-de218de9.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-headerTreatments-d9f2de34.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-humanisticFilled-b6ab5f85.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-index-1904efbd.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-index2-bb40e491.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-index3-d3358fea.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-overlayTypes-0ad43e4e.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-searchFormLocations-190a6a67.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-legacyOverrides-b3a5b619.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-loaders-f1bd86ab.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-themeOverrides-08fb4580.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/bs-Hamburger-Component-3cd8130c.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-dataAids-f23cf719.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-elements-144dbfce.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-Toggle-45b716a6.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/bs-NavOverflow-Component-ec08eeee.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/bs-FlyoutMenu-Component-deeeb8d6.js"></script><script crossorigin="Anonymous" src="https://img1.wsimg.com/blobby/go/static/radpack/@widget/LAYOUT/c/bs-eventListenerPolyfill-0e770067.js"></script></head>
+<body class="x x-colors-005 x-fonts-ubuntu x-fonts-lato" context="[object Object]"><div id="layout-d-4-c-207-a-7-a-79-b-44-c-6-bc-46-bc-7651-a-38-dad" class="layout layout-layout layout-layout-layout-13 locale-en-SG lang-en"><div data-ux="Page" id="page-35240" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-4 c1-5 c1-6 c1-7 c1-8 c1-9 c1-a c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div page-inner c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div id="0a1fc6c5-577c-474b-894a-21f0900e2821" class="widget widget-header widget-header-header-9"><div data-ux="Header" role="main" data-aid="HEADER_WIDGET" class="x-el x-el-div x-el x-el c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-h c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div> <section data-ux="Section" data-aid="HEADER_SECTION" class="x-el x-el-section c1-1 c1-2 c1-h c1-i c1-j c1-k c1-l c1-b c1-c c1-m c1-n c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-o c1-4 c1-h c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" id="header_navwrapper35244" class="x-el x-el-div c1-1 c1-2 c1-p c1-q c1-b c1-c c1-d c1-e c1-f c1-g" style="height: 88px;"><div data-ux="Block" id="header_stickynav35243" class="x-el x-el-div c1-1 c1-2 c1-r c1-h c1-b c1-c c1-d c1-e c1-f c1-g" style="z-index: 10000; left: 0px; right: 0px; top: 0px;"><nav data-ux="Block" class="x-el x-el-nav c1-1 c1-2 c1-s c1-o c1-t c1-u c1-v c1-b c1-c c1-d c1-w c1-x c1-y c1-z c1-e c1-f c1-g"><div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-10 c1-11 c1-12 c1-13 c1-14 c1-15 c1-16 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Grid" class="x-el x-el-div c1-1 c1-2 c1-17 c1-18 c1-19 c1-1a c1-1b c1-1c c1-1d c1-1e c1-1f c1-b c1-c c1-1g c1-1h c1-1i c1-1j c1-d c1-1k c1-e c1-f c1-g"><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-1l c1-1m c1-1n c1-14 c1-1o c1-1p c1-1q c1-1r c1-b c1-c c1-1s c1-1t c1-1u c1-1v c1-d c1-e c1-f c1-g"><div id="bs-1"><span data-ux="Element" class="x-el x-el-span c2-1 c2-2 c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><a rel="" role="button" aria-haspopup="menu" data-ux="LinkDropdown" data-toggle-ignore="true" id="1" aria-expanded="false" toggleid="n-35241-navId-mobile" uniqueid="n-35241" icon="hamburger" openicon="hamburger" openwidth="100%" staticcontent="[object Object]" closeattr="data-close" data-edit-interactive="true" data-aid="HAMBURGER_MENU_LINK" aria-label="Hamburger Site Navigation Icon" href="#" data-typography="LinkAlpha" class="x-el x-el-a c2-9 c2-a c2-b c2-c c2-d c2-e c2-f c2-g c2-h c2-i c2-j c2-k c2-l c2-m c2-n c2-3 c2-4 c2-o c2-p c2-q c2-5 c2-r c2-6 c2-7 c2-8" data-tccl="ux2.HEADER.header9.Section.Default.Link.Dropdown.2.click,click"><svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="IconHamburger" class="x-el x-el-svg c2-1 c2-2 c2-s c2-t c2-u c2-v c2-w c2-x c2-y c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><path fill-rule="evenodd" d="M19 8H5a1 1 0 1 1 0-2h14a1 1 0 0 1 0 2zm0 5.097H5a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2zm0 5.25H5a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2z"></path></svg></a></span></div></div></div><div data-ux="Grid" id="navBarId-35248" class="x-el x-el-div c1-1 c1-2 c1-2j c1-18 c1-19 c1-1a c1-1b c1-1c c1-1d c1-1e c1-22 c1-1f c1-1o c1-1q c1-b c1-c c1-1g c1-1h c1-1i c1-1j c1-d c1-2k c1-e c1-f c1-g"><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-2l c1-1m c1-2m c1-14 c1-1o c1-2n c1-1q c1-1r c1-b c1-c c1-1s c1-1t c1-1u c1-1v c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-17 c1-1f c1-2o c1-2l c1-2m c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" id="n-35241-search-width" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><nav data-ux="Nav" data-aid="HEADER_NAV_RENDERED" role="navigation" class="x-el x-el-nav c1-1 c1-2 c1-2p c1-2q c1-b c1-c c1-d c1-e c1-f c1-g"><ul data-ux="List" id="n-3524135249-navId" class="x-el x-el-ul c1-1 c1-2 c1-1b c1-1d c1-28 c1-2r c1-2s c1-2t c1-2u c1-s c1-1o c1-1p c1-1q c1-2v c1-b c1-c c1-d c1-e c1-f c1-g" style="white-space: nowrap;"><li data-ux="ListItemInline" class="x-el x-el-li nav-item c1-1 c1-2 c1-2w c1-28 c1-2x c1-2d c1-2y c1-2e c1-2z c1-30 c1-s c1-31 c1-b c1-c c1-32 c1-33 c1-d c1-e c1-f c1-g visible" style="visibility: visible;"><a rel="" role="link" aria-haspopup="menu" data-ux="NavLink" target="" data-page="32c08e75-bde9-4a32-9296-764fd1313ffa" data-edit-interactive="true" aria-labelledby="n-3524135249-navId" href="/" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-36 c1-21 c1-37 c1-38 c1-39 c1-3a c1-2i c1-2g c1-2f c1-2h c1-b c1-27 c1-3b c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Default.35251.click,click">Home</a></li><li data-ux="ListItemInline" class="x-el x-el-li nav-item c1-1 c1-2 c1-2w c1-28 c1-2x c1-2d c1-2y c1-2e c1-2z c1-30 c1-s c1-31 c1-b c1-c c1-32 c1-33 c1-d c1-e c1-f c1-g visible" style="visibility: visible;"><a rel="" role="link" aria-haspopup="false" data-ux="NavLinkActive" target="" data-page="9b415c65-66ef-4878-8c5c-fa0a3ddf2d16" data-edit-interactive="true" aria-labelledby="n-3524135249-navId" href="/privacy-policy" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-36 c1-21 c1-b c1-27 c1-3b c1-3j c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Active.35252.click,click">Privacy Policy</a></li><li data-ux="ListItemInline" class="x-el x-el-li nav-item c1-1 c1-2 c1-2w c1-28 c1-2x c1-2d c1-2y c1-2e c1-2z c1-30 c1-s c1-31 c1-b c1-c c1-32 c1-33 c1-d c1-e c1-f c1-g visible" style="visibility: visible;"><a rel="" role="link" aria-haspopup="false" data-ux="NavLink" target="" data-page="ffb05ff5-1959-4734-86f9-03ceb86007b5" data-edit-interactive="true" aria-labelledby="n-3524135249-navId" href="/terms-of-service" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-36 c1-21 c1-37 c1-38 c1-39 c1-3a c1-2i c1-2g c1-2f c1-2h c1-b c1-27 c1-3b c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Default.35253.click,click">Terms of Service</a></li><li data-ux="ListItemInline" class="x-el x-el-li nav-item c1-1 c1-2 c1-2w c1-28 c1-2x c1-2d c1-2y c1-2e c1-2z c1-30 c1-s c1-31 c1-b c1-c c1-32 c1-33 c1-d c1-e c1-f c1-g" style="visibility: hidden; display: none;"><div id="bs-2"><span data-ux="Element" class="x-el x-el-span c2-1 c2-2 c2-3 c2-4 c2-5 c2-6 c2-7 c2-8"><a rel="" role="button" aria-haspopup="menu" data-ux="NavLinkDropdown" data-toggle-ignore="true" id="3" aria-expanded="false" data-aid="NAV_MORE" ignorecloseattr="data-ignore-close" aria-label="Website navigation dropdown menu" data-edit-interactive="true" href="#" data-typography="NavAlpha" class="x-el x-el-a c2-z c2-10 c2-b c2-c c2-d c2-e c2-f c2-g c2-11 c2-12 c2-13 c2-14 c2-y c2-w c2-v c2-x c2-3 c2-m c2-15 c2-16 c2-17 c2-18 c2-19 c2-1a c2-1b c2-1c" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Dropdown.4.click,click"><div data-aid="NAV_DROPDOWN" style="pointer-events: none; display: flex; align-items: center;"><span style="margin-right: 4px;">More</span><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" data-ux="Icon" class="x-el x-el-svg c2-1 c2-2 c2-s c2-t c2-1d c2-1e c2-1f c2-1g c2-3 c2-15 c2-19 c2-1a c2-1b c2-1c"><path fill-rule="evenodd" d="M19.774 7.86c.294-.335.04-.839-.423-.84L4.538 7c-.447-.001-.698.48-.425.81l7.204 8.693a.56.56 0 0 0 .836.011l7.621-8.654z"></path></svg></div></a></span></div><ul data-ux="Dropdown" role="menu" id="35250-moreId" class="x-el x-el-ul c1-1 c1-2 c1-3n c1-3o c1-h c1-3p c1-3q c1-3r c1-3s c1-3t c1-3u c1-3v c1-30 c1-3w c1-3x c1-2j c1-o c1-b c1-c c1-3y c1-3z c1-d c1-e c1-f c1-g"><li data-ux="ListItem" role="menuitem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-40 c1-b c1-c c1-41 c1-d c1-e c1-f c1-g" style="visibility: hidden;"><a rel="" role="link" aria-haspopup="menu" data-ux="NavMoreMenuLink" target="" data-page="32c08e75-bde9-4a32-9296-764fd1313ffa" data-edit-interactive="true" aria-labelledby="35250-moreId" href="/" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-2d c1-21 c1-42 c1-43 c1-44 c1-b c1-27 c1-3b c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Default.35256.click,click">Home</a></li><li data-ux="ListItem" role="menuitem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-40 c1-b c1-c c1-41 c1-d c1-e c1-f c1-g" style="visibility: hidden;"><a rel="" role="link" aria-haspopup="false" data-ux="NavMoreMenuLinkActive" target="" data-page="9b415c65-66ef-4878-8c5c-fa0a3ddf2d16" data-edit-interactive="true" aria-labelledby="35250-moreId" href="/privacy-policy" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-2d c1-21 c1-42 c1-43 c1-44 c1-b c1-27 c1-3b c1-3j c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Active.35257.click,click">Privacy Policy</a></li><li data-ux="ListItem" role="menuitem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-40 c1-b c1-c c1-41 c1-d c1-e c1-f c1-g" style="visibility: hidden;"><a rel="" role="link" aria-haspopup="false" data-ux="NavMoreMenuLink" target="" data-page="ffb05ff5-1959-4734-86f9-03ceb86007b5" data-edit-interactive="true" aria-labelledby="35250-moreId" href="/terms-of-service" data-typography="NavAlpha" class="x-el x-el-a c1-34 c1-35 c1-1y c1-1z c1-20 c1-2d c1-21 c1-42 c1-43 c1-44 c1-b c1-27 c1-3b c1-3c c1-3d c1-3e c1-3f c1-3g c1-3h c1-3i" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Default.35258.click,click">Terms of Service</a></li></ul></li></ul></nav></div></div></div></div></div></nav></div></div><div role="navigation" data-ux="NavigationDrawer" id="n-35241-navId-mobile" domainname="bubblegumgames.com" pageroute="/privacy-policy" staticcontent="[object Object]" navprops="[object Object]" class="x-el x-el-div c1-1 c1-2 c1-45 c1-46 c1-47 c1-4 c1-48 c1-49 c1-3x c1-4a c1-i c1-4b c1-4c c1-4d c1-4e c1-4f c1-17 c1-4g c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-1k c1-e c1-f c1-g"></div><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-12 c1-13 c1-b c1-c c1-d c1-e c1-f c1-g"><svg viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px" data-ux="CloseIcon" data-edit-interactive="true" data-close="true" class="x-el x-el-svg c1-1 c1-2 c1-27 c1-2d c1-3m c1-2f c1-2g c1-2h c1-2i c1-21 c1-4h c1-4i c1-3t c1-4j c1-4k c1-4l c1-b c1-4m c1-4n c1-4o c1-4p c1-4q"><path fill-rule="evenodd" d="M19.245 4.313a1.065 1.065 0 0 0-1.508 0L11.78 10.27 5.82 4.313A1.065 1.065 0 1 0 4.312 5.82l5.958 5.958-5.958 5.959a1.067 1.067 0 0 0 1.508 1.508l5.959-5.958 5.958 5.958a1.065 1.065 0 1 0 1.508-1.508l-5.958-5.959 5.958-5.958a1.065 1.065 0 0 0 0-1.508"></path></svg></div><div data-ux="Container" id="n-35241-navContainerId-mobile" class="x-el x-el-div c1-1 c1-2 c1-10 c1-11 c1-12 c1-13 c1-14 c1-3x c1-4r c1-4 c1-b c1-c c1-4s c1-d c1-4t c1-e c1-4u c1-f c1-4v c1-g"><div data-ux="Block" id="n-35241-navLinksContentId-mobile" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><ul role="menu" data-ux="NavigationDrawerList" id="n-35241-navListId-mobile" class="x-el x-el-ul c1-1 c1-2 c1-1b c1-1d c1-28 c1-2r c1-2s c1-2t c1-2u c1-40 c1-1o c1-1q c1-2v c1-1p c1-1z c1-20 c1-b c1-c c1-d c1-e c1-f c1-g"><li role="menuitem" data-ux="NavigationDrawerListItem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-4w c1-4x c1-4y c1-b c1-c c1-41 c1-4z c1-d c1-e c1-f c1-g"><a rel="" role="link" aria-haspopup="menu" data-ux="NavigationDrawerLink" target="" data-page="32c08e75-bde9-4a32-9296-764fd1313ffa" data-edit-interactive="true" data-close="true" href="/" data-typography="NavBeta" class="x-el x-el-a c1-1 c1-2 c1-1y c1-1z c1-20 c1-17 c1-21 c1-3p c1-3q c1-12 c1-13 c1-1f c1-50 c1-51 c1-b c1-27 c1-52 c1-3c c1-53 c1-54 c1-55 c1-56 c1-57 c1-58 c1-59" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Default.35259.click,click"><span>Home</span></a></li><li role="menuitem" data-ux="NavigationDrawerListItem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-4w c1-4x c1-4y c1-b c1-c c1-41 c1-4z c1-d c1-e c1-f c1-g"><a rel="" role="link" aria-haspopup="false" data-ux="NavigationDrawerLinkActive" target="" data-page="9b415c65-66ef-4878-8c5c-fa0a3ddf2d16" data-edit-interactive="true" data-close="true" href="/privacy-policy" data-typography="NavBeta" class="x-el x-el-a c1-1 c1-2 c1-1y c1-1z c1-20 c1-17 c1-21 c1-3p c1-3q c1-12 c1-13 c1-1f c1-50 c1-51 c1-b c1-27 c1-52 c1-3j c1-53 c1-54 c1-55 c1-56 c1-57 c1-58 c1-59" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Active.35260.click,click"><span>Privacy Policy</span></a></li><li role="menuitem" data-ux="NavigationDrawerListItem" class="x-el x-el-li c1-1 c1-2 c1-2w c1-1d c1-36 c1-4w c1-4x c1-4y c1-b c1-c c1-41 c1-4z c1-d c1-e c1-f c1-g"><a rel="" role="link" aria-haspopup="false" data-ux="NavigationDrawerLink" target="" data-page="ffb05ff5-1959-4734-86f9-03ceb86007b5" data-edit-interactive="true" data-close="true" href="/terms-of-service" data-typography="NavBeta" class="x-el x-el-a c1-1 c1-2 c1-1y c1-1z c1-20 c1-17 c1-21 c1-3p c1-3q c1-12 c1-13 c1-1f c1-50 c1-51 c1-b c1-27 c1-52 c1-3c c1-53 c1-54 c1-55 c1-56 c1-57 c1-58 c1-59" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Default.35261.click,click"><span>Terms of Service</span></a></li></ul><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-36 c1-d c1-1k c1-e c1-f c1-g"></div></div></div></div></div></section> </div></div></div><div id="49f7559e-22cb-43cf-928a-370e4b556c4f" class="widget widget-content widget-content-content-6"><div data-ux="Widget" role="region" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div> <section data-ux="Section" class="x-el x-el-section c1-1 c1-2 c1-3 c1-i c1-j c1-b c1-c c1-m c1-n c1-d c1-e c1-f c1-g"><div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-10 c1-11 c1-12 c1-13 c1-14 c1-b c1-c c1-4s c1-d c1-4t c1-e c1-4u c1-f c1-4v c1-g"><h1 role="heading" aria-level="1" data-ux="SectionHeading" data-aid="CONTENT_SECTION_TITLE_RENDERED" data-promoted-from="2" data-order="0" data-typography="HeadingBeta" class="x-el x-el-h1 c1-1 c1-2 c1-1z c1-20 c1-5a c1-10 c1-2r c1-1b c1-5b c1-4f c1-5c c1-5d c1-5e c1-5f c1-3c c1-5g c1-5h c1-5i c1-5j c1-5k c1-5l"><span data-ux="Element" class="x-el x-el-span c1-5m c1-2c c1-5n">Privacy Policy</span><div data-ux="Block" class="x-el x-el-div c1-4 c1-5o c1-5d c1-5e c1-5g c1-5j c1-5k c1-5l"><hr aria-hidden="true" role="separator" data-ux="SectionHeadingHR" class="x-el x-el-hr c1-5p c1-5q c1-5r c1-5s c1-1d c1-5t c1-2d c1-5d c1-5e c1-5g c1-5j c1-5k c1-5l"></div></h1><div data-ux="Grid" class="x-el x-el-div c1-1 c1-2 c1-17 c1-18 c1-19 c1-5u c1-1b c1-1c c1-1d c1-1e c1-40 c1-2o c1-b c1-c c1-1g c1-1h c1-1i c1-1j c1-d c1-e c1-f c1-g"><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-2l c1-1m c1-5v c1-14 c1-1o c1-2n c1-1q c1-1r c1-5w c1-b c1-c c1-5x c1-5y c1-1s c1-1t c1-1u c1-1v c1-d c1-5z c1-60 c1-61 c1-e c1-f c1-g"><div data-ux="ContentBasic" class="x-el x-el-div x-el c1-1 c1-2 c1-17 c1-4g c1-4 c1-62 c1-63 c1-40 c1-64 c1-65 c1-b c1-c c1-66 c1-67 c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="ContentText" alignment="left" data-aid="CONTENT_MEDIA_DESCRIPTION1_RENDERED" data-typography="BodyAlpha" class="x-el x-el-p c1-1 c1-2 c1-1z c1-20 c1-44 c1-1b c1-1d c1-68 c1-69 c1-6a c1-6b c1-6c c1-6d c1-6e c1-6f c1-6g c1-6h c1-6i c1-6j c1-6k c1-6l c1-6m c1-6n c1-6o c1-6p c1-6q c1-6r c1-6s c1-6t c1-6u c1-6v c1-6w c1-6x c1-6y c1-6z c1-2l c1-b c1-70 c1-c c1-3c c1-d c1-e c1-f c1-g x-rt"><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Effective Date: September 2020</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">1. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Introduction</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum Games, LLC (collectively, “Bubblegum”, “us”, “our” or “we”) develops and publish games for mobile devices. This Privacy Policy (this “Policy”) &nbsp;describes the ways we collect, store, use, and disclose the information, including personal information, and data that our users (“users” or “you”) provide or we collect in connection via the Bubblegum website available at<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://bubblegumgames.com/" rel=""> <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">https://bubblegumgames.com/</u></a> and any Bubblegum game provided on a mobile platform (each a “Service,” collectively, the “Services”). Additionally, this Policy describes your rights and choices concerning your information.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Please note that the scope of this Policy is limited to information and data collected or received by Bubblegum through your use of the Services. &nbsp;Bubblegum is not responsible for the actions of individuals with no relationship to Bubblegum or third-party companies, the content of their sites, the use of information or data you provide to them, or any products or services they may offer. &nbsp;Any link to those sites does not constitute our sponsorship of, or affiliation with, those individuals or companies.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">If you do not want Bubblegum to collect, store, use, or share your information in the ways described in this Policy, you should not use our Services.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">2. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Information and Data We Collect from You and How We Collect It</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">When you use our Services, you may give us your contact information directly on our website, generally your name and email address.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Registration Information:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We may also offer you the option to complete a user profile that is visible to other Bubblegum users (“Account”). If you create an Account, you may provide us you name, a username, e-mail address, a password and other information that helps us confirm that it is you accessing your Account. We may do this through in-game dialog boxes, which you may choose to skip. If you sign into the Services with Facebook Connect we will collect information that is visible via your Facebook account such as: (1) your first and last name, (2) Facebook ID, (3) Profile Picture/URL, and (4) list of Facebook friends. Your Account may be used to publicly identify you as part of social features of the Services, which may include user-to-user interaction, chat or messaging functionality, public leaderboards, head-to-head competition, and other similar features. The Bubblegum username will be public and will be shown to other users, but will only permit access to information that is considered public or that you have designated as public in your user profile settings.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We may also offer you the ability to import your contacts or manually enter e-mail addresses so that you can locate your contacts on Bubblegum and invite your contacts to join you in the Services. We will store those contacts for purposes of helping you and your contacts make connections through our Services.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Payment Information</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">When you order any good or service through the Services, including any virtual currency or virtual good, our payment processing service provider will collect your name, phone number, e-mail address, mailing address, billing address, and complete credit card information that enables them to receive your payment. &nbsp;Our payment processing service provider may also retain this information to enable you to purchase additional items through our Services without having to re-enter it each time. Please note that purchases from third parties may also be subject to additional policies</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Information Collected by Customer Support</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">When you ask for assistance from our Customer Support team, we will collect and store the contact information you provide (generally your name and e-mail address), information about your gameplay or activity on the Services, and your user-name or ID number. We will also store the correspondence and any information contained within.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Technical and Usage Information</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">When you access our Services, we may collect (i) certain technical information about your mobile device or computer system, including IP Address, mobile device ID (IDFA, Google Advertising ID or other identifiers), and the version of your operating system; and (ii) usage statistics about your interactions with the Services. In certain Services we will create and assign to your device an identifier that is similar to an account number. We may collect the name you have associated with your device, device type, telephone number, country, and any other information you choose to provide, such as username, character name, or e-mail address. We may also access your contacts to enable you to invite friends to join you in the Services. &nbsp;This information is typically collected through the use of third-party mobile device software development kits. We may occasionally send you push notifications through our Services to send you game updates, high scores and other service-related notifications that may be of importance to you. &nbsp;You may at any time opt-out from receiving these types of communications by turning them off at the device level through your settings.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">3. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">&nbsp;How We Use Your Information</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum's primary goals in using your information are to create your account, provide Services to you, troubleshoot, improve and optimize our Services, contact you, conduct research and create reports for internal use. &nbsp;We use information collected through our Service for purposes described in this Policy or disclosed to you in connection with our Service. For example, we may use your information to:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Create accounts and allow users to use our Services;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Identify and suggest connections with other Bubblegum users;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Operate and improve our Services;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Understand you and your preferences to enhance your experience and enjoyment using our Services;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Respond to your comments and questions and provide customer service;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Provide and deliver products and services you request;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Deliver advertising and marketing and promotional information to you;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Send you related information, including confirmations, invoices, technical notices, updates, security alerts, and support and administrative messages;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Communicate with you about promotions, contests, rewards, upcoming events, and other news about products and services offered by Bubblegum and our selected partners;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Conduct and administer contests promoted by Bubblegum;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Enable you to communicate with other users; and</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Link or combine it with other information we get from third parties, to help understand your preferences and provide you with better services.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">Use of Your Information by Others</u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Third Party Services. We may provide your information to third party companies to perform certain services, including but not limited to hosting services, payment processing, analytics, customer service and to assist us in our marketing efforts. Where we share your information with third-party service providers and business partners, we ensure that we have appropriate agreements in place to protect your information as required by applicable data protection laws.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Advertising. To the extent we display advertising in our Services, we may allow advertising networks of our affiliates and partner networks to collect information about your mobile device to enable them to serve targeted ads to you. Such mobile device data includes the following:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Device make, model and operating system;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Device properties related to screen size &amp; orientation, audio volume and battery;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Carrier;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Operating system;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Name and properties of mobile application through which a consumer interacts with the Services;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Country, time zone and locale settings (country and preferred language);</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Network connection type and speed;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;IP Address;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Internet browser user-agent used to access the Services; and</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;Advertising ID (IDFA on iOS devices and GAID on Android devices).</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">A list of these advertising partners and their privacy policies is available at<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://bubblegumgames.com/advertising-partners.html" rel=""> </a><a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://bubblegumgames.com/advertising-partners" rel="noopener" target="_blank"><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">https://bubblegumgames.com/advertising-partners</u></a>. &nbsp;The privacy policies of our partners may include additional terms and disclosures regarding their data collection and use practices. We encourage you to check those privacy policies to learn more about their practices.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">You may visit<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="http://www.aboutads.info/choices" rel=""> <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">www.aboutads.info/choices</u></a> or<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="http://www.youronlinechoices.eu/" rel=""> www.youronlinechoices.eu</a> (for individuals in the EU) to learn more about interest-based advertising and how to opt-out of this form of advertising on your web browser by companies participating in the Digital Advertising Alliance (“DAA”) self-regulatory program. &nbsp;If you wish to opt-out of interest based advertising in mobile apps on your device by companies that participate in the DAA’s AppChoices app, you may download that app onto your device and exercise your choice. &nbsp;AppChoices is available at the links below:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://itunes.apple.com/us/app/appchoices/id894822870?mt=8" rel=""><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">DAA AppChoices iOS</u></a></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://play.google.com/store/apps/details?id=com.DAA.appchoices&amp;hl=en" rel=""><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">DAA AppChoices Android</u></a></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="http://www.amazon.com/Digital-Advertising-Alliance-AppChoices/dp/B00SVQ4FMO" rel=""><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">DAA AppChoices Amazon</u></a></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">You may also limit data collection by third parties by using your mobile device settings. &nbsp;Please note that electing to opt-out will not stop advertising from appearing in your browser or applications. &nbsp;It may make the ads you see less relevant to your interests. &nbsp;Additionally, please not that if you use a different browser or erase cookies from your browser, or use a different mobile device, you may need to renew your opt-out choices.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">4. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">How We May Disclose Your Information to Third Parties</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum does not share your personal information except as approved by you or as described in this Policy.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We may share information we collect or derive with third parties for the following purposes:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;With service providers that perform services on our behalf, including the ones referenced above under “Third Party Services”;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;With our affiliates;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;For analytics and research purposes;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;When we have a good faith belief that we have to disclose the information in response to lawful requests by public authorities, including law enforcement or legal process purposes;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;To satisfy any applicable laws or regulations;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;When we believe in our sole discretion that our Services are being used in committing a crime, including to report such criminal activity or to share information with other companies and organizations for the purposes of fraud protection, credit risk reduction, and other security precautions;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;To protect our or a third party’s legal rights, investigate fraud, or to defend against a legal claim;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;As part of a business transfer such as a merger, acquisition, or at bankruptcy;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;We may share aggregate or anonymous information about you with advertisers, publishers, business partners, sponsors, and other third parties; and</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;We may use analytics services provided by third parties, including Google Analytics. &nbsp;These service providers may use cookies to collect information about your online activities across this and other sites over time for non-advertising purposes. &nbsp;To learn more about how Google analytics collects and processes data and the choices Google may offer to control these activities, you may visit<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="http://www.google.com/intl/en/policies/privacy/partners/" rel=""> http://www.google.com/intl/en/policies/privacy/partners/</a>.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">5. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Specific Provisions for EU Individuals</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Accessing and Correcting Your Personal Information. &nbsp;At any time, you may contact Bubblegum at the address provided in the “Contact Bubblegum Games” section herein and request to access the personal data that Bubblegum holds about you. Bubblegum may need to ask you to provide certain information to make sure you are who you claim to be. If you find the information on your account is not accurate, complete or updated, then please provide Bubblegum with the necessary information to correct it.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Withdrawing Your Consent. Contact us if you would like to withdraw your consent to the processing of your personal data. Exercising this right will not affect the lawfulness of processing based on consent before withdrawal.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Erasing or Restricting Access to Your Information. &nbsp;You may request to delete or restrict access to your personal data. We may postpone or deny your request if your personal data is in current use for providing Services or for other legitimate purposes, in which case we will let you know if we are unable to do so and why.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Transferring your Personal Data (Otherwise known as Your Right to Data Portability). &nbsp;You have the right to receive your personal data that you have provided us in a structured, commonly used and machine-readable format and the right to transmit that data to another party of your choice, where technically feasible. However, this right shall not apply where it would adversely affect the rights and freedoms of others.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Right to Make Complaint: if you consider that our processing of your personal data infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">If you have any concerns about the way we process your personal data, you are welcome to contact our data protection officer at <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="mailto:legal@bubblegumgames.com" target="_blank">legal@bubblegumgames.com</a> or write to us at the address set forth in the “Contact Bubblegum Games” section. We will look into your request and make good faith efforts to resolve any concern you may have.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">6. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Security Safeguards</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum takes reasonable measures to protect your information from unauthorized access or against loss, misuse or alteration by third parties. &nbsp;Although we make good faith efforts to store the information collected on the Services in a secure operating environment that is not available to the public, we cannot guarantee the absolute security of that information during its transmission or its storage on our systems. &nbsp;Further, while we attempt to ensure the integrity and security of our network and systems, we cannot guarantee that our security measures will prevent third-party “hackers” from illegally obtaining access to this information. &nbsp;We do not warrant or represent that your information will be protected against, loss, misuse, or alteration by third parties. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. &nbsp;Therefore, we cannot guarantee its absolute security.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">7. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Data Retention</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum retains your personal data for as long as needed to provide you Services, unless we are required by law to delete or if Bubblegum accepts your request to delete the information. We will also retain and use your personal data as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">8. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Our Policy Regarding Children</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We do not knowingly collect or solicit personal data from anyone under the age of 16 or knowingly allow such persons to use our Services. &nbsp;If you are under 16, please do not send any information about yourself to us, including your name, address, telephone number, or email address. No one under the age of 16 may provide any personal data. &nbsp;In the event that we learn that we have collected personal data from a child under age 16, we will delete that information as quickly as possible. &nbsp;If you believe that we might have any information from or about a child under the age of 16, please contact us.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">9. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Transfer of Personal Data Outside Your Country</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We may transfer information that we collect about you to affiliated entities, or to other third parties across borders and from your country or jurisdiction to other countries or jurisdictions around the world. Please note that these countries and jurisdictions may not have the same data protection laws as your own jurisdiction, and we take steps to ensure adequate safeguards are in place to enable transfer of information to the U.S. and the use and disclosure of information about you, including personal data, as described in this Policy.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">10. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Lawful Basis for Processing</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">On certain occasions, we process your personal data when it is necessary for the performance of a contract to which you are a party, such as to provide the Services to you. &nbsp;We may also process your personal data to respond to your inquiries concerning our products and services.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">On other occasions, we process your personal data where required by law. &nbsp;We may also process your personal data if necessary to protect your interests or the interests of a third party.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Additionally, we process your personal data when necessary to do so for fraud prevention, improving our network and services, and marketing our services to advertisers and publishers; where these interests are not overridden by your data protection rights.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">If the processing of personal data is necessary and there is no other lawful basis for such processing, we will generally ensure that consent has been obtained from you. &nbsp;You have the right to withdraw your consent to processing of personal data at any time.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">For questions about data processing, please contact our Data Protection Officer. &nbsp;Visit the “Contact Bubblegum Games” section below for contact information.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">11. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Privacy Shield Framework</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum transfers certain personal data to the U.S. and participates in and has certified its compliance with the EU-U.S. Privacy Shield Framework and the Swiss-U.S. Privacy Shield Framework. Bubblegum is committed to subjecting all personal data received from European Union (EU) member countries and Switzerland, respectively, in reliance on each Privacy Shield Framework, to the Framework’s applicable Principles. To learn more about the Privacy Shield Framework visit the U.S. Department of Commerce’s Privacy Shield List, available at: <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://www.privacyshield.gov/list" rel=""><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">https://www.privacyshield.gov/list</u></a>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum is responsible for the processing of personal data it receives under the Privacy Shield Framework and subsequently transfers to a third party acting as an agent on its behalf. Bubblegum complies with the Privacy Shield Principles for all onward transfers of personal data from the EU and Switzerland, including the onward transfer liability provisions.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">With respect to personal data received or transferred pursuant to the Privacy Shield Framework, Bubblegum is subject to the regulatory enforcement powers of the U.S. Federal Trade Commission. &nbsp;In certain situations, Bubblegum may be required to disclose personal data in response to lawful requests by public authorities, including to meet national security or law enforcement requirements.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">In compliance with the Privacy Shield Principles, Bubblegum commits to resolve complaints about our collection or use of your personal information. EU and Swiss individuals with inquiries or complaints regarding our Privacy Shield policy should first contact us at: <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="mailto:legal@bubblegumgames.com" target="_blank">legal@bubblegumgames.com</a>. We will attempt to answer your questions and satisfy your concerns in a timely and complete manner. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact or visit<a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://www.jamsadr.com/eu-us-privacy-shield" rel=""> <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">https://www.jamsadr.com/eu-us-privacy-shield</u></a> for more information or to file a complaint. &nbsp;The services of JAMS are provided at no cost to you.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">If your complaint is still not resolved through these channels, under certain conditions, more fully described on the Privacy Shield website here: <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint" rel=""><u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b">https://www.privacyshield.gov/article?id=How-to-Submit-a-Complaint</u></a>, you may invoke binding arbitration when other dispute resolution procedures have been exhausted.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">12. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Specific Provisions for California Consumers</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">These additional provisions for California consumers apply only to individuals who reside in California. &nbsp;The California Consumer Privacy Act of 2018 (“CCPA”) provides additional rights to know, delete and opt out, and requires “businesses” collecting or disclosing personal information to provide notice and a means to exercise those rights.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Categories of personal information collected in the preceding 12 months:</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;See Section 2 above (Information and Data We Collect from You and How We Collect It)</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Business purpose for collection</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;See Section 3 above (How We Use Your Information)</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Third parties with whom we may share your information</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">- &nbsp;See Section 4 above (Use of Your Information by Others)</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Right to Know and Right to Delete</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">For any of the personal information described above, you can request to know what personal information we collected, disclosed, used and sold, and request that we delete your personal information at any time.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">To exercise your right to know and right to deletion, please submit a request by:&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Emailing <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="mailto:privacy@bubblegumgames.com" target="_blank">privacy@bubblegumgames.com</a> with the subject line “California Rights Request.” &nbsp;We will need to verify your identity before processing your request. In order to verify your identity, we will generally require the matching of sufficient information you provide us to the information we maintain about you in our systems. In certain circumstances, we may decline a request to exercise the right to know and right to deletion, particularly where we are unable to verify your identity.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Upon verification of your request, we will delete (and direct our service providers to delete) your personal information from our records, unless retaining the information is necessary for us or our service providers to complete the transaction with you, detect security incidents or fraud, fixing errors, exercise free speech or another right provided by law, comply with legal obligations, or other internal and lawful uses.&nbsp;</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Right to Opt Out of Sale</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">CCPA gives you a right to direct a business that sells your personal information to stop selling &nbsp;your personal information and to refrain from doing so in the future. We do not sell any of your personal information and will require our service providers not to sell your personal information.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">You also have the right not to be discriminated against for exercising any of the rights listed above.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">If you are a California resident seeking to exercise your rights under the CCPA or have any questions or concerns, please email us at <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="mailto:privacy@bubblegumgames.com" target="_blank">privacy@bubblegumgames.com</a>. &nbsp;In certain circumstances, you are permitted to use an authorized agent to submit requests on your behalf where (i) you provide sufficient evidence to show that the requestor is an authorized agent with written permission to act on your behalf and (ii) you successfully verify your own identity with us.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We aim to respond to a consumer request for access or deletion within 45 days of receiving that request. If we require more time, we will inform you of the reason and extension period in writing.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">13. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Changes to This Policy</strong></u>.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">We may update this Policy to reflect changes to our data and information privacy practices. If we make any material changes we will notify you by means of a notice on the Services prior to the change becoming effective. We encourage you to periodically review this Policy for the latest information on our privacy practices. Please note that if Bubblegum needs to adapt the policy to legal requirements, the new policy will become effective immediately or as required.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c"><br></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">14. <u class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-29 c1-72 c1-75 c1-b"><strong class="x-el x-el-span c1-1w c1-1x c1-71 c1-2c c1-3j c1-72 c1-b">Contact Bubblegum Games</strong></u></span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">You may contact Bubblegum’s Data Protection Officer at <a class="x-el x-el-a c1-1w c1-1x c1-75 c1-1z c1-20 c1-7d c1-21 c1-5m c1-b c1-5f c1-29 c1-7e c1-7f" href="mailto:privacy@bubblegumgames.com" target="_blank">privacy@bubblegumgames.com</a> or the address below for further information.</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Attention: Legal</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Bubblegum Games, LLC</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">636 Ramona Street</span></p><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-78 c1-79 c1-7a c1-7b c1-7c">Palo Alto, CA 94301</span></p></div></div></div><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-2l c1-1m c1-5v c1-14 c1-1o c1-2n c1-1q c1-1r c1-7g c1-5c c1-b c1-c c1-5x c1-5y c1-1s c1-1t c1-1u c1-1v c1-d c1-7h c1-7i c1-7j c1-7k c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-5c c1-b c1-c c1-d c1-e c1-f c1-g"><span data-ux="Element" class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><img src="//img1.wsimg.com/isteam/stock/37493/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:400,cg:true" srcset="//img1.wsimg.com/isteam/stock/37493/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:400,cg:true,
+//img1.wsimg.com/isteam/stock/37493/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true 1.5x,
+//img1.wsimg.com/isteam/stock/37493/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:800,cg:true 2x,
+//img1.wsimg.com/isteam/stock/37493/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true 3x" alt="image956" data-ux="Image" data-aid="CONTENT_IMAGE1_RENDERED" class="x-el x-el-img c1-1 c1-2 c1-14 c1-4 c1-10 c1-11 c1-1b c1-7l c1-3m c1-2d c1-b c1-c c1-d c1-7m c1-e c1-f c1-g"></span></div></div></div></div></section> </div></div></div><div id="095254e8-2b5a-4d75-b717-cfdb5da18bb0" class="widget widget-footer widget-footer-footer-2"><div data-ux="Widget" role="contentinfo" class="x-el x-el-div x-el c1-1 c1-2 c1-7n c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div> <section data-ux="Section" class="x-el x-el-section c1-1 c1-2 c1-7n c1-i c1-j c1-b c1-c c1-m c1-n c1-d c1-e c1-f c1-g"><div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-10 c1-11 c1-12 c1-13 c1-14 c1-b c1-c c1-4s c1-d c1-4t c1-e c1-4u c1-f c1-4v c1-g"><div data-ux="Layout" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Grid" class="x-el x-el-div c1-1 c1-2 c1-17 c1-18 c1-19 c1-5u c1-1b c1-2r c1-1d c1-28 c1-1f c1-5c c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-7o c1-1m c1-5v c1-14 c1-1o c1-1p c1-1q c1-2v c1-b c1-c c1-d c1-7p c1-7q c1-e c1-f c1-g"><div data-ux="FooterDetails" data-aid="FOOTER_COPYRIGHT_RENDERED" data-typography="DetailsAlpha" class="x-el x-el-p c1-1 c1-2 c1-1z c1-20 c1-44 c1-1b c1-1d c1-b c1-7r c1-3b c1-3c c1-3f c1-7k c1-3g c1-3h c1-3i x-rt"><p style="margin:0"><span class="x-el x-el-span c1-76 c1-77 c1-b c1-3b c1-3f c1-3g c1-3h c1-3i">Copyright © 2020 Bubblegum Games - All Rights Reserved.</span></p></div></div><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-18 c1-7o c1-1m c1-5v c1-14 c1-1o c1-1p c1-1q c1-2v c1-b c1-c c1-d c1-7p c1-7q c1-e c1-f c1-g"><p data-ux="FooterDetails" data-aid="FOOTER_POWERED_BY_RENDERED" data-typography="DetailsAlpha" class="x-el x-el-p c1-1 c1-2 c1-1z c1-20 c1-44 c1-5s c1-1d c1-b c1-7r c1-3b c1-3c c1-3f c1-7s c1-7t c1-3g c1-3h c1-3i"><span></span></p></div></div></div></div></section> </div></div></div></div></div></div>
+<script type="text/javascript" src="//img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.3.68.3.js" crossorigin=""></script>
+<script type="text/javascript">window.cxs && window.cxs.setOptions({ prefix: "c2-" });</script>
+<script type="text/javascript">window.wsb=window.wsb||{};window.wsb["Theme13"]=window.wsb["Theme13"]||window.radpack("@widget/LAYOUT/bs-layout13-Theme-publish-Theme").then(function(t){return new t.default();});</script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/b810d34ae2a34121/script.js" crossorigin=""></script>
+<script type="text/javascript">(function(props,context) {
+        Core.utils.renderBootstrap({
+          elId:'bs-1',
+          componentName:'@widget/LAYOUT/bs-Hamburger-Component',
+          props:props,
+          context:context,
+          contextKey:'context-bs-1',
+          radpack:"@widget/LAYOUT/bs-Hamburger-Component"
+        });
+      })({"toggleId":"n-35241-navId-mobile","uniqueId":"n-35241","style":{"color":"highContrast","marginLeft":"0",":hover":{"color":"highlight"},"@md":{"display":"none"}},"widgetId":"0a1fc6c5-577c-474b-894a-21f0900e2821","section":"default","category":"accent","locale":"en-SG","renderMode":"PUBLISH"},{"widgetId":"0a1fc6c5-577c-474b-894a-21f0900e2821","widgetType":"HEADER","widgetPreset":"header9","section":"default","category":"accent","fontSize":"medium","fontFamily":"alternate","group":"Section","groupType":"Default","websiteThemeOverrides":{},"widgetThemeOverrides":{}});</script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/d4c207a7-a79b-44c6-bc46-bc7651a38dad/gpub/6fe472dec84107d8/script.js" crossorigin=""></script>
+<script type="text/javascript" src="//img1.wsimg.com/blobby/go/gpub/39db1d9197da01ae/script.js" crossorigin=""></script>
+<script type="text/javascript">window.wsb["StickyNav"]({"uniqueId":"header_stickynav35243","wrapperId":"header_navwrapper35244","logoHeight":80,"hasAnimation":true});</script>
+<script type="text/javascript">Number(window.vctElements)||(window.vctElements=0),window.vctElements++,window.markVisuallyComplete();</script>
+<script type="text/javascript">document.getElementById('page-35240').addEventListener('click', function() {}, false);</script>
+<script type="text/javascript">function tccl_dpsid(){for(var t="dps_site_id=",i=document.cookie.split(";"),e=0;e<i.length;e++){for(var n=i[e];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(t))return n.substring(t.length,n.length)}return null}_trfd.push({"tccl.baseHost":"secureserver.net"}),_trfd.push({"websiteId":"d4c207a7-a79b-44c6-bc46-bc7651a38dad"}),_trfd.push({"pd":"2020-09-22T14:37:16.586Z"}),_trfd.push({ap:"IPv2",ds:tccl_dpsid()||"-1"});function addTccl(){if(Number(window.vctElements)&&!window.VISUAL_COMPLETE){setTimeout(addTccl,500)}else{var t=document.createElement("script");t.setAttribute("src","//img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js");document.body.appendChild(t)}}addTccl();_trfd.push({"meta.numWidgets":1,"meta.theme":"layout13","meta.headerMediaType":"Image","meta.isOLS":false,"meta.isOLA":false,"meta.isMembership":false})</script><script src="//img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js"></script><script>(function() {var n=document.querySelector('[data-aid="HEADER_NAV_RENDERED"]');n.offsetHeight>0&&n.offsetWidth>0&&(Number(window.vctElements)||(window.vctElements=0),window.vctElements++);}())</script></body></html>

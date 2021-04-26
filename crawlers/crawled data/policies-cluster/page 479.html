@@ -1,207 +1,780 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Resso is a new music service for the next generation of music enthusiasts, offering an enhanced music discovery platform."><meta name="keywords" content="Resso,Resso app,music streaming,music community,vibes"><meta name="google-site-verification" content="mRBk57xRHwh0qZLW7DOI8s0m5wnM1AW-bq_GNXKw22s"><link rel="shortcut icon" href="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/favicon-resso.png"><link rel="dns-prefetch" href="//s1.ipstatp.com"><link rel="preload" href="//s1.ipstatp.com/anote/fe/socrates/home/static/media/Gilmer-Medium.ee173eff.woff" as="font" crossorigin="anonymous"><link rel="preload" href="//s1.ipstatp.com/anote/fe/socrates/home/static/media/Gilmer-Bold.a6c65d87.woff" as="font" crossorigin="anonymous"><link rel="preload" href="//s1.ipstatp.com/anote/fe/socrates/home/static/media/Gilmer-Regular.58fd4199.woff" as="font" crossorigin="anonymous"><title>Resso - Tune in together.</title><script async="" src="https://mon-va.byteoversea.com/slardar/sdk.js?bid=m_home"></script><script async="" src="https://mon-va.byteoversea.com/slardar/sdk.js?bid=m_home"></script><script>!function(e,o,t,n,a,r,i){e.SlardarMonitorObject=a,e[a]=e[a]||function(){(e[a].q=e[a].q||[]).push(arguments)},e[a].l=1*new Date,r=o.createElement(t),i=o.getElementsByTagName(t)[0],r.async=1,r.src="https://mon-va.byteoversea.com/slardar/sdk.js?bid=m_home",i.parentNode.insertBefore(r,i)}(window,document,"script",0,"Slardar"),window.location.host.includes("resso.app")&&window.Slardar("config",{bid:"m_home",ignoreAjax:[],ignoreStatic:[],hookFetch:!0,enableSizeStats:!0,context:{}})</script><link href="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/css/index.9e271b68.chunk.css" rel="stylesheet"><style data-styled="" data-styled-version="4.4.1"></style><script charset="utf-8" src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/js/0.4e398911.chunk.js"></script><style data-styled="" data-styled-version="4.4.1"></style><script charset="utf-8" src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/js/7.3097286a.chunk.js"></script><script src="https://sf16-scmcdn-va.ibytedtos.com/goofy/slardar/fe/sdk/plugins/monitors.3.6.23.maliva.js" async="" crossorigin="anonymous"></script><script src="https://sf16-scmcdn-va.ibytedtos.com/goofy/slardar/fe/sdk/plugins/sentry.3.6.23.maliva.js" async="" crossorigin="anonymous"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div class="file-page"><div class="interactive-gradient" style="position: fixed; inset: 0px 0px -3px; z-index: 0;"><video autoplay="" loop="" playsinline="" src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/media/gradient.06f37abf.mp4" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover; object-position: center center;"></video><div style="position: absolute; inset: 0px; background-color: rgba(0, 0, 0, 0.7);"></div></div><header class="header "><div class="logo white-logo"></div><div class="download-button-group" style="visibility: hidden; opacity: 0;"><div class="download-button">Download</div><div class="download-button-option-container"><div class="download-button-option"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAABYWlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxheVAzAAAokWNgYFJJLCjIYWFgYMjNKykKcndSiIiMUmB/yMAOhLwMYgwKicnFBY4BAT5AJQwwGhV8u8bACKIv64LMOiU1tUm1XsDXYqbw1YuvRJsw1aMArpTU4mQg/QeIU5MLikoYGBhTgGzl8pICELsDyBYpAjoKyJ4DYqdD2BtA7CQI+whYTUiQM5B9A8hWSM5IBJrB+API1klCEk9HYkPtBQFul8zigpzESoUAYwKuJQOUpFaUgGjn/ILKosz0jBIFR2AopSp45iXr6SgYGRiaMzCAwhyi+nMgOCwZxc4gxJrvMzDY7v////9uhJjXfgaGjUCdXDsRYhoWDAyC3AwMJ3YWJBYlgoWYgZgpLY2B4dNyBgbeSAYG4QtAPdHFacZGYHlGHicGBtZ7//9/VmNgYJ/MwPB3wv//vxf9//93MVDzHQaGA3kAFSFl7jXH0fsAAAROSURBVHgB7ZpvaE1xGMd3mc2fiZoUZW75mzQp/5phmxJKUVKL5oW98IJXorzgDSneSUpaSiuLlJIXamHDi7EtE8rf+TNMNhZbNMZ8ntp03O69273Pc+69R7+nvp3f+fP7Pt/ne55z7z3nnqwsF84B54BzwDngHHAOOAecA86BIDvQ39+fA8rBJdAKioNcj5l2jAiBSvAReKPILElQiXAjH9R5XfGM5wS1LhPdGDEVPPIY4h12sBIySRREEorPBg1eRyLG54JYl5lmzDgQYUjk6lKzZEEjwomJ4EukI571q0GryVQvRuzzmBE5FOMKTBMGjQwDbkS6MrD+neX6oNVjqhcD5MO5d8AQ76KTlVLTZEEkw4Q8ryuM+8BZMCld9WSnK3GcvPIh3AmawflQKNQe51jfd/n+Y4uzP5Yq5gL55Tsb9ICXoIXiW1kOGXCM4KBlYDWYBXJBL3gHGsA1uIQ3OEFRM8Bx0A1iRTM79oIp0SpjezGoApH3YWz6J+Rz6wpYFY1Hs828gxApZ/cE2AHkzA8nfnFQLbgJpLsKwWYg3ZJo1DBhFx31OdGJvh+POQWgEaQ7HiMgbFGwWQchaBqCmsBkC2EGHM/hWEIndWm4hnsJxM2BOaM44ALIFHNEbxiskYEmrL7mjyFCvmUyJaRrNtE99VpB6kuM7pmOiBdgpFaM0fyv8JRhjvyOUofFJbYbFZlijhiy3cocIVN1EN2TB8dbMEHIMiCqMafCUoe2g0oQkynm/ETLQUtzhEtr0CJrQQq+WrrnlWJ+1KlagxZHZU3Pxst+pNUaNM8PUUlyPkxyXtxpWoPGxGVP7c4PfqTTGjTaD1FJcsoNr3loDcoxV5Q8odwLmofWoE/mipInDCc/NfZMrUFtsalTvmetHxn/J4M28st+nLVJWoOeWgtS8Mmz7z2K+VGnag26HZU1fRv300Xyx4BZaG9Wx6NEnr1k0t38M/Qs57ajw8IlVQchohsRLRZCDDnkQf91OilswakyaEDARQshxhzz4WvCpG1aXtUlJskRIU8U5a8aNZfw+RD1dHpJsrzqDiL5a5Jn2oe114833pVEx2qDBhKeTDRxCo+v0uQyuSy4zMToJ2CmRowPc+/Q4ap/W0w6CBG/Ke6oDwVqKQ9rCUw6SETQRdks7gH5BsmEqOPElWqFmBkkQjBpBYt6YMor3AnGD44vxCC57FVhcokNKkDQLcZnBtfTuDxiYY7oNz/TdJHcUcu/mvLCVDqikaRFGNRnkdzcIBGFSQtYyJtfqX4kK2+ZLcQcebPDJEwvsUFFCLzPeCuQb7dUhTyTLrc0x3fhdNJOkGj0MEGQaFT6XpAfCaiyAnyLU207++RdxpXg7xNBxvJKcBk4DbpArHjPjnV+aE8ZJwWEwSnQBsSsB6AabABDPkvimFywBdSAu0B45FW/QyA/ZYW4RM4B54BzwDngHHAOOAecA84B54BzwDmQEgf+AM2nv//UYSDkAAAAAElFTkSuQmCC" alt="apple-icon"> App Store</div><div class="download-button-option"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAABYWlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxheVAzAAAokWNgYFJJLCjIYWFgYMjNKykKcndSiIiMUmB/yMAOhLwMYgwKicnFBY4BAT5AJQwwGhV8u8bACKIv64LMOiU1tUm1XsDXYqbw1YuvRJsw1aMArpTU4mQg/QeIU5MLikoYGBhTgGzl8pICELsDyBYpAjoKyJ4DYqdD2BtA7CQI+whYTUiQM5B9A8hWSM5IBJrB+API1klCEk9HYkPtBQFul8zigpzESoUAYwKuJQOUpFaUgGjn/ILKosz0jBIFR2AopSp45iXr6SgYGRiaMzCAwhyi+nMgOCwZxc4gxJrvMzDY7v////9uhJjXfgaGjUCdXDsRYhoWDAyC3AwMJ3YWJBYlgoWYgZgpLY2B4dNyBgbeSAYG4QtAPdHFacZGYHlGHicGBtZ7//9/VmNgYJ/MwPB3wv//vxf9//93MVDzHQaGA3kAFSFl7jXH0fsAAAQxSURBVHgB7Zu7axVBFMa9iWIkEaNBovERo+CzCRYGxFIbBSv/DBGxSGNjoY2FhZVaiw8sEqyMMVr4RqOFD0RBfCCKhcaYGMzr+jvhTtgMs5ndze69e+MZ+JiZc86e8813Zzd3d28WLNCmCqgCqoAqoAqoAqqAKpCpAsVicT3YOtci5NgM2uaaJ1fHs6B2MAqknU5KjmOPT2UoFifo9yTNk7vjWMy+0sKkGwPb45LkmA1gBJh2KG6O3MazogJ4ZFZGf9OQZVwLNoJdYD84ADrAJrAwEHeNuWkvGUz7TExV9yxIFj1pVkh/DtwAgwGbPRzCcAuctRx7q1qMMPIssstaaJLp7bD8VWtHhUXgJBhPooh1jOzCM2Bx1QoSJM5CWsFTkHZ7QcItwVpVN2YBTeCNQ5kBbN8c9jCTxP50OD9iW111wghhiNeB+45F9WNrAPLX67LDb5uulmLr6Z/YTubPwdKsRKrJKjF5O8FuR/6eQqEwBCbwdTv8tqlbYsEwjh7bybwdnHDY82uSTxT8AK72DmMrWAZ6ga/1EdAI5FblbUjwMPaV+VXEYgbZzpCFBM1yuxC1RYk9ZdFIZZrVKXYwArs4taPERqkZgdbMkMLMaToztsUQmerTyRY5S5HIWq5V0qfWUr+fQRwR/UpqDOMlktqpChSvvEarArYCia5BnEa1JNoBJsFrznvpp1rJV6m77T64jAe4yMV9GxC+r/DJd69sGwKsBc+AaY8ZrDJVGct3oEq1xgCPZkgEn0HJN+51xp9ZT5Eux+ovmYL48iLQRQfP64Zn1D72KUbR3yRvsAp8Z/s2i00Eohu0/OWaLofHgBSDx1e66Z1dIjCM3+Zecrm7KF/A7CNdBTK7WbSLx5i7OMkNb6w1xwqOQW7ehKpAno9SBVKBPAp43LqDVCCPAh637iAVyKOAx607SAXyKOBx6w5SgTwKeNxJdpDrTv2Xp04l3C5O8sJy+uFeFFJJBHK93XTZotTPMsbFyWVLlwOPC+RJ3T1g2h0GTaYK47w8MFsBF3kra9oDBvbzIUM7tI/9wMxkolgb4yJb9oOxSY89Fw/MDCf4tDKW92XvjS1On1igsCJ5EyiMZ1R7kmtQ1NzzIi4LgUZQZrQC6oxR80/adVMXiHNd3ktN/8w3bcKz5OuldiU+mFkohbi4DrWAu6BcTX7JtiaEzpzMqV+kg2wg3cJ86nVQyd5Pb9eUU6Oj5Le7hxhcv2bdGQiUV05fAvNUhzbZVJPbyRBMXv3ap/VfFlhnx8qceLmmLLF9xJeNt03W5vLfz1UgzxZQgVQgjwIet+4gFcijgMdd7h30ycHns8NmTK54l83Ep96XW6ALjhWcd9iMyRXvspn46u754lcDjgL5CV8/OAJCv/SJDxwG8u9UcswxUO4PtbpFV/aqgCqgCqgCqoAqoAqoAtko8A+f0JMmRUXUowAAAABJRU5ErkJggg==" alt="android-icon"> Google Play</div></div></div></header><div class="file-content"><div class="markdown-content">
-<div class="file-header">
-<h1 id="resso-privacy">Política de Privacidade Resso</h1>
+<!DOCTYPE html><html><head>
 
-<p>Última atualização: Dezembro de 2020</p>
-</div>
+    <meta charset="utf-8">
 
-<p>Bem-vindo ao Resso, o aplicativo de streaming de música social, fornecido ou controlado pela Moon Video Inc. ("nós" ou "nos").</p>
+    <title>Privacy Policy</title>
+    <meta name="description" content="">
 
-<p>Temos o compromisso de proteger e respeitar sua privacidade. Esta política explica nossas práticas relativas aos dados pessoais que coletamos de você ou que você nos fornece.</p>
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-<p>Por favor leia o seguinte texto com atenção para entender nossos pontos de vista e práticas sobre seus dados pessoais e como iremos tratá-los. Ao clicar em "Ler e Aceitar" ou ao navegar em nosso site, serviços, aplicativos, produtos e conteúdo (que incluem, mas não se limitam aos Serviços) (coletivamente, os "Serviços"), você aceita as práticas descritas nesta política. Os termos em letra maiúscula que não estão definidos nesta política têm o significado atribuído a eles nos Termos de Serviço.</p>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<p>Para obter informações sobre como entrar em contato conosco para esclarecer qualquer dúvida ou para obter esclarecimentos, consulte a Seção 13 "Contato" abaixo. Se você não concordar com o conteúdo desta Política, poderá optar por não usar os Serviços.</p>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/main.css?v6">
+</head>
 
-<h2 id="summary">RESUMO</h2>
+<body>
+    <div class="main">
 
-<h3 id="the-types-of-personal-data-we-use">Os Tipos de Dados Pessoais que Usamos</h3>
+        <header>
+            <a href="/" style="width: 15%; margin: 48px auto; display: block;">
+                <img src="img/logo.png" class="logo">
+            </a>
+        </header>
 
-<p>Nesta seção explicamos quais tipos de dados pessoais coletamos, usamos e divulgamos quando você cria uma conta e posta conteúdo nos Serviços. Você pode encontrar mais informações na seção abaixo “<a href="#the-types-of-personal-data-we-use">Os Tipos de Dados Pessoais que Usamos</a>”.</p>
+        <section style="padding-top: 10px">
+            <div class="container">
 
-<h3 id="for-what-purposes-do-we-use-your-personal-data">Com que Finalidades Usamos Seus Dados Pessoais</h3>
+                <!-- Content here -->
+                <center><h2>MUSCLE BOOSTER PRIVACY POLICY</h2></center>
+                <p>
+                    Last updated May 6, 2020
+                </p>
+                <p class="text-strong">
+                    Please read this Privacy Policy carefully before using Muscle Booster
+                </p>
+                <p>
+                    This Privacy Policy is aimed to inform you (“You”) as a user of the Muscle Booster, a service
+                    available via the link <a href="https://4homefitness.com/">https://4homefitness.com/</a> (the
+                    “Website”) and the related application
+                    software distributed via application store(s) (the “App”), collectively referred to as the
+                    “Service”, about collection, usage, sharing of Your information:
 
-<p>Usamos suas informações para fornecer os Serviços a você e garantir a segurança das pessoas. Quando apropriado, também usaremos suas informações pessoais para promover os Serviços de acordo com nossas obrigações legais. Você pode encontrar mais informações na seção abaixo de “<a href="#how-we-use-your-personal-data">Como Usamos Seus Dados Pessoais</a>”.</p>
+                    </p><ul>
+                        <li>
+                            If through the Website – by Kysana Enterprises Limited, a company having its registered
+                            address at Suite 2B, 143 Main Street, GX11 1AA Gibraltar; and
+                        </li>
+                        <li>
+                            If via the App – by A.L. AMAZING APPS LIMITED, a company having its registered address at
+                            Florinis, 7, Greg Tower, 2nd floor, 1065, Nicosia, Cyprus, –
+                        </li>
+                    </ul>
 
-<h3 id="how-we-share-your-personal-data">Como Compartilhamos Seus Dados Pessoais</h3>
+                    <p>
+                        collectively “we”, “us”, “our”.
+                    </p>
 
-<p>Somente compartilhamos seus dados em circunstâncias específicas com provedores de serviços terceirizados que nos ajudam a fornecer os Serviços, como provedores de armazenamento em nuvem. Também compartilhamos suas informações com parceiros de negócios e outras empresas do mesmo grupo que nós. Onde e quando exigido por lei, compartilharemos suas informações com agências ou órgãos reguladores. Além disto, por favor observe que determinados dados relativos às suas interações com o Serviço também podem ser divulgadas e disponibilizadas para outros usuários dos Serviços de acordo com as provisões dos Termos de Serviços. Você pode encontrar mais informações na seção abaixo de “<a href="#how-we-share-your-personal-data">Como Compartilhamos seus Dados Pessoais</a>”.</p>
+                    <p>
+                        You are also hereby informed of the options available to You in terms of the usage and
+                        disclosure of Your information by us.
+                    </p>
 
-<ol>
-<li><p><a name="the-types-of-personal-data-we-use"></a>Os Tipos de Dados Pessoais que Usamos</p>
+                    <p>
+                        This Privacy Policy is incorporated into, and is subject to, the Service <a href="/terms-of-use.html">Terms of Use</a>. We shall
+                        not collect, use or share Your information except as described in this Privacy Policy.
+                    </p>
 
-<p>Podemos coletar as seguintes informações sobre você:</p>
+                    <p>
+                        By choosing to use our Service You: (i) agree to the collection and use of information in
+                        relation to this Privacy Policy, (ii) warrant and guarantee that You are over 16 years of age
+                        (or are a parent or guardian with such authority to agree to this Privacy Policy for the benefit
+                        of an individual under 16 years of age). Please do not use the Service if You do not agree to
+                        this Privacy Policy.
+                    </p>
+                <p></p>
 
-<ul>
-<li><strong>Informações de perfil que você nos fornece.</strong> Você pode nos fornecer informações ao se registrar nos Serviços e criar uma conta, incluindo nome de usuário, apelido, endereço de e-mail, informações divulgadas em seu perfil de usuário, como sexo, nacionalidade, seu avatar/fotografia e descrição da biografia.</li>
-<li><strong>Conteúdo ou outras informações que você nos fornece.</strong>Você pode nos fornecer informações ao usar os Serviços, bem como quando se corresponder conosco por telefone, e-mail ou outras formas. Isso inclui o conteúdo da correspondência com você, os comentários que você faz sobre nossos Serviços e os artigos, músicas, vídeos e outros conteúdos que você pode optar por enviar em nossos Serviços, como playlists, listas de reprodução e qualquer outro conteúdo resultante de suas interações com os Serviços.</li>
-<li><strong>Informações sobre como você interage com os Serviços.</strong>Quando você se registra nos Serviços, atribuímos um ID exclusivo a você. Quando você acessa e usa os Serviços, coletamos automaticamente certas informações relacionadas ao seu uso como a data e a hora em que efetuou login, suas preferências de idioma, como você interage com o conteúdo, como outras pessoas interagem com o seu conteúdo, seu histórico de busca, incluindo curtidas recebidas e fornecidas, os artigos, músicas, vídeos e outros conteúdos que você visualiza, compartilha, navega, salva em 'Favoritas', baixa e adquire, seus seguidores e os usuários que você segue, listas de bloqueios, problemas encontrados, sua frequência de uso do Serviços, recursos utilizados, interação com os Serviços e log(s) referente ao disposto acima. Também inferimos suas preferências e informações sobre você, incluindo seus interesses, nacionalidade e localização a partir dessas informações, bem como de outras informações coletadas sobre você com o objetivo de personalizar o conteúdo.</li>
-<li><strong>Informações que você escolhe compartilhar de terceiros, como suas redes sociais.</strong>Se você optar por se registrar para usar os Serviços usando sua rede social (por exemplo, Facebook, Google) e informações da conta Apple, você nos fornecerá ou permitirá que sua rede social ou a Apple nos forneça seu nome de usuário e perfil público. Também compartilharemos determinadas informações com sua rede social, como o ID do seu aplicativo, o token de acesso e o URL de referência. Para obter mais informações sobre como e com que finalidade o provedor de rede social processa seus dados, consulte as suas respectivas políticas de privacidade.</li>
-<li><strong>Informações técnicas do seu dispositivo.</strong> Coletamos automaticamente determinados dados seus, incluindo endereços IP ou outros identificadores exclusivos de dispositivo, identificadores de publicidade para fins publicitários (como IDFA, OAID ou Google ID), Cookies (conforme definido abaixo), modelos de dispositivos, operadora de celular, fuso horário, país ou região em que seu cartão SIM está registrado, dados de uso, sistema operacional, bem como idioma e regiões do sistema. Também registramos dados sobre o desempenho do dispositivo, erros e travamentos e coletamos outros dados técnicos usados ​​para medir o diagnóstico. Também podemos vincular suas informações de contato ou registro à sua atividade em nossos Serviços ou ao vincular sua atividade em nossos Serviços em todos os seus dispositivos. Isso nos permite reconhecê-lo quando você usa dispositivos diferentes para acessar nossos Serviços e fornecer conteúdo personalizado que será do seu interesse.</li>
-<li><strong>Dados de localização.</strong> Quando você usa os Serviços, podemos inferir sua localização, incluindo informações de localização com base no seu cartão SIM ou endereço IP. Podemos usar essas informações para fornecer a você conteúdo personalizado.</li>
-<li><strong>Informação financeira.</strong> Se você adquirir conteúdo com a assistência de um terceiro provedor de serviços de pagamento, como Fortumo ou PayTM, poderá nos fornecer os detalhes do seu cartão de crédito/débito, número da sua conta bancária, código da agência bancária, nome da agência bancária e conta bancária para que esses prestadores de serviços ou nós possamos facilitar as transações ou efetuar reembolso. Terceiros envolvidos no processamento de seus dados para esses fins realizarão suas respectivas atividades seguindo suas próprias políticas e procedimentos. Para obter mais informações sobre como esses terceiros processam seus dados, consulte as políticas de privacidade específicas deles.</li>
-<li><strong>Mensagens.</strong> Coletamos e processamos as informações que você fornece, incluindo qualquer informação pessoal, no contexto de mensagens. As informações são coletadas e processadas para permitir o uso da função de mensagens. Esteja ciente de que as mensagens enviadas a outros usuários do nosso Serviço serão acessíveis por esses outros usuários e não podemos controlar se esses outros usuários decidem usar ou divulgar tais mensagens.</li>
-</ul></li>
-<li><p>Cookies</p>
+                <h3>
+                    What kind of information do we collect?
+                </h3>
+                <p>
+                    We may collect information that can identify You, such as Your name and email address (“Personal
+                    Information”), and other information that does not identify You, as listed below.
+                </p>
+                <p>
+                    <em>Information You provide</em>
+                </p>
+                <ul>
+                    <li>
+                        Your full name and surname, email address, password, gender, date of birth, height, weight and
+                        target weight, body type and target body type, problem areas, fitness level and workout
+                        location. We may collect and store the abovementioned information when You register and use the
+                        Service or provide it to us in some other manner, for example by corresponding with us (by email
+                        or chat, for instance) when You report a problem with the Service or when You subscribe to any
+                        of our services, or search for a service.
+                    </li>
+                </ul>
+                <p>
+                    <em>Note: Information about a third party</em>
+                </p>
+                <p>
+                    When You provide us with information about a third party, You must have the consent of that third
+                    party before providing us with that information. By providing us with information regarding a third
+                    party You warrant that You have their permission to provide that information to us.
+                </p>
+                <p>
+                    <em>Information collected automatically</em>
+                </p>
+                <ul>
+                    <li>
+                        Device information that may include information specific to Your device (e.g., OS version,
+                        hardware model, unique device identifier, network information); information about Your logging
+                        in, use of features, functions, or notifications on the device. We may also collect and use Your
+                        Apple Identifier for Advertising (IDFA) and Google Advertising ID (AAID) to recognize Your
+                        device and support advertising activities on our Services. These number values are not
+                        permanently tied to Your device and, depending on Your operating system, You can reset it
+                        through Your device settings.
+                    </li>
+                    <li>
+                        Usage information: Your user account registration date and time, information about the use of
+                        the Service, such as frequency of use, engagement with particular features, which sections of
+                        the Service user visits and Your common use patterns.
+                    </li>
+                    <li>
+                        Location: IP address, time zone, mobile service provider.
+                    </li>
+                </ul>
+                <p>
+                    If You purchase the access to or otherwise use the Service through the Website, we may additionally
+                    collect the following data:
+                </p>
+                <ul>
+                    <li>
+                        Transaction data: when You make payments through the Website, You need to provide financial
+                        account data, such as Your credit card number, billing and residence address, to our third-party
+                        service providers. We do not collect or store full credit card number data, though we may
+                        receive credit card-related data, data about the transaction, including: date, time and amount
+                        of the transaction, the type of payment method used, payment transaction identification number.
+                    </li>
+                    <li>
+                        Cookies. We may use cookies in a range of ways to improve the Your experience on the Website,
+                        including understanding how You use the Website and approving Your Website usage experience.
+                    </li>
+                </ul>
 
-<p>Utilizamos cookies e outras tecnologias semelhantes (por exemplo, web beacons, Flash cookies, etc.) ("<strong>Cookies</strong>") para coletar informações automaticamente, medir e analisar como você usa os Serviços, reconhecê-lo quando você retornar aos Serviços (por exemplo, suas preferências de idioma) e aprimorar sua experiência ao usar os Serviços. Cookies são pequenos arquivos que, quando colocados no seu dispositivo, permitem fornecer certos recursos e funcionalidades.</p>
+                <p>
+                    Cookies are text files placed on the computer to collect standard Internet log information and
+                    visitor's behavior information. When the You visit the Website, we may collect information from You
+                    automatically through cookies or similar technology. For further information, visit
+                    allaboutcookies.org.
+                </p>
 
-<p>Se, por qualquer motivo, você optar por não utilizar Cookies, poderá desativá-los alterando as configurações do seu navegador. Além disso, sua seleção de opt-out é específica para o navegador ou dispositivo específico que você está usando quando optar pelo opt-out, portanto, pode ser necessário exercer o opt-out separadamente para cada navegador ou dispositivo. Se você optar por recusar, desativar ou excluir Cookies, algumas das funcionalidades dos Serviços podem ficar indisponíveis para você. </p>
-</li>
-<li><p><a name="how-we-use-your-personal-data"></a>Como Usamos seus Dados Pessoais</p>
+                <p>
+                    There are a number of different types of cookies, however, the Website uses the following:
+                </p>
 
-<p>Sem prejuízo de outros fins de uso de seus dados descritos nesta política e nos Termos de Uso, usaremos as informações coletadas de você das seguintes maneiras:</p>
+                <ul>
+                    <li>
+                        Functionality – we use these cookies to recognize You on our Website and remember Your
+                        previously selected preferences. These could include what language You prefer and location You
+                        are in. A mix of first-party and third-party cookies are used.
+                    </li>
+                    <li>
+                        Activity – we use these cookies to collect information about the Your visit to the Website,
+                        the content You viewed, the links You followed and information about Your browser, device, and
+                        IP address.
+                    </li>
+                </ul>
 
-<ul>
-<li>fornecer os Serviços;</li>
-<li>personalizar o conteúdo que você recebe e fornecer a você um conteúdo personalizado que pode ser do seu interesse em conexão com os Serviços;</li>
+                <p>
+                    Most browsers accept cookies automatically. If You want to prevent cookies from being saved, you can
+                    select the ‘Accept no cookies’ option in Your browser settings. To find out exactly how this works,
+                    You can consult Your browser manufacturer’s instructions. You can delete cookies that have already
+                    been saved on Your computer at any time. However, in a few cases, some of the Website features may
+                    not function as a result.
+                </p>
 
-<li>entender como você usa os Serviços, incluindo nos dispositivos;</li>
-<li>inferir informações adicionais sobre você, como seus gostos, interesses, nacionalidade e localização;</li>
-<li>para medir e entender a eficácia da publicidade que servimos para você e outras pessoas e para fornecer publicidade direcionada;</li>
+                <h3>What do we collect this information for?</h3>
+                <ul>
+                    <li>
+                        Enhancing Your user experience on our Service by operating, maintaining, and providing You with
+                        all of the content and features of the Services;
+                    </li>
+                    <li>
+                        Managing Your account and providing You with customer support. We may use Your Personal
+                        Information to respond to Your requests for technical support, Service information or to any
+                        other communication You initiate (“customer support purposes”);
+                    </li>
+                    <li>
+                        Performing research and analysis about Your use of, or interest in, our products, services or
+                        content, or products, services or content offered by others (“analytics purposes”);
+                    </li>
+                    <li>
+                        Communicating with You via email, push notifications, reminders and/or through other digital
+                        methods about products or services that may be of interest to You either from us or other third
+                        parties. You can opt out of receiving push notifications by changing the settings on Your device
+                        or in Your browser;
+                    </li>
+                    <li>
+                        If applicable, developing and providing content and advertising tailored to Your interests on
+                        our Service and other third-party services (“marketing purposes”);
+                    </li>
+                    <li>
+                        Detecting and resolving any fraud or other illegal or undesirable user behavior;
+                    </li>
+                    <li>
+                        Taking other legally-required actions.
+                    </li>
+                </ul>
 
-<li>fornecer suporte ao usuário;</li>
-<li>fazer cumprir nossos termos, condições e políticas;</li>
-<li>comunicar com você;</li>
-<li>administrar os Serviços e para operações internas, incluindo solução de problemas, análise de dados, testes, pesquisa, estatística e pesquisa;</li>
-<li>permitir que você participe de recursos interativos dos Serviços, quando optar por fazê-lo;</li>
-<li>para nos ajudar a detectar abuso, fraude e atividades ilegais ou não autorizadas, para ajudar a manter os serviços seguros e protegidos;</li>
-<li>proteger nossos direitos e interesses com relação à manutenção dos Serviços, inclusive em situações em que seus dados possam ser necessários para solucionar disputas ou cumprir ordens de autoridades competentes;</li>
-<li>cumprir as obrigações legais e regulamentares às quais estamos sujeitos; ou</li>
-<li>desenvolver nossos serviços e conduzir o desenvolvimento de produtos e informar nossos algoritmos.</li>
-<li>para quaisquer outros fins revelados a você no momento em que coletamos suas informações ou de acordo com seu consentimento.</li>
+                <p>
+                    With respect to Your purchase of the access to the Service through the Website, Your information may
+                    be collected to process Your payments as described in detail below.
+                </p>
+                <p>
+                    We provide paid Content (as defined in the Terms of Use) within the Service. For this purpose, we
+                    use third-party services for payment processing (for example, payment processors). As a result of
+                    this processing, You will be able to make a payment for the Content and we will be notified that the
+                    payment has been made and either completed or not completed.
+                </p>
+                <p>
+                    We will not store or collect Your payment card details ourselves. This information will be provided
+                    directly to our third-party payment processors, referred to in the next section. Our payment
+                    processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council.
+                    Payment processors who follow PCI-DSS requirements are committed to ensuring the secure handling of
+                    payment information.
+                </p>
 
-</ul></li>
-<li><p><a name="how-we-share-your-personal-data"></a>Como Compartilhamos seus Dados Pessoais</p>
+                <h3>With whom and what do we share this information for and how may we disclose it?</h3>
+                <p>
+                    <em>Service Providers</em>
+                </p>
+                <p>
+                    We may share Your Personal Information with third parties that perform certain services on our
+                    behalf, such as our authorized service providers or analytics providers. In general, the third-party
+                    providers engaged by us will only collect, use and disclose Your information to the extent necessary
+                    to allow them to perform the services they provide to us, e.g. facilitating our Service and
+                    analyzing how our Service is used. Please note that they are obligated not to disclose or use the
+                    information for any other purpose.
+                </p>
+                <p>
+                    You can learn more about service providers with whom we may share Your Personal Information as
+                    described above hereunder, along with links to such service providers’ privacy policies, which we
+                    recommend You read, depending on whether You use the Website or the App.
+                </p>
+                <p class="text-strong">
+                    Service Providers as to the Website
+                </p>
+                <ol>
+                    <li>
+                        <p>Amazon Web Services</p>
+                        <p>
+                            We use Amazon Web Services, which is a hosting and backend service provided by Amazon, for
+                            personal data hosting and enabling our Service to operate and be distributed to its users.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Amazon PinPoint</p>
+                        <p>
+                            Amazon Pinpoint is AWS’s Digital User Engagement Service that provides tools, which enable
+                            Service audience management and segmentation, A/B testing and helps us understand user
+                            behavior.
+                        </p>
+                        <p>
+                            In order to receive the analytics mentioned above we share the following data with Amazon
+                            PinPoint:
+                        </p>
+                        <ul>
+                            <li>
+                                User data;
+                            </li>
+                            <li>
+                                Endpoint data;
+                            </li>
+                            <li>
+                                Event data.
+                            </li>
+                        </ul>
+                        <p>
+                            You can learn more about the Amazon Privacy Policy here: AWS Privacy Notice &amp; AWS Data
+                            Privacy FAQ.
+                        </p>
+                    </li>
+                    <li>
+                        <p>AppsFlyer</p>
+                        <p>
+                            We use AppsFlyer for analytics purposes, specifically for research and analysis of users
+                            interaction with the Website. Appsflyer helps us to understand, in particular, how users
+                            find our Website (for example, which advertiser served an ad that led You to our Website).
+                            Appsflyer also provides us with different analytics tools that enable us to research and
+                            analyze Your use of the Service.
+                        </p>
+                        <p>
+                            In order to receive these services from Appsflyer, we share such data as:
+                        </p>
+                        <ul>
+                            <li>
+                                Device type and model, CPU, system language, memory, OS version, Wi-Fi status, time
+                                stamp and zone, device motion parameters and carrier (“Technical Information”);
+                            </li>
+                            <li>
+                                IP address (which may also provide general location information), user agent, Google
+                                Advertiser ID and other similar unique identifiers (“Technical Identifiers”).
+                            </li>
+                        </ul>
+                        <p>
+                            You can learn more about the AppsFlyer Privacy Policy here:
+                            <a href="https://www.appsflyer.com/privacy-policy/">
+                                https://www.appsflyer.com/privacy-policy/
+                            </a>.
+                            Please note that You may cancel collection of Your Personal Information for and sharing it
+                            with AppsFlyer here:
+                            <a href="https://www.appsflyer.com/optout">https://www.appsflyer.com/optout</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Amplitude</p>
+                        <p>
+                            We use Amplitude for analytics and customer support purposes, specifically to understand how
+                            customers use our Service.
+                        </p>
+                        <p>
+                            As for analytics purposes, Amplitude helps us to understand, in particular, how users find
+                            our Website (for example, which advertiser had delivered an ad that led You to our Website).
+                            Amplitude also provides us with different analytics tools that enable us to research and
+                            analyze Your use of the Service, which helps us to decide what features we should focus on.
+                            As for customer support purposes, Amplitude helps us to respond to Your requests for
+                            technical support. For example, it enables us to track Your interaction with our Service in
+                            order to detect particular technical issues with the Website.
+                        </p>
+                        <p>
+                            In order to receive these services from Amplitude, we share such data as:
+                        </p>
+                        <ul>
+                            <li>
+                                Platform, device type, device family, country, city, region, carrier, OS, time zone,
+                                language, IP Address, locale, referral source (“technical information”);
+                            </li>
+                            <li>
+                                Your interaction with the Service (i.e. taps on the particular screens) and age, gender,
+                                email, (“user related information”);
+                            </li>
+                            <li>
+                                Unique identifiers (such as IDFA).
+                            </li>
+                        </ul>
+                        <p>
+                            Amplitude is EU-US Privacy Shield certified, which you can verify and learn more about here:
+                            <a href="https://www.privacyshield.gov/participant?id=a2zt000000001XZAAY&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt000000001XZAAY&amp;status=Active</a>.
+                            You can learn more about the Amplitude Privacy Policy here: <a href="https://amplitude.com/privacy">https://amplitude.com/privacy</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Crashlytics</p>
+                        <p>
+                            Crashlytics is a monitoring service provided by Google, which helps us to oversee
+                            infrastructure and Website performance, specifically we analyze Website crashes, reasons for
+                            such crashes and ways to avoid the crashes.
+                        </p>
+                        <p>
+                            You can learn more about the Crashlytics Privacy Policy here:
+                            <a href="https://docs.fabric.io/apple/fabric/data-privacy.html#crashlytics">https://docs.fabric.io/apple/fabric/data-privacy.html#crashlytics</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Facebook Pixel</p>
+                        <p>
+                            The Facebook Pixel is an instrument, which allows us to track and analyze user’s activity on
+                            the Website.
+                        </p>
+                        <p>
+                            You can learn more about the Facebook Pixel Privacy Policy here:
+                            <a href="https://www.facebook.com/policy.php">https://www.facebook.com/policy.php</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Google Analytics</p>
+                        <p>
+                            Google Analytics is a product analytics tool provided by Google, which helps us to analyze
+                            the Service data and understand our users to optimize the Service performance.
+                        </p>
+                        <p>
+                            You can learn more about the Google Analytics Privacy Policy here: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Advertising services providers</p>
+                        <p>
+                            We engage certain third-party service providers in order to help us spread the word about
+                            the Service and help the Service reach its potential users through reports and insights on
+                            how to optimize our promotional campaigns. For these providers, we recommend that You read
+                            their privacy policies so You can understand the manner in which Your Personal Information
+                            will be handled by these providers:
+                        </p>
+                        <ul>
+                            <li>
+                                Snapchat (<a href="https://www.snap.com/en-US/privacy/privacy-center/">https://www.snap.com/en-US/privacy/privacy-center/</a>);
+                            </li>
+                            <li>
+                                Pinterest (<a href="https://policy.pinterest.com/en/privacy-policy">https://policy.pinterest.com/en/privacy-policy</a>);
+                            </li>
+                            <li>
+                                Twitter (<a href="https://twitter.com/en/privacy">https://twitter.com/en/privacy</a>);
+                            </li>
+                            <li>
+                                Google AdWords (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Payment services providers</p>
+                        <p>
+                            Certain third-party service providers, such as payment gateways and other payment
+                            transaction processors, have their own privacy policies with respect to the information we
+                            are required to provide to them for Your purchase-related transactions. For these providers,
+                            we recommend that You read their privacy policies so You can understand the manner in which
+                            Your Personal Information will be handled by these providers:
+                        </p>
+                        <ul>
+                            <li>
+                                GTWS Solid Technologies Limited (<a href="https://solidtech.dev/terms">https://solidtech.dev/terms</a>);
+                            </li>
+                            <li>
+                                CHECKOUT LTD, CHECKOUT TECHNOLOGY LTD (<a href="https://www.checkout.com/legal/privacy-policy">https://www.checkout.com/legal/privacy-policy</a>);
+                            </li>
+                            <li>
+                                SafeCharge (<a href="https://www.safecharge.com/privacy-policy">https://www.safecharge.com/privacy-policy</a>);
+                            </li>
+                            <li>
+                                PayPal Holdings, Inc. (<a href="https://www.paypal.com/va/webapps/mpp/ua/privacy-full">https://www.paypal.com/va/webapps/mpp/ua/privacy-full</a>).
+                            </li>
+                        </ul>
+                        <p>
+                            We recommend that You read all the privacy policies indicated above so You can understand
+                            the manner in which Your Personal Information will be handled by these providers.
+                        </p>
+                    </li>
+                </ol>
 
-<p>Quando necessário, podemos compartilhar seus dados pessoais com os seguintes terceiros pelos seguintes motivos dentro ou fora do seu país:</p>
+                <p class="text-strong">
+                    Service Providers as to the App
+                </p>
+                <ol>
+                    <li>
+                        <p>AppsFlyer</p>
+                        <p>We use AppsFlyer for analytics purposes as described herein below.</p>
+                        <p>
+                            Appsflyer helps us to understand, in particular, how users find our App (for example, which
+                            advertiser had delivered an ad that led You to our App in App store). Appsflyer also
+                            provides us with different analytics tools that enable us to research and analyze Your use
+                            of the Service.
+                        </p>
+                        <p>
+                            In order to receive those services from AppsFlyer, we share such data as:
+                        </p>
 
-<ul>
-<li><strong>Plataformas de terceiros que você acessa.</strong> Se você acessar serviços de terceiros, como o Facebook ou o Google, para acessar os Serviços ou compartilhar informações sobre seu uso nos Serviços com terceiros, esses serviços de terceiros poderão coletar informações sobre você, incluindo informações sobre sua atividade nos Serviços, e eles podem notificar suas conexões com os serviços de terceiros sobre o uso dos Serviços, de acordo com as suas políticas de privacidade.</li>
-<li><strong>Provedores de serviço.</strong> Compartilhamos informações com fornecedores e prestadores de serviços de terceiros que nos ajudam a executar nossas operações comerciais. Por exemplo, fornecemos informações e conteúdo a provedores de serviços em nuvem, manutenção de banco de dados, armazenamento e hospedagem de dados, recuperação de sinistros, marketing e processamento de pagamentos.</li>
-<li><strong>Membros do nosso grupo.</strong> Podemos compartilhar suas informações com qualquer membro ou afiliado de nosso grupo, que inclui nossas subsidiárias, nossa holding final e suas subsidiárias e empresas que controlamos, são controladas ou sob controle comum, em cada caso dentro ou fora do seu país, para os propósitos estabelecidos acima ("<a href="#how-we-use-your-personal-data">Como Usamos seus Dados Pessoais</a>"). Moon Video Inc. continua sendo o principal responsável pela proteção de suas informações.</li>
-<li><strong>Judiciário ou agências regulatórias.</strong> Podemos compartilhar suas informações com órgãos de aplicação da lei, autoridades públicas ou fiscais ou outras organizações, se for legalmente exigido ou se acreditarmos de boa fé que esse uso é razoavelmente necessário para:
+                        <ul>
+                            <li>
+                                Device type and model, CPU, system language, memory, OS version, Wi-Fi status, time
+                                stamp and zone, device motion parameters and carrier (“Technical Information”);
+                            </li>
+                            <li>
+                                IP address (which may also provide general location information), User agent, IDFA
+                                (Apple identifier for advertisers), Google Advertiser ID and other similar unique
+                                identifiers (“Technical Identifiers”);
+                            </li>
+                            <li>
+                                Information relating to our ad campaigns and Your actions in the App, such as: clicks on
+                                the ads, ad impressions viewed, the URL from the referring website, downloads and
+                                installations of App, and other interactions, events and actions, such as add to cart,
+                                in-app purchases made, clicks, engagement time etc. (“Engagement Information”).
+                            </li>
+                        </ul>
+                        <p>
+                            Please read AppsFlyer privacy policy regarding its collection and use of data in order to
+                            perform services for us, available at <a href="https://www.appsflyer.com/services-privacy-policy">https://www.appsflyer.com/services-privacy-policy</a>
+                            , to acknowledge how AppsFlyer operates Your Personal Information. Please note that You may
+                            cancel collection of
+                        </p>
+                        <p>
+                            Your Personal Information for and sharing it with AppsFlyer using this link: <a href="https://www.appsflyer.com/optout">https://www.appsflyer.com/optout</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Amplitude</p>
+                        <p>We use Amplitude for analytics and customer support purposes as described herein above.</p>
+                        <p>
+                            As for analytics purposes, Amplitude helps us to understand, in particular, how users find
+                            our App (for example, which advertiser had delivered an ad that led You to our App in App
+                            store). Amplitude also provides us with different analytics tools that enable us to research
+                            and analyze Your use of the Service.
+                        </p>
+                        <p>
+                            As for customer support purposes, Amplitude helps us to respond to Your requests for
+                            technical support. For example, it enables us to track Your interaction with our App and in
+                            order to detect particular technical issues with our App.
+                        </p>
+                        <p>
+                            In order to receive those services from Amplitude, we share such data as:
+                        </p>
+                        <ul>
+                            <li>
+                                Age, gender, email, locale, referral source, plan type (“user related information”);
+                            </li>
+                            <li>
+                                Platform, device type, device family, country, city, region, carrier, OS, language, IP
+                                address (“technical information”);
+                            </li>
+                            <li>
+                                Your interaction with the App (i.e. taps on the particular screens).
+                            </li>
+                        </ul>
+                        <p>
+                            We may also share Your Personal Information with the Apple HealthKit application installed
+                            on Your device, provided You expressly gave a permission for that in the Apple HealthKit
+                            App. Personal Information may be shared only to the extent required by the Apple HealthKit
+                            App, so for more information on it please see <a href="http://www.apple.com/ios/health/">http://www.apple.com/ios/health/</a>.
+                        </p>
+                        <p>
+                            However, certain third-party service providers, such as payment gateways and other payment
+                            transaction processors, have their own privacy policies with respect to the information we
+                            are required to provide to them for Your in-App purchase-related transactions. For these
+                            providers, we recommend that You read their privacy policies, so that You can understand the
+                            manner in which Your Personal Information will be handled by these providers. For example,
+                            Apple and Google may be two such third-party companies that provide payments and they can be
+                            contacted through their websites: <a href="https://www.apple.com">https://www.apple.com</a>
+                            and <a href="https://play.google.com">https://play.google.com</a>.
+                        </p>
+                    </li>
+                </ol>
 
-<ul>
-<li>cumprir uma obrigação, processo ou solicitação legal (incluindo requisitos de relatórios fiscais e relacionados);</li>
-<li>fazer cumprir nossos Termos de Serviço e outros acordos, políticas e padrões, incluindo a investigação de qualquer possível violação dos mesmos;</li>
-<li>detectar, impedir ou resolver problemas técnicos, de fraude ou de segurança; ou</li>
-<li>proteger os direitos, propriedade ou segurança, sejam nossas, de nossos usuários, de terceiros ou do público, conforme exigido ou permitido por lei (incluindo a troca de informações com outras empresas e organizações para fins de proteção contra fraudes e redução do risco de crédito).</li>
-</ul></li>
-<li><strong>Devido a uma venda ou fusão.</strong> Também podemos divulgar suas informações a terceiros:
+                <p>
+                    <em>Law enforcement agencies and other public authorities</em>
+                </p>
+                <p>
+                    We may use and disclose personal data to enforce our Terms of Use to protect our rights, privacy,
+                    safety, or property, and/or that of our affiliates, You or others, and to respond to requests from
+                    courts, law enforcement agencies, regulatory agencies, and other public and government authorities,
+                    or in other cases provided for by law.
+                </p>
 
-<ul>
-<li>no caso de vendermos ou comprarmos qualquer negócio ou ativo, nesse caso, poderemos divulgar seus dados ao potencial vendedor ou comprador deste negócio ou ativo; ou</li>
-<li>se vendermos, comprarmos, fundirmos, formos adquiridos por, ou formarmos parcerias com outras empresas ou negócios, ou vendermos alguns ou todos os nossos negócios. Nessas transações, as informações do usuário podem estar entre as partes transferidas do negócio.</li>
-</ul></li>
-<li><strong>Perfis públicos.</strong> Observe que seu perfil e conteúdo estarão visíveis para qualquer pessoa que esteja usando os Serviços e também podem ser acessados ​​ou compartilhados por seus amigos e seguidores. Você pode alterar o conteúdo que seus amigos e seguidores podem acessar ou compartilhar alterando suas configurações em "Configurações de Privacidade".
-</li>
-</ul></li>
+                <p>
+                    <em>Third parties as part of a merger or acquisition</em>
+                </p>
+                <p>
+                    As we develop our business, we may buy or sell assets or business offerings. Information on
+                    customers is generally one of the transferred business assets in these types of transactions. We may
+                    also share such information with any affiliated entity (e.g. parent company or subsidiary) and may
+                    transfer such information in the course of a corporate transaction, such as the sale of our
+                    business, a divestiture, merger, consolidation, or asset sale, or in the unlikely event of
+                    bankruptcy.
+                </p>
 
-<li><p>Exercício dos Direitos de Proteção de Dados.</p>
+                <p>
+                    <em>International Data Transfers</em>
+                </p>
+                <p>
+                    Please note that our business is global, so when You provide Personal Information through our
+                    Service, the information may be sent to servers located in different countries around the world.
+                </p>
+                <p>
+                    If You reside in the European Economic Area, please note that we take all adequate security measures
+                    to provide suitable safeguards due to data transfer to third countries. Our sub-processors located
+                    in such countries are also bound by respective data transfer agreements between them and us to
+                    provide all available legal security measures in regard to data privacy. Should You have questions
+                    concerning data transfer to third countries please contact us at the email specified in section
+                    “Contact Us” below. Subject to applicable law, we may charge for this service and will respond to
+                    reasonable requests as soon as practicable, and in any event, within the time limits prescribed by
+                    law.
+                </p>
+                <h3>
+                    HOW YOU CAN ACCESS YOUR INFORMATION
+                </h3>
+                <p>
+                    If You would like to update or correct any information that You have provided to us through Your use
+                    of the Service, You may use the Service to do so. If You need help with rectification of data You
+                    think is inaccurate, please contact us via applicable email specified in section “Contact Us” below.
+                </p>
+                <p>
+                    You may also change certain Personal Information in Your account by going to the ‘Settings’ menu and
+                    editing Your account or sending an email request to us at the email specified in section “Contact
+                    Us” below.
+                </p>
+                <p>
+                    You can make a request to erase Your Personal Information through the ‘Settings’ menu of the
+                    Service. Please note that it may affect the Services provided, and You will not be able to use the
+                    full scope of the Services. When we delete any information, it will be deleted from the active
+                    database, but it may remain in our archives due to legal obligations. Should You require the
+                    deletion of such Personal Information from our archives, please contact us at the email specified in
+                    section “Contact Us” below. Please note that we may be required to keep such information in our
+                    archives and not delete it (or to keep this information for a certain time, in which case we will
+                    comply with Your deletion request only after we have fulfilled such requirements). Please also note
+                    that the erasing of Your Personal Information does not mean the automatic cancellation of Your
+                    subscription purchased via the App or the Website or refund of Your payments.
+                </p>
+                <p>
+                    You can make a request to receive the Personal Information related to You through the ‘Settings’
+                    menu of the Service. Should You make such a request, You will be required to provide us with an
+                    email address, which we would be able to send Your Personal Information to. Please note that You
+                    confirm and guarantee that the email address You provide to us in order to receive Your Personal
+                    Information shall belong to You and You shall be solely responsible for its correctness and validity
+                    and therefore we shall in any case not be liable for any breach of Your Personal Information due to
+                    sending it to that email address.
+                </p>
+                <p>
+                    If You reside in the European Economic Area You may object to the processing of Personal Information
+                    concerning You for marketing purposes by contacting us at the email specified in section “Contact
+                    Us” below and the related Personal Information shall no longer be processed for such purposes.
+                </p>
 
-<p>A Lei Brasileira de Proteção de Dados fornece certos direitos aos indivíduos em relação aos seus dados pessoais. Assim, buscamos garantir transparência e controles de acesso para permitir que os usuários se beneficiem dos direitos mencionados.</p>
+                <p>
+                    Please note that You may also opt out from collection of Your data for marketing and advertising
+                    purposes not only via our Service, but also on Your entire device using:
+                </p>
+                <p>
+                    <u>1) Your device settings</u>
+                </p>
+                <p>
+                    iOS: go to “Settings” -&gt; “Privacy” -&gt; “Advertising” -&gt; “Limit Ad Tracking”. You may additionally
+                    reset Your advertising identifier (this also may help You to see less of personalized ads) in the
+                    same section.
+                </p>
+                <p>
+                    Android: for Android 6.0 and higher – go to “Settings” -&gt; “Google” -&gt; “Ads” -&gt; ”Opt out of
+                    interest-based ads”. For Android 5.2 and lower, use Google Settings app -&gt; “Ads” -&gt; ”Opt out of
+                    interest-based ads”.
+                </p>
+                <p>
+                    You may additionally reset Your advertising identifier (this also may help You to see less of
+                    personalized ads) in the same section for both options mentioned.
+                </p>
+                <p>
+                    <u>2) and links below</u>:
+                </p>
+                <p>
+                    </p><ul>
+                        <li>
+                            Network Advertising Initiative – <a href="http://optout.networkadvertising.org/">http://optout.networkadvertising.org/</a>
+                        </li>
+                        <li>
+                            Digital Advertising Alliance – <a href="http://optout.aboutads.info/">http://optout.aboutads.info/</a>
+                        </li>
+                        <li>
+                            Digital Advertising Alliance (Canada) – <a href="http://youradchoices.ca/choices">http://Youradchoices.ca/choices</a>
+                        </li>
+                        <li>
+                            Digital Advertising Alliance (EU) – <a href="http://www.youronlinechoices.com/">http://www.Youronlinechoices.com/</a>
+                        </li>
+                        <li>
+                            DAA AppChoices page – <a href="http://www.aboutads.info/appchoices">http://www.aboutads.info/appchoices</a>
+                        </li>
+                    </ul>
+                <p></p>
+                <p>
+                    Please note that the result of such objection or cancellation may affect the process of the Services
+                    improvement. However, You would still be able to use the Service.
+                </p>
+                <p>
+                    If You think that the Personal Information related to You is inaccurate, but You can’t rectify it as
+                    described above, You may contact us at the email specified in section “Contact Us” below to restrict
+                    the processing of such data for the period of time we need to verify the accuracy of the Personal
+                    Information, which we will inform You of.
+                </p>
+                <p>
+                    As to the App, You can also stop collection of information by the App by uninstalling the App from
+                    Your mobile device. You may use the standard uninstall processes as may be available as part of Your
+                    mobile device or via the App marketplace or network.
+                </p>
 
-<p>Responderemos e/ou atenderemos às suas solicitações para o exercício de seus direitos abaixo, de acordo com a legislação aplicável e quando aplicável de acordo com a Lei de Proteção de Dados, quando entrar em vigor:</p>
+                <h3>
+                    How We Secure Your information
+                </h3>
+                <p>
+                    Security is our highest priority. We process Your information keeping Your security and privacy in
+                    mind.
+                </p>
+                <p>
+                    </p><ul>
+                        <li>
+                            We protect the security of Your information by using encryption protocols;
+                        </li>
+                        <li>
+                            We aggregate and pseudonymize all of the users’ Personal Information;
+                        </li>
+                        <li>
+                            We maintain physical, electronic and procedural safeguards in connection with the
+                            collection, storage and disclosure of Personal Information;
+                        </li>
+                        <li>
+                            We employ Personal Information systematic backups, which are intended to reduce the risk
+                            from disk crashes and errors, such as accidental information deletion.
+                        </li>
+                    </ul>
+                <p></p>
+                <p>
+                    While we cannot ensure or guarantee that loss, misuse or alteration of information will never occur,
+                    we make all reasonable efforts to prevent it. However, You should bear in mind that submission of
+                    information over the Internet is never entirely secure.
+                </p>
+                <p>
+                    Please note that we do not collect and we are not responsible for the collection or security of Your
+                    payment details.
+                </p>
 
-<ol>
-<li>confirmação se seus dados estão sendo processados;
-</li>
-<li>acesso a seus dados;
-</li>
-<li>correção de dados incompletos, imprecisos ou desatualizados;
-</li>
-<li>anonimato, bloqueio ou apagamento de dados;
-</li>
-<li>portabilidade de dados pessoais a terceiros;
-</li>
-<li>opor-se ao processamento de dados pessoais;
-</li>
-<li>informações sobre entidades públicas e privadas com as quais compartilhamos dados;
-</li>
-<li>informações sobre a possibilidade de recusar o fornecimento de consentimento quando o consentimento for necessário para um propósito específico e as respectivas consequências, quando aplicável;
-</li>
-<li>retirada do seu consentimento.
-</li>
-</ol>
+                <h3>
+                    Children’s Privacy
+                </h3>
+                <p>
+                    This Service does not address anyone under the age of 16. We do not knowingly collect personally
+                    identifiable information from children under 16. If we discover that a child under 16 has provided
+                    us with Personal Information, we shall take steps to delete such information and terminate the
+                    child’s account. If You are a parent or a guardian and You are aware that Your child has provided us
+                    with Personal Information, please contact us so that we will be able to take the necessary actions.
+                </p>
 
-<p><strong>Verificando sua identidade:</strong> para sua segurança e para nos permitir garantir que não divulgamos seus dados pessoais a terceiros não autorizados, a fim de verificar sua identidade e garantir o exercício adequado de seus direitos, podemos solicitar informações específicas e/ou documentos seus antes que possamos responder adequadamente a uma solicitação recebida sobre seus dados. Todos os dados e documentos recebidos de você no processo de resposta às suas solicitações serão usados ​​para os estritos fins de analisar sua solicitação, autenticar sua identidade e, finalmente, responder à sua solicitação.</p>
+                <h3>
+                    Retention
+                </h3>
+                <p>
+                    We will retain Your information for as long (i) as You have an account with the Service, or (ii) as
+                    the App is installed on Your mobile device, or (iii) as needed to provide You with our Service. We
+                    will also retain and use Your information, including copies of Your information, as necessary to
+                    comply with our legal obligations (including for tax and accounting purposes), resolve disputes, and
+                    enforce our agreements.
+                </p>
 
-<p><strong>Limitações aos seus direitos:</strong> Em certas situações, podemos ter razões legítimas para não atender a algumas de suas solicitações. Por exemplo, podemos optar por não divulgar determinadas informações a você quando uma divulgação puder afetar adversamente nossos negócios sempre que houver risco de violação de nossos segredos comerciais ou direitos de propriedade intelectual. Além disso, podemos nos abster de atender a uma solicitação de exclusão quando a manutenção de seus dados for necessária para cumprir obrigações legais ou regulamentares ou, quando essa manutenção for necessária para proteger nossos direitos e interesses em caso de disputa. Sempre que for esse o caso e não pudermos atender a uma solicitação que você fizer, informaremos os motivos pelos quais não podemos atender à sua solicitação.</p>
+                <h3>Changes to This Privacy Policy</h3>
+                <p>
+                    We may update our Privacy Policy from time to time. Thus, You are advised to check our Service
+                    occasionally to inform Yourself of any changes. We will notify You of any changes by posting the new
+                    Privacy Policy on this page. These changes are effective immediately after they are posted on this
+                    page. Your continued use of the Service after changes to the Privacy Policy have been posted will
+                    constitute Your acceptance of such changes.
+                </p>
 
-<p>Em caso de dúvida sobre sua privacidade, seus direitos ou como exercê-los, entre em contato conosco através do campo "Entre em contato". Se você tiver alguma dúvida sobre o processamento de seus dados pessoais, gostaríamos de esclarecê-los.</p>
-</li>
+                <h3>
+                    Contact Us
+                </h3>
+                <p>
+                    Please submit any questions, concerns or comments You have about this Privacy Policy or any requests
+                    concerning Your Personal Information via the following emails:
+                    </p><ul>
+                        <li>
+                            If relating to the use on the Website – <a href="mailto:support@musclebooster.io">support@musclebooster.io</a>; and
+                        </li>
+                        <li>
+                            If relating to the use in the App – <a href="mailto:support@musclebooster.fitness">support@musclebooster.fitness</a>.
+                        </li>
+                    </ul>
+                <p></p>
+                <!-- Content here -->
 
-<li><p>A segurança dos seus dados pessoais</p>
+            </div>
+        </section>
 
-<p>Implementamos medidas técnicas e organizacionais nas nossas políticas e controles de confidencialidade e segurança para ajudar a proteger seus dados pessoais de acordo com os requerimentos estabelecidos de acordo com a legislação aplicável. Infelizmente, a transmissão de informações pela internet não é completamente segura. Embora procuramos proteger seus dados pessoais, não podemos garantir a segurança de suas informações transmitidas através dos Serviços; qualquer transmissão é por sua conta e risco.</p>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <a href="#top">
+                            <img src="img/logo-footer.png" width="120">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <a href="terms-of-use.html" target="_blank">Terms of Use</a>
+                    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                    <a href="mailto:support@musclebooster.fitness">Contact Us</a>
+                </div>
+            </div>
+        </footer>
 
-<p>Ocasionalmente, os Serviços podem conter links para e a partir dos sites de nossas redes de parceiros, anunciantes e afiliados. Se você seguir um link para qualquer um desses sites, observe que esses sites têm suas próprias políticas de privacidade e que não aceitamos qualquer responsabilidade por essas políticas. Verifique essas políticas antes de enviar qualquer informação para esses sites.</p></li>
-<li><p>Retenção de Dados</p>
+    </div>
 
-<p>Reteremos suas informações enquanto pudermos ou formos obrigados a retê-las sob as leis aplicáveis. Observe que manteremos os dados e a hora do login associados a um endereço IP por pelo menos 6 meses para cumprir com a legislação aplicável.</p>
 
-<p>Após o término do uso de nossos serviços, poderemos armazenar suas informações em um formato agregado e anonimizado. Não obstante o acima exposto, também podemos reter qualquer informação pessoal conforme razoavelmente necessário para cumprir nossas obrigações legais, ou enquanto tivermos um interesse legítimo para fazê-lo, por exemplo, conforme possa nos ser exigido para permitir-nos resolver e litigar em disputas, fazer cumprir nossos acordos ou conforme autorizado por lei.</p></li>
-<li><p>Informações relativas a crianças</p>
 
-<p>Os Serviços não são direcionados a crianças menores de 16 anos. Se tomarmos conhecimento de que informações pessoais foram coletadas de uma pessoa com menos de 16 anos, excluiremos essas informações e encerraremos a conta da pessoa. Se você acredita que coletamos informações de um menor com menos de 16 anos, entre em contato conosco pelo e-mail contato@resso.app.</p>
-<p>Se você tem mais de 16 anos e menos de 18 anos, declara que teve o consentimento de seus pais ou responsável legal para usar os Serviços ou para registrar uma conta nos Serviços.</p>
-</li>
-
-<li><p>Transferência Internacional de Dados</p>
-
-<p>Compartilhamos seus dados pessoais globalmente com empresas do nosso grupo empresarial para realizar as atividades especificadas nesta Política. Também podemos subcontratar o processamento de dados envolvidos nos Serviços ou compartilhar seus dados pessoais com terceiros localizados em outros países. Seus dados pessoais podem, portanto, estar sujeitos às leis de privacidade diferentes daquelas aplicáveis ​​em seu país.</p>
-<p>Sempre que transferirmos seus dados pessoais para terceiros localizados em outros países, garantiremos que essas empresas estejam em conformidade com as leis de proteção de dados aplicáveis ​​e tomaremos todas as medidas que sejam razoavelmente necessárias para garantir a existência de salvaguardas adequadas para proteger suas informações pessoais e para garantir que sejam processadas com segurança.</p>
-</li>
-
-<li><p>Suas escolhas</p>
-
-<p>Você controla os dados pessoais que compartilha conosco. Por exemplo, você pode acessar e editar a maioria das informações do seu perfil fazendo login na sua conta. Você pode excluir o conteúdo que você enviou. Se você optar por fazer isso, pode excluir toda a sua conta enviando um e-mail para contato@resso.app e processaremos sua solicitação da maneira mais moderna possível. </p></li>
-<li><p>Reclamações</p>
-
-<p>No caso de você desejar fazer uma reclamação sobre como processamos seus dados pessoais, entre em contato conosco em primeira instância em contato@resso.app e nos esforçaremos para lidar com sua solicitação o mais rápido possível.</p></li>
-<li><p>Alterações</p>
-
-<p>Faremos esforços comercialmente razoáveis ​​para notificar geralmente todos os usuários sobre quaisquer alterações materiais a esta política, como por meio de um aviso em nossos Serviços; no entanto, você deve consultar esta política regularmente para verificar essas alterações. Também atualizaremos a data "Última atualização" na parte superior desta política, que reflete a data efetiva dessa política. Seu acesso contínuo ou uso dos Serviços após a data da política atualizada constitui sua aceitação da política atualizada. Se você não concorda com a política atualizada, deve parar de acessar ou usar os Serviços.</p></li>
-<li><p>Contato</p>
-
-<p>Perguntas, comentários e solicitações relacionadas a esta política são bem-vindos e devem ser enviados para contato@resso.app.</p></li>
-</ol>
-
-<h2>Termos Suplementares</h2>
-
-<h3>Brazil</h3>
-<p>Se você estiver usando a Plataforma no Brasil, os seguintes termos adicionais se aplicam. Se surgir qualquer conflito entre a Política de Privacidade principal e os termos adicionais, os seguintes termos prevalecerão:</p>
-
-<h3>Exercício dos Direitos de Proteção de Dados</h3>
-<p>A Lei Brasileira fornece certos direitos aos indivíduos em relação aos seus dados pessoais. Assim, buscamos garantir transparência e controles de acesso para permitir que os usuários se beneficiem dos direitos mencionados.</p>
-
-<p>Responderemos e/ou atenderemos às suas solicitações para o exercício de seus direitos abaixo, de acordo com a legislação aplicável e quando aplicável de acordo com a Lei Geral de Proteção de Dados, quando entrar em vigor:</p>
-
-<ul>
-<li>i. confirmação se seus dados estão sendo processados;</li>
-<li>ii. acesso a seus dados;</li>
-<li>iii. correção de dados incompletos, imprecisos ou desatualizados;</li>
-<li>iv. anonimato, bloqueio ou apagamento de dados;</li>
-<li>v. portabilidade de dados pessoais a terceiros;</li>
-<li>vi. opor-se ao processamento de dados pessoais;</li>
-<li>vii. informações sobre entidades públicas e privadas com as quais compartilhamos dados;</li>
-<li>viii. informações sobre a possibilidade de recusar o fornecimento de consentimento quando o consentimento for necessário para um propósito específico e as respectivas consequências, quando aplicável;</li>
-<li>ix. retirada do seu consentimento.</li>
-</ul>
-
-<h3>Verificando sua identidade:</h3>
-<p>Para sua segurança e para nos permitir garantir que não divulgamos seus dados pessoais a terceiros não autorizados, a fim de verificar sua identidade e garantir o exercício adequado de seus direitos, podemos solicitar informações específicas e/ou documentos seus antes que possamos responder adequadamente a uma solicitação recebida sobre seus dados. Todos os dados e documentos recebidos de você no processo de resposta às suas solicitações serão usados ​​para os estritos fins de analisar sua solicitação, autenticar sua identidade e, finalmente, responder à sua solicitação.</p>
-
-<h3>Limitações aos seus direitos:</h3>
-<p>Em certas situações, podemos ter razões legítimas para não atender a algumas de suas solicitações. Por exemplo, podemos optar por não divulgar determinadas informações a você quando uma divulgação puder afetar adversamente nossos negócios sempre que houver risco de violação de nossos segredos comerciais ou direitos de propriedade intelectual. Além disso, podemos nos abster de atender a uma solicitação de exclusão quando a manutenção de seus dados for necessária para cumprir obrigações legais ou regulamentares ou, quando essa manutenção for necessária para proteger nossos direitos e interesses em caso de disputa. Sempre que for esse o caso e não pudermos atender a uma solicitação que você fizer, informaremos os motivos pelos quais não podemos atender à sua solicitação.</p>
-
-<p>Em caso de dúvida sobre sua privacidade, seus direitos ou como exercê-los, entre em contato conosco através do campo "Entre em contato". Se você tiver alguma dúvida sobre o processamento de seus dados pessoais, gostaríamos de esclarecê-los.</p>
-
-<h3>Informações relativas às crianças</h3>
-<p>Os Serviços não são direcionados a menores de 16 anos. Se necessário de acordo com legislação de dados aplicável, se você tiver mais de 16 anos mas tiver menos de 18 anos, só poderá usar e registrar uma conta com a assistência de seus pais ou responsáveis legais e você declara que teve essa assistência para usar os Serviços e concordar com esta Política.</p>
-<p>Se você acredita que coletamos informações de um menor de 16 anos, entre em contato conosco pelo email: contacts@resso.app.</p>
-
-<h3>Idioma</h3>
-<p>A Política pode ser disponibilizada no idioma inglês e no idioma português. Se você for um usuário localizado no Brasil, deverá consultar a versão em português, que prevalecerá.</p>
-</div></div><div class="file-page-bottom-area"></div><div class="file-page-option-area"><div class="country-selector"><div class="selector-input "><span>BR</span><img class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABYWlDQ1BrQ0dDb2xvclNwYWNlRGlzcGxheVAzAAAokWNgYFJJLCjIYWFgYMjNKykKcndSiIiMUmB/yMAOhLwMYgwKicnFBY4BAT5AJQwwGhV8u8bACKIv64LMOiU1tUm1XsDXYqbw1YuvRJsw1aMArpTU4mQg/QeIU5MLikoYGBhTgGzl8pICELsDyBYpAjoKyJ4DYqdD2BtA7CQI+whYTUiQM5B9A8hWSM5IBJrB+API1klCEk9HYkPtBQFul8zigpzESoUAYwKuJQOUpFaUgGjn/ILKosz0jBIFR2AopSp45iXr6SgYGRiaMzCAwhyi+nMgOCwZxc4gxJrvMzDY7v////9uhJjXfgaGjUCdXDsRYhoWDAyC3AwMJ3YWJBYlgoWYgZgpLY2B4dNyBgbeSAYG4QtAPdHFacZGYHlGHicGBtZ7//9/VmNgYJ/MwPB3wv//vxf9//93MVDzHQaGA3kAFSFl7jXH0fsAAAFwSURBVFgJ7Za9SwNBEMVzYuG/lE6I/62BhGCREEkpBlLYWSSQKmAgWviBgh/ne2SKW7KzN3t35Qwsszs777fvJgj2eh4+AZ+AT8AnEEygCE6VQ1mWfRwHWOeVchfbL0CmRVE8xGBnsaLULpG7NkP0BdYVN7FIGdrHBB3V3jROytAMoj9N2KJO5o2mVw3hN95BtNCELeoLYUcRqiHpvkPeRpXNimSRqUbSEL6E4x1hfaoE+wUZI2GqqqQhqgB4RZqoBPvFRFhJRa0hqgF6RFolSenLlTDSXbg1GRIK/+oOtcTTBmqoNYXZEL7wG8Qh1q+JfGxi71C0JpnZEGkAPyHdmsjHprlozJIsQ0K9R94YXmDP0tAXtGQbwheXIIyxPgJSeODdWHrDm5pTtiHy8NA7Ek1pQTPsyY5GhvgKHlwjxX6Spdxlm6GgsSF5bY5c/a+Ae9YaRytDmMQPXr7GesF65l5q2Hr4BHwCPgGfQCcT+AeP9kIGX4qaVwAAAABJRU5ErkJggg==" alt="drop down"></div></div></div></div></div><script src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/js/runtime-index.0b71dafb.js"></script><script src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/js/vendors~index.3e0d14dd.chunk.js"></script><script src="https://sf16-scmcdn-sg.ibytedtos.com/goofy/anote/socrates/home-file/static/js/index.2b3e174e.chunk.js"></script></body></html>
+</body></html>

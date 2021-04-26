@@ -1,972 +1,310 @@
-<!DOCTYPE html><html class="mac chrome webkit5 "><head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-                    <link rel="canonical" href="https://help.kustom.rocks/i418-privacy-policy">
-        
-        <title>Privacy Policy | Kustom Heavy Industries</title>
-        
-
-        
-                    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//cdn.helprace.com/js/dist/libs/sentry-20210316-0154-254-74dbe1d.js" crossorigin="anonymous"></script>
-            <script>
-            if (window.Sentry) {
-                window.Sentry.init({
-                    dsn: 'https://9e7be488a19247058f8b0556071ca2c8@sentry.io/5169410',
-                    release: 'helprace@' + "254",
-                    whitelistUrls: [
-                        window.location.hostname, // alias page
-                        /helprace\.com/ // page and cdn
-                    ],
-                    ignoreErrors: [
-                        /SecurityError\: Blocked a frame with origin/, // Bug in auto-fill library of browser
-                        'GUI is not defined', // tmp, po file not loaded, fix later
-                        'Application is not defined', // tmp, po file not loaded, fix later
-                        'null' // no info
-                    ]
-                });
-
-                window.Sentry.configureScope(function(scope) {
-                    
-                                        
-                    scope.setTag("plan", "Complete");
-                    scope.setTag("appTickets", "1");
-                    scope.setTag("appCommunity", "1");
-                    scope.setTag("appKB", "1");
-
-                    scope.setTag("accountId", "2759");
-                    scope.setTag("accountName", "kustom");
-                    scope.setTag("accountDays", "1796");
-                                    });
-            }
-
-            window.onerror = function (message, url, line, column, error) {
-                if (error instanceof SyntaxError) {
-                    error.stack = url + ':' + line;
-                }
-
-                window.Sentry && window.Sentry.captureException(error);
-            };
-            </script>
-        
-        <link href="//cdn.helprace.com/js/dist/css/front-20210316-0154-254-74dbe1d.css" type="text/css" rel="stylesheet">
-
-		<!-- Leave for better time/support. Problems with Safari 
-        <link href="//cdn.helprace.com/fonts/fa-light-300-20210316-0154-254-74dbe1d.woff2" type="font/woff2" rel="preload" as="font" crossorigin="anonymous" />
-		-->
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-        
-        <script>
-            var language = 'en';
-            var languageTinyMce = 'en_GB';
-            var languagesRtl = "ar,fa,he";
-            var allowedImageMimes = {"image\/gif":"gif","image\/jpg":"jpg","image\/jpeg":"jpeg","image\/png":"png","image\/x-png":"png","image\/svg+xml":"svg"}
-
-            window.assets_url = "//cdn.helprace.com/";
-            window.routes     = {"front":["",{"module":"default","controller":"index","action":"index","lang":"df","account":"main"}],"supportedLanguages":["supported-languages",{"module":"default","controller":"settings","action":"supported-languages","lang":"df","account":"main"}],"tickets":["tickets",{"module":"default","controller":"index","action":"tickets","lang":"df","account":"main"}],"spaces":["spaces",{"module":"default","controller":"index","action":"spaces","lang":"df","account":"main"}],"spaceChannel":[":spaceName\/:channel",{"module":"default","controller":"space","action":"show","channel":"all","lang":"df"},{"spaceName":"s[0-9]+(-?.+)?","channel":"([a-zA-Z])?"}],"spaceChannelPreset":[":spaceName\/:channel\/:preset\/:page",{"module":"default","controller":"space","action":"channel","lang":"df","preset":"default","page":1},{"spaceName":"s[0-9]+(-?.+)?","preset":"([a-zA-Z]+)?","page":"([0-9]+)?"}],"spaceChannelCategory":[":spaceName\/:channel\/:categoryTitle\/:page",{"module":"default","controller":"space","action":"channel","lang":"df","preset":"default","page":1},{"spaceName":"s[0-9]+(-?.+)?","categoryTitle":"c[0-9]+(-?.+)?","page":"[0-9]+"}],"spaceChannelPresetCategory":[":spaceName\/:channel\/:preset\/:categoryTitle\/:page",{"module":"default","controller":"space","action":"channel","lang":"df","preset":"default","categoryTitle":"c0-all","page":1},{"spaceName":"s[0-9]+(-?.+)?","categoryTitle":"c[0-9]+(-?.+)?","preset":"[a-zA-Z]+","page":"[0-9]+"}],"spaceChannelPresetAllItems":[":spaceName\/:channel\/all\/:preset\/:page",{"module":"default","controller":"space","action":"channel","lang":"df","preset":"default","page":1,"allItems":true},{"spaceName":"s[0-9]+(-?.+)?","preset":"([a-zA-Z]+)?","page":"([0-9]+)?"}],"allItems":[":spaceName\/all\/:preset\/:page",{"module":"default","controller":"space","action":"show-all-items","lang":"df","account":"main","preset":null,"page":1},{"spaceName":"s[0-9]+(-?.+)?","page":"[0-9]+"}],"showItem":[":itemTitle\/:page\/:sortComments",{"module":"default","controller":"item","action":"show","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","page":"[0-9]+"}],"deleteItem":["delete\/item\/:id",{"module":"default","controller":"item","action":"delete","lang":"df"}],"addComment":["add-comment\/:itemTitle\/:page\/:sortComments",{"module":"default","controller":"comment","action":"save","lang":"df","title":"","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","page":"[0-9]+"}],"editComment":["edit-comment\/:commentId\/:page\/:sortComments",{"module":"default","controller":"comment","action":"save","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"voteComment":["vote-comment\/:commentId\/:commentRating\/:page\/:sortComments",{"account":"main","module":"default","controller":"comment","action":"vote-comment","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","commentRating":"(Positive|Negative)+","page":"[0-9]+"}],"unvoteComment":["unvoteComment\/:commentId\/:page\/:sortComments",{"account":"main","module":"default","controller":"comment","action":"unvote-comment","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"voteItem":["vote-item\/:itemTitle\/:itemRating\/:page\/:sortComments",{"module":"default","controller":"item","action":"vote","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","itemRating":"[-0-9]+","page":"[0-9]+"}],"unvoteItem":["unvote-item\/:itemTitle\/:page\/:sortComments",{"module":"default","controller":"item","action":"unvote","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","page":"[0-9]+"}],"setItemStatus":["set-item-status\/:itemTitle\/:status\/:page\/:sortComments",{"module":"default","controller":"item","action":"set-status","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","status":"[a-z_]+","page":"[0-9]+"}],"setCommentBest":["set-comment-best\/:commentId\/:page\/:sortComments",{"module":"default","controller":"comment","action":"set-comment-best","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"setCommentSpam":["set-comment-spam\/:commentId\/:page\/:sortComments",{"module":"default","controller":"comment","action":"set-comment-spam","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"setCommentNotBest":["set-comment-not-best\/:commentId\/:page\/:sortComments",{"module":"default","controller":"comment","action":"set-comment-not-best","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"deleteComment":["delete-comment\/:commentId\/:page\/:sortComments",{"module":"default","controller":"comment","action":"delete-comment","lang":"df","page":1,"sortComments":null},{"commentId":"[0-9]+","page":"[0-9]+"}],"addSubscription":["add-subscription\/:itemTitle\/:page\/:sortComments",{"module":"default","controller":"subscription","action":"add-subscription","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","page":"[0-9]+"}],"deleteSubscription":["delete-subscription\/:itemTitle\/:page\/:sortComments",{"module":"default","controller":"subscription","action":"delete-subscription","lang":"df","page":1,"sortComments":null},{"itemTitle":"i[0-9]+(-?.+)?","page":"[0-9]+"}],"shareItemViaEmail":["share-item-via-email\/:itemTitle",{"module":"default","controller":"item","action":"share-via-email","lang":"df"},{"itemTitle":"i[0-9]+(-?.+)?"}],"getChannelsList":["get-channels\/:spaceName",{"module":"default","controller":"space","action":"get-channels","lang":"df"},{"spaceName":"s[0-9]+(-?.+)?"}],"getCategoriesList":["get-categories\/:spaceName\/:channel",{"module":"default","controller":"space","action":"get-categories","lang":"df"},{"channel":"[a-z0-9_-]+","spaceName":"s[0-9]+(-?.+)?"}],"getChannelsAndCategoriesDataFront":["get-channels-and-categories-data-front\/:spaceName\/:channel",{"module":"default","controller":"space","action":"get-channels-and-categories-data-front","lang":"df","channel":"all"},{"channel":"[a-z0-9_-]+","spaceName":"s[0-9]+(-?.+)?"}],"addItem":["add\/:spaceName\/:channel",{"module":"default","controller":"item","action":"save-item","lang":"df","channel":""},{"channel":"([a-z0-9_-]+)?","spaceName":"s[0-9]+(-?.+)?"}],"deleteTickets":["tickets\/delete",{"module":"default","controller":"ticket","action":"delete-from-front","lang":"df","account":"main"}],"editItem":["edit\/:itemTitle\/:spaceName\/:channel",{"module":"default","controller":"item","action":"save-item","lang":"df","spaceName":"","channel":""},{"itemTitle":"i[0-9]+(-?.+)?","channel":"([a-z0-9_-]+)?","spaceName":"s[0-9]+(-?.+)?"}],"imageManagerLoad":["image-manager\/load\/*",{"module":"default","controller":"image-manager","action":"load","lang":"df"}],"deleteAttachment":["delete-attachment\/:id\/:itemId",{"module":"default","controller":"item","action":"delete-attachments","lang":"df"}],"getAllChannelsList":["search\/get-all-channels",{"module":"default","controller":"space","action":"get-all-channels","lang":"df"}],"userAutocompleter":["search\/user-autocomplete",{"module":"default","controller":"search","action":"user-autocomplete","lang":"df"}],"search":["search\/:page",{"module":"default","controller":"search","action":"search","lang":"df","account":"main","page":1},{"page":"[0-9]+"}],"searchFeedback":["feedback\/search\/:page",{"module":"default","controller":"search","action":"search","lang":"df","account":"main","page":1,"feedback":true},{"page":"[0-9]+"}],"getRelatedForText":["get-related-for-text",{"module":"default","controller":"search","action":"get-related-for-text","lang":"df","account":"main"}],"getRelatedForTextFeedback":["feedback\/get-related-for-text",{"module":"default","controller":"search","action":"get-related-for-text","lang":"df","account":"main","feedback":true}],"logout":["auth\/logout",{"module":"default","controller":"sso","action":"logout","lang":"df","account":"main"}],"logoutSls":["auth\/sls",{"module":"default","controller":"sso","action":"single-logout","lang":"df","account":"main"}],"authAssert":["auth\/assert\/:targetAccount\/:return_to\/:authHost",{"module":"default","controller":"sso","action":"assert-auth","lang":"df","account":"main","targetAccount":"","return_to":"","authHost":""}],"authSsoCheck":["auth\/sso-check\/:targetAccount\/*",{"module":"default","controller":"sso","action":"sso-check","lang":"df","targetAccount":""}],"forceLogin":["backup-login",{"module":"default","controller":"sso","action":"force-login","lang":"df"}],"auth":["auth\/login\/:targetAccount\/*",{"module":"default","controller":"sso","action":"login","lang":"df","targetAccount":""}],"forgotPassword":["auth\/forgot-password",{"module":"default","controller":"sso","action":"forgot-password","lang":"df","account":"main"}],"getMenuItems":["auth\/get-menu-items",{"module":"default","controller":"sso","action":"get-menu-items","lang":"df"}],"authSamlMetadata":["saml\/metadata",{"module":"default","controller":"saml-sp","action":"metadata","lang":"df","account":"main"}],"authSamlAssertion":["saml\/assertion",{"module":"default","controller":"saml-sp","action":"assertion","lang":"df","account":"main"}],"authSamlSingleLogout":["saml\/sls",{"module":"default","controller":"saml-sp","action":"sls","lang":"df","account":"main"}],"authSamlLogout":["saml\/logout",{"module":"default","controller":"saml-sp","action":"logout","lang":"df","account":"main"}],"authJwtLogin":["jwt",{"module":"default","controller":"jwt","action":"login","lang":"df","account":"main"}],"authJwtSso":["jwt\/:targetAccount",{"module":"default","controller":"jwt","action":"sso","lang":"df","account":"main"}],"oAuthProvider":["oauth\/:provider\/*",{"module":"default","controller":"oauth","action":"login","lang":"df","account":"main"}],"authOAuthInputEmail":["oauth\/input-email",{"module":"default","controller":"oauth","action":"input-email","lang":"df","account":"main"}],"authOAuthVerifyEmail":["oauth\/verify-email",{"module":"default","controller":"oauth","action":"verify-email","lang":"df","account":"main"}],"authConfirm":["auth\/confirm",{"module":"default","controller":"sso","action":"confirm","lang":"df","account":"main"}],"ssoConfirm":["auth\/confirm-sso",{"module":"default","controller":"auth","action":"confirm","lang":"df","account":"main"}],"externalConfirm":["auth\/confirm-external",{"module":"default","controller":"auth","action":"confirm","lang":"df","account":"main"}],"validateUserRegistrationField":["registration\/validate",{"module":"default","controller":"register-user","action":"validate","lang":"df","account":"main"}],"submitUserRegistration":["registration\/submit",{"module":"default","controller":"register-user","action":"submit","lang":"df","account":"main"}],"sendSignUpConfirmationEmail":["registration\/send-sign-up-confirmation",{"module":"default","controller":"register-user","action":"send-sign-up-confirmation","lang":"df","account":"main"}],"sendEmailForVerificationAjax":["user\/send-email-for-verification",{"module":"default","controller":"user","action":"send-email-for-verification-ajax","lang":"df","account":"main"}],"activateUser":[":userKeyName\/activation\/:code",{"module":"default","controller":"register-user","action":"activation","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?"}],"validatePasswordForm":[":userKeyName\/validate-password\/",{"module":"default","controller":"user","action":"validate","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?"}],"deleteUserEmail":["delete-email\/:userEmailId",{"module":"default","controller":"user","action":"delete-email","lang":"df","account":"main"},{"userEmailId":"[0-9]+"}],"makeEmailPrimary":["make-email-primary\/:userEmailId",{"module":"default","controller":"user","action":"make-email-primary","lang":"df","account":"main"},{"userEmailId":"[0-9]+"}],"verifyEmail":[":userKeyName\/verify-email\/:hash",{"module":"default","controller":"user","action":"verify-email","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?","hash":".+"}],"sendEmailForVerification":[":userKeyName\/send-email-for-verification\/:userEmailId",{"module":"default","controller":"user","action":"send-email-for-verification","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?","userEmailId":"[0-9]+"}],"resizeAvatar":[":userKeyName\/resize-avatar\/",{"module":"default","controller":"user","action":"resize-avatar","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?"}],"uploadAvatar":[":userKeyName\/upload-avatar",{"module":"default","controller":"user","action":"upload-avatar","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?"}],"wipeUserInfo":[":userKeyName\/wipe",{"module":"default","controller":"user","action":"wipe","lang":"df","account":"main"},{"userKeyName":"u[0-9]+(-?.+)?"}],"feedback":["chd-widgets\/feedback\/:spaceName\/:channel",{"module":"default","controller":"feedback","action":"index","lang":"df","channel":"","spaceName":"all","feedback":true},{"channel":"([a-z0-9_-]+)?","spaceName":"s[0-9]+(-?.+)?|all"}],"addItemFeedback":["chd-widgets\/feedback\/add\/:spaceName\/:channel",{"module":"default","controller":"item","action":"save-item","lang":"df","channel":"default","feedback":true},{"channel":"[a-z0-9_-]+","spaceName":"s[0-9]+(-?.+)?"}],"addTicketFeedback":["chd-widget\/feedback\/add-ticket",{"module":"default","controller":"ticket","action":"save","lang":"df","feedback":true}],"getAccountKeyword":["chd-widget\/feedback\/get-account-keyword",{"module":"default","controller":"feedback","action":"account-keyword","lang":"df","feedback":true}],"people":["people\/:page",{"module":"default","controller":"user","action":"people","lang":"df","page":"1"},{"page":"[0-9]+"}],"user":[":userKeyName",{"module":"default","controller":"user","action":"user-page","lang":"df"},{"userKeyName":"u[0-9]+(-?.+)?"}],"externalAccounts":[":userKeyName\/external-accounts",{"module":"default","controller":"user","action":"external-accounts","lang":"df"},{"userKeyName":"u[0-9]+(-?.+)?"}],"deleteOAuth":[":userKeyName\/deleteOauth\/:oAuthId",{"module":"default","controller":"user","action":"delete-oauth","lang":"df"},{"oAuthId":"[0-9]+","userKeyName":"u[0-9]+(-?.+)?"}],"userProfile":[":userKeyName\/profile\/:accessCode",{"module":"default","controller":"user","action":"profile","lang":"df","accessCode":""},{"accessCode":"[0-9a-zA-Z]{32}","userKeyName":"u[0-9]+(-?.+)?"}],"getUser":["get-user\/:user",{"module":"default","controller":"user","action":"get-user","lang":"df","account":"main"},{"user":"[0-9]+"}],"getUserLayer":["get-user-layer\/:user\/:hideButtons",{"module":"default","controller":"user","action":"get-user-layer","lang":"df","account":"main","hideButtons":false},{"user":"[0-9]+"}],"userEmails":[":userKeyName\/emails-notifications",{"module":"default","controller":"user","action":"emails","lang":"df"},{"userKeyName":"u[0-9]+(-?.+)?"}],"userPassword":[":userKeyName\/change-password\/:accessCode",{"module":"default","controller":"user","action":"password","lang":"df","accessCode":""},{"accessCode":"[0-9a-zA-Z]{32}","userKeyName":"u[0-9]+(-?.+)?"}],"resetUserPassword":[":userKeyName\/reset-password\/:accessCode",{"module":"default","controller":"user","action":"reset-password","lang":"df"},{"accessCode":"[0-9a-zA-Z]{32}","userKeyName":"u[0-9]+(-?.+)?"}],"userActivity":[":userKeyName\/:spaceName\/activity\/:filter\/:page",{"module":"default","controller":"user","action":"activity","lang":"df","filter":"all","page":1,"spaceName":"all"},{"spaceName":"all|(s[0-9]+-.+)","filter":".+","page":"[0-9]+","userKeyName":"u[0-9]+(-?.+)?"}],"UserMyRequests":[":userKeyName\/requests\/:statusFilter\/:organizationFilter\/:page",{"module":"default","controller":"user","action":"my-requests","lang":"df","statusFilter":"all","organizationFilter":"user","page":1},{"statusFilter":"[0-9a-zA-Z_]+","organizationFilter":"[0-9a-zA-Z_]+","page":"[0-9]+","userKeyName":"u[0-9]+(-?.+)?"}],"showTicketByToken":["show-ticket\/:key\/:token",{"module":"default","controller":"ticket","action":"show-by-token","lang":"df"},{"key":"t[0-9]+","token":"[0-9a-fA-F]{32}"}],"showTicketByTokenWithoutKey":["show-ticket\/:token",{"module":"default","controller":"ticket","action":"show-by-token","lang":"df"},{"token":"[0-9a-fA-F]{32}"}],"rateTicket":["satisfaction\/:key\/:token\/:satisfaction-rating\/:show-comment-form",{"module":"default","controller":"ticket","action":"rate-ticket","lang":"df","satisfaction-rating":null,"show-comment-form":false},{"key":"t[0-9]+","token":"[0-9a-fA-F]{32}"}],"rateTicketWithoutKey":["satisfaction\/:token\/:satisfaction-rating\/:show-comment-form",{"module":"default","controller":"ticket","action":"rate-ticket","lang":"df","satisfaction-rating":null,"show-comment-form":false},{"token":"[0-9a-fA-F]{32}"}],"userParticipation":[":userKeyName\/participation\/:spaceName\/:channelFilter\/:customFilter\/:statusFilter\/:page",{"module":"default","controller":"user","action":"participation","lang":"df","spaceName":"all","channelFilter":"all","customFilter":"all","statusFilter":"all","page":1},{"spaceName":"all|(s[0-9]+-.+)","channelFilter":"[0-9a-zA-Z]+","customFilter":"[0-9a-zA-Z]+","statusFilter":"[0-9a-zA-Z_]+","page":"[0-9]+","userKeyName":"u[0-9]+(-?.+)?"}],"userParticipationFollowing":[":userKeyName\/following\/:channelFilter\/:spaceName\/:page",{"module":"default","controller":"user","action":"following","lang":"df","spaceName":"all","channelFilter":"all","page":1},{"spaceName":"all|(s[0-9]+-.+)","channelFilter":"[0-9a-zA-Z]+","page":"[0-9]+","userKeyName":"u[0-9]+(-?.+)?"}],"globalActivity":["activity\/:page",{"module":"default","controller":"activity","action":"activity","lang":"df","page":1},{"page":"[0-9]+"}],"api":["api",{"module":"default","controller":"api","action":"index","lang":"df","account":"main"}],"apiMethod":["api\/:methodName",{"module":"default","controller":"api","action":"method-info","lang":"df"},{"methodName":"[a-zA-Z.]+"}],"registerAccount":["register\/account",{"module":"default","controller":"account","action":"register","lang":"df"}],"registerAccountValidateProfileForm":["register\/account\/validate-profile",{"module":"default","controller":"account","action":"validate-profile","lang":"df"}],"registerAccountValidateSubdomain":["register\/account\/validate-subdomain",{"module":"default","controller":"account","action":"validate-subdomain","lang":"df"}],"hideAlert":["alert\/hide-alert\/:alertId",{"module":"default","controller":"alert","action":"hide-alert","lang":"df"},{"alertId":"[0-9]+"}],"templateAlert":["template",{"module":"default","controller":"index","action":"template","lang":"df","account":"main"}],"checker":["checker",{"module":"default","controller":"s-admin","action":"checker","lang":"df","account":"main"}],"sadmin":["sadmin\/:controller\/:action\/*",{"module":"default","controller":"s-admin","action":"index","lang":"df"}],"admin":[{"module":"default","controller":"admin","action":"index","lang":"df","account":"main"}],"adminChain":["admin\/chain",{"module":"default","controller":"admin","action":"chain","lang":"df"}],"adminAlertLoadClosed":["admin\/alert\/load",{"module":"default","controller":"error","action":"show403","lang":"df"}],"adminAccountsLoadClosed":["admin\/account\/load",{"module":"default","controller":"error","action":"show403","lang":"df"}],"adminAccountLoadClosed":["admin\/account\/get-account-data",{"module":"default","controller":"error","action":"show403","lang":"df"}],"adminAccountBillingClosed":["admin\/account\/get-account-billing",{"module":"default","controller":"error","action":"show403","lang":"df"}],"help":["help",{"module":"default","controller":"help","action":"index","lang":"df","account":"main"}],"searchTips":["help\/search-tips",{"module":"default","controller":"help","action":"search-tips","lang":"df","account":"main"}],"addTicket":["add-ticket",{"module":"default","controller":"ticket","action":"save","lang":"df"}],"setTicketStatus":["set-ticket-status\/:ticketSubject\/:status",{"module":"default","controller":"ticket","action":"set-status","lang":"df"},{"ticketSubject":"t[0-9]+(-?.+)?","status":"[a-zA-Z-_]+"}],"addTicketReply":["add-ticket-reply\/:ticketSubject",{"module":"default","controller":"ticket","action":"save-reply","lang":"df"},{"ticketSubject":"t[0-9]+(-?.+)?"}],"showTicket":[":ticketSubject\/:page\/:sorting",{"module":"default","controller":"ticket","action":"show","lang":"df","page":1,"sorting":null},{"ticketSubject":"t[0-9]+(-?.+)?","page":"[0-9]+"}],"checkUserEmailExists":["check-user-email-exists",{"module":"default","controller":"user","action":"check-user-email-exists","lang":"df"}],"processBillingNotification":["process-notification",{"module":"default","controller":"billing","action":"process-notification","lang":"df"}],"processFullContactNotification":["process-fullcontact-notification",{"module":"default","controller":"full-contact","action":"process-notification","lang":"df"}],"supportApp":["support-app",{"module":"default","controller":"app","action":"support-app","lang":"df"}]};
-
-                            window.base_url   = "//help.kustom.rocks/";
-                window.app_url    = "//help.kustom.rocks/";
-                window.app_url_no_locale = '//help.kustom.rocks/';
-
-                window.domainAlias = "help.kustom.rocks";
-                window.websiteUrl  = "http://help.kustom.rocks/";
-
-                window.googleTrackCode = "UA-43946909-2";
-                window.APPLICATION_ENV = "production";
-
-                window.appsSettings = [{"id":8275,"installed":true,"name":"tickets","allowed":true},{"id":8276,"installed":true,"name":"community","allowed":true},{"id":8277,"installed":true,"name":"kb","allowed":true},{"id":18360,"installed":true,"name":"fullcontact","allowed":true},{"id":25304,"installed":false,"name":"rdh","allowed":false},{"id":31924,"installed":true,"name":"clockify","allowed":true},{"id":31925,"installed":true,"name":"toggl","allowed":true}];
-
-                                window.planFeatures = {"featureDomainAliasEnabled":true,"featureTicketsEmailAccountsEnabled":true,"featureTicketsEmailTemplateEnabled":true,"featureTicketsSatisfactionRatingEnabled":true,"featureAttachmentsEnabled":true,"featureImageUploadEnabled":true,"featureCaseRulesEnabled":true,"featureSlaEscalationEnabled":true,"featureMultipleSpacesEnabled":true,"featureMacrosEnabled":true,"featureInternalSpacesEnabled":true,"featureNetworkAccessRestrictionEnabled":true,"featureInternalLoginEnabled":true,"featureUsersRegistrationEnabled":true,"featureSsoEnabled":true,"featureKbArticleUsefulnessRatingEnabled":true,"featureCommunityMarkBestRepliesEnabled":true,"featureRequiredRegistrationEnabled":true,"featureCustomVotingEnabled":true,"featureTicketsEnabled":true,"featureCommunityEnabled":true,"featureKnowledgebaseEnabled":true,"featureAgentCollisionEnabled":true,"featureFrontCustomizationEnabled":true,"featureBusinessHoursEnabled":true,"featureFullContactEnabled":true,"featureReportsEnabled":true,"featureCustomAppsEnabled":true,"featureWebHooksEnabled":true,"featureTicketFieldsEnabled":true,"featureCommunityLimitVotesEnabled":true,"featureCommunityVotersFollowersListEnabled":true,"featureCommunityVoteByUserEnabled":true,"featureCommunityTopicByUserEnabled":true,"featureCommunityModerationEnabled":true,"featureRegionalDataHostingEnabled":true,"featureTeamsEnabled":true,"featureUserGroupsEnabled":true,"featureOrganizationsEnabled":true,"featureClockifyEnabled":true,"featureTogglEnabled":true,"featureTicketsViewEnabled":true};
-                window.isCommunityEnabled = true;
-
-                window.enabledChannels = ["updates","knowledgebase","questions","ideas","problems","praise"];
-            
-            window.defaultAvatar = "//s3.amazonaws.com/chd-data/defaults/user-avatar.png";
-
-            window.cssForIframe = (window.assets_url || '../') + 'js/dist/css/front-20210316-0154-254-74dbe1d.css';
-
-            window.hideInformerErrorAfter   = "5000";
-            window.hideInformerInfoAfter    = "10000";
-            window.hideInformerSuccessAfter = "10000";
-
-            window.socketDomain = 'socket.helprace.com';
-            window.socketPort = 7989;
-
-                            window.itemAddByEmail = false;
-            
-        </script>
-
-        <!-- LANGUAGES -->
-        
-                            <link rel="gettext" type="application/x-po" href="//cdn.helprace.com/languages/20210121-0302-588/en_English.po">
-                    
-        <script src="//cdn.helprace.com/js/dist/front/front-20210316-0154-254-74dbe1d.js" crossorigin="anonymous"></script>
-
-                <link rel="icon" href="//s3.amazonaws.com/chd-data/data/kustom/5c04fdcd5c838_kustom_favicon.png">
-        
-        <script>
-                    Application.alerts = [];
-        
-        Application.settings.baseUrl = "//help.kustom.rocks/";
-        Application.settings.urls = [];
-        Application.settings.internalLogin = true;
-        Application.settings.socialAuth = true;
-        Application.settings.ticketsEnabled = true;
-
-        Application.informers = {};
-        Application.informers.informer_type = "";
-        Application.informers.informer_title = "";
-        Application.informers.informer_messages = null;
-
-                    Application.authorization = null;
-        
-        GUI.onDOMReady(function () {
-                            Application.fireEvent("checkauth");
-            
-            GUI.TimeAgo.init();
-
-            Application.addEventForDocument('click', Application.setInputElementsClassOnFocus);
-
-            
-            Application.initSpaceComboBlock();
-            Application.initParticipationFilter();
-
-            if (Application.informers && Application.informers.informer_messages) {
-                var
-                    type     = Application.informers.informer_type,
-                    messages = Application.informers.informer_messages.join("\n\r");
-
-                if (type === 'info') {
-                    Application.successInfo(messages);
-
-                } else if (type === 'error') {
-                    Application.errorInfo(messages);
-                }
-            }
-
-            GUI.$(window.document.body).on('click', function (e) {
-                var linkHref  = e.target.href,
-                    match = false,
-                    linkToTicket;
-
-                if (!linkHref) {
-                    return;
-                }
-
-                match = linkHref.match(/#ticket:(\d+)/);
-
-                if (match) {
-                    e.stopPropagation();
-                    e.preventDefault();
-
-                    linkToTicket = '/t_key_';
-
-                    window.open(linkToTicket.replace('_key_', match[1]), "_blank");
-                }
-            });
-         });
-
-
-        
-        
-        
-        </script>
-
-
-    
-    <script>
-        window.ga && window.ga('create', 'UA-68946838-3', 'auto', {name: 'user'});
-        window.ga && window.ga('user.send', 'pageview');
-    </script>
-    
-
-    
-    
-        
-        
-        
-        <meta name="google-site-verification" content="-B1P689sTSMRBxs8O4s2tThxhUKhYDKANEhFiRw6yFM">
-    
-            
-            <script>
-                function onReCaptchaLoad() {
-                    var x = document.getElementsByClassName("g-recaptcha");
-                    var i;
-                    for (i = 0; i < x.length; i++) {
-                        var id = grecaptcha.render(x[i].getAttribute('id'), {}, true);
-                        x[i].setAttribute('data-id', id);
-                    }
-                }
-            </script>
-            <style>
-                .grecaptcha-badge {
-                    display: none;
-                }
-            </style>
-        
-    
-        
-    </head>
-
-    <body class="body x-chrome x-safari">
-    <div id="divJSErrors" style="color: red; font-size: 14px;"></div>
-
-    
-        <!--
-<div class="main-wrapper"><div class="main-wrapper_in">
-<iframe src="https://viewm.moonicorn.network/#%7B%22options%22%3A%7B%22publisherAddr%22%3A%220xb26fe46Ae2B077076E359B306DE147e895B64561%22%2C%22whitelistedTokens%22%3A%5B%220x6B175474E89094C44Da98b954EedeAC495271d0F%22%5D%2C%22whitelistedType%22%3A%22legacy_468x60%22%2C%22randomize%22%3Atrue%2C%22targeting%22%3A%5B%5D%2C%22width%22%3A%22468%22%2C%22height%22%3A%2260%22%2C%22minPerImpression%22%3A%220%22%2C%22fallbackUnit%22%3Anull%2C%22marketSlot%22%3A%22QmUmVuuAo5qBhcfLCXN2471n44eqoRKz1mkMuVLYL15VtT%22%7D%7D"
-	width="468"
-	height="60"
-	scrolling="no"
-	frameborder="0"
-	style="border: 0;"
-	onload="window.addEventListener('message', function(ev) { 
-		if (ev.data.hasOwnProperty('adexHeight') && ('https://viewm.moonicorn.network' === ev.origin)) {
-			for (let f of document.getElementsByTagName('iframe')) {	
-				if (f.contentWindow === ev.source) {
-					f.height = ev.data.adexHeight;
-				}
-			}	
-		}
-	}, false)"
-></iframe>
-</div></div>-->
-    
-        
-        <div class="main-wrapper ">
-            <div class="main-wrapper_in">
-            <div id="system_alert" class="informer" style="display:none;">
-    <div class="informer__controls">
-        <span class="btn-text" id="numAlerts"></span>
-        <a class="btn btn_link disabled">
-                <i class="btn__icon fa fa-angle-left" id="prevAlert">&nbsp;</i>
-        </a>
-        <a class="btn btn_link disabled">
-                <i class="btn__icon fa fa-angle-right" id="nextAlert">&nbsp;</i>
-        </a>
-        <a class="btn btn_link">
-                <i class="btn__icon close-tips" id="hideAlert">&nbsp;</i>
-        </a>
-    </div>
-    <div class="informer__data">
-        <p class="informer__txt">
-            <b class="informer__ttl" id="system_alert_title"></b>
-            <span id="system_alert_message"></span>
-
-            <a href="#" onclick="javascript: return false;">Learn more</a>
-        </p>
-    </div>
-</div>
-
-            <script>
-	GUI.onDOMReady(function() {
-		new window.ActorInfo('website');
-	});
+<!DOCTYPE html><html lang="tr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>Privacy Policy – Booster VIP – TOLAN</title>
+<style>
+#wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
+content: "\f185";
+color: #1DAE22;
+top: 3px;
+}
+</style><meta name="robots" content="max-image-preview:large">
+<script type="text/javascript">            function apbct_attach_event_handler__backend(elem, event, callback){                if(typeof window.addEventListener === "function") elem.addEventListener(event, callback);                else                                              elem.attachEvent(event, callback);            }            apbct_attach_event_handler__backend(window, 'load', function(){                ctSetCookie('ct_checkjs', 'db5c4c10bc258087779d46bf5645ba093239957227ae0ccb30b4d60042953f15', '0');            });</script><link rel="dns-prefetch" href="//www.gstatic.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="TOLAN » beslemesi" href="https://tolansoft.online/feed/">
+<link rel="alternate" type="application/rss+xml" title="TOLAN » yorum beslemesi" href="https://tolansoft.online/comments/feed/">
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='https://tolansoft.online/wp-includes/css/dist/block-library/style.min.css?ver=5.7.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wc-block-vendors-style-css'  href='https://tolansoft.online/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=4.0.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wc-block-style-css'  href='https://tolansoft.online/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=4.0.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='contact-form-7-css'  href='https://tolansoft.online/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='cookie-notice-front-css'  href='https://tolansoft.online/wp-content/plugins/cookie-notice/css/front.min.css?ver=5.7.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='popularis-extra-css'  href='https://tolansoft.online/wp-content/plugins/popularis-extra/assets/css/style.css?ver=1.0.12' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='payoneer-plugn-css'  href='https://tolansoft.online/wp-content/plugins/wc-payoneer-payment-gateway/inc/assets/css/payoneer-payment-gateway.css?ver=5.7.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='woocommerce-layout-css'  href='https://tolansoft.online/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.0.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//tolansoft.online/wp-content/cache/wpfc-minified/1yngo9ax/6br5i.css" media="all">
+<!-- <link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://tolansoft.online/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.0.0' type='text/css' media='only screen and (max-width: 768px)' /> -->
+<link rel="stylesheet" type="text/css" href="//tolansoft.online/wp-content/cache/wpfc-minified/f45xs7yu/7mqig.css" media="only screen and (max-width: 768px)">
+<!-- <link rel='stylesheet' id='woocommerce-general-css'  href='https://tolansoft.online/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.0.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//tolansoft.online/wp-content/cache/wpfc-minified/8nb4pw51/7mqig.css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<!-- <link rel='stylesheet' id='bootstrap-css'  href='https://tolansoft.online/wp-content/themes/popularis/assets/css/bootstrap.css?ver=3.3.7' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='popularis-woocommerce-css'  href='https://tolansoft.online/wp-content/themes/popularis/assets/css/woocommerce.css?ver=1.0.11' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='popularis-stylesheet-css'  href='https://tolansoft.online/wp-content/themes/popularis/style.css?ver=5.7.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='popularis-press-css'  href='https://tolansoft.online/wp-content/themes/popularis-press/style.css?ver=1.0.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='mmenu-light-css'  href='https://tolansoft.online/wp-content/themes/popularis/assets/css/mmenu-light.css?ver=1.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='font-awesome-css'  href='https://tolansoft.online/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//tolansoft.online/wp-content/cache/wpfc-minified/95wwfnga/i1ej9.css" media="all">
+<link rel="stylesheet" id="popularis-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300%2C500%2C700&amp;subset=cyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese" type="text/css" media="all">
+<!-- <link rel='stylesheet' id='firebase-css'  href='https://tolansoft.online/wp-content/plugins/integrate-firebase/css/firebase.css?ver=5.7.1' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//tolansoft.online/wp-content/cache/wpfc-minified/g3smccph/bubyv.css" media="all">
+<script type="text/javascript" id="ahc_front_js-js-extra">
+/* <![CDATA[ */
+var ahc_ajax_front = {"ajax_url":"https:\/\/tolansoft.online\/wp-admin\/admin-ajax.php","page_id":"1534","page_title":"Privacy Policy \u2013 Booster VIP","post_type":"page"};
+/* ]]> */
 </script>
-
-<header class="header" role="heading">
-    <div class="header__left">
-
-        <a class="header__logo" href="http://help.kustom.rocks/" target="_blank">
-            <img src="//s3.amazonaws.com/chd-data/data/kustom/5c04fdc947f8a_kustom_logoicon.png" alt="Kustom Heavy Industries" class="header__logo__thumb">
-        </a>
-        
-                    <div class="header__name">
-                <a href="/">Kustom Heavy Industries</a>
-            </div>
-        
-    </div>
-
-    <div class="header__right">
-        <nav id="auth-panel__auth-menu" class="header__nav" style="">
-        <span style="display: none;" id="auth-panel__loader" class="btn__label"></span>
-
-            <a class="btn btn_simple show_dialog" id="auth-panel__my-requests-btn" href="" onclick="return false;" rel="dialog_1" title="Submit a Request">
-        <span class="mobileShow_wide">
-            <i class="btn__icon fa fa-envelope"></i>
-        </span>
-        <span class="mobileHide_wide">
-            <span class="btn__label">Submit a Request</span>
-        </span>
-    </a>
-        
-            <a class="btn btn_simple" href="/search" title="Search">
-        <i class="btn__icon fa fa-search"></i>
-    </a>
-    
-            <a style="" class="btn btn_simple show_dialog" id="auth-panel__login-btn" href="" onclick="return false;" rel="dialog_1" title="Login">
-        <span class="mobileShow_wide">
-            <i class="btn__icon fa fa-sign-in"></i>
-        </span>
-        <span class="mobileHide_wide">
-            <span class="btn__label">Login</span>
-        </span>
-    </a>
-
-                                    
-        <div style="display: none;" id="auth-panel__user-profile-dropdowrn-holder" class="layer-over btn_super-hover">
-        <div class="popup-menu">
-            <a id="auth-panel__user-profile-dropdown-btn" class="btn btn_simple btn_avatar btn_super-hover-item">
-                            </a>
-
-            <script type="application/javascript">
-                                    window.adminPanelMenu = [];
-                            </script>
-        </div>
-
-        <div class="layer user-layer" id="auth-panel__user-profile-menu" style="display: none;">
-            
-         </div>
-    </div>
-</nav>
-            </div>
-</header>
-<nav class="breadcrumbs" style="user-select: none;">
-    <ul class="breadcrumbs__list">
-
-                    
-            <li class="breadcrumbs__item btn_super-hover">
-
-                <div class="btns-group breadcrumbs__button">
-                    <a class="btn btn_simple btn_super-hover-item" href="/">
-                        <span class="btn__label">Home</span>
-                    </a><a class="btn btn_simple btn_super-hover-item selected">
-                        <i class="btn__icon next"><i class="breadcrumbs__menu-icon">&nbsp;</i></i>
-                    </a>                </div>
-
-                                <ul class="breadcrumbs__dropdown">
-                                                                    <li class="breadcrumbs__dropdown__item"><a href="/people">People</a></li>
-                                                                    <li class="breadcrumbs__dropdown__item"><a href="/search">Search</a></li>
-                                    </ul>
-                
-            </li>
-                    
-            <li class="breadcrumbs__item btn_super-hover">
-
-                <div class="btns-group breadcrumbs__button">
-                    <a class="btn btn_simple btn_super-hover-item" href="/s1-general/knowledgebase">
-                        <span class="btn__label">Knowledge Base</span>
-                    </a>                </div>
-
-                
-            </li>
-                    
-            <li class="breadcrumbs__item btn_super-hover">
-
-                <div class="btns-group breadcrumbs__button">
-                    <a class="btn btn_simple btn_super-hover-item" href="/s1-general/knowledgebase/c1-basic-info">
-                        <span class="btn__label">Basic Info</span>
-                    </a><a class="btn btn_simple btn_super-hover-item selected">
-                        <i class="btn__icon next"><i class="breadcrumbs__menu-icon">&nbsp;</i></i>
-                    </a>                </div>
-
-                
-            </li>
-        
-    </ul>
-</nav>
-
-<div class="layout__data layout__data_right-sidebar">
-    <div class="layout__content" role="main">
-        <div class="layout__content_in">
-            <div class="comments__item__i" id="edit_reply_form" style="display:none;" spacekey="" channeltype="" itemid="49466">
-
-    <div class="user-info" id="edit_reply_form_div">
-
-        <div class="replies__add-data">
-            <form class="js_comment_form" action="" method="post" id="edit_reply_form_form" onsubmit="return false;">
-
-                <input type="hidden" name="comment" id="edit_reply_value">
-                <div id="edit_reply_textarea"></div>
-
-                <div class="replies__buttons">
-                    <div class="btns-list">
-
-                        <a class="btn btn-blue" id="edit_reply">
-                            <span class="btn__label">Save</span>
-                        </a>
-
-                        <a class="btn btn_simple" id="hide_reply_forms">
-                            <span class="btn__label">Cancel</span>
-                        </a>
-
-                    </div>
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-</div><div class="replies__comments-item btn_super-hover" id="edit_comment_form" style="display:none;">
-    <div class="replies__comments-data" id="edit_comment_form_div">
-        <form class="js_comment_form" action="" method="post" id="edit_comment_form_form" onsubmit="return false;">
-            <input type="hidden" name="comment" id="edit_comment_value" value="">
-            <div id="edit_comment_textarea"></div>
-            <div class="btns-list replies__buttons">
-                <a class="btn btn-blue" id="edit_comment">
-                        <span class="btn__label">Save</span>
-                </a>
-                <a class="btn btn_simple" id="hide_reply_forms">
-                        <span class="btn__label">Cancel</span>
-                </a>
-            </div>
-        </form>
-    </div>
+<script src="//tolansoft.online/wp-content/cache/wpfc-minified/e4uwlbxq/a8bzo.js" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-content/plugins/visitors-traffic-real-time-statistics/js/front.js?ver=5.7.1' id='ahc_front_js-js'></script> -->
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script> -->
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script> -->
+<script type="text/javascript" id="ct_public-js-extra">
+/* <![CDATA[ */
+var ctPublic = {"_ajax_nonce":"df92de272e","_rest_nonce":"c176e4a3cd","_ajax_url":"https:\/\/tolansoft.online\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/tolansoft.online\/wp-json\/","data__set_cookies":"1","data__set_cookies__sessions":"0"};
+/* ]]> */
+</script>
+<script src="//tolansoft.online/wp-content/cache/wpfc-minified/morkbw59/aame5.js" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-content/plugins/cleantalk-spam-protect/js/apbct-public.min.js?apbct_ver=5.156&#038;ver=5.156' id='ct_public-js'></script> -->
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-content/plugins/cleantalk-spam-protect/js/cleantalk-modal.min.js?ver=5.156' id='cleantalk-modal-js'></script> -->
+<script type="text/javascript" id="ct_nocache-js-extra">
+/* <![CDATA[ */
+var ctNocache = {"ajaxurl":"https:\/\/tolansoft.online\/wp-admin\/admin-ajax.php","info_flag":"","set_cookies_flag":"","blog_home":"https:\/\/tolansoft.online\/"};
+/* ]]> */
+</script>
+<script src="//tolansoft.online/wp-content/cache/wpfc-minified/f43u2xeq/f9xys.js" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-content/plugins/cleantalk-spam-protect/js/cleantalk_nocache.min.js?ver=5.156' id='ct_nocache-js'></script> -->
+<script type="text/javascript" id="cookie-notice-front-js-extra">
+/* <![CDATA[ */
+var cnArgs = {"ajaxUrl":"https:\/\/tolansoft.online\/wp-admin\/admin-ajax.php","nonce":"e2123144b0","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"2592000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"0","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+/* ]]> */
+</script>
+<script src="//tolansoft.online/wp-content/cache/wpfc-minified/k1mun9ko/v9p2.js" type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://tolansoft.online/wp-content/plugins/cookie-notice/js/front.min.js?ver=1.3.2' id='cookie-notice-front-js'></script> -->
+<link rel="https://api.w.org/" href="https://tolansoft.online/wp-json/"><link rel="alternate" type="application/json" href="https://tolansoft.online/wp-json/wp/v2/pages/1534"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://tolansoft.online/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://tolansoft.online/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.7.1">
+<meta name="generator" content="WooCommerce 5.0.0">
+<link rel="canonical" href="https://tolansoft.online/privacy-policy-game-booster-pro/">
+<link rel="shortlink" href="https://tolansoft.online/?p=1534">
+<link rel="alternate" type="application/json+oembed" href="https://tolansoft.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftolansoft.online%2Fprivacy-policy-game-booster-pro%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://tolansoft.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftolansoft.online%2Fprivacy-policy-game-booster-pro%2F&amp;format=xml">
+<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #c10000; }
+</style>
+<link rel="icon" href="https://tolansoft.online/wp-content/uploads/2020/06/cropped-tolancircle-32x32.png" sizes="32x32">
+<link rel="icon" href="https://tolansoft.online/wp-content/uploads/2020/06/cropped-tolancircle-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://tolansoft.online/wp-content/uploads/2020/06/cropped-tolancircle-180x180.png">
+<meta name="msapplication-TileImage" content="https://tolansoft.online/wp-content/uploads/2020/06/cropped-tolancircle-270x270.png">
+</head>
+<body id="blog" class="page-template-default page page-id-1534 custom-background theme-popularis woocommerce-js elementor-default elementor-kit-1289 cookies-not-set">
+<a class="skip-link screen-reader-text" href="#site-content">İçeriğe atla</a>        <div class="page-wrap">
+<div class="main-menu">
+<nav id="site-navigation" class="navbar navbar-default">     
+<div class="container">   
+<div class="navbar-header">
+<div class="site-heading navbar-brand">
+<div class="site-branding-logo">
 </div>
-<div id="spam-dialog_mask" class="mask" style="display:none;"></div>
-
-<div id="spam-dialog" class="dialog ui-draggable" style="display: none; width:400px;">
-
-<section class="content-block">
-
-    <header class="content-block__header dialog__ttl">
-        <h3 id="spam-dialog-caption">Confirmation</h3>
-        <a class="btn btn_simple dialog__close" tabindex="3" id="spam-dialog_close-btn">
-                <i class="btn__icon dialog-close">&nbsp;</i>
-        </a>
-    </header>
-
-    <!-- DIALOG CONTENT -->
-
-            <form id="spam-form" method="post" action="">
-    <div id="spam-dialog-form">
-        <div class="dialog__data">
-            <div class="dialog__item">
-                <p>Are you sure you want to mark this as spam?</p>
-            </div>
-        </div>
-        <footer class="content-block__footer normal-buttons">
-            <div class="btns-list">
-    <button tabindex="1" class="btn btn-blue">
-        <span class="btn__label">Spam</span>
-    </button>
-    <a tabindex="1" class="btn btn_simple" id="spam-dialog_cancel-btn" href="#" onclick="return false;">
-        <span class="btn__label">Cancel</span>
-    </a>
-</div>        </footer>
-    </div>
-</form>
-        <!-- /DIALOG CONTENT -->
-</section>
-
-</div><div id="delete-dialog_mask" class="mask" style="display:none;"></div>
-
-<div id="delete-dialog" class="dialog ui-draggable" style="display: none; width:400px;">
-
-<section class="content-block">
-
-    <header class="content-block__header dialog__ttl">
-        <h3 id="delete-dialog-caption">Confirmation</h3>
-        <a class="btn btn_simple dialog__close" tabindex="3" id="delete-dialog_close-btn">
-                <i class="btn__icon dialog-close">&nbsp;</i>
-        </a>
-    </header>
-
-    <!-- DIALOG CONTENT -->
-
-            <form id="delete-form" method="post" action="">
-    <div id="delete-dialog-form">
-        <div class="dialog__data">
-            <div class="dialog__item">
-                <p>Are you sure you want to delete this?</p>
-            </div>
-        </div>
-        <footer class="content-block__footer normal-buttons">
-            <div class="btns-list">
-    <button tabindex="1" class="btn btn-blue">
-        <span class="btn__label">Delete</span>
-    </button>
-    <a tabindex="1" class="btn btn_simple" id="delete-dialog_cancel-btn" href="#" onclick="return false;">
-        <span class="btn__label">Cancel</span>
-    </a>
-</div>        </footer>
-    </div>
-</form>
-        <!-- /DIALOG CONTENT -->
-</section>
-
-</div><div id="share-via-email-dialog_mask" class="mask" style="display:none;"></div>
-
-<div id="share-via-email-dialog" class="dialog ui-draggable" style="display: none; width:600px;">
-
-<section class="content-block">
-
-    <header class="content-block__header dialog__ttl">
-        <h3 id="share-via-email-dialog-caption">Share by Email</h3>
-        <a class="btn btn_simple dialog__close" tabindex="3" id="share-via-email-dialog_close-btn">
-                <i class="btn__icon dialog-close">&nbsp;</i>
-        </a>
-    </header>
-
-    <!-- DIALOG CONTENT -->
-
-            <form id="share-via-email-form" method="post" action="">
-    <div id="share-via-email-dialog-form">
-        <div class="dialog__data">
-
-            <div class="dialog__item">
-                <label class="forms2__label" style="display: inline;">From </label><label id="share-via-email-user-data" class="forms2__label" style="display: inline;"></label>
-            </div>
-
-            <div class="dialog__item">
-                <label for="share-via-email-dialog_recipient" class="forms__label_wide">Emails</label>
-                <input tabindex="1" id="share-via-email-dialog_recipient" type="comment" class="text-field text-field_header_small text-field_size_wide">
-            </div>
-
-            <div class="dialog__item">
-                <label for="share-via-email-dialog_subject" class="forms__label_wide">Subject</label>
-                <input tabindex="1" id="share-via-email-dialog_subject" type="comment" class="text-field text-field_header_small text-field_size_wide" value="Privacy Policy">
-            </div>
-
-            <div class="dialog__item">
-                <label for="share-via-email-dialog_message" class="forms__label_wide">Message</label>
-                <textarea tabindex="1" id="share-via-email-dialog_message" type="comment" class="textarea textarea_size_wide" cols="40" rows="3"></textarea>
-            </div>
-
-            <div class="dialog__item">
-                <h2>Privacy Policy</h2>
-                <p>Privacy Policy Zavasoft S.R.L. built the Kustom apps (KWGT Kustom Widget Maker, KLWP Kustom Wallpaper Maker and KLCK Kustom Lockscreen Maker) as a Freemium apps. This SERVICE is provided by Zavasoft S.R.L. at no cost and is intended for use as is. This…</p>
-            </div>
-        </div>
-
-        <footer class="content-block__footer normal-buttons">
-            <div class="btns-list">
-    <button tabindex="1" class="btn btn-blue">
-        <span class="btn__label">Send</span>
-    </button>
-    <a tabindex="1" class="btn btn_simple" id="share-via-email-dialog_cancel-btn" href="#" onclick="return false;">
-        <span class="btn__label">Cancel</span>
-    </a>
-</div>        </footer>
-    </div>
-</form>        <!-- /DIALOG CONTENT -->
-</section>
-
+<div class="site-branding-text">
+<p class="site-title"><a href="https://tolansoft.online/" rel="home">TOLAN</a></p>
+<p class="site-description">
+Engineering &amp; Game Dev.                            </p>
+</div><!-- .site-branding-text -->
 </div>
-    <!-- topic -->
-    <article class="content-block layout__list" id="item_container">
-        <div class="content-block__data">
-
-            <div class="topic">
-                <div class="topic__data">
-
-                    <header class="topic__header">
-                        <div class="topic__controls">
-
-                            
-                            
-                        </div>
-                        <h1><i class="topic__icon icon fa fa_icon_knowledgebase fa_color_active fa_20"></i>Privacy Policy</h1>
-                    </header>
-
-                    <div class="topic__item topic__item_text"><p><strong>Privacy Policy</strong></p>
-<p>Zavasoft S.R.L. built the Kustom apps (KWGT Kustom Widget Maker, KLWP Kustom Wallpaper Maker and KLCK Kustom Lockscreen Maker) as a Freemium apps. This SERVICE is provided by Zavasoft S.R.L. at no cost and is intended for use as is.</p>
-<p>This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
-<p>If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
-<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Kustom unless otherwise defined in this Privacy Policy.</p>
-<p><strong>Information Collection and Use</strong></p>
-<p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to location. The information that we request will be retained by us and used as described in this privacy policy.</p>
-<div>
-<p>The app does use third party services that may collect information used to identify you.</p>
-<p>Link to privacy policy of third party service providers used by the app</p>
-<ul>
-<li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="nofollow">Google Play Services</a></li>
-<li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="nofollow">AdMob</a></li>
-<li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="nofollow">Google Analytics for Firebase</a></li>
-<li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="nofollow">Firebase Crashlytics</a></li>
-<li><a href="https://developers.google.com/fit/policy" rel="nofollow">Google API Services (Fitness)</a></li>
+<div class="mobile-cart visible-xs">
+<div class="header-cart float-cart">
+<div class="header-cart-block">
+<div class="header-cart-inner">
+<a class="cart-contents" href="https://tolansoft.online/cart/" title="Alış veriş sepetinizi görüntüleyin">
+<i class="fa fa-shopping-bag"><span class="count">0</span></i>
+<div class="amount-cart">$0.00</div> 
+</a>
+<ul class="site-header-cart menu list-unstyled text-center">
+<li>
+<div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>                            </li>
 </ul>
 </div>
+</div>
+</div>
+</div>	
+<div class="mobile-account visible-xs">
+<div class="header-my-account float-login">
+<div class="header-login"> 
+<a href="https://tolansoft.online/my-account/" title="Hesabım">
+<i class="fa fa-user-circle-o"></i>
+</a>
+</div>
+</div>
+</div>
+<a href="#my-menu" id="main-menu-panel" class="open-panel visible-xs" data-panel="main-menu-panel">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+</div>
+<nav id="my-menu" class="menu-container mm--home" data-mm-title="Menu"><ul id="menu-main-menu" class="nav navbar-nav navbar-right mm--open"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1367" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1367 nav-item"><a title="Home" href="https://tolansoft.online" class="nav-link">Home</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1257 nav-item"><a title="Apps" href="https://tolansoft.online/our-apps/" class="nav-link">Apps</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1301 nav-item"><a title="Games" href="https://tolansoft.online/games/" class="nav-link">Games</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1635 nav-item"><a title="Tolan Store" href="https://tolansoft.online/code-store/" class="nav-link">Tolan Store</a></li>
+</ul></nav>        </div>
+</nav> 
+</div>
+<div id="site-content" class="container main-container" role="main">
+<div class="page-area">
+<div class="row">
+<div class="news-thumb col-md-12">
+</div>
+<article class="col-md-12">
+<div class="post-1534 page type-page status-publish hentry">
+<header class="single-head">                              
+<h1 class="single-title">Privacy Policy – Booster VIP</h1>                        <time class="posted-on published" datetime="2020-07-10"></time>                                                        
+</header>
+<div class="main-content-page">                            
+<div class="single-entry-summary">                              
+<p>TOLAN built the&nbsp;<strong>Game Booster VIP- Free Fire GFX- Lag Fix&nbsp;</strong>app as a premium app. This SERVICE is provided by TOLAN is intended for use as is.</p>
+<p><strong>Information Collection and Use</strong></p>
+<p>Sometimes we collect device informations like device model, operating system version or other to improve our services. We never collect personel data.</p>
+<p>The app does use third party services that may collect information used to identify you. But they don’t share those informations with us, like safe Google Play Services.</p>
+<p>Link to privacy policy of third party service providers used by the app</p>
+<ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noreferrer noopener">Google Play Services</a></li></ul>
 <p><strong>Log Data</strong></p>
 <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
-<p><strong>Cookies</strong></p>
-<p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
-<p>This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
-<p><strong>Service Providers</strong></p>
-<p>We may employ third-party companies and individuals due to the following reasons:</p>
-<ul>
-<li>To facilitate our Service;</li>
-<li>To provide the Service on our behalf;</li>
-<li>To perform Service-related services; or</li>
-<li>To assist us in analyzing how our Service is used.</li>
-</ul>
-<p>We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-<p><strong>Security</strong></p>
-<p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-<p><strong>Links to Other Sites</strong></p>
-<p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
 <p><strong>Children’s Privacy</strong></p>
-<p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+<p>We don’t collect any personel information of anyone,&nbsp;any age.</p>
 <p><strong>Changes to This Privacy Policy</strong></p>
-<p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-<p>This policy is effective as of 2021-03-08</p>
+<p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
 <p><strong>Contact Us</strong></p>
-<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at help@kustom.rocks.</p></div>
-
-                    
-                        <div class="topic__item topic__item_tags">
-                            <a class="b-label b-label_tag" style="background-color: #999999; color: #fff" href="/search?q=tagged:%22privacy%22" rel="tag">privacy</a>
-                </div>
-
-                    <div class="topic__item topic__item_hasSidebar topic__item_hasSidebar_vCenter">
-                            <div class="user-info">
-                                    
-    
-    <a href="/u1-frank-monza" class="avatar" showprofilelayer="47647">
-        <img src="https://en.gravatar.com/avatar/dd65c88dafe427e99293cb4cc31098c4?s=200&amp;d=identicon&amp;r=g" width="40px" height="40px" onerror="onAvatarError(this)">
-
-                    <div class="avatar__status"></div>
-        
-            </a>
-                                    <div class="user-info__data user-info__data_simple">
-                                            <a class="user-info__name" href="/u1-frank-monza" showprofilelayer="47647">Frank Monza</a>
-
-                                            
-                                            <div class="user-info__info">
-                                                <div class="user-info__item">
-                                                    Posted <time class="pseudo-link g-date" scheme="default" datetime="2017-01-01T16:06:45+00:00" title="1/1/2017 1:06 PM">4 years ago</time>
-                                                                                                        <span class="text_pale">·</span>
-                                                    Updated <time class="pseudo-link g-date" scheme="default" datetime="2021-03-08T09:41:18+00:00" title="3/8/2021 5:41 AM">a month ago</time>
-                                                                                                    </div>
-                                            </div>
-                                    </div>
-                            </div>
-                        <div class="topic__item__sidebar">
-                                <span class="btn btn_simple" id="share_action">
-                                    <i class="btn__icon fa fa-share-alt"></i>
-                                </span>
-
-                                <div class="layer selected" id="share_action_hint" style="display:none;">
-                                    <span class="social-buttons">
-
-                                                                            <a class="social-buttons__item fab fa-facebook-f" id="facebook-button" href="#" target="_blank"></a>
-                                        <a class="social-buttons__item fab fa-twitter" id="twitter-button" href="#" target="_blank"></a>
-                                        <a class="social-buttons__item fab fa-linkedin-in" id="linkedin-button" href="#" target="_blank"></a>
-                                                                            <a class="social-buttons__item fa fa-envelope" id="share-via-email-button" title="Share by Email" href="/share-item-via-email/i418-privacy-policy" onclick="return false;"></a>
-                                    </span>
-                                </div>
-
-                                                                    <a class="btn btn_simple btn_follow" id="view_item_follow" data-href="/add-subscription/i418-privacy-policy" onclick="return false;" title="Follow this and subscribe to email notifications">
-                                        <i class="btn__icon fa fa-flag"></i>
-                                        <span class="btn__label">Follow</span>
-                                    </a>
-                                
-                                                                                            </div>
-                    </div>
-                    
-                    
-                        <div class="topic__item topic__item_vote">
-                            <div>
-            <span class="btn-text">Was this article helpful?</span>
-            <div class="vote_block without_votearea" id="item_support-not-support_418_noarea_pos">
-            <a class="btn btn_font_normal btn_simple" onclick="return false;" rel="nofollow" data-href="/vote-item/i418-privacy-policy/1" id="vote_item_link_positive_418">
-                <i class="btn__icon fa fa-thumbs-up fa_green_hover"></i>
-                <span class="btn__label" id="vote_item_like">Yes</span>
-            </a>
-        </div>
-
-            <div class="vote_block without_votearea" id="item_support-not-support_418_noarea_neg">
-            <a class="btn btn_font_normal btn_simple" onclick="return false;" rel="nofollow" data-href="/vote-item/i418-privacy-policy/-1" id="vote_item_link_negative_418">
-                <i class="btn__icon fa fa-thumbs-down fa_red_hover"></i>
-                <span class="btn__label" id="vote_item_not_like">No</span>
-            </a>
-        </div>
-    
-        <div class="description">
-    3 out of 4 found this helpful
-    </div>
-
+<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:info@tolansoft.online" target="_blank" rel="noreferrer noopener">info@tolansoft.online</a></p>
+</div>                               
+<div id="comments" class="comments-template">
 </div>
-                        </div>
-                                    </div>
-            </div>
-
-        </div>
-        <!--
-        <footer class="content-block__footer normal-buttons">
-            <div class="btns-list btns-list_float">
-                            </div>
-            <div class="clear"></div>
-        </footer>
-        -->
-    </article>
-    <!-- /topic -->
-
-    
-
-
-<section class="content-block layout__list" id="add_reply_form" style="display:none;" spacekey="" channeltype="" itemid="49466" key="418">
-    <header class="content-block__header">
-        <h3>Your Reply</h3>
-    </header>
-    <form class="js_comment_form" id="add_reply_form_form" action="/add-comment/i418-privacy-policy" method="post" onsubmit="return false;">
-        <div class="content-block__data">
-            <div class="replies__item user-info">
-                
-
-                <div class="replies__add-data">
-                    <input type="hidden" name="comment">
-                    <div id="reply_textarea"></div>
-                    <div class="replies__buttons">
-                        <div class="btns-list">
-                            <a class="btn btn-blue replies__buttons" id="add_reply">
-                                    <span class="btn__label">Reply</span>
-                            </a>
-                            <a class="btn btn_simple" id="hide_reply_form">
-                                    <span class="btn__label">Cancel</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</section><div class="replies__comments-item btn_super-hover" id="add_comment_form" style="display:none;">
-    <a name="add_comment_form"></a>
-
-    
-    <div class="replies__comments-data">
-        <form class="js_comment_form" action="/add-comment/i418-privacy" method="post" onsubmit="return false;">
-            <input type="hidden" name="parentId" id="add_comment_form_parent_id" value="">
-            <input type="hidden" name="comment" id="add_comment_value" value="">
-            <div id="add_comment_textarea"></div>
-            <div class="btns-list replies__buttons">
-                <a class="btn btn-blue" id="add_comment_to_reply">
-                                                <span class="btn__label">Comment</span>
-                </a>
-                <a class="btn btn_simple" id="hide_reply_forms">
-                        <span class="btn__label">Cancel</span>
-                </a>
-            </div>
-        </form>
-    </div>
-</div>        </div>
-    </div>
-
-    <aside class="layout__sidebar" role="complementary">
-        
-    
-                
-    <section class="content-block layout__list">
-        <header class="content-block__header">
-        <h3>
-                        <a href="/s1-general/knowledgebase/default/c1-basic-info"> Basic Info<span class="counter">15</span></a>
-                    </h3>
-    </header>
-        <div class="content-block__data">
-        <ul class="side-panel side-panel_links">
-
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i2452-disclaimer">Disclaimer</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i1726-persistent-notification">Persistent Notification</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i1641-how-to-whitelist-kustom-from-battery-optimization">How to whitelist Kustom from Battery Optimization</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i1582-klck-faq">KLCK FAQ</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i763-kustom-weather-beta">Kustom Weather Beta</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i494-complex-animations">Complex Animations</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i418-privacy-policy" class="text-style-link">Privacy Policy</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i176-tutorials-list">Tutorials List</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i177-how-to-use-globals">How to use Globals</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i178-groups-explained-overlap-stack-komponent">Groups explained (Overlap, Stack, Komponent)</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i179-animations-explained-rule-speed-amount">Animations explained (rule, speed, amount...)</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i181-designer-tips">Designer Tips</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i182-publishing-tips">Publishing Tips</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i180-permissions-explained">Permissions Explained</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i183-credits">Credits</a>
-        </li>
-    
-    
-</ul>    </div>
-</section>
-    <section class="content-block layout__list">
-        <header class="content-block__header">
-        <h3>
-                        Related Topics
-                    </h3>
-    </header>
-        <div class="content-block__data">
-        <ul class="side-panel side-panel_links">
-
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_questions fa_14"></i>
-            <a href="/i1706-notification-access">Notification access</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i2452-disclaimer">Disclaimer</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_questions fa_14"></i>
-            <a href="/i1635-kustom-weather-provider-api-aemet">Kustom Weather Provider API: Aemet</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_ideas fa_14"></i>
-            <a href="/i1636-kustom-weather-api-for-third-party-weather-providers">Kustom Weather API for third party weather providers</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i1057-kapk-walls-format">KAPK Walls Format</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i195-send-variables-to-kustom-via-broadcast">Send variables to Kustom via Broadcast</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i194-launchers-touch-features-support-aka-remove-5-secs-delay">Launchers touch features support (aka remove '5' secs delay)</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_knowledgebase fa_14"></i>
-            <a href="/i1649-unread-sms-and-missed-calls-counters">Unread SMS and missed calls counters</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_ideas fa_14"></i>
-            <a href="/i828-soft-keys-functionality">Soft keys functionality.</a>
-        </li>
-            <li class="side-panel__item">
-            <i class="icon fa fa_icon_problems fa_14"></i>
-            <a href="/i2709-clipboard-paste-not-working-when-text-is-copied-outside-of-the-current-kustom-app-on-android-10">clipboard paste not working when text is copied outside of the current kustom app on android 10+</a>
-        </li>
-    
-</ul>    </div>
-</section>
-    </aside>
 </div>
-
-                <i class="clear"></i>
-            </div>
-
-            <footer class="footer" id="page_footer">
-                                                    
-
-                                <span class="footer__copy">
-                    <a class="link" href="http://helprace.com/knowledge-base-software">Knowledge Base Software</a> by <a class="link" href="http://helprace.com">Helprace</a>
-                </span>
-                
-            </footer>
-
-                        <div id="auth-dialog_mask" class="mask" style="display:none;"></div>
-
-<div id="auth-dialog" class="dialog ui-draggable" style="display: none; ">
-
-<section class="content-block">
-
-    <header class="content-block__header dialog__ttl">
-        <h3 id="auth-dialog-caption">Dialog Caption</h3>
-        <a class="btn btn_simple dialog__close" tabindex="3" id="auth-dialog_close-btn">
-                <i class="btn__icon dialog-close">&nbsp;</i>
-        </a>
-    </header>
-
-    <!-- DIALOG CONTENT -->
-
-            <div id="auth-dialog_login-form" class="login login_dialog" style="display: none;"><iframe id="auth_iframe" style="width: 300px; height: 224px; border: none;"></iframe>
-        <footer class="content-block__footer align_center">
-                <a id="login-dialog_register" tabindex="2" href="javascript:void(0);" class="login__create-account__txt">Sign Up</a>
-                <a id="login-dialog_login-link" tabindex="2" href="javascript:void(0);" class="login__create-account__txt" style="display: none;">Go back and try to login again</a>
-    </footer>
+</div>        
+</article>       
 </div>
-
-<div id="auth-dialog_signup-form" class="login login_dialog" style="display: none;">
-    <!-- register -->
+</div><!-- end main-container -->
+</div><!-- end page-area -->
+<div id="content-footer-section" class="container-fluid clearfix">
+<div class="container">
+<div id="text-9" class="widget widget_text col-md-3"><div class="widget-title"><h3>About Us</h3></div>			<div class="textwidget"><p><a href="https://tolansoft.online/about-us/" target="_blank" rel="noopener">Who are we ?</a></p>
+<p><a href="https://tolansoft.online/contact/" target="_blank" rel="noopener">Contact Us</a></p>
+</div>
+</div><div id="text-11" class="widget widget_text col-md-3"><div class="widget-title"><h3>Tolan Store</h3></div>			<div class="textwidget"><p><a href="https://tolansoft.online/terms-of-buying/" target="_blank" rel="noopener">Terms of Buying</a></p>
+<p><a href="https://tolansoft.online/privacy-policy_tolan/" target="_blank" rel="noopener">Privacy Policy</a></p>
+<p><a href="https://tolansoft.online/cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a></p>
+</div>
+</div><div id="media_image-4" class="widget widget_media_image col-md-3"><img width="300" height="30" src="https://tolansoft.online/wp-content/uploads/2020/12/logo-band_Ode@3x-300x30.png" class="image wp-image-1723  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://tolansoft.online/wp-content/uploads/2020/12/logo-band_Ode@3x-300x30.png 300w, https://tolansoft.online/wp-content/uploads/2020/12/logo-band_Ode@3x-768x76.png 768w, https://tolansoft.online/wp-content/uploads/2020/12/logo-band_Ode@3x-600x59.png 600w, https://tolansoft.online/wp-content/uploads/2020/12/logo-band_Ode@3x.png 958w" sizes="(max-width: 300px) 100vw, 300px"></div>        </div>	
+</div>		
+<footer id="colophon" class="footer-credits container-fluid">
+<div class="container">
+<div class="footer-credits-text text-center">
+<a href="https://wordpress.org/">WordPress</a> gururla sunar                    <span class="sep"> | </span>
+Tema: <a href="https://populariswp.com/">Popularis Press</a>                </div>
+</div>	
+</footer>
+</div><!-- end page-wrap -->
+<div class="float-cart-login hidden-xs">
+<div class="header-cart float-cart">
+<div class="header-cart-block">
+<div class="header-cart-inner">
+<a class="cart-contents" href="https://tolansoft.online/cart/" title="Alış veriş sepetinizi görüntüleyin">
+<i class="fa fa-shopping-bag"><span class="count">0</span></i>
+<div class="amount-cart">$0.00</div> 
+</a>
+<ul class="site-header-cart menu list-unstyled text-center">
+<li>
+<div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>                            </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="header-my-account float-login">
+<div class="header-login"> 
+<a href="https://tolansoft.online/my-account/" title="Hesabım">
+<i class="fa fa-user-circle-o"></i>
+</a>
+</div>
+</div>
+</div>	
 <script type="text/javascript">
-    function submitSignUp() {
-        Application.RegistrationForm.submit();
-    }
+if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+window.addEventListener('DOMContentLoaded', function () {
+apbct_public_sendAJAX(
+{ action: 'apbct_js_keys__get' },
+{ callback: apbct_js_keys__set_input_value, no_nonce: true }
+);
+});
+}
+</script>	<script type="text/javascript">
+(function () {
+var c = document.body.className;
+c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+document.body.className = c;
+})()
 </script>
-<form id="signup-form" action="/registration/submit" method="post">
-    <div class="content-block__data" style="width: 300px;">
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wp-polyfill-js-after">
+( 'fetch' in window ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://tolansoft.online/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/hooks.min.js?ver=50e23bed88bcb9e6e14023e9961698c1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/i18n.min.js?ver=db9a9a37da262883343e941c3731bc67" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19" id="lodash-js"></script>
+<script type="text/javascript" id="lodash-js-after">
+window.lodash = _.noConflict();
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/url.min.js?ver=0ac7e0472c46121366e7ce07244be1ac" id="wp-url-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-translations">
+( function( domain, translations ) {
+var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+localeData[""].domain = domain;
+wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2021-04-15 03:33:04+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"tr"},"You are probably offline.":["Muhtemelen \u00e7evrimd\u0131\u015f\u0131s\u0131n\u0131z."],"Media upload failed. If this is a photo or a large image, please scale it down and try again.":["Ortam kar\u015f\u0131ya y\u00fcklenirken ba\u015far\u0131s\u0131z oldu. E\u011fer y\u00fckledi\u011finiz bir foto\u011fraf veya b\u00fcy\u00fck bir g\u00f6rsel ise l\u00fctfen k\u00fc\u00e7\u00fclt\u00fcp tekrar deneyin."],"The response is not a valid JSON response.":["Yan\u0131t ge\u00e7erli bir JSON yan\u0131t\u0131 de\u011fildir."],"An unknown error occurred.":["Bilinmeyen bir hata olu\u015ftu."]}},"comment":{"reference":"wp-includes\/js\/dist\/api-fetch.js"}} );
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/dist/api-fetch.min.js?ver=a783d1f442d2abefc7d6dbd156a44561" id="wp-api-fetch-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://tolansoft.online/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "c176e4a3cd" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://tolansoft.online/wp-admin/admin-ajax.php?action=rest-nonce";
+</script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70" id="jquery-blockui-js"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Sepeti g\u00f6r\u00fcnt\u00fcle","cart_url":"https:\/\/tolansoft.online\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.0.0" id="wc-add-to-cart-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.0.0" id="woocommerce-js"></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_e3942114b8bc99aa177c025e3da0d5b1","fragment_name":"wc_fragments_e3942114b8bc99aa177c025e3da0d5b1","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.0.0" id="wc-cart-fragments-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/themes/popularis/assets/js/mmenu-light.js?ver=1.1" id="mmenu-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/themes/popularis/assets/js/bootstrap.min.js?ver=3.3.7" id="bootstrap-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/themes/popularis/assets/js/customscript.js?ver=1.0.11" id="popularis-theme-js-js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js?ver=0.8.0" id="firebase_app-js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js?ver=0.8.0" id="firebase_auth-js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js?ver=0.8.0" id="firebase_database-js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js?ver=0.8.0" id="firebase_firestore-js"></script>
+<script type="text/javascript" id="firebase-js-extra">
+/* <![CDATA[ */
+var firebaseOptions = {"apiKey":"AIzaSyB84y86uaNCywr0f0_Jy4m-moGXIkyzJN0","authDomain":"fps-test-3d.firebaseapp.com","databaseURL":"https:\/\/fps-test-3d.firebaseio.com","projectId":"fps-test-3d"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://tolansoft.online/wp-content/plugins/integrate-firebase/js/firebase.js?ver=0.8.0" id="firebase-js"></script>
+<script type="text/javascript" src="https://tolansoft.online/wp-includes/js/wp-embed.min.js?ver=5.7.1" id="wp-embed-js"></script>
+<!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+<div id="cookie-notice" role="banner" class="cookie-revoke-hidden cn-position-bottom cn-effect-fade cn-animated cookie-notice-visible" aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);"><div class="cookie-notice-container" style="color: #fff;"><span id="cn-notice-text" class="cn-text-container">We use cookies to give you the best experience on our website. If you continue to use this site we will assume that you accept it.</span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap" aria-label="Okay">Okay</a><a href="https://tolansoft.online/cookie-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button bootstrap" aria-label="Cookie Policy">Cookie Policy</a></span><a href="javascript:void(0);" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Okay"></a></div>
+</div>
+<!-- / Cookie Notice plugin -->
 
-        <div class="dialog__data" id="registration-form-table">
-
-            <div class="dialog__item">
-                    <label class="label-input">
-                        <input autocomplete="off" name="name" id="registration-name" tabindex="1" type="text" dir="auto" class="text-field text-field_size_wide" placeholder="Name" value="">
-                    </label>
-
-                <div id="registration-name-msg-holder" class="forms__notification">
-                </div>
-            </div>
-            <div class="dialog__item">
-                <label class="label-input">
-                    <input name="email" tabindex="1" id="registration-email" type="email" dir="auto" class="text-field text-field_size_wide" placeholder="Email">
-                </label>
-
-                <div id="registration-email-msg-holder" class="forms__notification">
-                </div>
-            </div>
-            <div class="dialog__item">
-                <label class="label-input">
-                    <input id="registration-password" tabindex="1" name="password" autocomplete="off" type="password" dir="auto" class="text-field text-field_size_wide" placeholder="Password">
-                </label>
-
-                <div id="registration-password-msg-holder" class="forms__notification">
-                </div>
-            </div>
-            <div id="signUpReCaptcha" class="g-recaptcha" data-sitekey="6LclyS4UAAAAAL-hgjHiNSjtnKhxfbD63DwuAmXq" data-callback="submitSignUp" data-size="invisible" data-badge="inline"></div>
-
-            
-            <div class="dialog__item">
-                <input type="submit" tabindex="1" id="registration-form-submit" name="submitForm" value="Sign Up" class="btn btn-blue btn_wide">
-            </div>
-
-        </div>
-
-    </div>
-    <footer class="content-block__footer align_center">
-        <a id="registration-login-link" tabindex="1" href="javascript:void(0);">Login</a>
-    </footer>
-</form>
-<!-- /register --></div>        <!-- /DIALOG CONTENT -->
-</section>
-
-</div>        </div>
-
-        
-            
-            
-<div class="b-hint b-hint_dark" style="position: absolute; left: -10000px; top: -10000px;"></div><div style="position: absolute; top: 0px; left: -10px; width: 0px; height: 0px; overflow: hidden;"><iframe id="auth_iframe" src="//help.kustom.rocks/auth/login//" style="width: 1px; height: 1px; border: none;"></iframe></div></body></html>
+</body></html>

@@ -1,331 +1,1106 @@
-<!DOCTYPE html><html lang="en"><head>
+<html><head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="rave, rave media, rave app, rave video, video, watch together, netflix and chill, wemesh, sync, ampme, airtime, ios, android, watch with friends ">
-    <meta name="description" content="Rave is a new way to watch videos and listen to music in perfect sync with friends.">
-    <meta name="author" content="Rave Inc.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="img/favicon-black.ico" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicon-black.ico" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <title>Rave - Privacy</title>
+<link href="https://fonts.googleapis.com/css?family=Arvo|Nunito|Oxygen|Exo+2|Source+Code+Pro" rel="stylesheet">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/main-c3946cba06.css" rel="stylesheet">
-    <link href="css/privacystyle-8b737b446e.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link href="https://cdn.flycricket.com/templates/main-ltr/css/bootstrap.min.css" rel="stylesheet">
 
 
+<style>/* these are overridden inline in the mustache compilation */
+:root {
+  --background-color: #ffffff;
+  --poweredbybg-color: #f0f0f0;
+  --text-color: #000000;
+  --link-color: #008DD5;
+  --linkhover-color: #005A88;
+  --main-font: 'Arvo'; }
 
+.editing-active {
+  transition: all 0.2s ease-in-out;
+  border: 3px dotted rgba(0, 0, 0, 0.2); }
+  .editing-active:hover {
+    border-color: rgba(31, 175, 132, 0.8);
+    background-color: rgba(31, 175, 132, 0.3);
+    cursor: pointer; }
 
-</head>
+.placeholder-text {
+  font-style: italic;
+  opacity: 0.6; }
 
-<body>
+* {
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--text-color); }
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a href="/" class="navbar-brand page-scroll">
-                    <img src="img/black-rave-logo-504443a9d1.svg" style="width:60px;" alt="black Rave logo">
-</a>
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "pnum";
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
+  position: relative;
+  background: #fff; }
+
+a {
+  color: var(--link-color);
+  transition: all 0.2s linear; }
+  a:focus, a:hover {
+    color: var(--linkhover-color); }
+  a.nohover:hover {
+    text-decoration: none; }
+
+.claim-bar {
+  padding: 12px 0;
+  background: #fff;
+  color: #555;
+  font-family: 'Oxygen', Helvetica, sans-serif;
+  transition: all 0.3s ease-in-out; }
+  .claim-bar * {
+    font-family: 'Oxygen', Helvetica, sans-serif; }
+  .claim-bar div {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: #555; }
+    .claim-bar div span {
+      transition: all 0.3s ease-in-out;
+      color: #008DD5; }
+  .claim-bar:hover {
+    text-decoration: none;
+    text-decoration: none;
+    background: #008DD5;
+    color: white; }
+    .claim-bar:hover div {
+      color: white; }
+      .claim-bar:hover div span {
+        color: white; }
+
+.whitelabel-badge-mobile {
+  background: white;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.2s all ease-in-out; }
+  .whitelabel-badge-mobile .wl-label {
+    font-size: 0.8em;
+    color: #777; }
+  .whitelabel-badge-mobile * {
+    transition: 0.2s all ease-in-out; }
+  .whitelabel-badge-mobile .st0 {
+    fill: #1FAF84; }
+  .whitelabel-badge-mobile:hover {
+    background: #1FAF84; }
+    .whitelabel-badge-mobile:hover * {
+      color: white; }
+    .whitelabel-badge-mobile:hover .st0 {
+      fill: #ffffff; }
+  @media (min-width: 491px) {
+    .whitelabel-badge-mobile {
+      display: none; } }
+
+.promo-badge {
+  display: block;
+  position: relative;
+  background: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: left;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer; }
+  .promo-badge * {
+    font-family: 'Oxygen', Helvetica, sans-serif;
+    transition: 0.2s all ease-in-out;
+    line-height: normal;
+    text-align: left; }
+  .promo-badge .pb-loading-container {
+    padding: 0.5em; }
+    .promo-badge .pb-loading-container .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px; }
+    .promo-badge .pb-loading-container .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      margin: 4px;
+      border: 4px solid #ddd;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #ddd transparent transparent transparent; }
+    .promo-badge .pb-loading-container .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s; }
+    .promo-badge .pb-loading-container .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s; }
+    .promo-badge .pb-loading-container .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s; }
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .promo-badge .pb-main-container {
+    display: none;
+    flex-direction: row; }
+    .promo-badge .pb-main-container .pb-text-container {
+      flex: 1;
+      padding-right: 0.5em;
+      align-self: center; }
+      .promo-badge .pb-main-container .pb-text-container .pb-h1 span {
+        color: #555;
+        font-size: 1.2em;
+        margin-right: 0.2em; }
+      .promo-badge .pb-main-container .pb-text-container .pb-h1 .pb-ios {
+        width: 16px;
+        height: 16px;
+        fill: #ccc;
+        margin-bottom: -1px;
+        display: none; }
+      .promo-badge .pb-main-container .pb-text-container .pb-h1 .pb-android {
+        width: 15px;
+        height: 15px;
+        fill: #ccc;
+        stroke: #ccc;
+        margin-bottom: -1px;
+        display: none; }
+      .promo-badge .pb-main-container .pb-text-container .pb-h2 {
+        color: #888;
+        font-size: 0.9em;
+        margin-top: -2px; }
+      .promo-badge .pb-main-container .pb-text-container .pb-by {
+        font-size: 0.7em;
+        text-transform: uppercase;
+        text-align: left;
+        margin-top: 4px; }
+        .promo-badge .pb-main-container .pb-text-container .pb-by a {
+          color: #aaa; }
+          .promo-badge .pb-main-container .pb-text-container .pb-by a:hover {
+            color: #25d5a1;
+            text-decoration: none; }
+    .promo-badge .pb-main-container img {
+      width: 58px;
+      height: 58px;
+      border-radius: 8px;
+      margin-right: 0.75em;
+      align-self: center;
+      border: none;
+      display: none; }
+  @media (min-width: 600px) {
+    .promo-badge {
+      position: fixed;
+      z-index: 999999999;
+      top: 10px;
+      right: 10px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); } }
+
+footer {
+  background: #222; }
+  footer .editing-active {
+    border-color: rgba(255, 255, 255, 0.8); }
+  footer p {
+    color: #777 !important; }
+  footer .social-icons {
+    background: #222;
+    width: auto;
+    display: inline-block; }
+    footer .social-icons .social-icon {
+      transition: opacity 0.2s ease-in-out;
+      display: inline-block;
+      width: 32px;
+      margin-right: 12px;
+      opacity: 0.5;
+      padding-top: 30px; }
+      footer .social-icons .social-icon path, footer .social-icons .social-icon polygon {
+        transition: all 0.2s linear;
+        fill: white; }
+      footer .social-icons .social-icon:hover {
+        opacity: 1; }
+      footer .social-icons .social-icon.si-muted {
+        border: 2px dashed rgba(255, 255, 255, 0.3);
+        border-radius: 50%; }
+        footer .social-icons .social-icon.si-muted path, footer .social-icons .social-icon.si-muted polygon {
+          transition: all 0.2s linear;
+          fill: rgba(255, 255, 255, 0.3); }
+    footer .social-icons.editing-active {
+      margin-top: 30px;
+      padding: 10px;
+      margin-left: -10px; }
+      footer .social-icons.editing-active .social-icon {
+        padding-top: 0; }
+  footer .footer-store-button-container {
+    text-align: right;
+    margin: auto;
+    vertical-align: middle; }
+    @media (max-width: 767px) {
+      footer .footer-store-button-container {
+        text-align: center; } }
+    footer .footer-store-button-container .footer-store-button {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      display: inline-block; }
+      footer .footer-store-button-container .footer-store-button .store-button {
+        height: auto !important;
+        margin: 0 6px; }
+        footer .footer-store-button-container .footer-store-button .store-button img {
+          height: 50px !important; }
+
+#header .store-button img {
+  height: 60px !important; }
+
+#attribution {
+  transition: all 0.2s ease-in-out;
+  padding: 2em 0;
+  font-size: 0.8em;
+  color: #888 !important; }
+  #attribution p {
+    margin-bottom: 0.45em;
+    font-size: 1.1em; }
+  #attribution a {
+    color: #aaa !important;
+    text-decoration: none; }
+    #attribution a:hover {
+      color: #007bff !important; }
+
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em; }
+
+h2 {
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+  font-size: 1.8em; }
+
+h3 {
+  font-weight: normal;
+  font-size: 16px; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  color: var(--text-color);
+  text-align: center; }
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto; }
+
+.cover {
+  padding: 0 1.5rem; }
+  .cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700; }
+
+p[id='text.line2'] {
+  margin-bottom: 0 !important; }
+
+.site-wrapper {
+  position: relative;
+  background-size: cover;
+  min-height: 100vh; }
+  .site-wrapper .editing-active {
+    border-color: var(--text-color); }
+  .site-wrapper .site-wrapper-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.9;
+    background-color: var(--background-color); }
+  .site-wrapper .site-wrapper-inner {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; }
+    @media (min-width: 767px) {
+      .site-wrapper .site-wrapper-inner {
+        padding-top: 0; } }
+    .site-wrapper .site-wrapper-inner .arrows {
+      width: 60px;
+      height: 32px;
+      position: absolute;
+      left: 50%;
+      margin-left: -30px;
+      bottom: 15px;
+      opacity: 0.5; }
+      @media (max-width: 786px) {
+        .site-wrapper .site-wrapper-inner .arrows {
+          display: none; } }
+      .site-wrapper .site-wrapper-inner .arrows path {
+        stroke: var(--text-color);
+        fill: transparent;
+        stroke-width: 2px; }
+
+@media (min-width: 40em) {
+  .cover-container {
+    width: 100%; } }
+
+@media (max-width: 786px) {
+  * {
+    text-align: center; } }
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center; }
+  #header .text-container {
+    text-align: left;
+    position: relative;
+    display: block;
+    padding-left: 2em;
+    padding-right: 2em;
+    flex: 1;
+    max-width: 800px; }
+    #header .text-container .tc-table {
+      width: 100%;
+      display: table;
+      height: auto;
+      padding-bottom: 5em;
+      padding-top: 2em; }
+      @media (min-width: 787px) {
+        #header .text-container .tc-table {
+          height: 100%;
+          padding-bottom: 0; } }
+      #header .text-container .tc-table .editing-ttp {
+        padding: 1em;
+        font-size: 1.2em; }
+      #header .text-container .tc-table .editing-app-button {
+        font-style: italic;
+        padding: 0.25em;
+        font-size: 1.2em;
+        display: inline-block;
+        border-radius: 1em; }
+        #header .text-container .tc-table .editing-app-button:first-of-type {
+          margin-right: 0.5em; }
+    #header .text-container h1 {
+      font-size: 2em;
+      margin-bottom: 0.25em;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      line-height: 1.1em; }
+      @media (min-width: 787px) {
+        #header .text-container h1 {
+          font-size: 3.2em; } }
+    #header .text-container h2 {
+      margin-top: 0.2em;
+      margin-bottom: 0.3em;
+      font-size: 1.3em; }
+      @media (min-width: 787px) {
+        #header .text-container h2 {
+          font-size: 1.8em; } }
+  #header .device-container {
+    padding-bottom: 2em;
+    width: 100%; }
+    #header .device-container img {
+      max-height: 70vh;
+      max-width: 90%;
+      position: relative;
+      margin-top: 5em; }
+    @media (min-width: 787px) {
+      #header .device-container {
+        width: auto;
+        max-width: 40vw;
+        padding-bottom: 0; }
+        #header .device-container img {
+          margin-top: 0; } }
+
+.store-button {
+  width: auto;
+  display: inline-block; }
+  .store-button:first-of-type {
+    margin-right: 12px; }
+  @media (max-width: 491px) {
+    .store-button:first-of-type {
+      margin-right: 0;
+      margin-bottom: 12px; } }
+  .store-button:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05); }
+  .store-button svg {
+    width: auto;
+    height: 100%;
+    display: block;
+    position: relative; }
+  @media (max-width: 768px) {
+    .store-button {
+      margin: auto; } }
+
+@media (max-width: 491px) {
+  .text-to-phone:not(.email-subscribe) {
+    display: none !important; } }
+
+.text-to-phone input[type='tel'], .text-to-phone input[type='email'] {
+  transition: all 0.2s linear;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  color: #333 !important;
+  text-align: left; }
+  .text-to-phone input[type='tel']:focus, .text-to-phone input[type='email']:focus {
+    border-color: var(--link-color); }
+
+.text-to-phone input[type='email'] {
+  padding-left: 12px;
+  width: 230px; }
+
+.text-to-phone button, .text-to-phone input[type='submit'] {
+  border-radius: 4px;
+  background: var(--link-color);
+  color: white;
+  font-size: 14px;
+  border: 0;
+  padding: 6px 8px;
+  padding-top: 7px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  outline: none;
+  cursor: pointer; }
+
+section {
+  padding: 5em 0;
+  background: white; }
+  section:not(.text-section) * {
+    color: #333; }
+  section h2 {
+    font-size: 2.5em;
+    color: #333;
+    padding-bottom: 0.25em;
+    margin-bottom: 0; }
+
+#screenshots .owl-nav {
+  padding-top: 3em; }
+  #screenshots .owl-nav button {
+    outline: none; }
+  #screenshots .owl-nav .owl-next, #screenshots .owl-nav .owl-prev {
+    font-size: 2em; }
+    #screenshots .owl-nav .owl-next *, #screenshots .owl-nav .owl-prev * {
+      color: rgba(0, 0, 0, 0.25); }
+  #screenshots .owl-nav .owl-prev {
+    margin-right: 1em; }
+
+#screenshots img {
+  border-radius: 0.5em;
+  -webkit-box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.49);
+  box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.49); }
+
+#screenshots h2 {
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+@media (max-width: 767px) {
+  #screenshots h2 {
+    padding-left: 0;
+    padding-right: 0;
+    display: block; } }
+
+#features p {
+  font-size: 1.4em; }
+
+#features ul {
+  padding-left: 1em;
+  padding-top: 0.75em; }
+  #features ul li {
+    list-style-type: circle;
+    font-size: 1.2em;
+    padding-bottom: 0.5em; }
+
+#features button {
+  transition: transform 0.2s ease-in-out;
+  padding: 0.75em 1.5em;
+  border: 0;
+  border-radius: 4px;
+  margin-top: 1em;
+  background-color: var(--background-color);
+  color: white;
+  cursor: pointer; }
+  #features button:hover {
+    transform: scale(1.1); }
+
+#features .feature-right {
+  text-align: left;
+  padding-top: 2em; }
+
+#features .feature-left {
+  text-align: center;
+  padding-right: 0; }
+  #features .feature-left img {
+    max-width: 100%;
+    max-height: 575px; }
+
+@media (min-width: 767px) {
+  #features .feature-left {
+    margin: auto;
+    padding-right: 40px; } }
+
+@media (max-width: 767px) {
+  #features .feature-right {
+    padding-top: 4em; }
+  #features ul {
+    padding-left: 0; }
+    #features ul li {
+      list-style: none; } }
+
+#reviews .stars {
+  width: 100%;
+  padding-bottom: 1.5em; }
+  #reviews .stars svg {
+    color: #eec643;
+    height: 34px;
+    width: 34px; }
+    #reviews .stars svg path {
+      fill: #eec643; }
+
+#reviews #quote-carousel {
+  padding: 0 80px; }
+  #reviews #quote-carousel .carousel-control svg {
+    width: 14px; }
+  #reviews #quote-carousel .carousel-control path {
+    fill: #999; }
+  #reviews #quote-carousel .carousel-indicators {
+    margin-bottom: -1em; }
+    #reviews #quote-carousel .carousel-indicators li {
+      background: #c0c0c0; }
+    #reviews #quote-carousel .carousel-indicators .active {
+      background: #666; }
+
+#reviews blockquote {
+  position: relative;
+  font-size: 1em;
+  font-style: italic;
+  color: #666;
+  padding: 0 5%;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    #reviews blockquote {
+      font-size: 1.6em;
+      line-height: 1.5em;
+      padding: 0 10%; } }
+  #reviews blockquote footer {
+    background: none !important;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: #c7c6c1; }
+    #reviews blockquote footer:before {
+      content: '\2015'; }
+
+a.contact {
+  color: #999; }
+
+a.contact:hover {
+  color: #fff;
+  text-decoration: none; }
+
+@media (max-width: 767px) {
+  * {
+    text-align: center; }
+  section.text-section .col-xs-12 {
+    padding: 0 15px; } }
+
+#dl-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  padding-top: 5em;
+  display: none; }
+  #dl-loader .coffee_cup {
+    width: 20px;
+    height: 24px;
+    border: 1px #999 solid;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    margin: 12px auto; }
+    #dl-loader .coffee_cup:after, #dl-loader .coffee_cup:before {
+      position: absolute;
+      content: ""; }
+    #dl-loader .coffee_cup:after {
+      width: 5px;
+      height: 12px;
+      border: 1px #999 solid;
+      border-left: none;
+      border-radius: 0px 20px 20px 0px;
+      left: 20px; }
+    #dl-loader .coffee_cup:before {
+      width: 1px;
+      height: 6px;
+      background-color: #999;
+      top: -10px;
+      left: 4px;
+      box-shadow: 5px 0px 0px 0px #999, 5px -5px 0px 0px #999, 10px 0px 0px 0px #999;
+      -webkit-animation: steam 1s linear infinite alternate;
+      -moz-animation: steam 1s linear infinite alternate;
+      animation: steam 1s linear infinite alternate; }
+
+@-webkit-keyframes steam {
+  0% {
+    height: 0px; }
+  100% {
+    height: 6px; } }
+
+@-moz-keyframes steam {
+  0% {
+    height: 0px; }
+  100% {
+    height: 6px; } }
+
+@keyframes steam {
+  0% {
+    height: 0px; }
+  100% {
+    height: 6px; } }
+  #dl-loader div {
+    color: #666;
+    font-size: 0.9em; }
+</style>
+<script src="https://pagead2.googlesyndication.com/pagead/js/r20210422/r20190131/reactive_library.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=thanxmod-skin-config.flycricket.io&amp;callback=_gfp_s_&amp;client=ca-pub-7841493567155718"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-84588334-7&amp;l=dataLayer&amp;cx=c"></script><script src="https://pagead2.googlesyndication.com/pagead/js/r20210422/r20190131/show_ads_impl.js" id="google_shimpl"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/dpzVjBAupwRfx3UzvXRnnAKb/recaptcha__pt.js" crossorigin="anonymous" integrity="sha384-Lc1AMSND/RltMr7jPIh1liNXDdAnt/yaNuy82pXDQpAahNKWVG06AN3i4Pcdw/gs"></script><script src="https://cdn.flycricket.com/templates/main-ltr/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdn.flycricket.com/templates/main-ltr/js/bowser.min.js" type="text/javascript"></script>
+<script pro-remove="" src="https://www.google.com/recaptcha/api.js?render=6LcCjdIUAAAAABUwmc_osOtOJ5tBAY_uS6BeyrkB" whitelist-only=""></script>
+<script async="" data-ad-client="ca-pub-7841493567155718" pro-remove="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" whitelist-only="" data-checked-head="true"></script>
+<script type="text/javascript">
+		var _fc_stage = window.location.href.startsWith('file://') || window.location.href.startsWith('http://') ? "local" : "prod";
+	</script>
+<style id="global_style">:root {
+	--background-color: #004AC5;
+	--text-color: #ffffff;
+	--link-color: #EEC643;
+	--linkhover-color: #005A88;
+	--main-font: 'Oxygen';
+	--backgroundgradient: True;
+	--backgroundopacity: 0.9;
+}
+</style>
+<style>
+		.grecaptcha-badge {
+			visibility: hidden;
+		}
+
+		* {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.main-container {
+			color: #222;
+			padding: 2em 0;
+			padding-bottom: 4em;
+			text-align: left !important;
+
+			padding: 2em;
+			background: white;
+			min-height: 400px;
+			-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+			-moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+			box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+
+		}
+
+		.main-container * {
+			text-align: left !important;
+		}
+
+		.main-container *:not(a) {
+			color: #222;
+		}
+
+		.main-container ins.adsbygoogle {
+			background: #ccc;
+		}
+
+		.main-container #content p {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		a {
+			color: #009c9c;
+		}
+
+		a:hover {
+			color: #007bff;
+		}
+
+		h2 {
+			font-size: 1.5em;
+		}
+
+		@media only screen and (max-width: 600px) {
+			h2 {
+				font-size: 1.2em;
+			}
+		}
+
+		a.nohover {
+			color: white;
+			text-decoration: none;
+		}
+
+		#preloader {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			background: white;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			z-index: 99999;
+		}
+
+		.loader {
+			border: 8px solid #f3f3f3;
+			/* Light grey */
+			border-top: 8px solid #009c9c;
+			/* Blue */
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			animation: spin 1.5s linear infinite;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+<style>
+		#fc123-promo {
+			padding-bottom: 20px;
+			background: #eee;
+		}
+
+		.fc123-promoclass {
+			padding: 10px 20px;
+			display: none;
+			flex-wrap: wrap;
+			cursor: pointer;
+		}
+
+		.fc123-promoclass * {
+			font-family: 'Exo 2', sans-serif;
+		}
+
+		.fc123-promoclass img {
+			display: inline-block;
+			margin-right: 20px;
+			border-radius: 8px;
+			max-height: 50px;
+		}
+
+		.fc123-promoclass .fc123-button {
+			padding: 10px 30px;
+			border-radius: 8px;
+			font-weight: bold;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+
+		.fc123-promoclass .fc123-button:hover {
+			background: #357DED;
+		}
+
+		.fc123-promoclass .fc123-pc-text {
+			padding-right: 1em;
+		}
+
+		.fc123-promoclass h1 {
+			text-align: left;
+			font-size: 1.8em;
+			margin: 0;
+		}
+
+		.fc123-promoclass h2 {
+			text-align: left;
+			font-size: 1.1em;
+			margin: 0;
+		}
+
+		.fc123-pr {
+			font-size: 0.7em;
+			text-align: right;
+			margin-top: 5px;
+			opacity: 0.8;
+			margin-right: 4px;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.fc123-pr:hover {
+			opacity: 1;
+		}
+
+		.fc123-button svg {
+			width: 18px;
+			height: 18px;
+			position: relative;
+			top: 3px;
+			margin-right: 4px;
+			display: none;
+		}
+
+		.fc123-button svg.fc123-b-ios {
+			top: 2px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			.fc123-promoclass h1 {
+				font-size: 1.5em;
+			}
+
+			.fc123-promoclass h2 {
+				font-size: 1em;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			.fc123-promoclass h1 {
+				font-size: 1.25em;
+				text-align: center;
+			}
+
+			.fc123-promoclass h2 {
+				font-size: 0.9em;
+				text-align: center;
+			}
+
+			.fc123-promoclass .fc123-button {
+				padding: 10px 24px;
+				border-radius: 4px;
+				font-size: 1em;
+			}
+
+			.fc123-pr {
+				text-align: center;
+				margin-right: 0;
+			}
+
+			.fc123-button svg {
+				width: 16px;
+				height: 16px;
+				position: relative;
+				top: 3px;
+				margin-right: 4px;
+			}
+
+			.fc123-promoclass {
+				text-align: center !important;
+			}
+
+			.fc123-promoclass img {
+				display: none;
+			}
+
+			.fc123-promoclass .fc123-pc-action {
+				text-align: center;
+				width: 100%;
+			}
+
+			.fc123-break {
+				flex-basis: 100%;
+				height: 0;
+			}
+		}
+	</style>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="https://thanxmod-skin-config.flycricket.io/privacy.html" property="og:url">
+<meta content="website" property="og:type">
+<meta content="Thanxmod Skin Config - Privacy Policy" property="og:title">
+<!-- <meta property="og:image" content="" /> -->
+<meta content="" property="og:description">
+<meta content="" name="description">
+<title>Thanxmod Skin Config - Privacy Policy</title><meta http-equiv="origin-trial" content="A+b/H0b8RPXNaJgaNFpO0YOFuGK6myDQXlwnJB3SwzvNMfcndat4DZYMrP4ClJIzYWo3/yP2S+8FTZ/lpqbPAAEAAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6oBxcpn5rQDPKSAs+d0oxNyJYq2/4esBUh3Yx5z8QfcLu+AU8iFCXYRcr/CEEfDnkxxLTsvXPJFQBxHfvkgMAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9KPtG5kl3oLTk21xqynDPGQ5t18bSOpwt0w6kGa6dEWbuwjpffmdUpR3W+faZDubGT+KIk2do0BX2ca16x8qAcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A0OysezhLoCRYomumeYlubLurZTCmsjTb087OvtCy95jNM65cfEsbajrJnhaGwiTxhz38ZZbm+UhUwQuXfVPTg0AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxoOxdZQmIoA1WeAPDixRAeWDdgs7ZtVFfH2y19ziTgD1iaHE5ZGz2UdSjubkWvob9C5PrjUfkWi4ZSLgWk3Xg8AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7+rMYR5onPnACrz+niKSeFdH3xw1IyHo2AZSHmxrofRk9w4HcQPMYcpBUKu6OQ6zsdxf4m/vqa6tG6Na4OLpAQAAAB4eyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="https://adservice.google.com.br/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io" as="script"><script type="text/javascript" src="https://adservice.google.com.br/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io"></script><link rel="preload" href="https://adservice.google.com.br/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io" as="script"><script type="text/javascript" src="https://adservice.google.com.br/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=thanxmod-skin-config.flycricket.io"></script></head>
+<body style="background:#222;" aria-hidden="false">
+<div id="preloader" pro-remove="" style="display: none;">
+<div style="flex:1;"></div>
+<div class="loader"></div>
+<div style="flex:1;"></div>
 </div>
 
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-    <ul class="nav navbar-nav">
-        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-        <li class="hidden">
-            <a href="/"></a>
-        </li>
-        <li>
-            <a href="https://rave.dj">RaveDJ</a>
-        </li>
-        <li>
-            <a href="/about.html">About</a>
-        </li>
-        <!-- <li>
-            <a href="#blog">Blog</a>
-        </li> -->
-        <li>
-            <a href="/press.html">Press</a>
-        </li>
-        <li>
-            <a href="https://shop.rave.io/">Shop</a>
-        </li>
-        <li>
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Download
-                            <span class="caret"></span>
-                          </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li>
-                        <a href="https://play.google.com/store/apps/details?id=com.wemesh.android">
-                            <span class="fa fa-android"></span> Android</a>
-                    </li>
-                    <li>
-                        <a href="https://itunes.apple.com/us/app/wemesh/id929775122"> <span class="fa fa-apple"></span> iOS</a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </li>
-    </ul>
+<div style="background: rgb(238, 238, 238); height: auto !important;">
+<div class="container" style="height: auto !important;">
+<div pro-remove="" whitelist-only="">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7841493567155718" data-ad-format="auto" data-ad-slot="4671721417" data-full-width-responsive="true" style="display: block; height: 280px;" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:690px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 690px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:690px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="690" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7841493567155718&amp;output=html&amp;h=280&amp;slotname=4671721417&amp;adk=1388880720&amp;adf=4283947098&amp;pi=t.ma~as.4671721417&amp;w=690&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1613442785&amp;rafmt=1&amp;psa=0&amp;format=690x280&amp;url=https%3A%2F%2Fthanxmod-skin-config.flycricket.io%2Fprivacy.html&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;dt=1619239427227&amp;bpp=8&amp;bdt=496&amp;idt=303&amp;shv=r20210422&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=5033916475187&amp;frm=20&amp;pv=1&amp;ga_vid=326867057.1619239428&amp;ga_sid=1619239428&amp;ga_hid=973268073&amp;ga_fc=0&amp;u_tz=-240&amp;u_his=2&amp;u_java=0&amp;u_h=1692&amp;u_w=3008&amp;u_ah=1692&amp;u_aw=3008&amp;u_cd=24&amp;u_nplug=0&amp;u_nmime=0&amp;adx=55&amp;ady=0&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=42530671%2C44736525%2C31060710&amp;oid=3&amp;pvsid=209830770793059&amp;pem=831&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C3008%2C0%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7CeE%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;fsb=1&amp;xpc=4TGZeFtlmQ&amp;p=https%3A//thanxmod-skin-config.flycricket.io&amp;dtd=309" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CMjknfeIlvACFRFr0wodkXQFoA" data-load-complete="true"></iframe></ins></ins></ins>
+<!-- this gets triggered after the captcha for suspect domains-->
+<script type="text/javascript">
+					function _show_g() {
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					}
+				</script>
+<!-- this gets triggered automatically when the domain is clean -->
+<script type="text/javascript" whitelist-clean-only="">
+					function _show_g() { } // so the function created above is overwritten
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					$("#preloader").hide(); // hide this immediately, don't wait for captcha
+				</script>
+<script type="text/javascript">
+					function _fc_get_slug() {
+						var slug = null;
+						try {
+							slug = /:\/\/([^\/]+)/.exec(window.location.href)[1].split('.')[0];
+
+							// it's a path-based domain
+							if (slug == 'flycricket') {
+								slug = window.location.pathname.split('/')[1];
+							}
+
+						} catch { }
+						return slug;
+					}
+					function _fc_getscore(token) {
+						return new Promise((resolve, reject) => {
+							var slug = _fc_get_slug();
+							var xhr = new XMLHttpRequest();
+							xhr.open("POST", 'https://v4s77pzm9j.execute-api.us-east-1.amazonaws.com/' + _fc_stage + '/captcha-v2', true);
+							xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+							xhr.onreadystatechange = function () {
+								if (xhr.readyState === 4) {
+									try {
+										var respObj = JSON.parse(xhr.response);
+										_fc_captchaScore = respObj.score;
+									} catch { }
+									resolve(xhr.response);
+								}
+							}
+							xhr.send(JSON.stringify({ token, slug }));
+						});
+					}
+
+					window.addEventListener("load", function () {
+						try {
+							if (window.location.hostname.indexOf('flycricket.io') !== -1) {
+								grecaptcha.ready(function () {
+									try {
+										var slug_stripped = _fc_get_slug().replace(/[^A-Za-z]/g, '');
+										grecaptcha.execute('6LcCjdIUAAAAABUwmc_osOtOJ5tBAY_uS6BeyrkB', { action: slug_stripped }).then(function (token) {
+											_fc_getscore(token).then(() => {
+												if (_fc_captchaScore >= 0.7) {
+													_show_g()
+												}
+												$("#preloader").hide();
+											}).catch(() => {
+												$("#preloader").hide();
+											});
+										});
+									} catch {
+										$("#preloader").hide();
+									}
+								});
+							} else {
+								$("#preloader").hide();
+							}
+						} catch {
+							$("#preloader").hide();
+						}
+					});
+				</script>
 </div>
-<!-- /.navbar-collapse -->
+<div class=" main-container" style="height: auto !important; min-height: 0px !important;">
+<h2>
+					
+						Thanxmod Skin Config
+						
+					&gt; Privacy Policy</h2>
+<hr>
+<div id="content" style="height: auto !important;"><strong>Privacy Policy</strong> <p>                   [Developer/Company name] built the Thanxmod Skin Config app as                   [open source/free/freemium/ad-supported/commercial] app. This SERVICE is provided by                   [Developer/Company name] [at no cost] and is intended for use as                   is.                 </p> <p>                   This page is used to inform visitors regarding [my/our]                   policies with the collection, use, and disclosure of Personal                   Information if anyone decided to use [my/our] Service.                 </p> <p>                   If you choose to use [my/our] Service, then you agree to                   the collection and use of information in relation to this                   policy. The Personal Information that [I/We] collect is                   used for providing and improving the Service. [I/We] will not use or share your information with                   anyone except as described in this Privacy Policy.                 </p><div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-7841493567155718" data-adsbygoogle-status="done" style="display: block; margin: 10px auto 16px; background-color: transparent; height: 280px;"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:626px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_3_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 626px; background-color: transparent; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:626px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="626" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7841493567155718&amp;output=html&amp;h=280&amp;adk=1160473405&amp;adf=2208510599&amp;pi=t.aa~a.2491957605~rp.1&amp;w=626&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1613442785&amp;rafmt=1&amp;to=qs&amp;pwprc=3118473487&amp;psa=0&amp;format=626x280&amp;url=https%3A%2F%2Fthanxmod-skin-config.flycricket.io%2Fprivacy.html&amp;flash=0&amp;fwr=0&amp;pra=3&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=40&amp;dt=1619239428181&amp;bpp=1&amp;bdt=1450&amp;idt=1&amp;shv=r20210422&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df98ec02eee25e0af-22b19f35d1b30042%3AT%3D1619239427%3ART%3D1619239427%3AS%3DALNI_Mbeem2B2Bi5h5hqiHVGUZ3dsqBqCg&amp;prev_fmts=0x0%2C690x280%2C626x280&amp;nras=3&amp;correlator=5033916475187&amp;frm=20&amp;pv=1&amp;ga_vid=326867057.1619239428&amp;ga_sid=1619239428&amp;ga_hid=973268073&amp;ga_fc=0&amp;u_tz=-240&amp;u_his=2&amp;u_java=0&amp;u_h=1692&amp;u_w=3008&amp;u_ah=1692&amp;u_aw=3008&amp;u_cd=24&amp;u_nplug=0&amp;u_nmime=0&amp;adx=87&amp;ady=682&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=42530671%2C44736525%2C31060710&amp;oid=3&amp;pvsid=209830770793059&amp;pem=831&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C3008%2C0%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;ifi=4&amp;uci=a!4&amp;btvi=2&amp;fsb=1&amp;xpc=I9zFd4zUNi&amp;p=https%3A//thanxmod-skin-config.flycricket.io&amp;dtd=21" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-google-query-id="CJ7fvfeIlvACFQMF0wodC0EFdg" data-load-complete="true"></iframe></ins></ins></ins></div><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-7841493567155718" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:626px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_2_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 626px; background-color: transparent; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:626px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="626" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7841493567155718&amp;output=html&amp;h=280&amp;adk=1186093978&amp;adf=2208510599&amp;pi=t.aa~a.638164068~i.6~rp.4&amp;w=626&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1613442785&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=3118473487&amp;psa=0&amp;ad_type=text_image&amp;format=626x280&amp;url=https%3A%2F%2Fthanxmod-skin-config.flycricket.io%2Fprivacy.html&amp;flash=0&amp;fwr=0&amp;pra=3&amp;rh=157&amp;rw=626&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;dt=1619239428181&amp;bpp=2&amp;bdt=1450&amp;idt=-M&amp;shv=r20210422&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df98ec02eee25e0af-22b19f35d1b30042%3AT%3D1619239427%3ART%3D1619239427%3AS%3DALNI_Mbeem2B2Bi5h5hqiHVGUZ3dsqBqCg&amp;prev_fmts=0x0%2C690x280&amp;nras=2&amp;correlator=5033916475187&amp;frm=20&amp;pv=1&amp;ga_vid=326867057.1619239428&amp;ga_sid=1619239428&amp;ga_hid=973268073&amp;ga_fc=0&amp;u_tz=-240&amp;u_his=2&amp;u_java=0&amp;u_h=1692&amp;u_w=3008&amp;u_ah=1692&amp;u_aw=3008&amp;u_cd=24&amp;u_nplug=0&amp;u_nmime=0&amp;adx=87&amp;ady=978&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=42530671%2C44736525%2C31060710&amp;oid=3&amp;pvsid=209830770793059&amp;pem=831&amp;eae=0&amp;fc=1408&amp;brdim=0%2C0%2C0%2C0%2C3008%2C0%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;ifi=3&amp;uci=a!3&amp;btvi=1&amp;fsb=1&amp;xpc=xvwzDEi5Hq&amp;p=https%3A//thanxmod-skin-config.flycricket.io&amp;dtd=16" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-google-query-id="COHTvPeIlvACFcc_0wod8csGwQ" data-load-complete="true"></iframe></ins></ins></ins></div> <p>                   The terms used in this Privacy Policy have the same meanings                   as in our Terms and Conditions, which is accessible at                   Thanxmod Skin Config unless otherwise defined in this Privacy Policy.                 </p> <p><strong>Information Collection and Use</strong></p> <p>                   For a better experience, while using our Service, [I/We]                   may require you to provide us with certain personally                   identifiable information[add whatever else you collect here, e.g. users name, address, location, pictures] The information that                   [I/We] request will be [retained on your device and is not collected by [me/us] in any way]/[retained by us and used as described in this privacy policy].                 </p> <div><p>                     The app does use third party services that may collect                     information used to identify you.                   </p> <p>                     Link to privacy policy of third party service providers used                     by the app                   </p> <ul><li><a href="https://www.google.com/policies/privacy/" rel="noopener noreferrer" target="_blank">Google Play Services</a></li><li><a href="https://support.google.com/admob/answer/6128543?hl=en" rel="noopener noreferrer" target="_blank">AdMob</a></li><li><a href="https://firebase.google.com/policies/analytics" rel="noopener noreferrer" target="_blank">Google Analytics for Firebase</a></li><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --></ul></div> <p><strong>Log Data</strong></p> <p>                   [I/We] want to inform you that whenever you                   use [my/our] Service, in a case of an error in the app                   [I/We] collect data and information (through third party                   products) on your phone called Log Data. This Log Data may                   include information such as your device Internet Protocol                   (“IP”) address, device name, operating system version, the                   configuration of the app when utilizing [my/our] Service,                   the time and date of your use of the Service, and other                   statistics.                 </p> <p><strong>Cookies</strong></p> <p>                   Cookies are files with a small amount of data that are                   commonly used as anonymous unique identifiers. These are sent                   to your browser from the websites that you visit and are                   stored on your device's internal memory.                 </p> <p>                   This Service does not use these “cookies” explicitly. However,                   the app may use third party code and libraries that use                   “cookies” to collect information and improve their services.                   You have the option to either accept or refuse these cookies                   and know when a cookie is being sent to your device. If you                   choose to refuse our cookies, you may not be able to use some                   portions of this Service.                 </p> <p><strong>Service Providers</strong></p> <p>                   [I/We] may employ third-party companies and                   individuals due to the following reasons:                 </p> <ul><li>To facilitate our Service;</li> <li>To provide the Service on our behalf;</li> <li>To perform Service-related services; or</li> <li>To assist us in analyzing how our Service is used.</li></ul> <p>                   [I/We] want to inform users of this Service                   that these third parties have access to your Personal                   Information. The reason is to perform the tasks assigned to                   them on our behalf. However, they are obligated not to                   disclose or use the information for any other purpose.                 </p> <p><strong>Security</strong></p> <p>                   [I/We] value your trust in providing us your                   Personal Information, thus we are striving to use commercially                   acceptable means of protecting it. But remember that no method                   of transmission over the internet, or method of electronic                   storage is 100% secure and reliable, and [I/We] cannot                   guarantee its absolute security.                 </p> <p><strong>Links to Other Sites</strong></p> <p>                   This Service may contain links to other sites. If you click on                   a third-party link, you will be directed to that site. Note                   that these external sites are not operated by [me/us].                   Therefore, [I/We] strongly advise you to review the                   Privacy Policy of these websites. [I/We] have                   no control over and assume no responsibility for the content,                   privacy policies, or practices of any third-party sites or                   services.                 </p> <p><strong>Children’s Privacy</strong></p> <p>                   These Services do not address anyone under the age of 13.                   [I/We] do not knowingly collect personally                   identifiable information from children under 13. In the case                   [I/We] discover that a child under 13 has provided                   [me/us] with personal information, [I/We] immediately                   delete this from our servers. If you are a parent or guardian                   and you are aware that your child has provided us with                   personal information, please contact [me/us] so that                   [I/We] will be able to do necessary actions.                 </p> <p><strong>Changes to This Privacy Policy</strong></p> <p>                   [I/We] may update our Privacy Policy from                   time to time. Thus, you are advised to review this page                   periodically for any changes. [I/We] will                   notify you of any changes by posting the new Privacy Policy on                   this page.                 </p> <p>This policy is effective as of 2020-07-23</p> <p><strong>Contact Us</strong></p> <p>                   If you have any questions or suggestions about [my/our]                   Privacy Policy, do not hesitate to contact [me/us] at 081222740850.                 </p> <p>                   This privacy policy page was created at                   <a href="https://privacypolicytemplate.net" rel="noopener noreferrer" target="_blank">privacypolicytemplate.net</a>                   and modified/generated by                   <a href="https://app-privacy-policy-generator.firebaseapp.com/" rel="noopener noreferrer" target="_blank">App Privacy Policy Generator</a></p></div><div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-7841493567155718" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 200px;"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:626px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:626px;background-color:transparent;"></ins></ins></ins></div>
 </div>
-<!-- /.container -->
-</nav>
+</div>
+</div>
+<footer><footer>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6" style="text-align:left;margin:auto;vertical-align:middle;">
+<div class="social-icons">
+</div>
+<div id="attribution">
+<!-- <p><a href="/">Homepage</a></p> -->
+<p>Website <a href="https://flycricket.com/privacy.html">Privacy Policy</a>, <a href="https://flycricket.com/cookie_policy.html">Cookie Policy</a>, &amp; <a href="https://flycricket.com/terms.html">Terms of Use</a></p>
+<p>This site is protected by reCAPTCHA and the Google
+						<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+						<a href="https://policies.google.com/terms">Terms of Service</a> apply.
+					</p>
+<p>
+						This site is hosted by 
+						<a href="https://www.flycricket.com">Flycricket</a>
+</p>
+</div>
+</div>
+<div class="col-xs-12 col-md-6 footer-store-button-container">
+</div>
+</div>
+</div>
+</footer></footer>
+<script async="" src="https://www.googletagmanager.com/gtag/js"></script>
+<script id="script_analytics">// $(function () {
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "https://app.flycricket.com/api/website_view/82fce910040644d3a3b15a1fe0123614",
+// 		dataType: 'json',
+// 		contentType: 'application/json',
+// 		data: JSON.stringify({ referrer: document.referrer }),
+// 		success: function (resp) {
+// 			console.log(resp);
+// 		},
+// 		error: function (xhr, ajaxOptions, thrownError) {
+// 			console.error(thrownError);
+// 		}
+// 	});
+// });
+
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-84588334-7');
 
-    <div class="container content policy">
-        <h1 class="text-center">Rave Privacy Policy</h1>
-
-
-
-        <p class="text-center">Last updated: January 12, 2021</p>
-
-
-
-        <p>Rave Inc. ("Rave", "Company", "we", and "us") respects the privacy of its users ("you") and has developed this Privacy Policy to describe how we collect, use, process, transfer, store, and disclose your information whenever you use or interact with us through websites, mobile applications, any of our online products and services and links (collectively, the “Services”). In addition, agreements or notices associated with a particular Rave product, service, software or website (“Rave Offering”) may provide additional information about Rave’s processing of your personal information (“Notice”). By using our Services, you are accepting the practices described in this Privacy Policy.</p>
-
-
-
-        <p>Please read and review this Privacy Policy carefully before using or accessing our Services and check our Service and Privacy Policy from time to time to inform yourself of any changes to this Privacy Policy or any other policies or agreements. If you have any questions about our privacy practices, please refer to the end of this Privacy Policy for information on how to contact us.</p>
-
-
-
-        <p><b>1. Information we collect about you</b></p>
-
-
-
-        <p>a) <b>In General:</b> Personal information is information about an identifiable individual (as defined by applicable privacy or data protection laws). We may collect personal information such as your name, email address, Rave unique identifier, and other information that does not identify you. By using the Services, you authorize us to collect, parse and retain information related to the provision of the Service.</p>
-
-
-
-        <p>b) <b>Information you provide:</b> In order to register as a user of Rave, you will be asked to sign in using your Facebook login. If you choose to login to Rave via your Facebook login, you authorize us to access the following Facebook account information: public Facebook profile and information (consistent with your privacy settings in Facebook), your email address, friend list, Facebook friends you might disclose in common with other Rave users, and public profile photos of your Facebook friends who also have Rave. In addition, we may collect and store any personal information you provide while using our Services, or in some other manner. This may include identifying information, such as your name, address, email address and telephone number, and if you transact business with us, financial information, and content and information you post, upload, publish, link to, transmit, record, display or otherwise make available on the Services, or transmit to other users, including text messages, chat, videos (including streaming videos), photographs, or profile text, whether publicly or privately transmitted or posted. If you contact us with a customer service or other inquiry, you provide us with the content of that communication.</p>
-
-
-
-        <p>c) <b>Use of technologies to collect information:</b> We may use various technologies to collect information from your device and about your activities on our Service</p>
-
-
-
-        <p>d) <b>Information collected automatically:</b> We automatically collect information from your browser or mobile device when you visit, access, or use our Services. This information could include your IP address, device ID and type, browser type and language, operating system used by your device, access times, and the referring website address.</p>
-
-
-
-        <p>e) <b>Cookies and Use of Cookie Data:</b> When you visit, access, or use our Services, we may assign your device one or more cookies in order to facilitate or personalize your access and utilization of our Services. Through the use of a cookie, we may automatically collect information about your activity on our Services, such as the pages you visit, the time and date of your visits, and the links you click. If we advertise, we (or third parties) may use certain data collected on our Services to show you Rave advertisements on other sites or applications. Most browsers are initially set to accept cookies, but you can usually change your browser settings to refuse cookies or to indicate when a cookie is being sent. You can typically remove or block browser cookies using the settings in your browser, but that may impact your ability to use certain Rave Offerings as they may not work well or at all with cookies disabled. Choosing to continue without disabling cookies indicates your consent to Rave's use of cookies in accordance with this Privacy Policy.</p>
-
-
-
-        <p>f) <b>Other Technologies:</b> We may use standard internet technology, including but not limited to web beacons and other similar technologies to track your use of our Services and to deliver or communicate with cookies. These technologies may also be used in advertisements or email messages in order to determine whether messages have been opened or acted upon. This information that is collected helps us to optimize our overall content, programming, and advertising activities.</p>
-
-
-
-        <p>g) <b>Information collected by third-parties for advertising purposes:</b> We may allow service providers, advertising companies, ad networks and other third parties to display advertisements on our Service. These third parties may use tracking technologies such as cookies or web beacons, to collect information about users who access, view, or interact with their advertisements. Rave may provide non-anonymized personal information to third parties. </p>
-
-
-
-        <p><b>2. How we use the information we collect</b></p>
-
-
-
-        <p>a)<b> In General.</b> We may use information that we collect about you to: (i) deliver or improve our Services and monitor the Services to ensure they are functioning as intended; (ii) mange our business; (iii) manage your account, provide customer support, and manage our quality assurance; (iv) perform research and analysis about your usage of our Services; (v) communicate with you via email, mail, telephone, SMS, instant messaging, mobile devices to respond to your comments and questions, provide customer support, send technical notes, service messages, security alerts, and other messages for various purposes including to make available or send to you: upgrades or updates, or notices of upgrades or updates of Rave Offerings or third party content or related products, services and software, and notices of promotions and upcoming events; (vi) personalize the Services by providing advertisements, content, or features based on your profile or interests or usage patterns; (vii) verify your identity and prevent fraud or unauthorized or illegal activity; (viii)enforce or exercise any rights in the Terms of Use; (ix) perform website or mobile analytics; (x) to allow for business continuity and disaster recovery operations; (xi) to provide emergency assistance in situations that may threaten the life or physical safety of you or others; and (xii) use for any other purpose for which you have consented such as those that may be set out in Notices, and other purposes as permitted or required by any applicable law.</p>
-
-
-
-        <p>b) In all circumstances, we may perform these functions directly or use a third party service provider to perform these functions on our behalf. In that scenario, the third party service provider will be obligated to use your personal information only to perform services for us. </p>
-
-
-
-        <p><b>2.1 Consent</b></p>
-
-
-
-        <p>Before using Rave Offerings, you may be required to agree to an applicable Notice that may contain additional information regarding Rave's processing of your personal information. Your agreement to the Notice or use of Rave Offerings indicates your consent for Rave to process your personal information for Rave's identified purposes.</p>
-
-
-
-        <p>a) When obtaining consent is not required: In certain circumstances, your personal information may be processed without your consent depending on the jurisdiction and any applicable laws. For example, Rave may not seek consent (i) in the case of an emergency where the life, health or security of an individual may be threatened; (ii) when legal, medical, or security reasons make it impossible or impractical to seek consent; (iii) when information is necessary for the detection and prevention of fraud; (iv) when disclosure is to a lawyer representing Rave; (v) to collect a debt; (vi) to comply with a subpoena, warrant or other court order, lawful request or legal process; or (vii) as may be otherwise required or permitted by law.</p>
-
-
-
-        <p><b>3. Where Information is Processed </b></p>
-
-
-
-        <p>Rave is based in Canada. Our Services are accessible and usable by users from all over the world. By using our Services, you consent to the processing and transfer of information in and to Canada and other countries. Information may also be transferred to, stored, and processed in other countries globally, where our servers are located. By using our Services, you consent to the processing, transfer, and storage of information in other countries. </p>
-
-
-
-        <p><b>4. How We Disclose Information</b></p>
-
-
-
-        <p>a) <b>Information disclosed with other users:</b> As a registered user of Rave, your name and profile picture will be viewable by other users of the Services. Other users of Rave you have interacted with in any way, may be able to view information you have provided to us directly or through Facebook such as your Facebook profile picture and name. For example, if you chat with another user, they will be able to see all the content of your chats.</p>
-
-
-
-        <p>b) <b>Personal Information:</b> We do not disclose your personal information with others except as specified in this Privacy Policy or when we inform you and provide you an opportunity to opt out of having your personal information disclosed. We reserve the right to disclose personal information with: (i) Service providers - we may disclose information including personal information with third parties that perform certain services on our behalf. These services may include fulfilling orders, providing customer service, marketing, business and sales analysis, ad tracking, mobile application analytics, and other features offered through our Services. These service providers may have access to personal information needed to perform their functions, but are not permitted to use or disclose information for any other purposes; (ii) Other situations - We may disclose your information, including personal information in response to a subpoena or a similar investigative demand, a court order, or request for cooperation from a law enforcement or government agency; to establish or exercise our legal rights; to defend against legal claims; or as otherwise required by law. In these cases, we may raise or waive any or all legal objections or rights available to us. We may also disclose your information, including personal information in order to protect or defend the rights, property or safety of our Company, our users, our employees, or others, or to enforce our Terms of Use or other agreements or policies. In the event of the sale of all or a portion of Rave’s assets, Rave may provide personal information to the third party purchaser.</p>
-
-
-
-        <p>c) <b>Aggregated and/or non-personal information</b>: We may use and disclose non-personal information we collect under any of the above circumstances. We may also disclose it with third parties to help develop or deliver targeted advertising on our Services. We may also disclose aggregated and/or non-personal information to third parties including advertisers, advisors and investors to help analyze and report on any advertising you see or access, conduct general business analysis, or personalize your experience on our Services. Rave reserves the right to process, sell, trade or rent aggregated or anonymous information that is not associated with or linked to an identifiable individual.</p>
-
-
-
-        <p><b>5. How you can access your information</b></p>
-
-
-
-        <p>If you have a Rave account you can review and update your personal information under the "Settings" page in the Rave application. You may close your account at any time by deleting the Rave application from your mobile device. In the event you close your account, we may retain certain information associated with your account for analytical purposes, recordkeeping, enforce our Terms of Use or any other policies or agreements, to prevent fraud, or take any actions otherwise permitted by law. In addition, any information that has already been provided to third parties as described in this Privacy Policy, will be subject to those third parties' policies regarding retention of information. Rave retains personal information as long as necessary for the fulfillment of Rave's identified purposes or as otherwise necessary to comply with applicable laws. When personal information is no longer necessary or relevant for Rave’s identified purposes, or required by applicable laws, Rave will take steps to have it deleted, destroyed, erased, aggregated or made anonymous. </p>
-
-
-
-        <p><b>6. Your choices regarding collection and use of your information</b></p>
-
-
-
-        <p>You can choose not to provide us with certain information in the registration process, but that may result in you being unable to access or use certain features of our Service because that information may be necessary in order to register as a user. If you do not wish to login into our Services using your Facebook login, you will be unable to use the Services.</p>
-
-
-
-        <p><b>7. How we protect your information</b></p>
-
-
-
-        <p>Security measures are used to help safeguard your personal information and prevent unauthorized access, use, and/or disclosure. However, no system is completely secure therefore you are advised to take steps to protect your information. Rave does not promise, nor should it be expected from you, that your personal information, chat, or other communications will always remain secure. Users of our Services should take care whenever personal information is disclosed when using or accessing our Services. You can reduce risk of unauthorized access to your personal information by using common sense security practices. For example, you are responsible for utilizing appropriate security measures to control access to your device and computer system, such as creating a strong password that cannot be easily guessed by others (e.g. by including punctuation marks, numbers, capital and lowercase letters, and choosing a password of an appropriate length and which does not include your name or account name), using different passwords for different services and using up-to-date antivirus software.</p>
-
-
-
-        <p><b>8. Children's Privacy</b></p>
-
-
-
-        <p>Our Services are restricted to use by individuals age 13 and above. We do not knowingly collect, maintain, use, or disclose personal information from children under the age of 13.</p>
-
-
-
-        <p><b>9. No Rights of Third Parties</b></p>
-
-
-
-        <p>This Privacy Policy does not create rights enforceable by third parties.</p>
-
-
-
-        <p><b>10. You can access your personal information</b></p>
-
-
-
-        <p>Upon written request, Rave will inform you whether or not it holds personal information about you and provide you with access to your information within a reasonable timeframe and at minimal or no cost in accordance with applicable laws. If you identify an inaccuracy or incompleteness in your personal information, Rave will amend your information and notify any third parties as required by applicable laws.</p>
-
-
-
-        <p>In certain situations and depending on applicable laws, Rave may not be able to provide access to all of the personal information that it holds about you. For example, Rave may not provide access to information if doing so: (i) would likely reveal personal information about a third party; (ii) could reasonably be expected to threaten the life or security of another individual; (iii) would reveal Rave or third party confidential information; (iv) includes information that is protected by solicitor or attorney client privilege; (v) or includes information that was processed in relation to the investigation of a breach of an agreement or a contravention of a law.</p>
-
-
-
-        <p>In order to safeguard your personal information from unauthorized access, Rave may ask that you provide sufficient information to identify yourself prior to providing access to your personal information.</p>
-
-
-
-        <p>Depending on the circumstances and applicable laws, Rave may refuse to process certain access requests (e.g. access requests that are unreasonably repetitive or systematic, would be extremely impractical or require disproportionate technical effort).</p>
-
-
-
-        <p><b>11. Changes to this Privacy Policy</b></p>
-
-
-
-        <p>We will occasionally update this Privacy Policy. Changes to this Privacy Policy will be posted with a "last revised date" at the top of this Privacy Policy. We recommend that you check our Privacy Policy from time to time to inform yourself of any changes to this Privacy Policy or any of our other policies or agreements. You will be deemed to have agreed to any such modification or amendment by your decision to continue using the Services following the date in which the modified or amended Privacy Policy is posted.</p>
-
-
-
-        <p>Rave will occasionally update this Privacy Policy so that it remains relevant and current with changing technologies, applicable laws, our evolving business practices and the needs of our users. Rave encourages you to periodically review this Privacy Policy to stay informed of how Rave manages your personal information. If any changes are made to this Privacy Policy, Rave will revise the "Last Updated" date that is indicated on the Privacy Policy.</p>
-
-
-
-        <p>If material changes are made that impact you, we will notify users by placing a prominent notice at http://rave.io/privacy.html. Depending on the circumstances, we may also decide to send users a notice electronically. If you continue to use your Rave Offerings after notice of the change has been given, you will be deemed to have accepted such changes.</p>
-
-
-
-        <p><b>12. How to contact us</b></p>
-
-
-
-        <p>If you have any questions regarding this Privacy Policy, please contact us by email at rave@rave.io</p>
-
-
-
-       
-    </div>
-
-
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <div class="social-media">
-            <a href="https://twitter.com/GetRaveApp" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
-            <a href="https://www.facebook.com/GetRave" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
-            <a href="https://www.youtube.com/channel/UC6kpsvJ8h7C02P01bdKhnKQ" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
-            <a href="https://www.instagram.com/getraveapp/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
-            <a href="/contact.html" class="icon-button email"><i class="fa fa-envelope"></i><span></span></a>
-        </div>
-         <p>
-            <a href="/privacy.html">Privacy Policy</a>
-            |
-            <a href="/terms.html">Terms of Service</a>
-        </p>
-        <p>© 2021 Rave Inc., All Rights Reserved</p>
-
-    </div>
-</footer>
-
-<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="js/main-6336869f96.js"></script>
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60739136-3', 'auto');
-  ga('send', 'pageview');
 
 </script>
 
-</body></html>
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7841493567155718&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1613442785&amp;plat=1%3A8%2C2%3A8%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fthanxmod-skin-config.flycricket.io%2Fprivacy.html&amp;ea=0&amp;flash=0&amp;pra=5&amp;wgl=1&amp;dt=1619239427208&amp;bpp=19&amp;bdt=477&amp;idt=295&amp;shv=r20210422&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=5033916475187&amp;frm=20&amp;pv=2&amp;ga_vid=326867057.1619239428&amp;ga_sid=1619239428&amp;ga_hid=973268073&amp;ga_fc=0&amp;u_tz=-240&amp;u_his=2&amp;u_java=0&amp;u_h=1692&amp;u_w=3008&amp;u_ah=1692&amp;u_aw=3008&amp;u_cd=24&amp;u_nplug=0&amp;u_nmime=0&amp;adx=-12245933&amp;ady=-12245933&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=42530671%2C44736525%2C31060710&amp;oid=3&amp;pvsid=209830770793059&amp;pem=831&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C3008%2C0%2C0%2C0%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=0&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=317" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcCjdIUAAAAABUwmc_osOtOJ5tBAY_uS6BeyrkB&amp;co=aHR0cHM6Ly90aGFueG1vZC1za2luLWNvbmZpZy5mbHljcmlja2V0LmlvOjQ0Mw..&amp;hl=pt&amp;v=dpzVjBAupwRfx3UzvXRnnAKb&amp;size=invisible&amp;cb=wtk5cv8buqc8" width="256" height="60" role="presentation" name="a-naprzub3oqlg" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><iframe id="google_osd_static_frame_6140183594180" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20210422/r20190131/zrt_lookup.html#" data-ad-client="ca-pub-7841493567155718" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background-color: white !important;" aria-hidden="true" data-vignette-loaded="true"><ins id="aswift_5_expand" style="display: inline-table !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_5_anchor" style="display: block !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_5" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/html/r20210422/r20190131/zrt_lookup.html?fsb=1#RS-0-&amp;adk=1812271808&amp;client=ca-pub-7841493567155718&amp;fa=8&amp;ifi=6&amp;uci=a!6&amp;xpc=ciOXtcv33v&amp;p=https%3A//thanxmod-skin-config.flycricket.io" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" data-google-container-id="a!6" data-google-query-id="CMDumveIlvACFRDVhgodMEkD5Q" data-load-complete="true"></iframe></ins></ins></ins></html>

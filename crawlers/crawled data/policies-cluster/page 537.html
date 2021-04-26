@@ -1,433 +1,1182 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html><html><head><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><meta name="is-terms-page" content="true">
+<meta name="fb-referral" content="false">
+<meta name="translated-routes" content="{&quot;biking&quot;:&quot;biking&quot;,&quot;music&quot;:&quot;music&quot;,&quot;dashboard&quot;:&quot;dashboard&quot;,&quot;memberships&quot;:&quot;premium-membership&quot;,&quot;confirm&quot;:&quot;confirm&quot;,&quot;complete&quot;:&quot;complete&quot;,&quot;error&quot;:&quot;error&quot;,&quot;refused&quot;:&quot;refused&quot;,&quot;advertisements&quot;:&quot;rt-adverts&quot;,&quot;about&quot;:&quot;about&quot;,&quot;team&quot;:&quot;team&quot;,&quot;legal&quot;:&quot;legal&quot;,&quot;press&quot;:&quot;press&quot;,&quot;terms&quot;:&quot;terms&quot;,&quot;privacy_policy&quot;:&quot;privacy-policy&quot;,&quot;privacy-policy&quot;:&quot;privacy-policy&quot;,&quot;third_party_cookies&quot;:&quot;third-party-cookies&quot;,&quot;third-party-cookies&quot;:&quot;third-party-cookies&quot;,&quot;cookie_policy&quot;:&quot;cookie-policy&quot;,&quot;cookie-policy&quot;:&quot;cookie-policy&quot;,&quot;accept_agb&quot;:&quot;accept-terms&quot;,&quot;accept-agb&quot;:&quot;accept-terms&quot;,&quot;accept_terms&quot;:&quot;accept-terms&quot;,&quot;accept-terms&quot;:&quot;accept-terms&quot;,&quot;featurematrix&quot;:&quot;featurematrix&quot;,&quot;phones&quot;:&quot;smartphones&quot;,&quot;iphone&quot;:&quot;iphone&quot;,&quot;android&quot;:&quot;android&quot;,&quot;sensors&quot;:&quot;sensors&quot;,&quot;products&quot;:&quot;products&quot;,&quot;users&quot;:&quot;users&quot;,&quot;login&quot;:&quot;login&quot;,&quot;signup&quot;:&quot;signup&quot;,&quot;welcome&quot;:&quot;welcome&quot;,&quot;settings&quot;:&quot;settings&quot;,&quot;statistics&quot;:&quot;statistics&quot;,&quot;training_history&quot;:&quot;trainings-history&quot;,&quot;performance_progress&quot;:&quot;performance-progress&quot;,&quot;training_habits&quot;:&quot;training-habits&quot;,&quot;weight_history&quot;:&quot;weight-history&quot;,&quot;heart_rates&quot;:&quot;heart-rates&quot;,&quot;run_sessions&quot;:&quot;sport-sessions&quot;,&quot;albums&quot;:&quot;photo-albums&quot;,&quot;images&quot;:&quot;photos&quot;,&quot;routes&quot;:&quot;routes&quot;,&quot;events&quot;:&quot;events&quot;,&quot;training_plans&quot;:&quot;training-plans&quot;,&quot;scheduled_training_plans&quot;:&quot;training-plans&quot;,&quot;gifts&quot;:&quot;gift-cards&quot;,&quot;health&quot;:&quot;health&quot;,&quot;nutrition&quot;:&quot;nutrition&quot;,&quot;statements&quot;:&quot;nutrition-quiz&quot;,&quot;around_me&quot;:&quot;around-me&quot;,&quot;may_know&quot;:&quot;may-know&quot;,&quot;requests&quot;:&quot;requests&quot;,&quot;gmail_authentication&quot;:&quot;auth-gmail&quot;,&quot;gmail_authorise&quot;:&quot;from-gmail&quot;,&quot;facebook_authentication&quot;:&quot;auth-facebook&quot;,&quot;facebook_authorise&quot;:&quot;from-facebook&quot;}">
+<meta name="translated-route-paths" content="{&quot;web-update&quot;:null,&quot;about&quot;:null,&quot;activate&quot;:&quot;/en/activate(.:format)&quot;,&quot;adyen_checkout_payment&quot;:&quot;/en/checkout/:app/payment(.:format)&quot;,&quot;apps&quot;:&quot;/en/apps(.:format)&quot;,&quot;apps_app&quot;:null,&quot;apps_category&quot;:&quot;/en/apps/:category(.:format)&quot;,&quot;around_me_user_friends&quot;:&quot;/en/users/:user_id/friends/around-me(.:format)&quot;,&quot;change_records_usage_user_run_session&quot;:&quot;/en/users/:user_id/sport-sessions/:id/change_records_usage(.:format)&quot;,&quot;connect&quot;:&quot;/en/connect(.:format)&quot;,&quot;dashboard_user&quot;:&quot;/en/users/:id/dashboard(.:format)&quot;,&quot;edit_user_run_session&quot;:&quot;/en/users/:user_id/sport-sessions/:id/edit(.:format)&quot;,&quot;groups&quot;:&quot;/en/groups(.:format)&quot;,&quot;user_groups&quot;:&quot;/en/users/:user_id/groups(.:format)&quot;,&quot;jobs&quot;:&quot;/en/jobs(.:format)&quot;,&quot;leaderboard_user_friends&quot;:&quot;/en/users/:user_id/friends/leaderboard(.:format)&quot;,&quot;legal&quot;:&quot;/en/legal(.:format)&quot;,&quot;memberships&quot;:&quot;/en/premium-membership(.:format)&quot;,&quot;memberships_terms_gold&quot;:&quot;/en/premium-membership/terms_gold(.:format)&quot;,&quot;music&quot;:&quot;/en/music(.:format)&quot;,&quot;new_route&quot;:&quot;/en/routes/new(.:format)&quot;,&quot;new_user_password&quot;:&quot;/en/d/users/password/new(.:format)&quot;,&quot;new_user_run_session&quot;:&quot;/en/users/:user_id/sport-sessions/new(.:format)&quot;,&quot;privacy_policy&quot;:&quot;/en/privacy-policy(.:format)&quot;,&quot;minimum_registration_age&quot;:null,&quot;minimum-premium-age&quot;:null,&quot;cookie_policy&quot;:&quot;/en/cookie-policy(.:format)&quot;,&quot;privacy_user_settings&quot;:&quot;/en/users/:user_id/settings/privacy(.:format)&quot;,&quot;account_and_data_user_settings&quot;:&quot;/en/users/:user_id/settings/account-and-data(.:format)&quot;,&quot;activity_import_user_settings&quot;:&quot;/en/users/:user_id/settings/activity-import(.:format)&quot;,&quot;products&quot;:null,&quot;root&quot;:&quot;/en&quot;,&quot;route&quot;:&quot;/en/routes/:id(.:format)&quot;,&quot;routes&quot;:&quot;/en/routes(.:format)&quot;,&quot;search_routes&quot;:null,&quot;send_invite_user_invitations&quot;:&quot;/en/users/:user_id/invitations/send_invite(.:format)&quot;,&quot;shop&quot;:&quot;/en/shop(.:format)&quot;,&quot;storyrunning&quot;:&quot;/en/storyrunning(.:format)&quot;,&quot;terms&quot;:&quot;/en/terms(.:format)&quot;,&quot;training&quot;:&quot;/en/training(.:format)&quot;,&quot;training_plan_category&quot;:null,&quot;training_plans&quot;:&quot;/en/training-plans(.:format)&quot;,&quot;user&quot;:&quot;/en/users/:id(.:format)&quot;,&quot;user_albums&quot;:null,&quot;user_friends&quot;:&quot;/en/users/:user_id/friends(.:format)&quot;,&quot;user_logout&quot;:&quot;/en/logout(.:format)&quot;,&quot;user_routes&quot;:&quot;/en/users/:user_id/routes(.:format)&quot;,&quot;user_run_session&quot;:&quot;/en/users/:user_id/sport-sessions/:id(.:format)&quot;,&quot;user_run_sessions&quot;:&quot;/en/users/:user_id/sport-sessions(.:format)&quot;,&quot;user_scheduled_training_plans&quot;:&quot;/en/users/:user_id/training-plans(.:format)&quot;,&quot;user_session&quot;:&quot;/en/d/users/sign_in(.:format)&quot;,&quot;user_settings&quot;:&quot;/en/users/:user_id/settings(.:format)&quot;,&quot;user_statistics&quot;:&quot;/en/users/:user_id/statistics(.:format)&quot;,&quot;user_statistics_records&quot;:&quot;/en/users/:user_id/statistics/records(.:format)&quot;,&quot;weight_history_user_health_index&quot;:&quot;/en/users/:user_id/health/weight-history(.:format)&quot;,&quot;requests_user_friends&quot;:&quot;/en/users/:user_id/friends/requests(.:format)&quot;,&quot;import_user&quot;:null,&quot;premium_detail&quot;:&quot;/premium/:detail_page(.:format)&quot;}">
+<meta name="translated-routes" content="{&quot;biking&quot;:&quot;biking&quot;,&quot;music&quot;:&quot;music&quot;,&quot;dashboard&quot;:&quot;dashboard&quot;,&quot;memberships&quot;:&quot;premium-membership&quot;,&quot;confirm&quot;:&quot;confirm&quot;,&quot;complete&quot;:&quot;complete&quot;,&quot;error&quot;:&quot;error&quot;,&quot;refused&quot;:&quot;refused&quot;,&quot;advertisements&quot;:&quot;rt-adverts&quot;,&quot;about&quot;:&quot;about&quot;,&quot;team&quot;:&quot;team&quot;,&quot;legal&quot;:&quot;legal&quot;,&quot;press&quot;:&quot;press&quot;,&quot;terms&quot;:&quot;terms&quot;,&quot;privacy_policy&quot;:&quot;privacy-policy&quot;,&quot;privacy-policy&quot;:&quot;privacy-policy&quot;,&quot;third_party_cookies&quot;:&quot;third-party-cookies&quot;,&quot;third-party-cookies&quot;:&quot;third-party-cookies&quot;,&quot;cookie_policy&quot;:&quot;cookie-policy&quot;,&quot;cookie-policy&quot;:&quot;cookie-policy&quot;,&quot;accept_agb&quot;:&quot;accept-terms&quot;,&quot;accept-agb&quot;:&quot;accept-terms&quot;,&quot;accept_terms&quot;:&quot;accept-terms&quot;,&quot;accept-terms&quot;:&quot;accept-terms&quot;,&quot;featurematrix&quot;:&quot;featurematrix&quot;,&quot;phones&quot;:&quot;smartphones&quot;,&quot;iphone&quot;:&quot;iphone&quot;,&quot;android&quot;:&quot;android&quot;,&quot;sensors&quot;:&quot;sensors&quot;,&quot;products&quot;:&quot;products&quot;,&quot;users&quot;:&quot;users&quot;,&quot;login&quot;:&quot;login&quot;,&quot;signup&quot;:&quot;signup&quot;,&quot;welcome&quot;:&quot;welcome&quot;,&quot;settings&quot;:&quot;settings&quot;,&quot;statistics&quot;:&quot;statistics&quot;,&quot;training_history&quot;:&quot;trainings-history&quot;,&quot;performance_progress&quot;:&quot;performance-progress&quot;,&quot;training_habits&quot;:&quot;training-habits&quot;,&quot;weight_history&quot;:&quot;weight-history&quot;,&quot;heart_rates&quot;:&quot;heart-rates&quot;,&quot;run_sessions&quot;:&quot;sport-sessions&quot;,&quot;albums&quot;:&quot;photo-albums&quot;,&quot;images&quot;:&quot;photos&quot;,&quot;routes&quot;:&quot;routes&quot;,&quot;events&quot;:&quot;events&quot;,&quot;training_plans&quot;:&quot;training-plans&quot;,&quot;scheduled_training_plans&quot;:&quot;training-plans&quot;,&quot;gifts&quot;:&quot;gift-cards&quot;,&quot;health&quot;:&quot;health&quot;,&quot;nutrition&quot;:&quot;nutrition&quot;,&quot;statements&quot;:&quot;nutrition-quiz&quot;,&quot;around_me&quot;:&quot;around-me&quot;,&quot;may_know&quot;:&quot;may-know&quot;,&quot;requests&quot;:&quot;requests&quot;,&quot;gmail_authentication&quot;:&quot;auth-gmail&quot;,&quot;gmail_authorise&quot;:&quot;from-gmail&quot;,&quot;facebook_authentication&quot;:&quot;auth-facebook&quot;,&quot;facebook_authorise&quot;:&quot;from-facebook&quot;}">
+<meta name="ember-root-url" content="/en">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="rt-custom-page-tracking-path" content="general/privacy_policy">
+<meta name="country-code" content="BR">
+<meta name="ad-page-context-identifier" content="General">
+<link href=" /favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href=" /favicon.ico" rel="icon" type="image/x-icon">
+<link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png">
+<link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/manifest.json" rel="manifest">
+<meta content="#000" name="msapplication-TileColor">
+<meta content="/ms-icon-144x144.png" name="msapplication-TileImage">
+<meta content="#000" name="theme-color">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<link href="https://www.runtastic.com/en/privacy-policy" hreflang="x-default" rel="alternate">
+<link href="https://www.runtastic.com/de/datenschutz" hreflang="de" rel="alternate">
+<link href="https://www.runtastic.com/es/politica-de-privacidad" hreflang="es" rel="alternate">
+<link href="https://www.runtastic.com/it/privacy-policy" hreflang="it" rel="alternate">
+<link href="https://www.runtastic.com/nl/privacy-policy" hreflang="nl" rel="alternate">
+<link href="https://www.runtastic.com/fr/politique-de-confidentialite" hreflang="fr" rel="alternate">
+<link href="https://www.runtastic.com/cs/ochrana-osobnich-udaju" hreflang="cs" rel="alternate">
+<link href="https://www.runtastic.com/ja/privacy-policy" hreflang="ja" rel="alternate">
+<link href="https://www.runtastic.com/pl/polityka-prywatnosci" hreflang="pl" rel="alternate">
+<link href="https://www.runtastic.com/pt-br/politica-de-privacidade" hreflang="pt-br" rel="alternate">
+<link href="https://www.runtastic.com/ru/privacy-policy" hreflang="ru" rel="alternate">
+<link href="https://www.runtastic.com/zh-tw/privacy-policy" hreflang="zh-tw" rel="alternate">
+<link href="https://www.runtastic.com/tr/gizlilik-politikas" hreflang="tr" rel="alternate">
+<link href="https://www.runtastic.com/ko/privacy-policy" hreflang="ko" rel="alternate">
+<title>adidas Runtastic: adidas Running &amp; adidas Training apps</title>
+<meta name="description" content="Track your runs, bodyweight training sessions, and other fitness &amp; sports activities with adidas Runtastic apps. Stay motivated with your friends, set new goals, start a training plan, and live a healthier life.">
+<meta name="crawlable-page-url" content="">
+<meta name="i18n-locale" content="en">
+<meta name="country-iso-to-id" content="{&quot;AF&quot;:1,&quot;AX&quot;:274,&quot;AL&quot;:2,&quot;DZ&quot;:3,&quot;AS&quot;:196,&quot;AD&quot;:4,&quot;AO&quot;:5,&quot;AI&quot;:197,&quot;AQ&quot;:243,&quot;AG&quot;:6,&quot;AR&quot;:7,&quot;AM&quot;:8,&quot;AW&quot;:198,&quot;AU&quot;:9,&quot;AT&quot;:10,&quot;AZ&quot;:11,&quot;BS&quot;:12,&quot;BH&quot;:13,&quot;BD&quot;:14,&quot;BB&quot;:15,&quot;BY&quot;:16,&quot;BE&quot;:17,&quot;BZ&quot;:18,&quot;BJ&quot;:19,&quot;BM&quot;:199,&quot;BT&quot;:20,&quot;GW&quot;:70,&quot;BO&quot;:21,&quot;BA&quot;:22,&quot;BW&quot;:23,&quot;BR&quot;:24,&quot;IO&quot;:261,&quot;VG&quot;:233,&quot;BN&quot;:25,&quot;BG&quot;:26,&quot;BF&quot;:27,&quot;BI&quot;:28,&quot;KH&quot;:29,&quot;CM&quot;:30,&quot;CA&quot;:31,&quot;CV&quot;:32,&quot;KY&quot;:200,&quot;CF&quot;:33,&quot;TD&quot;:34,&quot;CL&quot;:35,&quot;CN&quot;:36,&quot;CX&quot;:245,&quot;CC&quot;:280,&quot;CO&quot;:37,&quot;KM&quot;:38,&quot;CK&quot;:202,&quot;CR&quot;:41,&quot;HR&quot;:42,&quot;CU&quot;:43,&quot;CY&quot;:44,&quot;CZ&quot;:45,&quot;CD&quot;:239,&quot;DK&quot;:46,&quot;DJ&quot;:47,&quot;DM&quot;:48,&quot;DO&quot;:49,&quot;EC&quot;:51,&quot;EG&quot;:52,&quot;SV&quot;:53,&quot;GQ&quot;:54,&quot;ER&quot;:55,&quot;EE&quot;:56,&quot;ET&quot;:57,&quot;FO&quot;:206,&quot;FK&quot;:205,&quot;FJ&quot;:58,&quot;FI&quot;:59,&quot;FR&quot;:60,&quot;GF&quot;:207,&quot;PF&quot;:208,&quot;TF&quot;:244,&quot;GA&quot;:61,&quot;GM&quot;:62,&quot;GE&quot;:63,&quot;DE&quot;:64,&quot;GH&quot;:65,&quot;GI&quot;:209,&quot;GR&quot;:66,&quot;GL&quot;:210,&quot;GD&quot;:67,&quot;GP&quot;:211,&quot;GU&quot;:212,&quot;GT&quot;:68,&quot;GN&quot;:69,&quot;GY&quot;:71,&quot;HT&quot;:72,&quot;HM&quot;:277,&quot;HN&quot;:73,&quot;HK&quot;:214,&quot;HU&quot;:74,&quot;IS&quot;:75,&quot;IN&quot;:76,&quot;ID&quot;:77,&quot;IR&quot;:78,&quot;IQ&quot;:79,&quot;IE&quot;:80,&quot;IL&quot;:81,&quot;IT&quot;:82,&quot;CI&quot;:83,&quot;JM&quot;:84,&quot;JP&quot;:85,&quot;JO&quot;:86,&quot;KZ&quot;:87,&quot;KE&quot;:88,&quot;KI&quot;:89,&quot;KR&quot;:91,&quot;KW&quot;:93,&quot;KG&quot;:94,&quot;LA&quot;:95,&quot;LV&quot;:96,&quot;LB&quot;:97,&quot;LS&quot;:98,&quot;LR&quot;:99,&quot;LY&quot;:100,&quot;LI&quot;:101,&quot;LT&quot;:102,&quot;LU&quot;:103,&quot;MO&quot;:217,&quot;MK&quot;:104,&quot;MG&quot;:105,&quot;MW&quot;:106,&quot;MY&quot;:107,&quot;MV&quot;:108,&quot;ML&quot;:109,&quot;MT&quot;:110,&quot;MH&quot;:111,&quot;MQ&quot;:218,&quot;MR&quot;:112,&quot;MU&quot;:113,&quot;YT&quot;:240,&quot;MX&quot;:114,&quot;FM&quot;:115,&quot;MD&quot;:116,&quot;MC&quot;:117,&quot;MN&quot;:118,&quot;ME&quot;:119,&quot;MS&quot;:238,&quot;MA&quot;:120,&quot;MZ&quot;:121,&quot;MM&quot;:122,&quot;NA&quot;:123,&quot;NR&quot;:124,&quot;NP&quot;:125,&quot;NL&quot;:126,&quot;AN&quot;:219,&quot;NC&quot;:220,&quot;NZ&quot;:127,&quot;NI&quot;:128,&quot;NE&quot;:129,&quot;NG&quot;:130,&quot;NU&quot;:221,&quot;NF&quot;:222,&quot;KP&quot;:90,&quot;MP&quot;:223,&quot;NO&quot;:131,&quot;OM&quot;:132,&quot;PK&quot;:133,&quot;PW&quot;:134,&quot;PS&quot;:237,&quot;PA&quot;:135,&quot;PG&quot;:136,&quot;PY&quot;:137,&quot;PE&quot;:138,&quot;PH&quot;:139,&quot;PN&quot;:224,&quot;PL&quot;:140,&quot;PT&quot;:141,&quot;PR&quot;:225,&quot;QA&quot;:142,&quot;CG&quot;:39,&quot;RO&quot;:143,&quot;RU&quot;:144,&quot;RW&quot;:145,&quot;RE&quot;:226,&quot;KN&quot;:146,&quot;LC&quot;:147,&quot;PM&quot;:229,&quot;VC&quot;:148,&quot;SH&quot;:227,&quot;WS&quot;:149,&quot;SM&quot;:150,&quot;ST&quot;:151,&quot;SA&quot;:152,&quot;SN&quot;:153,&quot;RS&quot;:154,&quot;SC&quot;:155,&quot;SL&quot;:156,&quot;SG&quot;:157,&quot;SK&quot;:158,&quot;SI&quot;:159,&quot;SB&quot;:160,&quot;SO&quot;:161,&quot;ZA&quot;:162,&quot;GS&quot;:273,&quot;ES&quot;:163,&quot;LK&quot;:164,&quot;SD&quot;:165,&quot;SR&quot;:166,&quot;SJ&quot;:230,&quot;SZ&quot;:167,&quot;SE&quot;:168,&quot;CH&quot;:169,&quot;SY&quot;:170,&quot;TW&quot;:171,&quot;TJ&quot;:172,&quot;TZ&quot;:173,&quot;TH&quot;:174,&quot;TL&quot;:50,&quot;TG&quot;:175,&quot;TK&quot;:231,&quot;TO&quot;:176,&quot;TT&quot;:177,&quot;TN&quot;:178,&quot;TR&quot;:179,&quot;TM&quot;:180,&quot;TC&quot;:232,&quot;TV&quot;:181,&quot;VI&quot;:234,&quot;UG&quot;:182,&quot;UA&quot;:183,&quot;AE&quot;:184,&quot;GB&quot;:185,&quot;US&quot;:186,&quot;UM&quot;:272,&quot;UY&quot;:187,&quot;UZ&quot;:188,&quot;VU&quot;:189,&quot;VA&quot;:190,&quot;VE&quot;:191,&quot;VN&quot;:192,&quot;WF&quot;:235,&quot;EH&quot;:236,&quot;YE&quot;:193,&quot;ZM&quot;:194,&quot;ZW&quot;:195}">
+<meta name="csrf-token" content="KB9ndzamWqLJp0Rmz/6rxakIbEN5UrkBCsvEX2yiC34=">
+<meta name="show-upselling-footer" content="false">
+<meta name="show-user-navigation" content="false">
+<meta name="rt-page-type" content="privacy_policy">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="description" content="Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.">
-    <link rel="canonical" href="https://www.mondly.com/privacy">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <meta property="al:ios:url" content="https://www.mondlylanguages.com">
-    <meta property="al:ios:app_store_id" content="987873536">
-    <meta property="al:ios:app_name" content="Mondly Languages">
-    <meta name="apple-itunes-app" content="app-id=987873536">
+<script src="https://js-agent.newrelic.com/nr-1208.min.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_BR.UvouX9sCtKY.O/m=client,plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNQt2srOR_i4eXidP9ry2PY0bcVqw/cb=gapi.loaded_0" async=""></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=ece3a3fec8e35dd9af7f13895c49fd66&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://apis.google.com/js/client:plusone.js?onload=setupGSignIn" gapi_processed="true"></script><script type="text/plain" async="" src="https://ssl.google-analytics.com/ga.js"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"abcd8cb2be","applicationID":"30554371","transactionName":"cg0PRkpcDwgBFhkEXF8HE1NUHBMWDRJXAEBuEg5eUVAa","queueTime":0,"applicationTime":1264,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"abcd8cb2be",applicationID:"30554371"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <meta property="og:url" content="https://www.mondly.com">
-    <meta property="og:title" content="Mondly Languages Privacy Policy - Mondly.com">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.">
-    <meta property="og:image" content="https://d37sy4vufic209.cloudfront.net/images/facebook_image.jpg">
+    <base href="/">
+    <script>(function(w) {
+  "use strict";
 
-    <link rel="shortcut icon" href="/favicon.ico?v=20">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=20">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=20">
-    <link rel="mask-icon" color="#f26c45" href="/safari-pinned-tab.svg?v=20">
-    <meta name="apple-mobile-web-app-title" content="Mondly Languages">
-    <meta name="application-name" content="Mondly Languages">
+  w.loadCSS = function(href, before, media) {
+    var ss = w.document.createElement("link");
+    var ref;
 
-    <link rel="manifest" href="/site.no-banner.webmanifest">
-    <meta name="msapplication-TileColor" content="#f26c45">
-    <meta name="msapplication-config" content="/browserconfig.xml?v=20">
-    <meta name="theme-color" content="#fff">
+    if (before) {
+      ref = before;
+    } else if (w.document.querySelectorAll) {
+      var refs = w.document.querySelectorAll("style,link[rel=stylesheet],script");
 
-    <title>Mondly Languages Privacy Policy - Mondly.com</title>
+      ref = refs[refs.length - 1];
+    } else {
+      ref = w.document.getElementsByTagName("script")[0];
+    }
 
-    <style>
-        html, body {
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 15px;
-            line-height: 1.3;
+    var sheets = w.document.styleSheets;
+
+    ss.rel = "stylesheet";
+    ss.href = href;
+    ss.media = "only x";
+    ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+
+    ss.onloadcssdefined = function(cb) {
+      var defined;
+      for (var i = 0; i < sheets.length; i++) {
+        if (sheets[i].href && sheets[i].href === ss.href) {
+          defined = true;
         }
-    </style>
-    <style>
-        #ppBody {
-            font-size: 11pt;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        #ppHeader {
-            font-family: verdana;
-            font-size: 21pt;
-            width: 100%;
-            margin: 0 auto;
-        }
-    </style>
-    <!-- Google Tag Manager -->
-    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5XD686B"></script><script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
+      }
+      if (defined) {
+        cb();
+      } else {
+        setTimeout(function() {
+          ss.onloadcssdefined(cb);
         });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5XD686B');</script>
-    <!-- End Google Tag Manager -->
-<script type="application/ld+json">{"@context":"http://www.schema.org","@type":"WebSite","name":"Mondly","alternateName":"Mondly Languages","sameAs":["https://en.wikipedia.org/wiki/Mondly","https://www.wikidata.org/wiki/Q53709994","https://twitter.com/MondlyLanguages","https://www.youtube.com/channel/UCEAXQi1NM73KyCNNozI6jEA","https://www.linkedin.com/company/mondly","https://www.instagram.com/mondlylanguages/","https://www.facebook.com/mondlylanguages/","https://www.pinterest.com/mondlylanguages/","https://www.mondlylanguages.com/"],"url":"https://www.mondly.com/"}</script></head>
-<body>
-<div id="ppHeader">Mondly Languages Privacy Policy</div>
-<div id="ppBody">
-    <div style="clear:both;height:10px;"></div>
-    <div style="clear:both;height:10px;"></div>
-    <p>This privacy policy has been compiled to better serve those who are concerned with how their 'Personally
-        Identifiable Information'
-        (PII) is being used online. PII, as described in US privacy law and information security (or personal data, as
-        is described
-        in Regulation 679/2016 issued by the European Parliament and Council), is information that can be used on its
-        own or
-        with other information to identify, contact, or locate a single person, or to identify an individual in context.
-        Please
-        read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise
-        handle your
-        Personally Identifiable Information in accordance with our website.
+      }
+    };
+
+    ss.onloadcssdefined(function() {
+      ss.media = media || "all";
+    });
+
+    return ss;
+  };
+}(this));</script>
+
+    <link class="load-css-link" rel="stylesheet" href="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/runtastic-app-67118051679e3b6ead3eef046ff8cfd7.css">
+    <link rel="stylesheet" href="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/klaro-71aa57a2623cb81af3d311784d3e4836.css">
+
+    
+  
+
+<meta content="index,follow" name="robots">
+<script src="https://www.runtastic.com/libs/tracker.min.js"></script>
+
+<script id="facebook-jssdk" async="" src="//connect.facebook.com/en_US/sdk.js"></script><style type="text/css"></style><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/997790882/?random=1619239638072&amp;fst=1619239638072&amp;num=1&amp;label=LHYJCJ6V-wQQoqnk2wM&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=2505059650&amp;u_h=1692&amp;u_w=3008&amp;u_ah=1692&amp;u_aw=3008&amp;u_cd=24&amp;u_his=2&amp;u_tz=-240&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.runtastic.com%2Fen%2Fprivacy-policy&amp;tiba=adidas%20Runtastic%3A%20adidas%20Running%20%26%20adidas%20Training%20apps&amp;hn=www.googleadservices.com&amp;rfmt=3&amp;fmt=4"></script><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+  <body class="ember-application lang_en">
+
+
+
+
+
+
+
+    <span id="root-anchor"></span>
+    <script src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/vendor-704378d921f30af01399d7e82b3d667a.js"></script>
+    <script src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/runtastic-legacy-b0c87cd2e8024c22653a20fd2f048fb9.js"></script>
+    <script src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/jquery.cookie-b91a490fe06d857b2a2684b83ce841a8.js"></script>
+    <script src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/klaro-config-656e351e95db42afb9057039840eca9b.js"></script>
+    <script>
+      (function() {
+        if(!document.querySelector('meta[name=is-terms-page]')) {
+          const head = document.getElementsByTagName('head')[0];
+          const script = document.createElement('script');
+
+          script.src = 'https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/klaro-18faa28e74e6e12eba79f1f602fe5b34.js';
+          head.appendChild(script);
+        } else {
+          termsInjectedKlaroInitAndShow = () => {
+            jQuery.ajax({
+              url: 'https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/klaro-18faa28e74e6e12eba79f1f602fe5b34.js',
+              dataType: 'script',
+              success: () => { klaro.show(); },
+              async: true,
+            });
+          };
+        }
+      })();
+    </script>
+    <script src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/assets/klaro-adaptations-f77218af944e5c926bd5e66d16325727.js"></script>
+
+    
+  
+<script>
+  //<![CDATA[
+    if (typeof Ember != 'undefined') {
+      jQuery = $ = Ember.$;
+      document.write(unescape("%3Cscript src='//code.jquery.com/jquery-migrate-1.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    } else if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='//code.jquery.com/jquery-1.8.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+  //]]>
+</script><script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="//code.jquery.com/ui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+<script>
+  //<![CDATA[
+    var app_config = {
+      "locale":             "en",
+      "decimal_separator":  ".",
+      "domain":             "www.runtastic.com",
+      "hubs_service_route":            "https://hubs.runtastic.com",
+      "facebook": {
+        "app_id": "162918433202"
+      }
+    };
+    
+    var user = {"activity_level":2,"age":null,"cache_key_for_run_sessions":"2021-04-24T06:47:16+02:00","can_add_training_plan":"","colorizer_bike":null,"colorizer_default":null,"email":null,"fb_user_id":0,"first_name":"","format_of_date":"eu","format_of_time":"24","friend_ids":[],"pending_friends":[],"gender":"","google_user_id":null,"docomo_user_id":null,"height":0,"id":0,"is_beta_tester":false,"is_gold_user":false,"last_name":"","locale":"en","location":{"latitude":-22.8305,"longitude":-43.2192},"measured_pulse_with_apps":false,"run_sessions_path":"","show_new_records_notification":null,"slug":"","guid":"","status":"logged_out","temperature_unit_type":"C","timezone_offset":0,"tour_settings":{},"training_plans_count":0,"unit_type":"metric","user_type":"basic","week_starts_at":"monday","weight":0,"weight_unit_type":"kg","currency":"USD","privacy":[],"uidt":0}
+    
+    var watched_user = {
+      id: 0,
+      slug: "",
+      guid: "",
+      first_name: "",
+      last_name: ""
+    };
+    
+    var environment = "production"
+  //]]>
+</script>
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script src="https://d2d69lvc7tiwu6.cloudfront.net/assets/manifests/locale_dependent/en-4642cbc61951b351b2b531bc2356b836.js" type="text/javascript"></script>
+<script>
+  //<![CDATA[
+    I18n.locale = "en";
+    loc.current_locale = "en";
+  //]]>
+</script>
+
+<script src="https://d2d69lvc7tiwu6.cloudfront.net/assets/manifests/application-21a620defea9b3fb0c279519e4f9e87d.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(
+                  ['_setAccount', 'UA-12000767-23'],
+                  ['_setDomainName', 'none'],
+                  ['_setAllowLinker', true],
+                  ['_gat._anonymizeIp']
+                  , ['_set', 'page', 'general/privacy_policy'], ['_trackPageview']
+                )
+</script>
+
+<script type="text/javascript">
+
+        if(typeof googletag !== 'undefined' && typeof window.isRuntasticLegacyApp === 'undefined'){
+          googletag.cmd.push(function() {
+            window['gpt-ad-2'] = googletag.defineSlot('/126208527/runtastic.com/Desktop_Website/General/SkyScraper_right', [160,600], 'gpt-ad-2').addService(googletag.pubads()).setTargeting('agegroup', 'above_54').setTargeting('age', '').setTargeting('gender', 'male').setTargeting('status', 'logged_out'); 
+window['gpt-ad-hockey-ad-pixel'] = googletag.defineSlot('/126208527/runtastic.com/Desktop_Website/General/Hockeystick_Pixel', [1,1], 'gpt-ad-hockey-ad-pixel').addService(googletag.pubads()).setTargeting('agegroup', 'above_54').setTargeting('age', '').setTargeting('gender', 'male').setTargeting('status', 'logged_out'); 
+window['gpt-ad-1417083236787-0'] = googletag.defineSlot('/126208527/runtastic.com/Desktop_Website/General/Overlay_Marketing', [550,480], 'gpt-ad-1417083236787-0').addService(googletag.pubads()).setTargeting('agegroup', 'above_54').setTargeting('age', '').setTargeting('gender', 'male').setTargeting('status', 'logged_out'); 
+window['gpt-ad-leaderboard-ad'] = googletag.defineSlot('/126208527/runtastic.com/Desktop_Website/General/Leaderboard_top', [[728,90],[800,250]], 'gpt-ad-leaderboard-ad').addService(googletag.pubads()).setTargeting('agegroup', 'above_54').setTargeting('age', '').setTargeting('gender', 'male').setTargeting('status', 'logged_out'); 
+
+            googletag.pubads().collapseEmptyDivs();
+            
+            googletag.enableServices();
+          });
+
+          
+        }
+      
+</script>
+<script>
+  //<![CDATA[
+    jQuery(document).ready(function($) {
+      if($(".g-plusone").length) {
+        var node = document.createElement('script');node.type = 'text/javascript';node.async = true;node.src = '//apis.google.com/js/plusone.js';var script_tag = document.getElementsByTagName('script')[0];script_tag.parentNode.insertBefore(node, script_tag);
+      }
+    
+      if($(".linkedin_share").length) {
+        var node = document.createElement('script');node.type = 'text/javascript';node.async = true;node.src = '//platform.linkedin.com/in.js';var script_tag = document.getElementsByTagName('script')[0];script_tag.parentNode.insertBefore(node, script_tag);
+      }
+    });
+  //]]>
+</script>
+
+<!-- Google Code for Remarketing-Tag Shop -->
+      <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 997790882;
+      var google_conversion_label = 'LHYJCJ6V-wQQoqnk2wM';
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+      </script>
+      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+      <div style='display:inline;'>
+      <img height='1' width='1' style='border-style:none;' alt='' src='//googleads.g.doubleclick.net/pagead/viewthroughconversion/997790882/?value=0&label=LHYJCJ6V-wQQoqnk2wM&guid=ON&script=0'/>
+      </div>
+      </noscript>
+
+
+
+
+
+<div style="height: 0px;"></div><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.runtastic.com&amp;rpcToken=698986672.1158758&amp;clearCache=1" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe><div id="ember579" class="ember-view"><div id="ember607" class="app-view ember-view"><div id="rt-smart-banner-wormhole"></div><!----><!----><div id="ember614" class="rt-mobile-drawer ember-view"><div class="drawer__container js-scroll-detector-element "><!----><!----><header class="page-header slide  "><div id="navToggle" class="slide mobile-nav-menu-icon " data-ember-action="" data-ember-action-627="627"><div data-test-name="icon" id="ember630" class="rt-svg-icon icon--medium icon--black is-active ember-view"><svg viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v1.801h20V0H0m0 7.099V8.9h20V7.099H0m0 7.099v1.801h20v-1.801H0" fill="#8996a3" fill-rule="evenodd"></path></svg></div></div><a href="/" id="ember639" class="header-logo rt-link-to ember-view"><img src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/ember-cli-runtastic-commons/assets/adidas-runtastic-logo-4de5d4eff5d4a6f5d7fa07c5061f014c.png" alt="Runtastic" height="22px"></a><!----><ul class="navigation-list header-navigation__right-group"><a class="js-login-bttn bttn bttn-header bttn-header--login" data-ember-action="" data-ember-action-640="640"><div data-test-name="icon" id="ember641" class="rt-svg-icon icon--medium icon--black is-active ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M37.923 26.465L20.215 44.173a2.072 2.072 0 0 1-1.465.619 2.098 2.098 0 0 1-2.083-2.083v-9.375H2.083A2.1 2.1 0 0 1 0 31.25v-12.5c0-1.139.944-2.083 2.083-2.083h14.583V7.292c0-1.139.944-2.083 2.083-2.083.553 0 1.074.228 1.465.619l17.708 17.708c.391.39.619.911.619 1.465s-.227 1.074-.618 1.464m12.08 9.993c0 5.176-4.199 9.375-9.375 9.375H30.211a1.071 1.071 0 0 1-1.042-1.042c0-.911-.423-3.125 1.042-3.125h10.417c2.864 0 5.208-2.343 5.208-5.208V13.542c0-2.865-2.344-5.208-5.208-5.208h-9.375c-.814 0-2.083.163-2.083-1.042 0-.911-.423-3.125 1.042-3.125h10.417c5.176 0 9.375 4.199 9.375 9.375v22.916z" fill="#8996a3"></path></svg></div></a></ul></header><nav class="slide header-navigation "><div class="header-main-navigation desktop-nav header75"><div class="wrapper"><a href="/" id="ember642" class="header-logo rt-link-to ember-view"><img src="https://d1ki59phkeobjj.cloudfront.net/rt-ember/ember-cli-runtastic-commons/assets/adidas-runtastic-logo-4de5d4eff5d4a6f5d7fa07c5061f014c.png" alt="Runtastic" height="22px"></a><ul class="navigation-list"><li class="navigation-list__item"><a href="https://www.runtastic.com/en" id="ember643" class="rt-link-to header-navigation__link ember-view">Home</a></li><li class="navigation-list__item"><a href="https://rbt.runtastic.com/v1/referral/?key=c7140144f14e3ecec56c6dd57e7d458f&amp;target=runtastic&amp;target_link=https%3A%2F%2Fwww.runtastic.com%2Fblog%2F&amp;utm_source=runtastic&amp;utm_medium=link&amp;utm_campaign=runtastic_blog_runtastic_com" class="header-navigation__link">Blog</a></li><li class="navigation-list__item"><a href="/career" class="header-navigation__link">Career</a></li><li class="navigation-list__item"><a href="https://help.runtastic.com/" class="header-navigation__link">Help Center</a></li><li class="navigation-list__item"><a href="https://www.runtastic.com/partners/" class="header-navigation__link">Partners</a></li></ul><ul class="navigation-list header-navigation__right-group"><a class="js-login-bttn bttn bttn-header--login" data-ember-action="" data-ember-action-652="652">Login</a></ul></div></div><div class="mobile-nav"><div id="ember657" class="ember-view"><!----></div></div></nav><div id="wallpaper-js" class="drawer__content "><div id="ember660" class="rt-drawer-content ember-view"><div class="push-footer js-scroll-detector-wrapper"><div class="root ad-skyscraper__wrapper"><div id="news-feed-container"></div><div id="ember670" class="ember-view"></div><div class="static-content ember-static-content-hide" data-locale="en" style="display: block;">
+<div class="narrow-form info-description-box">
+<div class="overflow-scroll">
+<div class="overflow-scroll__content">
+<div id="privacy">
+<h1>
+PRIVACY POLICY
+</h1>
+<h3 class="h3">
+Updates to Our Privacy Policy
+</h3>
+<br>
+<p>
+At Runtastic, we’re continuously striving to provide you with the best possible experience – and
+<strong>your privacy is important to us.</strong>
+</p>
+<p>
+With the following Privacy Policy we want to:
+</p>
+<ul>
+<li>
+<p>
+make it easier for you to understand
+<strong>which data we collect and how we use it</strong>
+</p>
+</li>
+<li>
+<p>
+give you
+<strong>increased control</strong>
+over your data
+</p>
+</li>
+<li>
+<p>
+and provide a
+<strong>detailed explanation of your rights</strong>
+as a user.
+</p>
+</li>
+</ul>
+
+<ol>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_1';">In General</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_2';">Controller</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_3';">Which Data We Collect And Process</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_4';">Why We Process Data (“Purposes”)</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_5';">Sharing of Personal Data</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_6';">How Long We Store Data</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_7';">Which Rights You Have</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_8';">Further Important Information</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_9';">Changes to the Privacy Policy</a></li>
+  <li class="h3"><a href="javascript:;" onclick="document.location.hash='headline_10';">Questions, Complaints and Support</a></li>
+</ol>
+<ol>
+  <li class="h3">
+    <span id="headline_1">In General</span>
+    <ol>
+      <li>
+        <p>
+          Runtastic GmbH, FN 334397k, Pluskaufstraße 7, 4061 Pasching, Austria (see our imprint) (<u>“Runtastic“</u>), is a brand of adidas AG (Adi-Dassler Strasse 1, 91074 Herzogenaurach, Germany) (<u>“adidas“</u>). We, the team of Runtastic, email address:
+          <a target="_blank" href="mailto:dataprotection@runtastic.com">dataprotection@runtastic.com</a>
+          (<u>“Email Address”</u>), process your personal data when you use our apps (<u>“Apps”</u>, go
+          <a href="/" class="reset-break" target="_blank"> here</a> for a list of all Apps) or website (<u>“Website”</u> and, together with the Apps, <u>“Products”</u>). The processing of your personal data takes place in compliance with applicable local data privacy laws, e.g. the EU General Data Protection Regulation (<u>“GDPR“</u>) or the Austrian data protection act in its current form.
+        </p>
+      </li>
+      <li>
+        <p>
+          In this privacy policy (<u>“Privacy Policy”</u>) we want to provide you with information about us, the nature, scope and purposes of the data processing, e.g. collection and use, giving you insights into the processing of your personal data.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3">
+    <span id="headline_2">Controller</span>
+    <ol>
+      <li>
+        <p>
+          <u>Controller.</u>
+          In general the controller of data processing is Runtastic. For the adidas Membership Program, adidas is the data controller. You can contact us via email under the Email Address.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Data Protection Officer.</u>
+          Our data protection officer can be contacted under the Email Address. Should you have any questions regarding the processing of your personal data, please do not hesitate to contact him/her.
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li class="h3" id="section3">
+    <span id="headline_3">Which Data We Collect And Process</span>
+    <ol>
+      <li>
+        <p>
+          <u>In General.</u>
+          Runtastic processes certain data, including personal data that you as a user of the Products make available to us, for example by using our Products, and that others provide to us (<u>“Data”</u>).
+        </p>
+      </li>
+      <li>
+        <p id="copd">
+          <u>Categories of Personal Data.</u>
+        </p><p>
+          These are the categories of personal data we might collect directly or indirectly from you:
+        </p>
+        <p>
+          <strong>Identity information</strong>
+          <span>– includes: name (first, last), date of birth, e-mail address, gender, profile picture, unique consumer identifier number (including your adidas Membership Program number), social media identifiers and information passed along to us via your Facebook or Google account, your device fingerprint, and gift card codes that are assigned to you. We use it to verify your identity.</span>
+        </p>
+        <p>
+          <strong>Contact information</strong>
+          <span>- includes: your phone number, shipping and billing address, e-mail address, Messenger ID, social media handle, any other communication channel you have used to contact us for more information. We use it to contact you for different reasons depending on the purpose.</span>
+        </p>
+        <p>
+          <strong>Location information</strong>
+          <span>- includes: your chosen residential location, current log-in location (IP address), and/or GPS location (if you wish to share it with us, for example through your mobile device settings) or other phone related location data (e.g. via WiFi or Bluetooth), or the specific Runtastic and adidas site you visited that might give us clues about where you are. We use it to operate our products and adapt your product experience to your location.</span>
+        </p>
+        <p>
+          <strong>Size information</strong>
+          <span>- includes: shoe size, clothes size, height, weight, chest, waist, hip, inseam, body shape, heel-toe measurement. We use it to operate our products and make sure your gear fits.</span>
+        </p>
+        <p>
+          <strong>Purchase information</strong>
+          <span>- includes: payment provider, duration of your Runtastic subscription, price, currency, VAT (based on country info). We use payment providers to process payments. Although we do not store any credit card information ourselves, we store a payment ID number that is given out by the respective provider (e.g. Apple, Google, Adyen, PayPal) and can be allocated to you. We use it to process your payments.</span>
+        </p>
+        <p>
+          <strong>Behavioural and Profile information</strong>
+          <span>- includes: your adidas shopping history,  your adidas shopping preferences, in-store interactions, product reviews, social media interactions with us, and any other intelligence we have about you to help us learn you as a consumer better, including “Community information”. We use it to know you better as a consumer, so we can send you marketing messages containing only products and services that we think you might be interested in.</span>
+        </p>
+        <p>
+          <strong>Community information</strong>
+          <span>– includes: follower information in the Runtastic community, information provided by you when you participate in various Runtastic or adidas events and groups/communities either as a trainer, team member, a participant or as a promoter of our events, including for example: pictures, videos, your team, your interests and preferences, your feedback, leaderboards, event participation, joined groups and registration details.</span>
+        </p>
+        <p>
+          If you explicitly allow us to access your phone book, we will compare the email addresses of your contacts with email addresses from registered users within the Runtastic community and send you a list with friend suggestions. We do not store this information in any way.
+        </p>
+        <p>
+          We use Community information to operate our products, to organize the events and communities, and to connect you with other members within our communities.
+        </p>
+        <p>
+          <strong>Social Media information</strong>
+          <span>– includes: information obtained through your interaction with us on various social media channels such as Facebook, Instagram, Google, etc., including: any social media information that is publicly available such as your social media handles, social media interactions and public postings, your “Likes” and other reactions, your social media connections, your photos that are public, or those you send to us by mentioning us or following our social media posts by using “handles” or “hashtags”. We obtain this information from the social media network (e.g. Facebook, Snapchat, Instagram, etc.) directly or indirectly through third-party agencies we have agreements with.</span>
+        </p>
+        <p>
+          <strong>Device information</strong>
+          <span>– includes: Information about your device or browser that give us an idea about your browsing behaviour or device usage. Your device information is collected by our apps, and your browser information is collected by our cookies, tags, and pixels. This is often required for network security purposes. This includes, but not limited to: IP address, date and time of the visit, how long you remained on our website, transmitted data volume, the referral URL (if you came to our site via a different site or an advertisement), the pages visited on our site, your browser type (including language and version of the browser software) and add-ons, device identifier and features, device type, versions, operating system.</span>
+        </p>
+        <p>
+          <strong>Activity information</strong>
+          <span>- includes: fitness data (for example workout start and end times, activity type, sports category), sensor data (this includes, but not limited to: step goal, duration, pace, distance, calories, heart rate, RunScore and speed), nutrition information (e.g. time, calories, meal information (name, type, macronutrients, micronutrients), and other data (e.g. routes and photos  including location data) related to your fitness app. We use it to operate our products, to help you improve your performance goals and improve your user experience and identify what products might be best for you based on your exercise patterns.</span>
+        </p>
+        <p>
+          <strong>Preference information</strong>
+          <span>- includes: preferred language, login location, units (distance, weight, temperature), personal goals and motivation (e.g. yearly running goal, weight goal), training plan information (e.g. start date, training plan, associated fitness activities), shoe information (brand, model, size, color, picture) and your adidas product reviews. We use it to give you convenience when you visit and/or shop on our sites and apps.</span>
+        </p>
+        <p>
+          <strong>Creators Club information</strong>
+          <span>– includes: Unique Member Identifier (member ID), date you became a member, store ID (if you signed up in a retail store), source ID, country and brand of your original membership, membership points, engagement history, rewards history, membership vouchers associated to members.</span>
+        </p>
+        <p></p>
+      </li>
+      <li id="section3.3">
+        <p>
+          <u>Data from Others.</u>
+        </p>
+        <p>
+          <strong>Registration via Facebook or Google</strong>
+        </p>
+        <p>
+          If you register a Runtastic account via social login, we will receive the following information:
+        </p>
+        <ul>
+          <li>Facebook Inc. (1601 South California Avenue, Palo Alto, CA 94304, USA, <u>“Facebook”</u>): First and last name, email address, gender, birthdate, profile picture;</li>
+          <li>Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA, <u>“Google”</u>): First and last name, email address, gender, birthdate; and profile picture.</li>
+        </ul>
+        <p>
+          <strong>Facebook Friend List</strong>
+        </p>
+        <p>
+          We will receive information about your friends on Facebook if you <u>explicitly allow us</u> to access it. We will use this information to make friend suggestions in the Products, but do not store it.
+        </p>
+        <p>
+          <strong>Import Fitness Activity Information from Connected Accounts</strong>
+        </p>
+        <p>
+          <em>General.</em>
+          We offer an automatic import of your fitness activity information from other platforms like Garmin, Nokia Health (Withings), and Fitbit. You have to <u>explicitly agree to connect</u> your account from those platforms to your Runtastic account beforehand in order to import such data.
+        </p>
+        <p>
+          <em>Apple HealthKit.</em>
+          We use Apple’s (Apple Inc., 1 Infinite Loop, Cupertino, CA 95014, USA; “Apple”) HealthKit (for more information see
+          <a target="_blank" href="https://developer.apple.com/documentation/healthkit" class="reset-break">here</a>) framework, which provides a central repository for health and fitness data on iPhone and Apple Watch and – with the user’s <u>explicit consent</u> – lets apps communicate with the HealthKit store to access and share this data. We process the following data, obtained through the HealthKit framework and the Apple CoreMotion processor (for more information see
+          <a target="_blank" href="https://developer.apple.com/documentation/coremotion" class="reset-break">here</a>), for the purposes described below and with <u>explicit consent</u> by the user: steps, calories, distance, duration, and heart rate. New data attributes may be added to the HealthKit framework, which will be portrayed in the Product and which you have to consent to. Runtastic and Runtastic’s analytics service providers may analyze engagement data for research purposes designed to provide a personalized experience and motivate engagement in healthy habits. Runtastic does not use information gained through the HealthKit framework for advertising or similar services. You can always stop Runtastic from accessing your data by changing the settings of your mobile device.
+        </p>
+        <p>
+          <em>Google Fit.</em>
+          We use Google’s Fit SDK (for more information see
+          <a target="_blank" href="https://developers.google.com/fit/" class="reset-break">here</a>) which is an open platform that lets users control their fitness data. We process the following data, obtained through the Google Fit SDK, for the purposes described below and with <u>explicit consent</u> by the user: steps, calories, distance, duration, and heart rate. New data attributes may be added to the Google Fit framework, which will be portrayed in the Product and which you have to consent to.
+        </p>
+        <p>
+          <strong>adidas</strong>
+        </p>
+        <p>
+          As a brand of adidas we may receive and process your personal data (categories of personal data see
+          <a href="/privacy-policy#copd">here</a>):
+        </p><ul>
+          <li>Activity information</li>
+          <li>Behavioral and Profile information</li>
+          <li>Community information</li>
+          <li>Contact information</li>
+          <li>Creators Club information (only for members of the adidas Membership Program)</li>
+          <li>Device information</li>
+          <li>Identity information</li>
+          <li>Location information</li>
+          <li>Preference information</li>
+          <li>Purchase information</li>
+          <li>Size information</li>
+          <li>Social Media information</li>
+        </ul>
+        <p></p>
+        <p>
+          for the described purposes (see 4.Why We Process Data).
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Service Use</u>
+        </p>
+        <p>
+          <strong>Google Analytics</strong>
+        </p>
+        <p>
+          This Website uses Google Analytics, a web analysis service of Google. Google Analytics uses cookies.
+          See our Cookie Policy for more information on cookies and how to opt-out of them. We use Google Analytics to analyze and constantly improve the use of our Products. The Products use Google Analytics in conjunction with the option “_anonymizeIP()”. This means, IP addresses are processed in a shortened form in order to prevent transmission of any personal data. The basis for the processing of data are our legitimate interests.
+        </p>
+        <p>
+          <strong>Firebase &amp; Google Analytics for Mobile</strong>
+        </p>
+        <p>
+          <em>General.</em>
+          For Apps on iOS and Android we use Google’s Firebase (for more information see
+          <a target="_blank" href="https://firebase.google.com/docs" class="reset-break">here</a>) and Google Analytics for Mobile (for more information see
+          <a target="_blank" href="https://developers.google.com/analytics/solutions/mobile" class="reset-break">here</a>). User data is transmitted in an anonymized form to Google. Our Apps use identification for mobile devices, including the Google Advertising ID (“GAID”) and the ID for Advertising for iOS (“IDFA”), as well as technologies similar to cookies for the use execution of the Analytics for mobile service.
+        </p>
+        <p>
+          <em>Purpose.</em>
+          We use Firebase and Google Analytics to analyze and constantly improve the use of our Products. Through the statistics we are able to improve our services and make them more interesting for users. The basis for the processing of data are our legitimate interests.
+        </p>
+        <p>
+          <strong>Adjust</strong>
+        </p>
+        <p>
+          For Apps on iOS and Android we use the services of Adjust GmbH (Saarbrücker Str. 37a, 10405 Berlin, Germany, “Adjust”). This allows us to us to track and analyze which marketing channels or sources are producing the best results for directing users to download the Products and to help us understand how our users are using our app. For this purpose, Adjust processes mobile identifiers such as the IDFA, GAID or similar mobile identifiers. For more information on Adjust, see <a target="_blank" href="https://www.adjust.com/privacy-policy/" class="reset-break">here</a>, especially section 3. To opt out of tracking by Adjust please go
+          <a target="_blank" href="https://www.adjust.com/opt-out/" class="reset-break">here.</a>
+          The basis for the processing of data are our legitimate interests.
+        </p>
+        <p>
+          <strong>Runtastic Event Tracking</strong>
+        </p>
+        <p>
+          When you are using our Products, we will collect certain event information (e.g. opening a Runtastic app, starting a sport activity, visiting our Website) and send them to our servers. This allows us to analyze and constantly improve the use of our Products.
+        </p>
+        <p>
+          <strong>Facebook Analytics</strong>
+        </p>
+        <p>
+          For Apps on iOS and Android we use Facebook Analytics (for more information see
+          <a target="_blank" href="https://developers.facebook.com/docs/analytics" class="reset-break">here</a>). This allows us to us to track and analyze which marketing channels or sources, in connection with Facebook, are producing the best results for directing users to download the Products and to help us understand how our users are using our app. For this purpose, Facebook Analytics processes mobile identifiers such as the IDFA, GAID or similar mobile identifiers. For more information on Facebook Analytics, see
+          <a target="_blank" href="https://developers.facebook.com/docs/analytics" class="reset-break">here.</a>
+          The basis for the processing of data are our legitimate interests.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Cookies and Similar Technologies.</u>
+        </p>
+        <p>
+          <strong>Cookies</strong>
+        </p>
+        <p>
+          <em>What Are Cookies.</em>
+          The Website uses 'cookies' – small text files that are placed on your computer, mobile device and/or stored by the browser. The basis for the processing of data via cookies are our legitimate interests.
+        </p>
+        <p>
+          <em>Cookie Policy.</em>
+          For more information on the cookies we use, which, if any, personal data they collect, and how to disable them, please see our Cookie Policy <a href="/cookie-policy" class="reset-break" target="_blank">here. </a>
+        </p>
+        <p>
+          <em>Do Not Track Signals</em>
+          The Products do not recognize or respond to browser-initiated Do Not Track signals. To learn more about Do Not Track signals, you can visit https://allaboutdnt.com
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3" id="section4">
+    <span id="headline_4">Why We Process Data (“Purposes”)</span>
+    <ol>
+      <li>
+        <p>
+          <u>Operating the Products.</u>
+          Runtastic and adidas process your data to be able to provide you with a seamless user experience when using the Products.
+        </p>
+        <p>
+          <em>Providing Services.</em>
+          To operate the Products and provide the services, including to
+        </p>
+        <ul>
+          <li>authenticate your access to an account;</li>
+          <li>track and display your health and fitness activities</li>
+          <li>show your training progress and statistics; and</li>
+        </ul>
+        <p>
+          <em>Global credential to all adidas/Runtastic Platforms.</em>
+          We know you don’t like to remember usernames and passwords, or having to register multiple times. To enable our users to log on to all platforms, portals, services, communities and apps operated by or on behalf of adidas Data Controllers (which includes the Runtastic Apps and services) (“adidas Platforms”) with one set of log-in credentials (“adidas Log-In”), we store your adidas/Runtastic Log-In in the global authentication platform from adidas. When you use your adidas/Runtastic Log-In to enter any adidas/Runtastic Platform, we will use a token to verify your identity from the adidas/Runtastic global authentication platform. This also further ensures our network and domain security. The basis for the processing of data are our legitimate interests.
+        </p>
+        <p>
+          <em>Connect with other users.</em>
+          To make it easier for you to find and connect with others. We may use the information you have shared within the products, including GPS data, to suggest connections between you and people you may know. For example, we may associate information that we learn about you through your use of the products, and information you and others provide, to suggest people you may know or may want to transact with through our products.
+        </p>
+        <p>
+          <em>Customer Support.</em>
+          To investigate, respond to your requests, and resolve complaints and service issues, e.g. to contact you about a question you submitted to our customer service team.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Business Needs.</u>
+          We process your data to manage our business needs.
+        </p>
+        <p>
+          <em>Performance.</em>
+          We process data to monitor, analyse, and improve the use of our Products, as well as protect the security or integrity of the Products, and their performance and functionality. For example, we analyze user behaviour and perform research about the way you use our Products.
+        </p>
+        <p>
+          <em>Research and Development.</em>
+          We process data, including public feedback, to conduct research for the further development of our Products, in order to provide you and others with a better, more intuitive and personalized experience, and drive user growth and engagement in our Products.
+        </p>
+        <p>
+          <em>adidas Membership Program (where applicable).</em>
+        </p><p>
+          Please note this section only applies when you are part of the adidas Membership Program.
+          If you are part of the adidas Membership Program, adidas maintains and administers your membership as described in Part B of the Runtastic Terms &amp; Conditions. Details regarding all data processing activities by adidas can be found 
+          <a target="_blank" class="reset-break" href="data-processing-activities">here</a>.
+        </p>
+        <p>
+          In particular, your personal data is used for, but not limited to:
+        </p><ul>
+          <li>calculating your club points to provide you rewards;</li>
+          <li>providing you access to special offers and promotions;</li>
+          <li>sending you invitations to exclusive events;</li>
+          <li>allowing you access to limited edition products;</li>
+          <li>providing you access to a premium Runtastic subscription when eligible;</li>
+        </ul>
+        <p>
+          When you use your adidas Membership Program membership ID, adidas receive the information to calculate reward points for you, such as when you purchase in participating adidas brand retail stores.
+        </p>
+        <p>
+          You will receive email marketing messages from Runtastic and adidas if you are a member of the adidas Membership Program. 
+        </p>
+        <p>
+          When you use the Apps with your adidas Membership Program membership, Runtastic and adidas use push notifications in the app to communicate information about your membership or promotional activities and offers. You can switch off push notifications at any time using “Settings” on your mobile devices. However, if you switch off push notifications, Runtastic and adidas may need to contact you via email for important messages relating to your membership. The basis for the processing of your personal data is the performance of contract.
+        </p>
+        <p></p>
+        <p></p>
+        <p>
+          <em>Marketing General.</em>
+          We process Data to deliver (tailored) marketing materials about adidas/Runtastic products and online services to you.
+        </p>
+        <p>
+          <em>Email/Push Message Marketing.</em>
+          With your consent, Runtastic and adidas will send you personalized marketing emails or push messages with information on fitness and health-related topics as well as adidas products. Based on your consent, Runtastic shares personal data with adidas for personalization purposes and vice-versa.
+        </p>
+        <p>
+          We would like to inform you that we assess your user behavior when reading the emails with the help of so-called web beacons or tracking pixels. The information created by this is then linked to the information collected in in 3.2 Categories of Personal Data, your email address, and an individual ID. With this merged information, we can create a user profile to personalize our marketing emails / push messages. We collect data on when you “Click on” our emails, or which links you click, and combine this with your actions in the Product.
+        </p>
+        <p>
+          We store and use your data for the purpose of email marketing or marketing on the Website by Runtastic and adidas. You can revoke your consent to the marketing emails and push messages at any time, by clicking the link at the end of the email or changing your device settings concerning push messages. We store the tracking information as long as you are subscribed to our marketing emails.
+        </p>
+        <p>
+          <em>Targeted messages on 3rd-party advertising platform.</em>
+        </p><p>
+          Runtastic and adidas use third-party advertising platforms, such as (but not limited to) Facebook, Google, YouTube, Instagram, Twitter, Snapchat, Pinterest to send you messages that are targeted at you, based on your behaviour and browsing pattern, at specific times and locations of these platforms to increase the efficiency of our advertising campaigns. Runtastic and adidas use third-party solutions such as Google Audience and Facebook Audience (but not limited to) to help us do a better job at targeting our campaigns and messages for our consumers. Your personal data (see 3.2 Categories of Personal Data) is shared with the third-party advertising platforms, and they will attempt to match your profile in their database to determine the optimal time and place (e.g. the page you are browsing) to show you an advertisement from Runtastic or adidas. We also need to analyse necessary information to understand the impact of our campaigns. If you don’t accept that we use and share your personal data for this purpose, you will still see Runtastic and/or adidas advertisements on other platforms at random.
+        </p>
+        <p>
+          You can learn more about how our Advertising Partners help us achieve this purpose by visiting their sites:
+        </p>
+        <p>
+          Google Personalised Advertising: <a target="_blank" class="reset-break" href="https://support.google.com/adspolicy/answer/143465">https://support.google.com/adspolicy/answer/143465</a>
+          <br>
+          Google Advertising Policies: <a target="_blank" class="reset-break" href="https://support.google.com/adspolicy/answer/6020956">https://support.google.com/adspolicy/answer/6020956</a>
+        </p>
+        <p>
+          Facebook Lookalike Audiences: <a target="_blank" class="reset-break" href="https://www.facebook.com/business/help/164749007013531">https://www.facebook.com/business/help/164749007013531</a>
+          Facebook Custom Audience Terms: <a target="_blank" class="reset-break" href="https://www.facebook.com/legal/terms/customaudience">https://www.facebook.com/legal/terms/customaudience</a>
+        </p>
+        <p>
+          The basis for the processing of your personalized data is based on your Marketing Consent. An opt-out is possible at any time in your privacy settings. It may take a few days after the opt-out until you are removed from all audiences.
+        </p>
+        <p></p>
+      </li>
+      <li>
+        <p>
+          <u>Compliance and Enforcement.</u>
+        </p>
+        <p>
+          <em>Compliance.</em>
+          We process your data to comply with our obligations and in compliance with all applicable laws and regulations.
+        </p>
+        <p>
+          <em>Enforcement.</em>
+          We process your data, if we think it’s necessary for security purposes or to investigate possible fraud or other violations of our Terms &amp; Conditions or this Privacy Policy and/or attempts to harm our members or visitors.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3" id="section5">
+    <span id="headline_5">Sharing of Personal Data</span>
+    <ol>
+      <li>
+        <p>
+          <u>General.</u>
+        </p>
+        <p>
+          We share data with third parties
+        </p>
+        <ul>
+          <li>if this is necessary, for the purposes,</li>
+          <li>due to a request from a national authority,</li>
+          <li>due to a court ruling,</li>
+          <li>if required by law,</li>
+          <li>if necessary to investigate and defend ourselves against any third-party claims or allegations,</li>
+          <li>to exercise or protect the rights and safety of Runtastic, our members, personnel, or</li>
+          <li>if you have (explicitly) consented beforehand.</li>
+        </ul>
+        <p>
+          We attempt to notify you about legal demands for your data when we think it is appropriate, unless prohibited by law or court order, or when the request is an emergency. We may dispute such demands when we believe that the requests are overbroad, vague or lack proper authority.
+        </p>
+        <p>
+          Special categories of personal data, such as heart rate data or other health data, will never be shared with advertisers or similar agencies.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Our Services.</u>
+        </p>
+        <p>
+          <em>Profile.</em>
+          We distinguish between “private profiles” and “public profiles” where all profiles are private by default and only become public on your request. As long as your profile is a “private profile” other users will see your Name, your profile picture and your country of residence. This is necessary to enable others to find you in our products. Moreover all users will see the amount of Followers you have and the amount of people you follow. When your profile is a “private profile” other users can send you a request to become your Followers. Once you accept this request, all information, which according to your privacy settings, you share with Followers, will become visible for those users, your Followers.
+        </p>
+        <p>
+          <em>News Feed.</em>
+          Our services allow viewing and sharing information, including through posts, likes, and comments. Certain actions, such as tracking an activity, starting a training plan or upgrading to Premium Membership, will be automatically posted in the News Feed. By default setting, only you and your followers will be able to see such activities in their News Feed. You can modify the visibility anytime in your privacy settings.
+        </p>
+        <p>
+          <em>Leaderboard.</em>
+          If you track an activity, you will automatically join a weekly/monthly Leaderboard of accumulated distance or duration among the people you follow. This means, once you follow people, you will be part of the Leaderboard. You can opt out of this at any time in your privacy settings.
+        </p>
+        <p>
+          <em>Challenges.</em>
+          These are competitions with a specific goal in a defined timeframe. There are different challenges available for registered users to join and with the possibility to win prices. You can compare your ranking with all users who are part of the same challenge. First name, last name, profile picture and performance metrics (e.g. total distance, total duration) are visible to all users within a specific challenge.
+        </p>
+        <p>
+          <em>Groups &amp; Communities.</em>
+          Every registered user can create groups and can invite other users to that group as well as users can be invited to communities. Within a group or community you can interact with other members and compare your ranking with all users. First name, last name, profile picture and performance metrics (e.g. total distance, total duration) are visible to all users within a specific group or community.
+        </p>
+        <p>
+          <em>LIVE Tracking.</em>
+          The Products include a “LIVE Tracking” feature (<u>“LIVE Tracking”</u>), which enables other Runtastic users to see the route and data, including heart rates, of your sports activity on certain of the Products. LIVE Tracking can only be either completely activated or completely deactivated. LIVE Tracking is deactivated by default and can be <u>activated by you at your own discretion</u>. Once activated, it stays activated for new activities, unless you turn it off again. By activating the feature, you accept the responsibility for such activation at your own risk. If you do not want to give third parties access to your training route and data, then LIVE Tracking should not be activated.
+        </p>
+        <p>
+          <em>Heart Rate Monitor.</em>
+          Personal health information collected and stored by Runtastic, and subsequently shared by the user via Heart Rate Monitor, may not be protected under the American Health Insurance Portability and Accountability Act (HIPAA).
+        </p>
+        <p>
+          <em>HealthKit.</em>
+          If a registered user <u>explicitly consents</u>, Runtastic may share said registered user’s data obtained through the HealthKit framework with a third party for medical research.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Services You May Use.</u>
+          Runtastic lets you connect to third-party services. For example, to enable you to connect other accounts to your profile or for sharing your activities.
+        </p>
+        <p>
+          <em>Health and Fitness Services.</em>
+          Runtastic transfers your information to other health and fitness services, such as Apple HealthKit, Google Fit or MyFitnessPal, only after you <u>explicitly consent</u> to the transfer when you connect to such services.
+        </p>
+        <p>
+          <em>Social Networks and Messenger Services.</em>
+          You can decide to share finished activities via Facebook, Twitter, WhatsApp, Telegram or any other messenger service you may use on your mobile device. Please note that we do not have any influence on or knowledge of the scope and the further use of the Data by the respective messaging service, and cannot take any responsibility for the use of your Data by the respective messaging provider. Please see the messaging service’s respective privacy policies for details.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Service Providers</u>
+        </p>
+        <p>
+          <em>Service Providers.</em>
+          We share your information to others who help us provide and improve our Products (e.g. maintenance, analysis, audit, payments, fraud detection, marketing and development). Service providers will have access to your information as reasonably necessary to perform these tasks on our behalf, and are obligated not to disclose or use it for other purposes. We use processors such as Adjust, Google, Facebook, Amazon Web Services, Inc., Emarsys eMarketing Systems AG, Pushwoosh, Inc., NewRelic, Inc., Apptimize, Inc. or Zendesk, Inc.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>adidas</em>
+        </p><p>
+          We share personal data (categories of personal data (see <a href="/privacy-policy#copd">here</a>):
+        </p><ul>
+          <li>Activity information</li>
+          <li>Behavioral and Profile information</li>
+          <li>Community information</li>
+          <li>Contact information</li>
+          <li>Creators Club information (only for members of the adidas Membership Program)</li>
+          <li>Device information</li>
+          <li>Identity information</li>
+          <li>Location information</li>
+          <li>Preference information</li>
+          <li>Purchase information</li>
+          <li>Size information</li>
+          <li>Social Media information</li>
+        </ul>
+        <p>
+          for the described purposes (see 4.Why We Process Data) with the following data controllers (categories of recipients):
+        </p>
+        <ul>
+          <li>adidas Data Controllers: adidas AG is a Joint Controller for all locations with the adidas Local Selling Entity (see <a target="_blank" class="reset-break" href="/local-selling-entity">here</a>).</li>
+        </ul>
+        <p></p>
+        <p></p>
+      </li>
+      <li>
+        <p>
+          <u>Recipients of personal data.</u>
+          As stated in sections 5.1 - 5.5, your personal data may
+          be disclosed to different organizations. For additional information on what categories
+          of your personal data may be disclosed to which categories of recipients, please see
+          <a href="/third-party-recipients" target="_blank">here</a>.
+        </p>
+      </li>  
+      <li>
+        <u>Data Selling.</u>
+        We do not sell any of your personal data to third parties.  
+      </li> 
+    </ol>
+  </li>
+  <li class="h3">
+    <span id="headline_6">How Long We Store Data</span>
+    <ol>
+      <li>
+        <p>
+          <u>Retention Period.</u>
+          We need to maintain your data for as long as you have an account with us. If you are a user within the EU and you stop using our services without requesting to delete your data, we will keep it for 25 months after your last interaction with any Runtastic or adidas touchpoint. Beyond that, we only store data, if it is legally necessary (because of warranty, limitation or retention periods) or otherwise required.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Account Deletion.</u>
+          If you decide to delete your account, all data Runtastic and adidas have about you will be deleted, with the following exceptions:
+        </p>
+        <ul>
+          <li>Any details made public by you (e.g. routes, comments on other registered users’ sport activities, will be anonymized, i.e. it will be made clear that such details were provided by a deleted user).</li>
+          <li>Any data required for Runtastic’s performance of contractual obligations or compliance with statutory retention obligations shall not be deleted, but minimized to the necessary extent.</li>
+        </ul>
+        <p>
+          A deletion request does not affect data, if the storage is legally necessary, for example for accounting purposes.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3">
+    <span id="headline_7">Which Rights You Have</span>
+    <ol>
+      <li>
+        <p>
+          <u>Exercise your Rights.</u>
+          To exercise your rights defined in sections 7.2 to 7.8, please send a request via email to the Email Address or via mail to our postal address.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Revocation of Consent.</u>
+          You can revoke your consent – in those cases where consent for processing is necessary – for future data processing at any time. However, this does not affect the lawfulness of data processing based on the consent before the revocation. In certain cases, we may continue to process your information after you have withdrawn consent, if we have another legal basis to do so or if your withdrawal of consent was limited to certain processing activities.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right of Access.</u>
+          You have the right to obtain (i) confirmation as to whether or not your data is being processed by us and, if so, (ii) more specific information on the data. The more specific information concerns, among other things, processing purposes, categories of data, potential recipients, or the duration of storage.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right to Rectification.</u>
+          You have the right to obtain the rectification of inaccurate data concerning you from us. In case the data processed by us is not correct, we will rectify these without undue delay and inform you of this rectification. Please note that (i) you can rectify much of your information in the settings and (ii) it is not technically possible for us to rectify all kinds of data in our Product.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right to Erasure.</u>
+          You have the right to delete data we store about you. Should you decide to do so, please go to your account settings on the Website and delete your account there. If you are unable to do this, please contact us via the email address. As a safety measure, we will send you an email in order for you to confirm this deletion. We will delete your data after this confirmation. Please note that your phone may still have data stored on it after deletion of your account.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right to Restriction of Processing.</u>
+          You have the right to obtain a restriction of processing of your data from us in the following cases:
+        </p>
+        <ul>
+          <li>you make an inquiry pursuant para. 7.4, if you so request;</li>
+          <li>you are of the opinion that the processing of your data is unlawful, but are opposed to an erasure of Data;</li>
+          <li>you still require the data for the establishment, exercise or defense of legal claims; or</li>
+          <li>you have objected to the processing pursuant para. 7.8.</li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <u>Right to Data Portability.</u>
+          You have the right to (i) receive a copy of your Data in a structured, commonly used and machine-readable format and (ii) transmit those data to another controller without hindrance from us. You can download a copy of your data in your account settings on the website.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right to Object.</u>
+          You have the right to object at any time to the processing of data for which our legitimate interests are the legal basis, including profiling based on those provisions. You also have the right to object to processing of data for direct marketing purposes.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Right to File a Complaint.</u>
+          You have the right to file a complaint with your local supervisory authority, if you think that the processing of data infringes applicable law.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3">
+    <span id="headline_8">Further Important Information</span>
+    <ol>
+      <li>
+        <p>
+          <u>Legal Bases.</u>
+          Data protection laws regulate that we are only allowed to collect and process your data, if we have lawful bases for processing. The lawfulness of data processing stems from:
+        </p>
+        <ul>
+          <li>your (explicit) <u>consent</u> in cases where you have given (explicit) consent to the processing;</li>
+          <li>the necessity for the performance of your user <u>contract</u>, e.g. where data is needed for a satisfactory use of the Product; or</li>
+          <li>
+            <u>legitimate interests</u> pursued by Runtastic or a third party, e.g. our use of cookies, plug-ins, or targeted advertising.
+          </li>
+        </ul>
+        <p>
+          Our legitimate interests include protecting you, Runtastic, or others from security threats or fraud, complying with all applicable laws, managing and improving our business (e.g. customer service, reporting) including possible corporate transactions (e.g. M&amp;A), enabling users to share their and connect via their fitness experiences, and express all fitness and health-related opinions.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Security Measures.</u>
+          We are committed to protecting your data and implement appropriate technical and organizational security measures to protect it against any unauthorized or unlawful processing and against any accidental loss, destruction, or damage. Those security measures are constantly revised to comply with the latest technological developments.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>What does Runtastic do when we transfer your personal data outside of the EU/EEA?</u>
+          Depending on the personal data processing activity, your personal data is shared with different “Categories of Recipients”. Where the recipient is located outside the EU/EEA, we have implemented necessary measures such as singing the EU Standard Contractual Clauses approved by the EU Commission.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>California Consumer Privacy Act (“CCPA”)</u>
+          For information regarding your rights as a Resident of the US State of California
+          under the California Consumer Privacy Act (CCPA), please refer to <a href="/privacy-policy#annex">Annex 1 -
+          Information for Citizen of the US-State of California under the California Consumer
+          Privacy Act (“CCPA”)</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Russian Federal Law on Personal Data ("Law #152-FZ")</u>
+          For information regarding special terms of processing personal data of Russian users under the Russian Federal Law on Personal Data ("Law #152-FZ"), please refer to <a href="/privacy-policy#annex2">Annex 2 - Information for Citizen of the Russian Federation under the Russian Federal Law on Personal Data ("Law #152-FZ")</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Turkish Personal Data Protection Law No. 6698 ("TPDPL")</u>
+          For information regarding your rights as a Resident of Turkey under the Turkish personal Data Protection Law No. 6698 ("TPDPL"), please refer to <a href="/privacy-policy#annex3">Annex 3 - Information for Residents in Turkey under the Turkish Personal Data Protection Law No. 6698 ("TPDPL")</a>.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3">
+    <span id="headline_9">Changes to the Privacy Policy</span>
+    <ol>
+      <li>
+        <p>
+          <u>General.</u>
+          We review and update the Privacy Policy periodically to reflect any changes resulting from our day-to-day business operations. You can always check the date of the Privacy Notice to find out when we last made any changes. We will notify you when we make significant changes that you must be aware of.
+        </p>
+      </li>
+      <li>
+        <p>
+          <u>Last Updated.</u>
+          This Privacy Policy was last modified on 10 Dec, 2020.
+        </p>
+      </li>
+    </ol>
+  </li>
+  <li class="h3" id="section10">
+    <span id="headline_10">Questions, Complaints and Support</span>
+    <hr style="width: 90%; margin-left: 0; margin-right: 0;">
+    <table style="font-size: initial; border: 1px solid black; border-spacing: 0; white-space: pre-line; width: 90%;">
+      <tbody><tr>
+        <td style="border: 1px solid black; padding: 10px;"> <strong>Ask customer service:</strong>
+          <a target="_blank" href="https://help.runtastic.com">General help pages</a>
+          <a target="_blank" href="https://help.runtastic.com/hc/en-us/articles/360008052920">GDPR help pages</a>
+          <a target="_blank" href="https://help.runtastic.com/hc/en-us/articles/360010393100-California-Consumer-Privacy-Act-CCPA">CCPA help pages</a> 
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;"> <strong><a target="_blank" href="mailto:dataprotection@runtastic.com">dataprotection@runtastic.com</a></strong>
+          runtastic GmbH
+          Pluskaufstraße 7
+          4061 Pasching
+          Austria
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;"><strong>Toll free number for requests under CCPA by residents of the US-State of California:</strong>
+          888 694 6364
+        </td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;"> <strong>Austrian Data Protection Authority</strong>
+          <strong>Österreichische Datenschutzbehörde</strong>
+          <strong><a target="_blank" href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a></strong>
+          +43 (0) 1 52152 2550
+          Barichgasse 40-42
+          1030 Wien
+          Austria
+          <a target="_blank" href="https://www.dsb.gv.at/kontakt">https://www.dsb.gv.at/kontakt</a>
+        </td>
+      </tr>
+    </tbody></table>
+  </li>
+</ol>
+
+<ol id="annex">
+  <li class="h3">
+    <span class="text-bold">Annex 1 - Information for Citizen of the US-State of California under the California Consumer Privacy Act (“CCPA”)</span>
+    <hr>
+    <p>
+      Consumers residing in California have some additional rights with respect to their personal information under the California Consumer Privacy Act or (“CCPA”).  If you are a California resident, this section applies to you and supplements the main privacy policy above.
     </p>
-
-    <section>
-        <h2>Who are we?</h2>
-        <p>Mondly is an online language learning platform developed by ATI Studios SRL, an EU based company.(
-            collectively referred
-            to as "Mondly", "we", "us" or "our" in this Privacy Policy)</p>
-    </section>
-    <section>
-        <h2>What personal information do we collect from the people that visit our blog, website or app?</h2>
-        <p>When ordering, registering on our site or using our products, as appropriate, you may be asked to enter your
-            name, email
-            address, foreign language skills or other details that will improve your personalized experience.
-        </p>
-        <p>We also collect log data, device information, third-party data, cookie information and IP addresses that help
-            us understand
-            which country you are connecting from. This in turn helps us provide you with more personalized content
-            better suited
-            to your needs as our user.</p>
-        <p>Other data provided voluntarily are also generally accessible for other users of Mondly: selected language
-            combinations,
-            name, profile photo and any other voluntary details that you can save in your profile.</p>
-        <p>
-            <b>Usage Information:</b> We collect information about how you use our services, such as the types of
-            content that you view
-            or engage with, the features you use, the actions you take, the other users you interact with and the time,
-            frequency
-            and duration of your activities.</p>
-    </section>
-
-    <section>
-        <h2>When do we collect information?</h2>
-        <p>We collect information from you when you interact or register with our website or apps.</p>
-    </section>
-
-    <section>
-
-        <h2>What is the purpose for collecting the information?</h2>
-        <p>We collect the information for the purpose of complying with our terms of service and bringing you the best
-            possible experience
-            when using our products. For example, we need such information for your account ranking, connecting with
-            other users
-            through Facebook, adjusting the difficulty level of the app for the user, etc. Also, it is possible that we
-            could use
-            your information for direct marketing purposes.</p>
-    </section>
-
-    <section>
-        <h2>Grounds for collecting the information</h2>
-        <p>We collect the information based on article 6 paragraph 1 letter b) of GDPR.</p>
-    </section>
-
-    <section>
-        <h2>Can you have access to your information?</h2>
-        <p>Of course you can. A simple request from you will oblige us to give you full access to the personal
-            information that we have
-            stored about you.</p>
-    </section>
-
-    <section>
-        <h2>Accuracy and updating of the information</h2>
-        <p>We will use our best efforts given the technological advancement and resources available to us to make sure
-            that the information
-            is accurate at all times. If such information changes beyond our ability to notice such change, we shall
-            update it at
-            your request.</p>
-    </section>
-
-
-    <section>
-        <h2>Further rights</h2>
-        <p>Under the applicable provisions, you have the right to ask the restriction of the processing or deletion of
-            your personal
-            data, and to oppose the processing of your data under the conditions set forth by article 21 of the GDPR,
-            especially
-            if the processing is carried out for direct marketing purposes. Also, you have the right to data
-            portability. You will
-            also have the right to file a complaint with the competent supervisory authority.</p>
-    </section>
-
-    <section>
-        <h2>Time-span of using information</h2>
-        <p>We shall be storing your information for the entire duration of your use of our products and apps. Also,
-            under the applicable
-            provisions, we might store and use your information beyond the duration mentioned above, under the condition
-            that you
-            don’t exercise your rights of deletion of such data.</p>
-    </section>
-
-    <section>
-        <h2>How do we use your information?</h2>
-        <p>We may use the information we collect from you when you register, make a purchase, sign up for our
-            newsletter, respond to
-            a survey or marketing communication, surf the website, or use certain other site features in the following
-            ways:
-        </p><ul>
-            <li>To personalize your experience and to allow us to deliver the type of content and product offerings in
-                which you
-                are most interested;
-            </li>
-            <li>To send periodic emails regarding your order or other products and services.</li>
-        </ul>
-        <p></p>
-        <p>The user agrees to the publication of its username, its profile information including but not limited to
-            language combinations,
-            score, online status and date of registration as well as additional information voluntarily provided,
-            including the profile
-            image. The email address will not be published.</p>
-    </section>
-
-    <section>
-        <h2>How do we protect your information?</h2>
-        <p>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your
-            visit to our
-            site as safe as possible.
-        </p>
-        <p>We use regular Malware Scanning.</p>
-        <p>Your personal information is contained behind secured networks and is only accessible by a limited number of
-            persons who
-            have special access rights to such systems, and are required to keep the information confidential. In
-            addition, all sensitive/credit
-            information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>
-
-        <p>We implement a variety of security measures when a user places an order enters, submits, or accesses their
-            information to
-            maintain the safety of your personal information.</p>
-
-        <p>All transactions are processed through a gateway provider and are not stored or processed on our servers.
-        </p>
-    </section>
-
-    <section>
-
-        <h2>Do we use 'cookies'?</h2>
-
-        <p>Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive
-            through your Web
-            browser (if you allow) that enables the site's or service provider's systems to recognize your browser and
-            capture and
-            remember certain information. For instance, we use cookies to help us remember and process the items in your
-            shopping
-            cart. They are also used to help us understand your preferences based on previous or current site activity,
-            which enables
-            us to provide you with improved services. We also use cookies to help us compile aggregate data about site
-            traffic and
-            site interaction so that we can offer better site experiences and tools in the future.</p>
-
-        <p>We use cookies to:
-        </p><ul>
-            <li>Understand and save user's preferences for future visits.</li>
-        </ul>
-        <p></p>
-        <p>You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off
-            all cookies.
-            You do this through your browser settings. Since the browser are a little different, look at your browser's
-            Help Menu
-            to learn the correct way to modify your cookies.</p>
-    </section>
-
-    <section>
-        <h2>What happens if you turn cookies off?</h2>
-        <p>If you turn cookies off, some features will be disabled. Some of the features that make your site experience
-            more efficient
-            may not function properly.</p>
-    </section>
-
-    <section>
-        <h2>Third-party disclosure</h2>
-        <p>It is our intention to transfer certain information to third parties in order to better help your experiences
-            with our product.
-            However, we shall at all times be in full compliance with provisions 45-49 of the GDPR. At the moment, the
-            only third
-            parties that receive information from us are based in the countries for which the European Commission has
-            already issued
-            decisions stating that those countries ensure an adequate level of protection.</p>
-        <p>This does not include website hosting partners and other parties who assist us in operating our website,
-            conducting our business,
-            or serving our users, so long as those parties agree to keep this information confidential.
-        </p>
-        <p>We may also release information when its release is appropriate to comply with the law, enforce our site
-            policies, or protect
-            ours or others' rights, property or safety.</p>
-
-        <p>However, non-personally identifiable visitor information may be provided to other parties for marketing,
-            advertising, or
-            other uses.</p>
-    </section>
-
-
-    <section>
-        <h2>Third-party links</h2>
-        <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website.
-            These third-party
-            sites have separate and independent privacy policies. We, therefore, have no responsibility or liability for
-            the content
-            and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome
-            any feedback
-            about these sites.</p>
-    </section>
-
-
-    <section>
-        <h2>Google</h2>
-        <p>Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place
-            to provide a
-            positive experience for users. <a href="https://support.google.com/adwordspolicy/answer/1316548?hl=en">https://support.google.com/adwordspolicy/answer/1316548?hl=en</a>
-        </p>
-        <p>We use Google AdSense Advertising on our website.</p>
-
-        <p>Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DART cookie
-            enables it to serve
-            ads to our users based on previous visits to our site and other sites on the Internet. Users may opt-out of
-            the use of
-            the DART cookie by visiting the Google Ad and Content Network privacy policy.</p>
-        <p>
-            We have implemented the following:
-        </p><ul>
-            <li>Demographics and Interests Reporting</li>
-        </ul>
-        <p></p>
-        <p>We, along with third-party vendors such as Google, use first-party cookies (such as the Google Analytics
-            cookies) and third-party
-            cookies (such as the DoubleClick cookie) or other third-party identifiers together to compile data regarding
-            user interactions
-            with ad impressions and other ad service functions as they relate to our website.</p>
-    </section>
-
-    <section>
-        <h2>Opting out:</h2>
-        <p>Users can set preferences for how Google advertises to you using the Google Ad Settings page. Alternatively,
-            you can opt
-            out by visiting the Network Advertising Initiative Opt-Out page or by using the Google Analytics Opt-Out
-            Browser add-on.</p>
-
-    </section>
-
-    <section>
-        <h2>California Online Privacy Protection Act</h2>
-        <p>CalOPPA is the first state law in the nation to require commercial websites and online services to post a
-            privacy policy.
-            The law's reach stretches well beyond California to require any person or company in the United States (and
-            conceivably
-            the world) that operates websites collecting Personally Identifiable Information from California consumers
-            to post a
-            conspicuous privacy policy on its website stating exactly the information being collected and those
-            individuals or companies
-            with whom it is being shared. - See more at: <a href="http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf">http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf</a>
-        </p>
-    </section>
-
-    <section>
-        <h2>According to CalOPPA, we agree to the following:</h2>
-        <p>Users can visit our site anonymously.</p>
-        <p>Once this privacy policy is created, we will add a link to it on our homepage or as a minimum, on the first
-            significant page
-            after entering our website.</p>
-        <p>Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above.
-        </p>
-        <p>
-            You will be notified of any Privacy Policy changes:
-        </p><ul>
-            <li>On our Privacy Policy Page</li>
-        </ul>
-        You can change your personal information:
+  </li>
+  <ol>
+    <li>
+      <span>
+        <u>Categories of Personal Information Collected.</u>
+        In the preceding 12 months, we have collected the categories of personal information listed below.  For more details about the data points we collect, please see section “<a href="/privacy-policy#section3">3. Which Data We COLLECT AND Process</a>” above.
         <ul>
-            <li>By logging in to your account</li>
+          <li>Identifiers, such as name, email addresses, and billing and shipping address for online purchases, unique personal identifier, online identifier, Internet Protocol address, or other similar identifiers</li>
+          <li>Categories of personal information described in the California Customer Records statute (California Civil Code Section 1798.80), including physical characteristics, payment information and, for employment candidates, education and employment history.</li>
+          <li>Characteristics of protected classifications under California law, such as gender and age (over 40).</li>
+          <li>Commercial information, including records of products or services purchased or  purchasing habits.</li>
+          <li>Biometric information, including any exercise data and preferences you share with us.</li>
+          <li>Internet and other similar network activity, such as browsing history or information regarding a consumer’s interaction with our website or products.</li>
+          <li>Geolocation data.</li>
+          <li>Audio and visual information, such as pictures you may upload to our site and recorded customer services calls.</li>
+          <li>Professional or employment-related information, for example, from employment candidates.</li>
         </ul>
-        <p></p>
-    </section>
+      </span>
+    </li>
+    <li>
+      <span>
+        <u>Your Rights.</u>
+        Under the California Consumer Privacy Act of 2018 ("the CCPA"), California consumers have the right to request access to the specific pieces of personal information we have collected about them in the last 12 months. You may also request additional details about our information practices, including the categories of personal information we have collected about you, the categories of sources of such collection, the business or commercial purpose for collecting personal information, the categories of third parties with whom we share your personal information, the categories of personal information we have disclosed about you in the preceding 12 months. If you are a California consumer, you also have the right to request deletion of your personal information (subject to certain exceptions), to opt out of sales of personal information and to receive equal service and price and not be discriminated against even if you exercise any of their other CCPA rights.
+        <br>
+        <br>
+        <em>Please note that any CCPA rights requests made before January 1, 2020 will be treated as if made on January 1, 2020.</em>
+        <br>
+        <br>
+        California consumers may make a rights request by sending a request via email to the Email Address, via mail to our postal address or by making a call to our toll free service number. For all relevant contact information please see Section <a href="/privacy-policy#section10">“10. Questions, Complaints and Support”</a> above. Your request must include sufficient information that allows us to reasonably verify you are the person about whom we collected personal information, which may include your email address, name and account id (which is required only if you already have an account with us).  We will not discriminate against you if you choose to exercise your rights under the CCPA.
+      </span>
+    </li>
+    <li>
+      <span>
+        <u>Sale of Personal Information.</u>
+        We do not sell any of your personal data to third parties.
+      </span>
+    </li>
+    <li>
+      <span>
+        <u>Further disclosures.</u>
+        For further disclosures regarding your personal information, as required by the CCPA, please refer to the main privacy policy above. You can find information about the business and commercial purposes for which we collect your personal information in Section “<a href="/privacy-policy#section4">4. Why We Process Data (“Purposes”)</a>”. For information regarding the sources from which we collect personal data from please refer to Section “<a href="/privacy-policy#section3.3">3.3 Data from Others</a>”. Section “<a href="/privacy-policy#section5">5. Sharing of Personal Data</a>” provides information about the categories of third parties to whom we disclose your personal information to, as well as information regarding which categories of personal information  are being disclosed.
+      </span>
+    </li>
+  </ol>
+</ol>
 
-    <section>
-        <h2>How does our site handle Do Not Track signals?</h2>
-        <p>We don't honor Do Not Track signals and Do Not Track, plant cookies, or use advertising when a Do Not Track
-            (DNT) browser
-            mechanism is in place. We don't honor them because: our product won't work.
-        </p>
-    </section>
-
-    <section>
-        <h2>Does our site allow third-party behavioral tracking?</h2>
-        <p>It's also important to note that we allow third-party behavioral tracking.</p>
-    </section>
-
-    <section>
-        <h2>COPPA (Children Online Privacy Protection Act)</h2>
-        <p>When it comes to the collection of personal information from children under the age of 13 years old, the
-            Children's Online
-            Privacy Protection Act (COPPA) puts parents in control. The Federal Trade Commission, United States'
-            consumer protection
-            agency, enforces the COPPA Rule, which spells out what operators of websites and online services must do to
-            protect children's
-            privacy and safety online.</p>
-        <p>We do not specifically market to children under the age of 13 years old.</p>
-    </section>
-
-    <section>
-        <h2>CAN-SPAM Act</h2>
-        <p>The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for commercial
-            messages, gives
-            recipients the right to have emails stopped from being sent to them, and spells out tough penalties for
-            violations.
-        </p>
-        <p>We collect your email address in order to:</p>
+<ol id="annex2">
+  <li class="h3">
+    <span class="text-bold">Annex 2 - Information for Citizen of the Russian Federation under the Russian Federal Law on Personal Data (“Law #152-FZ”)</span>
+    <hr>
+    <p>Processing personal data of the consumers residing in the Russian Federation has some special considerations under the Russian Federal Law on Personal Data (“Law #152-FZ”).  If you are a Russian resident, this section applies to you and supplements the main privacy policy above.</p>
+  </li>
+  <ol>
+    <li><span>In case there are certain contradictions between the main policy and this Annex 2, Annex 2 prevails.</span></li>
+    <li><span>The Annex and the main Policy were designed to meet the requirements of the Russian legislation on protection of the personal data.</span></li>
+    <li><span>Details of processing personal data are stipulated in internal legal documentation of the Controllers.</span></li>
+    <li><span>All the personal data is secured according to the Russian legislation and remains confidential unless the user declares it as public (e.g. by posting it).</span></li>
+    <li><span>By sharing certain content or data (e.g. pictures) containing user’s image, the user hereby gives to the Controllers irrevocable, perpetual, free of any remuneration consent to use persons image and gives the right to use it by any means not prohibited by law and specified by the Terms of Service in whole or in part, without restrictions on the accompanying text, sound and / or visual design. The territory for such consent is not limited. The user understands that in those cases his/hers name and/or reputation can be associated with the Controllers.</span></li>
+    <li><span>For the purpose of defining the scope of personal data in the legal context, it is specifically outlined that profile pictures are not considered to be personal data given the fact that it is not required to upload a picture and it is not necessarily an image of the user themselves (it could be any graphic image, e.g. drawing or cartoon).</span></li>
+    <li><span>The purpose of processing, personal data categories, and legal basis are named in the main policy. For the avoidance of doubt, Russian users by following the registration and giving the explicit consent to this policy provide consent as a legal basis for the processing.</span></li>
+    <li><span>When the main policy refers to the adidas AG as a Controller, for the Russian user adidas ltd. (121614, Moscow, Krylatskaya st., 15) acts as a Controller.</span></li>
+    <li>
+      <span>
+        Processing conditions and security measures:
         <ul>
-            <li>Market to our mailing list or continue to send emails to our clients after the original transaction has
-                occurred.
-            </li>
-            <li>Authorize and authenticate you as a user of our services and provide additional functionality such as
-                tracking your purchases,
-                providing access to additional content and your progress within the application
-            </li>
+          <li>For the development and implementation of specific measures to ensure the security of personal data, monitoring the implementation of this policy, a responsible person has been appointed – Data Protection Officer.</li>
+          <li>The Operator has established a list of persons processing personal data.</li>
+          <li>
+            Technical measures of protection of the personal data:
+            <ul>
+              <li>The Controller carries out technical measures aimed at preventing unauthorized access to personal data and (or) transferring it to persons who do not have the right to access such information;</li>
+              <li>protective tools are configured for timely detection of unauthorized access to personal data;</li>
+              <li>technical means of automated processing of personal data are isolated in order to prevent exposure to them, as a result of which their functioning may be disrupted;</li>
+              <li>The Controller exercises constant control over ensuring the level of security of personal data.</li>
+            </ul>
+          </li>
+          <li>
+            In order to execute organizational measures of protection of the personal data, the Controller:
+            <ul>
+              <li>defines threats to the security of personal data during processing and forms threat models on that basis;</li>
+              <li>develops a personal data protection system that ensures the neutralization of alleged threats using methods for protecting personal data provided for the corresponding class of information systems;</li>
+              <li>forms a plan for conducting checks on the readiness of new information protection tools for use;</li>
+              <li>conducts training on how to work with the information protection tools used them for the employees who are using them ;</li>
+              <li>keeps records of persons (job titles) authorized to work with personal data in the information system;</li>
+              <li>monitors compliance with the terms of use of information security tools.</li>
+            </ul>
+          </li>
         </ul>
+      </span>
+    </li>
+  </ol>
+</ol>
 
+<ol id="annex3">
+  <li class="h3">
+    <span class="text-bold">Annex 3 - Information for Residents in Turkey under the Turkish Personal Data Protection Law No. 6698 ("TPDPL")</span>
+    <hr>
+    <p>If you are a resident in the Republic of Turkey, this section also applies to you and supplements the main privacy policy above.</p>
+  </li>
+  <ol>
+    <li><span><u>Reminder on Data Controller.</u> We hereby declare that Adidas Spor Malzemeleri Satış ve Pazarlama Anonim Şirketi ("adidas Turkey"), a Turkish joint-stock company registered with the Istanbul Trade Registry under the number 406873, and having its registered offices at "Rönesans Biz Plaza Mecidiyeköy Mah. Oğuz Sok. No. 4 Şişli/Istanbul" shall not be considered as data controller within this Privacy Policy; accordingly adidas Turkey shall act only as data processor. The only data controller is Runtastic; and there is no joint data controller mechanism.</span></li>
+    <li><span><u>Information on Data Protection Officer.</u>  As the term "Data Protection Officer'' is not defined under TPDPL; it shall not be applicable in Turkey. However, you can contact us via email using the email address (see <a href="/privacy-policy#headline_1">here</a>). Your request will§ be forwarded and transferred to the Data Controller within the scope of the Privacy Policy.</span></li>
+    <li><span><u>Method and legal basis of personal data collection.</u> We are only allowed to collect and process your data if we have lawful bases for processing in accordance including Article 5 and Article 6 of TPDPL (including processing of personal data of the parties of a contract is necessary, provided that it is directly related to the establishment or performance of the contract and processing of data is necessary for the legitimate interests pursued by the data controller, provided that this processing shall not violate the fundamental rights and freedoms of the data subject). We collect the personal data fully or partially by automated means / methods provided being a part of the data recording system, in accordance with TPDPL.</span></li>
+    <li>
+      <span>
+        <u>Your Rights.</u>
+        Save the circumstances stipulated under Article 28 of TPDPL entitled "Exceptions", as the personal data subject you have the following rights within the scope of Article 11 of TPDPL upon your application to the Data Controller:
+        <ol>
+          <li>to learn whether your personal data is processed or not;</li>
+          <li>if your personal data has been processed, to demand information with regards to  said processing;</li>
+          <li>to learn the purpose of processing your personal data and whether your personal data is being used for the intended purposes;</li>
+          <li>to know the third parties to whom their personal data is transferred within the country or abroad;</li>
+          <li>to request the rectification of incomplete or inaccurate data, if any;</li>
+          <li>to request the erasure or destruction of our personal data in accordance with the conditions of the Law and its regulations;</li>
+          <li>to request notification on operations conducted as per the above sub-paragraphs A3.4.5. and A3.4.6.;</li>
+          <li>to object to the processing, exclusively by automatic means, of your data which leads to an unfavorable consequence for yourself;</li>
+          <li>to request compensation for the damage arising from the unlawful processing of your personal data.</li>
+        </ol>
+      </span>
+    </li>
+    <li>
+      <span>Contact Information of Local Personal Data Protection Authority in Turkey.</span>
+      <br><span>Kişisel Verileri Koruma Kurumu</span>
+      <br><span>Nasuh Akar Mahallesi 1407. Sok. No: 4, 06520 Çankaya / Ankara</span>
+    </li>
+  </ol>
+</ol>
 
-        <p>
-            To be in accordance with CAN-SPAM, we agree to the following:
-        </p>
-        <ul>
-            <li>Not use false or misleading subjects or email addresses.</li>
-            <li>Identify the message as an advertisement in some reasonable way.</li>
-            <li>Include the physical address of our business or site headquarters.</li>
-            <li>Monitor third-party email marketing services for compliance, if one is used.</li>
-            <li>Honor opt-out/unsubscribe requests quickly.</li>
-            <li>Allow users to unsubscribe by using the link at the bottom of each email.</li>
-        </ul>
-
-        <p>If at any time you would like to unsubscribe from receiving future emails, you can follow the instructions at
-            the bottom
-            of each email and we will promptly remove you from all correspondence.</p>
-    </section>
-
-    <section>
-
-        <h2>Contacting Us</h2>
-        <p>If there are any questions regarding this privacy policy, you may contact us using the email below:</p>
-        <p>contact [at] mondly [dot] com</p>
-    </section>
 </div>
 
+</div>
+</div>
+</div>
+</div></div></div></div></div><div class="landingpage footer-wrapper--normal  "><!----><!----><div class="page-footer"><div class="footer--main"><div class="footer-column"><label for="footer-follow-us" class="h2 text-adineue-pro-bold text-uppercase">Follow us</label><input id="footer-follow-us" type="checkbox"><div class="footer-links"><a href="https://www.runtastic.com/blog" class="footer-link">Blog</a><a href="https://www.facebook.com/adidasruntastic" class="footer-link">Facebook</a><a href="https://www.instagram.com/adidasruntastic" class="footer-link">Instagram</a><a href="https://www.youtube.com/adidasRuntastic" class="footer-link">Youtube</a><a href="https://www.linkedin.com/company/runtastic-gmbh" class="footer-link">LinkedIn</a></div></div><div class="footer-column"><label for="footer-about" class="h2 text-adineue-pro-bold text-uppercase">About Runtastic</label><input id="footer-about" type="checkbox"><div class="footer-links"><a href="https://www.runtastic.com/career" class="footer-link">Career</a><a href="https://www.runtastic.com/blog/en/category/tech/" class="footer-link">Tech Blog</a><a href="https://www.runtastic.com/partners/" class="footer-link">Partners</a><a href="https://www.runtastic.com/mediacenter" class="footer-link">Media Center</a><a href="https://help.runtastic.com" class="footer-link">Help Center</a></div></div><div class="footer-column"><label for="footer-more" class="h2 text-adineue-pro-bold text-uppercase">More</label><input id="footer-more" type="checkbox"><div class="footer-links"><a href="/terms" class="footer-link">Terms &amp; Conditions</a><a href="/community-guidelines" class="footer-link">Community Guidelines</a><a href="/privacy-policy" class="footer-link">Privacy Policy</a><a href="/legal" class="footer-link">Legal</a><a onclick="typeof klaro !== 'undefined' ? klaro.show() : termsInjectedKlaroInitAndShow()" class="footer-link">Manage Tracking</a></div></div><div id="ember675" class="rt-choose-language-link wrapper group ember-view"><div class="rt-choose-language-link--divider"></div>
+<div class="rt-choose-language-link--left">
+  <ul class="horizontal-active-list">
+    <li class="rt-choose-language-link--more subtle-active-list-item">
+      <a data-test-name="language-modal-link" class="more_languages" data-ember-action="" data-ember-action-676="676">
+        English
+        <img src="assets/landingpage/sixpack/section1/down_arrow.png">
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="rt-choose-language-link--right rt-choose-language-link--copyright">
+  © Copyright runtastic GmbH 2021
+</div>
 
-<script type="text/javascript" id="">(function(){var b={"@context":"http://www.schema.org","@type":"WebSite",name:"Mondly",alternateName:"Mondly Languages",sameAs:"https://en.wikipedia.org/wiki/Mondly https://www.wikidata.org/wiki/Q53709994 https://twitter.com/MondlyLanguages https://www.youtube.com/channel/UCEAXQi1NM73KyCNNozI6jEA https://www.linkedin.com/company/mondly https://www.instagram.com/mondlylanguages/ https://www.facebook.com/mondlylanguages/ https://www.pinterest.com/mondlylanguages/ https://www.mondlylanguages.com/".split(" "),
-url:"https://www.mondly.com/"},a=document.createElement("script");a.type="application/ld+json";a.innerHTML=JSON.stringify(b);document.head.appendChild(a)})();</script>
-
-
-<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","469383086780555");fbq("track","PageView");</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=469383086780555&amp;ev=PageView&amp;noscript=1"></noscript>
-<script type="text/javascript" id="" src="https://cdn.attn.tv/mondly/dtag.js"></script></body></html>
+<!----></div></div></div></div></div></div><!----><div id="modal-dialog"></div><div id="ember679" class="is-hidden ember-view"></div></div></div></body></html>

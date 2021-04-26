@@ -1,59 +1,626 @@
-<!DOCTYPE html><html lang="en"><head>
-		 <title>Customer Support</title>
-<meta charset="utf-8">
-<meta name="theme-color" content="#000000">
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-<link rel="shortcut icon" href="//sgimage.netmarble.com/favicon/netmarble/favicon.ico">
-<link rel="apple-touch-icon" href="//sgimage.netmarble.com/favicon/netmarble/favicon-120x120.png">
-<link rel="apple-touch-icon" sizes="180x180" href="//sgimage.netmarble.com/favicon/netmarble/favicon-180x180.png">
-<link rel="stylesheet" type="text/css" href="//sgimage.netmarble.com/font/css/font-1.0.6.css?_=180118">
-<link rel="stylesheet" href="/resources/css/common.css">
-<meta property="og:title" content="Customer Support">
-<meta property="og:description" content="How can we help?">
-<meta property="og:url" content="https://help.netmarble.com">
-<meta property="og:image" content="https://sgimage.netmarble.com/images/netmarble/COMMON/20170406/1491442128033.jpg">
-<meta property="keyword" content="Netmarble, Customer Support">
- 
-	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="terms-built" src="/resources/js/controller/terms-built.js"></script></head>
-	<body class="terms">
-		<div id="gnbView" class="gnb_b" data-type="a1"></div>
-		<div id="lnbView"></div>
-		<div id="appView">
-			<div id="appHeaderView"></div>
-    		<div id="appContView"></div>
-			<div id="appFooterView"></div>
-		</div>
-		<div id="footerView" class="gnb_b" data-type="a2"></div>
-		<script type="text/javascript" async="" defer="" src="//npiwik.netmarble.com/piwik.js"></script><script type="text/javascript">
-			var DOMAIN_PATH = "//sgimage.netmarble.com";
-			var HOST_PREFIX = "real";
-			var GAME_CD = "";
-			var DEVICE = "pc";
-			var CURRENT_LANG = "en";
-			var CURRENT_LANG_ORIGIN = "en";
-			var COUNTRY = "BR";
-			var NM_LANGUAGE = "";
-			var PARTNER_CODE = "netmarble";
-		</script>
-		<script data-main="/resources/js/controller/terms-built.js" src="//sgimage.netmarble.com/js/lib/require-2.3.2.min.js"></script>
-		<!-- Piwik -->
-		<script type="text/javascript">
-			var _paq = _paq || [];
-			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-			_paq.push(["setDomains", ["help.netmarble.com", "help.netmarble.net", "help.netmarble.com.cn"]]);
-			_paq.push(['trackPageView']);
-			_paq.push(['enableLinkTracking']);
-			(function() {
-				var u="//npiwik.netmarble.com/";
-				_paq.push(['setTrackerUrl', u+'piwik.php']);
-				_paq.push(['setSiteId', '64']);
-				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-			})();
-		</script>
-	<!-- End Piwik Code -->
-	
-
+<!DOCTYPE html><html lang="en" style="font-size: 106.667px;"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="robots" content="all">
+    <meta name="Copyright" content="Tencent">
+    <meta name="author" content="Tencent-cp">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <title>Privacy Policy</title>
+    <script>
+        //屏幕适应 
+            (function (win, doc) {
+                if (!win.addEventListener) return;
+                var html = document.documentElement;
+                function setFont() {
+                    var html = document.documentElement;
+                    var k = 750;
+                    html.style.fontSize = html.clientWidth / k * 100 + "px";
+                }
+                setFont();
+                setTimeout(function () {
+                    setFont();
+                }, 300);
+                doc.addEventListener('DOMContentLoaded', setFont, false);
+                win.addEventListener('resize', setFont, false);
+                win.addEventListener('load', setFont, false);
+            })(window, document);
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="top-btns">
+            <a href="a20200403privacy/privacy_zh.html">简体中文</a>
+            <a href="a20200403privacy/privacy_en.html" class="on">English</a>
+            <a href="a20200403privacy/privacy_es.html">Español</a>
+            <a href="a20200403privacy/privacy_fr.html">Français</a>
+            <a href="a20200403privacy/privacy_it.html">Italiano</a>
+            <a href="a20200403privacy/privacy_tr.html">Türkçe</a>
+            <a href="a20200403privacy/privacy_de.html">Deutsch</a>
+            <a href="a20200403privacy/privacy_pt.html">Português</a>
+            <a href="a20200403privacy/privacy_ptbr.html">Português-BR</a>
+            <a href="a20200403privacy/privacy_ru.html">Русский</a>
+            <a href="a20200403privacy/privacy_ar.html">العربية</a>
+        </div>
+        <h1 class="title">Arena of Valor</h1>
+        <h3 class="table-tit">Privacy Policy</h3>
+        <p class="time">Last Updated: 25 February 2021</p>
+        <div class="content">
+            <p>Thank you for using our products and services! We respect your concerns about privacy and appreciate your trust and confidence in us.</p>
+            <p>Here is a summary of the information contained in this privacy policy. This summary is to help you navigate the privacy policy and it is not a substitute for reading everything! You can use the hyperlinks below to jump directly to particular sections.</p>
+            <h3>What information do we need to provide the Game Services?</h3>
+            <p>If you register an account to use the Game then we will need some information from you to set this up. If you choose to set up your Game profile using a social media account, we also collect information from that social media account. If you choose, you can provide certain other information to personalise the gaming experience and enable Game features, or participate in Game Services. If you need to get in touch with us then we will also retain some information so that we can get back in touch with you and address any concerns. <a href="#con1">More Information.</a></p>
+            <h3>How will we use your information?</h3>
+            <p>We use your information to provide the many functions and services that comprise the Game Services. We also use your information for account verification, security purposes and to support and improve the Game Services. We do not share your information with any third parties, except where we need to in order to provide the Game Services (e.g., use local cloud providers or to back up your data; using our affiliates around the world to help us to deliver the Game Services) or monitor the success of our marketing and advertising programs, or we are instructed to by a court, authority or compelled by law.<a href="#con2">More Information.</a></p>
+            <h3>Who do we share your information with?</h3>
+            <p>We use some third parties to help us deliver the best possible experience (e.g., cloud services to back up your data and support services). When we use a third party, we only do this to process or store your information for the purposes described in this privacy policy. We also have affiliates around the world who help us deliver the Game Services and we may be required by a court or legal obligation to disclose certain information in some circumstances.<a href="#con3">More Information.</a></p>
+            <h3>Where do we process your information?</h3>
+            <p>Our servers are located in Brazil, Germany, Hong Kong, Singapore, the United States , Japan, Mexico, Russia, India and United Arab Emirates. Our support, engineering and other teams are located in our offices around the world (including the United States and the People’s Republic of China). <a href="#con3">More Information.</a></p>
+            <h3>How long do we keep hold of your information?</h3>
+            <p>We generally retain your information for the period during which you maintain an account for the Game, after which time your data is deleted (as further described in this privacy policy), unless otherwise required by applicable laws. <a href="#con4">More Information.</a></p>
+            <h3>How can I exercise my rights over my information?</h3>
+            <p>Depending on where you live, you may have certain rights with respect to your information, such as rights of access, to receive a copy of your data, or to delete your data or restrict or object to our processing of your data.<a href="#con5">More Information.</a></p>
+            <h3>How to get in touch with us</h3>
+            <p>If you have any questions about anything in this policy, or want to exercise any rights you may have, please contact us<a href="#con6">here</a>.</p>
+            <h3>How will we notify you of changes?</h3>
+            <p>If there are any significant changes to this privacy policy, we will update the privacy policy here. <a href="#con7">More Information.</a></p>
+            <h3>Contact Information</h3>
+            <ul class="c-list1">
+                <li><strong>Data Controller: </strong><p>Proxima Beta Pte. Limited <br>Email: dpo@proximabeta.com </p></li>
+                <li><strong>EU Representative: </strong><p>Tencent International Service Europe B.V. <br>Email: eudataprotection@tencent.com </p></li>
+            </ul>
+            <h3>Welcome to Arena of Valor!</h3>
+            <p>This privacy policy explains the when, how and why when it comes to processing of your personal information in connection with the mobile game Arena of Valor (“<strong>Game</strong>”) and website for the Game (“<strong>Game Services</strong>”), and sets out your choices and rights in relation to that information. Please read it carefully – it is important for you to understand how we collect and use your information, and how you can control it. </p>
+            <p><strong>If you do not agree to the processing of your personal information in the way this privacy policy describes, please do not provide your information when requested and stop using the Game Services. By using the Game Services you are accepting our rules regarding your personal information as described in this privacy policy. </strong></p>
+            <p>This Game has been developed by the Tencent group (“<strong>we</strong>”, “<strong>us</strong>”, “<strong>our</strong>”). </p>
+            <p>For the purpose of data protection laws, the data controller of your personal information in relation to the Game Services is Proxima Beta Pte. Limited, which is a Singapore-based company within the Tencent group. </p>
+            <p>The registered address of Proxima Beta Pte. Limited is 10 Anson Road, #21-07 International Plaza, Singapore (079903). </p>
+            <p>Our representative in the EU for the purpose of EU data protection laws is Tencent International Service Europe B.V., a company registered in the Netherlands, with the registered address Gustav Mahlerplein 2, 1082 MA,  Amsterdam, the Netherlands and can be contacted at eudataprotection@tencent.com. Our data protection officer can be contacted at <a href="javascript:;">dpo@proximabeta.com. </a>.</p>
+            <p>Please reach out to us if you have any questions or concerns regarding the processing of your personal information: you can contact us anytime at <a href="javascript:;">support@arenaofvalor.com</a>.</p>
+            <h3 id="con1">The Types of Personal Information We Use</h3>
+            <p>This section describes the different types of personal information we collect from you and how we collect it. If you would like to know more about specific types of data and how we use that data, please see the section entitled “<a href="#con2">How we use your personal information</a>” below. </p>
+            <p>The following is a high level summary of the types of personal information we use:</p>
+            <p><strong>1. Information you provide to us (either directly or through a third party).&nbsp;</strong></p>
+            <p>You give us information about you when you register for the Game (your nominated nickname, and information we import from your connected social media account (Facebook, Google Play or iOS Game Centre) in order to set up your profile, including your name as it appears on your social media profile, your user ID and your profile picture. You also provide us with information when you set up your profile for the Services (including region location and information you voluntarily elect to provide in order to customise gameplay, such as gender), or your nickname when you log-in as a ‘guest’ in order to use the Game Services. </p>
+            <p>You also provide us with information when you participate in a survey in the Game (in which case we will process the information you provide to us as part of the survey, including Open ID, IP address and, if you choose to provide it, your age, email address, mobile number, name, address and profession). If you participate in a survey placed on a third party platform including social media, you provide us with your IP address and, if you choose to provide it, your age, email address, mobile number, name, address and any other information that you provide in your response to the survey. If you register for an e-sports event we will collect your player ID, team name, name, nationality, proof of residency, email address, phone number, and match data r. We may also ask you for passport information to verify that you are located within a country/region in your nominated Game region and to assist with travel/visa arrangements.</p>
+            <p>If you choose to log-in using Facebook, Google Play or iOS Game Centre, we import the name of the friends from your social media profile, so that you can connect with them. If you choose to manually add a user as a friend in the Game, we will also store that information so that you can connect with that user. If you choose to provide GPS information, we will use it to allow you to connect with users nearby your location, but your GPS information is not shared with other users.</p>
+            <p><strong>2. Information about you generated as part of the Game (and its in-Game services)</strong></p>
+            <p>We automatically collect certain data from you when you use the Game Services, namely your IP address, Open ID and device information (such as device ID, platform and Advertising ID) and information regarding your use of the Game Services, such as Game play statistics (e.g. geographic ranking based on your selected region location). We also collect and store your data:</p>
+            <ul class="c-list1">
+                <li>each time you interact with us, for example, when you use in-Game support to communicate with us; </li>
+                <li>if you click on a link that advertises the Game, we store the Advertising ID for that advertisement and marketing analytics data (e.g. device ID, engagement data and search terms) with your profile;</li>
+                <li>if you conduct any transactions within the Game, we collect information to facilitate your transaction and to maintain transaction records (Open ID, cost, product purchased, IP address, device details and, if it is a web-based transaction, your email address);</li>
+                <li>if you contact our support team, we collect information including your name, Open ID, device ID, application version, battery level, WiFi strength, free space on device, iOS version, platform, network type, carrier, country code, and details of the ticket and error. You also have the option of providing your email address and a photo to illustrate the error; </li>
+                <li>when you are using the Game Services, our security feature collects (in addition to the categories of data listed above) devices information including a list of installed hack software, equipment brand and model and available space on the device, and information about your internet connection including the type (WiFi/4G/3G).</li>
+            </ul>
+            <p><strong>3. Information you generate and display in the course of using the Game Services.</strong></p>
+            <p>You may provide additional information as part of your profile (such as gender). You may also provide or generate information when you communicate with other users in the Game (e.g., chat content and log data). We also generate an Open ID and use this to store your Game data, and we collect and store your Game play statistics (e.g. level, heroes, scores) in order to provide you with feedback and information about your Game play and progress. </p>
+            <h3>Cookies</h3>
+            <p>We use cookies and other similar technologies (e.g. web beacons, log files, scripts and eTags) (“<strong>Cookies</strong>”) to enhance your experience using the Game Services. Cookies are small files which, when placed on your device, enable us to provide certain features and functionality. </p>
+            <p>You have the option to permit installation of such Cookies or subsequently disable them. You may accept all cookies, or instruct the device (in the case of the Game) or web browser (in the case of the website for the Game) to provide notice at the time of installation of cookies, or refuse to accept all cookies by adjusting the relevant cookie retention function in your device. However, in the event of your refusal to install cookies, the Game Services may be unable to operate as designed. </p>
+            <p>For more information about our Cookies policy, click<a href="https://www.arenaofvalor.com/cookies.html">here</a>.</p>
+            <h3>Children</h3>
+            <p>Our Service is not intended for children. Children must not use the Service for any purpose. </p>
+            <p>By children, we mean users under the age of 13 years old; or in the case of users located in a country listed in the table below, the relevant age listed for that country. </p>
+            <div class="c-tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Country in which the user is located</th>
+                            <th>Minimum age of the user</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Algeria</td>
+                            <td>19*</td>
+                        </tr>
+                        <tr>
+                            <td>Brazil</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>European Economic Area/Switzerland</td>
+                            <td>16*</td>
+                        </tr>
+                        <tr>
+                            <td>India</td>
+                            <td>18*</td>
+                        </tr>
+                        <tr>
+                            <td>Kingdom of Saudi Arabia </td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Kuwait</td>
+                            <td>21**</td>
+                        </tr>
+                        <tr>
+                            <td>Morocco</td>
+                            <td>18*</td>
+                        </tr>
+                        <tr>
+                            <td>Qatar</td>
+                            <td>18*</td>
+                        </tr>
+                        <tr>
+                            <td>Russia</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Tunisia</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>South Africa</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Turkey</td>
+                            <td>18*</td>
+                        </tr>
+                        <tr>
+                            <td>United Arab Emirates</td>
+                            <td>21*</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>*Users located in this country and who are below the minimum age, are required to obtain parental/guardian consent prior to the playing of the Game. </p>
+            <p>**Users located in Kuwait and who are under the age of 21 but at least 18 years old are required to obtain parental/guardian consent prior to the playing of the Game. </p>
+            <p>We do not knowingly collect personal information from children under these ages for any purpose. If you believe that we have personal information of a child under these ages, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>and we will delete such information.</p>
+            <h3 id="con2">How We Use Your Personal Information  </h3>
+            <p>This section provides more detail on the types of personal information we collect from you, and why. For users who live in the European Economic Area or United Kingdom (“<strong>Relevant Jurisdiction</strong>”), it also identifies the legal basis under which we process your data.</p>
+            <div class="c-tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Personal Information</th>
+                            <th>Use</th>
+                            <th>Legal Basis ( only relevant if you are located in a Relevant Jurisdiction)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" class="td-bg">Game</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Information you provide to us (either directly or through a third party).&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Nickname</td>
+                            <td>We use this information to create your account for the Game in accordance with your request.  </td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Social Connect Information (if you choose to log in via your social media account with these networks):
+                                <ul class="c-list1">
+                                    <li>Facebook: Name, Facebook ID, Profile Picture, Email Address (optional)</li>
+                                    <li>Google Play: Google ID, Display Name</li>
+                                    <li>iOS Game Centre: User ID, Nickname, Profile Picture</li>
+                                </ul>
+                            </td>
+                            <td>We use this information to create your account for the Game in accordance with your request.</td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Gender (if you elect to provide this information)</td>
+                            <td>We only receive this information if you voluntarily provide it. It is used in order to customise gameplay.</td>
+                            <td>Necessary to perform our contract with you to provide the Game with customised gender-specific features.</td>
+                        </tr>
+                        <tr>
+                            <td>Region Location (manually selected by you) </td>
+                            <td>We use this information to: 
+                                <ul class="c-list1">
+                                    <li>set up your gameplay on a regional server;</li>
+                                    <li>provide you with your geographic ranking; </li>
+                                    <li>improve gameplay.</li>
+                                </ul>
+                            </td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Friends List (Facebook, Google Play, iOS Game Centre)</td>
+                            <td>If you choose to log-in using Facebook, Google Play or iOS Game Centre, we import the name of the friends from your social media profile so that you can connect with your friends.</td>
+                            <td>Necessary to perform our contract with you if you request that we connect you with your friends.</td>
+                        </tr>
+                        <tr>
+                            <td>Friends List (manually added by you)</td>
+                            <td>If you choose to add a user as a friend, we will store that information so that you can connect with that user.</td>
+                            <td>Necessary to perform our contract with you if you request that we connect you with your friends.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Information generated as part of the Game (and its in-Game services).&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Open ID</td>
+                            <td>We use this information to store your Game data (including level and progress) with your profile.</td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Game Play Statistics (Level, Heroes, Score/s), date and time stamps of actions</td>
+                            <td>We use this information to provide you with feedback and information about your gameplay and progress.</td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>IP Address</td>
+                            <td>We use this information to allow you to connect to the Game server.</td>
+                            <td>Necessary to perform our contract with you to provide the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Device ID and Device Information (Android: Device ID (IMEI), Series ID, Android ID, MAC address, device fingerprint, device host, device hardware, RadioVersion, Google advertising ID; iOS: IDFV, Model, OS Version, Network, WiFI, MAC) </td>
+                            <td>
+                                We use this information:
+                                <ul class="c-list1">
+                                    <li>to improve our services, including the functionality of the Game;</li>
+                                    <li>for security and verification purposes; </li>
+                                    <li>identify and address bugs and assess game function for optimisation.</li>
+                                </ul>
+                            </td>
+                            <td>It is in our legitimate interest to ensure the security of our services, manage registrations and improve our services.</td>
+                        </tr>
+                        <tr>
+                            <td>GPS</td>
+                            <td>We use this information to allow you to connect with users nearby your location. Your GPS information is not shared with other users.</td>
+                            <td>We use this information with your consent.</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising ID and marketing analytics data (e.g. device ID, engagement data and search terms)</td>
+                            <td>If you click on a link or interact with content that advertises the Game, we store the Advertising ID for that advertisement and certain marketing analytics data with your profile.</td>
+                            <td>It is in our legitimate interests to use this information to monitor the success of our advertising and marketing programs.</td>
+                        </tr>
+                        <tr>
+                            <td>Log Data (purchasing actions, game results (e.g., win or lose), in-game performance)</td>
+                            <td>
+                                We use this information to:
+                                <ul class="c-list1">
+                                    <li>maintain a record of log-in and actions of your account;</li>
+                                    <li>improve our services, including the functionality of the Game;</li>
+                                    <li>for security and verification purposes.</li>
+                                </ul>
+                            </td>
+                            <td>Necessary to perform our contract with you to provide the Game and retain your record of progress.</td>
+                        </tr>
+                        <tr>
+                            <td>Text Chat Data: Free Chat (users can communicate using their own, custom messages) (for users located in the EEA or Switzerland, this chat function is only available to users over the age of 16)) and Quick Chat (users can communicate using only pre-determined messages set in a drop down menu in the Game). </td>
+                            <td>We facilitate the posting of your communications with other users.</td>
+                            <td>Necessary to perform our contract with you to provide the Game where you seek to use chat services.</td>
+                        </tr>
+                        <tr>
+                            <td>Audio Chat Data </td>
+                            <td>We facilitate your communications with other users.</td>
+                            <td>Necessary to perform our contract with you to provide the Game where you seek to use chat services.</td>
+                        </tr>
+                        <tr>
+                            <td>Transaction Records: payments on eu.pay.proximabeta.com, Google Play or iOS App Store (Open ID, cost, product purchased, IP address, device details, email address (if web-based transaction))</td>
+                            <td>We use this information to maintain a record of your transaction history.</td>
+                            <td>Necessary to perform our contract with you to provide the Game, information about your in-game purchase history and to restore purchases of in-game items.</td>
+                        </tr>
+                        <tr>
+                            <td>Security-Related Information: list of hack or cheating software, device operation system settings, device information including mobile phone brand, model, CPU structure, CPU model, kernel version, resolution.</td>
+                            <td>We use this information: 
+                                <ul class="c-list1">
+                                    <li>To provide a fair Game environment;</li>
+                                    <li>To solve game crash and optimize compatibility.</li>
+                                </ul>
+                            </td>
+                            <td>It is in our legitimate interests to use this information to protect the integrity of the Game and improve its operation.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support Ticket ID &amp; User Communications with Support: Name, Open ID, device ID, application version, battery level, WiFi strength, free space on device, network type, iOS version, platform, carrier, country code ,email address (if you choose to disclose your email), photo (if you choose to upload one to illustrate the error), and details of ticket and error.</td>
+                            <td>We use this information to:
+                                <ul class="c-list1">
+                                    <li>improve our services;</li>
+                                    <li>provide troubleshooting, such as addressing and remediating technical issues and bugs.</li>
+                                </ul>
+                            </td>
+                            <td>Necessary to perform our contract with you to provide and support the Game.</td>
+                        </tr>
+                        <tr>
+                            <td>Survey Information (In-Game Surveys): Open ID, IP address, age (optional), email address (optional), mobile number (optional), name (optional), address (optional), profession (optional), other information that you provide in your response to the survey.</td>
+                            <td>If you agree to participate in a survey run by us, we use this information to improve our services.</td>
+                            <td>We collect this information with your consent.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support Ticket ID &amp; User Communications with Support: Name, Open ID, device ID, email address (if you choose to disclose your email), details of ticket and error.</td>
+                            <td>We use this information to:
+                                <ul class="c-list1">
+                                    <li>improve our services;</li>
+                                    <li>provide troubleshooting, such as addressing and remediating technical issues and bugs.</li>
+                                </ul>
+                            </td>
+                            <td>Necessary to perform our contract with you to provide and support the Game Services.</td>
+                        </tr>
+                        <tr>
+                            <td>Survey Information (surveys placed on third party platforms including social media): IP address, age (optional), email address (optional), mobile number (optional), name (optional), address (optional), other information that you provide in your response to the survey.</td>
+                            <td>If you agree to participate in these surveys, we use this information to improve our services.</td>
+                            <td>We collect this information with your consent.</td>
+                        </tr>
+                        <tr>
+                            <td>E-sports Event Registration Information:
+                                <ul class="c-list1">
+                                    <li>Player ID, team name, name, nationality, proof of residency, email address, phone number and match data.</li>
+                                    <li>Passport information </li>
+                                </ul>
+                            </td>
+                            <td>If you register for an e-sports event, we use this information to create a team for you in the tournament, to organise the tournament and to communicate with the team.We use the passport information of players to verify that you are located within a country/region in your nominated Game region and to assist with travel/visa arrangements.</td>
+                            <td>We collect this information with your consent.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 id="con3">How We Store and Share Your Personal Information</h3>
+            <p>The Tencent group operates around the world. Pursuant to our contract with you to provide you with the Game Services, your personal information will be processed on servers that may not be located where you live. Our support, engineering and other teams are located in our offices around the world (including the United States and the People’s Republic of China). No matter where our servers are located, we take appropriate measures to safeguard your rights in accordance with this privacy policy. Our servers for the Game Services are located in:</p>
+            <ul class="c-list1">
+                <li>Brazil;</li>
+                <li>Germany;</li>
+                <li>Japan;</li>
+                <li>Mexico;</li>
+                <li>India;</li>
+                <li>Hong Kong; </li>
+                <li>Singapore;</li>
+                <li>the United States; </li>
+                <li>Russia; and</li>
+                <li>United Arab Emirates;</li>
+            </ul>
+            <p><strong>Only where necessary</strong>will we share your personal information with third parties. Situations where this occur are: </p>
+            <ul class="c-list1">
+                <li><strong>Third parties</strong> that provide services in support of the Game Services, including providers of cloud services that process information identified in this policy on their servers for the purpose of providing the Game Services, for the purpose of processing support ticket ID and support communication, for the purpose of processing gameplay and game rendering data to provide game analytics to improve game play, and for the purpose of providing marketing and advertisements and monitor the success of our marketing and advertising programs. All companies providing services for us are prohibited from retaining, using, or disclosing your personal information for any purpose other than providing us with their services.</li>
+                <li><strong>Companies within the Tencent corporate group</strong> who process your personal information in order to operate the Game Services. All related group companies may only use your personal information in accordance with this privacy policy.</li>
+                <li><strong>Regulators and judicial authorities and law enforcement agencies.</strong>There are circumstances in which we are legally required to disclose information, including to comply with a legal obligation or processes, enforce our terms, address issues relating to security or fraud, or protect our users.</li>
+                <li><strong>A third party that acquires all or substantially all of us or our business.</strong>If we sell or buy any business, undergo a merger, enter into a partnership, or sell some or all of our assets we may disclose your information to the prospective buyer of such business. Under these circumstances, we will always require the prospective buyer to comply with this privacy policy.</li>
+            </ul>
+            <h3>The Security of Your Personal Information</h3>
+            <p>We are committed to maintaining the privacy and integrity of your personal information no matter where it is stored. We have information security and access policies that limit access to our systems and technology, and we protect data through the use of technological protection measures such as encryption.</p>
+            <p>Unfortunately, the transmission of information via the internet is not completely secure. Although we will implement and maintain reasonable measures to protect your personal information, we cannot guarantee the security of the information transmitted to our services; therefore we do not assume any responsibility for any transmission of your information which you do at your own risk. </p>
+            <h3 id="con4">Data Retention</h3>
+            <div class="c-tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Personal Information</th>
+                            <th>Retention Policy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-bg" colspan="2">Game</td>
+                        </tr>
+                        <tr>
+                            <td>Nickname<br>
+                                Social Connect Information (if you choose to log in via your social media account with these networks):
+                                <ul class="c-list1">
+                                    <li>Facebook: Name, Facebook ID, Profile Picture, Email Address (optional)</li>
+                                    <li>Google Play: Google ID, Display Name</li>
+                                    <li>iOS Game Centre: User ID, Nickname, Profile Picture</li>
+                                </ul>
+                                Gender<br>
+                                Region Location (manually selected by you)<br>
+                                Open ID<br>
+                                Game Play Statistics (Level, Heroes, Score/s) <br>
+                                Friends List (Facebook, Google Play, iOS Game Centre)<br>
+                                Friends List (manually added by you)<br>
+                                IP Address, Device ID, Device Information<br>
+                                Advertising ID and marketing analytics data (e.g. device ID, engagement data and search terms)<br>
+                                Log Data<br>
+                                Security-Related Information
+                            </td>
+                            <td>Stored for the lifetime of your use of the Game (or until account deletion in accordance with your request).</td>
+                        </tr>
+                        <tr>
+                            <td>Date and time stamps of actions</td>
+                            <td>Stored for 30 days. </td>
+                        </tr>
+                        <tr>
+                            <td>GPS</td>
+                            <td>Deleted after you log out. </td>
+                        </tr>
+                        <tr>
+                            <td>Text Chat Data (Free Chat and Quick Chat) and Audio Chat Data</td>
+                            <td>We do not store your chat data. </td>
+                        </tr>
+                        <tr>
+                            <td>Transaction Records (Open ID, cost, product purchased, IP address, device details, email address (if web-based transaction))</td>
+                            <td>Stored for the lifetime of your use of the Game (i.e. until account deletion in accordance with your request) and then for the duration of any retention periods for which such data must be retained in order to comply with our legal obligations.</td>
+                        </tr>
+                        <tr>
+                            <td>Survey Information (In-Game Surveys)</td>
+                            <td>Stored for two years following receipt of the data. The data is deleted upon the expiry of such period or within 30 days of a lawful request from you for the erasure of such data (see the Erasure section of this privacy policy) (whichever is sooner). </td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support Ticket ID &amp; User Communications with Support</td>
+                            <td>Support data is deleted within 30 days of a lawful request from you for the erasure of such data (see the Erasure section of this privacy policy).</td>
+                        </tr>
+                        <tr>
+                            <td>Survey Information (surveys placed on third party platforms including social media)</td>
+                            <td>Stored for two years following receipt of the data. The data is deleted upon the expiry of such period or within 30 days of a lawful request from you for the erasure of such data (see the Erasure section of this privacy policy) (whichever is sooner). </td>
+                        </tr>
+                        <tr>
+                            <td>E-sports Event Registration Information</td>
+                            <td>Stored for three years following receipt of the data. The data is deleted upon the expiry of such period or within 30 days of a lawful request from you for the erasure of such data (see the Erasure section of this privacy policy) (whichever is sooner).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>If we are required to retain your information beyond the retention periods set out above, for example to comply with applicable laws, we will store it separately from other types of personal information.  </p>
+            <h3 id="con5">Your Rights</h3>
+            <p>Some jurisdictions’ laws grant specific rights to users of the Game Services, which are set out in this section.</p>
+            <p><strong>This section entitled “Your Rights” applies to users that are located in a Relevant Jurisdiction and Switzerland.</strong></p>
+            <p><strong>The sub-sections entitled “Access”, “Correction”, and “Erasure” also apply to users that are located in Algeria, Brazil or Morocco. </strong></p>
+            <p><strong>The sub-sections entitled “Access”, “Correction” and “Withdrawal of Consent” (set out in the jurisdiction-specific terms below) apply to users that are located in India. </strong></p>
+            <p><strong>The sub-sections entitled “Access”, “Correction”, “Erasure” and “Objection” apply to users that are located in Qatar or Russia.</strong></p>
+            <p>You have certain rights in relation to the personal information we hold about you. Some of these only apply in certain circumstances (as set out in more detail below). We must respond to a request by you to exercise those rights without undue delay and at least within one month (though this may be extended by a further two months in certain circumstances). To exercise any of your rights, please contact us at <a href="javascript:;">dpo@proximabetacom</a>.</p>
+            <p><strong>Access</strong></p>
+            <p>You have the right to access personal information we hold about you, how we use it, and who we share it with. You can access the personal information you have made available as part of your account by logging into your Game account. If you believe we hold any other personal information about you, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p><strong>Portability</strong></p>
+            <p>You have the right to receive a copy of certain personal information we process about you. This comprises any personal information we process on the basis of your consent (e.g., survey information) or pursuant to our contract with you (e.g., game play statistics), as described above in the section “<strong>How We Use Your Personal Information</strong>”. You have the right to receive this information in a structured, commonly used and machine-readable format. You also have the right to request that we transfer that personal information to another party, with certain exceptions. We will provide further information to you about this if you make such a request.</p>
+            <p>If you wish for us to transfer such personal information to a third party, please ensure you detail that party in your request. Note that we can only do so where it is technically feasible. Please note that we may not be able to provide you with personal information if providing it would interfere with another’s rights (for example, where providing the personal information we hold about you would reveal information about another person or our trade secrets or intellectual property). </p>
+            <p><strong>Correction</strong></p>
+            <p>You have the right to correct any of your personal information we hold that is inaccurate. You can access the personal information we hold about you by logging into your Game account. If you believe we hold any other personal information about you and that information is inaccurate, please contact us at&nbsp;<a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p><strong>Erasure</strong></p>
+            <p>You can delete your account, or remove certain personal information, by logging into your Game account. If there is any other personal information you believe we process that you would like us to erase, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p>We may need to retain personal information if there are valid grounds under data protection laws for us to do so (for example, for the defence of legal claims or freedom of expression) but we will let you know if that is the case. Where you have requested that we erase personal information that has been made available publicly on the Game Services and there are grounds for erasure, we will use reasonable steps to try to tell others that are displaying the personal information or providing links to the personal information to erase it too. </p>
+            <p><strong>Restriction of Processing to Storage Only</strong></p>
+            <p>You have a right to require us to stop processing the personal information we hold about you other than for storage purposes in certain circumstances. Please note, however, that if we stop processing the personal information, we may use it again if there are valid grounds under data protection laws for us to do so (for example, for the defence of legal claims or for another’s protection). As above, where we agree to stop processing the personal information, we will try to tell any third party to whom we have disclosed the relevant personal information so that they can stop processing it too. </p>
+            <p><strong>Objection</strong></p>
+            <p>You have the right to object to our processing of your personal information. We will consider your request in other circumstances as detailed below by&nbsp;contacting us at&nbsp;<a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p>To the extent provided by applicable laws and regulations, you may withdraw any consent you previously provided to us for certain processing activities by contacting us at <a href="javascript:;">dpo@proximabeta.com</a>.Where consent is required to process your personal information, if you do not consent to the processing or if you withdraw your consent we may not be able to deliver the expected service. </p>
+            <h3>Announcements</h3>
+            <p>We may from time to time send you announcements when we consider it necessary to do so (for example, when we temporarily suspend Game access for maintenance, or security, privacy or administrative-related communications). You may not opt-out of these service-related announcements, which are not promotional in nature.</p>
+            <h3 id="con6">Contact &amp; Complaints</h3>
+            <p>Questions, comments and requests regarding this policy are welcomed and should be addressed to <a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p><strong>In the event that you wish to make a complaint about how we process your personal information, please contact us in the first instance at <a href="javascript:;">dpo@proximabeta.com</a>and we will endeavour to deal with your request as soon as possible. This is without prejudice to your right to launch a claim with the data protection authority in the country in which you live or work where you think we have infringed data protection laws.</strong></p>
+            <h3 id="con7">Changes</h3>
+            <p>If we make any material changes to this privacy policy, we will post the updated policy here and notify our users within the Game. Please check this page frequently to see if there are any updates or changes to this privacy policy.  </p>
+            <h3 class="table-tit">SUPPLEMENTAL TERMS – JURISDICTION-SPECIFIC</h3>
+            <p>Some jurisdictions’ laws contain additional terms for users of the Game Services, which are set out in this section.</p>
+            <p>If you are a user located in one of the jurisdictions below, the terms set out below under the name of your jurisdiction apply to you.</p>
+            <h3>Algeria</h3>
+            <p>By using this Game, the user gives his/her consent for the collection, the storage, the treatment, the use, the transfer to a third party located in Algeria or Brazil, Germany, Hong Kong, Singapore, PRC (for the purpose of this Privacy Policy, this term excludes Taiwan, Hong Kong and Macau), the United States of America, Russia, United Arab Emirates and India (use local cloud providers or to back up your data; using our affiliates around the world to help us to deliver the Game Services) of Personal Data (as detailed under section 2), manually and electronically treated.</p>
+            <h3>Australia</h3>
+            <p><strong>Children</strong></p>
+            <p>If you are under the age of 18, you undertake that you have the consent of your parent or legal guardian to register an account on and use the Game.</p>
+            <p><strong>Transacting Anonymously</strong></p>
+            <p>Where practicable, we will give you the option of not identifying yourself or using a pseudonym when registering an account on or using the Game.  You acknowledge that if you do not provide us with your personal information, we may be unable to provide you with access to certain features or sections of the Game, including social media integration and In-Game purchases.</p>
+            <p><strong>Your rights</strong></p>
+            <p>If you are dissatisfied with our response to your request for access to, or correction of, your personal information or your privacy complaint in respect of your personal information, you may contact the Office of the Australian Information Commissioner (Telephone +61 1300 363 992 or email <a href="javascript:;">enquiries@oaic.gov.au</a>).</p>
+            <p><strong>Data transfers</strong></p>
+            <p>While we take reasonable steps to ensure that third party recipients of your personal information comply with privacy laws that are similar to those of your jurisdiction, you acknowledge and agree that we cannot control the actions of third party recipients and so cannot guarantee that they will comply with those privacy laws. </p>
+            <h3>Bangladesh</h3>
+            <p><strong>Agreement</strong></p>
+            <p>By accepting this privacy policy, you expressly state that you authorize us to collect, use, store, and process your personal data, including, disclosing to third parties, to the extent provided by this privacy policy. By clicking “accept”, you consent to the cross-border transfer of your information to any country where we have databases or affiliates and, in particular, to Brazil, Germany, Hong Kong, Singapore, PRC (for the purpose of this Privacy Policy, this term excludes Taiwan, Hong Kong and Macau), the United States of America, Russia, United Arab Emirates and India.</p>
+            <p><strong>Age Restriction</strong></p>
+            <p>In order to use the Service, you represent that you are at least 18 years old and, therefore, legally capable of entering into binding contracts.</p>
+            <h3>Brazil</h3>
+            <p>In order to use the Game Services, you represent that you are at least 18 years old and, therefore, legally capable of entering into binding contracts.</p>
+            <p><strong>BY ACCEPTING THIS PRIVACY POLICY, YOU EXPRESSLY STATE THAT YOU AUTHORIZE US TO COLLECT, USE, STORE, AND PROCESS YOUR PERSONAL DATA, INCLUDING, DISCLOSING TO THIRD PARTIES, TO THE EXTENT PROVIDED BY THIS PRIVACY POLICY.</strong></p>
+            <h3>California </h3>
+            <p>This section applies to California residents covered by the California Consumer Privacy Act of 2018 (“CCPA”).</p>
+            <p><strong>Collection and Disclosure of Personal Information</strong></p>
+            <p>Over the past 12 months, we have collected and disclosed the following categories of personal information from or about you or your device:</p>
+            <ul class="c-list1">
+                <li>Identifiers, such as your name as it appears on your social media profile, open ID / user ID, IP address, device ID, device token, phone number, mailing address, email address, and nickname. If you register for certain e-sports events, we also collected your player ID, team name, name, nationality, proof of residency, email address, phone number and match data. We may also collect your passport information to verify that you are located within a country/region in your nominated Game region and to assist with travel/visa arrangements. This information is collected directly from you and your device and from social media platforms if you choose to sign up using a social media account.</li>
+                <li>Internet or other electronic network activity information, such as your information regarding your use of the Game Services, including level, score, date and time stamps of actions, log-in and clickstream data and other Device Information as described in the main policy. This information is collected directly from you and your device. </li>
+                <li>Commercial information about any transactions within the Game such as what products were purchased and how much they cost. This information is collected directly from you and your device and the Google Play or Apple iOS store. </li>
+                <li>Geolocation data such as your region location when you set up your profile for the Game. This information is collected directly from you.</li>
+                <li>Audio and visual information such as your social media profile picture, photos shared in the Game, and audio messages. This information is collected directly from you and from social media platforms if you choose to sign up using a social media account.</li>
+                <li>Professional or employment-related information such as your profession if you choose to provide it in a survey. This information is collected directly from you.</li>
+                <li>Other information described in subdivision (e) of Section 1798.80, including information about your gender, nationality, or age. This information is collected directly from you in the context of being our consumer.</li>
+            </ul>
+            <p>We collect your personal information for the following purposes:</p>
+            <ul class="c-list1">
+                <li>To provide you the Game Services, including offering the Game, maintaining your account, providing customer service, processing payments, and delivering audio and text messages;</li>
+                <li>To register you for and arrange e-sports events;</li>
+                <li>To process surveys and administer sweepstakes;</li>
+                <li>To improve our services, including the functionality of the Game;</li>
+                <li>For security and verification purposes, including to prevent and detect fraudulent activity;</li>
+                <li>To address and remediate technical issues and bugs.</li>
+            </ul>
+            <p>For additional information about what each type of personal information is used for, see <a href="#con1">this chart</a> in the main portion of the Privacy Policy.</p>
+            <p>We disclose personal information to the following types of entities:</p>
+            <ul class="c-list1">
+                <li>Other companies within the Tencent corporate group&nbsp;who process your personal information in order to operate the Game Services</li>
+                <li>Other companies that provide services on our behalf who are prohibited by contract from retaining, using, or disclosing personal information for any purpose other than for providing the services to us</li>
+                <li>Regulators and judicial authorities and law enforcement agencies</li>
+                <li>Entities that acquire all or substantially all of our business</li>
+            </ul>
+            <p><strong>In the past 12 months, we have not sold Personal Information of California residents within the meaning of “sold” in the CCPA.</strong></p>
+            <p><strong>Rights under the CCPA</strong></p>
+            <p>If you are a California resident, you have the right to:</p>
+            <ul class="c-list1">
+                <li>Request we disclose to you free of charge the following information covering the 12 months preceding your request:
+                    <ul class="c-list">
+                        <li>the categories of personal information about you that we collected;</li>
+                        <li>the categories of sources from which the personal information was collected;</li>
+                        <li>the purpose for collecting personal information about you;</li>
+                        <li>the categories of third parties to whom we disclosed personal information about you and the categories of personal information that was disclosed (if applicable) and the purpose for disclosing the personal information about you; and</li>
+                        <li>the specific pieces of personal information we collected about you;</li>
+                    </ul>
+                </li>
+                <li>Request we delete personal information we collected from you, unless CCPA recognizes an exception; and</li>
+                <li>Be free from unlawful discrimination for exercising your rights including providing a different level or quality of services or denying goods or services to you when you exercise your rights under the CCPA.   </li>
+            </ul>
+            <p>We aim to fulfill all verified requests within 45 days pursuant to the CCPA.  If necessary, extensions for an additional 45 days will be accompanied by an explanation for the delay.</p>
+            <p><strong>How to Exercise Your Rights</strong></p>
+            <p>First, you may wish to log into your account and manage your data from there. If you are a California resident to whom the CCPA applies, you may exercise your rights, if any, regarding other data by contacting us at <a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <h3>Canada </h3>
+            <p>If a user located in Canada wishes to obtain written information about our policies and practices with respect to our service providers located outside Canada, they may contact us at <a href="javascript:;">dpo@proximabeta.com</a>.  Our privacy experts who monitor this email address are also able to answer any questions users may have about the collection, use, disclosure or storage of personal information by our service providers. </p>
+            <p>Where we use service providers who might have access to your personal information, we require them to have privacy and security standards that are comparable to ours. We use contracts and other measures with our service providers to maintain the confidentiality and security of your personal information and to prevent it from being used for any purpose other than as provided in this Privacy Policy.</p>
+            <h3>India</h3>
+            <p><strong>Sensitive Personal Information</strong></p>
+            <p>Your Sensitive Personal Information shall mean passwords, financial information such as bank account or credit card or debit card or other payment instrument details, biometric data, physical or mental health, sex life or sexual orientation, and/ or medical records or history, and similar information, but does not include information available in the public domain, or provided under Indian laws, including the Right to Information Act, 2005.</p>
+            <p><strong>Sharing Of Your Sensitive Personal Information</strong></p>
+            <p>Where we permit any third parties to collect and use your Sensitive Personal Information, we shall take reasonable measures to ensure that the third parties do not further disclose the Sensitive Personal Information.</p>
+            <p><strong>Age Restrictions</strong></p>
+            <p>Children under the age of 18 are not allowed to execute online contracts with us or sign up for our services. Parental consent is required for children under the age of 18 years to avail our services.</p>
+            <p><strong>Withdrawal Of Consent </strong></p>
+            <p>To the extent provided by applicable laws and regulations, you may withdraw any consent you previously provided to us for certain processing activities by contacting us at <a href="javascript:;">dpo@proximabeta.com</a>. Where consent is required to process your personal information, if you do not consent to the processing or if you withdraw your consent we may not be able to deliver the expected service.  </p>
+            <h3>Kingdom of Saudi Arabia </h3>
+            <p>You consent to the collection, use, disclosure, transfer and storage of your Personal Information. </p>
+            <h3>Kuwait</h3>
+            <p>You represent that you are at least 21 years old or 18 years old and have obtained parental/guardian consent and, therefore, legally capable of contracting under the applicable laws and regulations in Kuwait.</p>
+            <p>By accepting this privacy policy, you expressly state that you authorize us to collect, use, store, and process your personal data and to disclose this data to third parties whether inside or outside of Kuwait, in line with the provisions of this privacy policy.</p>
+            <h3>Qatar</h3>
+            <p>If you are using the Game in Qatar, you consent (for the purposes of Law No. 13 of 2016 on the Protection of Personal Data as may amended from time to time) to the processing of your information in accordance with this privacy policy. </p>
+            <h3>Morocco</h3>
+            <p>The protection of your privacy is an important principle for us. We collect information for purposes strictly necessary for the proper use of the Game Services.</p>
+            <p>By accepting these conditions of use, you explicitly accept that your personal data may be subject to processing by the Game Services. </p>
+            <p>Kindly note: </p>
+            <ul class="c-list2">
+                <li>the identity of the data responsible or the Data Controller is Proxima Beta Pte. Limited, email:<a href="javascript:;">dpo@proximabeta.com</a>.</li>
+                <li>b)the purposes of the processing for which the data are intended are set out in the table in Section 2 (“How We Use Your Personal Information”).</li>
+                <li>c)recipients or categories of recipients are set out in the second paragraph of Section 3 (“How We Store and Share Your Personal Information”).</li>
+                <li>d)whether the answer to the questions is compulsory or optional, as well as the possible consequences of a lack of answer: please refer to Section 2 (“How We Use Your Personal Information”) and Section 5 (“Your Rights”, sub-paragraph “Objection”). </li>
+            </ul>
+            <h3>Russia</h3>
+            <p>If you are using the Game Services in Russia, you consent (for the purposes of the Russian Federal Law No. 152-FZ dated 27 July 2006 “On Personal Data” (as amended) or any replacement regulations) to the processing in accordance with this privacy policy of your information. In particular, if legitimate interests, optimisation of the Service or carrying out of the contract is mentioned herein, you agree that, for the purposes of Russian law, the consent so provided can be considered an additional ground for processing (meaning that the processing is conducted with your consent). This consent also covers the processing of the Cookie Files in accordance with our Cookies policy (to the extent that those qualify as personal data under Russian law). You also consent to the cross-border transfer of your information to any country where we have databases or affiliates and, in particular&nbsp;Brazil, Germany, Hong Kong, Singapore, Japan, Mexico, India , the United States, Russia and United Arab Emirates. You can contact us at&nbsp;<a href="javascript:;">dpo@proximabeta.com</a>. Please include the word “Russia” in the subject line of your email.</p>
+            <h3>South Africa</h3>
+            <p><strong>Terminology</strong></p>
+            <p>Where this privacy policy refers to "data controller" and "data processor" then for the purposes of South Africa, this respectfully refers to "responsibility party" and "operator" as defined in the Protection of Personal Information Act 4 of 2013.  </p>
+            <p><strong>Your Rights</strong></p>
+            <p>You have certain rights in relation to the personal information we hold about you. Some of these only apply in certain circumstances (as set out in more detail below). To exercise any of your rights, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>. </p>
+            <p><strong>Access</strong></p>
+            <p>You have the right to access personal information we hold about you, how we use it, and who we share it with. You can access the personal information you have made available as part of your account by logging into your account. If you believe we hold any other personal information about you, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>. </p>
+            <p><strong>Correction</strong></p>
+            <p>You have the right to correct any of your personal information we hold that is inaccurate. You can access the personal information we hold about you by logging into your Game account. If you believe we hold any other personal information about you and that information is inaccurate, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>. </p>
+            <p><strong>Erasure</strong></p>
+            <p>You can delete your account, or remove certain personal information, by logging into your Game account. If there is any other personal information you believe we process that you would like us to erase, please contact us at <a href="javascript:;">dpo@proximabeta.com</a>. </p>
+            <p>We may need to retain personal information if there are valid grounds under data protection laws and/or other laws for us to do so (for example, for the defence of legal claims) but we will let you know if that is the case. Where you have requested that we erase personal information that has been made available publicly on the Game Services and there are grounds for erasure, we will use reasonable steps to try to tell others that are displaying the personal information or providing links to the personal information to erase it too. </p>
+            <p><strong>Restriction of Processing  </strong></p>
+            <p>You have a right to require us to stop processing the personal information we hold about you in certain circumstances. Please note, however, that if we stop processing the personal information, we may use it again if there are valid grounds under data protection laws for us to do so (for example, for the defence of legal claims or for another’s protection). As above, where we agree to stop processing the personal information, we will try to tell any third party to whom we have disclosed the relevant personal information so that they can stop processing it too and shall specifically enforce this where the third party is our data processor.  </p>
+            <p><strong>Objection</strong></p>
+            <p>You have the right to object to our processing of your personal information. We will consider your request in other circumstances as detailed below by contacting us at  <a href="javascript:;">dpo@proximabeta.com</a>.</p>
+            <p>You have a right to lodge a complaint with the South African Information Regulator by contacting them on <a href="javascript:;">inforeg@justice.gov.za</a>. </p>
+            <p><strong>Withdrawal of Consent</strong></p>
+            <p>To the extent provided by applicable laws and regulations, you may withdraw any consent you previously provided to us for certain processing activities by contacting us at <a href="javascript:;">dpo@proximabeta.com</a>. Where consent is required to process your personal information, if you do not consent to the processing or if you withdraw your consent we may not be able to deliver the expected service.</p>
+            <p><strong>Notification of data breaches</strong></p>
+            <p>Where we are required to do so under law, we shall promptly notify you and the South African Information Regulator in writing where we have determined that there are reasonable grounds to believe that your personal information has been acquired and/or accessed by an unauthorised third party. </p>
+            <p><strong>Cross-border transfers</strong></p>
+            <p>By clicking “accept”, you consent to the cross-border transfer of your information to any country where we have databases or affiliates and, in particular, to Brazil, Germany, Hong Kong, Singapore, Japan, Mexico, India, the United States, Russia and United Arab Emirates.</p>
+            <p><strong>Additional Security Measures of Your Personal Information</strong></p>
+            <p>In accordance with applicable data privacy laws and regulations in South Africa, we shall take appropriate, reasonable technical and organisational measures to prevent the loss of, damage to or unauthorised access to or processing of your personal information.</p>
+            <h3>Turkey</h3>
+            <p>Our Data Controller Representative in Turkey for the purpose of compliance with Turkish Law on Personal Data Protection Law and its secondary regulations can be contacted at&nbsp;<a href="javascript:;">dpo@proximabeta.com</a>. Please include the word “Turkey” in the subject line of your email.</p>
+            <p>You have legal rights in relation to the personal information data we hold about you. As a Turkish data subject, you may have right to (and to the extent permitted under applicable laws and regulations):</p>
+            <ul class="c-list2">
+                <li>a) learn whether or not your personal data has been processed;</li>
+                <li>b) request information about processing if your personal data has been processed;</li>
+                <li>c) learn the purpose of processing of your personal data;</li>
+                <li>d) know the third parties in the country or abroad to whom personal data has been transferred;</li>
+                <li>e) request rectification in the event personal data is incomplete or inaccurate;</li>
+                <li>f) request deletion or destruction of personal data within the framework of the conditions set forth under Article 7 of the Personal Data Protection Law (Turkey);</li>
+                <li>g) object to certain processing of data, and seek certain remedies in accordance with the Personal Data Protection Law (Turkey).</li>
+            </ul>
+            <h3>United Arab Emirates</h3>
+            <p>You consent to the collection, use, disclosure, transfer and storage of your Personal Information.  </p>
+            <p>We may voluntarily report a cyber-security incident where it constitutes a crime under UAE law (e.g. under the UAE Cybercrime Law). The incident can be reported to the relevant authorities for the purpose of investigations. Please note also that voluntary reporting of a cyber-security incident can also be made to the UAE Computer Emergency Response Team (“CERT”). CERT is a security awareness organisation that provides a process for logging incidents and advising on known cyber security threats in the UAE.</p>
+        </div>
+    </div>
 
 </body></html>
